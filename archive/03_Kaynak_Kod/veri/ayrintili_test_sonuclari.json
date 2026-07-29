@@ -1,0 +1,5707 @@
+{
+  "zaman": "2026-07-14T07:15:05.297129+00:00",
+  "veri": "../veri/ayrintili_zorlu_veri.json",
+  "esik": 0.5,
+  "sonuclar": [
+    {
+      "isim": "MiniLM (384)",
+      "model": "paraphrase-multilingual-MiniLM-L12-v2",
+      "hata": null,
+      "yukleme_suresi": 5.79,
+      "ms_mesaj": 4.77,
+      "bellek_mb": 425.3,
+      "vektor_boyutu": 384,
+      "genel": {
+        "dogru": 53,
+        "toplam": 67,
+        "dogruluk": 79.1,
+        "belirsiz": {
+          "n": 8,
+          "dogru": 7,
+          "yuzde": 87.5
+        },
+        "tuzak": {
+          "n": 12,
+          "dogru": 8,
+          "yuzde": 66.7
+        },
+        "parafraz": {
+          "n": 15,
+          "dogru": 12,
+          "yuzde": 80.0
+        },
+        "kisa": {
+          "n": 4,
+          "dogru": 2,
+          "yuzde": 50.0
+        },
+        "cok_anlamli": {
+          "n": 3,
+          "dogru": 1,
+          "yuzde": 33.3
+        }
+      },
+      "zorluk_kirilim": {
+        "belirsiz": {
+          "n": 8,
+          "dogru": 7,
+          "yuzde": 87.5
+        },
+        "cok_anlamli": {
+          "n": 3,
+          "dogru": 1,
+          "yuzde": 33.3
+        },
+        "dogrudan": {
+          "n": 8,
+          "dogru": 8,
+          "yuzde": 100.0
+        },
+        "kisa": {
+          "n": 4,
+          "dogru": 2,
+          "yuzde": 50.0
+        },
+        "parafraz": {
+          "n": 15,
+          "dogru": 12,
+          "yuzde": 80.0
+        },
+        "teknik": {
+          "n": 17,
+          "dogru": 15,
+          "yuzde": 88.2
+        },
+        "tuzak": {
+          "n": 12,
+          "dogru": 8,
+          "yuzde": 66.7
+        }
+      },
+      "sektor_kirilim": {
+        "enerji": {
+          "n": 3,
+          "dogru": 1,
+          "yuzde": 33.3
+        },
+        "eğitim": {
+          "n": 7,
+          "dogru": 5,
+          "yuzde": 71.4
+        },
+        "finans": {
+          "n": 5,
+          "dogru": 5,
+          "yuzde": 100.0
+        },
+        "hukuk": {
+          "n": 3,
+          "dogru": 3,
+          "yuzde": 100.0
+        },
+        "insan_kaynaklari": {
+          "n": 4,
+          "dogru": 2,
+          "yuzde": 50.0
+        },
+        "lojistik": {
+          "n": 6,
+          "dogru": 5,
+          "yuzde": 83.3
+        },
+        "medya": {
+          "n": 2,
+          "dogru": 2,
+          "yuzde": 100.0
+        },
+        "perakende": {
+          "n": 2,
+          "dogru": 2,
+          "yuzde": 100.0
+        },
+        "savunma": {
+          "n": 5,
+          "dogru": 5,
+          "yuzde": 100.0
+        },
+        "sağlık": {
+          "n": 7,
+          "dogru": 5,
+          "yuzde": 71.4
+        },
+        "sigorta": {
+          "n": 6,
+          "dogru": 5,
+          "yuzde": 83.3
+        },
+        "tarım": {
+          "n": 2,
+          "dogru": 2,
+          "yuzde": 100.0
+        },
+        "telekom": {
+          "n": 3,
+          "dogru": 2,
+          "yuzde": 66.7
+        },
+        "turizm": {
+          "n": 4,
+          "dogru": 2,
+          "yuzde": 50.0
+        }
+      },
+      "skor_istatistik": {
+        "dogru": {
+          "n": 46,
+          "ortalama": 0.631,
+          "min": 0.52,
+          "max": 0.825,
+          "marj_ort": 0.118
+        },
+        "yanlis": {
+          "n": 14,
+          "ortalama": 0.497,
+          "min": 0.338,
+          "max": 0.627,
+          "marj_ort": 0.061
+        },
+        "belirsiz_beklenen": {
+          "n": 8,
+          "ortalama": 0.351,
+          "min": 0.074,
+          "max": 0.591,
+          "marj_ort": 0.049
+        }
+      },
+      "en_sik_hatalar": [
+        {
+          "beklenen": "turizm",
+          "bulunan": "belirsiz",
+          "adet": 2
+        },
+        {
+          "beklenen": "enerji",
+          "bulunan": "belirsiz",
+          "adet": 2
+        },
+        {
+          "beklenen": "sağlık",
+          "bulunan": "sigorta",
+          "adet": 1
+        },
+        {
+          "beklenen": "eğitim",
+          "bulunan": "belirsiz",
+          "adet": 1
+        },
+        {
+          "beklenen": "eğitim",
+          "bulunan": "savunma",
+          "adet": 1
+        },
+        {
+          "beklenen": "lojistik",
+          "bulunan": "turizm",
+          "adet": 1
+        },
+        {
+          "beklenen": "insan_kaynaklari",
+          "bulunan": "hukuk",
+          "adet": 1
+        },
+        {
+          "beklenen": "insan_kaynaklari",
+          "bulunan": "sağlık",
+          "adet": 1
+        },
+        {
+          "beklenen": "telekom",
+          "bulunan": "turizm",
+          "adet": 1
+        },
+        {
+          "beklenen": "sigorta",
+          "bulunan": "belirsiz",
+          "adet": 1
+        }
+      ],
+      "esik_taramasi": [
+        {
+          "esik": 0.4,
+          "dogruluk": 80.6,
+          "dogru": 54,
+          "belirsiz_yakalama": "5/8"
+        },
+        {
+          "esik": 0.45,
+          "dogruluk": 79.1,
+          "dogru": 53,
+          "belirsiz_yakalama": "5/8"
+        },
+        {
+          "esik": 0.5,
+          "dogruluk": 79.1,
+          "dogru": 53,
+          "belirsiz_yakalama": "7/8"
+        },
+        {
+          "esik": 0.55,
+          "dogruluk": 70.1,
+          "dogru": 47,
+          "belirsiz_yakalama": "7/8"
+        },
+        {
+          "esik": 0.6,
+          "dogruluk": 52.2,
+          "dogru": 35,
+          "belirsiz_yakalama": "8/8"
+        },
+        {
+          "esik": 0.65,
+          "dogruluk": 38.8,
+          "dogru": 26,
+          "belirsiz_yakalama": "8/8"
+        },
+        {
+          "esik": 0.7,
+          "dogruluk": 22.4,
+          "dogru": 15,
+          "belirsiz_yakalama": "8/8"
+        }
+      ],
+      "detaylar": [
+        {
+          "id": 1,
+          "mesaj": "Hastane yönetim sistemi arıyoruz",
+          "beklenen": "sağlık",
+          "bulunan": "sağlık",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6906,
+          "top2_skor": 0.559,
+          "marj": 0.1316,
+          "en_yakin_sirket": "SağlıkTek"
+        },
+        {
+          "id": 2,
+          "mesaj": "Poliklinik randevu çakışmalarını azaltacak bir sistem lazım",
+          "beklenen": "sağlık",
+          "bulunan": "sigorta",
+          "dogru": false,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.507,
+          "top2_skor": 0.4646,
+          "marj": 0.0423,
+          "en_yakin_sirket": "SigortaNet"
+        },
+        {
+          "id": 3,
+          "mesaj": "MR ve tomografi görüntülerini güvenli arşivlemek istiyoruz",
+          "beklenen": "sağlık",
+          "bulunan": "sağlık",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6661,
+          "top2_skor": 0.5875,
+          "marj": 0.0786,
+          "en_yakin_sirket": "MediCloud"
+        },
+        {
+          "id": 4,
+          "mesaj": "112 çağrılarında en yakın ekibi otomatik yönlendirmek istiyoruz",
+          "beklenen": "sağlık",
+          "bulunan": "sağlık",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5633,
+          "top2_skor": 0.3444,
+          "marj": 0.2189,
+          "en_yakin_sirket": "AcilSoft"
+        },
+        {
+          "id": 5,
+          "mesaj": "Kan tahlili sonuçlarını hekime otomatik düşürecek laboratuvar yazılımı",
+          "beklenen": "sağlık",
+          "bulunan": "sağlık",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.585,
+          "top2_skor": 0.4371,
+          "marj": 0.1479,
+          "en_yakin_sirket": "LabFlow"
+        },
+        {
+          "id": 6,
+          "mesaj": "Otel rezervasyon sistemimizi yenilemek istiyoruz",
+          "beklenen": "turizm",
+          "bulunan": "turizm",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6878,
+          "top2_skor": 0.5663,
+          "marj": 0.1215,
+          "en_yakin_sirket": "TatilPlus"
+        },
+        {
+          "id": 7,
+          "mesaj": "Misafirlerin oda müsaitliğini tek ekrandan görmek istiyoruz",
+          "beklenen": "turizm",
+          "bulunan": "belirsiz",
+          "dogru": false,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.3384,
+          "top2_skor": 0.3382,
+          "marj": 0.0001,
+          "en_yakin_sirket": "MediCloud"
+        },
+        {
+          "id": 8,
+          "mesaj": "Yolcuların telefondan check-in yapmasını sağlamak istiyoruz",
+          "beklenen": "turizm",
+          "bulunan": "turizm",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6795,
+          "top2_skor": 0.4933,
+          "marj": 0.1862,
+          "en_yakin_sirket": "HavaYolu360"
+        },
+        {
+          "id": 9,
+          "mesaj": "Yurt dışı paketlerimizi internetten satacağız",
+          "beklenen": "turizm",
+          "bulunan": "belirsiz",
+          "dogru": false,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.4515,
+          "top2_skor": 0.3955,
+          "marj": 0.056,
+          "en_yakin_sirket": "GümrükKöprü"
+        },
+        {
+          "id": 10,
+          "mesaj": "Askeri haberleşme altyapımızı güçlendirmek istiyoruz",
+          "beklenen": "savunma",
+          "bulunan": "savunma",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.7561,
+          "top2_skor": 0.602,
+          "marj": 0.154,
+          "en_yakin_sirket": "SavunmaSis"
+        },
+        {
+          "id": 11,
+          "mesaj": "Birlikler arası güvenli mesajlaşma kurmak istiyoruz",
+          "beklenen": "savunma",
+          "bulunan": "savunma",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5809,
+          "top2_skor": 0.5402,
+          "marj": 0.0407,
+          "en_yakin_sirket": "SavunmaSis"
+        },
+        {
+          "id": 12,
+          "mesaj": "Hava sahası tehditlerini gerçek zamanlı izlemek istiyoruz",
+          "beklenen": "savunma",
+          "bulunan": "savunma",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6312,
+          "top2_skor": 0.5147,
+          "marj": 0.1165,
+          "en_yakin_sirket": "RadarNet"
+        },
+        {
+          "id": 13,
+          "mesaj": "Kritik ağlarımıza sızma girişimlerini önlemek istiyoruz",
+          "beklenen": "savunma",
+          "bulunan": "savunma",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5201,
+          "top2_skor": 0.4244,
+          "marj": 0.0956,
+          "en_yakin_sirket": "SiberKalkan"
+        },
+        {
+          "id": 14,
+          "mesaj": "Üniversite için uzaktan eğitim platformu istiyoruz",
+          "beklenen": "eğitim",
+          "bulunan": "eğitim",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.7882,
+          "top2_skor": 0.5196,
+          "marj": 0.2686,
+          "en_yakin_sirket": "EğitimBul"
+        },
+        {
+          "id": 15,
+          "mesaj": "Kampüsteki ders ve öğrenci kayıtlarını tek yerden yönetmek istiyoruz",
+          "beklenen": "eğitim",
+          "bulunan": "eğitim",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6533,
+          "top2_skor": 0.5782,
+          "marj": 0.0751,
+          "en_yakin_sirket": "KampüsDijital"
+        },
+        {
+          "id": 16,
+          "mesaj": "Velilerle öğretmenleri dijitalde buluşturacak kanal lazım",
+          "beklenen": "eğitim",
+          "bulunan": "eğitim",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.688,
+          "top2_skor": 0.5374,
+          "marj": 0.1506,
+          "en_yakin_sirket": "OkulPlus"
+        },
+        {
+          "id": 17,
+          "mesaj": "Online sınav ve otomatik notlandırma istiyoruz",
+          "beklenen": "eğitim",
+          "bulunan": "belirsiz",
+          "dogru": false,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.4964,
+          "top2_skor": 0.4559,
+          "marj": 0.0405,
+          "en_yakin_sirket": "KampüsDijital"
+        },
+        {
+          "id": 18,
+          "mesaj": "Sağlık sigortası poliçelerimizi dijitalleştirmek istiyoruz",
+          "beklenen": "sigorta",
+          "bulunan": "sigorta",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6841,
+          "top2_skor": 0.5988,
+          "marj": 0.0852,
+          "en_yakin_sirket": "SigortaNet"
+        },
+        {
+          "id": 19,
+          "mesaj": "Kasko primlerini sürücü riskine göre otomatik hesaplamak istiyoruz",
+          "beklenen": "sigorta",
+          "bulunan": "sigorta",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5556,
+          "top2_skor": 0.4202,
+          "marj": 0.1354,
+          "en_yakin_sirket": "RiskKoruma"
+        },
+        {
+          "id": 20,
+          "mesaj": "Hasar dosyasına eksper atayıp fotoğraflardan ön değerlendirme yapmak istiyoruz",
+          "beklenen": "sigorta",
+          "bulunan": "sigorta",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.679,
+          "top2_skor": 0.5506,
+          "marj": 0.1284,
+          "en_yakin_sirket": "HasarHızlı"
+        },
+        {
+          "id": 21,
+          "mesaj": "Kargo filomuzu canlı takip etmek istiyoruz",
+          "beklenen": "lojistik",
+          "bulunan": "lojistik",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5466,
+          "top2_skor": 0.3301,
+          "marj": 0.2166,
+          "en_yakin_sirket": "LojistikPro"
+        },
+        {
+          "id": 22,
+          "mesaj": "Depo stok hareketlerini ve son teslimatı optimize etmek istiyoruz",
+          "beklenen": "lojistik",
+          "bulunan": "lojistik",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6197,
+          "top2_skor": 0.5353,
+          "marj": 0.0844,
+          "en_yakin_sirket": "DepoAkış"
+        },
+        {
+          "id": 23,
+          "mesaj": "Konteynerlerin gümrük süreçlerini dijital takip etmek istiyoruz",
+          "beklenen": "lojistik",
+          "bulunan": "lojistik",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5863,
+          "top2_skor": 0.5856,
+          "marj": 0.0008,
+          "en_yakin_sirket": "GümrükKöprü"
+        },
+        {
+          "id": 24,
+          "mesaj": "Banka ödeme altyapımızı yenilemek istiyoruz",
+          "beklenen": "finans",
+          "bulunan": "finans",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6464,
+          "top2_skor": 0.5819,
+          "marj": 0.0645,
+          "en_yakin_sirket": "BankaYazılım"
+        },
+        {
+          "id": 25,
+          "mesaj": "Sanal POS ve açık bankacılık API entegre etmek istiyoruz",
+          "beklenen": "finans",
+          "bulunan": "finans",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.8246,
+          "top2_skor": 0.6214,
+          "marj": 0.2032,
+          "en_yakin_sirket": "ÖdemeKöprü"
+        },
+        {
+          "id": 26,
+          "mesaj": "KOBİ başvurularında otomatik kredi skoru üretmek istiyoruz",
+          "beklenen": "finans",
+          "bulunan": "finans",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.7016,
+          "top2_skor": 0.5418,
+          "marj": 0.1598,
+          "en_yakin_sirket": "KrediSkor"
+        },
+        {
+          "id": 27,
+          "mesaj": "Tarlalarda sulamayı sensörle otomatikleştirmek istiyoruz",
+          "beklenen": "tarım",
+          "bulunan": "tarım",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6481,
+          "top2_skor": 0.5433,
+          "marj": 0.1047,
+          "en_yakin_sirket": "ToprakSens"
+        },
+        {
+          "id": 28,
+          "mesaj": "Ürün verimini hava ve toprak verisine göre tahmin etmek istiyoruz",
+          "beklenen": "tarım",
+          "bulunan": "tarım",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6217,
+          "top2_skor": 0.5126,
+          "marj": 0.1091,
+          "en_yakin_sirket": "TarımVeri"
+        },
+        {
+          "id": 29,
+          "mesaj": "Rüzgar türbini üretimini şebeke yüküyle birlikte izlemek istiyoruz",
+          "beklenen": "enerji",
+          "bulunan": "belirsiz",
+          "dogru": false,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.4896,
+          "top2_skor": 0.4194,
+          "marj": 0.0702,
+          "en_yakin_sirket": "EnerjiIzle"
+        },
+        {
+          "id": 30,
+          "mesaj": "Sayaç verisinde kayıp kaçak analizi yapmak istiyoruz",
+          "beklenen": "enerji",
+          "bulunan": "enerji",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5929,
+          "top2_skor": 0.4256,
+          "marj": 0.1673,
+          "en_yakin_sirket": "ŞebekeAkıllı"
+        },
+        {
+          "id": 31,
+          "mesaj": "Baz istasyonu kapsama kalitesini abone şikayetleriyle eşleştirmek istiyoruz",
+          "beklenen": "telekom",
+          "bulunan": "telekom",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5839,
+          "top2_skor": 0.5217,
+          "marj": 0.0622,
+          "en_yakin_sirket": "TeleLink"
+        },
+        {
+          "id": 32,
+          "mesaj": "Fiber kesintilerini bölgesel olarak hızlı tespit etmek istiyoruz",
+          "beklenen": "telekom",
+          "bulunan": "telekom",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5843,
+          "top2_skor": 0.3816,
+          "marj": 0.2027,
+          "en_yakin_sirket": "FiberNet"
+        },
+        {
+          "id": 33,
+          "mesaj": "Dava dosyaları ve müvekkil sözleşmelerini tek panelden yönetmek istiyoruz",
+          "beklenen": "hukuk",
+          "bulunan": "hukuk",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5822,
+          "top2_skor": 0.4454,
+          "marj": 0.1368,
+          "en_yakin_sirket": "SözleşmeAI"
+        },
+        {
+          "id": 34,
+          "mesaj": "Sözleşme maddelerinde uyumsuzlukları otomatik işaretlemek istiyoruz",
+          "beklenen": "hukuk",
+          "bulunan": "hukuk",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5781,
+          "top2_skor": 0.3906,
+          "marj": 0.1876,
+          "en_yakin_sirket": "SözleşmeAI"
+        },
+        {
+          "id": 35,
+          "mesaj": "Mağaza stoklarını kasayla senkron tutmak istiyoruz",
+          "beklenen": "perakende",
+          "bulunan": "perakende",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.66,
+          "top2_skor": 0.5936,
+          "marj": 0.0663,
+          "en_yakin_sirket": "MağazaPulse"
+        },
+        {
+          "id": 36,
+          "mesaj": "Rafta ürün yokken kampanya fiyatını otomatik güncellemek istiyoruz",
+          "beklenen": "perakende",
+          "bulunan": "perakende",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5576,
+          "top2_skor": 0.5218,
+          "marj": 0.0358,
+          "en_yakin_sirket": "RaftaKal"
+        },
+        {
+          "id": 37,
+          "mesaj": "Canlı yayın ve VOD içeriklerini tek CMS üzerinden yönetmek istiyoruz",
+          "beklenen": "medya",
+          "bulunan": "medya",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6196,
+          "top2_skor": 0.4668,
+          "marj": 0.1527,
+          "en_yakin_sirket": "YayınAkış"
+        },
+        {
+          "id": 38,
+          "mesaj": "Reklam kampanyasının hangi izleyici segmentine ulaştığını ölçmek istiyoruz",
+          "beklenen": "medya",
+          "bulunan": "medya",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.766,
+          "top2_skor": 0.4625,
+          "marj": 0.3035,
+          "en_yakin_sirket": "ReklamHedef"
+        },
+        {
+          "id": 39,
+          "mesaj": "İşe alım, izin ve bordroyu tek İK sisteminde toplamak istiyoruz",
+          "beklenen": "insan_kaynaklari",
+          "bulunan": "insan_kaynaklari",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.57,
+          "top2_skor": 0.5099,
+          "marj": 0.0601,
+          "en_yakin_sirket": "İKBulut"
+        },
+        {
+          "id": 40,
+          "mesaj": "Çalışan yetkinliklerine göre yıllık eğitim planı çıkarmak istiyoruz",
+          "beklenen": "insan_kaynaklari",
+          "bulunan": "insan_kaynaklari",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6423,
+          "top2_skor": 0.5085,
+          "marj": 0.1338,
+          "en_yakin_sirket": "YetkinlikHarita"
+        },
+        {
+          "id": 41,
+          "mesaj": "Hastane çalışanlarımızın tamamlayıcı poliçe hasar süreçlerini dijitalleştirmek istiyoruz",
+          "beklenen": "sigorta",
+          "bulunan": "sigorta",
+          "dogru": true,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "saglik_vs_sigorta",
+          "top1_skor": 0.7056,
+          "top2_skor": 0.6209,
+          "marj": 0.0846,
+          "en_yakin_sirket": "HasarHızlı"
+        },
+        {
+          "id": 42,
+          "mesaj": "Tatilde kaza yapan müşterilerimizin tazminat dosyalarını takip edeceğiz",
+          "beklenen": "sigorta",
+          "bulunan": "sigorta",
+          "dogru": true,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "turizm_vs_sigorta",
+          "top1_skor": 0.5567,
+          "top2_skor": 0.5016,
+          "marj": 0.0551,
+          "en_yakin_sirket": "HasarHızlı"
+        },
+        {
+          "id": 43,
+          "mesaj": "Otel zincirimizin şehirler arası malzeme sevkiyat filolarını canlı izlemek istiyoruz",
+          "beklenen": "lojistik",
+          "bulunan": "lojistik",
+          "dogru": true,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "turizm_vs_lojistik",
+          "top1_skor": 0.6159,
+          "top2_skor": 0.5346,
+          "marj": 0.0813,
+          "en_yakin_sirket": "GümrükKöprü"
+        },
+        {
+          "id": 44,
+          "mesaj": "Askeri personelimize zorunlu dil ve prosedür eğitimlerini uzaktan vermek istiyoruz",
+          "beklenen": "eğitim",
+          "bulunan": "savunma",
+          "dogru": false,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "savunma_vs_egitim",
+          "top1_skor": 0.5492,
+          "top2_skor": 0.4255,
+          "marj": 0.1237,
+          "en_yakin_sirket": "SavunmaSis"
+        },
+        {
+          "id": 45,
+          "mesaj": "Çiftçilere özel mikro kredi skorlama ve ödeme takvimi kurmak istiyoruz",
+          "beklenen": "finans",
+          "bulunan": "finans",
+          "dogru": true,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "tarim_vs_finans",
+          "top1_skor": 0.5395,
+          "top2_skor": 0.477,
+          "marj": 0.0625,
+          "en_yakin_sirket": "KrediSkor"
+        },
+        {
+          "id": 46,
+          "mesaj": "Üniversite kantinlerinde kartlı ödeme altyapısı kurmak istiyoruz",
+          "beklenen": "finans",
+          "bulunan": "finans",
+          "dogru": true,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "egitim_vs_finans",
+          "top1_skor": 0.5428,
+          "top2_skor": 0.5424,
+          "marj": 0.0005,
+          "en_yakin_sirket": "ÖdemeKöprü"
+        },
+        {
+          "id": 47,
+          "mesaj": "Elektrik santralimizdeki kontrol sistemlerini siber saldırılara karşı korumak istiyoruz",
+          "beklenen": "savunma",
+          "bulunan": "savunma",
+          "dogru": true,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "enerji_vs_savunma",
+          "top1_skor": 0.7026,
+          "top2_skor": 0.5884,
+          "marj": 0.1141,
+          "en_yakin_sirket": "SiberKalkan"
+        },
+        {
+          "id": 48,
+          "mesaj": "Bankamızın çağrı merkezi personeline ürün eğitim simülasyonu kurmak istiyoruz",
+          "beklenen": "eğitim",
+          "bulunan": "eğitim",
+          "dogru": true,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "finans_vs_egitim",
+          "top1_skor": 0.6506,
+          "top2_skor": 0.6134,
+          "marj": 0.0372,
+          "en_yakin_sirket": "KampüsDijital"
+        },
+        {
+          "id": 49,
+          "mesaj": "E-ticaret siparişlerimizin depo çıkış ve kurye teslimatını izlemek istiyoruz",
+          "beklenen": "lojistik",
+          "bulunan": "turizm",
+          "dogru": false,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "perakende_vs_lojistik",
+          "top1_skor": 0.5328,
+          "top2_skor": 0.5306,
+          "marj": 0.0021,
+          "en_yakin_sirket": "HavaYolu360"
+        },
+        {
+          "id": 50,
+          "mesaj": "TV kanallarımızın yayın hakları sözleşmelerini hukuken arşivlemek istiyoruz",
+          "beklenen": "hukuk",
+          "bulunan": "hukuk",
+          "dogru": true,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "medya_vs_hukuk",
+          "top1_skor": 0.5256,
+          "top2_skor": 0.4624,
+          "marj": 0.0632,
+          "en_yakin_sirket": "SözleşmeAI"
+        },
+        {
+          "id": 51,
+          "mesaj": "Mağaza çalışanlarımızın bordro ve izin süreçlerini dijitalleştirmek istiyoruz",
+          "beklenen": "insan_kaynaklari",
+          "bulunan": "hukuk",
+          "dogru": false,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "perakende_vs_ik",
+          "top1_skor": 0.6271,
+          "top2_skor": 0.6185,
+          "marj": 0.0086,
+          "en_yakin_sirket": "HukukPortal"
+        },
+        {
+          "id": 52,
+          "mesaj": "Sağlık grubumuzun yeni doktor alım ve oryantasyon sürecini yönetmek istiyoruz",
+          "beklenen": "insan_kaynaklari",
+          "bulunan": "sağlık",
+          "dogru": false,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "saglik_vs_ik",
+          "top1_skor": 0.6067,
+          "top2_skor": 0.5911,
+          "marj": 0.0156,
+          "en_yakin_sirket": "SağlıkTek"
+        },
+        {
+          "id": 53,
+          "mesaj": "Hem klinik randevu hem de hasta faturalandırma ödeme modülü istiyoruz",
+          "beklenen": "sağlık",
+          "bulunan": "sağlık",
+          "dogru": true,
+          "zorluk": "cok_anlamli",
+          "tuzak_tipi": "saglik_vs_finans",
+          "top1_skor": 0.6735,
+          "top2_skor": 0.5988,
+          "marj": 0.0747,
+          "en_yakin_sirket": "SağlıkTek"
+        },
+        {
+          "id": 54,
+          "mesaj": "Otelimizde misafir Wi-Fi kalitesini ve şikayetleri izlemek istiyoruz",
+          "beklenen": "telekom",
+          "bulunan": "turizm",
+          "dogru": false,
+          "zorluk": "cok_anlamli",
+          "tuzak_tipi": "turizm_vs_telekom",
+          "top1_skor": 0.5384,
+          "top2_skor": 0.4912,
+          "marj": 0.0472,
+          "en_yakin_sirket": "TatilPlus"
+        },
+        {
+          "id": 55,
+          "mesaj": "Tarım kooperatifimizin üyelerine poliçe ve hasar yönetimi sunacağız",
+          "beklenen": "sigorta",
+          "bulunan": "belirsiz",
+          "dogru": false,
+          "zorluk": "cok_anlamli",
+          "tuzak_tipi": "tarim_vs_sigorta",
+          "top1_skor": 0.434,
+          "top2_skor": 0.3781,
+          "marj": 0.0559,
+          "en_yakin_sirket": "TarımVeri"
+        },
+        {
+          "id": 56,
+          "mesaj": "PACS",
+          "beklenen": "sağlık",
+          "bulunan": "belirsiz",
+          "dogru": false,
+          "zorluk": "kisa",
+          "tuzak_tipi": null,
+          "top1_skor": 0.4143,
+          "top2_skor": 0.3508,
+          "marj": 0.0635,
+          "en_yakin_sirket": "MediCloud"
+        },
+        {
+          "id": 57,
+          "mesaj": "SCADA izleme",
+          "beklenen": "enerji",
+          "bulunan": "belirsiz",
+          "dogru": false,
+          "zorluk": "kisa",
+          "tuzak_tipi": null,
+          "top1_skor": 0.3821,
+          "top2_skor": 0.1481,
+          "marj": 0.234,
+          "en_yakin_sirket": "EnerjiIzle"
+        },
+        {
+          "id": 58,
+          "mesaj": "WMS",
+          "beklenen": "lojistik",
+          "bulunan": "lojistik",
+          "dogru": true,
+          "zorluk": "kisa",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5366,
+          "top2_skor": 0.3691,
+          "marj": 0.1674,
+          "en_yakin_sirket": "DepoAkış"
+        },
+        {
+          "id": 59,
+          "mesaj": "LMS istiyoruz",
+          "beklenen": "eğitim",
+          "bulunan": "eğitim",
+          "dogru": true,
+          "zorluk": "kisa",
+          "tuzak_tipi": null,
+          "top1_skor": 0.634,
+          "top2_skor": 0.5452,
+          "marj": 0.0888,
+          "en_yakin_sirket": "EğitimBul"
+        },
+        {
+          "id": 60,
+          "mesaj": "Bugün hava çok güzeldi, sizi aramak istedim",
+          "beklenen": "belirsiz",
+          "bulunan": "belirsiz",
+          "dogru": true,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.1374,
+          "top2_skor": 0.1069,
+          "marj": 0.0305,
+          "en_yakin_sirket": "ToprakSens"
+        },
+        {
+          "id": 61,
+          "mesaj": "Fiyat teklifi almak istiyorum",
+          "beklenen": "belirsiz",
+          "bulunan": "belirsiz",
+          "dogru": true,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.4812,
+          "top2_skor": 0.3573,
+          "marj": 0.1239,
+          "en_yakin_sirket": "RaftaKal"
+        },
+        {
+          "id": 62,
+          "mesaj": "Merhaba, yarın saat kaçta müsaitsiniz?",
+          "beklenen": "belirsiz",
+          "bulunan": "belirsiz",
+          "dogru": true,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.074,
+          "top2_skor": 0.0533,
+          "marj": 0.0207,
+          "en_yakin_sirket": "AcilSoft"
+        },
+        {
+          "id": 63,
+          "mesaj": "Genel olarak bir yazılım çözümü arıyoruz ama henüz alan net değil",
+          "beklenen": "belirsiz",
+          "bulunan": "belirsiz",
+          "dogru": true,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.4916,
+          "top2_skor": 0.4659,
+          "marj": 0.0257,
+          "en_yakin_sirket": "HukukPortal"
+        },
+        {
+          "id": 64,
+          "mesaj": "Teşekkür ederiz, dokümanları inceleyeceğiz",
+          "beklenen": "belirsiz",
+          "bulunan": "belirsiz",
+          "dogru": true,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.3798,
+          "top2_skor": 0.347,
+          "marj": 0.0328,
+          "en_yakin_sirket": "LabFlow"
+        },
+        {
+          "id": 65,
+          "mesaj": "İyi çalışmalar, sonra tekrar yazarız",
+          "beklenen": "belirsiz",
+          "bulunan": "belirsiz",
+          "dogru": true,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.3714,
+          "top2_skor": 0.3229,
+          "marj": 0.0486,
+          "en_yakin_sirket": "OkulPlus"
+        },
+        {
+          "id": 66,
+          "mesaj": "Bu konuda bilgilendirme dokümanı var mı?",
+          "beklenen": "belirsiz",
+          "bulunan": "belirsiz",
+          "dogru": true,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.2786,
+          "top2_skor": 0.2584,
+          "marj": 0.0202,
+          "en_yakin_sirket": "HasarHızlı"
+        },
+        {
+          "id": 67,
+          "mesaj": "Yönetim kurulu sunumu için genel kapasite bilgisi isteriz",
+          "beklenen": "belirsiz",
+          "bulunan": "insan_kaynaklari",
+          "dogru": false,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5913,
+          "top2_skor": 0.5019,
+          "marj": 0.0893,
+          "en_yakin_sirket": "İKBulut"
+        }
+      ]
+    },
+    {
+      "isim": "BGE-M3 (1024)",
+      "model": "BAAI/bge-m3",
+      "hata": null,
+      "yukleme_suresi": 6.14,
+      "ms_mesaj": 40.06,
+      "bellek_mb": 1168.1,
+      "vektor_boyutu": 1024,
+      "genel": {
+        "dogru": 57,
+        "toplam": 67,
+        "dogruluk": 85.1,
+        "belirsiz": {
+          "n": 8,
+          "dogru": 4,
+          "yuzde": 50.0
+        },
+        "tuzak": {
+          "n": 12,
+          "dogru": 6,
+          "yuzde": 50.0
+        },
+        "parafraz": {
+          "n": 15,
+          "dogru": 15,
+          "yuzde": 100.0
+        },
+        "kisa": {
+          "n": 4,
+          "dogru": 4,
+          "yuzde": 100.0
+        },
+        "cok_anlamli": {
+          "n": 3,
+          "dogru": 3,
+          "yuzde": 100.0
+        }
+      },
+      "zorluk_kirilim": {
+        "belirsiz": {
+          "n": 8,
+          "dogru": 4,
+          "yuzde": 50.0
+        },
+        "cok_anlamli": {
+          "n": 3,
+          "dogru": 3,
+          "yuzde": 100.0
+        },
+        "dogrudan": {
+          "n": 8,
+          "dogru": 8,
+          "yuzde": 100.0
+        },
+        "kisa": {
+          "n": 4,
+          "dogru": 4,
+          "yuzde": 100.0
+        },
+        "parafraz": {
+          "n": 15,
+          "dogru": 15,
+          "yuzde": 100.0
+        },
+        "teknik": {
+          "n": 17,
+          "dogru": 17,
+          "yuzde": 100.0
+        },
+        "tuzak": {
+          "n": 12,
+          "dogru": 6,
+          "yuzde": 50.0
+        }
+      },
+      "sektor_kirilim": {
+        "enerji": {
+          "n": 3,
+          "dogru": 3,
+          "yuzde": 100.0
+        },
+        "eğitim": {
+          "n": 7,
+          "dogru": 5,
+          "yuzde": 71.4
+        },
+        "finans": {
+          "n": 5,
+          "dogru": 4,
+          "yuzde": 80.0
+        },
+        "hukuk": {
+          "n": 3,
+          "dogru": 3,
+          "yuzde": 100.0
+        },
+        "insan_kaynaklari": {
+          "n": 4,
+          "dogru": 3,
+          "yuzde": 75.0
+        },
+        "lojistik": {
+          "n": 6,
+          "dogru": 5,
+          "yuzde": 83.3
+        },
+        "medya": {
+          "n": 2,
+          "dogru": 2,
+          "yuzde": 100.0
+        },
+        "perakende": {
+          "n": 2,
+          "dogru": 2,
+          "yuzde": 100.0
+        },
+        "savunma": {
+          "n": 5,
+          "dogru": 5,
+          "yuzde": 100.0
+        },
+        "sağlık": {
+          "n": 7,
+          "dogru": 7,
+          "yuzde": 100.0
+        },
+        "sigorta": {
+          "n": 6,
+          "dogru": 5,
+          "yuzde": 83.3
+        },
+        "tarım": {
+          "n": 2,
+          "dogru": 2,
+          "yuzde": 100.0
+        },
+        "telekom": {
+          "n": 3,
+          "dogru": 3,
+          "yuzde": 100.0
+        },
+        "turizm": {
+          "n": 4,
+          "dogru": 4,
+          "yuzde": 100.0
+        }
+      },
+      "skor_istatistik": {
+        "dogru": {
+          "n": 53,
+          "ortalama": 0.621,
+          "min": 0.513,
+          "max": 0.747,
+          "marj_ort": 0.08
+        },
+        "yanlis": {
+          "n": 10,
+          "ortalama": 0.558,
+          "min": 0.536,
+          "max": 0.588,
+          "marj_ort": 0.019
+        },
+        "belirsiz_beklenen": {
+          "n": 8,
+          "ortalama": 0.502,
+          "min": 0.416,
+          "max": 0.588,
+          "marj_ort": 0.016
+        }
+      },
+      "en_sik_hatalar": [
+        {
+          "beklenen": "sigorta",
+          "bulunan": "turizm",
+          "adet": 1
+        },
+        {
+          "beklenen": "lojistik",
+          "bulunan": "turizm",
+          "adet": 1
+        },
+        {
+          "beklenen": "eğitim",
+          "bulunan": "savunma",
+          "adet": 1
+        },
+        {
+          "beklenen": "finans",
+          "bulunan": "eğitim",
+          "adet": 1
+        },
+        {
+          "beklenen": "eğitim",
+          "bulunan": "perakende",
+          "adet": 1
+        },
+        {
+          "beklenen": "insan_kaynaklari",
+          "bulunan": "sağlık",
+          "adet": 1
+        },
+        {
+          "beklenen": "belirsiz",
+          "bulunan": "perakende",
+          "adet": 1
+        },
+        {
+          "beklenen": "belirsiz",
+          "bulunan": "tarım",
+          "adet": 1
+        },
+        {
+          "beklenen": "belirsiz",
+          "bulunan": "hukuk",
+          "adet": 1
+        },
+        {
+          "beklenen": "belirsiz",
+          "bulunan": "insan_kaynaklari",
+          "adet": 1
+        }
+      ],
+      "esik_taramasi": [
+        {
+          "esik": 0.4,
+          "dogruluk": 79.1,
+          "dogru": 53,
+          "belirsiz_yakalama": "0/8"
+        },
+        {
+          "esik": 0.45,
+          "dogruluk": 82.1,
+          "dogru": 55,
+          "belirsiz_yakalama": "2/8"
+        },
+        {
+          "esik": 0.5,
+          "dogruluk": 85.1,
+          "dogru": 57,
+          "belirsiz_yakalama": "4/8"
+        },
+        {
+          "esik": 0.55,
+          "dogruluk": 80.6,
+          "dogru": 54,
+          "belirsiz_yakalama": "5/8"
+        },
+        {
+          "esik": 0.6,
+          "dogruluk": 59.7,
+          "dogru": 40,
+          "belirsiz_yakalama": "8/8"
+        },
+        {
+          "esik": 0.65,
+          "dogruluk": 35.8,
+          "dogru": 24,
+          "belirsiz_yakalama": "8/8"
+        },
+        {
+          "esik": 0.7,
+          "dogruluk": 19.4,
+          "dogru": 13,
+          "belirsiz_yakalama": "8/8"
+        }
+      ],
+      "detaylar": [
+        {
+          "id": 1,
+          "mesaj": "Hastane yönetim sistemi arıyoruz",
+          "beklenen": "sağlık",
+          "bulunan": "sağlık",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6664,
+          "top2_skor": 0.6111,
+          "marj": 0.0553,
+          "en_yakin_sirket": "SağlıkTek"
+        },
+        {
+          "id": 2,
+          "mesaj": "Poliklinik randevu çakışmalarını azaltacak bir sistem lazım",
+          "beklenen": "sağlık",
+          "bulunan": "sağlık",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5196,
+          "top2_skor": 0.4841,
+          "marj": 0.0355,
+          "en_yakin_sirket": "SağlıkTek"
+        },
+        {
+          "id": 3,
+          "mesaj": "MR ve tomografi görüntülerini güvenli arşivlemek istiyoruz",
+          "beklenen": "sağlık",
+          "bulunan": "sağlık",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5971,
+          "top2_skor": 0.4942,
+          "marj": 0.1029,
+          "en_yakin_sirket": "MediCloud"
+        },
+        {
+          "id": 4,
+          "mesaj": "112 çağrılarında en yakın ekibi otomatik yönlendirmek istiyoruz",
+          "beklenen": "sağlık",
+          "bulunan": "sağlık",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5938,
+          "top2_skor": 0.477,
+          "marj": 0.1167,
+          "en_yakin_sirket": "AcilSoft"
+        },
+        {
+          "id": 5,
+          "mesaj": "Kan tahlili sonuçlarını hekime otomatik düşürecek laboratuvar yazılımı",
+          "beklenen": "sağlık",
+          "bulunan": "sağlık",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5951,
+          "top2_skor": 0.5613,
+          "marj": 0.0338,
+          "en_yakin_sirket": "LabFlow"
+        },
+        {
+          "id": 6,
+          "mesaj": "Otel rezervasyon sistemimizi yenilemek istiyoruz",
+          "beklenen": "turizm",
+          "bulunan": "turizm",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6731,
+          "top2_skor": 0.5915,
+          "marj": 0.0816,
+          "en_yakin_sirket": "TatilPlus"
+        },
+        {
+          "id": 7,
+          "mesaj": "Misafirlerin oda müsaitliğini tek ekrandan görmek istiyoruz",
+          "beklenen": "turizm",
+          "bulunan": "turizm",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5354,
+          "top2_skor": 0.4917,
+          "marj": 0.0437,
+          "en_yakin_sirket": "TatilPlus"
+        },
+        {
+          "id": 8,
+          "mesaj": "Yolcuların telefondan check-in yapmasını sağlamak istiyoruz",
+          "beklenen": "turizm",
+          "bulunan": "turizm",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5814,
+          "top2_skor": 0.5403,
+          "marj": 0.0412,
+          "en_yakin_sirket": "HavaYolu360"
+        },
+        {
+          "id": 9,
+          "mesaj": "Yurt dışı paketlerimizi internetten satacağız",
+          "beklenen": "turizm",
+          "bulunan": "turizm",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5788,
+          "top2_skor": 0.5378,
+          "marj": 0.041,
+          "en_yakin_sirket": "GezginSoft"
+        },
+        {
+          "id": 10,
+          "mesaj": "Askeri haberleşme altyapımızı güçlendirmek istiyoruz",
+          "beklenen": "savunma",
+          "bulunan": "savunma",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6656,
+          "top2_skor": 0.6404,
+          "marj": 0.0252,
+          "en_yakin_sirket": "SavunmaSis"
+        },
+        {
+          "id": 11,
+          "mesaj": "Birlikler arası güvenli mesajlaşma kurmak istiyoruz",
+          "beklenen": "savunma",
+          "bulunan": "savunma",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5981,
+          "top2_skor": 0.5518,
+          "marj": 0.0463,
+          "en_yakin_sirket": "SavunmaSis"
+        },
+        {
+          "id": 12,
+          "mesaj": "Hava sahası tehditlerini gerçek zamanlı izlemek istiyoruz",
+          "beklenen": "savunma",
+          "bulunan": "savunma",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6226,
+          "top2_skor": 0.5307,
+          "marj": 0.092,
+          "en_yakin_sirket": "RadarNet"
+        },
+        {
+          "id": 13,
+          "mesaj": "Kritik ağlarımıza sızma girişimlerini önlemek istiyoruz",
+          "beklenen": "savunma",
+          "bulunan": "savunma",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5797,
+          "top2_skor": 0.4756,
+          "marj": 0.104,
+          "en_yakin_sirket": "SiberKalkan"
+        },
+        {
+          "id": 14,
+          "mesaj": "Üniversite için uzaktan eğitim platformu istiyoruz",
+          "beklenen": "eğitim",
+          "bulunan": "eğitim",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.7202,
+          "top2_skor": 0.5689,
+          "marj": 0.1513,
+          "en_yakin_sirket": "EğitimBul"
+        },
+        {
+          "id": 15,
+          "mesaj": "Kampüsteki ders ve öğrenci kayıtlarını tek yerden yönetmek istiyoruz",
+          "beklenen": "eğitim",
+          "bulunan": "eğitim",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6742,
+          "top2_skor": 0.5765,
+          "marj": 0.0977,
+          "en_yakin_sirket": "KampüsDijital"
+        },
+        {
+          "id": 16,
+          "mesaj": "Velilerle öğretmenleri dijitalde buluşturacak kanal lazım",
+          "beklenen": "eğitim",
+          "bulunan": "eğitim",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5541,
+          "top2_skor": 0.5097,
+          "marj": 0.0444,
+          "en_yakin_sirket": "OkulPlus"
+        },
+        {
+          "id": 17,
+          "mesaj": "Online sınav ve otomatik notlandırma istiyoruz",
+          "beklenen": "eğitim",
+          "bulunan": "eğitim",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6081,
+          "top2_skor": 0.541,
+          "marj": 0.0672,
+          "en_yakin_sirket": "KampüsDijital"
+        },
+        {
+          "id": 18,
+          "mesaj": "Sağlık sigortası poliçelerimizi dijitalleştirmek istiyoruz",
+          "beklenen": "sigorta",
+          "bulunan": "sigorta",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.638,
+          "top2_skor": 0.6011,
+          "marj": 0.0368,
+          "en_yakin_sirket": "HasarHızlı"
+        },
+        {
+          "id": 19,
+          "mesaj": "Kasko primlerini sürücü riskine göre otomatik hesaplamak istiyoruz",
+          "beklenen": "sigorta",
+          "bulunan": "sigorta",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6528,
+          "top2_skor": 0.5298,
+          "marj": 0.123,
+          "en_yakin_sirket": "RiskKoruma"
+        },
+        {
+          "id": 20,
+          "mesaj": "Hasar dosyasına eksper atayıp fotoğraflardan ön değerlendirme yapmak istiyoruz",
+          "beklenen": "sigorta",
+          "bulunan": "sigorta",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6448,
+          "top2_skor": 0.4876,
+          "marj": 0.1572,
+          "en_yakin_sirket": "HasarHızlı"
+        },
+        {
+          "id": 21,
+          "mesaj": "Kargo filomuzu canlı takip etmek istiyoruz",
+          "beklenen": "lojistik",
+          "bulunan": "lojistik",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6467,
+          "top2_skor": 0.5746,
+          "marj": 0.0722,
+          "en_yakin_sirket": "LojistikPro"
+        },
+        {
+          "id": 22,
+          "mesaj": "Depo stok hareketlerini ve son teslimatı optimize etmek istiyoruz",
+          "beklenen": "lojistik",
+          "bulunan": "lojistik",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.7466,
+          "top2_skor": 0.6486,
+          "marj": 0.098,
+          "en_yakin_sirket": "DepoAkış"
+        },
+        {
+          "id": 23,
+          "mesaj": "Konteynerlerin gümrük süreçlerini dijital takip etmek istiyoruz",
+          "beklenen": "lojistik",
+          "bulunan": "lojistik",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6696,
+          "top2_skor": 0.5594,
+          "marj": 0.1102,
+          "en_yakin_sirket": "GümrükKöprü"
+        },
+        {
+          "id": 24,
+          "mesaj": "Banka ödeme altyapımızı yenilemek istiyoruz",
+          "beklenen": "finans",
+          "bulunan": "finans",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6248,
+          "top2_skor": 0.5881,
+          "marj": 0.0367,
+          "en_yakin_sirket": "BankaYazılım"
+        },
+        {
+          "id": 25,
+          "mesaj": "Sanal POS ve açık bankacılık API entegre etmek istiyoruz",
+          "beklenen": "finans",
+          "bulunan": "finans",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.7464,
+          "top2_skor": 0.5461,
+          "marj": 0.2003,
+          "en_yakin_sirket": "ÖdemeKöprü"
+        },
+        {
+          "id": 26,
+          "mesaj": "KOBİ başvurularında otomatik kredi skoru üretmek istiyoruz",
+          "beklenen": "finans",
+          "bulunan": "finans",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6796,
+          "top2_skor": 0.5734,
+          "marj": 0.1062,
+          "en_yakin_sirket": "KrediSkor"
+        },
+        {
+          "id": 27,
+          "mesaj": "Tarlalarda sulamayı sensörle otomatikleştirmek istiyoruz",
+          "beklenen": "tarım",
+          "bulunan": "tarım",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6261,
+          "top2_skor": 0.6254,
+          "marj": 0.0007,
+          "en_yakin_sirket": "ToprakSens"
+        },
+        {
+          "id": 28,
+          "mesaj": "Ürün verimini hava ve toprak verisine göre tahmin etmek istiyoruz",
+          "beklenen": "tarım",
+          "bulunan": "tarım",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6461,
+          "top2_skor": 0.5885,
+          "marj": 0.0576,
+          "en_yakin_sirket": "TarımVeri"
+        },
+        {
+          "id": 29,
+          "mesaj": "Rüzgar türbini üretimini şebeke yüküyle birlikte izlemek istiyoruz",
+          "beklenen": "enerji",
+          "bulunan": "enerji",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.573,
+          "top2_skor": 0.5052,
+          "marj": 0.0678,
+          "en_yakin_sirket": "EnerjiIzle"
+        },
+        {
+          "id": 30,
+          "mesaj": "Sayaç verisinde kayıp kaçak analizi yapmak istiyoruz",
+          "beklenen": "enerji",
+          "bulunan": "enerji",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6698,
+          "top2_skor": 0.4946,
+          "marj": 0.1752,
+          "en_yakin_sirket": "ŞebekeAkıllı"
+        },
+        {
+          "id": 31,
+          "mesaj": "Baz istasyonu kapsama kalitesini abone şikayetleriyle eşleştirmek istiyoruz",
+          "beklenen": "telekom",
+          "bulunan": "telekom",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6109,
+          "top2_skor": 0.558,
+          "marj": 0.0529,
+          "en_yakin_sirket": "TeleLink"
+        },
+        {
+          "id": 32,
+          "mesaj": "Fiber kesintilerini bölgesel olarak hızlı tespit etmek istiyoruz",
+          "beklenen": "telekom",
+          "bulunan": "telekom",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6113,
+          "top2_skor": 0.5281,
+          "marj": 0.0832,
+          "en_yakin_sirket": "FiberNet"
+        },
+        {
+          "id": 33,
+          "mesaj": "Dava dosyaları ve müvekkil sözleşmelerini tek panelden yönetmek istiyoruz",
+          "beklenen": "hukuk",
+          "bulunan": "hukuk",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5754,
+          "top2_skor": 0.5387,
+          "marj": 0.0367,
+          "en_yakin_sirket": "HukukPortal"
+        },
+        {
+          "id": 34,
+          "mesaj": "Sözleşme maddelerinde uyumsuzlukları otomatik işaretlemek istiyoruz",
+          "beklenen": "hukuk",
+          "bulunan": "hukuk",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5923,
+          "top2_skor": 0.5199,
+          "marj": 0.0724,
+          "en_yakin_sirket": "SözleşmeAI"
+        },
+        {
+          "id": 35,
+          "mesaj": "Mağaza stoklarını kasayla senkron tutmak istiyoruz",
+          "beklenen": "perakende",
+          "bulunan": "perakende",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6565,
+          "top2_skor": 0.5981,
+          "marj": 0.0584,
+          "en_yakin_sirket": "MağazaPulse"
+        },
+        {
+          "id": 36,
+          "mesaj": "Rafta ürün yokken kampanya fiyatını otomatik güncellemek istiyoruz",
+          "beklenen": "perakende",
+          "bulunan": "perakende",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6708,
+          "top2_skor": 0.474,
+          "marj": 0.1968,
+          "en_yakin_sirket": "RaftaKal"
+        },
+        {
+          "id": 37,
+          "mesaj": "Canlı yayın ve VOD içeriklerini tek CMS üzerinden yönetmek istiyoruz",
+          "beklenen": "medya",
+          "bulunan": "medya",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5833,
+          "top2_skor": 0.5011,
+          "marj": 0.0822,
+          "en_yakin_sirket": "YayınAkış"
+        },
+        {
+          "id": 38,
+          "mesaj": "Reklam kampanyasının hangi izleyici segmentine ulaştığını ölçmek istiyoruz",
+          "beklenen": "medya",
+          "bulunan": "medya",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.7005,
+          "top2_skor": 0.5372,
+          "marj": 0.1633,
+          "en_yakin_sirket": "ReklamHedef"
+        },
+        {
+          "id": 39,
+          "mesaj": "İşe alım, izin ve bordroyu tek İK sisteminde toplamak istiyoruz",
+          "beklenen": "insan_kaynaklari",
+          "bulunan": "insan_kaynaklari",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.7209,
+          "top2_skor": 0.5485,
+          "marj": 0.1724,
+          "en_yakin_sirket": "İKBulut"
+        },
+        {
+          "id": 40,
+          "mesaj": "Çalışan yetkinliklerine göre yıllık eğitim planı çıkarmak istiyoruz",
+          "beklenen": "insan_kaynaklari",
+          "bulunan": "insan_kaynaklari",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6327,
+          "top2_skor": 0.5189,
+          "marj": 0.1137,
+          "en_yakin_sirket": "YetkinlikHarita"
+        },
+        {
+          "id": 41,
+          "mesaj": "Hastane çalışanlarımızın tamamlayıcı poliçe hasar süreçlerini dijitalleştirmek istiyoruz",
+          "beklenen": "sigorta",
+          "bulunan": "sigorta",
+          "dogru": true,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "saglik_vs_sigorta",
+          "top1_skor": 0.6836,
+          "top2_skor": 0.6241,
+          "marj": 0.0595,
+          "en_yakin_sirket": "HasarHızlı"
+        },
+        {
+          "id": 42,
+          "mesaj": "Tatilde kaza yapan müşterilerimizin tazminat dosyalarını takip edeceğiz",
+          "beklenen": "sigorta",
+          "bulunan": "turizm",
+          "dogru": false,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "turizm_vs_sigorta",
+          "top1_skor": 0.5706,
+          "top2_skor": 0.5691,
+          "marj": 0.0015,
+          "en_yakin_sirket": "GezginSoft"
+        },
+        {
+          "id": 43,
+          "mesaj": "Otel zincirimizin şehirler arası malzeme sevkiyat filolarını canlı izlemek istiyoruz",
+          "beklenen": "lojistik",
+          "bulunan": "turizm",
+          "dogru": false,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "turizm_vs_lojistik",
+          "top1_skor": 0.574,
+          "top2_skor": 0.5364,
+          "marj": 0.0375,
+          "en_yakin_sirket": "TatilPlus"
+        },
+        {
+          "id": 44,
+          "mesaj": "Askeri personelimize zorunlu dil ve prosedür eğitimlerini uzaktan vermek istiyoruz",
+          "beklenen": "eğitim",
+          "bulunan": "savunma",
+          "dogru": false,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "savunma_vs_egitim",
+          "top1_skor": 0.5462,
+          "top2_skor": 0.5409,
+          "marj": 0.0053,
+          "en_yakin_sirket": "SavunmaSis"
+        },
+        {
+          "id": 45,
+          "mesaj": "Çiftçilere özel mikro kredi skorlama ve ödeme takvimi kurmak istiyoruz",
+          "beklenen": "finans",
+          "bulunan": "finans",
+          "dogru": true,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "tarim_vs_finans",
+          "top1_skor": 0.5965,
+          "top2_skor": 0.5306,
+          "marj": 0.0659,
+          "en_yakin_sirket": "KrediSkor"
+        },
+        {
+          "id": 46,
+          "mesaj": "Üniversite kantinlerinde kartlı ödeme altyapısı kurmak istiyoruz",
+          "beklenen": "finans",
+          "bulunan": "eğitim",
+          "dogru": false,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "egitim_vs_finans",
+          "top1_skor": 0.5499,
+          "top2_skor": 0.5266,
+          "marj": 0.0233,
+          "en_yakin_sirket": "KampüsDijital"
+        },
+        {
+          "id": 47,
+          "mesaj": "Elektrik santralimizdeki kontrol sistemlerini siber saldırılara karşı korumak istiyoruz",
+          "beklenen": "savunma",
+          "bulunan": "savunma",
+          "dogru": true,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "enerji_vs_savunma",
+          "top1_skor": 0.6068,
+          "top2_skor": 0.583,
+          "marj": 0.0238,
+          "en_yakin_sirket": "SiberKalkan"
+        },
+        {
+          "id": 48,
+          "mesaj": "Bankamızın çağrı merkezi personeline ürün eğitim simülasyonu kurmak istiyoruz",
+          "beklenen": "eğitim",
+          "bulunan": "perakende",
+          "dogru": false,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "finans_vs_egitim",
+          "top1_skor": 0.5465,
+          "top2_skor": 0.5319,
+          "marj": 0.0145,
+          "en_yakin_sirket": "RaftaKal"
+        },
+        {
+          "id": 49,
+          "mesaj": "E-ticaret siparişlerimizin depo çıkış ve kurye teslimatını izlemek istiyoruz",
+          "beklenen": "lojistik",
+          "bulunan": "lojistik",
+          "dogru": true,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "perakende_vs_lojistik",
+          "top1_skor": 0.5637,
+          "top2_skor": 0.5547,
+          "marj": 0.0091,
+          "en_yakin_sirket": "LojistikPro"
+        },
+        {
+          "id": 50,
+          "mesaj": "TV kanallarımızın yayın hakları sözleşmelerini hukuken arşivlemek istiyoruz",
+          "beklenen": "hukuk",
+          "bulunan": "hukuk",
+          "dogru": true,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "medya_vs_hukuk",
+          "top1_skor": 0.568,
+          "top2_skor": 0.5124,
+          "marj": 0.0556,
+          "en_yakin_sirket": "SözleşmeAI"
+        },
+        {
+          "id": 51,
+          "mesaj": "Mağaza çalışanlarımızın bordro ve izin süreçlerini dijitalleştirmek istiyoruz",
+          "beklenen": "insan_kaynaklari",
+          "bulunan": "insan_kaynaklari",
+          "dogru": true,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "perakende_vs_ik",
+          "top1_skor": 0.6181,
+          "top2_skor": 0.5831,
+          "marj": 0.035,
+          "en_yakin_sirket": "İKBulut"
+        },
+        {
+          "id": 52,
+          "mesaj": "Sağlık grubumuzun yeni doktor alım ve oryantasyon sürecini yönetmek istiyoruz",
+          "beklenen": "insan_kaynaklari",
+          "bulunan": "sağlık",
+          "dogru": false,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "saglik_vs_ik",
+          "top1_skor": 0.5433,
+          "top2_skor": 0.5353,
+          "marj": 0.008,
+          "en_yakin_sirket": "SağlıkTek"
+        },
+        {
+          "id": 53,
+          "mesaj": "Hem klinik randevu hem de hasta faturalandırma ödeme modülü istiyoruz",
+          "beklenen": "sağlık",
+          "bulunan": "sağlık",
+          "dogru": true,
+          "zorluk": "cok_anlamli",
+          "tuzak_tipi": "saglik_vs_finans",
+          "top1_skor": 0.6253,
+          "top2_skor": 0.5326,
+          "marj": 0.0927,
+          "en_yakin_sirket": "SağlıkTek"
+        },
+        {
+          "id": 54,
+          "mesaj": "Otelimizde misafir Wi-Fi kalitesini ve şikayetleri izlemek istiyoruz",
+          "beklenen": "telekom",
+          "bulunan": "telekom",
+          "dogru": true,
+          "zorluk": "cok_anlamli",
+          "tuzak_tipi": "turizm_vs_telekom",
+          "top1_skor": 0.5585,
+          "top2_skor": 0.5515,
+          "marj": 0.0071,
+          "en_yakin_sirket": "FiberNet"
+        },
+        {
+          "id": 55,
+          "mesaj": "Tarım kooperatifimizin üyelerine poliçe ve hasar yönetimi sunacağız",
+          "beklenen": "sigorta",
+          "bulunan": "sigorta",
+          "dogru": true,
+          "zorluk": "cok_anlamli",
+          "tuzak_tipi": "tarim_vs_sigorta",
+          "top1_skor": 0.6096,
+          "top2_skor": 0.5464,
+          "marj": 0.0631,
+          "en_yakin_sirket": "SigortaNet"
+        },
+        {
+          "id": 56,
+          "mesaj": "PACS",
+          "beklenen": "sağlık",
+          "bulunan": "sağlık",
+          "dogru": true,
+          "zorluk": "kisa",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5129,
+          "top2_skor": 0.3997,
+          "marj": 0.1132,
+          "en_yakin_sirket": "MediCloud"
+        },
+        {
+          "id": 57,
+          "mesaj": "SCADA izleme",
+          "beklenen": "enerji",
+          "bulunan": "enerji",
+          "dogru": true,
+          "zorluk": "kisa",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6114,
+          "top2_skor": 0.5153,
+          "marj": 0.0961,
+          "en_yakin_sirket": "EnerjiIzle"
+        },
+        {
+          "id": 58,
+          "mesaj": "WMS",
+          "beklenen": "lojistik",
+          "bulunan": "lojistik",
+          "dogru": true,
+          "zorluk": "kisa",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5132,
+          "top2_skor": 0.4122,
+          "marj": 0.101,
+          "en_yakin_sirket": "DepoAkış"
+        },
+        {
+          "id": 59,
+          "mesaj": "LMS istiyoruz",
+          "beklenen": "eğitim",
+          "bulunan": "eğitim",
+          "dogru": true,
+          "zorluk": "kisa",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5819,
+          "top2_skor": 0.5062,
+          "marj": 0.0757,
+          "en_yakin_sirket": "EğitimBul"
+        },
+        {
+          "id": 60,
+          "mesaj": "Bugün hava çok güzeldi, sizi aramak istedim",
+          "beklenen": "belirsiz",
+          "bulunan": "belirsiz",
+          "dogru": true,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.4163,
+          "top2_skor": 0.3934,
+          "marj": 0.0229,
+          "en_yakin_sirket": "HavaYolu360"
+        },
+        {
+          "id": 61,
+          "mesaj": "Fiyat teklifi almak istiyorum",
+          "beklenen": "belirsiz",
+          "bulunan": "perakende",
+          "dogru": false,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.555,
+          "top2_skor": 0.5439,
+          "marj": 0.0111,
+          "en_yakin_sirket": "RaftaKal"
+        },
+        {
+          "id": 62,
+          "mesaj": "Merhaba, yarın saat kaçta müsaitsiniz?",
+          "beklenen": "belirsiz",
+          "bulunan": "belirsiz",
+          "dogru": true,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.4174,
+          "top2_skor": 0.4129,
+          "marj": 0.0045,
+          "en_yakin_sirket": "RaftaKal"
+        },
+        {
+          "id": 63,
+          "mesaj": "Genel olarak bir yazılım çözümü arıyoruz ama henüz alan net değil",
+          "beklenen": "belirsiz",
+          "bulunan": "tarım",
+          "dogru": false,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5676,
+          "top2_skor": 0.5579,
+          "marj": 0.0097,
+          "en_yakin_sirket": "TarımVeri"
+        },
+        {
+          "id": 64,
+          "mesaj": "Teşekkür ederiz, dokümanları inceleyeceğiz",
+          "beklenen": "belirsiz",
+          "bulunan": "hukuk",
+          "dogru": false,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.588,
+          "top2_skor": 0.5252,
+          "marj": 0.0629,
+          "en_yakin_sirket": "SözleşmeAI"
+        },
+        {
+          "id": 65,
+          "mesaj": "İyi çalışmalar, sonra tekrar yazarız",
+          "beklenen": "belirsiz",
+          "bulunan": "insan_kaynaklari",
+          "dogru": false,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5363,
+          "top2_skor": 0.5191,
+          "marj": 0.0172,
+          "en_yakin_sirket": "İKBulut"
+        },
+        {
+          "id": 66,
+          "mesaj": "Bu konuda bilgilendirme dokümanı var mı?",
+          "beklenen": "belirsiz",
+          "bulunan": "belirsiz",
+          "dogru": true,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.474,
+          "top2_skor": 0.4723,
+          "marj": 0.0017,
+          "en_yakin_sirket": "YetkinlikHarita"
+        },
+        {
+          "id": 67,
+          "mesaj": "Yönetim kurulu sunumu için genel kapasite bilgisi isteriz",
+          "beklenen": "belirsiz",
+          "bulunan": "belirsiz",
+          "dogru": true,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.4594,
+          "top2_skor": 0.4586,
+          "marj": 0.0007,
+          "en_yakin_sirket": "YetkinlikHarita"
+        }
+      ]
+    },
+    {
+      "isim": "Turkish-E5-Large",
+      "model": "ytu-ce-cosmos/turkish-e5-large",
+      "hata": null,
+      "yukleme_suresi": 6.3,
+      "ms_mesaj": 42.18,
+      "bellek_mb": -17.3,
+      "vektor_boyutu": 1024,
+      "genel": {
+        "dogru": 56,
+        "toplam": 67,
+        "dogruluk": 83.6,
+        "belirsiz": {
+          "n": 8,
+          "dogru": 4,
+          "yuzde": 50.0
+        },
+        "tuzak": {
+          "n": 12,
+          "dogru": 7,
+          "yuzde": 58.3
+        },
+        "parafraz": {
+          "n": 15,
+          "dogru": 14,
+          "yuzde": 93.3
+        },
+        "kisa": {
+          "n": 4,
+          "dogru": 4,
+          "yuzde": 100.0
+        },
+        "cok_anlamli": {
+          "n": 3,
+          "dogru": 2,
+          "yuzde": 66.7
+        }
+      },
+      "zorluk_kirilim": {
+        "belirsiz": {
+          "n": 8,
+          "dogru": 4,
+          "yuzde": 50.0
+        },
+        "cok_anlamli": {
+          "n": 3,
+          "dogru": 2,
+          "yuzde": 66.7
+        },
+        "dogrudan": {
+          "n": 8,
+          "dogru": 8,
+          "yuzde": 100.0
+        },
+        "kisa": {
+          "n": 4,
+          "dogru": 4,
+          "yuzde": 100.0
+        },
+        "parafraz": {
+          "n": 15,
+          "dogru": 14,
+          "yuzde": 93.3
+        },
+        "teknik": {
+          "n": 17,
+          "dogru": 17,
+          "yuzde": 100.0
+        },
+        "tuzak": {
+          "n": 12,
+          "dogru": 7,
+          "yuzde": 58.3
+        }
+      },
+      "sektor_kirilim": {
+        "enerji": {
+          "n": 3,
+          "dogru": 3,
+          "yuzde": 100.0
+        },
+        "eğitim": {
+          "n": 7,
+          "dogru": 5,
+          "yuzde": 71.4
+        },
+        "finans": {
+          "n": 5,
+          "dogru": 4,
+          "yuzde": 80.0
+        },
+        "hukuk": {
+          "n": 3,
+          "dogru": 3,
+          "yuzde": 100.0
+        },
+        "insan_kaynaklari": {
+          "n": 4,
+          "dogru": 2,
+          "yuzde": 50.0
+        },
+        "lojistik": {
+          "n": 6,
+          "dogru": 6,
+          "yuzde": 100.0
+        },
+        "medya": {
+          "n": 2,
+          "dogru": 2,
+          "yuzde": 100.0
+        },
+        "perakende": {
+          "n": 2,
+          "dogru": 2,
+          "yuzde": 100.0
+        },
+        "savunma": {
+          "n": 5,
+          "dogru": 5,
+          "yuzde": 100.0
+        },
+        "sağlık": {
+          "n": 7,
+          "dogru": 6,
+          "yuzde": 85.7
+        },
+        "sigorta": {
+          "n": 6,
+          "dogru": 6,
+          "yuzde": 100.0
+        },
+        "tarım": {
+          "n": 2,
+          "dogru": 2,
+          "yuzde": 100.0
+        },
+        "telekom": {
+          "n": 3,
+          "dogru": 3,
+          "yuzde": 100.0
+        },
+        "turizm": {
+          "n": 4,
+          "dogru": 3,
+          "yuzde": 75.0
+        }
+      },
+      "skor_istatistik": {
+        "dogru": {
+          "n": 52,
+          "ortalama": 0.666,
+          "min": 0.569,
+          "max": 0.802,
+          "marj_ort": 0.06
+        },
+        "yanlis": {
+          "n": 11,
+          "ortalama": 0.592,
+          "min": 0.511,
+          "max": 0.654,
+          "marj_ort": 0.015
+        },
+        "belirsiz_beklenen": {
+          "n": 8,
+          "ortalama": 0.502,
+          "min": 0.415,
+          "max": 0.618,
+          "marj_ort": 0.019
+        }
+      },
+      "en_sik_hatalar": [
+        {
+          "beklenen": "belirsiz",
+          "bulunan": "medya",
+          "adet": 2
+        },
+        {
+          "beklenen": "turizm",
+          "bulunan": "medya",
+          "adet": 1
+        },
+        {
+          "beklenen": "eğitim",
+          "bulunan": "savunma",
+          "adet": 1
+        },
+        {
+          "beklenen": "finans",
+          "bulunan": "eğitim",
+          "adet": 1
+        },
+        {
+          "beklenen": "eğitim",
+          "bulunan": "finans",
+          "adet": 1
+        },
+        {
+          "beklenen": "insan_kaynaklari",
+          "bulunan": "perakende",
+          "adet": 1
+        },
+        {
+          "beklenen": "insan_kaynaklari",
+          "bulunan": "sağlık",
+          "adet": 1
+        },
+        {
+          "beklenen": "sağlık",
+          "bulunan": "finans",
+          "adet": 1
+        },
+        {
+          "beklenen": "belirsiz",
+          "bulunan": "hukuk",
+          "adet": 1
+        },
+        {
+          "beklenen": "belirsiz",
+          "bulunan": "eğitim",
+          "adet": 1
+        }
+      ],
+      "esik_taramasi": [
+        {
+          "esik": 0.4,
+          "dogruluk": 77.6,
+          "dogru": 52,
+          "belirsiz_yakalama": "0/8"
+        },
+        {
+          "esik": 0.45,
+          "dogruluk": 80.6,
+          "dogru": 54,
+          "belirsiz_yakalama": "2/8"
+        },
+        {
+          "esik": 0.5,
+          "dogruluk": 83.6,
+          "dogru": 56,
+          "belirsiz_yakalama": "4/8"
+        },
+        {
+          "esik": 0.55,
+          "dogruluk": 86.6,
+          "dogru": 58,
+          "belirsiz_yakalama": "6/8"
+        },
+        {
+          "esik": 0.6,
+          "dogruluk": 80.6,
+          "dogru": 54,
+          "belirsiz_yakalama": "7/8"
+        },
+        {
+          "esik": 0.65,
+          "dogruluk": 56.7,
+          "dogru": 38,
+          "belirsiz_yakalama": "8/8"
+        },
+        {
+          "esik": 0.7,
+          "dogruluk": 31.3,
+          "dogru": 21,
+          "belirsiz_yakalama": "8/8"
+        }
+      ],
+      "detaylar": [
+        {
+          "id": 1,
+          "mesaj": "Hastane yönetim sistemi arıyoruz",
+          "beklenen": "sağlık",
+          "bulunan": "sağlık",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.7051,
+          "top2_skor": 0.6405,
+          "marj": 0.0645,
+          "en_yakin_sirket": "SağlıkTek"
+        },
+        {
+          "id": 2,
+          "mesaj": "Poliklinik randevu çakışmalarını azaltacak bir sistem lazım",
+          "beklenen": "sağlık",
+          "bulunan": "sağlık",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5713,
+          "top2_skor": 0.5605,
+          "marj": 0.0108,
+          "en_yakin_sirket": "SağlıkTek"
+        },
+        {
+          "id": 3,
+          "mesaj": "MR ve tomografi görüntülerini güvenli arşivlemek istiyoruz",
+          "beklenen": "sağlık",
+          "bulunan": "sağlık",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.684,
+          "top2_skor": 0.5525,
+          "marj": 0.1315,
+          "en_yakin_sirket": "MediCloud"
+        },
+        {
+          "id": 4,
+          "mesaj": "112 çağrılarında en yakın ekibi otomatik yönlendirmek istiyoruz",
+          "beklenen": "sağlık",
+          "bulunan": "sağlık",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6488,
+          "top2_skor": 0.5879,
+          "marj": 0.0609,
+          "en_yakin_sirket": "AcilSoft"
+        },
+        {
+          "id": 5,
+          "mesaj": "Kan tahlili sonuçlarını hekime otomatik düşürecek laboratuvar yazılımı",
+          "beklenen": "sağlık",
+          "bulunan": "sağlık",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6434,
+          "top2_skor": 0.5962,
+          "marj": 0.0472,
+          "en_yakin_sirket": "LabFlow"
+        },
+        {
+          "id": 6,
+          "mesaj": "Otel rezervasyon sistemimizi yenilemek istiyoruz",
+          "beklenen": "turizm",
+          "bulunan": "turizm",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6688,
+          "top2_skor": 0.5994,
+          "marj": 0.0694,
+          "en_yakin_sirket": "TatilPlus"
+        },
+        {
+          "id": 7,
+          "mesaj": "Misafirlerin oda müsaitliğini tek ekrandan görmek istiyoruz",
+          "beklenen": "turizm",
+          "bulunan": "turizm",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6008,
+          "top2_skor": 0.5593,
+          "marj": 0.0415,
+          "en_yakin_sirket": "TatilPlus"
+        },
+        {
+          "id": 8,
+          "mesaj": "Yolcuların telefondan check-in yapmasını sağlamak istiyoruz",
+          "beklenen": "turizm",
+          "bulunan": "turizm",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6733,
+          "top2_skor": 0.5678,
+          "marj": 0.1055,
+          "en_yakin_sirket": "HavaYolu360"
+        },
+        {
+          "id": 9,
+          "mesaj": "Yurt dışı paketlerimizi internetten satacağız",
+          "beklenen": "turizm",
+          "bulunan": "medya",
+          "dogru": false,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6111,
+          "top2_skor": 0.6084,
+          "marj": 0.0027,
+          "en_yakin_sirket": "YayınAkış"
+        },
+        {
+          "id": 10,
+          "mesaj": "Askeri haberleşme altyapımızı güçlendirmek istiyoruz",
+          "beklenen": "savunma",
+          "bulunan": "savunma",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6825,
+          "top2_skor": 0.6424,
+          "marj": 0.0402,
+          "en_yakin_sirket": "SavunmaSis"
+        },
+        {
+          "id": 11,
+          "mesaj": "Birlikler arası güvenli mesajlaşma kurmak istiyoruz",
+          "beklenen": "savunma",
+          "bulunan": "savunma",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6006,
+          "top2_skor": 0.5885,
+          "marj": 0.0121,
+          "en_yakin_sirket": "SavunmaSis"
+        },
+        {
+          "id": 12,
+          "mesaj": "Hava sahası tehditlerini gerçek zamanlı izlemek istiyoruz",
+          "beklenen": "savunma",
+          "bulunan": "savunma",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6282,
+          "top2_skor": 0.5676,
+          "marj": 0.0606,
+          "en_yakin_sirket": "RadarNet"
+        },
+        {
+          "id": 13,
+          "mesaj": "Kritik ağlarımıza sızma girişimlerini önlemek istiyoruz",
+          "beklenen": "savunma",
+          "bulunan": "savunma",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6637,
+          "top2_skor": 0.5885,
+          "marj": 0.0752,
+          "en_yakin_sirket": "SiberKalkan"
+        },
+        {
+          "id": 14,
+          "mesaj": "Üniversite için uzaktan eğitim platformu istiyoruz",
+          "beklenen": "eğitim",
+          "bulunan": "eğitim",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.7365,
+          "top2_skor": 0.6445,
+          "marj": 0.092,
+          "en_yakin_sirket": "EğitimBul"
+        },
+        {
+          "id": 15,
+          "mesaj": "Kampüsteki ders ve öğrenci kayıtlarını tek yerden yönetmek istiyoruz",
+          "beklenen": "eğitim",
+          "bulunan": "eğitim",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6599,
+          "top2_skor": 0.6112,
+          "marj": 0.0487,
+          "en_yakin_sirket": "KampüsDijital"
+        },
+        {
+          "id": 16,
+          "mesaj": "Velilerle öğretmenleri dijitalde buluşturacak kanal lazım",
+          "beklenen": "eğitim",
+          "bulunan": "eğitim",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6656,
+          "top2_skor": 0.6406,
+          "marj": 0.0251,
+          "en_yakin_sirket": "OkulPlus"
+        },
+        {
+          "id": 17,
+          "mesaj": "Online sınav ve otomatik notlandırma istiyoruz",
+          "beklenen": "eğitim",
+          "bulunan": "eğitim",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.651,
+          "top2_skor": 0.6135,
+          "marj": 0.0376,
+          "en_yakin_sirket": "KampüsDijital"
+        },
+        {
+          "id": 18,
+          "mesaj": "Sağlık sigortası poliçelerimizi dijitalleştirmek istiyoruz",
+          "beklenen": "sigorta",
+          "bulunan": "sigorta",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.7345,
+          "top2_skor": 0.7259,
+          "marj": 0.0086,
+          "en_yakin_sirket": "HasarHızlı"
+        },
+        {
+          "id": 19,
+          "mesaj": "Kasko primlerini sürücü riskine göre otomatik hesaplamak istiyoruz",
+          "beklenen": "sigorta",
+          "bulunan": "sigorta",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.7383,
+          "top2_skor": 0.6417,
+          "marj": 0.0966,
+          "en_yakin_sirket": "RiskKoruma"
+        },
+        {
+          "id": 20,
+          "mesaj": "Hasar dosyasına eksper atayıp fotoğraflardan ön değerlendirme yapmak istiyoruz",
+          "beklenen": "sigorta",
+          "bulunan": "sigorta",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.641,
+          "top2_skor": 0.5685,
+          "marj": 0.0726,
+          "en_yakin_sirket": "HasarHızlı"
+        },
+        {
+          "id": 21,
+          "mesaj": "Kargo filomuzu canlı takip etmek istiyoruz",
+          "beklenen": "lojistik",
+          "bulunan": "lojistik",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6112,
+          "top2_skor": 0.591,
+          "marj": 0.0202,
+          "en_yakin_sirket": "LojistikPro"
+        },
+        {
+          "id": 22,
+          "mesaj": "Depo stok hareketlerini ve son teslimatı optimize etmek istiyoruz",
+          "beklenen": "lojistik",
+          "bulunan": "lojistik",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.7001,
+          "top2_skor": 0.6197,
+          "marj": 0.0805,
+          "en_yakin_sirket": "DepoAkış"
+        },
+        {
+          "id": 23,
+          "mesaj": "Konteynerlerin gümrük süreçlerini dijital takip etmek istiyoruz",
+          "beklenen": "lojistik",
+          "bulunan": "lojistik",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.7432,
+          "top2_skor": 0.6054,
+          "marj": 0.1379,
+          "en_yakin_sirket": "GümrükKöprü"
+        },
+        {
+          "id": 24,
+          "mesaj": "Banka ödeme altyapımızı yenilemek istiyoruz",
+          "beklenen": "finans",
+          "bulunan": "finans",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6969,
+          "top2_skor": 0.6786,
+          "marj": 0.0183,
+          "en_yakin_sirket": "BankaYazılım"
+        },
+        {
+          "id": 25,
+          "mesaj": "Sanal POS ve açık bankacılık API entegre etmek istiyoruz",
+          "beklenen": "finans",
+          "bulunan": "finans",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.8023,
+          "top2_skor": 0.7174,
+          "marj": 0.0849,
+          "en_yakin_sirket": "ÖdemeKöprü"
+        },
+        {
+          "id": 26,
+          "mesaj": "KOBİ başvurularında otomatik kredi skoru üretmek istiyoruz",
+          "beklenen": "finans",
+          "bulunan": "finans",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.7359,
+          "top2_skor": 0.6632,
+          "marj": 0.0727,
+          "en_yakin_sirket": "KrediSkor"
+        },
+        {
+          "id": 27,
+          "mesaj": "Tarlalarda sulamayı sensörle otomatikleştirmek istiyoruz",
+          "beklenen": "tarım",
+          "bulunan": "tarım",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.7423,
+          "top2_skor": 0.698,
+          "marj": 0.0443,
+          "en_yakin_sirket": "ToprakSens"
+        },
+        {
+          "id": 28,
+          "mesaj": "Ürün verimini hava ve toprak verisine göre tahmin etmek istiyoruz",
+          "beklenen": "tarım",
+          "bulunan": "tarım",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6444,
+          "top2_skor": 0.6218,
+          "marj": 0.0226,
+          "en_yakin_sirket": "ToprakSens"
+        },
+        {
+          "id": 29,
+          "mesaj": "Rüzgar türbini üretimini şebeke yüküyle birlikte izlemek istiyoruz",
+          "beklenen": "enerji",
+          "bulunan": "enerji",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.594,
+          "top2_skor": 0.5722,
+          "marj": 0.0219,
+          "en_yakin_sirket": "EnerjiIzle"
+        },
+        {
+          "id": 30,
+          "mesaj": "Sayaç verisinde kayıp kaçak analizi yapmak istiyoruz",
+          "beklenen": "enerji",
+          "bulunan": "enerji",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6442,
+          "top2_skor": 0.5837,
+          "marj": 0.0604,
+          "en_yakin_sirket": "ŞebekeAkıllı"
+        },
+        {
+          "id": 31,
+          "mesaj": "Baz istasyonu kapsama kalitesini abone şikayetleriyle eşleştirmek istiyoruz",
+          "beklenen": "telekom",
+          "bulunan": "telekom",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6476,
+          "top2_skor": 0.6078,
+          "marj": 0.0398,
+          "en_yakin_sirket": "TeleLink"
+        },
+        {
+          "id": 32,
+          "mesaj": "Fiber kesintilerini bölgesel olarak hızlı tespit etmek istiyoruz",
+          "beklenen": "telekom",
+          "bulunan": "telekom",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.7271,
+          "top2_skor": 0.5894,
+          "marj": 0.1377,
+          "en_yakin_sirket": "FiberNet"
+        },
+        {
+          "id": 33,
+          "mesaj": "Dava dosyaları ve müvekkil sözleşmelerini tek panelden yönetmek istiyoruz",
+          "beklenen": "hukuk",
+          "bulunan": "hukuk",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6479,
+          "top2_skor": 0.643,
+          "marj": 0.0049,
+          "en_yakin_sirket": "SözleşmeAI"
+        },
+        {
+          "id": 34,
+          "mesaj": "Sözleşme maddelerinde uyumsuzlukları otomatik işaretlemek istiyoruz",
+          "beklenen": "hukuk",
+          "bulunan": "hukuk",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6742,
+          "top2_skor": 0.5913,
+          "marj": 0.0829,
+          "en_yakin_sirket": "SözleşmeAI"
+        },
+        {
+          "id": 35,
+          "mesaj": "Mağaza stoklarını kasayla senkron tutmak istiyoruz",
+          "beklenen": "perakende",
+          "bulunan": "perakende",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6531,
+          "top2_skor": 0.629,
+          "marj": 0.0241,
+          "en_yakin_sirket": "MağazaPulse"
+        },
+        {
+          "id": 36,
+          "mesaj": "Rafta ürün yokken kampanya fiyatını otomatik güncellemek istiyoruz",
+          "beklenen": "perakende",
+          "bulunan": "perakende",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6395,
+          "top2_skor": 0.5374,
+          "marj": 0.1021,
+          "en_yakin_sirket": "RaftaKal"
+        },
+        {
+          "id": 37,
+          "mesaj": "Canlı yayın ve VOD içeriklerini tek CMS üzerinden yönetmek istiyoruz",
+          "beklenen": "medya",
+          "bulunan": "medya",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.7368,
+          "top2_skor": 0.5828,
+          "marj": 0.1539,
+          "en_yakin_sirket": "YayınAkış"
+        },
+        {
+          "id": 38,
+          "mesaj": "Reklam kampanyasının hangi izleyici segmentine ulaştığını ölçmek istiyoruz",
+          "beklenen": "medya",
+          "bulunan": "medya",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6853,
+          "top2_skor": 0.5404,
+          "marj": 0.1449,
+          "en_yakin_sirket": "ReklamHedef"
+        },
+        {
+          "id": 39,
+          "mesaj": "İşe alım, izin ve bordroyu tek İK sisteminde toplamak istiyoruz",
+          "beklenen": "insan_kaynaklari",
+          "bulunan": "insan_kaynaklari",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.7289,
+          "top2_skor": 0.5869,
+          "marj": 0.142,
+          "en_yakin_sirket": "İKBulut"
+        },
+        {
+          "id": 40,
+          "mesaj": "Çalışan yetkinliklerine göre yıllık eğitim planı çıkarmak istiyoruz",
+          "beklenen": "insan_kaynaklari",
+          "bulunan": "insan_kaynaklari",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6814,
+          "top2_skor": 0.5729,
+          "marj": 0.1085,
+          "en_yakin_sirket": "YetkinlikHarita"
+        },
+        {
+          "id": 41,
+          "mesaj": "Hastane çalışanlarımızın tamamlayıcı poliçe hasar süreçlerini dijitalleştirmek istiyoruz",
+          "beklenen": "sigorta",
+          "bulunan": "sigorta",
+          "dogru": true,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "saglik_vs_sigorta",
+          "top1_skor": 0.7465,
+          "top2_skor": 0.7025,
+          "marj": 0.044,
+          "en_yakin_sirket": "HasarHızlı"
+        },
+        {
+          "id": 42,
+          "mesaj": "Tatilde kaza yapan müşterilerimizin tazminat dosyalarını takip edeceğiz",
+          "beklenen": "sigorta",
+          "bulunan": "sigorta",
+          "dogru": true,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "turizm_vs_sigorta",
+          "top1_skor": 0.6446,
+          "top2_skor": 0.6074,
+          "marj": 0.0372,
+          "en_yakin_sirket": "SigortaNet"
+        },
+        {
+          "id": 43,
+          "mesaj": "Otel zincirimizin şehirler arası malzeme sevkiyat filolarını canlı izlemek istiyoruz",
+          "beklenen": "lojistik",
+          "bulunan": "lojistik",
+          "dogru": true,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "turizm_vs_lojistik",
+          "top1_skor": 0.5974,
+          "top2_skor": 0.5874,
+          "marj": 0.0099,
+          "en_yakin_sirket": "GümrükKöprü"
+        },
+        {
+          "id": 44,
+          "mesaj": "Askeri personelimize zorunlu dil ve prosedür eğitimlerini uzaktan vermek istiyoruz",
+          "beklenen": "eğitim",
+          "bulunan": "savunma",
+          "dogru": false,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "savunma_vs_egitim",
+          "top1_skor": 0.5905,
+          "top2_skor": 0.5648,
+          "marj": 0.0257,
+          "en_yakin_sirket": "SavunmaSis"
+        },
+        {
+          "id": 45,
+          "mesaj": "Çiftçilere özel mikro kredi skorlama ve ödeme takvimi kurmak istiyoruz",
+          "beklenen": "finans",
+          "bulunan": "finans",
+          "dogru": true,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "tarim_vs_finans",
+          "top1_skor": 0.6276,
+          "top2_skor": 0.5887,
+          "marj": 0.0389,
+          "en_yakin_sirket": "KrediSkor"
+        },
+        {
+          "id": 46,
+          "mesaj": "Üniversite kantinlerinde kartlı ödeme altyapısı kurmak istiyoruz",
+          "beklenen": "finans",
+          "bulunan": "eğitim",
+          "dogru": false,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "egitim_vs_finans",
+          "top1_skor": 0.6276,
+          "top2_skor": 0.6161,
+          "marj": 0.0114,
+          "en_yakin_sirket": "KampüsDijital"
+        },
+        {
+          "id": 47,
+          "mesaj": "Elektrik santralimizdeki kontrol sistemlerini siber saldırılara karşı korumak istiyoruz",
+          "beklenen": "savunma",
+          "bulunan": "savunma",
+          "dogru": true,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "enerji_vs_savunma",
+          "top1_skor": 0.646,
+          "top2_skor": 0.6237,
+          "marj": 0.0222,
+          "en_yakin_sirket": "SiberKalkan"
+        },
+        {
+          "id": 48,
+          "mesaj": "Bankamızın çağrı merkezi personeline ürün eğitim simülasyonu kurmak istiyoruz",
+          "beklenen": "eğitim",
+          "bulunan": "finans",
+          "dogru": false,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "finans_vs_egitim",
+          "top1_skor": 0.5832,
+          "top2_skor": 0.5488,
+          "marj": 0.0344,
+          "en_yakin_sirket": "BankaYazılım"
+        },
+        {
+          "id": 49,
+          "mesaj": "E-ticaret siparişlerimizin depo çıkış ve kurye teslimatını izlemek istiyoruz",
+          "beklenen": "lojistik",
+          "bulunan": "lojistik",
+          "dogru": true,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "perakende_vs_lojistik",
+          "top1_skor": 0.6563,
+          "top2_skor": 0.605,
+          "marj": 0.0514,
+          "en_yakin_sirket": "GümrükKöprü"
+        },
+        {
+          "id": 50,
+          "mesaj": "TV kanallarımızın yayın hakları sözleşmelerini hukuken arşivlemek istiyoruz",
+          "beklenen": "hukuk",
+          "bulunan": "hukuk",
+          "dogru": true,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "medya_vs_hukuk",
+          "top1_skor": 0.6393,
+          "top2_skor": 0.6041,
+          "marj": 0.0352,
+          "en_yakin_sirket": "SözleşmeAI"
+        },
+        {
+          "id": 51,
+          "mesaj": "Mağaza çalışanlarımızın bordro ve izin süreçlerini dijitalleştirmek istiyoruz",
+          "beklenen": "insan_kaynaklari",
+          "bulunan": "perakende",
+          "dogru": false,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "perakende_vs_ik",
+          "top1_skor": 0.6539,
+          "top2_skor": 0.6427,
+          "marj": 0.0112,
+          "en_yakin_sirket": "MağazaPulse"
+        },
+        {
+          "id": 52,
+          "mesaj": "Sağlık grubumuzun yeni doktor alım ve oryantasyon sürecini yönetmek istiyoruz",
+          "beklenen": "insan_kaynaklari",
+          "bulunan": "sağlık",
+          "dogru": false,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "saglik_vs_ik",
+          "top1_skor": 0.5706,
+          "top2_skor": 0.5698,
+          "marj": 0.0008,
+          "en_yakin_sirket": "SağlıkTek"
+        },
+        {
+          "id": 53,
+          "mesaj": "Hem klinik randevu hem de hasta faturalandırma ödeme modülü istiyoruz",
+          "beklenen": "sağlık",
+          "bulunan": "finans",
+          "dogru": false,
+          "zorluk": "cok_anlamli",
+          "tuzak_tipi": "saglik_vs_finans",
+          "top1_skor": 0.65,
+          "top2_skor": 0.6477,
+          "marj": 0.0022,
+          "en_yakin_sirket": "ÖdemeKöprü"
+        },
+        {
+          "id": 54,
+          "mesaj": "Otelimizde misafir Wi-Fi kalitesini ve şikayetleri izlemek istiyoruz",
+          "beklenen": "telekom",
+          "bulunan": "telekom",
+          "dogru": true,
+          "zorluk": "cok_anlamli",
+          "tuzak_tipi": "turizm_vs_telekom",
+          "top1_skor": 0.584,
+          "top2_skor": 0.5596,
+          "marj": 0.0244,
+          "en_yakin_sirket": "FiberNet"
+        },
+        {
+          "id": 55,
+          "mesaj": "Tarım kooperatifimizin üyelerine poliçe ve hasar yönetimi sunacağız",
+          "beklenen": "sigorta",
+          "bulunan": "sigorta",
+          "dogru": true,
+          "zorluk": "cok_anlamli",
+          "tuzak_tipi": "tarim_vs_sigorta",
+          "top1_skor": 0.6629,
+          "top2_skor": 0.623,
+          "marj": 0.0399,
+          "en_yakin_sirket": "SigortaNet"
+        },
+        {
+          "id": 56,
+          "mesaj": "PACS",
+          "beklenen": "sağlık",
+          "bulunan": "sağlık",
+          "dogru": true,
+          "zorluk": "kisa",
+          "tuzak_tipi": null,
+          "top1_skor": 0.66,
+          "top2_skor": 0.5521,
+          "marj": 0.1079,
+          "en_yakin_sirket": "MediCloud"
+        },
+        {
+          "id": 57,
+          "mesaj": "SCADA izleme",
+          "beklenen": "enerji",
+          "bulunan": "enerji",
+          "dogru": true,
+          "zorluk": "kisa",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6681,
+          "top2_skor": 0.6244,
+          "marj": 0.0438,
+          "en_yakin_sirket": "EnerjiIzle"
+        },
+        {
+          "id": 58,
+          "mesaj": "WMS",
+          "beklenen": "lojistik",
+          "bulunan": "lojistik",
+          "dogru": true,
+          "zorluk": "kisa",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5693,
+          "top2_skor": 0.549,
+          "marj": 0.0202,
+          "en_yakin_sirket": "DepoAkış"
+        },
+        {
+          "id": 59,
+          "mesaj": "LMS istiyoruz",
+          "beklenen": "eğitim",
+          "bulunan": "eğitim",
+          "dogru": true,
+          "zorluk": "kisa",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6205,
+          "top2_skor": 0.5983,
+          "marj": 0.0222,
+          "en_yakin_sirket": "EğitimBul"
+        },
+        {
+          "id": 60,
+          "mesaj": "Bugün hava çok güzeldi, sizi aramak istedim",
+          "beklenen": "belirsiz",
+          "bulunan": "belirsiz",
+          "dogru": true,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.4237,
+          "top2_skor": 0.3702,
+          "marj": 0.0535,
+          "en_yakin_sirket": "ToprakSens"
+        },
+        {
+          "id": 61,
+          "mesaj": "Fiyat teklifi almak istiyorum",
+          "beklenen": "belirsiz",
+          "bulunan": "belirsiz",
+          "dogru": true,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.4886,
+          "top2_skor": 0.476,
+          "marj": 0.0126,
+          "en_yakin_sirket": "ÖdemeKöprü"
+        },
+        {
+          "id": 62,
+          "mesaj": "Merhaba, yarın saat kaçta müsaitsiniz?",
+          "beklenen": "belirsiz",
+          "bulunan": "belirsiz",
+          "dogru": true,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.4153,
+          "top2_skor": 0.4055,
+          "marj": 0.0098,
+          "en_yakin_sirket": "ÖdemeKöprü"
+        },
+        {
+          "id": 63,
+          "mesaj": "Genel olarak bir yazılım çözümü arıyoruz ama henüz alan net değil",
+          "beklenen": "belirsiz",
+          "bulunan": "medya",
+          "dogru": false,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.618,
+          "top2_skor": 0.6102,
+          "marj": 0.0078,
+          "en_yakin_sirket": "ReklamHedef"
+        },
+        {
+          "id": 64,
+          "mesaj": "Teşekkür ederiz, dokümanları inceleyeceğiz",
+          "beklenen": "belirsiz",
+          "bulunan": "hukuk",
+          "dogru": false,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.569,
+          "top2_skor": 0.5246,
+          "marj": 0.0444,
+          "en_yakin_sirket": "SözleşmeAI"
+        },
+        {
+          "id": 65,
+          "mesaj": "İyi çalışmalar, sonra tekrar yazarız",
+          "beklenen": "belirsiz",
+          "bulunan": "eğitim",
+          "dogru": false,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5284,
+          "top2_skor": 0.5079,
+          "marj": 0.0206,
+          "en_yakin_sirket": "OkulPlus"
+        },
+        {
+          "id": 66,
+          "mesaj": "Bu konuda bilgilendirme dokümanı var mı?",
+          "beklenen": "belirsiz",
+          "bulunan": "belirsiz",
+          "dogru": true,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.4589,
+          "top2_skor": 0.4558,
+          "marj": 0.0031,
+          "en_yakin_sirket": "SözleşmeAI"
+        },
+        {
+          "id": 67,
+          "mesaj": "Yönetim kurulu sunumu için genel kapasite bilgisi isteriz",
+          "beklenen": "belirsiz",
+          "bulunan": "medya",
+          "dogru": false,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5114,
+          "top2_skor": 0.5104,
+          "marj": 0.001,
+          "en_yakin_sirket": "YayınAkış"
+        }
+      ]
+    },
+    {
+      "isim": "TR-MTEB Fine-Tuned",
+      "model": "trmteb/turkish-embedding-model-fine-tuned",
+      "hata": null,
+      "yukleme_suresi": 4.09,
+      "ms_mesaj": 10.96,
+      "bellek_mb": 350.8,
+      "vektor_boyutu": 768,
+      "genel": {
+        "dogru": 51,
+        "toplam": 67,
+        "dogruluk": 76.1,
+        "belirsiz": {
+          "n": 8,
+          "dogru": 6,
+          "yuzde": 75.0
+        },
+        "tuzak": {
+          "n": 12,
+          "dogru": 6,
+          "yuzde": 50.0
+        },
+        "parafraz": {
+          "n": 15,
+          "dogru": 13,
+          "yuzde": 86.7
+        },
+        "kisa": {
+          "n": 4,
+          "dogru": 0,
+          "yuzde": 0.0
+        },
+        "cok_anlamli": {
+          "n": 3,
+          "dogru": 2,
+          "yuzde": 66.7
+        }
+      },
+      "zorluk_kirilim": {
+        "belirsiz": {
+          "n": 8,
+          "dogru": 6,
+          "yuzde": 75.0
+        },
+        "cok_anlamli": {
+          "n": 3,
+          "dogru": 2,
+          "yuzde": 66.7
+        },
+        "dogrudan": {
+          "n": 8,
+          "dogru": 8,
+          "yuzde": 100.0
+        },
+        "kisa": {
+          "n": 4,
+          "dogru": 0,
+          "yuzde": 0.0
+        },
+        "parafraz": {
+          "n": 15,
+          "dogru": 13,
+          "yuzde": 86.7
+        },
+        "teknik": {
+          "n": 17,
+          "dogru": 16,
+          "yuzde": 94.1
+        },
+        "tuzak": {
+          "n": 12,
+          "dogru": 6,
+          "yuzde": 50.0
+        }
+      },
+      "sektor_kirilim": {
+        "enerji": {
+          "n": 3,
+          "dogru": 2,
+          "yuzde": 66.7
+        },
+        "eğitim": {
+          "n": 7,
+          "dogru": 4,
+          "yuzde": 57.1
+        },
+        "finans": {
+          "n": 5,
+          "dogru": 4,
+          "yuzde": 80.0
+        },
+        "hukuk": {
+          "n": 3,
+          "dogru": 3,
+          "yuzde": 100.0
+        },
+        "insan_kaynaklari": {
+          "n": 4,
+          "dogru": 3,
+          "yuzde": 75.0
+        },
+        "lojistik": {
+          "n": 6,
+          "dogru": 4,
+          "yuzde": 66.7
+        },
+        "medya": {
+          "n": 2,
+          "dogru": 2,
+          "yuzde": 100.0
+        },
+        "perakende": {
+          "n": 2,
+          "dogru": 1,
+          "yuzde": 50.0
+        },
+        "savunma": {
+          "n": 5,
+          "dogru": 5,
+          "yuzde": 100.0
+        },
+        "sağlık": {
+          "n": 7,
+          "dogru": 6,
+          "yuzde": 85.7
+        },
+        "sigorta": {
+          "n": 6,
+          "dogru": 5,
+          "yuzde": 83.3
+        },
+        "tarım": {
+          "n": 2,
+          "dogru": 2,
+          "yuzde": 100.0
+        },
+        "telekom": {
+          "n": 3,
+          "dogru": 2,
+          "yuzde": 66.7
+        },
+        "turizm": {
+          "n": 4,
+          "dogru": 2,
+          "yuzde": 50.0
+        }
+      },
+      "skor_istatistik": {
+        "dogru": {
+          "n": 45,
+          "ortalama": 0.634,
+          "min": 0.508,
+          "max": 0.854,
+          "marj_ort": 0.106
+        },
+        "yanlis": {
+          "n": 16,
+          "ortalama": 0.474,
+          "min": 0.208,
+          "max": 0.628,
+          "marj_ort": 0.047
+        },
+        "belirsiz_beklenen": {
+          "n": 8,
+          "ortalama": 0.383,
+          "min": 0.171,
+          "max": 0.569,
+          "marj_ort": 0.04
+        }
+      },
+      "en_sik_hatalar": [
+        {
+          "beklenen": "belirsiz",
+          "bulunan": "hukuk",
+          "adet": 2
+        },
+        {
+          "beklenen": "turizm",
+          "bulunan": "belirsiz",
+          "adet": 1
+        },
+        {
+          "beklenen": "turizm",
+          "bulunan": "lojistik",
+          "adet": 1
+        },
+        {
+          "beklenen": "perakende",
+          "bulunan": "belirsiz",
+          "adet": 1
+        },
+        {
+          "beklenen": "sigorta",
+          "bulunan": "belirsiz",
+          "adet": 1
+        },
+        {
+          "beklenen": "lojistik",
+          "bulunan": "turizm",
+          "adet": 1
+        },
+        {
+          "beklenen": "eğitim",
+          "bulunan": "savunma",
+          "adet": 1
+        },
+        {
+          "beklenen": "finans",
+          "bulunan": "eğitim",
+          "adet": 1
+        },
+        {
+          "beklenen": "eğitim",
+          "bulunan": "perakende",
+          "adet": 1
+        },
+        {
+          "beklenen": "insan_kaynaklari",
+          "bulunan": "sağlık",
+          "adet": 1
+        }
+      ],
+      "esik_taramasi": [
+        {
+          "esik": 0.4,
+          "dogruluk": 77.6,
+          "dogru": 52,
+          "belirsiz_yakalama": "4/8"
+        },
+        {
+          "esik": 0.45,
+          "dogruluk": 79.1,
+          "dogru": 53,
+          "belirsiz_yakalama": "6/8"
+        },
+        {
+          "esik": 0.5,
+          "dogruluk": 76.1,
+          "dogru": 51,
+          "belirsiz_yakalama": "6/8"
+        },
+        {
+          "esik": 0.55,
+          "dogruluk": 64.2,
+          "dogru": 43,
+          "belirsiz_yakalama": "7/8"
+        },
+        {
+          "esik": 0.6,
+          "dogruluk": 58.2,
+          "dogru": 39,
+          "belirsiz_yakalama": "8/8"
+        },
+        {
+          "esik": 0.65,
+          "dogruluk": 40.3,
+          "dogru": 27,
+          "belirsiz_yakalama": "8/8"
+        },
+        {
+          "esik": 0.7,
+          "dogruluk": 22.4,
+          "dogru": 15,
+          "belirsiz_yakalama": "8/8"
+        }
+      ],
+      "detaylar": [
+        {
+          "id": 1,
+          "mesaj": "Hastane yönetim sistemi arıyoruz",
+          "beklenen": "sağlık",
+          "bulunan": "sağlık",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6795,
+          "top2_skor": 0.5143,
+          "marj": 0.1652,
+          "en_yakin_sirket": "SağlıkTek"
+        },
+        {
+          "id": 2,
+          "mesaj": "Poliklinik randevu çakışmalarını azaltacak bir sistem lazım",
+          "beklenen": "sağlık",
+          "bulunan": "sağlık",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5933,
+          "top2_skor": 0.4816,
+          "marj": 0.1117,
+          "en_yakin_sirket": "SağlıkTek"
+        },
+        {
+          "id": 3,
+          "mesaj": "MR ve tomografi görüntülerini güvenli arşivlemek istiyoruz",
+          "beklenen": "sağlık",
+          "bulunan": "sağlık",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5077,
+          "top2_skor": 0.4212,
+          "marj": 0.0865,
+          "en_yakin_sirket": "MediCloud"
+        },
+        {
+          "id": 4,
+          "mesaj": "112 çağrılarında en yakın ekibi otomatik yönlendirmek istiyoruz",
+          "beklenen": "sağlık",
+          "bulunan": "sağlık",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6223,
+          "top2_skor": 0.4105,
+          "marj": 0.2118,
+          "en_yakin_sirket": "AcilSoft"
+        },
+        {
+          "id": 5,
+          "mesaj": "Kan tahlili sonuçlarını hekime otomatik düşürecek laboratuvar yazılımı",
+          "beklenen": "sağlık",
+          "bulunan": "sağlık",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5325,
+          "top2_skor": 0.4789,
+          "marj": 0.0535,
+          "en_yakin_sirket": "LabFlow"
+        },
+        {
+          "id": 6,
+          "mesaj": "Otel rezervasyon sistemimizi yenilemek istiyoruz",
+          "beklenen": "turizm",
+          "bulunan": "turizm",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5994,
+          "top2_skor": 0.5862,
+          "marj": 0.0132,
+          "en_yakin_sirket": "TatilPlus"
+        },
+        {
+          "id": 7,
+          "mesaj": "Misafirlerin oda müsaitliğini tek ekrandan görmek istiyoruz",
+          "beklenen": "turizm",
+          "bulunan": "belirsiz",
+          "dogru": false,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.4307,
+          "top2_skor": 0.3976,
+          "marj": 0.0331,
+          "en_yakin_sirket": "TatilPlus"
+        },
+        {
+          "id": 8,
+          "mesaj": "Yolcuların telefondan check-in yapmasını sağlamak istiyoruz",
+          "beklenen": "turizm",
+          "bulunan": "turizm",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6743,
+          "top2_skor": 0.4364,
+          "marj": 0.2379,
+          "en_yakin_sirket": "HavaYolu360"
+        },
+        {
+          "id": 9,
+          "mesaj": "Yurt dışı paketlerimizi internetten satacağız",
+          "beklenen": "turizm",
+          "bulunan": "lojistik",
+          "dogru": false,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5285,
+          "top2_skor": 0.4547,
+          "marj": 0.0739,
+          "en_yakin_sirket": "GümrükKöprü"
+        },
+        {
+          "id": 10,
+          "mesaj": "Askeri haberleşme altyapımızı güçlendirmek istiyoruz",
+          "beklenen": "savunma",
+          "bulunan": "savunma",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6461,
+          "top2_skor": 0.6124,
+          "marj": 0.0337,
+          "en_yakin_sirket": "SavunmaSis"
+        },
+        {
+          "id": 11,
+          "mesaj": "Birlikler arası güvenli mesajlaşma kurmak istiyoruz",
+          "beklenen": "savunma",
+          "bulunan": "savunma",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5589,
+          "top2_skor": 0.5415,
+          "marj": 0.0173,
+          "en_yakin_sirket": "SavunmaSis"
+        },
+        {
+          "id": 12,
+          "mesaj": "Hava sahası tehditlerini gerçek zamanlı izlemek istiyoruz",
+          "beklenen": "savunma",
+          "bulunan": "savunma",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6389,
+          "top2_skor": 0.4649,
+          "marj": 0.174,
+          "en_yakin_sirket": "RadarNet"
+        },
+        {
+          "id": 13,
+          "mesaj": "Kritik ağlarımıza sızma girişimlerini önlemek istiyoruz",
+          "beklenen": "savunma",
+          "bulunan": "savunma",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5456,
+          "top2_skor": 0.4467,
+          "marj": 0.0988,
+          "en_yakin_sirket": "SiberKalkan"
+        },
+        {
+          "id": 14,
+          "mesaj": "Üniversite için uzaktan eğitim platformu istiyoruz",
+          "beklenen": "eğitim",
+          "bulunan": "eğitim",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.7357,
+          "top2_skor": 0.5507,
+          "marj": 0.185,
+          "en_yakin_sirket": "EğitimBul"
+        },
+        {
+          "id": 15,
+          "mesaj": "Kampüsteki ders ve öğrenci kayıtlarını tek yerden yönetmek istiyoruz",
+          "beklenen": "eğitim",
+          "bulunan": "eğitim",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6135,
+          "top2_skor": 0.594,
+          "marj": 0.0194,
+          "en_yakin_sirket": "EğitimBul"
+        },
+        {
+          "id": 16,
+          "mesaj": "Velilerle öğretmenleri dijitalde buluşturacak kanal lazım",
+          "beklenen": "eğitim",
+          "bulunan": "eğitim",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6664,
+          "top2_skor": 0.5062,
+          "marj": 0.1603,
+          "en_yakin_sirket": "OkulPlus"
+        },
+        {
+          "id": 17,
+          "mesaj": "Online sınav ve otomatik notlandırma istiyoruz",
+          "beklenen": "eğitim",
+          "bulunan": "eğitim",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5485,
+          "top2_skor": 0.5087,
+          "marj": 0.0398,
+          "en_yakin_sirket": "KampüsDijital"
+        },
+        {
+          "id": 18,
+          "mesaj": "Sağlık sigortası poliçelerimizi dijitalleştirmek istiyoruz",
+          "beklenen": "sigorta",
+          "bulunan": "sigorta",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6735,
+          "top2_skor": 0.6353,
+          "marj": 0.0382,
+          "en_yakin_sirket": "SigortaNet"
+        },
+        {
+          "id": 19,
+          "mesaj": "Kasko primlerini sürücü riskine göre otomatik hesaplamak istiyoruz",
+          "beklenen": "sigorta",
+          "bulunan": "sigorta",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.7013,
+          "top2_skor": 0.4827,
+          "marj": 0.2186,
+          "en_yakin_sirket": "RiskKoruma"
+        },
+        {
+          "id": 20,
+          "mesaj": "Hasar dosyasına eksper atayıp fotoğraflardan ön değerlendirme yapmak istiyoruz",
+          "beklenen": "sigorta",
+          "bulunan": "sigorta",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6743,
+          "top2_skor": 0.4562,
+          "marj": 0.2181,
+          "en_yakin_sirket": "HasarHızlı"
+        },
+        {
+          "id": 21,
+          "mesaj": "Kargo filomuzu canlı takip etmek istiyoruz",
+          "beklenen": "lojistik",
+          "bulunan": "lojistik",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5475,
+          "top2_skor": 0.4883,
+          "marj": 0.0592,
+          "en_yakin_sirket": "LojistikPro"
+        },
+        {
+          "id": 22,
+          "mesaj": "Depo stok hareketlerini ve son teslimatı optimize etmek istiyoruz",
+          "beklenen": "lojistik",
+          "bulunan": "lojistik",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.7147,
+          "top2_skor": 0.5852,
+          "marj": 0.1295,
+          "en_yakin_sirket": "DepoAkış"
+        },
+        {
+          "id": 23,
+          "mesaj": "Konteynerlerin gümrük süreçlerini dijital takip etmek istiyoruz",
+          "beklenen": "lojistik",
+          "bulunan": "lojistik",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6849,
+          "top2_skor": 0.5479,
+          "marj": 0.1371,
+          "en_yakin_sirket": "GümrükKöprü"
+        },
+        {
+          "id": 24,
+          "mesaj": "Banka ödeme altyapımızı yenilemek istiyoruz",
+          "beklenen": "finans",
+          "bulunan": "finans",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5223,
+          "top2_skor": 0.4629,
+          "marj": 0.0594,
+          "en_yakin_sirket": "BankaYazılım"
+        },
+        {
+          "id": 25,
+          "mesaj": "Sanal POS ve açık bankacılık API entegre etmek istiyoruz",
+          "beklenen": "finans",
+          "bulunan": "finans",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.8538,
+          "top2_skor": 0.5924,
+          "marj": 0.2614,
+          "en_yakin_sirket": "ÖdemeKöprü"
+        },
+        {
+          "id": 26,
+          "mesaj": "KOBİ başvurularında otomatik kredi skoru üretmek istiyoruz",
+          "beklenen": "finans",
+          "bulunan": "finans",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6232,
+          "top2_skor": 0.4145,
+          "marj": 0.2087,
+          "en_yakin_sirket": "KrediSkor"
+        },
+        {
+          "id": 27,
+          "mesaj": "Tarlalarda sulamayı sensörle otomatikleştirmek istiyoruz",
+          "beklenen": "tarım",
+          "bulunan": "tarım",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6718,
+          "top2_skor": 0.6705,
+          "marj": 0.0014,
+          "en_yakin_sirket": "ToprakSens"
+        },
+        {
+          "id": 28,
+          "mesaj": "Ürün verimini hava ve toprak verisine göre tahmin etmek istiyoruz",
+          "beklenen": "tarım",
+          "bulunan": "tarım",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6551,
+          "top2_skor": 0.6408,
+          "marj": 0.0143,
+          "en_yakin_sirket": "ToprakSens"
+        },
+        {
+          "id": 29,
+          "mesaj": "Rüzgar türbini üretimini şebeke yüküyle birlikte izlemek istiyoruz",
+          "beklenen": "enerji",
+          "bulunan": "enerji",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6306,
+          "top2_skor": 0.5082,
+          "marj": 0.1223,
+          "en_yakin_sirket": "EnerjiIzle"
+        },
+        {
+          "id": 30,
+          "mesaj": "Sayaç verisinde kayıp kaçak analizi yapmak istiyoruz",
+          "beklenen": "enerji",
+          "bulunan": "enerji",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.7004,
+          "top2_skor": 0.4156,
+          "marj": 0.2848,
+          "en_yakin_sirket": "ŞebekeAkıllı"
+        },
+        {
+          "id": 31,
+          "mesaj": "Baz istasyonu kapsama kalitesini abone şikayetleriyle eşleştirmek istiyoruz",
+          "beklenen": "telekom",
+          "bulunan": "telekom",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6308,
+          "top2_skor": 0.5595,
+          "marj": 0.0713,
+          "en_yakin_sirket": "TeleLink"
+        },
+        {
+          "id": 32,
+          "mesaj": "Fiber kesintilerini bölgesel olarak hızlı tespit etmek istiyoruz",
+          "beklenen": "telekom",
+          "bulunan": "telekom",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5487,
+          "top2_skor": 0.3989,
+          "marj": 0.1498,
+          "en_yakin_sirket": "FiberNet"
+        },
+        {
+          "id": 33,
+          "mesaj": "Dava dosyaları ve müvekkil sözleşmelerini tek panelden yönetmek istiyoruz",
+          "beklenen": "hukuk",
+          "bulunan": "hukuk",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6189,
+          "top2_skor": 0.6113,
+          "marj": 0.0077,
+          "en_yakin_sirket": "SözleşmeAI"
+        },
+        {
+          "id": 34,
+          "mesaj": "Sözleşme maddelerinde uyumsuzlukları otomatik işaretlemek istiyoruz",
+          "beklenen": "hukuk",
+          "bulunan": "hukuk",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5319,
+          "top2_skor": 0.4969,
+          "marj": 0.0351,
+          "en_yakin_sirket": "SözleşmeAI"
+        },
+        {
+          "id": 35,
+          "mesaj": "Mağaza stoklarını kasayla senkron tutmak istiyoruz",
+          "beklenen": "perakende",
+          "bulunan": "perakende",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6317,
+          "top2_skor": 0.5861,
+          "marj": 0.0457,
+          "en_yakin_sirket": "MağazaPulse"
+        },
+        {
+          "id": 36,
+          "mesaj": "Rafta ürün yokken kampanya fiyatını otomatik güncellemek istiyoruz",
+          "beklenen": "perakende",
+          "bulunan": "belirsiz",
+          "dogru": false,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.4844,
+          "top2_skor": 0.4169,
+          "marj": 0.0675,
+          "en_yakin_sirket": "RaftaKal"
+        },
+        {
+          "id": 37,
+          "mesaj": "Canlı yayın ve VOD içeriklerini tek CMS üzerinden yönetmek istiyoruz",
+          "beklenen": "medya",
+          "bulunan": "medya",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5733,
+          "top2_skor": 0.4683,
+          "marj": 0.105,
+          "en_yakin_sirket": "YayınAkış"
+        },
+        {
+          "id": 38,
+          "mesaj": "Reklam kampanyasının hangi izleyici segmentine ulaştığını ölçmek istiyoruz",
+          "beklenen": "medya",
+          "bulunan": "medya",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6786,
+          "top2_skor": 0.4911,
+          "marj": 0.1875,
+          "en_yakin_sirket": "ReklamHedef"
+        },
+        {
+          "id": 39,
+          "mesaj": "İşe alım, izin ve bordroyu tek İK sisteminde toplamak istiyoruz",
+          "beklenen": "insan_kaynaklari",
+          "bulunan": "insan_kaynaklari",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.7266,
+          "top2_skor": 0.5509,
+          "marj": 0.1757,
+          "en_yakin_sirket": "İKBulut"
+        },
+        {
+          "id": 40,
+          "mesaj": "Çalışan yetkinliklerine göre yıllık eğitim planı çıkarmak istiyoruz",
+          "beklenen": "insan_kaynaklari",
+          "bulunan": "insan_kaynaklari",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6342,
+          "top2_skor": 0.565,
+          "marj": 0.0692,
+          "en_yakin_sirket": "YetkinlikHarita"
+        },
+        {
+          "id": 41,
+          "mesaj": "Hastane çalışanlarımızın tamamlayıcı poliçe hasar süreçlerini dijitalleştirmek istiyoruz",
+          "beklenen": "sigorta",
+          "bulunan": "sigorta",
+          "dogru": true,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "saglik_vs_sigorta",
+          "top1_skor": 0.7066,
+          "top2_skor": 0.6741,
+          "marj": 0.0324,
+          "en_yakin_sirket": "HasarHızlı"
+        },
+        {
+          "id": 42,
+          "mesaj": "Tatilde kaza yapan müşterilerimizin tazminat dosyalarını takip edeceğiz",
+          "beklenen": "sigorta",
+          "bulunan": "belirsiz",
+          "dogru": false,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "turizm_vs_sigorta",
+          "top1_skor": 0.4778,
+          "top2_skor": 0.4662,
+          "marj": 0.0116,
+          "en_yakin_sirket": "SigortaNet"
+        },
+        {
+          "id": 43,
+          "mesaj": "Otel zincirimizin şehirler arası malzeme sevkiyat filolarını canlı izlemek istiyoruz",
+          "beklenen": "lojistik",
+          "bulunan": "turizm",
+          "dogru": false,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "turizm_vs_lojistik",
+          "top1_skor": 0.6278,
+          "top2_skor": 0.5655,
+          "marj": 0.0623,
+          "en_yakin_sirket": "TatilPlus"
+        },
+        {
+          "id": 44,
+          "mesaj": "Askeri personelimize zorunlu dil ve prosedür eğitimlerini uzaktan vermek istiyoruz",
+          "beklenen": "eğitim",
+          "bulunan": "savunma",
+          "dogru": false,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "savunma_vs_egitim",
+          "top1_skor": 0.5372,
+          "top2_skor": 0.53,
+          "marj": 0.0072,
+          "en_yakin_sirket": "SavunmaSis"
+        },
+        {
+          "id": 45,
+          "mesaj": "Çiftçilere özel mikro kredi skorlama ve ödeme takvimi kurmak istiyoruz",
+          "beklenen": "finans",
+          "bulunan": "finans",
+          "dogru": true,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "tarim_vs_finans",
+          "top1_skor": 0.5912,
+          "top2_skor": 0.5092,
+          "marj": 0.0819,
+          "en_yakin_sirket": "KrediSkor"
+        },
+        {
+          "id": 46,
+          "mesaj": "Üniversite kantinlerinde kartlı ödeme altyapısı kurmak istiyoruz",
+          "beklenen": "finans",
+          "bulunan": "eğitim",
+          "dogru": false,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "egitim_vs_finans",
+          "top1_skor": 0.575,
+          "top2_skor": 0.5369,
+          "marj": 0.0382,
+          "en_yakin_sirket": "KampüsDijital"
+        },
+        {
+          "id": 47,
+          "mesaj": "Elektrik santralimizdeki kontrol sistemlerini siber saldırılara karşı korumak istiyoruz",
+          "beklenen": "savunma",
+          "bulunan": "savunma",
+          "dogru": true,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "enerji_vs_savunma",
+          "top1_skor": 0.6039,
+          "top2_skor": 0.5778,
+          "marj": 0.0261,
+          "en_yakin_sirket": "SiberKalkan"
+        },
+        {
+          "id": 48,
+          "mesaj": "Bankamızın çağrı merkezi personeline ürün eğitim simülasyonu kurmak istiyoruz",
+          "beklenen": "eğitim",
+          "bulunan": "perakende",
+          "dogru": false,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "finans_vs_egitim",
+          "top1_skor": 0.5702,
+          "top2_skor": 0.5392,
+          "marj": 0.031,
+          "en_yakin_sirket": "MağazaPulse"
+        },
+        {
+          "id": 49,
+          "mesaj": "E-ticaret siparişlerimizin depo çıkış ve kurye teslimatını izlemek istiyoruz",
+          "beklenen": "lojistik",
+          "bulunan": "lojistik",
+          "dogru": true,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "perakende_vs_lojistik",
+          "top1_skor": 0.6193,
+          "top2_skor": 0.5467,
+          "marj": 0.0726,
+          "en_yakin_sirket": "GümrükKöprü"
+        },
+        {
+          "id": 50,
+          "mesaj": "TV kanallarımızın yayın hakları sözleşmelerini hukuken arşivlemek istiyoruz",
+          "beklenen": "hukuk",
+          "bulunan": "hukuk",
+          "dogru": true,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "medya_vs_hukuk",
+          "top1_skor": 0.5375,
+          "top2_skor": 0.5295,
+          "marj": 0.0081,
+          "en_yakin_sirket": "SözleşmeAI"
+        },
+        {
+          "id": 51,
+          "mesaj": "Mağaza çalışanlarımızın bordro ve izin süreçlerini dijitalleştirmek istiyoruz",
+          "beklenen": "insan_kaynaklari",
+          "bulunan": "insan_kaynaklari",
+          "dogru": true,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "perakende_vs_ik",
+          "top1_skor": 0.6965,
+          "top2_skor": 0.6263,
+          "marj": 0.0702,
+          "en_yakin_sirket": "İKBulut"
+        },
+        {
+          "id": 52,
+          "mesaj": "Sağlık grubumuzun yeni doktor alım ve oryantasyon sürecini yönetmek istiyoruz",
+          "beklenen": "insan_kaynaklari",
+          "bulunan": "sağlık",
+          "dogru": false,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "saglik_vs_ik",
+          "top1_skor": 0.6061,
+          "top2_skor": 0.5659,
+          "marj": 0.0402,
+          "en_yakin_sirket": "SağlıkTek"
+        },
+        {
+          "id": 53,
+          "mesaj": "Hem klinik randevu hem de hasta faturalandırma ödeme modülü istiyoruz",
+          "beklenen": "sağlık",
+          "bulunan": "sağlık",
+          "dogru": true,
+          "zorluk": "cok_anlamli",
+          "tuzak_tipi": "saglik_vs_finans",
+          "top1_skor": 0.6788,
+          "top2_skor": 0.5474,
+          "marj": 0.1314,
+          "en_yakin_sirket": "SağlıkTek"
+        },
+        {
+          "id": 54,
+          "mesaj": "Otelimizde misafir Wi-Fi kalitesini ve şikayetleri izlemek istiyoruz",
+          "beklenen": "telekom",
+          "bulunan": "turizm",
+          "dogru": false,
+          "zorluk": "cok_anlamli",
+          "tuzak_tipi": "turizm_vs_telekom",
+          "top1_skor": 0.5314,
+          "top2_skor": 0.5054,
+          "marj": 0.026,
+          "en_yakin_sirket": "HavaYolu360"
+        },
+        {
+          "id": 55,
+          "mesaj": "Tarım kooperatifimizin üyelerine poliçe ve hasar yönetimi sunacağız",
+          "beklenen": "sigorta",
+          "bulunan": "sigorta",
+          "dogru": true,
+          "zorluk": "cok_anlamli",
+          "tuzak_tipi": "tarim_vs_sigorta",
+          "top1_skor": 0.6841,
+          "top2_skor": 0.5488,
+          "marj": 0.1353,
+          "en_yakin_sirket": "SigortaNet"
+        },
+        {
+          "id": 56,
+          "mesaj": "PACS",
+          "beklenen": "sağlık",
+          "bulunan": "belirsiz",
+          "dogru": false,
+          "zorluk": "kisa",
+          "tuzak_tipi": null,
+          "top1_skor": 0.2527,
+          "top2_skor": 0.2356,
+          "marj": 0.0172,
+          "en_yakin_sirket": "MediCloud"
+        },
+        {
+          "id": 57,
+          "mesaj": "SCADA izleme",
+          "beklenen": "enerji",
+          "bulunan": "belirsiz",
+          "dogru": false,
+          "zorluk": "kisa",
+          "tuzak_tipi": null,
+          "top1_skor": 0.3993,
+          "top2_skor": 0.376,
+          "marj": 0.0233,
+          "en_yakin_sirket": "EnerjiIzle"
+        },
+        {
+          "id": 58,
+          "mesaj": "WMS",
+          "beklenen": "lojistik",
+          "bulunan": "belirsiz",
+          "dogru": false,
+          "zorluk": "kisa",
+          "tuzak_tipi": null,
+          "top1_skor": 0.2455,
+          "top2_skor": 0.1263,
+          "marj": 0.1192,
+          "en_yakin_sirket": "DepoAkış"
+        },
+        {
+          "id": 59,
+          "mesaj": "LMS istiyoruz",
+          "beklenen": "eğitim",
+          "bulunan": "belirsiz",
+          "dogru": false,
+          "zorluk": "kisa",
+          "tuzak_tipi": null,
+          "top1_skor": 0.2083,
+          "top2_skor": 0.1958,
+          "marj": 0.0124,
+          "en_yakin_sirket": "EğitimBul"
+        },
+        {
+          "id": 60,
+          "mesaj": "Bugün hava çok güzeldi, sizi aramak istedim",
+          "beklenen": "belirsiz",
+          "bulunan": "belirsiz",
+          "dogru": true,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.2553,
+          "top2_skor": 0.2345,
+          "marj": 0.0208,
+          "en_yakin_sirket": "ToprakSens"
+        },
+        {
+          "id": 61,
+          "mesaj": "Fiyat teklifi almak istiyorum",
+          "beklenen": "belirsiz",
+          "bulunan": "belirsiz",
+          "dogru": true,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.2977,
+          "top2_skor": 0.2775,
+          "marj": 0.0202,
+          "en_yakin_sirket": "RaftaKal"
+        },
+        {
+          "id": 62,
+          "mesaj": "Merhaba, yarın saat kaçta müsaitsiniz?",
+          "beklenen": "belirsiz",
+          "bulunan": "belirsiz",
+          "dogru": true,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.1708,
+          "top2_skor": 0.1623,
+          "marj": 0.0085,
+          "en_yakin_sirket": "SağlıkTek"
+        },
+        {
+          "id": 63,
+          "mesaj": "Genel olarak bir yazılım çözümü arıyoruz ama henüz alan net değil",
+          "beklenen": "belirsiz",
+          "bulunan": "belirsiz",
+          "dogru": true,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.4105,
+          "top2_skor": 0.4021,
+          "marj": 0.0085,
+          "en_yakin_sirket": "HukukPortal"
+        },
+        {
+          "id": 64,
+          "mesaj": "Teşekkür ederiz, dokümanları inceleyeceğiz",
+          "beklenen": "belirsiz",
+          "bulunan": "hukuk",
+          "dogru": false,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5687,
+          "top2_skor": 0.4552,
+          "marj": 0.1135,
+          "en_yakin_sirket": "SözleşmeAI"
+        },
+        {
+          "id": 65,
+          "mesaj": "İyi çalışmalar, sonra tekrar yazarız",
+          "beklenen": "belirsiz",
+          "bulunan": "belirsiz",
+          "dogru": true,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.3867,
+          "top2_skor": 0.3194,
+          "marj": 0.0673,
+          "en_yakin_sirket": "İKBulut"
+        },
+        {
+          "id": 66,
+          "mesaj": "Bu konuda bilgilendirme dokümanı var mı?",
+          "beklenen": "belirsiz",
+          "bulunan": "hukuk",
+          "dogru": false,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5414,
+          "top2_skor": 0.4702,
+          "marj": 0.0712,
+          "en_yakin_sirket": "SözleşmeAI"
+        },
+        {
+          "id": 67,
+          "mesaj": "Yönetim kurulu sunumu için genel kapasite bilgisi isteriz",
+          "beklenen": "belirsiz",
+          "bulunan": "belirsiz",
+          "dogru": true,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.4343,
+          "top2_skor": 0.4206,
+          "marj": 0.0137,
+          "en_yakin_sirket": "YetkinlikHarita"
+        }
+      ]
+    },
+    {
+      "isim": "BERTurk NLI-STSb",
+      "model": "emrecan/bert-base-turkish-cased-mean-nli-stsb-tr",
+      "hata": null,
+      "yukleme_suresi": 3.68,
+      "ms_mesaj": 10.12,
+      "bellek_mb": 339.3,
+      "vektor_boyutu": 768,
+      "genel": {
+        "dogru": 47,
+        "toplam": 67,
+        "dogruluk": 70.1,
+        "belirsiz": {
+          "n": 8,
+          "dogru": 8,
+          "yuzde": 100.0
+        },
+        "tuzak": {
+          "n": 12,
+          "dogru": 4,
+          "yuzde": 33.3
+        },
+        "parafraz": {
+          "n": 15,
+          "dogru": 11,
+          "yuzde": 73.3
+        },
+        "kisa": {
+          "n": 4,
+          "dogru": 0,
+          "yuzde": 0.0
+        },
+        "cok_anlamli": {
+          "n": 3,
+          "dogru": 2,
+          "yuzde": 66.7
+        }
+      },
+      "zorluk_kirilim": {
+        "belirsiz": {
+          "n": 8,
+          "dogru": 8,
+          "yuzde": 100.0
+        },
+        "cok_anlamli": {
+          "n": 3,
+          "dogru": 2,
+          "yuzde": 66.7
+        },
+        "dogrudan": {
+          "n": 8,
+          "dogru": 7,
+          "yuzde": 87.5
+        },
+        "kisa": {
+          "n": 4,
+          "dogru": 0,
+          "yuzde": 0.0
+        },
+        "parafraz": {
+          "n": 15,
+          "dogru": 11,
+          "yuzde": 73.3
+        },
+        "teknik": {
+          "n": 17,
+          "dogru": 15,
+          "yuzde": 88.2
+        },
+        "tuzak": {
+          "n": 12,
+          "dogru": 4,
+          "yuzde": 33.3
+        }
+      },
+      "sektor_kirilim": {
+        "enerji": {
+          "n": 3,
+          "dogru": 2,
+          "yuzde": 66.7
+        },
+        "eğitim": {
+          "n": 7,
+          "dogru": 4,
+          "yuzde": 57.1
+        },
+        "finans": {
+          "n": 5,
+          "dogru": 4,
+          "yuzde": 80.0
+        },
+        "hukuk": {
+          "n": 3,
+          "dogru": 1,
+          "yuzde": 33.3
+        },
+        "insan_kaynaklari": {
+          "n": 4,
+          "dogru": 3,
+          "yuzde": 75.0
+        },
+        "lojistik": {
+          "n": 6,
+          "dogru": 4,
+          "yuzde": 66.7
+        },
+        "medya": {
+          "n": 2,
+          "dogru": 2,
+          "yuzde": 100.0
+        },
+        "perakende": {
+          "n": 2,
+          "dogru": 1,
+          "yuzde": 50.0
+        },
+        "savunma": {
+          "n": 5,
+          "dogru": 3,
+          "yuzde": 60.0
+        },
+        "sağlık": {
+          "n": 7,
+          "dogru": 5,
+          "yuzde": 71.4
+        },
+        "sigorta": {
+          "n": 6,
+          "dogru": 5,
+          "yuzde": 83.3
+        },
+        "tarım": {
+          "n": 2,
+          "dogru": 2,
+          "yuzde": 100.0
+        },
+        "telekom": {
+          "n": 3,
+          "dogru": 2,
+          "yuzde": 66.7
+        },
+        "turizm": {
+          "n": 4,
+          "dogru": 1,
+          "yuzde": 25.0
+        }
+      },
+      "skor_istatistik": {
+        "dogru": {
+          "n": 39,
+          "ortalama": 0.669,
+          "min": 0.52,
+          "max": 0.83,
+          "marj_ort": 0.113
+        },
+        "yanlis": {
+          "n": 20,
+          "ortalama": 0.477,
+          "min": 0.307,
+          "max": 0.657,
+          "marj_ort": 0.052
+        },
+        "belirsiz_beklenen": {
+          "n": 8,
+          "ortalama": 0.336,
+          "min": 0.231,
+          "max": 0.478,
+          "marj_ort": 0.032
+        }
+      },
+      "en_sik_hatalar": [
+        {
+          "beklenen": "turizm",
+          "bulunan": "belirsiz",
+          "adet": 3
+        },
+        {
+          "beklenen": "sağlık",
+          "bulunan": "belirsiz",
+          "adet": 2
+        },
+        {
+          "beklenen": "hukuk",
+          "bulunan": "belirsiz",
+          "adet": 2
+        },
+        {
+          "beklenen": "eğitim",
+          "bulunan": "belirsiz",
+          "adet": 2
+        },
+        {
+          "beklenen": "savunma",
+          "bulunan": "belirsiz",
+          "adet": 1
+        },
+        {
+          "beklenen": "perakende",
+          "bulunan": "belirsiz",
+          "adet": 1
+        },
+        {
+          "beklenen": "sigorta",
+          "bulunan": "belirsiz",
+          "adet": 1
+        },
+        {
+          "beklenen": "lojistik",
+          "bulunan": "turizm",
+          "adet": 1
+        },
+        {
+          "beklenen": "finans",
+          "bulunan": "tarım",
+          "adet": 1
+        },
+        {
+          "beklenen": "savunma",
+          "bulunan": "enerji",
+          "adet": 1
+        }
+      ],
+      "esik_taramasi": [
+        {
+          "esik": 0.4,
+          "dogruluk": 80.6,
+          "dogru": 54,
+          "belirsiz_yakalama": "6/8"
+        },
+        {
+          "esik": 0.45,
+          "dogruluk": 77.6,
+          "dogru": 52,
+          "belirsiz_yakalama": "7/8"
+        },
+        {
+          "esik": 0.5,
+          "dogruluk": 70.1,
+          "dogru": 47,
+          "belirsiz_yakalama": "8/8"
+        },
+        {
+          "esik": 0.55,
+          "dogruluk": 65.7,
+          "dogru": 44,
+          "belirsiz_yakalama": "8/8"
+        },
+        {
+          "esik": 0.6,
+          "dogruluk": 61.2,
+          "dogru": 41,
+          "belirsiz_yakalama": "8/8"
+        },
+        {
+          "esik": 0.65,
+          "dogruluk": 44.8,
+          "dogru": 30,
+          "belirsiz_yakalama": "8/8"
+        },
+        {
+          "esik": 0.7,
+          "dogruluk": 32.8,
+          "dogru": 22,
+          "belirsiz_yakalama": "8/8"
+        }
+      ],
+      "detaylar": [
+        {
+          "id": 1,
+          "mesaj": "Hastane yönetim sistemi arıyoruz",
+          "beklenen": "sağlık",
+          "bulunan": "sağlık",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6475,
+          "top2_skor": 0.5335,
+          "marj": 0.114,
+          "en_yakin_sirket": "SağlıkTek"
+        },
+        {
+          "id": 2,
+          "mesaj": "Poliklinik randevu çakışmalarını azaltacak bir sistem lazım",
+          "beklenen": "sağlık",
+          "bulunan": "belirsiz",
+          "dogru": false,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.4963,
+          "top2_skor": 0.3885,
+          "marj": 0.1078,
+          "en_yakin_sirket": "SağlıkTek"
+        },
+        {
+          "id": 3,
+          "mesaj": "MR ve tomografi görüntülerini güvenli arşivlemek istiyoruz",
+          "beklenen": "sağlık",
+          "bulunan": "sağlık",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5306,
+          "top2_skor": 0.5077,
+          "marj": 0.0229,
+          "en_yakin_sirket": "MediCloud"
+        },
+        {
+          "id": 4,
+          "mesaj": "112 çağrılarında en yakın ekibi otomatik yönlendirmek istiyoruz",
+          "beklenen": "sağlık",
+          "bulunan": "sağlık",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6829,
+          "top2_skor": 0.4345,
+          "marj": 0.2483,
+          "en_yakin_sirket": "AcilSoft"
+        },
+        {
+          "id": 5,
+          "mesaj": "Kan tahlili sonuçlarını hekime otomatik düşürecek laboratuvar yazılımı",
+          "beklenen": "sağlık",
+          "bulunan": "sağlık",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.531,
+          "top2_skor": 0.5203,
+          "marj": 0.0107,
+          "en_yakin_sirket": "SağlıkTek"
+        },
+        {
+          "id": 6,
+          "mesaj": "Otel rezervasyon sistemimizi yenilemek istiyoruz",
+          "beklenen": "turizm",
+          "bulunan": "belirsiz",
+          "dogru": false,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.3923,
+          "top2_skor": 0.389,
+          "marj": 0.0033,
+          "en_yakin_sirket": "TatilPlus"
+        },
+        {
+          "id": 7,
+          "mesaj": "Misafirlerin oda müsaitliğini tek ekrandan görmek istiyoruz",
+          "beklenen": "turizm",
+          "bulunan": "turizm",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5199,
+          "top2_skor": 0.4523,
+          "marj": 0.0676,
+          "en_yakin_sirket": "TatilPlus"
+        },
+        {
+          "id": 8,
+          "mesaj": "Yolcuların telefondan check-in yapmasını sağlamak istiyoruz",
+          "beklenen": "turizm",
+          "bulunan": "belirsiz",
+          "dogru": false,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.4674,
+          "top2_skor": 0.3853,
+          "marj": 0.0822,
+          "en_yakin_sirket": "HavaYolu360"
+        },
+        {
+          "id": 9,
+          "mesaj": "Yurt dışı paketlerimizi internetten satacağız",
+          "beklenen": "turizm",
+          "bulunan": "belirsiz",
+          "dogru": false,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.3866,
+          "top2_skor": 0.3752,
+          "marj": 0.0114,
+          "en_yakin_sirket": "GümrükKöprü"
+        },
+        {
+          "id": 10,
+          "mesaj": "Askeri haberleşme altyapımızı güçlendirmek istiyoruz",
+          "beklenen": "savunma",
+          "bulunan": "savunma",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.628,
+          "top2_skor": 0.5613,
+          "marj": 0.0667,
+          "en_yakin_sirket": "SavunmaSis"
+        },
+        {
+          "id": 11,
+          "mesaj": "Birlikler arası güvenli mesajlaşma kurmak istiyoruz",
+          "beklenen": "savunma",
+          "bulunan": "belirsiz",
+          "dogru": false,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.4954,
+          "top2_skor": 0.4223,
+          "marj": 0.0731,
+          "en_yakin_sirket": "SavunmaSis"
+        },
+        {
+          "id": 12,
+          "mesaj": "Hava sahası tehditlerini gerçek zamanlı izlemek istiyoruz",
+          "beklenen": "savunma",
+          "bulunan": "savunma",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6399,
+          "top2_skor": 0.4496,
+          "marj": 0.1903,
+          "en_yakin_sirket": "RadarNet"
+        },
+        {
+          "id": 13,
+          "mesaj": "Kritik ağlarımıza sızma girişimlerini önlemek istiyoruz",
+          "beklenen": "savunma",
+          "bulunan": "savunma",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5934,
+          "top2_skor": 0.4753,
+          "marj": 0.1182,
+          "en_yakin_sirket": "SiberKalkan"
+        },
+        {
+          "id": 14,
+          "mesaj": "Üniversite için uzaktan eğitim platformu istiyoruz",
+          "beklenen": "eğitim",
+          "bulunan": "eğitim",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.7203,
+          "top2_skor": 0.5725,
+          "marj": 0.1478,
+          "en_yakin_sirket": "EğitimBul"
+        },
+        {
+          "id": 15,
+          "mesaj": "Kampüsteki ders ve öğrenci kayıtlarını tek yerden yönetmek istiyoruz",
+          "beklenen": "eğitim",
+          "bulunan": "eğitim",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6623,
+          "top2_skor": 0.6458,
+          "marj": 0.0165,
+          "en_yakin_sirket": "KampüsDijital"
+        },
+        {
+          "id": 16,
+          "mesaj": "Velilerle öğretmenleri dijitalde buluşturacak kanal lazım",
+          "beklenen": "eğitim",
+          "bulunan": "eğitim",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5954,
+          "top2_skor": 0.5088,
+          "marj": 0.0866,
+          "en_yakin_sirket": "OkulPlus"
+        },
+        {
+          "id": 17,
+          "mesaj": "Online sınav ve otomatik notlandırma istiyoruz",
+          "beklenen": "eğitim",
+          "bulunan": "eğitim",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.573,
+          "top2_skor": 0.4825,
+          "marj": 0.0905,
+          "en_yakin_sirket": "KampüsDijital"
+        },
+        {
+          "id": 18,
+          "mesaj": "Sağlık sigortası poliçelerimizi dijitalleştirmek istiyoruz",
+          "beklenen": "sigorta",
+          "bulunan": "sigorta",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6828,
+          "top2_skor": 0.6449,
+          "marj": 0.0379,
+          "en_yakin_sirket": "SigortaNet"
+        },
+        {
+          "id": 19,
+          "mesaj": "Kasko primlerini sürücü riskine göre otomatik hesaplamak istiyoruz",
+          "beklenen": "sigorta",
+          "bulunan": "sigorta",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.7427,
+          "top2_skor": 0.5907,
+          "marj": 0.152,
+          "en_yakin_sirket": "RiskKoruma"
+        },
+        {
+          "id": 20,
+          "mesaj": "Hasar dosyasına eksper atayıp fotoğraflardan ön değerlendirme yapmak istiyoruz",
+          "beklenen": "sigorta",
+          "bulunan": "sigorta",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6317,
+          "top2_skor": 0.4624,
+          "marj": 0.1693,
+          "en_yakin_sirket": "HasarHızlı"
+        },
+        {
+          "id": 21,
+          "mesaj": "Kargo filomuzu canlı takip etmek istiyoruz",
+          "beklenen": "lojistik",
+          "bulunan": "lojistik",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6316,
+          "top2_skor": 0.5876,
+          "marj": 0.0439,
+          "en_yakin_sirket": "LojistikPro"
+        },
+        {
+          "id": 22,
+          "mesaj": "Depo stok hareketlerini ve son teslimatı optimize etmek istiyoruz",
+          "beklenen": "lojistik",
+          "bulunan": "lojistik",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.8084,
+          "top2_skor": 0.6702,
+          "marj": 0.1382,
+          "en_yakin_sirket": "DepoAkış"
+        },
+        {
+          "id": 23,
+          "mesaj": "Konteynerlerin gümrük süreçlerini dijital takip etmek istiyoruz",
+          "beklenen": "lojistik",
+          "bulunan": "lojistik",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.8121,
+          "top2_skor": 0.5763,
+          "marj": 0.2359,
+          "en_yakin_sirket": "GümrükKöprü"
+        },
+        {
+          "id": 24,
+          "mesaj": "Banka ödeme altyapımızı yenilemek istiyoruz",
+          "beklenen": "finans",
+          "bulunan": "finans",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6113,
+          "top2_skor": 0.5488,
+          "marj": 0.0624,
+          "en_yakin_sirket": "BankaYazılım"
+        },
+        {
+          "id": 25,
+          "mesaj": "Sanal POS ve açık bankacılık API entegre etmek istiyoruz",
+          "beklenen": "finans",
+          "bulunan": "finans",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.8298,
+          "top2_skor": 0.6883,
+          "marj": 0.1415,
+          "en_yakin_sirket": "ÖdemeKöprü"
+        },
+        {
+          "id": 26,
+          "mesaj": "KOBİ başvurularında otomatik kredi skoru üretmek istiyoruz",
+          "beklenen": "finans",
+          "bulunan": "finans",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.7134,
+          "top2_skor": 0.5469,
+          "marj": 0.1665,
+          "en_yakin_sirket": "KrediSkor"
+        },
+        {
+          "id": 27,
+          "mesaj": "Tarlalarda sulamayı sensörle otomatikleştirmek istiyoruz",
+          "beklenen": "tarım",
+          "bulunan": "tarım",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.7305,
+          "top2_skor": 0.7094,
+          "marj": 0.0211,
+          "en_yakin_sirket": "TarımVeri"
+        },
+        {
+          "id": 28,
+          "mesaj": "Ürün verimini hava ve toprak verisine göre tahmin etmek istiyoruz",
+          "beklenen": "tarım",
+          "bulunan": "tarım",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6801,
+          "top2_skor": 0.6274,
+          "marj": 0.0527,
+          "en_yakin_sirket": "TarımVeri"
+        },
+        {
+          "id": 29,
+          "mesaj": "Rüzgar türbini üretimini şebeke yüküyle birlikte izlemek istiyoruz",
+          "beklenen": "enerji",
+          "bulunan": "enerji",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6656,
+          "top2_skor": 0.4503,
+          "marj": 0.2153,
+          "en_yakin_sirket": "EnerjiIzle"
+        },
+        {
+          "id": 30,
+          "mesaj": "Sayaç verisinde kayıp kaçak analizi yapmak istiyoruz",
+          "beklenen": "enerji",
+          "bulunan": "enerji",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6037,
+          "top2_skor": 0.4239,
+          "marj": 0.1798,
+          "en_yakin_sirket": "ŞebekeAkıllı"
+        },
+        {
+          "id": 31,
+          "mesaj": "Baz istasyonu kapsama kalitesini abone şikayetleriyle eşleştirmek istiyoruz",
+          "beklenen": "telekom",
+          "bulunan": "telekom",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6056,
+          "top2_skor": 0.5674,
+          "marj": 0.0382,
+          "en_yakin_sirket": "TeleLink"
+        },
+        {
+          "id": 32,
+          "mesaj": "Fiber kesintilerini bölgesel olarak hızlı tespit etmek istiyoruz",
+          "beklenen": "telekom",
+          "bulunan": "telekom",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6673,
+          "top2_skor": 0.459,
+          "marj": 0.2083,
+          "en_yakin_sirket": "FiberNet"
+        },
+        {
+          "id": 33,
+          "mesaj": "Dava dosyaları ve müvekkil sözleşmelerini tek panelden yönetmek istiyoruz",
+          "beklenen": "hukuk",
+          "bulunan": "hukuk",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6857,
+          "top2_skor": 0.5383,
+          "marj": 0.1474,
+          "en_yakin_sirket": "HukukPortal"
+        },
+        {
+          "id": 34,
+          "mesaj": "Sözleşme maddelerinde uyumsuzlukları otomatik işaretlemek istiyoruz",
+          "beklenen": "hukuk",
+          "bulunan": "belirsiz",
+          "dogru": false,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.4316,
+          "top2_skor": 0.417,
+          "marj": 0.0147,
+          "en_yakin_sirket": "SözleşmeAI"
+        },
+        {
+          "id": 35,
+          "mesaj": "Mağaza stoklarını kasayla senkron tutmak istiyoruz",
+          "beklenen": "perakende",
+          "bulunan": "perakende",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.7548,
+          "top2_skor": 0.6192,
+          "marj": 0.1356,
+          "en_yakin_sirket": "MağazaPulse"
+        },
+        {
+          "id": 36,
+          "mesaj": "Rafta ürün yokken kampanya fiyatını otomatik güncellemek istiyoruz",
+          "beklenen": "perakende",
+          "bulunan": "belirsiz",
+          "dogru": false,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.4484,
+          "top2_skor": 0.324,
+          "marj": 0.1244,
+          "en_yakin_sirket": "RaftaKal"
+        },
+        {
+          "id": 37,
+          "mesaj": "Canlı yayın ve VOD içeriklerini tek CMS üzerinden yönetmek istiyoruz",
+          "beklenen": "medya",
+          "bulunan": "medya",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.6782,
+          "top2_skor": 0.5418,
+          "marj": 0.1364,
+          "en_yakin_sirket": "YayınAkış"
+        },
+        {
+          "id": 38,
+          "mesaj": "Reklam kampanyasının hangi izleyici segmentine ulaştığını ölçmek istiyoruz",
+          "beklenen": "medya",
+          "bulunan": "medya",
+          "dogru": true,
+          "zorluk": "teknik",
+          "tuzak_tipi": null,
+          "top1_skor": 0.7007,
+          "top2_skor": 0.4174,
+          "marj": 0.2833,
+          "en_yakin_sirket": "ReklamHedef"
+        },
+        {
+          "id": 39,
+          "mesaj": "İşe alım, izin ve bordroyu tek İK sisteminde toplamak istiyoruz",
+          "beklenen": "insan_kaynaklari",
+          "bulunan": "insan_kaynaklari",
+          "dogru": true,
+          "zorluk": "dogrudan",
+          "tuzak_tipi": null,
+          "top1_skor": 0.7888,
+          "top2_skor": 0.5745,
+          "marj": 0.2143,
+          "en_yakin_sirket": "İKBulut"
+        },
+        {
+          "id": 40,
+          "mesaj": "Çalışan yetkinliklerine göre yıllık eğitim planı çıkarmak istiyoruz",
+          "beklenen": "insan_kaynaklari",
+          "bulunan": "insan_kaynaklari",
+          "dogru": true,
+          "zorluk": "parafraz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.7074,
+          "top2_skor": 0.6769,
+          "marj": 0.0305,
+          "en_yakin_sirket": "YetkinlikHarita"
+        },
+        {
+          "id": 41,
+          "mesaj": "Hastane çalışanlarımızın tamamlayıcı poliçe hasar süreçlerini dijitalleştirmek istiyoruz",
+          "beklenen": "sigorta",
+          "bulunan": "sigorta",
+          "dogru": true,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "saglik_vs_sigorta",
+          "top1_skor": 0.7017,
+          "top2_skor": 0.6854,
+          "marj": 0.0163,
+          "en_yakin_sirket": "HasarHızlı"
+        },
+        {
+          "id": 42,
+          "mesaj": "Tatilde kaza yapan müşterilerimizin tazminat dosyalarını takip edeceğiz",
+          "beklenen": "sigorta",
+          "bulunan": "belirsiz",
+          "dogru": false,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "turizm_vs_sigorta",
+          "top1_skor": 0.4845,
+          "top2_skor": 0.4011,
+          "marj": 0.0835,
+          "en_yakin_sirket": "SigortaNet"
+        },
+        {
+          "id": 43,
+          "mesaj": "Otel zincirimizin şehirler arası malzeme sevkiyat filolarını canlı izlemek istiyoruz",
+          "beklenen": "lojistik",
+          "bulunan": "turizm",
+          "dogru": false,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "turizm_vs_lojistik",
+          "top1_skor": 0.6366,
+          "top2_skor": 0.5887,
+          "marj": 0.0479,
+          "en_yakin_sirket": "GezginSoft"
+        },
+        {
+          "id": 44,
+          "mesaj": "Askeri personelimize zorunlu dil ve prosedür eğitimlerini uzaktan vermek istiyoruz",
+          "beklenen": "eğitim",
+          "bulunan": "belirsiz",
+          "dogru": false,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "savunma_vs_egitim",
+          "top1_skor": 0.4858,
+          "top2_skor": 0.4458,
+          "marj": 0.04,
+          "en_yakin_sirket": "SavunmaSis"
+        },
+        {
+          "id": 45,
+          "mesaj": "Çiftçilere özel mikro kredi skorlama ve ödeme takvimi kurmak istiyoruz",
+          "beklenen": "finans",
+          "bulunan": "tarım",
+          "dogru": false,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "tarim_vs_finans",
+          "top1_skor": 0.6575,
+          "top2_skor": 0.604,
+          "marj": 0.0535,
+          "en_yakin_sirket": "TarımVeri"
+        },
+        {
+          "id": 46,
+          "mesaj": "Üniversite kantinlerinde kartlı ödeme altyapısı kurmak istiyoruz",
+          "beklenen": "finans",
+          "bulunan": "finans",
+          "dogru": true,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "egitim_vs_finans",
+          "top1_skor": 0.6139,
+          "top2_skor": 0.5865,
+          "marj": 0.0274,
+          "en_yakin_sirket": "ÖdemeKöprü"
+        },
+        {
+          "id": 47,
+          "mesaj": "Elektrik santralimizdeki kontrol sistemlerini siber saldırılara karşı korumak istiyoruz",
+          "beklenen": "savunma",
+          "bulunan": "enerji",
+          "dogru": false,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "enerji_vs_savunma",
+          "top1_skor": 0.5806,
+          "top2_skor": 0.5404,
+          "marj": 0.0402,
+          "en_yakin_sirket": "EnerjiIzle"
+        },
+        {
+          "id": 48,
+          "mesaj": "Bankamızın çağrı merkezi personeline ürün eğitim simülasyonu kurmak istiyoruz",
+          "beklenen": "eğitim",
+          "bulunan": "insan_kaynaklari",
+          "dogru": false,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "finans_vs_egitim",
+          "top1_skor": 0.5246,
+          "top2_skor": 0.5097,
+          "marj": 0.0149,
+          "en_yakin_sirket": "YetkinlikHarita"
+        },
+        {
+          "id": 49,
+          "mesaj": "E-ticaret siparişlerimizin depo çıkış ve kurye teslimatını izlemek istiyoruz",
+          "beklenen": "lojistik",
+          "bulunan": "lojistik",
+          "dogru": true,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "perakende_vs_lojistik",
+          "top1_skor": 0.6464,
+          "top2_skor": 0.556,
+          "marj": 0.0904,
+          "en_yakin_sirket": "GümrükKöprü"
+        },
+        {
+          "id": 50,
+          "mesaj": "TV kanallarımızın yayın hakları sözleşmelerini hukuken arşivlemek istiyoruz",
+          "beklenen": "hukuk",
+          "bulunan": "belirsiz",
+          "dogru": false,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "medya_vs_hukuk",
+          "top1_skor": 0.481,
+          "top2_skor": 0.4739,
+          "marj": 0.007,
+          "en_yakin_sirket": "SözleşmeAI"
+        },
+        {
+          "id": 51,
+          "mesaj": "Mağaza çalışanlarımızın bordro ve izin süreçlerini dijitalleştirmek istiyoruz",
+          "beklenen": "insan_kaynaklari",
+          "bulunan": "insan_kaynaklari",
+          "dogru": true,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "perakende_vs_ik",
+          "top1_skor": 0.7312,
+          "top2_skor": 0.6501,
+          "marj": 0.0811,
+          "en_yakin_sirket": "İKBulut"
+        },
+        {
+          "id": 52,
+          "mesaj": "Sağlık grubumuzun yeni doktor alım ve oryantasyon sürecini yönetmek istiyoruz",
+          "beklenen": "insan_kaynaklari",
+          "bulunan": "belirsiz",
+          "dogru": false,
+          "zorluk": "tuzak",
+          "tuzak_tipi": "saglik_vs_ik",
+          "top1_skor": 0.4756,
+          "top2_skor": 0.4558,
+          "marj": 0.0198,
+          "en_yakin_sirket": "SağlıkTek"
+        },
+        {
+          "id": 53,
+          "mesaj": "Hem klinik randevu hem de hasta faturalandırma ödeme modülü istiyoruz",
+          "beklenen": "sağlık",
+          "bulunan": "sağlık",
+          "dogru": true,
+          "zorluk": "cok_anlamli",
+          "tuzak_tipi": "saglik_vs_finans",
+          "top1_skor": 0.7202,
+          "top2_skor": 0.631,
+          "marj": 0.0892,
+          "en_yakin_sirket": "SağlıkTek"
+        },
+        {
+          "id": 54,
+          "mesaj": "Otelimizde misafir Wi-Fi kalitesini ve şikayetleri izlemek istiyoruz",
+          "beklenen": "telekom",
+          "bulunan": "belirsiz",
+          "dogru": false,
+          "zorluk": "cok_anlamli",
+          "tuzak_tipi": "turizm_vs_telekom",
+          "top1_skor": 0.4418,
+          "top2_skor": 0.292,
+          "marj": 0.1498,
+          "en_yakin_sirket": "FiberNet"
+        },
+        {
+          "id": 55,
+          "mesaj": "Tarım kooperatifimizin üyelerine poliçe ve hasar yönetimi sunacağız",
+          "beklenen": "sigorta",
+          "bulunan": "sigorta",
+          "dogru": true,
+          "zorluk": "cok_anlamli",
+          "tuzak_tipi": "tarim_vs_sigorta",
+          "top1_skor": 0.6222,
+          "top2_skor": 0.5274,
+          "marj": 0.0948,
+          "en_yakin_sirket": "SigortaNet"
+        },
+        {
+          "id": 56,
+          "mesaj": "PACS",
+          "beklenen": "sağlık",
+          "bulunan": "belirsiz",
+          "dogru": false,
+          "zorluk": "kisa",
+          "tuzak_tipi": null,
+          "top1_skor": 0.3074,
+          "top2_skor": 0.2959,
+          "marj": 0.0115,
+          "en_yakin_sirket": "DepoAkış"
+        },
+        {
+          "id": 57,
+          "mesaj": "SCADA izleme",
+          "beklenen": "enerji",
+          "bulunan": "telekom",
+          "dogru": false,
+          "zorluk": "kisa",
+          "tuzak_tipi": null,
+          "top1_skor": 0.5674,
+          "top2_skor": 0.5645,
+          "marj": 0.0029,
+          "en_yakin_sirket": "FiberNet"
+        },
+        {
+          "id": 58,
+          "mesaj": "WMS",
+          "beklenen": "lojistik",
+          "bulunan": "belirsiz",
+          "dogru": false,
+          "zorluk": "kisa",
+          "tuzak_tipi": null,
+          "top1_skor": 0.457,
+          "top2_skor": 0.3559,
+          "marj": 0.1011,
+          "en_yakin_sirket": "DepoAkış"
+        },
+        {
+          "id": 59,
+          "mesaj": "LMS istiyoruz",
+          "beklenen": "eğitim",
+          "bulunan": "belirsiz",
+          "dogru": false,
+          "zorluk": "kisa",
+          "tuzak_tipi": null,
+          "top1_skor": 0.3276,
+          "top2_skor": 0.2761,
+          "marj": 0.0515,
+          "en_yakin_sirket": "EğitimBul"
+        },
+        {
+          "id": 60,
+          "mesaj": "Bugün hava çok güzeldi, sizi aramak istedim",
+          "beklenen": "belirsiz",
+          "bulunan": "belirsiz",
+          "dogru": true,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.2815,
+          "top2_skor": 0.2117,
+          "marj": 0.0699,
+          "en_yakin_sirket": "ToprakSens"
+        },
+        {
+          "id": 61,
+          "mesaj": "Fiyat teklifi almak istiyorum",
+          "beklenen": "belirsiz",
+          "bulunan": "belirsiz",
+          "dogru": true,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.2937,
+          "top2_skor": 0.2837,
+          "marj": 0.01,
+          "en_yakin_sirket": "RaftaKal"
+        },
+        {
+          "id": 62,
+          "mesaj": "Merhaba, yarın saat kaçta müsaitsiniz?",
+          "beklenen": "belirsiz",
+          "bulunan": "belirsiz",
+          "dogru": true,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.2309,
+          "top2_skor": 0.2099,
+          "marj": 0.021,
+          "en_yakin_sirket": "YetkinlikHarita"
+        },
+        {
+          "id": 63,
+          "mesaj": "Genel olarak bir yazılım çözümü arıyoruz ama henüz alan net değil",
+          "beklenen": "belirsiz",
+          "bulunan": "belirsiz",
+          "dogru": true,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.3227,
+          "top2_skor": 0.3221,
+          "marj": 0.0005,
+          "en_yakin_sirket": "LabFlow"
+        },
+        {
+          "id": 64,
+          "mesaj": "Teşekkür ederiz, dokümanları inceleyeceğiz",
+          "beklenen": "belirsiz",
+          "bulunan": "belirsiz",
+          "dogru": true,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.4779,
+          "top2_skor": 0.4137,
+          "marj": 0.0641,
+          "en_yakin_sirket": "SözleşmeAI"
+        },
+        {
+          "id": 65,
+          "mesaj": "İyi çalışmalar, sonra tekrar yazarız",
+          "beklenen": "belirsiz",
+          "bulunan": "belirsiz",
+          "dogru": true,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.3681,
+          "top2_skor": 0.3388,
+          "marj": 0.0293,
+          "en_yakin_sirket": "İKBulut"
+        },
+        {
+          "id": 66,
+          "mesaj": "Bu konuda bilgilendirme dokümanı var mı?",
+          "beklenen": "belirsiz",
+          "bulunan": "belirsiz",
+          "dogru": true,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.2815,
+          "top2_skor": 0.2792,
+          "marj": 0.0023,
+          "en_yakin_sirket": "SözleşmeAI"
+        },
+        {
+          "id": 67,
+          "mesaj": "Yönetim kurulu sunumu için genel kapasite bilgisi isteriz",
+          "beklenen": "belirsiz",
+          "bulunan": "belirsiz",
+          "dogru": true,
+          "zorluk": "belirsiz",
+          "tuzak_tipi": null,
+          "top1_skor": 0.4319,
+          "top2_skor": 0.3724,
+          "marj": 0.0595,
+          "en_yakin_sirket": "İKBulut"
+        }
+      ]
+    }
+  ]
+}

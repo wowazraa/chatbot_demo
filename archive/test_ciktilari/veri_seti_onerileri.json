@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1000,
+    "mesaj": "Eski turizm acente programımızı bırakıp hastane otomasyon sistemine geçmek istiyoruz",
+    "lang": "tr",
+    "beklenen_sektor": "sağlık",
+    "beklenen_mod": "K1",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "A05"
+  },
+  {
+    "id": 1001,
+    "mesaj": "lms kurulumundan vazgeçtik, telemedicine altyapısı talep ediyoruz",
+    "lang": "tr",
+    "beklenen_sektor": "sağlık",
+    "beklenen_mod": "K1",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "A07"
+  },
+  {
+    "id": 1002,
+    "mesaj": "otel yönetimi yerine radar kontrol yazılımı yaptıracağız",
+    "lang": "tr",
+    "beklenen_sektor": "savunma",
+    "beklenen_mod": "K1",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "A08"
+  },
+  {
+    "id": 1003,
+    "mesaj": "savunma radar projesi mi eğitim otomasyonu mu derseniz kesinlikle ilkini değil ikincisini seçeceğiz",
+    "lang": "tr",
+    "beklenen_sektor": "eğitim",
+    "beklenen_mod": "K1",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "A09"
+  },
+  {
+    "id": 1004,
+    "mesaj": "Kesinlikle otel veya seyahat rezervasyonu istemiyoruz, savunma projesi arıyoruz.",
+    "lang": "tr",
+    "beklenen_sektor": "savunma",
+    "beklenen_mod": "K1",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "A11"
+  },
+  {
+    "id": 1005,
+    "mesaj": "savunma sanayi alanında çalışmıyoruz, okul ders programı otomasyonuna ihtiyacımız var",
+    "lang": "tr",
+    "beklenen_sektor": "eğitim",
+    "beklenen_mod": "K1",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "A13"
+  },
+  {
+    "id": 1006,
+    "mesaj": "Hem sağlık hem de savunma alanında faaliyet gösteriyoruz, ikisi için de teklif verin",
+    "lang": "tr",
+    "beklenen_sektor": "belirsiz",
+    "beklenen_mod": "FB",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "B01"
+  },
+  {
+    "id": 1007,
+    "mesaj": "Önce otel otomasyonunu tamamlayıp ardından personel eğitim platformunu entegre edeceğiz",
+    "lang": "tr",
+    "beklenen_sektor": "belirsiz",
+    "beklenen_mod": "FB",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "B04"
+  },
+  {
+    "id": 1008,
+    "mesaj": "sağlıkksektörüüotomasyonuuarıyoruzz",
+    "lang": "tr",
+    "beklenen_sektor": "sağlık",
+    "beklenen_mod": "K1",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "C05"
+  },
+  {
+    "id": 1009,
+    "mesaj": "eğitm portali örenci işleri",
+    "lang": "tr",
+    "beklenen_sektor": "eğitim",
+    "beklenen_mod": "K1",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "C07"
+  },
+  {
+    "id": 1010,
+    "mesaj": "university registration system yenilemek istiyoruz",
+    "lang": "tr",
+    "beklenen_sektor": "eğitim",
+    "beklenen_mod": "K1",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "D09"
+  },
+  {
+    "id": 1011,
+    "mesaj": "Sağlıklı bir iş ortaklığı kurmak istiyoruz.",
+    "lang": "tr",
+    "beklenen_sektor": "belirsiz",
+    "beklenen_mod": "FB",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "F01"
+  },
+  {
+    "id": 1012,
+    "mesaj": "Turistik bir bölgede ofisimiz var ama yazılım hizmeti arıyoruz.",
+    "lang": "tr",
+    "beklenen_sektor": "belirsiz",
+    "beklenen_mod": "FB",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "F02"
+  },
+  {
+    "id": 1013,
+    "mesaj": "Hastane köşelerinde beklemek istemediğimiz için evde bakım hizmetlerine yöneldik.",
+    "lang": "tr",
+    "beklenen_sektor": "belirsiz",
+    "beklenen_mod": "FB",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "F05"
+  },
+  {
+    "id": 1014,
+    "mesaj": "Askeri disiplinle çalışan bir ekibimiz var, projeyi zamanında bitireceğiz.",
+    "lang": "tr",
+    "beklenen_sektor": "belirsiz",
+    "beklenen_mod": "FB",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "F07"
+  }
+]

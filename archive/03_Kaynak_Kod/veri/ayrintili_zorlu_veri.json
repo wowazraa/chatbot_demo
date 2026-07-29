@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "ad": "Tur 4 — Ayrıntılı zorlu test seti",
+    "amac": "Modelleri sektör bazında, zorluk tipine göre, tuzak/belirsiz kırılımlarıyla ve skor dağılımıyla karşılaştırmak",
+    "esik_onerisi": 0.5,
+    "notlar": [
+      "beklenen_sektor: doğru etiket",
+      "zorluk: dogrudan | parafraz | tuzak | cok_anlamli | belirsiz | teknik | kisa",
+      "tuzak_tipi: hangi sektör çiftinde karışması bekleniyor (varsa)",
+      "aciklama_notu: insan okuyucu için gerekçe"
+    ]
+  },
+  "sirketler": [
+    {"id": 1, "ad": "SağlıkTek", "sektor": "sağlık", "aciklama": "Hastane yönetim sistemleri, elektronik hasta kayıtları ve klinik randevu planlama yazılımları geliştiriyoruz."},
+    {"id": 2, "ad": "MediCloud", "sektor": "sağlık", "aciklama": "Tıbbi görüntüleme arşivleme, PACS ve teletıp platformları sunuyoruz."},
+    {"id": 3, "ad": "AcilSoft", "sektor": "sağlık", "aciklama": "Ambulans yönlendirme, 112 entegrasyonu ve acil servis triaj yazılımları üretiyoruz."},
+    {"id": 4, "ad": "LabFlow", "sektor": "sağlık", "aciklama": "Laboratuvar sonuç yönetimi, numune takip ve klinik karar destek sistemleri geliştiriyoruz."},
+
+    {"id": 5, "ad": "TatilPlus", "sektor": "turizm", "aciklama": "Otel rezervasyon, oda envanteri ve tur operatörü satış platformları üretiyoruz."},
+    {"id": 6, "ad": "GezginSoft", "sektor": "turizm", "aciklama": "Seyahat acenteleri için paket tur, konaklama ve transfer yönetim yazılımları geliştiriyoruz."},
+    {"id": 7, "ad": "HavaYolu360", "sektor": "turizm", "aciklama": "Havayolu bilet rezervasyon, koltuk seçimi ve online check-in sistemleri sunuyoruz."},
+
+    {"id": 8, "ad": "SavunmaSis", "sektor": "savunma", "aciklama": "Askeri iletişim, kriptolu haberleşme ve komuta kontrol yazılımları üretiyoruz."},
+    {"id": 9, "ad": "RadarNet", "sektor": "savunma", "aciklama": "Hava savunma radar sinyal işleme ve tehdit izleme yazılımları geliştiriyoruz."},
+    {"id": 10, "ad": "SiberKalkan", "sektor": "savunma", "aciklama": "Askeri ve kritik altyapı ağları için siber güvenlik ve tehdit istihbaratı çözümleri sunuyoruz."},
+
+    {"id": 11, "ad": "EğitimBul", "sektor": "eğitim", "aciklama": "Okul ve üniversiteler için uzaktan eğitim, LMS ve öğrenci takip platformları sunuyoruz."},
+    {"id": 12, "ad": "KampüsDijital", "sektor": "eğitim", "aciklama": "Kampüs yönetimi, sınav otomasyonu ve öğrenci bilgi sistemleri geliştiriyoruz."},
+    {"id": 13, "ad": "OkulPlus", "sektor": "eğitim", "aciklama": "İlkokul-ortaokul için veli-öğretmen iletişim ve ödev takip uygulamaları üretiyoruz."},
+
+    {"id": 14, "ad": "SigortaNet", "sektor": "sigorta", "aciklama": "Sağlık sigortası poliçe yönetimi, hasar ihbarı ve tazminat takip sistemleri geliştiriyoruz."},
+    {"id": 15, "ad": "RiskKoruma", "sektor": "sigorta", "aciklama": "Kasko ve konut sigortası için risk skorlama ve prim hesaplama motorları üretiyoruz."},
+    {"id": 16, "ad": "HasarHızlı", "sektor": "sigorta", "aciklama": "Sigorta eksper atama, hasar fotoğraf analizi ve ödeme onay süreçlerini dijitalleştiriyoruz."},
+
+    {"id": 17, "ad": "LojistikPro", "sektor": "lojistik", "aciklama": "Kargo takip, filo yönetimi ve rota optimizasyon yazılımları üretiyoruz."},
+    {"id": 18, "ad": "DepoAkış", "sektor": "lojistik", "aciklama": "Depo WMS, stok optimizasyonu ve son mil teslimat yazılımları geliştiriyoruz."},
+    {"id": 19, "ad": "GümrükKöprü", "sektor": "lojistik", "aciklama": "Uluslararası taşımacılık için gümrük beyanname ve konteyner takip sistemleri sunuyoruz."},
+
+    {"id": 20, "ad": "BankaYazılım", "sektor": "finans", "aciklama": "Bankacılık çekirdek işlem, havale/EFT ve hesap yönetim sistemleri geliştiriyoruz."},
+    {"id": 21, "ad": "ÖdemeKöprü", "sektor": "finans", "aciklama": "POS, sanal POS, açık bankacılık API ve ödeme geçidi çözümleri sunuyoruz."},
+    {"id": 22, "ad": "KrediSkor", "sektor": "finans", "aciklama": "Bireysel ve KOBİ kredi skorlama, risk limit ve tahsilat yazılımları üretiyoruz."},
+
+    {"id": 23, "ad": "TarımVeri", "sektor": "tarım", "aciklama": "Ürün verimi tahmini, sulama otomasyonu ve tarla yönetim yazılımları geliştiriyoruz."},
+    {"id": 24, "ad": "ToprakSens", "sektor": "tarım", "aciklama": "Toprak nemi, gübreleme ve sera iklim kontrol sensör platformları sunuyoruz."},
+
+    {"id": 25, "ad": "EnerjiIzle", "sektor": "enerji", "aciklama": "Santral SCADA izleme, şebeke yük yönetimi ve yenilenebilir üretim analiz yazılımları geliştiriyoruz."},
+    {"id": 26, "ad": "ŞebekeAkıllı", "sektor": "enerji", "aciklama": "Akıllı sayaç veri toplama, kayıp-kaçak analizi ve dağıtım şebekesi yazılımları sunuyoruz."},
+
+    {"id": 27, "ad": "TeleLink", "sektor": "telekom", "aciklama": "Mobil şebeke performans, baz istasyonu yönetimi ve abone deneyimi analiz yazılımları geliştiriyoruz."},
+    {"id": 28, "ad": "FiberNet", "sektor": "telekom", "aciklama": "Fiber altyapı kesinti yönetimi, abone provizyon ve servis kalitesi izleme sistemleri üretiyoruz."},
+
+    {"id": 29, "ad": "HukukPortal", "sektor": "hukuk", "aciklama": "Dava takip, sözleşme yönetimi ve elektronik tebligat yazılımları üretiyoruz."},
+    {"id": 30, "ad": "SözleşmeAI", "sektor": "hukuk", "aciklama": "Sözleşme madde analizi, uyum kontrolü ve hukuki doküman arşivleme platformları sunuyoruz."},
+
+    {"id": 31, "ad": "MağazaPulse", "sektor": "perakende", "aciklama": "Mağaza stok, kasa entegrasyonu ve omnichannel perakende satış yazılımları geliştiriyoruz."},
+    {"id": 32, "ad": "RaftaKal", "sektor": "perakende", "aciklama": "Raflarda ürün bulunurluğu, kampanya fiyat ve müşteri sadakat programları yönetiyoruz."},
+
+    {"id": 33, "ad": "YayınAkış", "sektor": "medya", "aciklama": "Dijital yayın, içerik yönetim sistemi ve video streaming altyapıları sunuyoruz."},
+    {"id": 34, "ad": "ReklamHedef", "sektor": "medya", "aciklama": "Programatik reklam, izleyici segmentasyonu ve kampanya ölçüm platformları geliştiriyoruz."},
+
+    {"id": 35, "ad": "İKBulut", "sektor": "insan_kaynaklari", "aciklama": "İşe alım, bordro, izin ve performans değerlendirme İK yazılımları üretiyoruz."},
+    {"id": 36, "ad": "YetkinlikHarita", "sektor": "insan_kaynaklari", "aciklama": "Çalışan yetkinlik haritalama, eğitim planlama ve kariyer yolu platformları sunuyoruz."}
+  ],
+  "kullanici_mesajlari": [
+    {"id": 1, "mesaj": "Hastane yönetim sistemi arıyoruz", "beklenen_sektor": "sağlık", "zorluk": "dogrudan", "tuzak_tipi": null, "aciklama_notu": "Doğrudan anahtar kelime"},
+    {"id": 2, "mesaj": "Poliklinik randevu çakışmalarını azaltacak bir sistem lazım", "beklenen_sektor": "sağlık", "zorluk": "parafraz", "tuzak_tipi": null, "aciklama_notu": "Hastane demeden klinik randevu"},
+    {"id": 3, "mesaj": "MR ve tomografi görüntülerini güvenli arşivlemek istiyoruz", "beklenen_sektor": "sağlık", "zorluk": "parafraz", "tuzak_tipi": null, "aciklama_notu": "PACS/teletıp çağrışımı"},
+    {"id": 4, "mesaj": "112 çağrılarında en yakın ekibi otomatik yönlendirmek istiyoruz", "beklenen_sektor": "sağlık", "zorluk": "teknik", "tuzak_tipi": null, "aciklama_notu": "Acil servis/ambulans"},
+    {"id": 5, "mesaj": "Kan tahlili sonuçlarını hekime otomatik düşürecek laboratuvar yazılımı", "beklenen_sektor": "sağlık", "zorluk": "teknik", "tuzak_tipi": null, "aciklama_notu": "LabFlow"},
+
+    {"id": 6, "mesaj": "Otel rezervasyon sistemimizi yenilemek istiyoruz", "beklenen_sektor": "turizm", "zorluk": "dogrudan", "tuzak_tipi": null, "aciklama_notu": null},
+    {"id": 7, "mesaj": "Misafirlerin oda müsaitliğini tek ekrandan görmek istiyoruz", "beklenen_sektor": "turizm", "zorluk": "parafraz", "tuzak_tipi": null, "aciklama_notu": "Otel demeden envanter"},
+    {"id": 8, "mesaj": "Yolcuların telefondan check-in yapmasını sağlamak istiyoruz", "beklenen_sektor": "turizm", "zorluk": "parafraz", "tuzak_tipi": null, "aciklama_notu": "Havayolu"},
+    {"id": 9, "mesaj": "Yurt dışı paketlerimizi internetten satacağız", "beklenen_sektor": "turizm", "zorluk": "parafraz", "tuzak_tipi": null, "aciklama_notu": "Tur paketi"},
+
+    {"id": 10, "mesaj": "Askeri haberleşme altyapımızı güçlendirmek istiyoruz", "beklenen_sektor": "savunma", "zorluk": "dogrudan", "tuzak_tipi": null, "aciklama_notu": null},
+    {"id": 11, "mesaj": "Birlikler arası güvenli mesajlaşma kurmak istiyoruz", "beklenen_sektor": "savunma", "zorluk": "parafraz", "tuzak_tipi": null, "aciklama_notu": "Askeri kelimesi yok ama birlik"},
+    {"id": 12, "mesaj": "Hava sahası tehditlerini gerçek zamanlı izlemek istiyoruz", "beklenen_sektor": "savunma", "zorluk": "teknik", "tuzak_tipi": null, "aciklama_notu": "Radar"},
+    {"id": 13, "mesaj": "Kritik ağlarımıza sızma girişimlerini önlemek istiyoruz", "beklenen_sektor": "savunma", "zorluk": "parafraz", "tuzak_tipi": null, "aciklama_notu": "Siber güvenlik"},
+
+    {"id": 14, "mesaj": "Üniversite için uzaktan eğitim platformu istiyoruz", "beklenen_sektor": "eğitim", "zorluk": "dogrudan", "tuzak_tipi": null, "aciklama_notu": null},
+    {"id": 15, "mesaj": "Kampüsteki ders ve öğrenci kayıtlarını tek yerden yönetmek istiyoruz", "beklenen_sektor": "eğitim", "zorluk": "parafraz", "tuzak_tipi": null, "aciklama_notu": null},
+    {"id": 16, "mesaj": "Velilerle öğretmenleri dijitalde buluşturacak kanal lazım", "beklenen_sektor": "eğitim", "zorluk": "parafraz", "tuzak_tipi": null, "aciklama_notu": null},
+    {"id": 17, "mesaj": "Online sınav ve otomatik notlandırma istiyoruz", "beklenen_sektor": "eğitim", "zorluk": "teknik", "tuzak_tipi": null, "aciklama_notu": null},
+
+    {"id": 18, "mesaj": "Sağlık sigortası poliçelerimizi dijitalleştirmek istiyoruz", "beklenen_sektor": "sigorta", "zorluk": "dogrudan", "tuzak_tipi": null, "aciklama_notu": null},
+    {"id": 19, "mesaj": "Kasko primlerini sürücü riskine göre otomatik hesaplamak istiyoruz", "beklenen_sektor": "sigorta", "zorluk": "teknik", "tuzak_tipi": null, "aciklama_notu": null},
+    {"id": 20, "mesaj": "Hasar dosyasına eksper atayıp fotoğraflardan ön değerlendirme yapmak istiyoruz", "beklenen_sektor": "sigorta", "zorluk": "teknik", "tuzak_tipi": null, "aciklama_notu": null},
+
+    {"id": 21, "mesaj": "Kargo filomuzu canlı takip etmek istiyoruz", "beklenen_sektor": "lojistik", "zorluk": "dogrudan", "tuzak_tipi": null, "aciklama_notu": null},
+    {"id": 22, "mesaj": "Depo stok hareketlerini ve son teslimatı optimize etmek istiyoruz", "beklenen_sektor": "lojistik", "zorluk": "parafraz", "tuzak_tipi": null, "aciklama_notu": null},
+    {"id": 23, "mesaj": "Konteynerlerin gümrük süreçlerini dijital takip etmek istiyoruz", "beklenen_sektor": "lojistik", "zorluk": "teknik", "tuzak_tipi": null, "aciklama_notu": null},
+
+    {"id": 24, "mesaj": "Banka ödeme altyapımızı yenilemek istiyoruz", "beklenen_sektor": "finans", "zorluk": "dogrudan", "tuzak_tipi": null, "aciklama_notu": null},
+    {"id": 25, "mesaj": "Sanal POS ve açık bankacılık API entegre etmek istiyoruz", "beklenen_sektor": "finans", "zorluk": "teknik", "tuzak_tipi": null, "aciklama_notu": null},
+    {"id": 26, "mesaj": "KOBİ başvurularında otomatik kredi skoru üretmek istiyoruz", "beklenen_sektor": "finans", "zorluk": "teknik", "tuzak_tipi": null, "aciklama_notu": null},
+
+    {"id": 27, "mesaj": "Tarlalarda sulamayı sensörle otomatikleştirmek istiyoruz", "beklenen_sektor": "tarım", "zorluk": "parafraz", "tuzak_tipi": null, "aciklama_notu": null},
+    {"id": 28, "mesaj": "Ürün verimini hava ve toprak verisine göre tahmin etmek istiyoruz", "beklenen_sektor": "tarım", "zorluk": "teknik", "tuzak_tipi": null, "aciklama_notu": null},
+
+    {"id": 29, "mesaj": "Rüzgar türbini üretimini şebeke yüküyle birlikte izlemek istiyoruz", "beklenen_sektor": "enerji", "zorluk": "teknik", "tuzak_tipi": null, "aciklama_notu": null},
+    {"id": 30, "mesaj": "Sayaç verisinde kayıp kaçak analizi yapmak istiyoruz", "beklenen_sektor": "enerji", "zorluk": "teknik", "tuzak_tipi": null, "aciklama_notu": null},
+
+    {"id": 31, "mesaj": "Baz istasyonu kapsama kalitesini abone şikayetleriyle eşleştirmek istiyoruz", "beklenen_sektor": "telekom", "zorluk": "teknik", "tuzak_tipi": null, "aciklama_notu": null},
+    {"id": 32, "mesaj": "Fiber kesintilerini bölgesel olarak hızlı tespit etmek istiyoruz", "beklenen_sektor": "telekom", "zorluk": "parafraz", "tuzak_tipi": null, "aciklama_notu": null},
+
+    {"id": 33, "mesaj": "Dava dosyaları ve müvekkil sözleşmelerini tek panelden yönetmek istiyoruz", "beklenen_sektor": "hukuk", "zorluk": "parafraz", "tuzak_tipi": null, "aciklama_notu": null},
+    {"id": 34, "mesaj": "Sözleşme maddelerinde uyumsuzlukları otomatik işaretlemek istiyoruz", "beklenen_sektor": "hukuk", "zorluk": "teknik", "tuzak_tipi": null, "aciklama_notu": null},
+
+    {"id": 35, "mesaj": "Mağaza stoklarını kasayla senkron tutmak istiyoruz", "beklenen_sektor": "perakende", "zorluk": "parafraz", "tuzak_tipi": null, "aciklama_notu": null},
+    {"id": 36, "mesaj": "Rafta ürün yokken kampanya fiyatını otomatik güncellemek istiyoruz", "beklenen_sektor": "perakende", "zorluk": "teknik", "tuzak_tipi": null, "aciklama_notu": null},
+
+    {"id": 37, "mesaj": "Canlı yayın ve VOD içeriklerini tek CMS üzerinden yönetmek istiyoruz", "beklenen_sektor": "medya", "zorluk": "teknik", "tuzak_tipi": null, "aciklama_notu": null},
+    {"id": 38, "mesaj": "Reklam kampanyasının hangi izleyici segmentine ulaştığını ölçmek istiyoruz", "beklenen_sektor": "medya", "zorluk": "teknik", "tuzak_tipi": null, "aciklama_notu": null},
+
+    {"id": 39, "mesaj": "İşe alım, izin ve bordroyu tek İK sisteminde toplamak istiyoruz", "beklenen_sektor": "insan_kaynaklari", "zorluk": "dogrudan", "tuzak_tipi": null, "aciklama_notu": null},
+    {"id": 40, "mesaj": "Çalışan yetkinliklerine göre yıllık eğitim planı çıkarmak istiyoruz", "beklenen_sektor": "insan_kaynaklari", "zorluk": "parafraz", "tuzak_tipi": null, "aciklama_notu": "Eğitim sektörüne kaymamalı"},
+
+    {"id": 41, "mesaj": "Hastane çalışanlarımızın tamamlayıcı poliçe hasar süreçlerini dijitalleştirmek istiyoruz", "beklenen_sektor": "sigorta", "zorluk": "tuzak", "tuzak_tipi": "saglik_vs_sigorta", "aciklama_notu": "Hastane kelimesi var ama konu poliçe/hasar"},
+    {"id": 42, "mesaj": "Tatilde kaza yapan müşterilerimizin tazminat dosyalarını takip edeceğiz", "beklenen_sektor": "sigorta", "zorluk": "tuzak", "tuzak_tipi": "turizm_vs_sigorta", "aciklama_notu": "Tatil kelimesi tuzağı"},
+    {"id": 43, "mesaj": "Otel zincirimizin şehirler arası malzeme sevkiyat filolarını canlı izlemek istiyoruz", "beklenen_sektor": "lojistik", "zorluk": "tuzak", "tuzak_tipi": "turizm_vs_lojistik", "aciklama_notu": "Otel tuzağı, asıl ihtiyaç filo/sevkiyat"},
+    {"id": 44, "mesaj": "Askeri personelimize zorunlu dil ve prosedür eğitimlerini uzaktan vermek istiyoruz", "beklenen_sektor": "eğitim", "zorluk": "tuzak", "tuzak_tipi": "savunma_vs_egitim", "aciklama_notu": "Askeri kelimesi tuzağı"},
+    {"id": 45, "mesaj": "Çiftçilere özel mikro kredi skorlama ve ödeme takvimi kurmak istiyoruz", "beklenen_sektor": "finans", "zorluk": "tuzak", "tuzak_tipi": "tarim_vs_finans", "aciklama_notu": "Çiftçi tuzağı, asıl kredi/skor"},
+    {"id": 46, "mesaj": "Üniversite kantinlerinde kartlı ödeme altyapısı kurmak istiyoruz", "beklenen_sektor": "finans", "zorluk": "tuzak", "tuzak_tipi": "egitim_vs_finans", "aciklama_notu": "Üniversite tuzağı"},
+    {"id": 47, "mesaj": "Elektrik santralimizdeki kontrol sistemlerini siber saldırılara karşı korumak istiyoruz", "beklenen_sektor": "savunma", "zorluk": "tuzak", "tuzak_tipi": "enerji_vs_savunma", "aciklama_notu": "Santral tuzağı, asıl siber güvenlik"},
+    {"id": 48, "mesaj": "Bankamızın çağrı merkezi personeline ürün eğitim simülasyonu kurmak istiyoruz", "beklenen_sektor": "eğitim", "zorluk": "tuzak", "tuzak_tipi": "finans_vs_egitim", "aciklama_notu": "Banka tuzağı, asıl eğitim platformu"},
+    {"id": 49, "mesaj": "E-ticaret siparişlerimizin depo çıkış ve kurye teslimatını izlemek istiyoruz", "beklenen_sektor": "lojistik", "zorluk": "tuzak", "tuzak_tipi": "perakende_vs_lojistik", "aciklama_notu": "E-ticaret tuzağı"},
+    {"id": 50, "mesaj": "TV kanallarımızın yayın hakları sözleşmelerini hukuken arşivlemek istiyoruz", "beklenen_sektor": "hukuk", "zorluk": "tuzak", "tuzak_tipi": "medya_vs_hukuk", "aciklama_notu": "TV/yayın tuzağı, asıl sözleşme/hukuk"},
+    {"id": 51, "mesaj": "Mağaza çalışanlarımızın bordro ve izin süreçlerini dijitalleştirmek istiyoruz", "beklenen_sektor": "insan_kaynaklari", "zorluk": "tuzak", "tuzak_tipi": "perakende_vs_ik", "aciklama_notu": "Mağaza tuzağı"},
+    {"id": 52, "mesaj": "Sağlık grubumuzun yeni doktor alım ve oryantasyon sürecini yönetmek istiyoruz", "beklenen_sektor": "insan_kaynaklari", "zorluk": "tuzak", "tuzak_tipi": "saglik_vs_ik", "aciklama_notu": "Sağlık tuzağı, asıl işe alım/İK"},
+
+    {"id": 53, "mesaj": "Hem klinik randevu hem de hasta faturalandırma ödeme modülü istiyoruz", "beklenen_sektor": "sağlık", "zorluk": "cok_anlamli", "tuzak_tipi": "saglik_vs_finans", "aciklama_notu": "Ödeme kelimesi var ama ana ihtiyaç klinik; sağlık beklenir"},
+    {"id": 54, "mesaj": "Otelimizde misafir Wi-Fi kalitesini ve şikayetleri izlemek istiyoruz", "beklenen_sektor": "telekom", "zorluk": "cok_anlamli", "tuzak_tipi": "turizm_vs_telekom", "aciklama_notu": "Otel ortamı ama konu ağ/Wi-Fi kalitesi → telekom"},
+    {"id": 55, "mesaj": "Tarım kooperatifimizin üyelerine poliçe ve hasar yönetimi sunacağız", "beklenen_sektor": "sigorta", "zorluk": "cok_anlamli", "tuzak_tipi": "tarim_vs_sigorta", "aciklama_notu": "Tarım kelimesi var, asıl poliçe/hasar"},
+
+    {"id": 56, "mesaj": "PACS", "beklenen_sektor": "sağlık", "zorluk": "kisa", "tuzak_tipi": null, "aciklama_notu": "Çok kısa teknik terim"},
+    {"id": 57, "mesaj": "SCADA izleme", "beklenen_sektor": "enerji", "zorluk": "kisa", "tuzak_tipi": null, "aciklama_notu": "Kısa teknik terim"},
+    {"id": 58, "mesaj": "WMS", "beklenen_sektor": "lojistik", "zorluk": "kisa", "tuzak_tipi": null, "aciklama_notu": "Depo yönetim kısaltması"},
+    {"id": 59, "mesaj": "LMS istiyoruz", "beklenen_sektor": "eğitim", "zorluk": "kisa", "tuzak_tipi": null, "aciklama_notu": "Öğrenme yönetim sistemi"},
+
+    {"id": 60, "mesaj": "Bugün hava çok güzeldi, sizi aramak istedim", "beklenen_sektor": "belirsiz", "zorluk": "belirsiz", "tuzak_tipi": null, "aciklama_notu": "Konu dışı sohbet"},
+    {"id": 61, "mesaj": "Fiyat teklifi almak istiyorum", "beklenen_sektor": "belirsiz", "zorluk": "belirsiz", "tuzak_tipi": null, "aciklama_notu": "Sektör belirtilmemiş"},
+    {"id": 62, "mesaj": "Merhaba, yarın saat kaçta müsaitsiniz?", "beklenen_sektor": "belirsiz", "zorluk": "belirsiz", "tuzak_tipi": null, "aciklama_notu": "Randevu sohbeti"},
+    {"id": 63, "mesaj": "Genel olarak bir yazılım çözümü arıyoruz ama henüz alan net değil", "beklenen_sektor": "belirsiz", "zorluk": "belirsiz", "tuzak_tipi": null, "aciklama_notu": "Bilinçli belirsiz talep"},
+    {"id": 64, "mesaj": "Teşekkür ederiz, dokümanları inceleyeceğiz", "beklenen_sektor": "belirsiz", "zorluk": "belirsiz", "tuzak_tipi": null, "aciklama_notu": "Kapanış cümlesi"},
+    {"id": 65, "mesaj": "İyi çalışmalar, sonra tekrar yazarız", "beklenen_sektor": "belirsiz", "zorluk": "belirsiz", "tuzak_tipi": null, "aciklama_notu": "Kapanış"},
+    {"id": 66, "mesaj": "Bu konuda bilgilendirme dokümanı var mı?", "beklenen_sektor": "belirsiz", "zorluk": "belirsiz", "tuzak_tipi": null, "aciklama_notu": "Sektör yok"},
+    {"id": 67, "mesaj": "Yönetim kurulu sunumu için genel kapasite bilgisi isteriz", "beklenen_sektor": "belirsiz", "zorluk": "belirsiz", "tuzak_tipi": null, "aciklama_notu": "Kurumsal ama sektörsüz"}
+  ]
+}

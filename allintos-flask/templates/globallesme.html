@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+{% block title %}Globalleşme — Allintos{% endblock %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="gl-hero">
+  <div class="gl-hero-overlay"></div>
+  <div class="container gl-hero-content">
+    <h1><span class="accent">Turquality</span> &amp; E-Turquality Stratejik
+        Hazırlık ve Başvuru Danışmanlığı</h1>
+    <p>Allintos, firmanızın marka, dijital iş modeli, hedef pazar ve kurumsal
+       altyapı kapasitesini analiz ederek Turquality veya E-Turquality süreçlerine
+       doğru hazırlıkla başlamanızı sağlar.</p>
+  </div>
+</section>
+
+<!-- GİRİŞ -->
+<section class="section gl-intro">
+  <div class="container gl-intro-grid">
+    <div class="gl-intro-text">
+      <p class="strong">Global pazarlara açılmak isteyen her firmanın ihtiyacı
+        aynı değildir. Bazı firmalar için öncelik marka bilinirliği, hedef pazar
+        ve kurumsal altyapı hazırlığı iken; bazı firmalar için dijital ürün,
+        yazılım, platform veya teknoloji tabanlı iş modelinin global pazarlara
+        taşınması önceliklidir.</p>
+      <p>Allintos, bu ayrımı başvuru öncesinde analiz eder. Firmanın mevcut
+        durumunu değerlendirerek Turquality, Marka Programı veya E-Turquality
+        açısından hangi yola daha uygun olduğunuzu belirler ve globalleşme
+        sürecinizin uygulanabilir bir hazırlık planı oluşturur.</p>
+    </div>
+    <div class="gl-intro-media">
+      <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=900&q=80"
+           alt="Küresel bağlantıları temsil eden dijital dünya görseli" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- HANGİ PROGRAM -->
+<section class="section gl-programs">
+  <div class="container">
+    <h2 class="section-title">Hangi Program Size Daha Uygun?</h2>
+    <p class="section-sub">Firmanızın faaliyet alanı, marka yapısı, dijital iş
+       modeli, hedef pazarı ve global büyüme hedefleri doğru programın
+       belirlenmesinde kritik rol oynar. Allintos, bu başlıkları birlikte
+       değerlendirerek sizi doğru programa yönlendirir.</p>
+
+    <div class="gl-prog-grid">
+      <!-- TURQUALITY -->
+      <article class="gl-prog-card">
+        <div class="gl-badge gl-badge-turquality">TURQUALITY<sup>®</sup></div>
+        <div class="gl-prog-body dark">
+          <h3>Markasını global pazarlarda güçlendirmek isteyen firmalar için</h3>
+          <p>Turquality ve Marka Programı; ürün veya hizmet markasını uluslararası
+             pazarlarda daha güçlü, görünür ve sürdürülebilir hale getirmek isteyen
+             firmalar için stratejik bir markalaşma ve global büyüme programıdır.</p>
+          <p>Bu yol; marka yönetimi, hedef pazar stratejisi, tanıtım, kurumsal
+             altyapı, yurt dışı marka tescili, pazar araştırması ve pazara giriş
+             hazırlığı gibi başlıkları kapsar.</p>
+          <ul>
+            <li>Ürün veya hizmet markanızı yurt dışında büyütmek istiyorsanız</li>
+            <li>Hedef pazarlarda marka bilinirliği oluşturmayı amaçlıyorsanız</li>
+            <li>Kurumsal altyapınızı global rekabete uygun hale getirmek istiyorsanız</li>
+            <li>Turquality veya Marka Programı'na hazırlık seviyenizi görmek istiyorsanız</li>
+          </ul>
+          <a href="{{ url_for('turquality') }}" class="btn btn-black block">Turquality Sayfasını İncele</a>
+        </div>
+      </article>
+
+      <!-- E-TURQUALITY -->
+      <article class="gl-prog-card">
+        <div class="gl-badge gl-badge-eturquality">
+          E-TURQUALITY<span>BİLİŞİMİN YILDIZLARI</span>
+        </div>
+        <div class="gl-prog-body cyan">
+          <h3>Dijital ürün, yazılım, platform ve teknoloji odaklı firmalar için</h3>
+          <p>E-Turquality; bilişim, yazılım, dijital platform, mobil uygulama,
+             yapay zekâ, büyük veri, siber güvenlik, bulut teknolojileri ve
+             teknoloji tabanlı iş modellerinin global pazarlara açılımını
+             destekleyen özel bir uluslararasılaşma programıdır.</p>
+          <p>Bu yol; dijital ürün/hizmet modeli, teknolojik yetkinlik, global
+             dijital marka, hedef pazar, pazara giriş ve stratejik iş planı
+             hazırlığı gibi başlıkları öne çıkarır.</p>
+          <ul>
+            <li>Yazılım, SaaS, platform veya dijital ürün geliştiriyorsanız</li>
+            <li>Teknoloji tabanlı hizmetinizi yurt dışına taşımak istiyorsanız</li>
+            <li>Bilişim veya dijital hizmet alanında faaliyet gösteriyorsanız</li>
+            <li>E-Turquality uygunluğunuzu önceden değerlendirmek istiyorsanız</li>
+          </ul>
+          <a href="{{ url_for('e_turquality') }}" class="btn btn-black block">E-Turquality Sayfasını İncele</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SÜREÇ / YOL HARİTASI -->
+<section class="section gl-process">
+  <div class="container">
+    <h2 class="section-title">Globalleşme Sürecinizi Başvuru Öncesinden Yol
+        Haritasına Kadar Yapılandırıyoruz</h2>
+    <p class="section-sub">Allintos, Turquality ve E-Turquality süreçlerini
+       yalnızca başvuru dokümanı hazırlığı olarak değil; firmanın global büyüme
+       kapasitesini analiz eden stratejik bir hazırlık süreci olarak ele alır.
+       Amaç, firmanın hangi programa uygun olduğunu belirlemek, eksik hazırlık
+       alanlarını ortaya koymak ve başvuruya daha güçlü bir yapı ile ilerlemesini
+       sağlamaktır.</p>
+
+    <div class="gl-steps">
+      <div class="gl-step">
+        <h4>1. Ön Analiz</h4>
+        <p>Firma bilgileri, sektör, marka yapısı, dijital kanal, hedef pazar ve
+           globalleşme hedefleri alınır.</p>
+      </div>
+      <div class="gl-step">
+        <h4>2. Uzman Görüşmesi</h4>
+        <p>Ön analiz sonucu uzman ekip tarafından değerlendirilir ve firmaya uygun
+           program için bir sonraki adım planlanır.</p>
+      </div>
+      <div class="gl-step">
+        <h4>3. Program Uygunluğu</h4>
+        <p>Firmanın Turquality, Marka Programı veya E-Turquality açısından hangi
+           programa daha yakın olduğu belirlenir.</p>
+      </div>
+      <div class="gl-step">
+        <h4>4. Eksik ve Risk Analizi</h4>
+        <p>Başvuru öncesinde tamamlanması gereken hazırlıklar, eksik belgeler ve
+           geliştirilmesi gereken alanlar tespit edilir.</p>
+      </div>
+      <div class="gl-step">
+        <h4>5. Yol Haritası</h4>
+        <p>Marka, hedef pazar, dijital kanal, kurumsal altyapı ve başvuru hazırlığı
+           için öncelikli aksiyon planı oluşturulur.</p>
+      </div>
+      <div class="gl-step">
+        <h4>6. Başvuru</h4>
+        <p>Hazırlanan yol haritası doğrultusunda başvuru dosyası güçlü bir yapı ile
+           tamamlanır.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJELERİMİZ -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title left">Projelerimiz</h2>
+    <p class="section-sub left">Dijital dönüşümde somut adımlar atıyoruz.</p>
+
+    <div class="feature-row">
+      <div class="feature-media">
+        <img src="https://images.unsplash.com/photo-1531497258014-b5736f376b1b?auto=format&fit=crop&w=1000&q=80"
+             alt="Dizüstü bilgisayar başında iş birliği yapan ekip" loading="lazy">
+      </div>
+      <div class="feature-text">
+        <h3>Başarı Hikayeleri</h3>
+        <p>Müşterilerimizin dijital dönüşüm yolculuklarında elde ettikleri somut
+           kazanımları ve büyüme örneklerini paylaşıyoruz.</p>
+      </div>
+    </div>
+
+    <div class="feature-row">
+      <div class="feature-media">
+        <img src="https://images.unsplash.com/photo-1516383274235-5f42d6c6426d?auto=format&fit=crop&w=1000&q=80"
+             alt="Yukarı yönlü büyümeyi gösteren analiz grafiği" loading="lazy">
+      </div>
+      <div class="feature-text">
+        <h3>Gelecek Vizyonu</h3>
+        <p>Teknoloji ve stratejiyi harmanlayarak işletmelerin sürdürülebilir
+           dijitalleşme hedeflerine ulaşmalarını sağlıyoruz.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+{% block title %}Blog — Allintos{% endblock %}
+
+{% block content %}
+
+<!-- BAŞLIK + LİSTE -->
+<section class="section blog-top">
+  <div class="container">
+    <h1>Dijital Dönüşüm</h1>
+    <ul class="blog-links">
+      <li>Dijital Dönüşüm Danışmanlığı</li>
+      <li>Dijital Dönüşüm Destekleri</li>
+      <li>Dijital Dönüşüm Ortaklıkları</li>
+      <li>BAŞKA BİR ŞEY?????????????????*</li>
+    </ul>
+  </div>
+</section>
+
+<!-- DİJİTAL DÖNÜŞÜM (açık mavi) -->
+<section class="section dd-ddx">
+  <div class="container">
+    <div class="dd-ddx-head">
+      <h3>Dijital Dönüşüm</h3>
+      <p>İş süreçlerinizi dijitale taşıyarak büyümenizi hızlandırıyoruz.</p>
+    </div>
+    <div class="dd-ddx-grid">
+      <div class="dd-ddx-media">
+        <img src="https://images.unsplash.com/photo-1620266757065-5814239881fd?auto=format&fit=crop&w=900&q=80"
+             alt="Dizüstü bilgisayarda çalışan bir kişi" loading="lazy">
+      </div>
+      <div class="dd-ddx-text blog-items">
+        <div class="blog-item">
+          <h4>Destek Hizmetleri</h4>
+          <p>Uygulama ve takip süreçlerinde yanınızda yer alıyoruz.</p>
+        </div>
+        <div class="blog-item">
+          <h4>Olgunluk Analizi</h4>
+          <p>Mevcut dijital yetkinliklerinizi detaylı şekilde inceliyoruz.</p>
+        </div>
+        <div class="blog-item">
+          <h4>Yol Haritası</h4>
+          <p>Adım adım dijital dönüşüm planınızı birlikte oluşturuyoruz.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJELERİMİZ -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title left">Projelerimiz</h2>
+    <p class="section-sub left">Dijital dönüşümde somut adımlar atıyoruz.</p>
+
+    <div class="feature-row">
+      <div class="feature-media">
+        <img src="https://images.unsplash.com/photo-1531497258014-b5736f376b1b?auto=format&fit=crop&w=1000&q=80"
+             alt="Dizüstü bilgisayar başında iş birliği yapan ekip" loading="lazy">
+      </div>
+      <div class="feature-text">
+        <h3>Başarı Hikayeleri</h3>
+        <p>Müşterilerimizin dijital dönüşüm yolculuklarında elde ettikleri somut
+           kazanımları ve büyüme örneklerini paylaşıyoruz.</p>
+      </div>
+    </div>
+
+    <div class="feature-row">
+      <div class="feature-media">
+        <img src="https://images.unsplash.com/photo-1516383274235-5f42d6c6426d?auto=format&fit=crop&w=1000&q=80"
+             alt="Yukarı yönlü büyümeyi gösteren analiz grafiği" loading="lazy">
+      </div>
+      <div class="feature-text">
+        <h3>Gelecek Vizyonu</h3>
+        <p>Teknoloji ve stratejiyi harmanlayarak işletmelerin sürdürülebilir
+           dijitalleşme hedeflerine ulaşmalarını sağlıyoruz.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BÜYÜMEVİZYON İLE TANIŞIN -->
+<section class="section dd-ai">
+  <div class="container feature-row reverse">
+    <div class="feature-text">
+      <h2>Büyümevizyon ile Tanışın</h2>
+      <p>Dijital dönüşüm yolculuğunuzda rehberiniz, işinizi geleceğe taşıyan
+         danışmanınız.</p>
+      <a href="#iletisim" class="btn btn-dark">Hemen Başla</a>
+    </div>
+    <div class="feature-media">
+      <img src="https://images.unsplash.com/photo-1603201667141-5a2d4c673378?auto=format&fit=crop&w=1000&q=80"
+           alt="Dijital dönüşüm üzerinde çalışan ekip" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- NEDEN BİZ -->
+<section class="section dd-why">
+  <div class="container feature-row">
+    <div class="feature-media collage">
+      <img class="collage-back"
+           src="https://images.unsplash.com/photo-1681184025442-1517cb9319c1?auto=format&fit=crop&w=800&q=80"
+           alt="Dijital veriler üzerinde çalışılan bir ekran" loading="lazy">
+      <img class="collage-front"
+           src="https://images.unsplash.com/photo-1690192079529-9fd57e5b24d0?auto=format&fit=crop&w=600&q=80"
+           alt="Toplantı odasında sunum yapan ekip" loading="lazy">
+    </div>
+    <div class="feature-text">
+      <h2>Neden Biz?</h2>
+      <p>Sektör deneyimimiz ve yapay zeka destekli analizlerle işinizi büyütmek
+         için buradayız.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABONE OL -->
+<section class="section ai-subscribe">
+  <div class="container ai-subscribe-inner">
+    <h2>Abone Ol</h2>
+    <p>Büyümevizyon'dan güncel dijital dönüşüm haberleri</p>
+    <form action="{{ url_for('newsletter') }}" method="post" class="subscribe-form">
+      <label for="bl-name">Adınız Soyadınız</label>
+      <input id="bl-name" type="text" name="name" placeholder="Lütfen adınızı girin" required>
+      <button type="submit" class="btn btn-primary">Gönder</button>
+    </form>
+  </div>
+</section>
+
+{% endblock %}

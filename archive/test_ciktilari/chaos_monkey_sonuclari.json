@@ -1,0 +1,730 @@
+{
+  "meta": {
+    "ad": "Chaos Monkey / Red Team",
+    "amac": "Sistemi kırmak — false positive, hafıza zehri, K1 evasion, embedding çarpışması, OVV",
+    "not": "beklenen: kabul edilebilir davranış. yasak_*: görürse FAIL (kandırıldı)",
+    "vektorler": [
+      "memory_poison",
+      "k1_evasion",
+      "semantic_collision",
+      "ovv_absurd"
+    ],
+    "toplam": 29,
+    "pass": 29,
+    "fail": 0
+  },
+  "sonuclar": [
+    {
+      "id": "M01",
+      "vektor": "memory_poison",
+      "baslik": "Vazgeç + askeriye + lisans fiyatı (klasik zehir)",
+      "ok": true,
+      "vulnerability": "",
+      "turns": [
+        {
+          "girdi": "Eğitim yazılımı arıyorum",
+          "sektor": "eğitim",
+          "mod": "K1",
+          "skor": 1.0,
+          "yontem": "kural",
+          "aciklama": "Regex kural eşleşmesi → eğitim",
+          "sure_ms": 4.98,
+          "ok": true,
+          "reasons": []
+        },
+        {
+          "girdi": "Ondan vazgeçtim, askeriyede kullanılacak bir şey lazım",
+          "sektor": "savunma",
+          "mod": "K1",
+          "skor": 0.5563,
+          "yontem": "bge-m3",
+          "aciklama": "BGE-M3 hybrid benzerlik: 0.5563 → savunma",
+          "sure_ms": 7995.26,
+          "ok": true,
+          "reasons": []
+        },
+        {
+          "girdi": "Peki az önceki sistemin lisans fiyatı ne kadardı?",
+          "sektor": "savunma",
+          "mod": "K1",
+          "skor": 0.85,
+          "yontem": "hafiza",
+          "aciklama": "Strict-read: diyalog sinyali, hafıza korundu (savunma)",
+          "sure_ms": 128.5,
+          "ok": true,
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": "M02",
+      "vektor": "memory_poison",
+      "baslik": "Sağlık → turizm pivot → fiyat (eski sektöre yapışma)",
+      "ok": true,
+      "vulnerability": "",
+      "turns": [
+        {
+          "girdi": "Hastane randevu sistemi istiyoruz",
+          "sektor": "sağlık",
+          "mod": "K1",
+          "skor": 1.0,
+          "yontem": "kural",
+          "aciklama": "Regex kural eşleşmesi → sağlık",
+          "sure_ms": 0.75,
+          "ok": true,
+          "reasons": []
+        },
+        {
+          "girdi": "Hayır yanlışlık oldu, aslında otel rezervasyon bakıyoruz",
+          "sektor": "turizm",
+          "mod": "K1",
+          "skor": 1.0,
+          "yontem": "kural",
+          "aciklama": "Regex kural eşleşmesi → turizm",
+          "sure_ms": 0.38,
+          "ok": true,
+          "reasons": []
+        },
+        {
+          "girdi": "Kurulum ücreti ne kadar?",
+          "sektor": "turizm",
+          "mod": "K1",
+          "skor": 0.85,
+          "yontem": "hafiza",
+          "aciklama": "Strict-read: diyalog sinyali, hafıza korundu (turizm)",
+          "sure_ms": 110.17,
+          "ok": true,
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": "M03",
+      "vektor": "memory_poison",
+      "baslik": "3 tur miras limiti aşımı — 4. fiyat sorusu",
+      "ok": true,
+      "vulnerability": "",
+      "turns": [
+        {
+          "girdi": "Savunma radar yazılımı",
+          "sektor": "savunma",
+          "mod": "K1",
+          "skor": 1.0,
+          "yontem": "kural",
+          "aciklama": "Regex kural eşleşmesi → savunma",
+          "sure_ms": 0.31,
+          "ok": true,
+          "reasons": []
+        },
+        {
+          "girdi": "Fiyat nedir?",
+          "sektor": "savunma",
+          "mod": "K1",
+          "skor": 0.85,
+          "yontem": "hafiza",
+          "aciklama": "Strict-read: diyalog sinyali, hafıza korundu (savunma)",
+          "sure_ms": 0.26,
+          "ok": true,
+          "reasons": []
+        },
+        {
+          "girdi": "Peki lisans modeli nasıl?",
+          "sektor": "savunma",
+          "mod": "K1",
+          "skor": 0.85,
+          "yontem": "hafiza",
+          "aciklama": "Strict-read: diyalog sinyali, hafıza korundu (savunma) | BGE önerisi yok sayıldı: eğitim",
+          "sure_ms": 108.58,
+          "ok": true,
+          "reasons": []
+        },
+        {
+          "girdi": "Demo süresi ne kadar?",
+          "sektor": "savunma",
+          "mod": "K1",
+          "skor": 0.85,
+          "yontem": "hafiza",
+          "aciklama": "Strict-read: diyalog sinyali, hafıza korundu (savunma)",
+          "sure_ms": 117.58,
+          "ok": true,
+          "reasons": []
+        },
+        {
+          "girdi": "Referans müşteri var mı ücret konusunda?",
+          "sektor": "belirsiz",
+          "mod": "FB",
+          "skor": 0.6624,
+          "yontem": "bge-m3",
+          "aciklama": "BGE-M3 hybrid benzerlik: 0.6624 → belirsiz",
+          "sure_ms": 112.57,
+          "ok": true,
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": "M04",
+      "vektor": "memory_poison",
+      "baslik": "Belirsiz fiyat ile boş session zehri",
+      "ok": true,
+      "vulnerability": "",
+      "turns": [
+        {
+          "girdi": "Fiyat teklifi almak istiyorum",
+          "sektor": "belirsiz",
+          "mod": "FB",
+          "skor": 0.9,
+          "yontem": "kural",
+          "aciklama": "FB sinyali algılandı (fiyat/teklif/price/quote)",
+          "sure_ms": 0.3,
+          "ok": true,
+          "reasons": []
+        },
+        {
+          "girdi": "Lisans ücreti?",
+          "sektor": "belirsiz",
+          "mod": "FB",
+          "skor": 0.5987,
+          "yontem": "bge-m3",
+          "aciklama": "BGE-M3 hybrid benzerlik: 0.5987 → belirsiz",
+          "sure_ms": 108.08,
+          "ok": true,
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": "M05",
+      "vektor": "memory_poison",
+      "baslik": "Konu değiştir + 'o sistem' belirsiz zamir",
+      "ok": true,
+      "vulnerability": "",
+      "turns": [
+        {
+          "girdi": "LMS kuracağız",
+          "sektor": "eğitim",
+          "mod": "K1",
+          "skor": 0.7295,
+          "yontem": "bge-m3",
+          "aciklama": "BGE-M3 hybrid benzerlik: 0.7295 → eğitim",
+          "sure_ms": 106.83,
+          "ok": true,
+          "reasons": []
+        },
+        {
+          "girdi": "Aslında sigorta poliçe motoru da lazım ama önce onu konuşalım",
+          "sektor": "finans",
+          "mod": "K1",
+          "skor": 1.0,
+          "yontem": "kural",
+          "aciklama": "Regex kural eşleşmesi → finans",
+          "sure_ms": 0.37,
+          "ok": true,
+          "reasons": []
+        },
+        {
+          "girdi": "Onun fiyatı nedir?",
+          "sektor": "finans",
+          "mod": "K1",
+          "skor": 0.85,
+          "yontem": "hafiza",
+          "aciklama": "Strict-read: diyalog sinyali, hafıza korundu (finans)",
+          "sure_ms": 108.97,
+          "ok": true,
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": "M06",
+      "vektor": "memory_poison",
+      "baslik": "İptal kelimesi yok, 'boşver' ile pivot",
+      "ok": true,
+      "vulnerability": "",
+      "turns": [
+        {
+          "girdi": "Turizm check-in yazılımı",
+          "sektor": "turizm",
+          "mod": "K1",
+          "skor": 1.0,
+          "yontem": "kural",
+          "aciklama": "Regex kural eşleşmesi → turizm",
+          "sure_ms": 0.46,
+          "ok": true,
+          "reasons": []
+        },
+        {
+          "girdi": "Boşver turizmi, banka ödeme geçidi istiyoruz",
+          "sektor": "finans",
+          "mod": "K1",
+          "skor": 0.5983,
+          "yontem": "bge-m3",
+          "aciklama": "Çelişki Tespit Edildi: finans vs turizm -> Karar K2'ye bırakıldı. | BGE-M3 hybrid benzerlik: 0.5983 → finans",
+          "sure_ms": 112.45,
+          "ok": true,
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": "E01",
+      "vektor": "k1_evasion",
+      "baslik": "Bitişik: Sağlıksigortası",
+      "ok": true,
+      "vulnerability": "",
+      "turns": [
+        {
+          "girdi": "Sağlıksigortası yönetim paneli arıyoruz",
+          "sektor": "finans",
+          "mod": "K1",
+          "skor": 0.6835,
+          "yontem": "bge-m3",
+          "aciklama": "BGE-M3 hybrid benzerlik: 0.6835 → finans",
+          "sure_ms": 114.14,
+          "ok": true,
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": "E02",
+      "vektor": "k1_evasion",
+      "baslik": "Noktalı kamuflaj s.a.ğ.l.ı.k",
+      "ok": true,
+      "vulnerability": "",
+      "turns": [
+        {
+          "girdi": "s.a.ğ.l.ı.k sektöründe hastane yazılımı lazım",
+          "sektor": "sağlık",
+          "mod": "K1",
+          "skor": 1.0,
+          "yontem": "kural",
+          "aciklama": "Regex kural eşleşmesi → sağlık",
+          "sure_ms": 0.29,
+          "ok": true,
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": "E03",
+      "vektor": "k1_evasion",
+      "baslik": "eğitim...li sıfat delme",
+      "ok": true,
+      "vulnerability": "",
+      "turns": [
+        {
+          "girdi": "eğitim...li personel için CRM istiyoruz",
+          "sektor": "belirsiz",
+          "mod": "FB",
+          "skor": 0.0,
+          "yontem": "bge-m3",
+          "aciklama": "Çelişki Tespit Edildi: ik_kurumsal vs eğitim -> Karar K2'ye bırakıldı. | Zehirli bağlam post-filter: 'eğitim' OVV/mecaz → FB",
+          "sure_ms": 147.18,
+          "ok": true,
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": "E04",
+      "vektor": "k1_evasion",
+      "baslik": "Typo savvnma",
+      "ok": true,
+      "vulnerability": "",
+      "turns": [
+        {
+          "girdi": "savvnma radar tehdit izleme istiyoruz",
+          "sektor": "savunma",
+          "mod": "K1",
+          "skor": 1.0,
+          "yontem": "kural",
+          "aciklama": "Regex kural eşleşmesi → savunma",
+          "sure_ms": 0.46,
+          "ok": true,
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": "E05",
+      "vektor": "k1_evasion",
+      "baslik": "Kısaltma trzm rzv",
+      "ok": true,
+      "vulnerability": "",
+      "turns": [
+        {
+          "girdi": "trzm rzv sistemi lazım",
+          "sektor": "turizm",
+          "mod": "K1",
+          "skor": 1.0,
+          "yontem": "kural",
+          "aciklama": "Regex kural eşleşmesi → turizm",
+          "sure_ms": 0.32,
+          "ok": true,
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": "E06",
+      "vektor": "k1_evasion",
+      "baslik": "Zero-width / emoji sıkıştırma",
+      "ok": true,
+      "vulnerability": "",
+      "turns": [
+        {
+          "girdi": "has​tane​ 🏥 randevu sistemi arıyoruz",
+          "sektor": "sağlık",
+          "mod": "K1",
+          "skor": 1.0,
+          "yontem": "kural",
+          "aciklama": "Regex kural eşleşmesi → sağlık",
+          "sure_ms": 0.3,
+          "ok": true,
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": "E07",
+      "vektor": "k1_evasion",
+      "baslik": "Homoglyph / Latin-lookalike",
+      "ok": true,
+      "vulnerability": "",
+      "turns": [
+        {
+          "girdi": "hаstane yönetim sistemi",
+          "sektor": "sağlık",
+          "mod": "K1",
+          "skor": 0.7015,
+          "yontem": "bge-m3",
+          "aciklama": "BGE-M3 hybrid benzerlik: 0.7015 → sağlık",
+          "sure_ms": 116.73,
+          "ok": true,
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": "E08",
+      "vektor": "k1_evasion",
+      "baslik": "CamelCase / snake_case",
+      "ok": true,
+      "vulnerability": "",
+      "turns": [
+        {
+          "girdi": "Need HotelReservation_System and CheckIn module",
+          "sektor": "turizm",
+          "mod": "K1",
+          "skor": 1.0,
+          "yontem": "kural",
+          "aciklama": "Regex kural eşleşmesi → turizm",
+          "sure_ms": 0.4,
+          "ok": true,
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": "S01",
+      "vektor": "semantic_collision",
+      "baslik": "4 sektör + fiyat (imkansız çorba)",
+      "ok": true,
+      "vulnerability": "",
+      "turns": [
+        {
+          "girdi": "Askeri hastanemizde tedavi gören öğrencilerin turistik gezileri için bir rezervasyon yazılımı lisansı fiyatı nedir?",
+          "sektor": "belirsiz",
+          "mod": "FB",
+          "skor": 0.0,
+          "yontem": "bge-m3",
+          "aciklama": "Çelişki Tespit Edildi: savunma vs sağlık vs turizm vs eğitim -> Karar K2'ye bırakıldı. | Çoklu çelişki (4 sektör) → FB",
+          "sure_ms": 127.35,
+          "ok": true,
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": "S02",
+      "vektor": "semantic_collision",
+      "baslik": "Sağlık turizmi + otel + klinik",
+      "ok": true,
+      "vulnerability": "",
+      "turns": [
+        {
+          "girdi": "Sağlık turizmi hastalarımız için klinik randevu ve otel konaklama tek panede",
+          "sektor": "turizm",
+          "mod": "K1",
+          "skor": 0.6465,
+          "yontem": "bge-m3",
+          "aciklama": "Çelişki Tespit Edildi: sağlık vs turizm -> Karar K2'ye bırakıldı. | BGE-M3 hybrid benzerlik: 0.6465 → turizm",
+          "sure_ms": 122.65,
+          "ok": true,
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": "S03",
+      "vektor": "semantic_collision",
+      "baslik": "Finans × eğitim × ik",
+      "ok": true,
+      "vulnerability": "",
+      "turns": [
+        {
+          "girdi": "Üniversite öğrenci harç ödeme ve bordro CRM entegrasyonu istiyoruz",
+          "sektor": "belirsiz",
+          "mod": "FB",
+          "skor": 0.0,
+          "yontem": "bge-m3",
+          "aciklama": "Çelişki Tespit Edildi: ik_kurumsal vs eğitim vs finans -> Karar K2'ye bırakıldı. | Çoklu çelişki (3 sektör) → FB",
+          "sure_ms": 114.61,
+          "ok": true,
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": "S04",
+      "vektor": "semantic_collision",
+      "baslik": "Negasyon sandwich 3 sektör",
+      "ok": true,
+      "vulnerability": "",
+      "turns": [
+        {
+          "girdi": "Otel istemiyoruz, hastane de değil, sadece LMS eğitim platformu",
+          "sektor": "belirsiz",
+          "mod": "FB",
+          "skor": 0.0,
+          "yontem": "bge-m3",
+          "aciklama": "Çelişki Tespit Edildi: eğitim vs sağlık vs turizm -> Karar K2'ye bırakıldı. | Çoklu çelişki (3 sektör) → FB",
+          "sure_ms": 119.86,
+          "ok": true,
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": "S05",
+      "vektor": "semantic_collision",
+      "baslik": "Medikal + sigorta + klinik (bilinçli çarpışma)",
+      "ok": true,
+      "vulnerability": "",
+      "turns": [
+        {
+          "girdi": "Medikal sigorta klinik hasar dosyası otomasyonu",
+          "sektor": "belirsiz",
+          "mod": "FB",
+          "skor": 0.0,
+          "yontem": "bge-m3",
+          "aciklama": "Çelişki Tespit Edildi: finans vs sağlık -> Karar K2'ye bırakıldı. | Çelişki dışı BGE kaçışı: 'ik_kurumsal' ∉ ['finans', 'sağlık'] → FB",
+          "sure_ms": 109.4,
+          "ok": true,
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": "S06",
+      "vektor": "semantic_collision",
+      "baslik": "NATO + okul + pansiyon",
+      "ok": true,
+      "vulnerability": "",
+      "turns": [
+        {
+          "girdi": "NATO üssü yanındaki okul pansiyon rezervasyonu için yazılım",
+          "sektor": "belirsiz",
+          "mod": "FB",
+          "skor": 0.0,
+          "yontem": "bge-m3",
+          "aciklama": "Çelişki Tespit Edildi: turizm vs savunma vs eğitim -> Karar K2'ye bırakıldı. | Çoklu çelişki (3 sektör) → FB",
+          "sure_ms": 110.92,
+          "ok": true,
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": "S07",
+      "vektor": "semantic_collision",
+      "baslik": "Alpha delirteç: uzun kurumsal 5 kavram",
+      "ok": true,
+      "vulnerability": "",
+      "turns": [
+        {
+          "girdi": "Holding bünyesinde hastane zinciri, otel markası, askeri lojistik ve üniversite LMS ile sigorta poliçe motorunu tek ERP CRM altında birleştirmek istiyoruz fiyat teklifi de lazım",
+          "sektor": "belirsiz",
+          "mod": "FB",
+          "skor": 0.0,
+          "yontem": "bge-m3",
+          "aciklama": "Çelişki Tespit Edildi: finans vs ik_kurumsal vs eğitim vs savunma vs sağlık vs turizm -> Karar K2'ye bırakıldı. | Çoklu çelişki (6 sektör) → FB",
+          "sure_ms": 166.32,
+          "ok": true,
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": "O01",
+      "vektor": "ovv_absurd",
+      "baslik": "Turp fiyatları",
+      "ok": true,
+      "vulnerability": "",
+      "turns": [
+        {
+          "girdi": "Turp fiyatları bu hafta ne kadar?",
+          "sektor": "belirsiz",
+          "mod": "FB",
+          "skor": 0.0,
+          "yontem": "bge-m3",
+          "aciklama": "Yeterli benzerlik bulunamadı → Fallback",
+          "sure_ms": 106.53,
+          "ok": true,
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": "O02",
+      "vektor": "ovv_absurd",
+      "baslik": "Sağdan direksiyonlu araba eğitimi",
+      "ok": true,
+      "vulnerability": "",
+      "turns": [
+        {
+          "girdi": "Sağdan direksiyonlu araba eğitimi kursu yazılımı",
+          "sektor": "eğitim",
+          "mod": "K1",
+          "skor": 1.0,
+          "yontem": "kural",
+          "aciklama": "Regex kural eşleşmesi → eğitim",
+          "sure_ms": 0.86,
+          "ok": true,
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": "O03",
+      "vektor": "ovv_absurd",
+      "baslik": "Savcılık savunma dilekçesi",
+      "ok": true,
+      "vulnerability": "",
+      "turns": [
+        {
+          "girdi": "Savcılık savunma dilekçesi nasıl yazılır?",
+          "sektor": "belirsiz",
+          "mod": "FB",
+          "skor": 0.0,
+          "yontem": "bge-m3",
+          "aciklama": "Yeterli benzerlik bulunamadı → Fallback",
+          "sure_ms": 130.38,
+          "ok": true,
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": "O04",
+      "vektor": "ovv_absurd",
+      "baslik": "Otel konforunda ofis koltuğu",
+      "ok": true,
+      "vulnerability": "",
+      "turns": [
+        {
+          "girdi": "Otel konforunda ofis koltuğu satışı için e-ticaret",
+          "sektor": "belirsiz",
+          "mod": "FB",
+          "skor": 0.0,
+          "yontem": "bge-m3",
+          "aciklama": "Zehirli bağlam post-filter: 'turizm' OVV/mecaz → FB",
+          "sure_ms": 137.14,
+          "ok": true,
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": "O05",
+      "vektor": "ovv_absurd",
+      "baslik": "Köpek eğitimi LMS şakası",
+      "ok": true,
+      "vulnerability": "",
+      "turns": [
+        {
+          "girdi": "Köpek eğitimi için LMS benzeri mobil uygulama",
+          "sektor": "belirsiz",
+          "mod": "FB",
+          "skor": 0.0,
+          "yontem": "bge-m3",
+          "aciklama": "Zehirli bağlam post-filter: 'eğitim' OVV/mecaz → FB",
+          "sure_ms": 112.91,
+          "ok": true,
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": "O06",
+      "vektor": "ovv_absurd",
+      "baslik": "Radar yemek tarifleri",
+      "ok": true,
+      "vulnerability": "",
+      "turns": [
+        {
+          "girdi": "Mutfakta radar gibi hızlı yemek tarifleri uygulaması",
+          "sektor": "belirsiz",
+          "mod": "FB",
+          "skor": 0.0,
+          "yontem": "bge-m3",
+          "aciklama": "Zehirli bağlam post-filter: 'savunma' OVV/mecaz → FB",
+          "sure_ms": 119.31,
+          "ok": true,
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": "O07",
+      "vektor": "ovv_absurd",
+      "baslik": "Poliçe = trafik cezası",
+      "ok": true,
+      "vulnerability": "",
+      "turns": [
+        {
+          "girdi": "Trafik polisi ceza puanı sorgulama uygulaması",
+          "sektor": "belirsiz",
+          "mod": "FB",
+          "skor": 0.0,
+          "yontem": "bge-m3",
+          "aciklama": "Zehirli bağlam post-filter: 'ik_kurumsal' OVV/mecaz → FB",
+          "sure_ms": 114.63,
+          "ok": true,
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": "O08",
+      "vektor": "ovv_absurd",
+      "baslik": "Boş / spam / emoji-only",
+      "ok": true,
+      "vulnerability": "",
+      "turns": [
+        {
+          "girdi": "asdfghjkl 🔥🔥🔥 ???",
+          "sektor": "belirsiz",
+          "mod": "FB",
+          "skor": 0.0,
+          "yontem": "bge-m3",
+          "aciklama": "Yeterli benzerlik bulunamadı → Fallback",
+          "sure_ms": 106.26,
+          "ok": true,
+          "reasons": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+# Intent Router Architecture & Rules
+
+## Core Contract
+- System MUST return output adhering strictly to `src/intent_router_contract.py` JSON format.
+- Output fields: `query`, `intent` (`sector`, `sub_intent`, `confidence_score`), `status` (`SUCCESS` | `UNCERTAIN` | `OOD`), `latency_ms`, `response_message`, `redirect_url` (`/health` | `/tourism` | `/defense` | `/education`).
+- Optional debug field: `top_candidates` — Top-3 `{text, sector, sub_intent, initial_score, reranker_score}`.
+
+## Target Architecture (V2 Pipeline)
+1. Stage 1 Retrieval: Query Embedding via `bge-m3` -> Search in PostgreSQL `pgvector` -> Fetch Top-3 candidates.
+2. Stage 2 Reranking: Cross-Encoder via `bge-reranker-v2-m3` on Top-3 candidates -> Final confidence score.
+3. Latency Target: Total execution time MUST remain under 150ms.
+
+## Development Principles
+- Maintain backward compatibility with existing legacy fields (`ChatbotResponse`) while routing through the contract adapter.
+- Never lower the strict confidence threshold (`MIN_BGE=0.80`) without explicit instruction. Prefer returning `UNCERTAIN` or `OOD` over false positives.
+- Do not modify existing `db_api` routers / seed schema unless explicitly asked; URL mapping lives in the contract adapter (`SECTOR_RESPONSE` / `SECTOR_REDIRECT`).

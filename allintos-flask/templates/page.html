@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}{{ title }} — Allintos{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+  <div class="container">
+    <h1>{{ title }}</h1>
+    <p class="lead">{{ lead }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <p class="muted">
+      Bu sayfanın içeriği henüz eklenmedi. Metinleri ve görselleri
+      <code>templates/page.html</code> veya bu sayfaya özel bir şablon
+      oluşturarak doldurabilirsiniz.
+    </p>
+    <a href="{{ url_for('index') }}" class="btn btn-primary">Ana sayfaya dön</a>
+  </div>
+</section>
+{% endblock %}

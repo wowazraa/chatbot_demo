@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "aciklama": "Arşivlenen sektörlerin kayıtları"
+  },
+  "kayitlar": [
+    {
+      "id": 47,
+      "mesaj": "hava savunma sistemi yazılımı ve entegrasyonu arıyoruz",
+      "lang": "tr",
+      "beklened_sektor": "savunma",
+      "beklenen_mod": "K2",
+      "zorluk": "dogrudan",
+      "beklenen_sektor": "ood",
+      "normalize_mesaj": "hava savunma sistemi yazılımı ve entegrasyonu arıyoruz",
+      "ham_mesaj": "hava savunma sistemi yazılımı ve entegrasyonu arıyoruz"
+    },
+    {
+      "id": 308,
+      "mesaj": "we require an air defense system software and integration",
+      "lang": "en",
+      "beklened_sektor": "savunma",
+      "beklenen_mod": "K2",
+      "zorluk": "dogrudan",
+      "beklenen_sektor": "ood",
+      "normalize_mesaj": "we require an air defense system software and integration",
+      "ham_mesaj": "we require an air defense system software and integration"
+    }
+  ]
+}

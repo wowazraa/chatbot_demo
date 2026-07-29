@@ -1,0 +1,34 @@
+{
+  "config": {
+    "model_type": "LogisticRegression",
+    "decision_threshold": 0.55,
+    "class_weight": "balanced",
+    "feature_count": 8
+  },
+  "performance": {
+    "accuracy": 1.0,
+    "TA": 700,
+    "TR": 300,
+    "FAR": 0,
+    "FRR": 0,
+    "far_rate": 0.0,
+    "frr_rate": 0.0,
+    "inference_time_ms": 0.0011100000119768083
+  },
+  "targets_met": {
+    "far_lt_1_percent": true,
+    "frr_lt_10_percent": true,
+    "accuracy_gt_90_percent": true,
+    "inference_lt_2ms": true
+  },
+  "feature_importance": {
+    "top_1_score": 0.9181536040269677,
+    "top_2_score": 0.6579586392079132,
+    "score_margin": 2.42794196303016,
+    "score_ratio": 2.407237058367683,
+    "strict_regex_match": 0.2977551619064927,
+    "any_regex_match": 0.19620363154983886,
+    "has_abbreviation": 0.10416586960316984,
+    "word_count": -0.189235284652467
+  }
+}

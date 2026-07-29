@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% block title %}Allintos — Stratejiden Büyümeye, Dijital Dönüşümle Geleceğe{% endblock %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <h1>Stratejiden Büyümeye,<br>Dijital Dönüşümle Geleceğe</h1>
+    <p class="hero-sub">
+      Allintos, yapay zekâ destekli analizler ve uzman danışmanlığı ile
+      işletmenizin potansiyelini ortaya çıkarır; doğru stratejilerle
+      sürdürülebilir büyümenizi hızlandırır.
+    </p>
+    <div class="hero-actions">
+      <a href="{{ url_for('ai_danisman') }}" class="btn btn-outline-light">AI Ön Analiz Başlat</a>
+      <a href="#iletisim" class="btn btn-outline-light">Uzman Görüşmesi Planla</a>
+    </div>
+  </div>
+</section>
+
+<!-- HİZMETLERİMİZ -->
+<section class="services section">
+  <div class="container">
+    <h2 class="section-title">HİZMETLERİMİZ</h2>
+    <p class="section-sub">Açıklama metni</p>
+
+    <div class="card-grid">
+      <article class="service-card">
+        <h3>Dijital Dönüşüm</h3>
+        <p>İş süreçlerinizi optimize eden, veri ve siber güvenlik odaklı
+           çözümler sunuyoruz.</p>
+        <a href="{{ url_for('dijital_donusum') }}" class="card-link">Detaylar →</a>
+      </article>
+
+      <article class="service-card">
+        <h3>Globalleşme</h3>
+        <p>Markanızı uluslararası pazarlara taşıyacak strateji ve teşvik
+           danışmanlığı sağlıyoruz.</p>
+        <a href="{{ url_for('globallesme') }}" class="card-link">Detaylar →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- NASIL ÇALIŞIYORUZ -->
+<section class="how section">
+  <div class="container">
+    <h2 class="section-title left">Nasıl Çalışıyoruz?</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="step-no">01</span>
+        <h4>Analiz</h4>
+        <p>İşinizi ve hedeflerinizi yapay zekâ destekli araçlarla değerlendiririz.</p>
+      </div>
+      <div class="step">
+        <span class="step-no">02</span>
+        <h4>Strateji</h4>
+        <p>Verilere dayalı, uygulanabilir bir yol haritası oluştururuz.</p>
+      </div>
+      <div class="step">
+        <span class="step-no">03</span>
+        <h4>Uygulama</h4>
+        <p>Dönüşümü hayata geçirir, sonuçları ölçer ve sürekli iyileştiririz.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BAŞARI HİKAYELERİ -->
+<section class="stories section">
+  <div class="container">
+    <h2 class="section-title left">Başarı Hikayeleri</h2>
+    <p class="section-sub left">Müşterilerimizle birlikte büyüyen projeler.</p>
+
+    <div class="feature-row">
+      <div class="feature-media">
+        <img src="https://images.unsplash.com/photo-1604398094327-cb34d258d473?auto=format&fit=crop&w=1000&q=80"
+             alt="Modern bir ofiste başarılı bir projeyi kutlayan profesyonel ekip" loading="lazy">
+      </div>
+      <div class="feature-text">
+        <h3>Sektörel Deneyimler</h3>
+        <p>Farklı sektörlerdeki derin tecrübemizle, işinizi yakından anlamaya
+           ve gerçek çözümler sunmaya odaklanıyoruz.</p>
+      </div>
+    </div>
+
+    <div class="feature-row reverse">
+      <div class="feature-media">
+        <img src="https://images.unsplash.com/photo-1658214039756-e6a687ba7eba?auto=format&fit=crop&w=1000&q=80"
+             alt="Üretim, teknoloji ve tarım gibi farklı sektörleri gösteren kolaj" loading="lazy">
+      </div>
+      <div class="feature-text">
+        <h3>İş Ortaklarımız</h3>
+        <p>Güçlü iş birlikleri ile müşterilerimize en üst düzey destek sağlıyor,
+           sürekli gelişim ve yenilik için çalışıyoruz.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BÜLTEN -->
+<section class="newsletter section">
+  <div class="container newsletter-inner">
+    <h2>Bültene Abone Ol</h2>
+    <p>En güncel iş ve teşvik haberleri burada</p>
+    <form action="{{ url_for('newsletter') }}" method="post" class="newsletter-form">
+      <label for="nl-name">Adınız ve Soyadınız</label>
+      <input id="nl-name" type="text" name="name" placeholder="Adınızı giriniz" required>
+      <button type="submit" class="btn btn-primary">Gönder</button>
+    </form>
+  </div>
+</section>
+
+{% endblock %}
