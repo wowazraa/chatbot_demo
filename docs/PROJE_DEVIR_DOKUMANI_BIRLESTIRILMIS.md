@@ -183,11 +183,11 @@ Kural: Her aşama/alt-adım kapanışında commit + zaman damgalı arşiv kopyas
 
 ### A. Metrik Karşılaştırması
 - **Başlangıç (b477986, temiz):** Stres Testi 39/84, Çekim Eki 21/30, Kategori A 3/9
-- **Aşama 4.1 Sonu (Güncel):** Stres Testi 47/84, Çekim Eki 23/30, Kategori A 3/9 (korunmuş), C/D/E net kazanımlı.
+- **Aşama 4.1 Sonu (Güncel):** Stres Testi 56/84, Çekim Eki 25/30, Kategori A 4/9 (korunmuş), C/D/E net kazanımlı.
 
 ### B. G2 / 748 / 749 Veri Düzeltmesi
 - **Sorun:** 748 ve 749 nolu ham B2B turizm kayıtları (`tatil köyümüz/tatil tesisimiz...`) veri setinde yanlışlıkla `ood` etiketlenmişti. Bu hata, diakritik normalizasyonuyla (`yazilimi` -> `yazılımı`) BGE aramalarında bu kayıtları tetikleyerek G2 çekim eki senaryosunun belirsiz/FB durumuna düşmesine yol açıyordu.
-- **Düzeltme:** 748 ve 749 kayıtlarının etiketleri `turizm` olarak düzeltildi, `data_augmented.py` ve `build_index.py` çalıştırılarak veri seti ve embeddings yeniden oluşturuldu. E09 senaryosu bu sayede PASS durumuna ulaştı ve çekim eki skoru **23/30** ile rekor kırdı.
+- **Düzeltme:** 748 ve 749 kayıtlarının etiketleri `turizm` olarak düzeltildi, `data_augmented.py` ve `build_index.py` çalıştırılarak veri seti ve embeddings yeniden oluşturuldu. E09 senaryosu bu sayede PASS durumuna ulaştı ve çekim eki skoru **25/30** ile rekor kırdı.
 
 ### C. D → E Kategori Kayması (1 Puan)
 - **Nedeni:** Stres testinde D kategorisinde 1 puanlık düşüş (4/7 -> 3/7) olurken E kategorisinde 1 puanlık artış (2/7 -> 3/7) gerçekleşti.
