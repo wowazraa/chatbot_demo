@@ -50,7 +50,6 @@ class QaEmbeddingDbStore:
                 "education_enrollment": "egitim",
                 "bilisim_integration": "bilisim",
                 "eglence_streaming": "eglence",
-                "sector_form_request": "ood"
             }
 
             # Maps sector_key to intent_codes
@@ -60,7 +59,6 @@ class QaEmbeddingDbStore:
                 "egitim": ["education_enrollment"],
                 "bilisim": ["bilisim_integration"],
                 "eglence": ["eglence_streaming"],
-                "ood": ["sector_form_request"]
             }
 
             if USE_PGVECTOR:
@@ -70,14 +68,17 @@ class QaEmbeddingDbStore:
                     SELECT q.id, q.question, i.intent_code,
                            (q.embedding <=> CAST(:emb AS vector)) AS distance
                     FROM qa_embeddings q
-                    JOIN intents i ON q.intent_id = i.id
+                    LEFT JOIN intents i ON q.intent_id = i.id
                 """
                 params = {"emb": lit, "k": int(top_k)}
                 if sector:
-                    allowed_intents = sector_to_intents.get(sector, [])
-                    if allowed_intents:
-                        sql += " WHERE i.intent_code IN :intents"
-                        params["intents"] = tuple(allowed_intents)
+                    if sector == "ood":
+                        sql += " WHERE q.intent_id IS NULL"
+                    else:
+                        allowed_intents = sector_to_intents.get(sector, [])
+                        if allowed_intents:
+                            sql += " WHERE i.intent_code IN :intents"
+                            params["intents"] = tuple(allowed_intents)
                 sql += " ORDER BY q.embedding <=> CAST(:emb AS vector) LIMIT :k"
 
                 rows = db.execute(text(sql), params).mappings().all()
@@ -85,7 +86,7 @@ class QaEmbeddingDbStore:
                 results = []
                 for r in rows:
                     icode = r["intent_code"]
-                    sec = intent_to_sector.get(icode, "ood")
+                    sec = intent_to_sector.get(icode, "ood") if icode else "ood"
                     sub = map_sub_intent(sec, r["question"]) if sec != "ood" else "ood.none"
                     score = float(1.0 - r["distance"])
                     results.append(
@@ -102,7 +103,7 @@ class QaEmbeddingDbStore:
                 return results
             else:
                 # Python-based cosine fallback over database rows
-                q = db.query(QaEmbedding).join(Intent)
+                q = db.query(QaEmbedding).outerjoin(Intent)
                 rows = q.all()
 
                 def _cosine_distance(a: Sequence[float], b: Sequence[float]) -> float:
@@ -113,8 +114,8 @@ class QaEmbeddingDbStore:
 
                 candidates = []
                 for r in rows:
-                    icode = r.intent.intent_code
-                    sec = intent_to_sector.get(icode, "ood")
+                    icode = r.intent.intent_code if r.intent else None
+                    sec = intent_to_sector.get(icode, "ood") if icode else "ood"
 
                     if sector and sec != sector:
                         continue

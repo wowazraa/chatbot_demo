@@ -13,9 +13,10 @@ from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
 from db_api.bridge import EMBEDDING_DIM, AdminUser, Blog, ChatSession, Company, Intent, QaEmbedding, Sector, get_db
+from db_api.common import verify_admin_api_key
 from db_api.schemas import SeedResponse
 
-router = APIRouter(prefix="/seed", tags=["seed"])
+router = APIRouter(prefix="/seed", tags=["seed"], dependencies=[Depends(verify_admin_api_key)])
 
 # Postman Create denemelerinden kalan anahtarlar
 _JUNK_SECTOR_KEYS = ("demo_tmp",)
@@ -81,10 +82,12 @@ def _run_seed(db: Session) -> SeedResponse:
     _cleanup_junk(db)
 
     sectors = [
-        ("health", "Sağlık", "Health"),
-        ("tourism", "Turizm", "Tourism"),
-        ("defense", "Savunma", "Defense"),
-        ("education", "Eğitim", "Education"),
+        ("saglik", "Sağlık", "Health"),
+        ("turizm", "Turizm", "Tourism"),
+        ("egitim", "Eğitim", "Education"),
+        ("bilisim", "Bilişim", "IT/Bilişim"),
+        ("eglence", "Eğlence", "Entertainment"),
+        ("ood", "OOD", "Out of Domain")
     ]
     n_sec = 0
     sector_map: dict[str, Sector] = {}
@@ -95,9 +98,9 @@ def _run_seed(db: Session) -> SeedResponse:
     intents = [
         ("health_appointment", "https://example.com/forms/health", "Sağlık randevu formu"),
         ("tourism_hotel", "https://example.com/forms/tourism", "Turizm konaklama formu"),
-        ("defense_inquiry", "https://example.com/forms/defense", "Savunma talep formu"),
         ("education_enrollment", "https://example.com/forms/education", "Eğitim kayıt formu"),
-        ("sector_form_request", "https://example.com/forms/sector", "Genel sektör formu"),
+        ("bilisim_integration", "https://example.com/forms/it", "Bilişim entegrasyon formu"),
+        ("eglence_streaming", "https://example.com/forms/entertainment", "Eğlence yayın formu"),
     ]
     n_int = 0
     intent_map: dict[str, Intent] = {}
@@ -106,10 +109,10 @@ def _run_seed(db: Session) -> SeedResponse:
         n_int += 1
 
     companies = [
-        ("Acme Sağlık A.Ş.", "health"),
-        ("Gamma Turizm A.Ş.", "tourism"),
-        ("Delta Savunma Ltd.", "defense"),
-        ("Epsilon Eğitim A.Ş.", "education"),
+        ("Acme Sağlık A.Ş.", "saglik"),
+        ("Gamma Turizm A.Ş.", "turizm"),
+        ("Epsilon Eğitim A.Ş.", "egitim"),
+        ("Delta Savunma Ltd.", "ood"),
     ]
     n_co = 0
     for name, sk in companies:
@@ -175,8 +178,9 @@ def _run_seed(db: Session) -> SeedResponse:
     samples = [
         ("health_appointment", "Hastane randevu sistemi arıyoruz", "Sağlık formuna yönlendiriliyorsunuz"),
         ("tourism_hotel", "Otel rezervasyon yazılımı lazım", "Turizm formuna yönlendiriliyorsunuz"),
-        ("defense_inquiry", "Askeri lojistik yazılımı hakkında bilgi", "Savunma formuna yönlendiriliyorsunuz"),
         ("education_enrollment", "Öğrenci bilgi sistemi istiyoruz", "Eğitim formuna yönlendiriliyorsunuz"),
+        ("bilisim_integration", "API entegrasyonu talep ediyoruz", "Bilişim formuna yönlendiriliyorsunuz"),
+        ("eglence_streaming", "Medya streaming altyapısı arıyoruz", "Eğlence formuna yönlendiriliyorsunuz"),
     ]
     emb = [0.01 * ((i % 10) + 1) for i in range(EMBEDDING_DIM)]
     for code, q, a in samples:
@@ -210,8 +214,8 @@ def _run_seed(db: Session) -> SeedResponse:
     db.commit()
 
     ids = {
-        "sector_health": sector_map["health"].id,
-        "sector_tourism": sector_map["tourism"].id,
+        "sector_health": sector_map["saglik"].id,
+        "sector_tourism": sector_map["turizm"].id,
         "intent_health_appointment": intent_map["health_appointment"].id,
         "admin_id": admin.id,
         "session_id": sample_session_id,

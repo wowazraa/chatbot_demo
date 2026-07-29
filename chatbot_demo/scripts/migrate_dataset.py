@@ -41,7 +41,6 @@ def migrate():
             ("education_enrollment", "https://example.com/forms/education", "Eğitim kayıt formu"),
             ("bilisim_integration", "https://example.com/forms/it", "Bilişim entegrasyon formu"),
             ("eglence_streaming", "https://example.com/forms/entertainment", "Eğlence yayın formu"),
-            ("sector_form_request", "https://example.com/forms/sector", "Genel sektör formu")
         ]
         
         sector_to_intent = {
@@ -50,7 +49,6 @@ def migrate():
             "egitim": "education_enrollment",
             "bilisim": "bilisim_integration",
             "eglence": "eglence_streaming",
-            "ood": "sector_form_request"
         }
         
         intent_map = {}
@@ -103,8 +101,8 @@ def migrate():
             if sector_key == "belirsiz" or not sector_key:
                 sector_key = "ood"
                 
-            intent_code = sector_to_intent.get(sector_key, "sector_form_request")
-            intent_id = intent_map[intent_code]
+            intent_code = sector_to_intent.get(sector_key)
+            intent_id = intent_map[intent_code] if intent_code else None
             
             is_augmented = meta.get("zorluk", "").startswith("augmented")
             answer = f"Talebiniz {sector_key} sektörüyle ilişkilendirildi."

@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from typing import Any, TypeVar
 
-from fastapi import HTTPException, Query
+from fastapi import HTTPException, Query, Header
 from pydantic import BaseModel
 from sqlalchemy.orm import Query as SAQuery
 from sqlalchemy.orm import Session
@@ -52,3 +52,11 @@ def commit_or_raise(db: Session) -> None:
 
 def not_found(entity: str) -> HTTPException:
     return HTTPException(status_code=404, detail=f"{entity} not found")
+
+
+def verify_admin_api_key(x_api_key: str | None = Header(None, alias="X-API-Key")) -> None:
+    import os
+    expected = os.getenv("ADMIN_API_KEY", "fallback-demo-key-99")
+    if not x_api_key or x_api_key != expected:
+        raise HTTPException(status_code=401, detail="Unauthorized: Invalid or missing API key")
+

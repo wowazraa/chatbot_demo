@@ -193,3 +193,9 @@ Kural: Her aşama/alt-adım kapanışında commit + zaman damgalı arşiv kopyas
 - **Nedeni:** Stres testinde D kategorisinde 1 puanlık düşüş (4/7 -> 3/7) olurken E kategorisinde 1 puanlık artış (2/7 -> 3/7) gerçekleşti.
 - **Teşhis:** Tatil köyü kayıtlarının `ood` -> `turizm` olarak düzeltilmesiyle D04 sorgusunun (`"We need a turizm booking platform..."`) komşuluğundaki `ood` kayıtları da `turizm` haline geldi. Bu durum, top-3 adaylarında oybirliğini (`["turizm", "turizm", "turizm"]`) tetikledi. Oybirliği durumunda sistem `0.68` barajı aradığı için, `0.62` alan D04 split-decision (bölünmüş karar - baraj `0.55`) modundan çıkıp oybirliği başarısızlığına düştü. E09 ise doğru sınıflandırılan `turizm` vektörleriyle doğrudan PASS oldu. Bu durum bir regresyon değil, veri etiketlerinin tutarlı hale gelmesinin doğal bir karar ağacı sonucudur.
 
+## B6. BİLİNEN SINIRLAMALAR / İLERİDE BAKILACAK GÜVENLİK VE MİMARİ MADDELERİ
+
+- **pgvector Eklentisi Eksikliği:** Yerel PostgreSQL ortamında pgvector bulunmadığından benzerlik araması Python belleğinde fallback modunda yapılmaktadır. Üretim ortamında pgvector ve HNSW indeksi kurulmalıdır.
+- **Veritabanı Bağlantı Havuzlaması (Connection Pooling) Eksikliği:** Yüksek eşzamanlı trafikte veritabanı bağlantı limitine takılma riskini önlemek için SQLAlchemy pooling katmanı kurulmalıdır.
+- **Hız Sınırlaması (Rate Limiting) Eksikliği:** API endpoint'leri spam isteklerden ve aşırı CPU/GPU tüketiminden korunmak için rate limiter (slowapi vb.) ile sınırlandırılmalıdır.
+- **Negasyon ve Kısa Sorgu Sapması:** Olumsuzlama içeren cümleler veya çok kısa B2B kelimeli OOD sorgularındaki sınıflandırma sapmalarını azaltmak için semantik marjinal eşik ve genişletilmiş negatif veri setleri kurgulanmalıdır.
