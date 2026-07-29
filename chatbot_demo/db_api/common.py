@@ -56,7 +56,9 @@ def not_found(entity: str) -> HTTPException:
 
 def verify_admin_api_key(x_api_key: str | None = Header(None, alias="X-API-Key")) -> None:
     import os
-    expected = os.getenv("ADMIN_API_KEY", "fallback-demo-key-99")
+    expected = os.getenv("ADMIN_API_KEY")
+    if not expected:
+        raise HTTPException(status_code=500, detail="Internal Server Error: Admin API key is not configured")
     if not x_api_key or x_api_key != expected:
         raise HTTPException(status_code=401, detail="Unauthorized: Invalid or missing API key")
 
