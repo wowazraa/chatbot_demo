@@ -175,13 +175,7 @@ def _run_seed(db: Session) -> SeedResponse:
         n_blog = 1
 
     n_qa = 0
-    samples = [
-        ("health_appointment", "Hastane randevu sistemi arıyoruz", "Sağlık formuna yönlendiriliyorsunuz"),
-        ("tourism_hotel", "Otel rezervasyon yazılımı lazım", "Turizm formuna yönlendiriliyorsunuz"),
-        ("education_enrollment", "Öğrenci bilgi sistemi istiyoruz", "Eğitim formuna yönlendiriliyorsunuz"),
-        ("bilisim_integration", "API entegrasyonu talep ediyoruz", "Bilişim formuna yönlendiriliyorsunuz"),
-        ("eglence_streaming", "Medya streaming altyapısı arıyoruz", "Eğlence formuna yönlendiriliyorsunuz"),
-    ]
+    samples = []
     emb = [0.01 * ((i % 10) + 1) for i in range(EMBEDDING_DIM)]
     for code, q, a in samples:
         intent = intent_map[code]

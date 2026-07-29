@@ -653,6 +653,8 @@ class StresTestRunner:
                 })
 
             self.sonuclar.append({
+                "case": case,
+                "yanit": yanit,
                 "id": case["id"],
                 "kategori": kategori,
                 "girdi_metni": girdi,

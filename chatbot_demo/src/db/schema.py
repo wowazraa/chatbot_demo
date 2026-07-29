@@ -3,6 +3,12 @@
 Tablo: vector_index
   id, sector, sub_intent, text_content, embedding (bge-m3, 1024-d)
   + HNSW (cosine) indeksi — ANN Top-K için.
+
+Tablo: chat_sessions
+  Konuşma oturumları için session yönetimi
+
+Tablo: chat_messages
+  Konuşma mesajları için mesaj geçmişi
 """
 
 from __future__ import annotations
@@ -10,6 +16,8 @@ from __future__ import annotations
 EMBEDDING_DIM = 1024  # BAAI/bge-m3 dense
 TABLE_NAME = "vector_index"
 HNSW_INDEX_NAME = "idx_vector_index_embedding_hnsw"
+SESSION_TABLE_NAME = "chat_sessions"
+MESSAGES_TABLE_NAME = "chat_messages"
 
 # cosine distance ops — embedding <=> query ile uyumlu
 DDL_STATEMENTS: tuple[str, ...] = (
@@ -40,5 +48,45 @@ DDL_STATEMENTS: tuple[str, ...] = (
     f"""
     CREATE INDEX IF NOT EXISTS idx_{TABLE_NAME}_sub_intent
         ON {TABLE_NAME} (sub_intent);
+    """,
+    # Chat sessions table
+    f"""
+    CREATE TABLE IF NOT EXISTS {SESSION_TABLE_NAME} (
+        id              UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+        user_id         VARCHAR(255),
+        sector          VARCHAR(32),
+        created_at      TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+        updated_at      TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+        metadata        JSONB NOT NULL DEFAULT '{{}}'::jsonb
+    );
+    """,
+    f"""
+    CREATE INDEX IF NOT EXISTS idx_{SESSION_TABLE_NAME}_user_id
+        ON {SESSION_TABLE_NAME} (user_id);
+    """,
+    f"""
+    CREATE INDEX IF NOT EXISTS idx_{SESSION_TABLE_NAME}_created_at
+        ON {SESSION_TABLE_NAME} (created_at DESC);
+    """,
+    # Chat messages table
+    f"""
+    CREATE TABLE IF NOT EXISTS {MESSAGES_TABLE_NAME} (
+        id              BIGSERIAL PRIMARY KEY,
+        session_id      UUID NOT NULL REFERENCES {SESSION_TABLE_NAME}(id) ON DELETE CASCADE,
+        role            VARCHAR(20) NOT NULL CHECK (role IN ('user', 'assistant', 'system')),
+        content         TEXT NOT NULL,
+        intent          VARCHAR(64),
+        confidence      FLOAT,
+        metadata        JSONB NOT NULL DEFAULT '{{}}'::jsonb,
+        created_at      TIMESTAMPTZ NOT NULL DEFAULT NOW()
+    );
+    """,
+    f"""
+    CREATE INDEX IF NOT EXISTS idx_{MESSAGES_TABLE_NAME}_session_id
+        ON {MESSAGES_TABLE_NAME} (session_id);
+    """,
+    f"""
+    CREATE INDEX IF NOT EXISTS idx_{MESSAGES_TABLE_NAME}_created_at
+        ON {MESSAGES_TABLE_NAME} (created_at DESC);
     """,
 )
