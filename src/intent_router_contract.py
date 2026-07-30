@@ -47,29 +47,30 @@ SECTOR_MAP: dict[str, str] = {
     "eğlence": "eglence",
     "eglence": "eglence",
     "entertainment": "eglence",
-    "savunma": "ood",
-    "defense": "ood",
     "belirsiz": "ood",
     "": "ood",
     "?": "ood",
 }
 
 _SEED_TO_SUB: dict[str, str] = {
-    "health_appointment": "saglik.randevu",
-    "tourism_hotel": "turizm.otel",
-    "education_enrollment": "egitim.kayit",
-    "bilisim_integration": "bilisim.entegrasyon",
-    "eglence_streaming": "eglence.yayin",
-    "sector_form_request": "ood.form",
+    "health_appointment":     "saglik.randevu",
+    "tourism_hotel":          "turizm.otel",
+    "education_enrollment":   "egitim.kayit",
+    "bilisim_integration":    "bilisim.entegrasyon",
+    "eglence_streaming":      "eglence.yayin",
+    "defense_communications": "savunma.haberlesme",
+    "sector_form_request":    "ood.form",
+    "ood":                    "ood.none",
 }
 
 _DEFAULT_SUB: dict[str, str] = {
-    "saglik": "saglik.genel",
-    "turizm": "turizm.genel",
-    "egitim": "egitim.genel",
+    "saglik":  "saglik.genel",
+    "turizm":  "turizm.genel",
+    "egitim":  "egitim.genel",
     "bilisim": "bilisim.genel",
     "eglence": "eglence.genel",
-    "ood": "ood.none",
+    "savunma": "savunma.genel",
+    "ood":     "ood.none",
 }
 
 _SUB_RULES: dict[str, list[tuple[str, str]]] = {
@@ -386,7 +387,7 @@ _EN_TO_TR: dict[str, str] = {
     "eglence": "eglence",
 }
 
-_RERANK_SECTORS = frozenset({"saglik", "turizm", "egitim", "bilisim", "eglence"})
+_RERANK_SECTORS = frozenset({"saglik", "turizm", "egitim", "bilisim", "eglence", "savunma"})
 
 
 def sort_candidates_by_final(candidates: list[dict[str, Any]]) -> list[dict[str, Any]]:

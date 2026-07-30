@@ -28,7 +28,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
-from db_api.routers import chat, conversations, health, seed, companies
+from db_api.routers import chat, conversations, health
 
 app = FastAPI(
     title="Chatbot Bilgi Merkezi — Chat API",
@@ -44,7 +44,7 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5000", "http://127.0.0.1:5000"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -67,8 +67,6 @@ API = "/api"
 app.include_router(health.router, prefix=API)
 app.include_router(chat.router, prefix=API)
 app.include_router(conversations.router, prefix=API)
-app.include_router(seed.router, prefix=API)
-app.include_router(companies.router, prefix=API)
 
 
 @app.get("/", tags=["health"])

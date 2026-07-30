@@ -1,0 +1,4 @@
+- [x] 1. v2_pipeline.py rewriter entegrasyonu
+- [x] 2. run_stres_test.py normalizasyon düzeltmesi (A12)
+- [x] 3. test_stopgap_regression.py negasyon testini pozitif assertion'a çevirme
+- [x] 4. Uçtan uca doğrulama testlerinin (stres testi, çekim eki, pytest) koşturulması ve karşılaştırmalı raporlanması

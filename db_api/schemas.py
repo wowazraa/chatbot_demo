@@ -314,9 +314,6 @@ class ChatTurnResponse(BaseModel):
     reply: str
     url: str | None
     session_id: int
-    sector: str | None = None
-    layer_hit: str | None = None
-    confidence: float | None = None
 
 
 class AdminLoginRequest(BaseModel):

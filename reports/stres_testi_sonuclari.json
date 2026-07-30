@@ -1,60 +1,5 @@
 [
   {
-    "case": {
-      "id": "A01",
-      "kategori": "A",
-      "tip": "negasyon",
-      "girdi": "sağlık sistemi istemiyoruz, bize turizm rezervasyon yazılımı lazım",
-      "beklenen_sektor": "turizm",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "sağlık sistemi istemiyoruz, bize turizm rezervasyon yazılımı lazım",
-      "normalize_girdi": "turizm rezervasyon yazılım",
-      "sektor": "turizm",
-      "mod": "K2",
-      "skor": 0.9089635068795991,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "sağlık sistemi istemiyoruz, bize turizm rezervasyon yazılımı lazım",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [
-        "saglik"
-      ],
-      "masked_sectors": [],
-      "inspector_label": "turizm",
-      "k1_hints": {},
-      "yanit_mesaji": "Turizm ve konaklama işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "otel rezervasyon yazılımı",
-          "sector": "turizm",
-          "sub_intent": "turizm.reservation",
-          "initial_score": 0.909,
-          "reranker_score": null,
-          "final_score": 0.909
-        },
-        {
-          "text": "otel rezervasyon yazılımı hizmeti almak",
-          "sector": "turizm",
-          "sub_intent": "turizm.reservation",
-          "initial_score": 0.8545,
-          "reranker_score": null,
-          "final_score": 0.8545
-        },
-        {
-          "text": "otel rezervasyon yazılımı entegrasyonu",
-          "sector": "turizm",
-          "sub_intent": "turizm.reservation",
-          "initial_score": 0.8082,
-          "reranker_score": null,
-          "final_score": 0.8082
-        }
-      ]
-    },
     "id": "A01",
     "kategori": "A",
     "girdi_metni": "sağlık sistemi istemiyoruz, bize turizm rezervasyon yazılımı lazım",
@@ -62,40 +7,12 @@
     "tespit_edilen_sektor": "turizm",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.9089635068795991,
+    "skor": 0.908964,
     "katman": "bge-m3",
-    "sure_ms": 111.07,
+    "sure_ms": 100.35,
     "basarili": true
   },
   {
-    "case": {
-      "id": "A02",
-      "kategori": "A",
-      "tip": "negasyon",
-      "girdi": "savunma sanayi projesi değil, eğitim otomasyonu ile ilgileniyoruz",
-      "beklenen_sektor": "eğitim",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "savunma sanayi projesi değil, eğitim otomasyonu ile ilgileniyoruz",
-      "normalize_girdi": "savunma sanayi projesi değil, eğitim otomasyonu ile ilgileniyoruz",
-      "sektor": "belirsiz",
-      "mod": "FB",
-      "skor": 0.15,
-      "yontem": "kisaltma",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=rule",
-      "temiz_sorgu": "savunma sanayi projesi değil, eğitim otomasyonu ile ilgileniyoruz",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Bu konuda size doğrudan yardımcı olamıyorum. Size Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanlarında hizmet verebilirim.",
-      "top_candidates": []
-    },
     "id": "A02",
     "kategori": "A",
     "girdi_metni": "savunma sanayi projesi değil, eğitim otomasyonu ile ilgileniyoruz",
@@ -105,63 +22,10 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.15,
     "katman": "kisaltma",
-    "sure_ms": 1.82,
+    "sure_ms": 1.74,
     "basarili": false
   },
   {
-    "case": {
-      "id": "A03",
-      "kategori": "A",
-      "tip": "negasyon",
-      "girdi": "hastane randevu modülünü boşverin, oda rezervasyon ekranı kuracağız",
-      "beklenen_sektor": "turizm",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "hastane randevu modülünü boşverin, oda rezervasyon ekranı kuracağız",
-      "normalize_girdi": "oda rezervasyon ekranı hastane",
-      "sektor": "turizm",
-      "mod": "K2",
-      "skor": 0.6774938490994157,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "hastane randevu modülünü boşverin, oda rezervasyon ekranı kuracağız",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "turizm",
-      "k1_hints": {},
-      "yanit_mesaji": "Turizm ve konaklama işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "otel rezervasyon yazılımı",
-          "sector": "turizm",
-          "sub_intent": "turizm.reservation",
-          "initial_score": 0.6775,
-          "reranker_score": null,
-          "final_score": 0.6775
-        },
-        {
-          "text": "otel rezervasyon yazilimi",
-          "sector": "turizm",
-          "sub_intent": "turizm.reservation",
-          "initial_score": 0.6692,
-          "reranker_score": null,
-          "final_score": 0.6692
-        },
-        {
-          "text": "hastane yönetim sistemi arıyoruz rica ederim",
-          "sector": "saglik",
-          "sub_intent": "saglik.hospital",
-          "initial_score": 0.6638,
-          "reranker_score": null,
-          "final_score": 0.6638
-        }
-      ]
-    },
     "id": "A03",
     "kategori": "A",
     "girdi_metni": "hastane randevu modülünü boşverin, oda rezervasyon ekranı kuracağız",
@@ -169,65 +33,12 @@
     "tespit_edilen_sektor": "turizm",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.6774938490994157,
+    "skor": 0.677494,
     "katman": "bge-m3",
-    "sure_ms": 107.95,
+    "sure_ms": 101.63,
     "basarili": true
   },
   {
-    "case": {
-      "id": "A05",
-      "kategori": "A",
-      "tip": "negasyon",
-      "girdi": "Eski turizm acente programımızı bırakıp hastane otomasyon sistemine geçmek istiyoruz",
-      "beklenen_sektor": "sağlık",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "Eski turizm acente programımızı bırakıp hastane otomasyon sistemine geçmek istiyoruz",
-      "normalize_girdi": "eski turizm acente programımızı bırakıp hastane otomasyon sistemine geçmek",
-      "sektor": "turizm",
-      "mod": "K2",
-      "skor": 0.7295041897745193,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Eski turizm acente programımızı bırakıp hastane otomasyon sistemine geçmek istiyoruz",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "turizm",
-      "k1_hints": {},
-      "yanit_mesaji": "Turizm ve konaklama işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "turizmle ugra san isletmeler icin otomasyon hizmeti almak",
-          "sector": "turizm",
-          "sub_intent": "turizm.genel",
-          "initial_score": 0.7295,
-          "reranker_score": null,
-          "final_score": 0.7295
-        },
-        {
-          "text": "sağlık kurumumuz için otomasyon tabanlı hasta kayıt sistemi istiyoruz",
-          "sector": "saglik",
-          "sub_intent": "saglik.genel",
-          "initial_score": 0.7288,
-          "reranker_score": null,
-          "final_score": 0.7288
-        },
-        {
-          "text": "sağlık kurumumuzda otomasyon üzerinden hasta süreçlerini yönetmek istiyoruz",
-          "sector": "saglik",
-          "sub_intent": "saglik.genel",
-          "initial_score": 0.7205,
-          "reranker_score": null,
-          "final_score": 0.7205
-        }
-      ]
-    },
     "id": "A05",
     "kategori": "A",
     "girdi_metni": "Eski turizm acente programımızı bırakıp hastane otomasyon sistemine geçmek istiyoruz",
@@ -235,40 +46,12 @@
     "tespit_edilen_sektor": "turizm",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.7295041897745193,
+    "skor": 0.85,
     "katman": "bge-m3",
-    "sure_ms": 131.38,
+    "sure_ms": 122.01,
     "basarili": false
   },
   {
-    "case": {
-      "id": "A06",
-      "kategori": "A",
-      "tip": "negasyon",
-      "girdi": "Biz askeri birlik değiliz, sadece okul kayıt sistemi istiyoruz",
-      "beklenen_sektor": "eğitim",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "Biz askeri birlik değiliz, sadece okul kayıt sistemi istiyoruz",
-      "normalize_girdi": "Biz askeri birlik değiliz, sadece okul kayıt sistemi istiyoruz",
-      "sektor": "belirsiz",
-      "mod": "FB",
-      "skor": 0.15,
-      "yontem": "kisaltma",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=rule",
-      "temiz_sorgu": "Biz askeri birlik değiliz, sadece okul kayıt sistemi istiyoruz",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Bu konuda size doğrudan yardımcı olamıyorum. Size Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanlarında hizmet verebilirim.",
-      "top_candidates": []
-    },
     "id": "A06",
     "kategori": "A",
     "girdi_metni": "Biz askeri birlik değiliz, sadece okul kayıt sistemi istiyoruz",
@@ -278,65 +61,10 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.15,
     "katman": "kisaltma",
-    "sure_ms": 0.33,
+    "sure_ms": 0.31,
     "basarili": false
   },
   {
-    "case": {
-      "id": "A07",
-      "kategori": "A",
-      "tip": "negasyon",
-      "girdi": "lms kurulumundan vazgeçtik, telemedicine altyapısı talep ediyoruz",
-      "beklenen_sektor": "sağlık",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "lms kurulumundan vazgeçtik, telemedicine altyapısı talep ediyoruz",
-      "normalize_girdi": "telemedicine talep ediyoruz",
-      "sektor": "saglik",
-      "mod": "K2",
-      "skor": 0.85,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "lms kurulumundan vazgeçtik, telemedicine altyapısı talep ediyoruz",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [
-        "egitim"
-      ],
-      "masked_sectors": [],
-      "inspector_label": "saglik",
-      "k1_hints": {},
-      "yanit_mesaji": "Sağlık hizmetleri ve randevu işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "we need a telemedicine platform for remote patient consultations and doctor scheduling",
-          "sector": "saglik",
-          "sub_intent": "saglik.genel",
-          "initial_score": 0.8316,
-          "reranker_score": null,
-          "final_score": 0.8316
-        },
-        {
-          "text": "we want to implement a telemedicine solution for our clinics",
-          "sector": "saglik",
-          "sub_intent": "saglik.genel",
-          "initial_score": 0.8244,
-          "reranker_score": null,
-          "final_score": 0.8244
-        },
-        {
-          "text": "we want to implement a telemedicine solution for our clinics please let us know",
-          "sector": "saglik",
-          "sub_intent": "saglik.genel",
-          "initial_score": 0.8232,
-          "reranker_score": null,
-          "final_score": 0.8232
-        }
-      ]
-    },
     "id": "A07",
     "kategori": "A",
     "girdi_metni": "lms kurulumundan vazgeçtik, telemedicine altyapısı talep ediyoruz",
@@ -346,38 +74,10 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.85,
     "katman": "bge-m3",
-    "sure_ms": 105.08,
+    "sure_ms": 98.06,
     "basarili": true
   },
   {
-    "case": {
-      "id": "A09",
-      "kategori": "A",
-      "tip": "negasyon_zor",
-      "girdi": "savunma radar projesi mi eğitim otomasyonu mu derseniz kesinlikle ilkini değil ikincisini seçeceğiz",
-      "beklenen_sektor": "eğitim",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "savunma radar projesi mi eğitim otomasyonu mu derseniz kesinlikle ilkini değil ikincisini seçeceğiz",
-      "normalize_girdi": "savunma radar projesi mi eğitim otomasyonu mu derseniz kesinlikle ilkini değil ikincisini seçeceğiz",
-      "sektor": "belirsiz",
-      "mod": "FB",
-      "skor": 0.15,
-      "yontem": "kisaltma",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=rule",
-      "temiz_sorgu": "savunma radar projesi mi eğitim otomasyonu mu derseniz kesinlikle ilkini değil ikincisini seçeceğiz",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Bu konuda size doğrudan yardımcı olamıyorum. Size Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanlarında hizmet verebilirim.",
-      "top_candidates": []
-    },
     "id": "A09",
     "kategori": "A",
     "girdi_metni": "savunma radar projesi mi eğitim otomasyonu mu derseniz kesinlikle ilkini değil ikincisini seçeceğiz",
@@ -387,65 +87,10 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.15,
     "katman": "kisaltma",
-    "sure_ms": 0.47,
+    "sure_ms": 0.57,
     "basarili": false
   },
   {
-    "case": {
-      "id": "A12",
-      "kategori": "A",
-      "tip": "negasyon",
-      "girdi": "Eğitim kurumu değiliz, hastaneler için teletıp altyapısı arıyoruz.",
-      "beklenen_sektor": "sağlık",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "Eğitim kurumu değiliz, hastaneler için teletıp altyapısı arıyoruz.",
-      "normalize_girdi": "hastaneler teletıp",
-      "sektor": "saglik",
-      "mod": "K2",
-      "skor": 0.85,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Eğitim kurumu değiliz, hastaneler için teletıp altyapısı arıyoruz.",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [
-        "egitim"
-      ],
-      "masked_sectors": [],
-      "inspector_label": "saglik",
-      "k1_hints": {},
-      "yanit_mesaji": "Sağlık hizmetleri ve randevu işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "tele-tıp çözümleri",
-          "sector": "saglik",
-          "sub_intent": "saglik.genel",
-          "initial_score": 0.7243,
-          "reranker_score": null,
-          "final_score": 0.7243
-        },
-        {
-          "text": "tele-tip sistemleri ile klinik içi hasta takibini iyileştirmek istiyoruz",
-          "sector": "saglik",
-          "sub_intent": "saglik.clinic",
-          "initial_score": 0.6939,
-          "reranker_score": null,
-          "final_score": 0.6939
-        },
-        {
-          "text": "tele-tıp çözümleri hizmeti almak",
-          "sector": "saglik",
-          "sub_intent": "saglik.genel",
-          "initial_score": 0.6932,
-          "reranker_score": null,
-          "final_score": 0.6932
-        }
-      ]
-    },
     "id": "A12",
     "kategori": "A",
     "girdi_metni": "Eğitim kurumu değiliz, hastaneler için teletıp altyapısı arıyoruz.",
@@ -455,38 +100,10 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.85,
     "katman": "bge-m3",
-    "sure_ms": 105.67,
+    "sure_ms": 104.98,
     "basarili": true
   },
   {
-    "case": {
-      "id": "A13",
-      "kategori": "A",
-      "tip": "negasyon",
-      "girdi": "savunma sanayi alanında çalışmıyoruz, okul ders programı otomasyonuna ihtiyacımız var",
-      "beklenen_sektor": "eğitim",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "savunma sanayi alanında çalışmıyoruz, okul ders programı otomasyonuna ihtiyacımız var",
-      "normalize_girdi": "savunma sanayi alanında çalışmıyoruz, okul ders programı otomasyonuna ihtiyacımız var",
-      "sektor": "belirsiz",
-      "mod": "FB",
-      "skor": 0.15,
-      "yontem": "kisaltma",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=rule",
-      "temiz_sorgu": "savunma sanayi alanında çalışmıyoruz, okul ders programı otomasyonuna ihtiyacımız var",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Bu konuda size doğrudan yardımcı olamıyorum. Size Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanlarında hizmet verebilirim.",
-      "top_candidates": []
-    },
     "id": "A13",
     "kategori": "A",
     "girdi_metni": "savunma sanayi alanında çalışmıyoruz, okul ders programı otomasyonuna ihtiyacımız var",
@@ -500,34 +117,6 @@
     "basarili": false
   },
   {
-    "case": {
-      "id": "B01",
-      "kategori": "B",
-      "tip": "tartışmalı",
-      "girdi": "Hem sağlık hem de savunma alanında faaliyet gösteriyoruz, ikisi için de teklif verin",
-      "beklenen_sektor": "sağlık",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "Hem sağlık hem de savunma alanında faaliyet gösteriyoruz, ikisi için de teklif verin",
-      "normalize_girdi": "Hem sağlık hem de savunma alanında faaliyet gösteriyoruz, ikisi için de teklif verin",
-      "sektor": "belirsiz",
-      "mod": "FB",
-      "skor": 0.15,
-      "yontem": "kisaltma",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=rule",
-      "temiz_sorgu": "Hem sağlık hem de savunma alanında faaliyet gösteriyoruz, ikisi için de teklif verin",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Bu konuda size doğrudan yardımcı olamıyorum. Size Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanlarında hizmet verebilirim.",
-      "top_candidates": []
-    },
     "id": "B01",
     "kategori": "B",
     "girdi_metni": "Hem sağlık hem de savunma alanında faaliyet gösteriyoruz, ikisi için de teklif verin",
@@ -537,63 +126,10 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.15,
     "katman": "kisaltma",
-    "sure_ms": 0.13,
+    "sure_ms": 0.17,
     "basarili": false
   },
   {
-    "case": {
-      "id": "B02",
-      "kategori": "B",
-      "tip": "tartışmalı",
-      "girdi": "Şirketimiz hem otel işletiyor hem de özel okulu var, turizm ve eğitim yazılımı istiyoruz",
-      "beklenen_sektor": "tartışmalı",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "Şirketimiz hem otel işletiyor hem de özel okulu var, turizm ve eğitim yazılımı istiyoruz",
-      "normalize_girdi": "şirketimiz hem otel işletiyor hem de özel okulu var turizm ve eğitim yazılımı",
-      "sektor": "turizm",
-      "mod": "K2",
-      "skor": 0.95,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Şirketimiz hem otel işletiyor hem de özel okulu var, turizm ve eğitim yazılımı istiyoruz",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "turizm",
-      "k1_hints": {},
-      "yanit_mesaji": "Turizm ve konaklama işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "turizmle uğraşan bir şirketiz yazılım hizmeti ihtiyacımız var",
-          "sector": "turizm",
-          "sub_intent": "turizm.genel",
-          "initial_score": 0.809,
-          "reranker_score": null,
-          "final_score": 0.809
-        },
-        {
-          "text": "turizmle uğraşan bir şirketiz yazılım hizmeti arıyoruz",
-          "sector": "turizm",
-          "sub_intent": "turizm.genel",
-          "initial_score": 0.7845,
-          "reranker_score": null,
-          "final_score": 0.7845
-        },
-        {
-          "text": "turizmle uğraşan bir şirketiz yazılım hizmeti arıyoruz rica ederim",
-          "sector": "turizm",
-          "sub_intent": "turizm.genel",
-          "initial_score": 0.7793,
-          "reranker_score": null,
-          "final_score": 0.7793
-        }
-      ]
-    },
     "id": "B02",
     "kategori": "B",
     "girdi_metni": "Şirketimiz hem otel işletiyor hem de özel okulu var, turizm ve eğitim yazılımı istiyoruz",
@@ -603,129 +139,23 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.95,
     "katman": "bge-m3",
-    "sure_ms": 131.38,
+    "sure_ms": 128.59,
     "basarili": true
   },
   {
-    "case": {
-      "id": "B03",
-      "kategori": "B",
-      "tip": "tartışmalı",
-      "girdi": "Hastane ve radar komuta kontrol sistemlerini birleştiren entegre bir yazılım arıyoruz",
-      "beklenen_sektor": "sağlık",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "Hastane ve radar komuta kontrol sistemlerini birleştiren entegre bir yazılım arıyoruz",
-      "normalize_girdi": "hastane ve radar komuta kontrol sistemlerini birleştiren entegre bir yazılım arıyoruz",
-      "sektor": "belirsiz",
-      "mod": "FB",
-      "skor": 0.7663240711302727,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Hastane ve radar komuta kontrol sistemlerini birleştiren entegre bir yazılım arıyoruz",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Bu konuda size doğrudan yardımcı olamıyorum. Size Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanlarında hizmet verebilirim.",
-      "top_candidates": [
-        {
-          "text": "need radar and threat detection software integration",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.7663,
-          "reranker_score": null,
-          "final_score": 0.7663
-        },
-        {
-          "text": "hello need radar and threat detection software integration please let us know",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.756,
-          "reranker_score": null,
-          "final_score": 0.756
-        },
-        {
-          "text": "yardımcı olur musunuz komuta kontrol ve radar tehdit izleme yazılımlarını mevcut birlik haberleşme ağımızla entegre etmek teşekkürler",
-          "sector": "bilisim",
-          "sub_intent": "bilisim.software",
-          "initial_score": 0.7524,
-          "reranker_score": null,
-          "final_score": 0.7524
-        }
-      ]
-    },
     "id": "B03",
     "kategori": "B",
     "girdi_metni": "Hastane ve radar komuta kontrol sistemlerini birleştiren entegre bir yazılım arıyoruz",
     "beklenen_sektor": "sağlık",
-    "tespit_edilen_sektor": "belirsiz",
+    "tespit_edilen_sektor": "saglik",
     "beklenen_mod": "K2",
-    "tespit_edilen_mod": "FB",
-    "skor": 0.7663240711302727,
+    "tespit_edilen_mod": "K2",
+    "skor": 0.85,
     "katman": "bge-m3",
-    "sure_ms": 134.15,
-    "basarili": false
+    "sure_ms": 124.12,
+    "basarili": true
   },
   {
-    "case": {
-      "id": "B04",
-      "kategori": "B",
-      "tip": "tartışmalı",
-      "girdi": "Önce otel otomasyonunu tamamlayıp ardından personel eğitim platformunu entegre edeceğiz",
-      "beklenen_sektor": "tartışmalı",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "Önce otel otomasyonunu tamamlayıp ardından personel eğitim platformunu entegre edeceğiz",
-      "normalize_girdi": "önce otel otomasyonunu tamamlayıp ardından personel eğitim platformunu entegre edeceğiz",
-      "sektor": "turizm",
-      "mod": "K2",
-      "skor": 0.95,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Önce otel otomasyonunu tamamlayıp ardından personel eğitim platformunu entegre edeceğiz",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "turizm",
-      "k1_hints": {},
-      "yanit_mesaji": "Turizm ve konaklama işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "otel entegrasyonu",
-          "sector": "turizm",
-          "sub_intent": "turizm.hotel",
-          "initial_score": 0.7078,
-          "reranker_score": null,
-          "final_score": 0.7078
-        },
-        {
-          "text": "otel yönetim yazılımı almak ön büro ve muhasebe entegrasyonu şart rica ederim",
-          "sector": "turizm",
-          "sub_intent": "turizm.hotel",
-          "initial_score": 0.7023,
-          "reranker_score": null,
-          "final_score": 0.7023
-        },
-        {
-          "text": "otel yönetim yazılımı almak ön büro ve muhasebe entegrasyonu şart teşekkürler",
-          "sector": "turizm",
-          "sub_intent": "turizm.hotel",
-          "initial_score": 0.6992,
-          "reranker_score": null,
-          "final_score": 0.6992
-        }
-      ]
-    },
     "id": "B04",
     "kategori": "B",
     "girdi_metni": "Önce otel otomasyonunu tamamlayıp ardından personel eğitim platformunu entegre edeceğiz",
@@ -735,38 +165,10 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.95,
     "katman": "bge-m3",
-    "sure_ms": 132.77,
+    "sure_ms": 126.65,
     "basarili": true
   },
   {
-    "case": {
-      "id": "B05",
-      "kategori": "B",
-      "tip": "tartışmalı",
-      "girdi": "Askeri hastaneler için hem telemedicine hem de taktik telsiz sistemi kurulacak",
-      "beklenen_sektor": "sağlık",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "Askeri hastaneler için hem telemedicine hem de taktik telsiz sistemi kurulacak",
-      "normalize_girdi": "Askeri hastaneler için hem telemedicine hem de taktik telsiz sistemi kurulacak",
-      "sektor": "belirsiz",
-      "mod": "FB",
-      "skor": 0.15,
-      "yontem": "kisaltma",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=rule",
-      "temiz_sorgu": "Askeri hastaneler için hem telemedicine hem de taktik telsiz sistemi kurulacak",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Bu konuda size doğrudan yardımcı olamıyorum. Size Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanlarında hizmet verebilirim.",
-      "top_candidates": []
-    },
     "id": "B05",
     "kategori": "B",
     "girdi_metni": "Askeri hastaneler için hem telemedicine hem de taktik telsiz sistemi kurulacak",
@@ -776,38 +178,10 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.15,
     "katman": "kisaltma",
-    "sure_ms": 0.14,
+    "sure_ms": 0.15,
     "basarili": false
   },
   {
-    "case": {
-      "id": "B06",
-      "kategori": "B",
-      "tip": "tartışmalı",
-      "girdi": "lms tabanlı eğitim modülü olan bir hastane yönetim sistemi",
-      "beklenen_sektor": "sağlık",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "lms tabanlı eğitim modülü olan bir hastane yönetim sistemi",
-      "normalize_girdi": "lms tabanlı eğitim modülü olan bir hastane yönetim sistemi",
-      "sektor": "egitim",
-      "mod": "K1",
-      "skor": 0.99,
-      "yontem": "kisaltma",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=rule",
-      "temiz_sorgu": "lms tabanlı eğitim modülü olan bir hastane yönetim sistemi",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "egitim",
-      "k1_hints": {},
-      "yanit_mesaji": "",
-      "top_candidates": []
-    },
     "id": "B06",
     "kategori": "B",
     "girdi_metni": "lms tabanlı eğitim modülü olan bir hastane yönetim sistemi",
@@ -817,63 +191,10 @@
     "tespit_edilen_mod": "K1",
     "skor": 0.99,
     "katman": "kisaltma",
-    "sure_ms": 0.14,
+    "sure_ms": 0.15,
     "basarili": false
   },
   {
-    "case": {
-      "id": "B07",
-      "kategori": "B",
-      "tip": "tartışmalı",
-      "girdi": "Turizm kanal yöneticisi olan bir savunma sanayi misafirhane portalı",
-      "beklenen_sektor": "turizm",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "Turizm kanal yöneticisi olan bir savunma sanayi misafirhane portalı",
-      "normalize_girdi": "turizm kanal yöneticisi olan bir savunma sanayi misafirhane portalı",
-      "sektor": "turizm",
-      "mod": "K2",
-      "skor": 0.6410177923158821,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Turizm kanal yöneticisi olan bir savunma sanayi misafirhane portalı",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "turizm",
-      "k1_hints": {},
-      "yanit_mesaji": "Turizm ve konaklama işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "hello looking for channel manager software for our hotel chain thank you",
-          "sector": "turizm",
-          "sub_intent": "turizm.hotel",
-          "initial_score": 0.641,
-          "reranker_score": null,
-          "final_score": 0.641
-        },
-        {
-          "text": "looking for channel manager software for our hotel chain looking forward to your response",
-          "sector": "turizm",
-          "sub_intent": "turizm.hotel",
-          "initial_score": 0.6398,
-          "reranker_score": null,
-          "final_score": 0.6398
-        },
-        {
-          "text": "need a tour operator management platform any information would help",
-          "sector": "turizm",
-          "sub_intent": "turizm.genel",
-          "initial_score": 0.6397,
-          "reranker_score": null,
-          "final_score": 0.6397
-        }
-      ]
-    },
     "id": "B07",
     "kategori": "B",
     "girdi_metni": "Turizm kanal yöneticisi olan bir savunma sanayi misafirhane portalı",
@@ -881,65 +202,12 @@
     "tespit_edilen_sektor": "turizm",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.6410177923158821,
+    "skor": 0.632761,
     "katman": "bge-m3",
-    "sure_ms": 119.0,
+    "sure_ms": 111.76,
     "basarili": true
   },
   {
-    "case": {
-      "id": "B08",
-      "kategori": "B",
-      "tip": "tartışmalı",
-      "girdi": "Sağlık ve turizm sektörlerini tek platformda buluşturan medikal turizm portalı kuracağız",
-      "beklenen_sektor": "tartışmalı",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "Sağlık ve turizm sektörlerini tek platformda buluşturan medikal turizm portalı kuracağız",
-      "normalize_girdi": "sağlık ve turizm sektörlerini tek platformda buluşturan medikal turizm portalı kuracağız",
-      "sektor": "saglik",
-      "mod": "K2",
-      "skor": 0.85,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Sağlık ve turizm sektörlerini tek platformda buluşturan medikal turizm portalı kuracağız",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "saglik",
-      "k1_hints": {},
-      "yanit_mesaji": "Sağlık hizmetleri ve randevu işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "hastaneler arası veri paylaşım altyapısı kuracağız",
-          "sector": "saglik",
-          "sub_intent": "saglik.hospital",
-          "initial_score": 0.7054,
-          "reranker_score": null,
-          "final_score": 0.7054
-        },
-        {
-          "text": "tele-tıp ve online doktor görüşmesi sağlayacak bir sağlık platformu arıyoruz",
-          "sector": "saglik",
-          "sub_intent": "saglik.genel",
-          "initial_score": 0.6991,
-          "reranker_score": null,
-          "final_score": 0.6991
-        },
-        {
-          "text": "tele-tıp ve online doktor görüşmesi sağlayacak bir sağlık platformu ihtiyacımız var",
-          "sector": "saglik",
-          "sub_intent": "saglik.genel",
-          "initial_score": 0.682,
-          "reranker_score": null,
-          "final_score": 0.682
-        }
-      ]
-    },
     "id": "B08",
     "kategori": "B",
     "girdi_metni": "Sağlık ve turizm sektörlerini tek platformda buluşturan medikal turizm portalı kuracağız",
@@ -947,40 +215,12 @@
     "tespit_edilen_sektor": "saglik",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.85,
+    "skor": 0.705402,
     "katman": "bge-m3",
-    "sure_ms": 124.19,
+    "sure_ms": 125.95,
     "basarili": true
   },
   {
-    "case": {
-      "id": "B09",
-      "kategori": "B",
-      "tip": "tartışmalı",
-      "girdi": "Askeri eğitim akademisi için hem şifreli komuta kontrol sistemi hem sınav otomasyonu arıyoruz",
-      "beklenen_sektor": "tartışmalı",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "Askeri eğitim akademisi için hem şifreli komuta kontrol sistemi hem sınav otomasyonu arıyoruz",
-      "normalize_girdi": "Askeri eğitim akademisi için hem şifreli komuta kontrol sistemi hem sınav otomasyonu arıyoruz",
-      "sektor": "belirsiz",
-      "mod": "FB",
-      "skor": 0.15,
-      "yontem": "kisaltma",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=rule",
-      "temiz_sorgu": "Askeri eğitim akademisi için hem şifreli komuta kontrol sistemi hem sınav otomasyonu arıyoruz",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Bu konuda size doğrudan yardımcı olamıyorum. Size Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanlarında hizmet verebilirim.",
-      "top_candidates": []
-    },
     "id": "B09",
     "kategori": "B",
     "girdi_metni": "Askeri eğitim akademisi için hem şifreli komuta kontrol sistemi hem sınav otomasyonu arıyoruz",
@@ -994,125 +234,19 @@
     "basarili": true
   },
   {
-    "case": {
-      "id": "B10",
-      "kategori": "B",
-      "tip": "tartışmalı",
-      "girdi": "Eczane stok takip ile okul ders kayıt otomasyonunu aynı veri tabanında buluşturmak mümkün mi",
-      "beklenen_sektor": "tartışmalı",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "Eczane stok takip ile okul ders kayıt otomasyonunu aynı veri tabanında buluşturmak mümkün mi",
-      "normalize_girdi": "eczane stok takip ile okul ders kayıt otomasyonunu aynı veri tabanında buluşturmak mümkün mi",
-      "sektor": "saglik",
-      "mod": "K2",
-      "skor": 0.85,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Eczane stok takip ile okul ders kayıt otomasyonunu aynı veri tabanında buluşturmak mümkün mi",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "saglik",
-      "k1_hints": {},
-      "yanit_mesaji": "Sağlık hizmetleri ve randevu işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "yardımcı olur musunuz eczane stok takip sistemi kuracağız",
-          "sector": "saglik",
-          "sub_intent": "saglik.genel",
-          "initial_score": 0.7013,
-          "reranker_score": null,
-          "final_score": 0.7013
-        },
-        {
-          "text": "eczane stok takip sistemi kuracağız yazar mısın",
-          "sector": "saglik",
-          "sub_intent": "saglik.genel",
-          "initial_score": 0.7008,
-          "reranker_score": null,
-          "final_score": 0.7008
-        },
-        {
-          "text": "eczane stok takip sistemi kuracağız rica ederim",
-          "sector": "saglik",
-          "sub_intent": "saglik.genel",
-          "initial_score": 0.6939,
-          "reranker_score": null,
-          "final_score": 0.6939
-        }
-      ]
-    },
     "id": "B10",
     "kategori": "B",
     "girdi_metni": "Eczane stok takip ile okul ders kayıt otomasyonunu aynı veri tabanında buluşturmak mümkün mi",
     "beklenen_sektor": "tartışmalı",
-    "tespit_edilen_sektor": "saglik",
+    "tespit_edilen_sektor": "egitim",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.85,
+    "skor": 0.657085,
     "katman": "bge-m3",
-    "sure_ms": 145.33,
+    "sure_ms": 140.19,
     "basarili": true
   },
   {
-    "case": {
-      "id": "C02",
-      "kategori": "C",
-      "tip": "yazim",
-      "girdi": "sgl. randevu programı yazar mısınız",
-      "beklenen_sektor": "sağlık",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "sgl. randevu programı yazar mısınız",
-      "normalize_girdi": "sgl randevu programı yazar mısınız",
-      "sektor": "saglik",
-      "mod": "K2",
-      "skor": 0.85,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "sgl. randevu programı yazar mısınız",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "saglik",
-      "k1_hints": {},
-      "yanit_mesaji": "Sağlık hizmetleri ve randevu işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "doktor randevu sistemi arıyoruz yazar mısın",
-          "sector": "saglik",
-          "sub_intent": "saglik.randevu",
-          "initial_score": 0.722,
-          "reranker_score": null,
-          "final_score": 0.722
-        },
-        {
-          "text": "yardımcı olur musunuz doktor randevu sistemi arıyoruz",
-          "sector": "saglik",
-          "sub_intent": "saglik.randevu",
-          "initial_score": 0.6516,
-          "reranker_score": null,
-          "final_score": 0.6516
-        },
-        {
-          "text": "doktor randevu sistemi arıyoruz",
-          "sector": "saglik",
-          "sub_intent": "saglik.randevu",
-          "initial_score": 0.6462,
-          "reranker_score": null,
-          "final_score": 0.6462
-        }
-      ]
-    },
     "id": "C02",
     "kategori": "C",
     "girdi_metni": "sgl. randevu programı yazar mısınız",
@@ -1120,106 +254,25 @@
     "tespit_edilen_sektor": "saglik",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.85,
+    "skor": 0.646196,
     "katman": "bge-m3",
-    "sure_ms": 113.77,
+    "sure_ms": 105.4,
     "basarili": true
   },
   {
-    "case": {
-      "id": "C03",
-      "kategori": "C",
-      "tip": "yazim",
-      "girdi": "trzm sekt icn rzv programı",
-      "beklenen_sektor": "turizm",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "trzm sekt icn rzv programı",
-      "normalize_girdi": "trzm sekt icn rzv programı",
-      "sektor": "turizm",
-      "mod": "K2",
-      "skor": 0.85,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "trzm sekt icn rzv programı",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "turizm",
-      "k1_hints": {},
-      "yanit_mesaji": "Turizm ve konaklama işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "trzm rzv sistemi",
-          "sector": "turizm",
-          "sub_intent": "turizm.genel",
-          "initial_score": 0.7653,
-          "reranker_score": null,
-          "final_score": 0.7653
-        },
-        {
-          "text": "selam trzm rzv sistemi",
-          "sector": "turizm",
-          "sub_intent": "turizm.genel",
-          "initial_score": 0.7423,
-          "reranker_score": null,
-          "final_score": 0.7423
-        },
-        {
-          "text": "trzm rzv sistemi acil",
-          "sector": "turizm",
-          "sub_intent": "turizm.genel",
-          "initial_score": 0.7328,
-          "reranker_score": null,
-          "final_score": 0.7328
-        }
-      ]
-    },
     "id": "C03",
     "kategori": "C",
     "girdi_metni": "trzm sekt icn rzv programı",
     "beklenen_sektor": "turizm",
-    "tespit_edilen_sektor": "turizm",
+    "tespit_edilen_sektor": "saglik",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.85,
+    "skor": 0.497418,
     "katman": "bge-m3",
-    "sure_ms": 112.8,
-    "basarili": true
+    "sure_ms": 110.25,
+    "basarili": false
   },
   {
-    "case": {
-      "id": "C04",
-      "kategori": "C",
-      "tip": "yazim",
-      "girdi": "egt kurumu icin uzaktan lms",
-      "beklenen_sektor": "eğitim",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "egt kurumu icin uzaktan lms",
-      "normalize_girdi": "egt kurumu icin uzaktan lms",
-      "sektor": "egitim",
-      "mod": "K1",
-      "skor": 0.99,
-      "yontem": "kisaltma",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=rule",
-      "temiz_sorgu": "egt kurumu icin uzaktan lms",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "egitim",
-      "k1_hints": {},
-      "yanit_mesaji": "",
-      "top_candidates": []
-    },
     "id": "C04",
     "kategori": "C",
     "girdi_metni": "egt kurumu icin uzaktan lms",
@@ -1229,63 +282,10 @@
     "tespit_edilen_mod": "K1",
     "skor": 0.99,
     "katman": "kisaltma",
-    "sure_ms": 0.11,
+    "sure_ms": 0.1,
     "basarili": false
   },
   {
-    "case": {
-      "id": "C05",
-      "kategori": "C",
-      "tip": "yazim",
-      "girdi": "sağlıkksektörüüotomasyonuuarıyoruzz",
-      "beklenen_sektor": "sağlık",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "sağlıkksektörüüotomasyonuuarıyoruzz",
-      "normalize_girdi": "sağlıkksektörüüotomasyonuuarıyoruzz",
-      "sektor": "saglik",
-      "mod": "K2",
-      "skor": 0.85,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "sağlıkksektörüüotomasyonuuarıyoruzz",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "saglik",
-      "k1_hints": {},
-      "yanit_mesaji": "Sağlık hizmetleri ve randevu işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "sağlık kurumumuzda otomasyon üzerinden hasta süreçlerini yönetmek istiyoruz",
-          "sector": "saglik",
-          "sub_intent": "saglik.genel",
-          "initial_score": 0.7592,
-          "reranker_score": null,
-          "final_score": 0.7592
-        },
-        {
-          "text": "sağlık kuruluşumuzda otomasyon ile personel planlaması yapmak istiyoruz",
-          "sector": "saglik",
-          "sub_intent": "saglik.genel",
-          "initial_score": 0.7465,
-          "reranker_score": null,
-          "final_score": 0.7465
-        },
-        {
-          "text": "Saglik sektorunde otomasyon projeleri gelistiriyoruz.",
-          "sector": "saglik",
-          "sub_intent": "saglik.genel",
-          "initial_score": 0.7351,
-          "reranker_score": null,
-          "final_score": 0.7351
-        }
-      ]
-    },
     "id": "C05",
     "kategori": "C",
     "girdi_metni": "sağlıkksektörüüotomasyonuuarıyoruzz",
@@ -1295,63 +295,10 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.85,
     "katman": "bge-m3",
-    "sure_ms": 114.4,
+    "sure_ms": 107.73,
     "basarili": true
   },
   {
-    "case": {
-      "id": "C06",
-      "kategori": "C",
-      "tip": "yazim",
-      "girdi": "tuuurizm otelcilik checkin ekrani",
-      "beklenen_sektor": "turizm",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "tuuurizm otelcilik checkin ekrani",
-      "normalize_girdi": "tuuurizm otelcilik checkin ekrani",
-      "sektor": "turizm",
-      "mod": "K2",
-      "skor": 0.95,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "tuuurizm otelcilik checkin ekrani",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "turizm",
-      "k1_hints": {},
-      "yanit_mesaji": "Turizm ve konaklama işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "otel check-in sürecini tamamen dijitalleştirmek rica ederim",
-          "sector": "turizm",
-          "sub_intent": "turizm.hotel",
-          "initial_score": 0.659,
-          "reranker_score": null,
-          "final_score": 0.659
-        },
-        {
-          "text": "otel check-in sürecini tamamen dijitalleştirmek teşekkürler",
-          "sector": "turizm",
-          "sub_intent": "turizm.hotel",
-          "initial_score": 0.6558,
-          "reranker_score": null,
-          "final_score": 0.6558
-        },
-        {
-          "text": "yardımcı olur musunuz tatil tesisimiz için misafir check-in ve oda yönetim yazılımı teşekkürler",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.65,
-          "reranker_score": null,
-          "final_score": 0.65
-        }
-      ]
-    },
     "id": "C06",
     "kategori": "C",
     "girdi_metni": "tuuurizm otelcilik checkin ekrani",
@@ -1361,38 +308,10 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.95,
     "katman": "bge-m3",
-    "sure_ms": 109.46,
+    "sure_ms": 105.67,
     "basarili": true
   },
   {
-    "case": {
-      "id": "C07",
-      "kategori": "C",
-      "tip": "yazim",
-      "girdi": "eğitm portali örenci işleri",
-      "beklenen_sektor": "eğitim",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "eğitm portali örenci işleri",
-      "normalize_girdi": "eğitm portali örenci işleri",
-      "sektor": "bilisim",
-      "mod": "K1",
-      "skor": 0.99,
-      "yontem": "kisaltma",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=rule",
-      "temiz_sorgu": "eğitm portali örenci işleri",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "bilisim",
-      "k1_hints": {},
-      "yanit_mesaji": "Bilişim ve yazılım süreçleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": []
-    },
     "id": "C07",
     "kategori": "C",
     "girdi_metni": "eğitm portali örenci işleri",
@@ -1406,34 +325,6 @@
     "basarili": false
   },
   {
-    "case": {
-      "id": "C08",
-      "kategori": "C",
-      "tip": "yazim",
-      "girdi": "hastaneyonetimsistemiyazilimi",
-      "beklenen_sektor": "sağlık",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "hastaneyonetimsistemiyazilimi",
-      "normalize_girdi": "hastaneyonetimsistemiyazilimi",
-      "sektor": "saglik",
-      "mod": "K1",
-      "skor": 0.99,
-      "yontem": "kisaltma",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=rule",
-      "temiz_sorgu": "hastaneyonetimsistemiyazilimi",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "saglik",
-      "k1_hints": {},
-      "yanit_mesaji": "Sağlık hizmetleri ve randevu işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": []
-    },
     "id": "C08",
     "kategori": "C",
     "girdi_metni": "hastaneyonetimsistemiyazilimi",
@@ -1443,195 +334,36 @@
     "tespit_edilen_mod": "K1",
     "skor": 0.99,
     "katman": "kisaltma",
-    "sure_ms": 0.26,
+    "sure_ms": 0.27,
     "basarili": false
   },
   {
-    "case": {
-      "id": "C09",
-      "kategori": "C",
-      "tip": "argo",
-      "girdi": "bişey lazım bize sağlık için acil yardimci olun",
-      "beklenen_sektor": "sağlık",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "bişey lazım bize sağlık için acil yardimci olun",
-      "normalize_girdi": "bişey sağlık için acil yardimci olun",
-      "sektor": "belirsiz",
-      "mod": "FB",
-      "skor": 0.6205227744890924,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "bişey lazım bize sağlık için acil yardimci olun",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Bu konuda size doğrudan yardımcı olamıyorum. Size Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanlarında hizmet verebilirim.",
-      "top_candidates": [
-        {
-          "text": "bana yardım edebilir misin",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.6205,
-          "reranker_score": null,
-          "final_score": 0.6205
-        },
-        {
-          "text": "fiyat teklifi acil",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.6155,
-          "reranker_score": null,
-          "final_score": 0.6155
-        },
-        {
-          "text": "hava çok güzeldi acil",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.6155,
-          "reranker_score": null,
-          "final_score": 0.6155
-        }
-      ]
-    },
     "id": "C09",
     "kategori": "C",
     "girdi_metni": "bişey lazım bize sağlık için acil yardimci olun",
     "beklenen_sektor": "sağlık",
-    "tespit_edilen_sektor": "belirsiz",
+    "tespit_edilen_sektor": "saglik",
     "beklenen_mod": "K2",
-    "tespit_edilen_mod": "FB",
-    "skor": 0.6205227744890924,
+    "tespit_edilen_mod": "K2",
+    "skor": 0.85,
     "katman": "bge-m3",
-    "sure_ms": 113.01,
-    "basarili": false
+    "sure_ms": 111.37,
+    "basarili": true
   },
   {
-    "case": {
-      "id": "C10",
-      "kategori": "C",
-      "tip": "emoji",
-      "girdi": "sağlık 🏥 lazım!!! çok acil",
-      "beklenen_sektor": "sağlık",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "sağlık 🏥 lazım!!! çok acil",
-      "normalize_girdi": "sağlık çok acil",
-      "sektor": "belirsiz",
-      "mod": "FB",
-      "skor": 0.7289687177846377,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "sağlık 🏥 lazım!!! çok acil",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Bu konuda size doğrudan yardımcı olamıyorum. Size Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanlarında hizmet verebilirim.",
-      "top_candidates": [
-        {
-          "text": "hava çok güzeldi acil",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.729,
-          "reranker_score": null,
-          "final_score": 0.729
-        },
-        {
-          "text": "fiyat teklifi acil",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.6811,
-          "reranker_score": null,
-          "final_score": 0.6811
-        },
-        {
-          "text": "we need a hospital management system urgent",
-          "sector": "saglik",
-          "sub_intent": "saglik.genel",
-          "initial_score": 0.6571,
-          "reranker_score": null,
-          "final_score": 0.6571
-        }
-      ]
-    },
     "id": "C10",
     "kategori": "C",
     "girdi_metni": "sağlık 🏥 lazım!!! çok acil",
     "beklenen_sektor": "sağlık",
-    "tespit_edilen_sektor": "belirsiz",
+    "tespit_edilen_sektor": "saglik",
     "beklenen_mod": "K2",
-    "tespit_edilen_mod": "FB",
-    "skor": 0.7289687177846377,
+    "tespit_edilen_mod": "K2",
+    "skor": 0.85,
     "katman": "bge-m3",
-    "sure_ms": 103.19,
-    "basarili": false
+    "sure_ms": 95.27,
+    "basarili": true
   },
   {
-    "case": {
-      "id": "D02",
-      "kategori": "D",
-      "tip": "mixed",
-      "girdi": "We need a hastane appointment system for our clinic",
-      "beklenen_sektor": "sağlık",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "We need a hastane appointment system for our clinic",
-      "normalize_girdi": "a hastane appointment system for our clinic",
-      "sektor": "saglik",
-      "mod": "K2",
-      "skor": 0.85,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "We need a hastane appointment system for our clinic",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "saglik",
-      "k1_hints": {},
-      "yanit_mesaji": "Sağlık hizmetleri ve randevu işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "need appointment scheduling software for our polyclinic please let us know",
-          "sector": "saglik",
-          "sub_intent": "saglik.genel",
-          "initial_score": 0.7845,
-          "reranker_score": null,
-          "final_score": 0.7845
-        },
-        {
-          "text": "need appointment scheduling software for our polyclinic",
-          "sector": "saglik",
-          "sub_intent": "saglik.genel",
-          "initial_score": 0.7844,
-          "reranker_score": null,
-          "final_score": 0.7844
-        },
-        {
-          "text": "hi there need appointment scheduling software for our polyclinic thank you",
-          "sector": "saglik",
-          "sub_intent": "saglik.genel",
-          "initial_score": 0.779,
-          "reranker_score": null,
-          "final_score": 0.779
-        }
-      ]
-    },
     "id": "D02",
     "kategori": "D",
     "girdi_metni": "We need a hastane appointment system for our clinic",
@@ -1641,38 +373,10 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.85,
     "katman": "bge-m3",
-    "sure_ms": 107.52,
+    "sure_ms": 104.7,
     "basarili": true
   },
   {
-    "case": {
-      "id": "D03",
-      "kategori": "D",
-      "tip": "mixed",
-      "girdi": "Hastane için bir EHR sistemi arıyoruz",
-      "beklenen_sektor": "sağlık",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "Hastane için bir EHR sistemi arıyoruz",
-      "normalize_girdi": "Hastane için bir EHR sistemi arıyoruz",
-      "sektor": "saglik",
-      "mod": "K1",
-      "skor": 0.99,
-      "yontem": "kisaltma",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=rule",
-      "temiz_sorgu": "Hastane için bir EHR sistemi arıyoruz",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "saglik",
-      "k1_hints": {},
-      "yanit_mesaji": "Sağlık hizmetleri ve randevu işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": []
-    },
     "id": "D03",
     "kategori": "D",
     "girdi_metni": "Hastane için bir EHR sistemi arıyoruz",
@@ -1682,63 +386,10 @@
     "tespit_edilen_mod": "K1",
     "skor": 0.99,
     "katman": "kisaltma",
-    "sure_ms": 0.47,
+    "sure_ms": 0.71,
     "basarili": false
   },
   {
-    "case": {
-      "id": "D04",
-      "kategori": "D",
-      "tip": "mixed",
-      "girdi": "We need a turizm booking platform for booking rooms",
-      "beklenen_sektor": "turizm",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "We need a turizm booking platform for booking rooms",
-      "normalize_girdi": "a turizm booking platform for booking rooms",
-      "sektor": "turizm",
-      "mod": "K2",
-      "skor": 0.85,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "We need a turizm booking platform for booking rooms",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "turizm",
-      "k1_hints": {},
-      "yanit_mesaji": "Turizm ve konaklama işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "we are a travel agency looking for a booking and check-in management platform",
-          "sector": "turizm",
-          "sub_intent": "turizm.checkin",
-          "initial_score": 0.8021,
-          "reranker_score": null,
-          "final_score": 0.8021
-        },
-        {
-          "text": "we are a travel agency looking for a booking and check-in management platform please let us know",
-          "sector": "turizm",
-          "sub_intent": "turizm.checkin",
-          "initial_score": 0.7937,
-          "reranker_score": null,
-          "final_score": 0.7937
-        },
-        {
-          "text": "we are a travel agency looking for a booking and check-in management platform urgent",
-          "sector": "turizm",
-          "sub_intent": "turizm.checkin",
-          "initial_score": 0.7926,
-          "reranker_score": null,
-          "final_score": 0.7926
-        }
-      ]
-    },
     "id": "D04",
     "kategori": "D",
     "girdi_metni": "We need a turizm booking platform for booking rooms",
@@ -1748,63 +399,10 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.85,
     "katman": "bge-m3",
-    "sure_ms": 113.63,
+    "sure_ms": 103.33,
     "basarili": true
   },
   {
-    "case": {
-      "id": "D06",
-      "kategori": "D",
-      "tip": "mixed",
-      "girdi": "otel checkin platform in our hotel system",
-      "beklenen_sektor": "turizm",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "otel checkin platform in our hotel system",
-      "normalize_girdi": "otel checkin platform in our hotel system",
-      "sektor": "turizm",
-      "mod": "K2",
-      "skor": 0.95,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "otel checkin platform in our hotel system",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "turizm",
-      "k1_hints": {},
-      "yanit_mesaji": "Turizm ve konaklama işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "we are a travel agency looking for a booking and check-in management platform",
-          "sector": "turizm",
-          "sub_intent": "turizm.checkin",
-          "initial_score": 0.8065,
-          "reranker_score": null,
-          "final_score": 0.8065
-        },
-        {
-          "text": "we are a travel agency looking for a booking and check-in management platform please let us know",
-          "sector": "turizm",
-          "sub_intent": "turizm.checkin",
-          "initial_score": 0.8048,
-          "reranker_score": null,
-          "final_score": 0.8048
-        },
-        {
-          "text": "we are a travel agency looking for a booking and check-in management platform thank you",
-          "sector": "turizm",
-          "sub_intent": "turizm.checkin",
-          "initial_score": 0.8015,
-          "reranker_score": null,
-          "final_score": 0.8015
-        }
-      ]
-    },
     "id": "D06",
     "kategori": "D",
     "girdi_metni": "otel checkin platform in our hotel system",
@@ -1814,63 +412,10 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.95,
     "katman": "bge-m3",
-    "sure_ms": 116.98,
+    "sure_ms": 103.96,
     "basarili": true
   },
   {
-    "case": {
-      "id": "D07",
-      "kategori": "D",
-      "tip": "mixed",
-      "girdi": "We require student devamsizlik tracking for high school",
-      "beklenen_sektor": "eğitim",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "We require student devamsizlik tracking for high school",
-      "normalize_girdi": "we student devamsizlik tracking for high school",
-      "sektor": "egitim",
-      "mod": "K2",
-      "skor": 0.6698839664459229,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "We require student devamsizlik tracking for high school",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "egitim",
-      "k1_hints": {},
-      "yanit_mesaji": "Eğitim ve öğrenci işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "okul yönetim ve devamsızlık takip yazılımı arıyoruz teşekkürler",
-          "sector": "egitim",
-          "sub_intent": "egitim.genel",
-          "initial_score": 0.6699,
-          "reranker_score": null,
-          "final_score": 0.6699
-        },
-        {
-          "text": "okul yönetim ve devamsızlık takip yazılımı arıyoruz",
-          "sector": "egitim",
-          "sub_intent": "egitim.genel",
-          "initial_score": 0.6696,
-          "reranker_score": null,
-          "final_score": 0.6696
-        },
-        {
-          "text": "okul yönetim ve devamsızlık takip yazılımı ihtiyacımız var",
-          "sector": "egitim",
-          "sub_intent": "egitim.genel",
-          "initial_score": 0.6633,
-          "reranker_score": null,
-          "final_score": 0.6633
-        }
-      ]
-    },
     "id": "D07",
     "kategori": "D",
     "girdi_metni": "We require student devamsizlik tracking for high school",
@@ -1878,65 +423,12 @@
     "tespit_edilen_sektor": "egitim",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.6698839664459229,
+    "skor": 0.66965,
     "katman": "bge-m3",
-    "sure_ms": 114.44,
+    "sure_ms": 106.88,
     "basarili": true
   },
   {
-    "case": {
-      "id": "D09",
-      "kategori": "D",
-      "tip": "mixed",
-      "girdi": "university registration system yenilemek istiyoruz",
-      "beklenen_sektor": "eğitim",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "university registration system yenilemek istiyoruz",
-      "normalize_girdi": "university registration system yenilemek",
-      "sektor": "turizm",
-      "mod": "K2",
-      "skor": 0.7367636718294829,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "university registration system yenilemek istiyoruz",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "turizm",
-      "k1_hints": {},
-      "yanit_mesaji": "Turizm ve konaklama işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "otel rezervasyon sistemimizi yenilemek",
-          "sector": "turizm",
-          "sub_intent": "turizm.reservation",
-          "initial_score": 0.7368,
-          "reranker_score": null,
-          "final_score": 0.7368
-        },
-        {
-          "text": "üniversite için kayıt sistemi ve danışmanlık portalı arıyoruz",
-          "sector": "egitim",
-          "sub_intent": "egitim.enrollment",
-          "initial_score": 0.7195,
-          "reranker_score": null,
-          "final_score": 0.7195
-        },
-        {
-          "text": "üniversite bünyesinde kayıt sistemi ve öğrenci bilgi portalı kurmak istiyoruz",
-          "sector": "egitim",
-          "sub_intent": "egitim.enrollment",
-          "initial_score": 0.7088,
-          "reranker_score": null,
-          "final_score": 0.7088
-        }
-      ]
-    },
     "id": "D09",
     "kategori": "D",
     "girdi_metni": "university registration system yenilemek istiyoruz",
@@ -1944,65 +436,12 @@
     "tespit_edilen_sektor": "turizm",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.7367636718294829,
+    "skor": 0.736764,
     "katman": "bge-m3",
-    "sure_ms": 107.49,
+    "sure_ms": 97.79,
     "basarili": false
   },
   {
-    "case": {
-      "id": "D10",
-      "kategori": "D",
-      "tip": "mixed",
-      "girdi": "We want to implement a telemedicine solution for our hastane",
-      "beklenen_sektor": "sağlık",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "We want to implement a telemedicine solution for our hastane",
-      "normalize_girdi": "to implement a telemedicine solution for our hastane",
-      "sektor": "saglik",
-      "mod": "K2",
-      "skor": 0.8715475644526024,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "We want to implement a telemedicine solution for our hastane",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "saglik",
-      "k1_hints": {},
-      "yanit_mesaji": "Sağlık hizmetleri ve randevu işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "we want to implement a telemedicine solution for our clinics",
-          "sector": "saglik",
-          "sub_intent": "saglik.genel",
-          "initial_score": 0.8715,
-          "reranker_score": null,
-          "final_score": 0.8715
-        },
-        {
-          "text": "we want to implement a telemedicine solution for our clinics please let us know",
-          "sector": "saglik",
-          "sub_intent": "saglik.genel",
-          "initial_score": 0.856,
-          "reranker_score": null,
-          "final_score": 0.856
-        },
-        {
-          "text": "hi there we want to implement a telemedicine solution for our clinics urgent",
-          "sector": "saglik",
-          "sub_intent": "saglik.genel",
-          "initial_score": 0.8509,
-          "reranker_score": null,
-          "final_score": 0.8509
-        }
-      ]
-    },
     "id": "D10",
     "kategori": "D",
     "girdi_metni": "We want to implement a telemedicine solution for our hastane",
@@ -2010,65 +449,12 @@
     "tespit_edilen_sektor": "saglik",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.8715475644526024,
+    "skor": 0.871548,
     "katman": "bge-m3",
-    "sure_ms": 118.31,
+    "sure_ms": 108.97,
     "basarili": true
   },
   {
-    "case": {
-      "id": "E01",
-      "kategori": "E",
-      "tip": "uzun",
-      "girdi": "Merhaba, şirketimiz son 5 yıldır büyüme gösteren bir yapıya sahip ve önümüzdeki dönemde saha operasyonlarımızı dijitalleştirmeyi planlıyoruz. Bu kapsamda özellikle hastane ve klinik ağımız için randevu ve hasta takip sistemlerine ihtiyaç duyuyoruz. Uygun bir çözüm önerebilir misiniz?",
-      "beklenen_sektor": "sağlık",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "Merhaba, şirketimiz son 5 yıldır büyüme gösteren bir yapıya sahip ve önümüzdeki dönemde saha operasyonlarımızı dijitalleştirmeyi planlıyoruz. Bu kapsamda özellikle hastane ve klinik ağımız için randevu ve hasta takip sistemlerine ihtiyaç duyuyoruz. Uygun bir çözüm önerebilir misiniz?",
-      "normalize_girdi": "şirketimiz son 5 yıldır büyüme gösteren bir yapıya sahip ve önümüzdeki dönemde saha operasyonlarımızı dijitalleştirmeyi planlıyoruz bu kapsamda özellikle hastane ve klinik ağımız için randevu ve hasta takip sistemlerine ihtiyaç duyuyoruz uygun bir çözüm önerebilir misiniz",
-      "sektor": "saglik",
-      "mod": "K2",
-      "skor": 0.85,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Merhaba, şirketimiz son 5 yıldır büyüme gösteren bir yapıya sahip ve önümüzdeki dönemde saha operasyonlarımızı dijitalleştirmeyi planlıyoruz. Bu kapsamda özellikle hastane ve klinik ağımız için randevu ve hasta takip sistemlerine ihtiyaç duyuyoruz. Uygun bir çözüm önerebilir misiniz?",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "saglik",
-      "k1_hints": {},
-      "yanit_mesaji": "Sağlık hizmetleri ve randevu işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "poliklinik altyapısı kurarak randevu ve takip süreçlerini otomatikleştirmek istiyoruz",
-          "sector": "saglik",
-          "sub_intent": "saglik.randevu",
-          "initial_score": 0.725,
-          "reranker_score": null,
-          "final_score": 0.725
-        },
-        {
-          "text": "doktor randevu sistemi ihtiyacımız var",
-          "sector": "saglik",
-          "sub_intent": "saglik.randevu",
-          "initial_score": 0.724,
-          "reranker_score": null,
-          "final_score": 0.724
-        },
-        {
-          "text": "hekim çalışma takip sistemi ihtiyacımız var",
-          "sector": "saglik",
-          "sub_intent": "saglik.genel",
-          "initial_score": 0.7163,
-          "reranker_score": null,
-          "final_score": 0.7163
-        }
-      ]
-    },
     "id": "E01",
     "kategori": "E",
     "girdi_metni": "Merhaba, şirketimiz son 5 yıldır büyüme gösteren bir yapıya sahip ve önümüzdeki dönemde saha operasyonlarımızı dijitalleştirmeyi planlıyoruz. Bu kapsamda özellikle hastane ve klinik ağımız için randevu ve hasta takip sistemlerine ihtiyaç duyuyoruz. Uygun bir çözüm önerebilir misiniz?",
@@ -2078,63 +464,10 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.85,
     "katman": "bge-m3",
-    "sure_ms": 273.0,
+    "sure_ms": 257.56,
     "basarili": true
   },
   {
-    "case": {
-      "id": "E02",
-      "kategori": "E",
-      "tip": "uzun",
-      "girdi": "İyi çalışmalar dileriz. Grubumuz bünyesinde yer alan beş yıldızlı otel işletmelerimizin tüm rezervasyon kanallarını tek bir platform üzerinden yönetebileceğimiz bir yazılım arayışımız mevcuttur. Mevcut sistemimizin entegrasyonu ve fiyatlandırma şartları hakkında bilgi almak istiyoruz.",
-      "beklenen_sektor": "turizm",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "İyi çalışmalar dileriz. Grubumuz bünyesinde yer alan beş yıldızlı otel işletmelerimizin tüm rezervasyon kanallarını tek bir platform üzerinden yönetebileceğimiz bir yazılım arayışımız mevcuttur. Mevcut sistemimizin entegrasyonu ve fiyatlandırma şartları hakkında bilgi almak istiyoruz.",
-      "normalize_girdi": "iyi çalışmalar dileriz grubumuz bünyesinde yer alan beş yıldızlı otel işletmelerimizin tüm rezervasyon kanallarını tek bir platform üzerinden yönetebileceğimiz bir yazılım arayışımız mevcuttur mevcut sistemimizin entegrasyonu ve fiyatlandırma şartları hakkında bilgi almak",
-      "sektor": "turizm",
-      "mod": "HAFIZA",
-      "skor": 0.95,
-      "yontem": "hafiza",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "İyi çalışmalar dileriz. Grubumuz bünyesinde yer alan beş yıldızlı otel işletmelerimizin tüm rezervasyon kanallarını tek bir platform üzerinden yönetebileceğimiz bir yazılım arayışımız mevcuttur. Mevcut sistemimizin entegrasyonu ve fiyatlandırma şartları hakkında bilgi almak istiyoruz.",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "turizm",
-      "k1_hints": {},
-      "yanit_mesaji": "Turizm ve konaklama işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "zincir otellerimiz için oda envanteri online check-in ve paket tur satışını tek panelden yönetecek bir platform ihtiyacımız var",
-          "sector": "turizm",
-          "sub_intent": "turizm.hotel",
-          "initial_score": 0.7133,
-          "reranker_score": null,
-          "final_score": 0.7133
-        },
-        {
-          "text": "zincir otellerimiz için oda envanteri online check-in ve paket tur satışını tek panelden yönetecek bir platform arıyoruz",
-          "sector": "turizm",
-          "sub_intent": "turizm.hotel",
-          "initial_score": 0.7079,
-          "reranker_score": null,
-          "final_score": 0.7079
-        },
-        {
-          "text": "looking for channel manager software for our hotel chain looking forward to your response",
-          "sector": "turizm",
-          "sub_intent": "turizm.hotel",
-          "initial_score": 0.6977,
-          "reranker_score": null,
-          "final_score": 0.6977
-        }
-      ]
-    },
     "id": "E02",
     "kategori": "E",
     "girdi_metni": "İyi çalışmalar dileriz. Grubumuz bünyesinde yer alan beş yıldızlı otel işletmelerimizin tüm rezervasyon kanallarını tek bir platform üzerinden yönetebileceğimiz bir yazılım arayışımız mevcuttur. Mevcut sistemimizin entegrasyonu ve fiyatlandırma şartları hakkında bilgi almak istiyoruz.",
@@ -2144,63 +477,10 @@
     "tespit_edilen_mod": "HAFIZA",
     "skor": 0.95,
     "katman": "hafiza",
-    "sure_ms": 232.35,
+    "sure_ms": 234.94,
     "basarili": false
   },
   {
-    "case": {
-      "id": "E04",
-      "kategori": "E",
-      "tip": "uzun",
-      "girdi": "Değerli iş ortağımız, yükseköğretim kurumumuzun tüm ders kayıt, sınav otomasyonu ve öğrenci devamsızlık takibini tek çatı altında toplayan öğrenci bilgi sistemini yenilemek niyetindeyiz. Bulut tabanlı bu sistemin demo sunumunu ne zaman organize edebiliriz?",
-      "beklenen_sektor": "eğitim",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "Değerli iş ortağımız, yükseköğretim kurumumuzun tüm ders kayıt, sınav otomasyonu ve öğrenci devamsızlık takibini tek çatı altında toplayan öğrenci bilgi sistemini yenilemek niyetindeyiz. Bulut tabanlı bu sistemin demo sunumunu ne zaman organize edebiliriz?",
-      "normalize_girdi": "değerli iş ortağımız yükseköğretim kurumumuzun tüm ders kayıt sınav otomasyonu ve öğrenci devamsızlık takibini tek çatı altında toplayan öğrenci bilgi sistemini yenilemek niyetindeyiz bulut tabanlı bu sistemin demo sunumunu ne zaman organize edebiliriz",
-      "sektor": "egitim",
-      "mod": "K2",
-      "skor": 0.85,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Değerli iş ortağımız, yükseköğretim kurumumuzun tüm ders kayıt, sınav otomasyonu ve öğrenci devamsızlık takibini tek çatı altında toplayan öğrenci bilgi sistemini yenilemek niyetindeyiz. Bulut tabanlı bu sistemin demo sunumunu ne zaman organize edebiliriz?",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "egitim",
-      "k1_hints": {},
-      "yanit_mesaji": "Eğitim ve öğrenci işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "kurumumuzda öğrenci kayıt sistemi ve sınav takibi istiyoruz",
-          "sector": "egitim",
-          "sub_intent": "egitim.enrollment",
-          "initial_score": 0.7238,
-          "reranker_score": null,
-          "final_score": 0.7238
-        },
-        {
-          "text": "yardımcı olur musunuz öğrenci bilgi sistemi modernizasyon projesi başlatacağız teşekkürler",
-          "sector": "egitim",
-          "sub_intent": "egitim.genel",
-          "initial_score": 0.7162,
-          "reranker_score": null,
-          "final_score": 0.7162
-        },
-        {
-          "text": "üniversite genelinde lms sınav otomasyonu ve veli-öğretmen iletişimini kapsayan bir öğrenci bilgi sistemi kuracağız",
-          "sector": "egitim",
-          "sub_intent": "egitim.lms",
-          "initial_score": 0.7053,
-          "reranker_score": null,
-          "final_score": 0.7053
-        }
-      ]
-    },
     "id": "E04",
     "kategori": "E",
     "girdi_metni": "Değerli iş ortağımız, yükseköğretim kurumumuzun tüm ders kayıt, sınav otomasyonu ve öğrenci devamsızlık takibini tek çatı altında toplayan öğrenci bilgi sistemini yenilemek niyetindeyiz. Bulut tabanlı bu sistemin demo sunumunu ne zaman organize edebiliriz?",
@@ -2210,63 +490,10 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.85,
     "katman": "bge-m3",
-    "sure_ms": 252.32,
+    "sure_ms": 259.8,
     "basarili": true
   },
   {
-    "case": {
-      "id": "E05",
-      "kategori": "E",
-      "tip": "tartışmalı",
-      "girdi": "Firmamız sağlık turizmi alanında yeni bir yatırım yapmakta olup, yabancı hastaların ülkemizdeki hastane ve otel konaklama rezervasyonlarını entegre bir biçimde takip edecekleri bir portal aramaktadır. Bu yönde bir çözümünüz bulunmakta mıdır?",
-      "beklenen_sektor": "tartışmalı",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "Firmamız sağlık turizmi alanında yeni bir yatırım yapmakta olup, yabancı hastaların ülkemizdeki hastane ve otel konaklama rezervasyonlarını entegre bir biçimde takip edecekleri bir portal aramaktadır. Bu yönde bir çözümünüz bulunmakta mıdır?",
-      "normalize_girdi": "firmamız sağlık turizmi alanında yatırım yapmakta olup yabancı hastaların ülkemizdeki hastane ve otel konaklama rezervasyonlarını entegre bir biçimde takip edecekleri bir portal aramaktadır bu yönde bir çözümünüz bulunmakta mıdır",
-      "sektor": "turizm",
-      "mod": "K2",
-      "skor": 0.95,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Firmamız sağlık turizmi alanında yeni bir yatırım yapmakta olup, yabancı hastaların ülkemizdeki hastane ve otel konaklama rezervasyonlarını entegre bir biçimde takip edecekleri bir portal aramaktadır. Bu yönde bir çözümünüz bulunmakta mıdır?",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "turizm",
-      "k1_hints": {},
-      "yanit_mesaji": "Turizm ve konaklama işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "seyahat acentemiz için check-in ve rezervasyon takip çözümü arıyoruz teşekkürler",
-          "sector": "turizm",
-          "sub_intent": "turizm.reservation",
-          "initial_score": 0.7123,
-          "reranker_score": null,
-          "final_score": 0.7123
-        },
-        {
-          "text": "seyahat acentemiz için check-in ve rezervasyon takip çözümü arıyoruz yazar mısın",
-          "sector": "turizm",
-          "sub_intent": "turizm.reservation",
-          "initial_score": 0.7053,
-          "reranker_score": null,
-          "final_score": 0.7053
-        },
-        {
-          "text": "seyahat acentemiz için check-in ve rezervasyon takip çözümü arıyoruz rica ederim",
-          "sector": "turizm",
-          "sub_intent": "turizm.reservation",
-          "initial_score": 0.7049,
-          "reranker_score": null,
-          "final_score": 0.7049
-        }
-      ]
-    },
     "id": "E05",
     "kategori": "E",
     "girdi_metni": "Firmamız sağlık turizmi alanında yeni bir yatırım yapmakta olup, yabancı hastaların ülkemizdeki hastane ve otel konaklama rezervasyonlarını entegre bir biçimde takip edecekleri bir portal aramaktadır. Bu yönde bir çözümünüz bulunmakta mıdır?",
@@ -2276,38 +503,10 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.95,
     "katman": "bge-m3",
-    "sure_ms": 181.73,
+    "sure_ms": 189.28,
     "basarili": true
   },
   {
-    "case": {
-      "id": "E06",
-      "kategori": "E",
-      "tip": "uzun",
-      "girdi": "Kamu kurumlarına eğitim ve danışmanlık hizmeti sunan bir limited şirketiz. Personellerimizin online sertifika süreçlerini, e-öğrenme içeriklerini ve sınav aşamalarını yöneteceğimiz bir LMS platformu kurmak istiyoruz. Detayları görüşmek üzere toplantı talep ediyoruz.",
-      "beklenen_sektor": "eğitim",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "Kamu kurumlarına eğitim ve danışmanlık hizmeti sunan bir limited şirketiz. Personellerimizin online sertifika süreçlerini, e-öğrenme içeriklerini ve sınav aşamalarını yöneteceğimiz bir LMS platformu kurmak istiyoruz. Detayları görüşmek üzere toplantı talep ediyoruz.",
-      "normalize_girdi": "Kamu kurumlarına eğitim ve danışmanlık hizmeti sunan bir limited şirketiz. Personellerimizin online sertifika süreçlerini, e-öğrenme içeriklerini ve sınav aşamalarını yöneteceğimiz bir LMS platformu kurmak istiyoruz. Detayları görüşmek üzere toplantı talep ediyoruz.",
-      "sektor": "egitim",
-      "mod": "K1",
-      "skor": 0.99,
-      "yontem": "kisaltma",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=rule",
-      "temiz_sorgu": "Kamu kurumlarına eğitim ve danışmanlık hizmeti sunan bir limited şirketiz. Personellerimizin online sertifika süreçlerini, e-öğrenme içeriklerini ve sınav aşamalarını yöneteceğimiz bir LMS platformu kurmak istiyoruz. Detayları görüşmek üzere toplantı talep ediyoruz.",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "egitim",
-      "k1_hints": {},
-      "yanit_mesaji": "",
-      "top_candidates": []
-    },
     "id": "E06",
     "kategori": "E",
     "girdi_metni": "Kamu kurumlarına eğitim ve danışmanlık hizmeti sunan bir limited şirketiz. Personellerimizin online sertifika süreçlerini, e-öğrenme içeriklerini ve sınav aşamalarını yöneteceğimiz bir LMS platformu kurmak istiyoruz. Detayları görüşmek üzere toplantı talep ediyoruz.",
@@ -2317,63 +516,10 @@
     "tespit_edilen_mod": "K1",
     "skor": 0.99,
     "katman": "kisaltma",
-    "sure_ms": 0.17,
+    "sure_ms": 0.25,
     "basarili": false
   },
   {
-    "case": {
-      "id": "E08",
-      "kategori": "E",
-      "tip": "uzun",
-      "girdi": "Klinik zincirimizin operasyonel verimliliğini artırmak amacıyla, hekimlerin çalışma takvimlerini, hasta muayene kayıtlarını ve laboratuvar sonuç entegrasyonlarını kapsayan bir sağlık bilişimi çözümü aramaktayız. Desteğinizi bekliyoruz.",
-      "beklenen_sektor": "sağlık",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "Klinik zincirimizin operasyonel verimliliğini artırmak amacıyla, hekimlerin çalışma takvimlerini, hasta muayene kayıtlarını ve laboratuvar sonuç entegrasyonlarını kapsayan bir sağlık bilişimi çözümü aramaktayız. Desteğinizi bekliyoruz.",
-      "normalize_girdi": "klinik zincirimizin operasyonel verimliliğini artırmak amacıyla hekimlerin çalışma takvimlerini hasta muayene kayıtlarını ve laboratuvar sonuç entegrasyonlarını kapsayan bir sağlık bilişimi çözümü aramaktayız desteğinizi bekliyoruz",
-      "sektor": "saglik",
-      "mod": "K2",
-      "skor": 0.85,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Klinik zincirimizin operasyonel verimliliğini artırmak amacıyla, hekimlerin çalışma takvimlerini, hasta muayene kayıtlarını ve laboratuvar sonuç entegrasyonlarını kapsayan bir sağlık bilişimi çözümü aramaktayız. Desteğinizi bekliyoruz.",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "saglik",
-      "k1_hints": {},
-      "yanit_mesaji": "Sağlık hizmetleri ve randevu işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "yardımcı olur musunuz hekim takvimi ve muayene kaydı tutacak bir klinik otomasyon sistemi arıyoruz teşekkürler",
-          "sector": "saglik",
-          "sub_intent": "saglik.clinic",
-          "initial_score": 0.7494,
-          "reranker_score": null,
-          "final_score": 0.7494
-        },
-        {
-          "text": "yardımcı olur musunuz kliniğimizde hekim programları ve poliklinik iş akışını dijitalleştirmek teşekkürler",
-          "sector": "saglik",
-          "sub_intent": "saglik.randevu",
-          "initial_score": 0.7453,
-          "reranker_score": null,
-          "final_score": 0.7453
-        },
-        {
-          "text": "selam hekim takvimi ve muayene kaydı tutacak bir klinik otomasyon sistemi arıyoruz rica ederim",
-          "sector": "saglik",
-          "sub_intent": "saglik.clinic",
-          "initial_score": 0.7452,
-          "reranker_score": null,
-          "final_score": 0.7452
-        }
-      ]
-    },
     "id": "E08",
     "kategori": "E",
     "girdi_metni": "Klinik zincirimizin operasyonel verimliliğini artırmak amacıyla, hekimlerin çalışma takvimlerini, hasta muayene kayıtlarını ve laboratuvar sonuç entegrasyonlarını kapsayan bir sağlık bilişimi çözümü aramaktayız. Desteğinizi bekliyoruz.",
@@ -2383,63 +529,10 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.85,
     "katman": "bge-m3",
-    "sure_ms": 184.86,
+    "sure_ms": 192.73,
     "basarili": true
   },
   {
-    "case": {
-      "id": "E09",
-      "kategori": "E",
-      "tip": "uzun",
-      "girdi": "Yeni açılacak tatil köyümüz için online rezervasyon altyapısı, misafir check-in süreçleri ve oda durum kartlarını yöneteceğimiz bir otel yazılımı teklifi almak istiyoruz. Kurulum süresi ve entegrasyon desteği kritik önemdedir.",
-      "beklenen_sektor": "turizm",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "Yeni açılacak tatil köyümüz için online rezervasyon altyapısı, misafir check-in süreçleri ve oda durum kartlarını yöneteceğimiz bir otel yazılımı teklifi almak istiyoruz. Kurulum süresi ve entegrasyon desteği kritik önemdedir.",
-      "normalize_girdi": "yeni açılacak tatil köyümüz için online rezervasyon altyapısı misafir check-in süreçleri ve oda durum kartlarını yöneteceğimiz bir otel yazılımı teklifi almak kurulum süresi ve entegrasyon desteği kritik önemdedir",
-      "sektor": "turizm",
-      "mod": "HAFIZA",
-      "skor": 0.95,
-      "yontem": "hafiza",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Yeni açılacak tatil köyümüz için online rezervasyon altyapısı, misafir check-in süreçleri ve oda durum kartlarını yöneteceğimiz bir otel yazılımı teklifi almak istiyoruz. Kurulum süresi ve entegrasyon desteği kritik önemdedir.",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "turizm",
-      "k1_hints": {},
-      "yanit_mesaji": "Turizm ve konaklama işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "tatil köyümüz için online rezervasyon ve konaklama yönetim sistemi ihtiyacımız var",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.769,
-          "reranker_score": null,
-          "final_score": 0.769
-        },
-        {
-          "text": "yardımcı olur musunuz tatil köyümüz için online rezervasyon ve konaklama yönetim sistemi arıyoruz acil",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.7226,
-          "reranker_score": null,
-          "final_score": 0.7226
-        },
-        {
-          "text": "tatil köyümüz için online rezervasyon ve konaklama yönetim sistemi arıyoruz teşekkürler",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.7185,
-          "reranker_score": null,
-          "final_score": 0.7185
-        }
-      ]
-    },
     "id": "E09",
     "kategori": "E",
     "girdi_metni": "Yeni açılacak tatil köyümüz için online rezervasyon altyapısı, misafir check-in süreçleri ve oda durum kartlarını yöneteceğimiz bir otel yazılımı teklifi almak istiyoruz. Kurulum süresi ve entegrasyon desteği kritik önemdedir.",
@@ -2449,63 +542,10 @@
     "tespit_edilen_mod": "HAFIZA",
     "skor": 0.95,
     "katman": "hafiza",
-    "sure_ms": 196.18,
+    "sure_ms": 202.27,
     "basarili": false
   },
   {
-    "case": {
-      "id": "F01",
-      "kategori": "F",
-      "tip": "tuzak",
-      "girdi": "Sağlıklı bir iş ortaklığı kurmak istiyoruz.",
-      "beklenen_sektor": "belirsiz",
-      "beklenen_mod": "FB"
-    },
-    "yanit": {
-      "girdi": "Sağlıklı bir iş ortaklığı kurmak istiyoruz.",
-      "normalize_girdi": "sağlıklı bir iş ortaklığı kurmak",
-      "sektor": "saglik",
-      "mod": "K2",
-      "skor": 0.5721691164768836,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Sağlıklı bir iş ortaklığı kurmak istiyoruz.",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "saglik",
-      "k1_hints": {},
-      "yanit_mesaji": "Sağlık hizmetleri ve randevu işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "hello looking for a healthcare data interoperability platform please let us know",
-          "sector": "saglik",
-          "sub_intent": "saglik.genel",
-          "initial_score": 0.5722,
-          "reranker_score": null,
-          "final_score": 0.5722
-        },
-        {
-          "text": "Looking for a reliable SaaS vendor for enterprise CRM solutions.",
-          "sector": "bilisim",
-          "sub_intent": "bilisim.saas",
-          "initial_score": 0.5693,
-          "reranker_score": null,
-          "final_score": 0.5693
-        },
-        {
-          "text": "selam siber güvenlik altyapısı kurmak",
-          "sector": "bilisim",
-          "sub_intent": "bilisim.api",
-          "initial_score": 0.5644,
-          "reranker_score": null,
-          "final_score": 0.5644
-        }
-      ]
-    },
     "id": "F01",
     "kategori": "F",
     "girdi_metni": "Sağlıklı bir iş ortaklığı kurmak istiyoruz.",
@@ -2513,65 +553,12 @@
     "tespit_edilen_sektor": "saglik",
     "beklenen_mod": "FB",
     "tespit_edilen_mod": "K2",
-    "skor": 0.5721691164768836,
+    "skor": 0.581899,
     "katman": "bge-m3",
-    "sure_ms": 107.48,
+    "sure_ms": 102.29,
     "basarili": false
   },
   {
-    "case": {
-      "id": "F02",
-      "kategori": "F",
-      "tip": "tuzak",
-      "girdi": "Turistik bir bölgede ofisimiz var ama yazılım hizmeti arıyoruz.",
-      "beklenen_sektor": "belirsiz",
-      "beklenen_mod": "FB"
-    },
-    "yanit": {
-      "girdi": "Turistik bir bölgede ofisimiz var ama yazılım hizmeti arıyoruz.",
-      "normalize_girdi": "turistik bir bölgede ofisimiz var ama yazılım hizmeti arıyoruz",
-      "sektor": "turizm",
-      "mod": "K2",
-      "skor": 0.8934907050880615,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Turistik bir bölgede ofisimiz var ama yazılım hizmeti arıyoruz.",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "turizm",
-      "k1_hints": {},
-      "yanit_mesaji": "Turizm ve konaklama işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "turizmle uğraşan bir şirketiz yazılım hizmeti arıyoruz",
-          "sector": "turizm",
-          "sub_intent": "turizm.genel",
-          "initial_score": 0.8935,
-          "reranker_score": null,
-          "final_score": 0.8935
-        },
-        {
-          "text": "turizmle uğraşan bir şirketiz yazılım hizmeti arıyoruz rica ederim",
-          "sector": "turizm",
-          "sub_intent": "turizm.genel",
-          "initial_score": 0.8883,
-          "reranker_score": null,
-          "final_score": 0.8883
-        },
-        {
-          "text": "turizmle uğraşan bir şirketiz yazılım hizmeti arıyoruz acil",
-          "sector": "turizm",
-          "sub_intent": "turizm.genel",
-          "initial_score": 0.8789,
-          "reranker_score": null,
-          "final_score": 0.8789
-        }
-      ]
-    },
     "id": "F02",
     "kategori": "F",
     "girdi_metni": "Turistik bir bölgede ofisimiz var ama yazılım hizmeti arıyoruz.",
@@ -2579,65 +566,12 @@
     "tespit_edilen_sektor": "turizm",
     "beklenen_mod": "FB",
     "tespit_edilen_mod": "K2",
-    "skor": 0.8934907050880615,
+    "skor": 0.893491,
     "katman": "bge-m3",
-    "sure_ms": 116.85,
+    "sure_ms": 112.61,
     "basarili": false
   },
   {
-    "case": {
-      "id": "F03",
-      "kategori": "F",
-      "tip": "tuzak",
-      "girdi": "Eğitimli personel arıyoruz, işe alım konusunda yardımcı olur musunuz?",
-      "beklenen_sektor": "belirsiz",
-      "beklenen_mod": "FB"
-    },
-    "yanit": {
-      "girdi": "Eğitimli personel arıyoruz, işe alım konusunda yardımcı olur musunuz?",
-      "normalize_girdi": "eğitimli personel arıyoruz işe alım konusunda yardımcı olur musunuz",
-      "sektor": "egitim",
-      "mod": "K2",
-      "skor": 0.7337518214431141,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Eğitimli personel arıyoruz, işe alım konusunda yardımcı olur musunuz?",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "egitim",
-      "k1_hints": {},
-      "yanit_mesaji": "Eğitim ve öğrenci işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "yardımcı olur musunuz personel eğitimi için uzaktan öğrenme platformu ve içerik yönetim sistemi arıyoruz acil",
-          "sector": "egitim",
-          "sub_intent": "egitim.genel",
-          "initial_score": 0.7338,
-          "reranker_score": null,
-          "final_score": 0.7338
-        },
-        {
-          "text": "yardımcı olur musunuz kamu kurumuna eğitim ve danışmanlık hizmeti sunuyoruz çalışan lmse ihtiyacımız var teşekkürler",
-          "sector": "egitim",
-          "sub_intent": "egitim.lms",
-          "initial_score": 0.732,
-          "reranker_score": null,
-          "final_score": 0.732
-        },
-        {
-          "text": "yardımcı olur musunuz nasıl çalışıyorsunuz bilgi teşekkürler",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.7166,
-          "reranker_score": null,
-          "final_score": 0.7166
-        }
-      ]
-    },
     "id": "F03",
     "kategori": "F",
     "girdi_metni": "Eğitimli personel arıyoruz, işe alım konusunda yardımcı olur musunuz?",
@@ -2645,40 +579,12 @@
     "tespit_edilen_sektor": "egitim",
     "beklenen_mod": "FB",
     "tespit_edilen_mod": "K2",
-    "skor": 0.7337518214431141,
+    "skor": 0.85,
     "katman": "bge-m3",
-    "sure_ms": 120.67,
+    "sure_ms": 112.32,
     "basarili": false
   },
   {
-    "case": {
-      "id": "F04",
-      "kategori": "F",
-      "tip": "tuzak",
-      "girdi": "Savunma mekanizmaları güçlü bir yazılım mimarisi tasarlamalıyız.",
-      "beklenen_sektor": "belirsiz",
-      "beklenen_mod": "FB"
-    },
-    "yanit": {
-      "girdi": "Savunma mekanizmaları güçlü bir yazılım mimarisi tasarlamalıyız.",
-      "normalize_girdi": "Savunma mekanizmaları güçlü bir yazılım mimarisi tasarlamalıyız.",
-      "sektor": "belirsiz",
-      "mod": "FB",
-      "skor": 0.15,
-      "yontem": "kisaltma",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=rule",
-      "temiz_sorgu": "Savunma mekanizmaları güçlü bir yazılım mimarisi tasarlamalıyız.",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Bu konuda size doğrudan yardımcı olamıyorum. Size Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanlarında hizmet verebilirim.",
-      "top_candidates": []
-    },
     "id": "F04",
     "kategori": "F",
     "girdi_metni": "Savunma mekanizmaları güçlü bir yazılım mimarisi tasarlamalıyız.",
@@ -2692,59 +598,6 @@
     "basarili": true
   },
   {
-    "case": {
-      "id": "F05",
-      "kategori": "F",
-      "tip": "tuzak",
-      "girdi": "Hastane köşelerinde beklemek istemediğimiz için evde bakım hizmetlerine yöneldik.",
-      "beklenen_sektor": "belirsiz",
-      "beklenen_mod": "FB"
-    },
-    "yanit": {
-      "girdi": "Hastane köşelerinde beklemek istemediğimiz için evde bakım hizmetlerine yöneldik.",
-      "normalize_girdi": "hastane köşelerinde beklemek istemediğimiz için evde bakım hizmetlerine yöneldik",
-      "sektor": "belirsiz",
-      "mod": "FB",
-      "skor": 0.6369307230988431,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Hastane köşelerinde beklemek istemediğimiz için evde bakım hizmetlerine yöneldik.",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Bu konuda size doğrudan yardımcı olamıyorum. Size Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanlarında hizmet verebilirim.",
-      "top_candidates": [
-        {
-          "text": "We are not a clinic but we definitely need doctor appointment scheduling software.",
-          "sector": "saglik",
-          "sub_intent": "saglik.genel",
-          "initial_score": 0.6369,
-          "reranker_score": null,
-          "final_score": 0.6369
-        },
-        {
-          "text": "Yalnızca hastane değil, tıp merkezlerimiz için de hastane otomasyonu arıyoruz.",
-          "sector": "saglik",
-          "sub_intent": "saglik.hospital",
-          "initial_score": 0.6289,
-          "reranker_score": null,
-          "final_score": 0.6289
-        },
-        {
-          "text": "poliklinik altyapısı kurarak randevu ve takip süreçlerini otomatikleştirmek istiyoruz",
-          "sector": "saglik",
-          "sub_intent": "saglik.randevu",
-          "initial_score": 0.621,
-          "reranker_score": null,
-          "final_score": 0.621
-        }
-      ]
-    },
     "id": "F05",
     "kategori": "F",
     "girdi_metni": "Hastane köşelerinde beklemek istemediğimiz için evde bakım hizmetlerine yöneldik.",
@@ -2752,65 +605,12 @@
     "tespit_edilen_sektor": "belirsiz",
     "beklenen_mod": "FB",
     "tespit_edilen_mod": "FB",
-    "skor": 0.6369307230988431,
+    "skor": 0.625496,
     "katman": "bge-m3",
-    "sure_ms": 129.34,
+    "sure_ms": 119.35,
     "basarili": true
   },
   {
-    "case": {
-      "id": "F06",
-      "kategori": "F",
-      "tip": "tuzak",
-      "girdi": "Otel konforunda bir çalışma ortamı sunan yeni ofisimize bekleriz.",
-      "beklenen_sektor": "belirsiz",
-      "beklenen_mod": "FB"
-    },
-    "yanit": {
-      "girdi": "Otel konforunda bir çalışma ortamı sunan yeni ofisimize bekleriz.",
-      "normalize_girdi": "otel konforunda bir çalışma ortamı sunan yeni ofisimize bekleriz",
-      "sektor": "turizm",
-      "mod": "K2",
-      "skor": 0.95,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Otel konforunda bir çalışma ortamı sunan yeni ofisimize bekleriz.",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "turizm",
-      "k1_hints": {},
-      "yanit_mesaji": "Turizm ve konaklama işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "otel rezervasyon sistemimizi yenilemek teşekkürler",
-          "sector": "turizm",
-          "sub_intent": "turizm.reservation",
-          "initial_score": 0.6613,
-          "reranker_score": null,
-          "final_score": 0.6613
-        },
-        {
-          "text": "we need a hotel reservation and property management system looking forward to your response",
-          "sector": "turizm",
-          "sub_intent": "turizm.hotel",
-          "initial_score": 0.6454,
-          "reranker_score": null,
-          "final_score": 0.6454
-        },
-        {
-          "text": "we are a travel agency looking for a booking and check-in management platform looking forward to your response",
-          "sector": "turizm",
-          "sub_intent": "turizm.checkin",
-          "initial_score": 0.6403,
-          "reranker_score": null,
-          "final_score": 0.6403
-        }
-      ]
-    },
     "id": "F06",
     "kategori": "F",
     "girdi_metni": "Otel konforunda bir çalışma ortamı sunan yeni ofisimize bekleriz.",
@@ -2820,38 +620,10 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.95,
     "katman": "bge-m3",
-    "sure_ms": 134.41,
+    "sure_ms": 113.98,
     "basarili": false
   },
   {
-    "case": {
-      "id": "F07",
-      "kategori": "F",
-      "tip": "tuzak",
-      "girdi": "Askeri disiplinle çalışan bir ekibimiz var, projeyi zamanında bitireceğiz.",
-      "beklenen_sektor": "belirsiz",
-      "beklenen_mod": "FB"
-    },
-    "yanit": {
-      "girdi": "Askeri disiplinle çalışan bir ekibimiz var, projeyi zamanında bitireceğiz.",
-      "normalize_girdi": "Askeri disiplinle çalışan bir ekibimiz var, projeyi zamanında bitireceğiz.",
-      "sektor": "belirsiz",
-      "mod": "FB",
-      "skor": 0.15,
-      "yontem": "kisaltma",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=rule",
-      "temiz_sorgu": "Askeri disiplinle çalışan bir ekibimiz var, projeyi zamanında bitireceğiz.",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Bu konuda size doğrudan yardımcı olamıyorum. Size Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanlarında hizmet verebilirim.",
-      "top_candidates": []
-    },
     "id": "F07",
     "kategori": "F",
     "girdi_metni": "Askeri disiplinle çalışan bir ekibimiz var, projeyi zamanında bitireceğiz.",
@@ -2865,323 +637,58 @@
     "basarili": true
   },
   {
-    "case": {
-      "id": "F08",
-      "kategori": "F",
-      "tip": "tuzak",
-      "girdi": "Bu ders bize büyük bir hayat eğitimi oldu gerçekten.",
-      "beklenen_sektor": "belirsiz",
-      "beklenen_mod": "FB"
-    },
-    "yanit": {
-      "girdi": "Bu ders bize büyük bir hayat eğitimi oldu gerçekten.",
-      "normalize_girdi": "bu ders büyük bir hayat eğitimi oldu gerçekten",
-      "sektor": "egitim",
-      "mod": "K2",
-      "skor": 0.5702380707931007,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Bu ders bize büyük bir hayat eğitimi oldu gerçekten.",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "egitim",
-      "k1_hints": {},
-      "yanit_mesaji": "Eğitim ve öğrenci işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "uzaktan eğitim platformu teşekkürler",
-          "sector": "egitim",
-          "sub_intent": "egitim.genel",
-          "initial_score": 0.5702,
-          "reranker_score": null,
-          "final_score": 0.5702
-        },
-        {
-          "text": "ders programı ve sınıf planlama yazılımı teşekkürler",
-          "sector": "egitim",
-          "sub_intent": "egitim.genel",
-          "initial_score": 0.562,
-          "reranker_score": null,
-          "final_score": 0.562
-        },
-        {
-          "text": "hava çok güzeldi teşekkürler",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.5552,
-          "reranker_score": null,
-          "final_score": 0.5552
-        }
-      ]
-    },
     "id": "F08",
     "kategori": "F",
     "girdi_metni": "Bu ders bize büyük bir hayat eğitimi oldu gerçekten.",
     "beklenen_sektor": "belirsiz",
-    "tespit_edilen_sektor": "egitim",
+    "tespit_edilen_sektor": "belirsiz",
     "beklenen_mod": "FB",
-    "tespit_edilen_mod": "K2",
-    "skor": 0.5702380707931007,
+    "tespit_edilen_mod": "FB",
+    "skor": 0.565642,
     "katman": "bge-m3",
-    "sure_ms": 132.2,
-    "basarili": false
+    "sure_ms": 107.34,
+    "basarili": true
   },
   {
-    "case": {
-      "id": "F09",
-      "kategori": "F",
-      "tip": "tuzak",
-      "girdi": "Sağlığınızı korumak için günde en az iki litre su içmelisiniz.",
-      "beklenen_sektor": "belirsiz",
-      "beklenen_mod": "FB"
-    },
-    "yanit": {
-      "girdi": "Sağlığınızı korumak için günde en az iki litre su içmelisiniz.",
-      "normalize_girdi": "sağlığınızı korumak için günde en az iki litre su içmelisiniz",
-      "sektor": "belirsiz",
-      "mod": "FB",
-      "skor": 0.5220114459405663,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Sağlığınızı korumak için günde en az iki litre su içmelisiniz.",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Bu konuda size doğrudan yardımcı olamıyorum. Size Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanlarında hizmet verebilirim.",
-      "top_candidates": [
-        {
-          "text": "good day hope you are doing well",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.522,
-          "reranker_score": null,
-          "final_score": 0.522
-        },
-        {
-          "text": "good morning how are you today",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.5071,
-          "reranker_score": null,
-          "final_score": 0.5071
-        },
-        {
-          "text": "hello i would like some general information please any information would help",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.4972,
-          "reranker_score": null,
-          "final_score": 0.4972
-        }
-      ]
-    },
     "id": "F09",
     "kategori": "F",
     "girdi_metni": "Sağlığınızı korumak için günde en az iki litre su içmelisiniz.",
     "beklenen_sektor": "belirsiz",
-    "tespit_edilen_sektor": "belirsiz",
+    "tespit_edilen_sektor": "eglence",
     "beklenen_mod": "FB",
-    "tespit_edilen_mod": "FB",
-    "skor": 0.5220114459405663,
+    "tespit_edilen_mod": "K2",
+    "skor": 0.471064,
     "katman": "bge-m3",
-    "sure_ms": 161.51,
-    "basarili": true
+    "sure_ms": 116.5,
+    "basarili": false
   },
   {
-    "case": {
-      "id": "F10",
-      "kategori": "F",
-      "tip": "tuzak",
-      "girdi": "Turizm cenneti olan ülkemizde yeni ofisler açmayı hedefliyoruz.",
-      "beklenen_sektor": "belirsiz",
-      "beklenen_mod": "FB"
-    },
-    "yanit": {
-      "girdi": "Turizm cenneti olan ülkemizde yeni ofisler açmayı hedefliyoruz.",
-      "normalize_girdi": "turizm cenneti olan ülkemizde yeni ofisler açmayı hedefliyoruz",
-      "sektor": "belirsiz",
-      "mod": "FB",
-      "skor": 0.6130348443984985,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Turizm cenneti olan ülkemizde yeni ofisler açmayı hedefliyoruz.",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Bu konuda size doğrudan yardımcı olamıyorum. Size Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanlarında hizmet verebilirim.",
-      "top_candidates": [
-        {
-          "text": "misafir memnuniyet ve geri bildirim sistemi kuracağız",
-          "sector": "turizm",
-          "sub_intent": "turizm.genel",
-          "initial_score": 0.613,
-          "reranker_score": null,
-          "final_score": 0.613
-        },
-        {
-          "text": "turizmle uğraşan bir şirketiz yazılım hizmeti arıyoruz rica ederim",
-          "sector": "turizm",
-          "sub_intent": "turizm.genel",
-          "initial_score": 0.611,
-          "reranker_score": null,
-          "final_score": 0.611
-        },
-        {
-          "text": "turizmle uğraşan bir şirketiz yazılım hizmeti arıyoruz",
-          "sector": "turizm",
-          "sub_intent": "turizm.genel",
-          "initial_score": 0.6097,
-          "reranker_score": null,
-          "final_score": 0.6097
-        }
-      ]
-    },
     "id": "F10",
     "kategori": "F",
     "girdi_metni": "Turizm cenneti olan ülkemizde yeni ofisler açmayı hedefliyoruz.",
     "beklenen_sektor": "belirsiz",
-    "tespit_edilen_sektor": "belirsiz",
+    "tespit_edilen_sektor": "turizm",
     "beklenen_mod": "FB",
-    "tespit_edilen_mod": "FB",
-    "skor": 0.6130348443984985,
+    "tespit_edilen_mod": "K2",
+    "skor": 0.85,
     "katman": "bge-m3",
-    "sure_ms": 126.53,
-    "basarili": true
+    "sure_ms": 118.53,
+    "basarili": false
   },
   {
-    "case": {
-      "id": "F11",
-      "kategori": "F",
-      "tip": "tuzak",
-      "girdi": "Çalışanlarımız için çok eğlenceli bir iş ortamı sunuyoruz.",
-      "beklenen_sektor": "belirsiz",
-      "beklenen_mod": "FB"
-    },
-    "yanit": {
-      "girdi": "Çalışanlarımız için çok eğlenceli bir iş ortamı sunuyoruz.",
-      "normalize_girdi": "çalışanlarımız için çok eğlenceli bir iş ortamı sunuyoruz",
-      "sektor": "belirsiz",
-      "mod": "FB",
-      "skor": 0.6363289735513326,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Çalışanlarımız için çok eğlenceli bir iş ortamı sunuyoruz.",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Bu konuda size doğrudan yardımcı olamıyorum. Size Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanlarında hizmet verebilirim.",
-      "top_candidates": [
-        {
-          "text": "we are wondering about how does your company work",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.6363,
-          "reranker_score": null,
-          "final_score": 0.6363
-        },
-        {
-          "text": "how does your company work please let us know",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.6186,
-          "reranker_score": null,
-          "final_score": 0.6186
-        },
-        {
-          "text": "nasıl çalışıyorsunuz bilgi teşekkürler",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.6129,
-          "reranker_score": null,
-          "final_score": 0.6129
-        }
-      ]
-    },
     "id": "F11",
     "kategori": "F",
     "girdi_metni": "Çalışanlarımız için çok eğlenceli bir iş ortamı sunuyoruz.",
     "beklenen_sektor": "belirsiz",
-    "tespit_edilen_sektor": "belirsiz",
+    "tespit_edilen_sektor": "saglik",
     "beklenen_mod": "FB",
-    "tespit_edilen_mod": "FB",
-    "skor": 0.6363289735513326,
+    "tespit_edilen_mod": "K2",
+    "skor": 0.632554,
     "katman": "bge-m3",
-    "sure_ms": 118.82,
-    "basarili": true
+    "sure_ms": 111.43,
+    "basarili": false
   },
   {
-    "case": {
-      "id": "F12",
-      "kategori": "F",
-      "tip": "tuzak",
-      "girdi": "Etkinlik organizasyonuna katılmak bizim için çok eğlenceli bir deneyimdi.",
-      "beklenen_sektor": "belirsiz",
-      "beklenen_mod": "FB"
-    },
-    "yanit": {
-      "girdi": "Etkinlik organizasyonuna katılmak bizim için çok eğlenceli bir deneyimdi.",
-      "normalize_girdi": "etkinlik organizasyonuna katılmak bizim için çok eğlenceli bir deneyimdi",
-      "sektor": "belirsiz",
-      "mod": "FB",
-      "skor": 0.6193112219611616,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Etkinlik organizasyonuna katılmak bizim için çok eğlenceli bir deneyimdi.",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Bu konuda size doğrudan yardımcı olamıyorum. Size Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanlarında hizmet verebilirim.",
-      "top_candidates": [
-        {
-          "text": "hava çok güzeldi teşekkürler",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.6193,
-          "reranker_score": null,
-          "final_score": 0.6193
-        },
-        {
-          "text": "lütfen etkinlik biletleme yazılımı",
-          "sector": "eglence",
-          "sub_intent": "eglence.genel",
-          "initial_score": 0.6034,
-          "reranker_score": null,
-          "final_score": 0.6034
-        },
-        {
-          "text": "lütfen etkinlik biletleme platformu",
-          "sector": "eglence",
-          "sub_intent": "eglence.genel",
-          "initial_score": 0.5997,
-          "reranker_score": null,
-          "final_score": 0.5997
-        }
-      ]
-    },
     "id": "F12",
     "kategori": "F",
     "girdi_metni": "Etkinlik organizasyonuna katılmak bizim için çok eğlenceli bir deneyimdi.",
@@ -3189,131 +696,25 @@
     "tespit_edilen_sektor": "belirsiz",
     "beklenen_mod": "FB",
     "tespit_edilen_mod": "FB",
-    "skor": 0.6193112219611616,
+    "skor": 0.599768,
     "katman": "bge-m3",
-    "sure_ms": 116.03,
+    "sure_ms": 114.61,
     "basarili": true
   },
   {
-    "case": {
-      "id": "F13",
-      "kategori": "F",
-      "tip": "tuzak",
-      "girdi": "Bilişim gibi hızlı büyüyen bir sektörde olmak istiyoruz ama biz aslında bir çiftlik işletmesiyiz.",
-      "beklenen_sektor": "belirsiz",
-      "beklenen_mod": "FB"
-    },
-    "yanit": {
-      "girdi": "Bilişim gibi hızlı büyüyen bir sektörde olmak istiyoruz ama biz aslında bir çiftlik işletmesiyiz.",
-      "normalize_girdi": "bilişim gibi hızlı büyüyen bir sektörde olmak ama biz aslında bir çiftlik işletmesiyiz",
-      "sektor": "turizm",
-      "mod": "K2",
-      "skor": 0.5661971569061279,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Bilişim gibi hızlı büyüyen bir sektörde olmak istiyoruz ama biz aslında bir çiftlik işletmesiyiz.",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "turizm",
-      "k1_hints": {},
-      "yanit_mesaji": "Turizm ve konaklama işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "turizmle uğraşan bir şirketiz yazılım hizmeti ihtiyacımız var",
-          "sector": "turizm",
-          "sub_intent": "turizm.genel",
-          "initial_score": 0.5662,
-          "reranker_score": null,
-          "final_score": 0.5662
-        },
-        {
-          "text": "Saglik sektorunde otomasyon projeleri gelistiriyoruz.",
-          "sector": "saglik",
-          "sub_intent": "saglik.genel",
-          "initial_score": 0.5461,
-          "reranker_score": null,
-          "final_score": 0.5461
-        },
-        {
-          "text": "turizmle uğraşan bir şirketiz yazılım hizmeti arıyoruz yazar mısın",
-          "sector": "turizm",
-          "sub_intent": "turizm.genel",
-          "initial_score": 0.5428,
-          "reranker_score": null,
-          "final_score": 0.5428
-        }
-      ]
-    },
     "id": "F13",
     "kategori": "F",
     "girdi_metni": "Bilişim gibi hızlı büyüyen bir sektörde olmak istiyoruz ama biz aslında bir çiftlik işletmesiyiz.",
     "beklenen_sektor": "belirsiz",
-    "tespit_edilen_sektor": "turizm",
+    "tespit_edilen_sektor": "bilisim",
     "beklenen_mod": "FB",
     "tespit_edilen_mod": "K2",
-    "skor": 0.5661971569061279,
+    "skor": 0.592931,
     "katman": "bge-m3",
-    "sure_ms": 136.45,
+    "sure_ms": 128.62,
     "basarili": false
   },
   {
-    "case": {
-      "id": "F14",
-      "kategori": "F",
-      "tip": "tuzak",
-      "girdi": "Şirket içi iletişimi güçlendirmek için siber güvenlik lisansı aldık, şimdilik başka bir şey aramıyoruz.",
-      "beklenen_sektor": "belirsiz",
-      "beklenen_mod": "FB"
-    },
-    "yanit": {
-      "girdi": "Şirket içi iletişimi güçlendirmek için siber güvenlik lisansı aldık, şimdilik başka bir şey aramıyoruz.",
-      "normalize_girdi": "şirket içi iletişimi güçlendirmek için siber güvenlik lisansı aldık şimdilik başka bir şey aramıyoruz",
-      "sektor": "belirsiz",
-      "mod": "FB",
-      "skor": 0.6877675652503967,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Şirket içi iletişimi güçlendirmek için siber güvenlik lisansı aldık, şimdilik başka bir şey aramıyoruz.",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Bu konuda size doğrudan yardımcı olamıyorum. Size Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanlarında hizmet verebilirim.",
-      "top_candidates": [
-        {
-          "text": "we need secure military communication software",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.6878,
-          "reranker_score": null,
-          "final_score": 0.6878
-        },
-        {
-          "text": "we need secure military communication software please let us know",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.686,
-          "reranker_score": null,
-          "final_score": 0.686
-        },
-        {
-          "text": "hi there we need secure military communication software urgent",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.6836,
-          "reranker_score": null,
-          "final_score": 0.6836
-        }
-      ]
-    },
     "id": "F14",
     "kategori": "F",
     "girdi_metni": "Şirket içi iletişimi güçlendirmek için siber güvenlik lisansı aldık, şimdilik başka bir şey aramıyoruz.",
@@ -3321,727 +722,142 @@
     "tespit_edilen_sektor": "belirsiz",
     "beklenen_mod": "FB",
     "tespit_edilen_mod": "FB",
-    "skor": 0.6877675652503967,
+    "skor": 0.665532,
     "katman": "bge-m3",
-    "sure_ms": 135.38,
+    "sure_ms": 138.02,
     "basarili": true
   },
   {
-    "case": {
-      "id": "G01",
-      "kategori": "G",
-      "tip": "genel",
-      "girdi": "Fiyat teklifi almak istiyorum",
-      "beklenen_sektor": "belirsiz",
-      "beklenen_mod": "FB"
-    },
-    "yanit": {
-      "girdi": "Fiyat teklifi almak istiyorum",
-      "normalize_girdi": "fiyat teklifi",
-      "sektor": "belirsiz",
-      "mod": "FB",
-      "skor": 0.9999999403953499,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Fiyat teklifi almak istiyorum",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Bu konuda size doğrudan yardımcı olamıyorum. Size Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanlarında hizmet verebilirim.",
-      "top_candidates": [
-        {
-          "text": "fiyat teklifi",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 1.0,
-          "reranker_score": null,
-          "final_score": 1.0
-        },
-        {
-          "text": "fiyat teklifi almak",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.9375,
-          "reranker_score": null,
-          "final_score": 0.9375
-        },
-        {
-          "text": "fiyat teklifi rica ederim",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.9301,
-          "reranker_score": null,
-          "final_score": 0.9301
-        }
-      ]
-    },
     "id": "G01",
     "kategori": "G",
     "girdi_metni": "Fiyat teklifi almak istiyorum",
     "beklenen_sektor": "belirsiz",
-    "tespit_edilen_sektor": "belirsiz",
+    "tespit_edilen_sektor": "turizm",
     "beklenen_mod": "FB",
-    "tespit_edilen_mod": "FB",
-    "skor": 0.9999999403953499,
+    "tespit_edilen_mod": "K2",
+    "skor": 0.672569,
     "katman": "bge-m3",
-    "sure_ms": 121.93,
-    "basarili": true
+    "sure_ms": 97.12,
+    "basarili": false
   },
   {
-    "case": {
-      "id": "G02",
-      "kategori": "G",
-      "tip": "genel",
-      "girdi": "Ne kadar sürer?",
-      "beklenen_sektor": "belirsiz",
-      "beklenen_mod": "FB"
-    },
-    "yanit": {
-      "girdi": "Ne kadar sürer?",
-      "normalize_girdi": "ne kadar sürer",
-      "sektor": "belirsiz",
-      "mod": "FB",
-      "skor": 0.6597427928601043,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Ne kadar sürer?",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Bu konuda size doğrudan yardımcı olamıyorum. Size Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanlarında hizmet verebilirim.",
-      "top_candidates": [
-        {
-          "text": "how is it going",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.6597,
-          "reranker_score": null,
-          "final_score": 0.6597
-        },
-        {
-          "text": "hows it going",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.6354,
-          "reranker_score": null,
-          "final_score": 0.6354
-        },
-        {
-          "text": "what are your support hours",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.6083,
-          "reranker_score": null,
-          "final_score": 0.6083
-        }
-      ]
-    },
     "id": "G02",
     "kategori": "G",
     "girdi_metni": "Ne kadar sürer?",
     "beklenen_sektor": "belirsiz",
-    "tespit_edilen_sektor": "belirsiz",
+    "tespit_edilen_sektor": "saglik",
     "beklenen_mod": "FB",
-    "tespit_edilen_mod": "FB",
-    "skor": 0.6597427928601043,
+    "tespit_edilen_mod": "K2",
+    "skor": 0.528846,
     "katman": "bge-m3",
-    "sure_ms": 320.31,
-    "basarili": true
+    "sure_ms": 97.18,
+    "basarili": false
   },
   {
-    "case": {
-      "id": "G03",
-      "kategori": "G",
-      "tip": "genel",
-      "girdi": "Kiminle görüşebilirim?",
-      "beklenen_sektor": "belirsiz",
-      "beklenen_mod": "FB"
-    },
-    "yanit": {
-      "girdi": "Kiminle görüşebilirim?",
-      "normalize_girdi": "kiminle görüşebilirim",
-      "sektor": "belirsiz",
-      "mod": "FB",
-      "skor": 0.7144148690206019,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Kiminle görüşebilirim?",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Bu konuda size doğrudan yardımcı olamıyorum. Size Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanlarında hizmet verebilirim.",
-      "top_candidates": [
-        {
-          "text": "is anyone available to chat",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.7144,
-          "reranker_score": null,
-          "final_score": 0.7144
-        },
-        {
-          "text": "iletişim numaranız var mı",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.6799,
-          "reranker_score": null,
-          "final_score": 0.6799
-        },
-        {
-          "text": "bana yardım edebilir misin",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.6692,
-          "reranker_score": null,
-          "final_score": 0.6692
-        }
-      ]
-    },
     "id": "G03",
     "kategori": "G",
     "girdi_metni": "Kiminle görüşebilirim?",
     "beklenen_sektor": "belirsiz",
-    "tespit_edilen_sektor": "belirsiz",
+    "tespit_edilen_sektor": "saglik",
     "beklenen_mod": "FB",
-    "tespit_edilen_mod": "FB",
-    "skor": 0.7144148690206019,
+    "tespit_edilen_mod": "K2",
+    "skor": 0.640012,
     "katman": "bge-m3",
-    "sure_ms": 589.28,
-    "basarili": true
+    "sure_ms": 103.28,
+    "basarili": false
   },
   {
-    "case": {
-      "id": "G04",
-      "kategori": "G",
-      "tip": "genel",
-      "girdi": "Fiyatlandırma nasıl?",
-      "beklenen_sektor": "belirsiz",
-      "beklenen_mod": "FB"
-    },
-    "yanit": {
-      "girdi": "Fiyatlandırma nasıl?",
-      "normalize_girdi": "fiyatlandırma nasıl",
-      "sektor": "belirsiz",
-      "mod": "FB",
-      "skor": 0.7188133597373962,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Fiyatlandırma nasıl?",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Bu konuda size doğrudan yardımcı olamıyorum. Size Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanlarında hizmet verebilirim.",
-      "top_candidates": [
-        {
-          "text": "what are your pricing options",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.7188,
-          "reranker_score": null,
-          "final_score": 0.7188
-        },
-        {
-          "text": "fiyat teklifi almak",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.6893,
-          "reranker_score": null,
-          "final_score": 0.6893
-        },
-        {
-          "text": "fiyatlarınız nedir",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.6755,
-          "reranker_score": null,
-          "final_score": 0.6755
-        }
-      ]
-    },
     "id": "G04",
     "kategori": "G",
     "girdi_metni": "Fiyatlandırma nasıl?",
     "beklenen_sektor": "belirsiz",
-    "tespit_edilen_sektor": "belirsiz",
+    "tespit_edilen_sektor": "eglence",
     "beklenen_mod": "FB",
-    "tespit_edilen_mod": "FB",
-    "skor": 0.7188133597373962,
+    "tespit_edilen_mod": "K2",
+    "skor": 0.539465,
     "katman": "bge-m3",
-    "sure_ms": 482.56,
-    "basarili": true
+    "sure_ms": 94.12,
+    "basarili": false
   },
   {
-    "case": {
-      "id": "G05",
-      "kategori": "G",
-      "tip": "genel",
-      "girdi": "Referanslarınız var mı?",
-      "beklenen_sektor": "belirsiz",
-      "beklenen_mod": "FB"
-    },
-    "yanit": {
-      "girdi": "Referanslarınız var mı?",
-      "normalize_girdi": "referanslarınız",
-      "sektor": "belirsiz",
-      "mod": "FB",
-      "skor": 0.6345233539030948,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Referanslarınız var mı?",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Bu konuda size doğrudan yardımcı olamıyorum. Size Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanlarında hizmet verebilirim.",
-      "top_candidates": [
-        {
-          "text": "iletişim numaranız var mı",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.6345,
-          "reranker_score": null,
-          "final_score": 0.6345
-        },
-        {
-          "text": "yardımcı olur musunuz fiyatlarınız nedir yazar mısın",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.5945,
-          "reranker_score": null,
-          "final_score": 0.5945
-        },
-        {
-          "text": "fiyatlarınız nedir rica ederim",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.587,
-          "reranker_score": null,
-          "final_score": 0.587
-        }
-      ]
-    },
     "id": "G05",
     "kategori": "G",
     "girdi_metni": "Referanslarınız var mı?",
     "beklenen_sektor": "belirsiz",
-    "tespit_edilen_sektor": "belirsiz",
+    "tespit_edilen_sektor": "bilisim",
     "beklenen_mod": "FB",
-    "tespit_edilen_mod": "FB",
-    "skor": 0.6345233539030948,
+    "tespit_edilen_mod": "K2",
+    "skor": 0.595047,
     "katman": "bge-m3",
-    "sure_ms": 419.64,
-    "basarili": true
+    "sure_ms": 93.41,
+    "basarili": false
   },
   {
-    "case": {
-      "id": "G06",
-      "kategori": "G",
-      "tip": "genel",
-      "girdi": "Demo yapabilir miyiz?",
-      "beklenen_sektor": "belirsiz",
-      "beklenen_mod": "FB"
-    },
-    "yanit": {
-      "girdi": "Demo yapabilir miyiz?",
-      "normalize_girdi": "demo yapabilir miyiz",
-      "sektor": "belirsiz",
-      "mod": "FB",
-      "skor": 0.8453666223694871,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Demo yapabilir miyiz?",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Bu konuda size doğrudan yardımcı olamıyorum. Size Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanlarında hizmet verebilirim.",
-      "top_candidates": [
-        {
-          "text": "can i request a demo",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.8454,
-          "reranker_score": null,
-          "final_score": 0.8454
-        },
-        {
-          "text": "could you help us with can i request a demo",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.8398,
-          "reranker_score": null,
-          "final_score": 0.8398
-        },
-        {
-          "text": "we are wondering about can i request a demo",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.8365,
-          "reranker_score": null,
-          "final_score": 0.8365
-        }
-      ]
-    },
     "id": "G06",
     "kategori": "G",
     "girdi_metni": "Demo yapabilir miyiz?",
     "beklenen_sektor": "belirsiz",
-    "tespit_edilen_sektor": "belirsiz",
+    "tespit_edilen_sektor": "turizm",
     "beklenen_mod": "FB",
-    "tespit_edilen_mod": "FB",
-    "skor": 0.8453666223694871,
+    "tespit_edilen_mod": "K2",
+    "skor": 0.584559,
     "katman": "bge-m3",
-    "sure_ms": 519.77,
-    "basarili": true
+    "sure_ms": 96.16,
+    "basarili": false
   },
   {
-    "case": {
-      "id": "G07",
-      "kategori": "G",
-      "tip": "genel",
-      "girdi": "Çözümlerinizin kurulum süresi ortalama kaç gündür?",
-      "beklenen_sektor": "belirsiz",
-      "beklenen_mod": "FB"
-    },
-    "yanit": {
-      "girdi": "Çözümlerinizin kurulum süresi ortalama kaç gündür?",
-      "normalize_girdi": "çözümlerinizin kurulum süresi ortalama kaç gündür",
-      "sektor": "belirsiz",
-      "mod": "FB",
-      "skor": 0.6022060513496399,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Çözümlerinizin kurulum süresi ortalama kaç gündür?",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Bu konuda size doğrudan yardımcı olamıyorum. Size Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanlarında hizmet verebilirim.",
-      "top_candidates": [
-        {
-          "text": "what are your support hours",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.6022,
-          "reranker_score": null,
-          "final_score": 0.6022
-        },
-        {
-          "text": "yardımcı olur musunuz savunma sanayi için yerli yazılım çözümü",
-          "sector": "bilisim",
-          "sub_intent": "bilisim.software",
-          "initial_score": 0.5672,
-          "reranker_score": null,
-          "final_score": 0.5672
-        },
-        {
-          "text": "şirketimiz için bulut altyapı yönetimi çözümü",
-          "sector": "bilisim",
-          "sub_intent": "bilisim.api",
-          "initial_score": 0.5624,
-          "reranker_score": null,
-          "final_score": 0.5624
-        }
-      ]
-    },
     "id": "G07",
     "kategori": "G",
     "girdi_metni": "Çözümlerinizin kurulum süresi ortalama kaç gündür?",
     "beklenen_sektor": "belirsiz",
-    "tespit_edilen_sektor": "belirsiz",
+    "tespit_edilen_sektor": "bilisim",
     "beklenen_mod": "FB",
-    "tespit_edilen_mod": "FB",
-    "skor": 0.6022060513496399,
+    "tespit_edilen_mod": "K2",
+    "skor": 0.612388,
     "katman": "bge-m3",
-    "sure_ms": 552.43,
-    "basarili": true
+    "sure_ms": 104.9,
+    "basarili": false
   },
   {
-    "case": {
-      "id": "G08",
-      "kategori": "G",
-      "tip": "genel",
-      "girdi": "Teknik destek hizmetleriniz 7/24 aktif mi?",
-      "beklenen_sektor": "belirsiz",
-      "beklenen_mod": "FB"
-    },
-    "yanit": {
-      "girdi": "Teknik destek hizmetleriniz 7/24 aktif mi?",
-      "normalize_girdi": "teknik destek hizmetleriniz 724 aktif mi",
-      "sektor": "belirsiz",
-      "mod": "FB",
-      "skor": 0.6063232060478217,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Teknik destek hizmetleriniz 7/24 aktif mi?",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Bu konuda size doğrudan yardımcı olamıyorum. Size Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanlarında hizmet verebilirim.",
-      "top_candidates": [
-        {
-          "text": "what are your support hours",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.6063,
-          "reranker_score": null,
-          "final_score": 0.6063
-        },
-        {
-          "text": "sisteminiz nasıl çalışıyor bilgi verebilir misiniz",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.6021,
-          "reranker_score": null,
-          "final_score": 0.6021
-        },
-        {
-          "text": "yardımcı olur musunuz fiyatlarınız nedir",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.5848,
-          "reranker_score": null,
-          "final_score": 0.5848
-        }
-      ]
-    },
     "id": "G08",
     "kategori": "G",
     "girdi_metni": "Teknik destek hizmetleriniz 7/24 aktif mi?",
     "beklenen_sektor": "belirsiz",
-    "tespit_edilen_sektor": "belirsiz",
+    "tespit_edilen_sektor": "bilisim",
     "beklenen_mod": "FB",
-    "tespit_edilen_mod": "FB",
-    "skor": 0.6063232060478217,
+    "tespit_edilen_mod": "K2",
+    "skor": 0.54865,
     "katman": "bge-m3",
-    "sure_ms": 546.69,
-    "basarili": true
+    "sure_ms": 105.02,
+    "basarili": false
   },
   {
-    "case": {
-      "id": "G09",
-      "kategori": "G",
-      "tip": "genel",
-      "girdi": "Ofisiniz nerede bulunuyor?",
-      "beklenen_sektor": "belirsiz",
-      "beklenen_mod": "FB"
-    },
-    "yanit": {
-      "girdi": "Ofisiniz nerede bulunuyor?",
-      "normalize_girdi": "ofisiniz nerede bulunuyor",
-      "sektor": "belirsiz",
-      "mod": "FB",
-      "skor": 0.627874158151499,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Ofisiniz nerede bulunuyor?",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Bu konuda size doğrudan yardımcı olamıyorum. Size Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanlarında hizmet verebilirim.",
-      "top_candidates": [
-        {
-          "text": "how does your company work",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.6279,
-          "reranker_score": null,
-          "final_score": 0.6279
-        },
-        {
-          "text": "ne iş yapıyorsunuz",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.6166,
-          "reranker_score": null,
-          "final_score": 0.6166
-        },
-        {
-          "text": "iletişim numaranız var mı",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.6044,
-          "reranker_score": null,
-          "final_score": 0.6044
-        }
-      ]
-    },
     "id": "G09",
     "kategori": "G",
     "girdi_metni": "Ofisiniz nerede bulunuyor?",
     "beklenen_sektor": "belirsiz",
-    "tespit_edilen_sektor": "belirsiz",
+    "tespit_edilen_sektor": "turizm",
     "beklenen_mod": "FB",
-    "tespit_edilen_mod": "FB",
-    "skor": 0.627874158151499,
+    "tespit_edilen_mod": "K2",
+    "skor": 0.54676,
     "katman": "bge-m3",
-    "sure_ms": 510.87,
-    "basarili": true
+    "sure_ms": 97.37,
+    "basarili": false
   },
   {
-    "case": {
-      "id": "G10",
-      "kategori": "G",
-      "tip": "genel",
-      "girdi": "Mail adresinizi alabilir miyim?",
-      "beklenen_sektor": "belirsiz",
-      "beklenen_mod": "FB"
-    },
-    "yanit": {
-      "girdi": "Mail adresinizi alabilir miyim?",
-      "normalize_girdi": "mail adresinizi alabilir miyim",
-      "sektor": "belirsiz",
-      "mod": "FB",
-      "skor": 0.7586390211631632,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Mail adresinizi alabilir miyim?",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Bu konuda size doğrudan yardımcı olamıyorum. Size Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanlarında hizmet verebilirim.",
-      "top_candidates": [
-        {
-          "text": "iletişim numaranız var mı",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.7586,
-          "reranker_score": null,
-          "final_score": 0.7586
-        },
-        {
-          "text": "bana yardım edebilir misin",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.6742,
-          "reranker_score": null,
-          "final_score": 0.6742
-        },
-        {
-          "text": "can i request a demo any information would help",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.6585,
-          "reranker_score": null,
-          "final_score": 0.6585
-        }
-      ]
-    },
     "id": "G10",
     "kategori": "G",
     "girdi_metni": "Mail adresinizi alabilir miyim?",
     "beklenen_sektor": "belirsiz",
-    "tespit_edilen_sektor": "belirsiz",
+    "tespit_edilen_sektor": "egitim",
     "beklenen_mod": "FB",
-    "tespit_edilen_mod": "FB",
-    "skor": 0.7586390211631632,
+    "tespit_edilen_mod": "K2",
+    "skor": 0.580028,
     "katman": "bge-m3",
-    "sure_ms": 539.63,
-    "basarili": true
+    "sure_ms": 103.01,
+    "basarili": false
   },
   {
-    "case": {
-      "id": "H01",
-      "kategori": "H",
-      "tip": "kandirma",
-      "girdi": "Aslında sağlık değil ama sağlık yazıyorum, siz turizm anlayın.",
-      "beklenen_sektor": "turizm",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "Aslında sağlık değil ama sağlık yazıyorum, siz turizm anlayın.",
-      "normalize_girdi": "siz turizm anlayın",
-      "sektor": "turizm",
-      "mod": "K2",
-      "skor": 0.6767482354194989,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Aslında sağlık değil ama sağlık yazıyorum, siz turizm anlayın.",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [
-        "saglik"
-      ],
-      "masked_sectors": [],
-      "inspector_label": "turizm",
-      "k1_hints": {},
-      "yanit_mesaji": "Turizm ve konaklama işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "turizmle uğraşan bir şirketiz yazılım hizmeti arıyoruz rica ederim",
-          "sector": "turizm",
-          "sub_intent": "turizm.genel",
-          "initial_score": 0.6767,
-          "reranker_score": null,
-          "final_score": 0.6767
-        },
-        {
-          "text": "turizmle uğraşan bir şirketiz yazılım hizmeti arıyoruz teşekkürler",
-          "sector": "turizm",
-          "sub_intent": "turizm.genel",
-          "initial_score": 0.6758,
-          "reranker_score": null,
-          "final_score": 0.6758
-        },
-        {
-          "text": "need a tour operator management platform please let us know",
-          "sector": "turizm",
-          "sub_intent": "turizm.genel",
-          "initial_score": 0.6705,
-          "reranker_score": null,
-          "final_score": 0.6705
-        }
-      ]
-    },
     "id": "H01",
     "kategori": "H",
     "girdi_metni": "Aslında sağlık değil ama sağlık yazıyorum, siz turizm anlayın.",
@@ -4049,40 +865,12 @@
     "tespit_edilen_sektor": "turizm",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.6767482354194989,
+    "skor": 0.85,
     "katman": "bge-m3",
-    "sure_ms": 477.72,
+    "sure_ms": 97.22,
     "basarili": true
   },
   {
-    "case": {
-      "id": "H02",
-      "kategori": "H",
-      "tip": "kisa",
-      "girdi": "a",
-      "beklenen_sektor": "belirsiz",
-      "beklenen_mod": "FB"
-    },
-    "yanit": {
-      "girdi": "a",
-      "normalize_girdi": "a",
-      "sektor": "belirsiz",
-      "mod": "FB",
-      "skor": 1.0,
-      "yontem": "kisaltma",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=rule",
-      "temiz_sorgu": "a",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Girdinizi anlayamadım. Lütfen Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanıyla ilgili bir soru sorun.",
-      "top_candidates": []
-    },
     "id": "H02",
     "kategori": "H",
     "girdi_metni": "a",
@@ -4092,38 +880,10 @@
     "tespit_edilen_mod": "FB",
     "skor": 1.0,
     "katman": "kisaltma",
-    "sure_ms": 0.46,
+    "sure_ms": 0.12,
     "basarili": true
   },
   {
-    "case": {
-      "id": "H03",
-      "kategori": "H",
-      "tip": "kisa",
-      "girdi": "?",
-      "beklenen_sektor": "belirsiz",
-      "beklenen_mod": "FB"
-    },
-    "yanit": {
-      "girdi": "?",
-      "normalize_girdi": "?",
-      "sektor": "belirsiz",
-      "mod": "FB",
-      "skor": 1.0,
-      "yontem": "kisaltma",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=rule",
-      "temiz_sorgu": "?",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Girdinizi anlayamadım. Lütfen Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanıyla ilgili bir soru sorun.",
-      "top_candidates": []
-    },
     "id": "H03",
     "kategori": "H",
     "girdi_metni": "?",
@@ -4133,38 +893,10 @@
     "tespit_edilen_mod": "FB",
     "skor": 1.0,
     "katman": "kisaltma",
-    "sure_ms": 0.11,
+    "sure_ms": 0.06,
     "basarili": true
   },
   {
-    "case": {
-      "id": "H04",
-      "kategori": "H",
-      "tip": "kisa",
-      "girdi": "...",
-      "beklenen_sektor": "belirsiz",
-      "beklenen_mod": "FB"
-    },
-    "yanit": {
-      "girdi": "...",
-      "normalize_girdi": "...",
-      "sektor": "belirsiz",
-      "mod": "FB",
-      "skor": 1.0,
-      "yontem": "kisaltma",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=rule",
-      "temiz_sorgu": "...",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Girdinizi anlayamadım. Lütfen Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanıyla ilgili bir soru sorun.",
-      "top_candidates": []
-    },
     "id": "H04",
     "kategori": "H",
     "girdi_metni": "...",
@@ -4174,104 +906,23 @@
     "tespit_edilen_mod": "FB",
     "skor": 1.0,
     "katman": "kisaltma",
-    "sure_ms": 0.2,
+    "sure_ms": 0.06,
     "basarili": true
   },
   {
-    "case": {
-      "id": "H05",
-      "kategori": "H",
-      "tip": "tekrar",
-      "girdi": "sağlık sağlık sağlık sağlık sağlık sağlık sağlık sağlık sağlık sağlık",
-      "beklenen_sektor": "sağlık",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "sağlık sağlık sağlık sağlık sağlık sağlık sağlık sağlık sağlık sağlık",
-      "normalize_girdi": "sağlık sağlık sağlık sağlık sağlık sağlık sağlık sağlık sağlık sağlık",
-      "sektor": "belirsiz",
-      "mod": "FB",
-      "skor": 0.615256437911442,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "sağlık sağlık sağlık sağlık sağlık sağlık sağlık sağlık sağlık sağlık",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Bu konuda size doğrudan yardımcı olamıyorum. Size Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanlarında hizmet verebilirim.",
-      "top_candidates": [
-        {
-          "text": "ne haber",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.6153,
-          "reranker_score": null,
-          "final_score": 0.6153
-        },
-        {
-          "text": "nasılsınız",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.5672,
-          "reranker_score": null,
-          "final_score": 0.5672
-        },
-        {
-          "text": "günaydın nasılsınız",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.5646,
-          "reranker_score": null,
-          "final_score": 0.5646
-        }
-      ]
-    },
     "id": "H05",
     "kategori": "H",
     "girdi_metni": "sağlık sağlık sağlık sağlık sağlık sağlık sağlık sağlık sağlık sağlık",
     "beklenen_sektor": "sağlık",
-    "tespit_edilen_sektor": "belirsiz",
+    "tespit_edilen_sektor": "saglik",
     "beklenen_mod": "K2",
-    "tespit_edilen_mod": "FB",
-    "skor": 0.615256437911442,
+    "tespit_edilen_mod": "K2",
+    "skor": 0.567787,
     "katman": "bge-m3",
-    "sure_ms": 636.64,
-    "basarili": false
+    "sure_ms": 107.89,
+    "basarili": true
   },
   {
-    "case": {
-      "id": "H06",
-      "kategori": "H",
-      "tip": "sayi",
-      "girdi": "123456789",
-      "beklenen_sektor": "belirsiz",
-      "beklenen_mod": "FB"
-    },
-    "yanit": {
-      "girdi": "123456789",
-      "normalize_girdi": "123456789",
-      "sektor": "belirsiz",
-      "mod": "FB",
-      "skor": 1.0,
-      "yontem": "kisaltma",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=rule",
-      "temiz_sorgu": "123456789",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Girdinizi anlayamadım. Lütfen Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanıyla ilgili bir soru sorun.",
-      "top_candidates": []
-    },
     "id": "H06",
     "kategori": "H",
     "girdi_metni": "123456789",
@@ -4281,38 +932,10 @@
     "tespit_edilen_mod": "FB",
     "skor": 1.0,
     "katman": "kisaltma",
-    "sure_ms": 0.59,
+    "sure_ms": 0.12,
     "basarili": true
   },
   {
-    "case": {
-      "id": "H07",
-      "kategori": "H",
-      "tip": "ozel_karakter",
-      "girdi": "!!!???",
-      "beklenen_sektor": "belirsiz",
-      "beklenen_mod": "FB"
-    },
-    "yanit": {
-      "girdi": "!!!???",
-      "normalize_girdi": "!!!???",
-      "sektor": "belirsiz",
-      "mod": "FB",
-      "skor": 1.0,
-      "yontem": "kisaltma",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=rule",
-      "temiz_sorgu": "!!!???",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Girdinizi anlayamadım. Lütfen Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanıyla ilgili bir soru sorun.",
-      "top_candidates": []
-    },
     "id": "H07",
     "kategori": "H",
     "girdi_metni": "!!!???",
@@ -4322,63 +945,10 @@
     "tespit_edilen_mod": "FB",
     "skor": 1.0,
     "katman": "kisaltma",
-    "sure_ms": 0.42,
+    "sure_ms": 0.07,
     "basarili": true
   },
   {
-    "case": {
-      "id": "H08",
-      "kategori": "H",
-      "tip": "tekrar",
-      "girdi": "turizm turizm turizm",
-      "beklenen_sektor": "turizm",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "turizm turizm turizm",
-      "normalize_girdi": "turizm turizm turizm",
-      "sektor": "turizm",
-      "mod": "K2",
-      "skor": 0.615095161491922,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "turizm turizm turizm",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "turizm",
-      "k1_hints": {},
-      "yanit_mesaji": "Turizm ve konaklama işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "travel agency booking",
-          "sector": "turizm",
-          "sub_intent": "turizm.genel",
-          "initial_score": 0.6151,
-          "reranker_score": null,
-          "final_score": 0.6151
-        },
-        {
-          "text": "turizmle uğraşan bir şirketiz yazılım hizmeti arıyoruz teşekkürler",
-          "sector": "turizm",
-          "sub_intent": "turizm.genel",
-          "initial_score": 0.6114,
-          "reranker_score": null,
-          "final_score": 0.6114
-        },
-        {
-          "text": "turizmle uğraşan bir şirketiz yazılım hizmeti arıyoruz rica ederim",
-          "sector": "turizm",
-          "sub_intent": "turizm.genel",
-          "initial_score": 0.608,
-          "reranker_score": null,
-          "final_score": 0.608
-        }
-      ]
-    },
     "id": "H08",
     "kategori": "H",
     "girdi_metni": "turizm turizm turizm",
@@ -4386,40 +956,12 @@
     "tespit_edilen_sektor": "turizm",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.615095161491922,
+    "skor": 0.614306,
     "katman": "bge-m3",
-    "sure_ms": 491.01,
+    "sure_ms": 99.97,
     "basarili": true
   },
   {
-    "case": {
-      "id": "H09",
-      "kategori": "H",
-      "tip": "kandirma",
-      "girdi": "savunma değil eğitim değil sağlık hiç değil, otel yazın",
-      "beklenen_sektor": "turizm",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "savunma değil eğitim değil sağlık hiç değil, otel yazın",
-      "normalize_girdi": "savunma değil eğitim değil sağlık hiç değil, otel yazın",
-      "sektor": "belirsiz",
-      "mod": "FB",
-      "skor": 0.15,
-      "yontem": "kisaltma",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=rule",
-      "temiz_sorgu": "savunma değil eğitim değil sağlık hiç değil, otel yazın",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Bu konuda size doğrudan yardımcı olamıyorum. Size Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanlarında hizmet verebilirim.",
-      "top_candidates": []
-    },
     "id": "H09",
     "kategori": "H",
     "girdi_metni": "savunma değil eğitim değil sağlık hiç değil, otel yazın",
@@ -4429,38 +971,10 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.15,
     "katman": "kisaltma",
-    "sure_ms": 1.7,
+    "sure_ms": 0.36,
     "basarili": false
   },
   {
-    "case": {
-      "id": "H10",
-      "kategori": "H",
-      "tip": "anlamsiz",
-      "girdi": "merhaba merhaba merhaba selam lütfen",
-      "beklenen_sektor": "belirsiz",
-      "beklenen_mod": "FB"
-    },
-    "yanit": {
-      "girdi": "merhaba merhaba merhaba selam lütfen",
-      "normalize_girdi": "merhaba merhaba merhaba selam lütfen",
-      "sektor": "belirsiz",
-      "mod": "K1",
-      "skor": 1.0,
-      "yontem": "kisaltma",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=rule",
-      "temiz_sorgu": "merhaba merhaba merhaba selam lütfen",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "belirsiz",
-      "k1_hints": {},
-      "yanit_mesaji": "Merhaba! Size nasıl yardımcı olabilirim? Bilişim, Eğitim, Eğlence, Sağlık ve Turizm alanlarında hizmet veriyorum.",
-      "top_candidates": []
-    },
     "id": "H10",
     "kategori": "H",
     "girdi_metni": "merhaba merhaba merhaba selam lütfen",
@@ -4470,63 +984,10 @@
     "tespit_edilen_mod": "K1",
     "skor": 1.0,
     "katman": "kisaltma",
-    "sure_ms": 0.94,
+    "sure_ms": 0.16,
     "basarili": false
   },
   {
-    "case": {
-      "id": "H16",
-      "kategori": "H",
-      "tip": "kandirma",
-      "girdi": "Siber saldırılara karşı savunma sanayi değil, kurumsal SaaS bulut altyapısı ve sunucu barındırma arıyoruz.",
-      "beklenen_sektor": "bilişim",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "Siber saldırılara karşı savunma sanayi değil, kurumsal SaaS bulut altyapısı ve sunucu barındırma arıyoruz.",
-      "normalize_girdi": "kurumsal saas bulut sunucu barındırma",
-      "sektor": "bilisim",
-      "mod": "K2",
-      "skor": 0.85,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Siber saldırılara karşı savunma sanayi değil, kurumsal SaaS bulut altyapısı ve sunucu barındırma arıyoruz.",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "bilisim",
-      "k1_hints": {},
-      "yanit_mesaji": "Bilişim ve yazılım süreçleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "kurumsal bulut altyapı yönetimi çözümü",
-          "sector": "bilisim",
-          "sub_intent": "bilisim.api",
-          "initial_score": 0.7774,
-          "reranker_score": null,
-          "final_score": 0.7774
-        },
-        {
-          "text": "kurumsal bulut altyapı yönetimi yazılımı",
-          "sector": "bilisim",
-          "sub_intent": "bilisim.api",
-          "initial_score": 0.7739,
-          "reranker_score": null,
-          "final_score": 0.7739
-        },
-        {
-          "text": "kurumsal bulut altyapı yönetimi sistemi",
-          "sector": "bilisim",
-          "sub_intent": "bilisim.api",
-          "initial_score": 0.7577,
-          "reranker_score": null,
-          "final_score": 0.7577
-        }
-      ]
-    },
     "id": "H16",
     "kategori": "H",
     "girdi_metni": "Siber saldırılara karşı savunma sanayi değil, kurumsal SaaS bulut altyapısı ve sunucu barındırma arıyoruz.",
@@ -4536,63 +997,10 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.85,
     "katman": "bge-m3",
-    "sure_ms": 640.03,
+    "sure_ms": 102.54,
     "basarili": true
   },
   {
-    "case": {
-      "id": "I01",
-      "kategori": "I",
-      "tip": "dialog_tur1",
-      "girdi": "Sağlık sektöründeyiz.",
-      "beklenen_sektor": "sağlık",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "Sağlık sektöründeyiz.",
-      "normalize_girdi": "sağlık sektöründeyiz",
-      "sektor": "saglik",
-      "mod": "K2",
-      "skor": 0.85,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Sağlık sektöründeyiz.",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "saglik",
-      "k1_hints": {},
-      "yanit_mesaji": "Sağlık hizmetleri ve randevu işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "Saglik sektorunde otomasyon projeleri gelistiriyoruz.",
-          "sector": "saglik",
-          "sub_intent": "saglik.genel",
-          "initial_score": 0.6948,
-          "reranker_score": null,
-          "final_score": 0.6948
-        },
-        {
-          "text": "Sağlık sektöründe klinik otomasyon projeleri ve yazılım desteği arıyoruz.",
-          "sector": "saglik",
-          "sub_intent": "saglik.clinic",
-          "initial_score": 0.6903,
-          "reranker_score": null,
-          "final_score": 0.6903
-        },
-        {
-          "text": "sağlık kurumumuzda otomasyon üzerinden hasta süreçlerini yönetmek istiyoruz",
-          "sector": "saglik",
-          "sub_intent": "saglik.genel",
-          "initial_score": 0.6878,
-          "reranker_score": null,
-          "final_score": 0.6878
-        }
-      ]
-    },
     "id": "I01",
     "kategori": "I",
     "girdi_metni": "Sağlık sektöründeyiz.",
@@ -4600,65 +1008,12 @@
     "tespit_edilen_sektor": "saglik",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.85,
+    "skor": 0.678727,
     "katman": "bge-m3",
-    "sure_ms": 449.23,
+    "sure_ms": 94.5,
     "basarili": true
   },
   {
-    "case": {
-      "id": "I02",
-      "kategori": "I",
-      "tip": "dialog_tur2",
-      "girdi": "Peki fiyatlandırma nasıl?",
-      "beklenen_sektor": "sağlık",
-      "beklenen_mod": "HAFIZA"
-    },
-    "yanit": {
-      "girdi": "Peki fiyatlandırma nasıl?",
-      "normalize_girdi": "peki fiyatlandırma nasıl",
-      "sektor": "saglik",
-      "mod": "HAFIZA",
-      "skor": 0.95,
-      "yontem": "hafiza",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Peki fiyatlandırma nasıl?",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "saglik",
-      "k1_hints": {},
-      "yanit_mesaji": "Sağlık hizmetleri ve randevu işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "what are your pricing options",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.7026,
-          "reranker_score": null,
-          "final_score": 0.7026
-        },
-        {
-          "text": "fiyat teklifi almak",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.6739,
-          "reranker_score": null,
-          "final_score": 0.6739
-        },
-        {
-          "text": "what are your pricing options any information would help",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.6649,
-          "reranker_score": null,
-          "final_score": 0.6649
-        }
-      ]
-    },
     "id": "I02",
     "kategori": "I",
     "girdi_metni": "Peki fiyatlandırma nasıl?",
@@ -4668,63 +1023,10 @@
     "tespit_edilen_mod": "HAFIZA",
     "skor": 0.95,
     "katman": "hafiza",
-    "sure_ms": 526.84,
+    "sure_ms": 97.35,
     "basarili": true
   },
   {
-    "case": {
-      "id": "I03",
-      "kategori": "I",
-      "tip": "dialog_tur1",
-      "girdi": "Oteller için ne gibi çözümleriniz var?",
-      "beklenen_sektor": "turizm",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "Oteller için ne gibi çözümleriniz var?",
-      "normalize_girdi": "oteller için ne gibi çözümleriniz var",
-      "sektor": "turizm",
-      "mod": "K2",
-      "skor": 0.95,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Oteller için ne gibi çözümleriniz var?",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "turizm",
-      "k1_hints": {},
-      "yanit_mesaji": "Turizm ve konaklama işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "otel hizmeti almak",
-          "sector": "turizm",
-          "sub_intent": "turizm.hotel",
-          "initial_score": 0.6883,
-          "reranker_score": null,
-          "final_score": 0.6883
-        },
-        {
-          "text": "otel yazılımı",
-          "sector": "turizm",
-          "sub_intent": "turizm.hotel",
-          "initial_score": 0.6845,
-          "reranker_score": null,
-          "final_score": 0.6845
-        },
-        {
-          "text": "turizmle uğraşan bir şirketiz yazılım hizmeti arıyoruz yazar mısın",
-          "sector": "turizm",
-          "sub_intent": "turizm.genel",
-          "initial_score": 0.6738,
-          "reranker_score": null,
-          "final_score": 0.6738
-        }
-      ]
-    },
     "id": "I03",
     "kategori": "I",
     "girdi_metni": "Oteller için ne gibi çözümleriniz var?",
@@ -4734,63 +1036,10 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.95,
     "katman": "bge-m3",
-    "sure_ms": 595.6,
+    "sure_ms": 108.93,
     "basarili": true
   },
   {
-    "case": {
-      "id": "I04",
-      "kategori": "I",
-      "tip": "dialog_tur2",
-      "girdi": "Referanslarınızı listeler misiniz?",
-      "beklenen_sektor": "turizm",
-      "beklenen_mod": "HAFIZA"
-    },
-    "yanit": {
-      "girdi": "Referanslarınızı listeler misiniz?",
-      "normalize_girdi": "referanslarınızı listeler misiniz",
-      "sektor": "turizm",
-      "mod": "HAFIZA",
-      "skor": 0.95,
-      "yontem": "hafiza",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Referanslarınızı listeler misiniz?",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "turizm",
-      "k1_hints": {},
-      "yanit_mesaji": "Turizm ve konaklama işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "iletişim numaranız var mı",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.6685,
-          "reranker_score": null,
-          "final_score": 0.6685
-        },
-        {
-          "text": "yardımcı olur musunuz fiyatlarınız nedir yazar mısın",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.6425,
-          "reranker_score": null,
-          "final_score": 0.6425
-        },
-        {
-          "text": "fiyat teklifi yazar mısın",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.6403,
-          "reranker_score": null,
-          "final_score": 0.6403
-        }
-      ]
-    },
     "id": "I04",
     "kategori": "I",
     "girdi_metni": "Referanslarınızı listeler misiniz?",
@@ -4800,63 +1049,10 @@
     "tespit_edilen_mod": "HAFIZA",
     "skor": 0.95,
     "katman": "hafiza",
-    "sure_ms": 543.63,
+    "sure_ms": 102.57,
     "basarili": true
   },
   {
-    "case": {
-      "id": "I05",
-      "kategori": "I",
-      "tip": "dialog_tur3",
-      "girdi": "Ne kadar sürer kurması?",
-      "beklenen_sektor": "turizm",
-      "beklenen_mod": "HAFIZA"
-    },
-    "yanit": {
-      "girdi": "Ne kadar sürer kurması?",
-      "normalize_girdi": "ne kadar sürer kurması",
-      "sektor": "turizm",
-      "mod": "HAFIZA",
-      "skor": 0.95,
-      "yontem": "hafiza",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Ne kadar sürer kurması?",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "turizm",
-      "k1_hints": {},
-      "yanit_mesaji": "Turizm ve konaklama işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "what are your support hours",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.5705,
-          "reranker_score": null,
-          "final_score": 0.5705
-        },
-        {
-          "text": "how is it going",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.5071,
-          "reranker_score": null,
-          "final_score": 0.5071
-        },
-        {
-          "text": "how does your company work looking forward to your response",
-          "sector": "ood",
-          "sub_intent": "ood.none",
-          "initial_score": 0.4979,
-          "reranker_score": null,
-          "final_score": 0.4979
-        }
-      ]
-    },
     "id": "I05",
     "kategori": "I",
     "girdi_metni": "Ne kadar sürer kurması?",
@@ -4866,63 +1062,10 @@
     "tespit_edilen_mod": "HAFIZA",
     "skor": 0.95,
     "katman": "hafiza",
-    "sure_ms": 560.36,
+    "sure_ms": 99.8,
     "basarili": true
   },
   {
-    "case": {
-      "id": "I08",
-      "kategori": "I",
-      "tip": "dialog_tur1",
-      "girdi": "Eğitim kurumu işletiyoruz.",
-      "beklenen_sektor": "eğitim",
-      "beklenen_mod": "K2"
-    },
-    "yanit": {
-      "girdi": "Eğitim kurumu işletiyoruz.",
-      "normalize_girdi": "eğitim kurumu işletiyoruz",
-      "sektor": "egitim",
-      "mod": "K2",
-      "skor": 0.85,
-      "yontem": "bge-m3",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=ml",
-      "temiz_sorgu": "Eğitim kurumu işletiyoruz.",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "egitim",
-      "k1_hints": {},
-      "yanit_mesaji": "Eğitim ve öğrenci işlemleriniz için ilgili sayfaya yönlendiriliyorsunuz...",
-      "top_candidates": [
-        {
-          "text": "we need a learning management system for our university",
-          "sector": "egitim",
-          "sub_intent": "egitim.genel",
-          "initial_score": 0.6997,
-          "reranker_score": null,
-          "final_score": 0.6997
-        },
-        {
-          "text": "our public institution needs an e-learning and course management platform for staff training",
-          "sector": "egitim",
-          "sub_intent": "egitim.genel",
-          "initial_score": 0.6958,
-          "reranker_score": null,
-          "final_score": 0.6958
-        },
-        {
-          "text": "we need a learning management system for our university please let us know",
-          "sector": "egitim",
-          "sub_intent": "egitim.genel",
-          "initial_score": 0.6917,
-          "reranker_score": null,
-          "final_score": 0.6917
-        }
-      ]
-    },
     "id": "I08",
     "kategori": "I",
     "girdi_metni": "Eğitim kurumu işletiyoruz.",
@@ -4932,38 +1075,10 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.85,
     "katman": "bge-m3",
-    "sure_ms": 571.27,
+    "sure_ms": 98.99,
     "basarili": true
   },
   {
-    "case": {
-      "id": "I09",
-      "kategori": "I",
-      "tip": "dialog_tur2",
-      "girdi": "LMS sistemini kurmak için kiminle görüşebilirim?",
-      "beklenen_sektor": "eğitim",
-      "beklenen_mod": "HAFIZA"
-    },
-    "yanit": {
-      "girdi": "LMS sistemini kurmak için kiminle görüşebilirim?",
-      "normalize_girdi": "LMS sistemini kurmak için kiminle görüşebilirim?",
-      "sektor": "egitim",
-      "mod": "HAFIZA",
-      "skor": 0.99,
-      "yontem": "hafiza",
-      "lang": "tr",
-      "eslesen_mesaj": "",
-      "eslesen_id": null,
-      "aciklama": "Pipeline run layer=rule",
-      "temiz_sorgu": "LMS sistemini kurmak için kiminle görüşebilirim?",
-      "rewrite_backend": "simulated",
-      "negated_sectors": [],
-      "masked_sectors": [],
-      "inspector_label": "egitim",
-      "k1_hints": {},
-      "yanit_mesaji": "",
-      "top_candidates": []
-    },
     "id": "I09",
     "kategori": "I",
     "girdi_metni": "LMS sistemini kurmak için kiminle görüşebilirim?",
@@ -4973,7 +1088,7 @@
     "tespit_edilen_mod": "HAFIZA",
     "skor": 0.99,
     "katman": "hafiza",
-    "sure_ms": 0.55,
+    "sure_ms": 0.16,
     "basarili": true
   }
 ]
