@@ -1,7 +1,7 @@
 {
   "info": {
     "_postman_id": "7d199c2a-33e0-44ef-ad58-3015a4f1cc15",
-    "name": "ALLINTOS - Chatbot Router",
+    "name": "ALLINTOS - Chatbot Router v1",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
@@ -11,7 +11,7 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://127.0.0.1:8001/api/health",
+          "raw": "http://127.0.0.1:8080/api/health",
           "protocol": "http",
           "host": [
             "127",
@@ -19,7 +19,7 @@
             "0",
             "1"
           ],
-          "port": "8001",
+          "port": "8080",
           "path": [
             "api",
             "health"
@@ -41,33 +41,79 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"query\": \"LMS entegrasyonu ve uzaktan eğitim altyapısı arıyoruz\"\n}"
+          "raw": "{\n  \"message\": \"LMS entegrasyonu ve uzaktan eğitim altyapısı arıyoruz\",\n  \"external_session_id\": \"1042\",\n  \"user_identifier\": \"web-user\"\n}"
         },
         "url": {
-          "raw": "http://127.0.0.1:8001/api/chat",
+          "raw": "http://ai_chatbot_api:8080/api/chat",
           "protocol": "http",
           "host": [
-            "127",
-            "0",
-            "0",
-            "1"
+            "ai_chatbot_api"
           ],
-          "port": "8001",
+          "port": "8080",
           "path": [
             "api",
             "chat"
           ]
         }
       },
-      "response": []
+      "response": [
+        {
+          "name": "Success Response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"message\": \"LMS entegrasyonu ve uzaktan eğitim altyapısı arıyoruz\",\n  \"external_session_id\": \"1042\",\n  \"user_identifier\": \"web-user\"\n}"
+            },
+            "url": {
+              "raw": "http://ai_chatbot_api:8080/api/chat",
+              "protocol": "http",
+              "host": ["ai_chatbot_api"],
+              "port": "8080",
+              "path": ["api","chat"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [],
+          "cookie": [],
+          "body": "{\n    \"reply\": \"Talebinizi eğitim sektörüyle ilişkilendirdim. İlgili forma buradan ulaşabilirsiniz: /education-enrollment-form\",\n    \"url\": \"/education-enrollment-form\",\n    \"session_id\": 145,\n    \"sector\": \"egitim\",\n    \"layer_hit\": \"vector_search\",\n    \"confidence\": 0.89\n}"
+        },
+        {
+          "name": "Validation Error (422)",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8080/api/chat",
+              "protocol": "http",
+              "host": ["127","0","0","1"],
+              "port": "8080",
+              "path": ["api","chat"]
+            }
+          },
+          "status": "Unprocessable Entity",
+          "code": 422,
+          "_postman_previewlanguage": "json",
+          "header": [],
+          "cookie": [],
+          "body": "{\n    \"detail\": [\n        {\n            \"loc\": [\"body\", \"user_identifier\"],\n            \"msg\": \"field required\",\n            \"type\": \"value_error.missing\"\n        }\n    ]\n}"
+        }
+      ]
     },
     {
-      "name": "messages",
+      "name": "status",
       "request": {
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://127.0.0.1:8001/api/status",
+          "raw": "http://127.0.0.1:8080/api/status",
           "protocol": "http",
           "host": [
             "127",
@@ -75,7 +121,7 @@
             "0",
             "1"
           ],
-          "port": "8001",
+          "port": "8080",
           "path": [
             "api",
             "status"

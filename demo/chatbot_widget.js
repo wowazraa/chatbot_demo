@@ -13,6 +13,9 @@
                 
                 <!-- Hero Header Area -->
                 <div class="ag-chat-hero">
+                    <button class="ag-chat-close" id="ag-chat-close" title="Kapat">
+                        <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    </button>
                     <h2 class="ag-chat-hero-title">Merhaba! 👋<br>Size nasıl yardımcı olabiliriz?</h2>
                 </div>
                 
@@ -36,14 +39,14 @@
                             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
                         </button>
                     </div>
+                    <div class="ag-watermark">Powered by <span>Allintos AI</span></div>
                 </div>
                 
             </div>
 
             <!-- Floating Toggle Button -->
             <button id="ag-chatbot-toggle" title="Sohbet">
-                <svg class="ag-icon-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-                <svg class="ag-icon-close" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                <svg class="ag-icon-chat" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.029 2 11c0 2.85 1.48 5.391 3.793 7.027L5 22l4.086-2.043C10.015 20.26 10.985 20.4 12 20.4c5.523 0 10-4.029 10-9s-4.477-9-10-9z"/></svg>
             </button>
         </div>
     `;
@@ -59,6 +62,7 @@
 
         // Bind Elements
         const toggleBtn = document.getElementById('ag-chatbot-toggle');
+        const closeBtn = document.getElementById('ag-chat-close');
         const chatWindow = document.getElementById('ag-chatbot-window');
         const chatInput = document.getElementById('ag-chat-input');
         const sendBtn = document.getElementById('ag-chat-send');
@@ -66,14 +70,17 @@
         const typingIndicator = document.getElementById('ag-typing-indicator');
 
         // Toggle Chat
-        toggleBtn.addEventListener('click', () => {
+        function toggleChat() {
             chatWindow.classList.toggle('ag-open');
             toggleBtn.classList.toggle('ag-open');
             if (chatWindow.classList.contains('ag-open')) {
                 chatInput.focus();
                 scrollToBottom();
             }
-        });
+        }
+
+        toggleBtn.addEventListener('click', toggleChat);
+        closeBtn.addEventListener('click', toggleChat);
 
         // Send Message Handlers
         sendBtn.addEventListener('click', handleSend);
@@ -98,10 +105,20 @@
             }
         }
 
+        function getCurrentTime() {
+            const now = new Date();
+            return now.getHours().toString().padStart(2, '0') + ':' + now.getMinutes().toString().padStart(2, '0');
+        }
+
         function addMessage(text, isUser = false, url = null) {
             const msgDiv = document.createElement('div');
             msgDiv.className = `ag-message ${isUser ? 'ag-message-user' : 'ag-message-bot'}`;
-            msgDiv.textContent = text; // Safe against XSS
+            
+            // Text content container
+            const textDiv = document.createElement('div');
+            textDiv.className = 'ag-message-content';
+            textDiv.textContent = text; // Safe against XSS
+            msgDiv.appendChild(textDiv);
 
             if (!isUser && url) {
                 const link = document.createElement('a');
@@ -109,9 +126,14 @@
                 link.href = url;
                 link.target = '_blank';
                 link.textContent = 'İlgili Sayfa →';
-                msgDiv.appendChild(document.createElement('br'));
                 msgDiv.appendChild(link);
             }
+
+            // Timestamp
+            const timeDiv = document.createElement('div');
+            timeDiv.className = 'ag-timestamp';
+            timeDiv.textContent = getCurrentTime();
+            msgDiv.appendChild(timeDiv);
 
             // Insert before typing indicator
             messagesContainer.insertBefore(msgDiv, typingIndicator);

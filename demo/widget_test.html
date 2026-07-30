@@ -3,73 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Widget Test Sayfası</title>
+    <title>Allintos Chatbot Demo</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f2f5;
+            background-color: #ffffff;
             margin: 0;
-            padding: 40px;
-            color: #333;
-        }
-        .demo-content {
-            max-width: 700px;
-            margin: 0;
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            /* Widget ile çakışmayı önlemek için sayfa sonuna ekstra boşluk */
-            margin-bottom: 700px; 
-        }
-        h1 { color: #1e293b; }
-        .instructions {
-            background: #eff6ff;
-            border-left: 4px solid #3b82f6;
-            padding: 16px;
-            margin-bottom: 24px;
-            border-radius: 4px;
-        }
-        .code-block {
-            background: #1e293b;
-            color: #e2e8f0;
-            padding: 16px;
-            border-radius: 8px;
-            overflow-x: auto;
-            font-family: monospace;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
         }
     </style>
-    
-    <!-- 1. Adım: Widget CSS dosyasını ekle -->
+    <!-- Widget CSS -->
     <link rel="stylesheet" href="chatbot_widget.css">
 </head>
 <body>
 
-    <div class="demo-content">
-        <h1>Allintos Bağımsız Widget Test Sayfası</h1>
-        
-        <div class="instructions">
-            <strong>Nasıl Test Edilir?</strong>
-            <p>1. Terminalde <code>python _final_dogrulama.py</code> vb. yerine chatbot sunucusunu ayağa kaldırın: <code>uvicorn db_api.routers.chat:app --port 8001 --reload</code> (veya `app.py` üzerinden).</p>
-            <p>2. Bu HTML sayfasını tarayıcınızda açın.</p>
-            <p>3. Sağ alttaki chat ikonuna tıklayıp farklı sektörlerden mesajlar gönderin.</p>
-        </div>
-
-        <h2>Entegrasyon Kod Parçası (İlerisi İçin)</h2>
-        <p>Allintos'un <code>base.html</code> dosyasına sadece şu iki satırı eklemeniz yetecek:</p>
-        
-        <div class="code-block">
-&lt;!-- HEAD etiketleri arasına --&gt;
-&lt;link rel="stylesheet" href="/static/css/chatbot_widget.css"&gt;
-
-&lt;!-- BODY kapanmadan hemen önce --&gt;
-&lt;script src="/static/js/chatbot_widget.js"&gt;&lt;/script&gt;
-        </div>
-        
-        <p>Geri kalan her şeyi <code>chatbot_widget.js</code> kendi başına (DOM içine) yükler.</p>
-    </div>
-
-    <!-- 2. Adım: Widget JS dosyasını ekle -->
+    <!-- Sadece Widget Script'i var, geri kalan sayfa bembeyaz -->
     <script src="chatbot_widget.js"></script>
+
 </body>
 </html>

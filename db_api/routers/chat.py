@@ -97,7 +97,12 @@ def chat_turn(body: ChatTurnRequest, db: Session = Depends(get_db)):
     t0 = time.perf_counter()
     try:
         bot = _get_bot()
-        sid_key = f"api-{body.session_id}" if body.session_id else f"api-{body.user_identifier}"
+        if body.external_session_id:
+            sid_key = f"ext-{body.external_session_id}"
+        elif body.session_id:
+            sid_key = f"api-{body.session_id}"
+        else:
+            sid_key = f"api-{body.user_identifier}"
         resp = bot.sor(msg, session_id=sid_key)
     except Exception as exc:  # noqa: BLE001
         raise HTTPException(503, f"router unavailable: {exc}") from exc
@@ -115,7 +120,7 @@ def chat_turn(body: ChatTurnRequest, db: Session = Depends(get_db)):
         db,
         ChatLogRequest(
             user_identifier=body.user_identifier,
-            session_name="chat-api",
+            session_name=body.external_session_id or "chat-api",
             session_id=body.session_id,
             user_message=msg,
             bot_message=reply,
