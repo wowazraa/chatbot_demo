@@ -20,22 +20,24 @@ from db_api.schemas import ChatLogRequest, ChatTurnRequest, ChatTurnResponse
 
 router = APIRouter(tags=["chat"])
 
+# Sektör key'leri intent_router_contract.map_sector()'un döndürdüğü
+# (Türkçe/ASCII) değerlerle ve db_api/routers/seed.py'de tanımlanan
+# intent_code'larla birebir eşleşmelidir.
 _SECTOR_INTENT_CODE: dict[str, str] = {
-    "saglik": "health_appointment",
-    "turizm": "tourism_hotel",
+    "saglik":  "health_appointment",
+    "turizm":  "tourism_hotel",
     "eglence": "eglence_streaming",
-    "egitim": "education_enrollment",
+    "egitim":  "education_enrollment",
     "bilisim": "bilisim_integration",
 }
 
 _SECTOR_TR: dict[str, str] = {
-    "saglik": "sağlık",
-    "turizm": "turizm",
+    "saglik":  "sağlık",
+    "turizm":  "turizm",
     "eglence": "eğlence",
-    "egitim": "eğitim",
+    "egitim":  "eğitim",
     "bilisim": "bilişim",
 }
-
 
 
 @lru_cache(maxsize=1)
@@ -88,8 +90,6 @@ def sanitize_input(query: str) -> str:
 
 @router.post("/chat", response_model=ChatTurnResponse, status_code=status.HTTP_200_OK)
 def chat_turn(body: ChatTurnRequest, db: Session = Depends(get_db)):
-    if body.clean_message and len(body.clean_message) > 500:
-        raise HTTPException(400, "Message length exceeds 500 characters limit")
     msg = sanitize_input(body.clean_message)
     if not msg:
         raise HTTPException(400, "message or query is required")
@@ -131,7 +131,4 @@ def chat_turn(body: ChatTurnRequest, db: Session = Depends(get_db)):
         reply=reply,
         url=url,
         session_id=saved.session_id,
-        sector=sector,
-        layer_hit=resp.mod,
-        confidence=float(intent.get("confidence_score") or 0.0),
     )

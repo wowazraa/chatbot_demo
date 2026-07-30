@@ -37,6 +37,65 @@ RAW_FILE       = ROOT / "data" / "raw"       / "chatbot_dataset.json"
 PROCESSED_FILE = ROOT / "data" / "processed" / "chatbot_dataset_augmented.json"
 INDEX_DIR      = ROOT / "data" / "processed"
 
+# ---------------------------------------------------------------------------
+# Intent Kodu Eşleme Tablosu
+# JSON'daki ham Türkçe sektör etiketini → DB-uyumlu intent koduna dönüştürür.
+# Bu eşleme olmadan downstream migration script'i [null] üretir.
+# ---------------------------------------------------------------------------
+SEKTOR_TO_INTENT: dict[str, str] = {
+    # Birincil etiketler (ham JSON → DB intent kodu)
+    "turizm":   "tourism_hotel",
+    "saglik":   "health_appointment",
+    "egitim":   "education_enrollment",
+    "bilisim":  "bilisim_integration",
+    "eglence":  "eglence_streaming",
+    # OOD ve belirsiz durumlar — DB tarafında özel işlenir
+    "ood":      "ood",
+    "belirsiz": "ood",
+}
+
+# Varyant destek eşlemesi: Türkçe karakterli versiyonlar (data_augmented.py
+# AUGMENTATION_TARGETS anahtarlarından üretilenler için güvenlik ağı)
+_SEKTOR_NORMALIZE: dict[str, str] = {
+    # Türkçe karakterli -> ASCII normalleştirilmiş
+    "sağlık":  "saglik",
+    "eğitim":  "egitim",
+    "turizm":  "turizm",   # zaten ASCII
+    "bilişim": "bilisim",
+    "eğlence": "eglence",
+    "ood":     "ood",
+    "belirsiz":"belirsiz",
+}
+
+
+def resolve_intent(raw_sektor: str | None) -> str:
+    """
+    Ham sektör etiketini DB-uyumlu intent koduna dönüştürür.
+
+    Adımlar:
+      1) Türkçe karakterli versiyonu ASCII'ye normalize et
+      2) Eşleme tablosunda ara
+      3) Eşleme bulunamazsa 'ood' döndür ve uyarı bas
+
+    UTF-8 güvenli: giriş string'i aynen kullanılır,
+    encoding dönüşümü yoktur.
+    """
+    if not raw_sektor:
+        return "ood"
+
+    normalized = _SEKTOR_NORMALIZE.get(raw_sektor.strip(), raw_sektor.strip())
+    intent = SEKTOR_TO_INTENT.get(normalized)
+
+    if intent is None:
+        print(
+            f"  [UYARI] Bilinmeyen sektör etiketi: '{raw_sektor}' → 'ood' atandı. "
+            f"SEKTOR_TO_INTENT tablosunu güncelleyin.",
+            file=sys.stderr,
+        )
+        return "ood"
+
+    return intent
+
 
 # ---------------------------------------------------------------------------
 # Veri yükleme
@@ -73,6 +132,10 @@ def build(use_raw: bool = False, batch_size: int = 64) -> None:
 
     msg_fields = ("mesaj", "message", "text", "input")
 
+    # Intent kodu istatistiği (tanılama için)
+    intent_counter: dict[str, int] = {}
+    unknown_sektors: set[str] = set()
+
     for rec in records:
         msg = ""
         for f in msg_fields:
@@ -82,11 +145,31 @@ def build(use_raw: bool = False, batch_size: int = 64) -> None:
         if not msg:
             continue
 
+        # Ham sektör etiketini al — her iki olası typo'yu da destekle
+        raw_sektor = rec.get(
+            "beklenen_sektor",
+            rec.get("beklened_sektor", "belirsiz"),  # typo koruması
+        )
+
+        # ----------------------------------------------------------------
+        # KRİTİK: Ham Türkçe etiket → DB-uyumlu intent kodu dönüşümü
+        # Bu adım olmadan downstream migration null üretir.
+        # ----------------------------------------------------------------
+        intent_code = resolve_intent(raw_sektor)
+
+        if intent_code == "ood" and raw_sektor not in ("ood", "belirsiz", None, ""):
+            unknown_sektors.add(raw_sektor)
+
+        intent_counter[intent_code] = intent_counter.get(intent_code, 0) + 1
+
         texts.append(msg)
         meta.append({
             "id":              rec.get("id"),
             "source_id":       rec.get("source_id"),
-            "beklenen_sektor": rec.get("beklenen_sektor", rec.get("beklened_sektor", "belirsiz")),
+            # Orijinal ham etiket (hata ayıklama için saklanır)
+            "beklenen_sektor": raw_sektor,
+            # DB-uyumlu intent kodu — downstream migration bu alanı kullanır
+            "intent_code":     intent_code,
             "beklenen_mod":    rec.get("beklenen_mod",    rec.get("beklened_mod",    "K1")),
             "lang":            rec.get("lang", "tr"),
             "zorluk":          rec.get("zorluk", ""),
@@ -94,6 +177,14 @@ def build(use_raw: bool = False, batch_size: int = 64) -> None:
         })
 
     print(f"[+] Embed edilecek: {len(texts)} metin")
+    print()
+
+    # Intent dağılımı özeti
+    print("--- Intent Kodu Dağılımı ---")
+    for code, count in sorted(intent_counter.items(), key=lambda x: -x[1]):
+        print(f"  {code:<30} {count:>5}")
+    if unknown_sektors:
+        print(f"\n  [UYARI] Eşlenemeyen sektörler: {sorted(unknown_sektors)}")
     print()
 
     embedder = BGEEmbedder()
@@ -122,7 +213,7 @@ def build(use_raw: bool = False, batch_size: int = 64) -> None:
             r = res[0]
             print(
                 f"  '{q[:45]}'\n"
-                f"    -> [{r.metadata['beklenen_sektor']:8}] {r.score:.4f} | {r.text[:55]}"
+                f"    -> [{r.metadata['intent_code']:<25}] {r.score:.4f} | {r.text[:50]}"
             )
     print("\n[+] Index build tamamlandı!")
     print("=" * 60)

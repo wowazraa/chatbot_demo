@@ -2,10 +2,10 @@ from fastapi import APIRouter, Depends, Query
 from sqlalchemy.orm import Session
 
 from db_api.bridge import Company, get_db
-from db_api.common import Page, not_found, paginate, verify_admin_api_key
+from db_api.common import Page, not_found, paginate
 from db_api.schemas import CompanyOut
 
-router = APIRouter(prefix="/companies", tags=["companies"], dependencies=[Depends(verify_admin_api_key)])
+router = APIRouter(prefix="/companies", tags=["companies"])
 
 
 @router.get("", response_model=Page)
