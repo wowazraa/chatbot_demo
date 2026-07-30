@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OmniIntent | AI Core Intelligence Platform</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        navy: { DEFAULT:'#3D4A66', mid:'#4A5878', soft:'#5B6B8C', mist:'#8B95A8' },
+        lav: { DEFAULT:'#A78BFA', soft:'#C4B5FD', mist:'#EDE9FE', deep:'#7C6BB5' },
+        warm: { DEFAULT:'#F7F5F2', card:'#FFFCFA', ink:'#3F3A36', mute:'#7A736C' }
+      },
+      fontFamily: {
+        sans: ['Inter','Poppins','SF Pro Text','system-ui','sans-serif'],
+        display: ['Poppins','Inter','system-ui','sans-serif']
+      },
+      boxShadow: {
+        soft: '0 8px 28px rgba(61,74,102,.08)'
+      },
+      transitionTimingFunction: {
+        breath: 'ease-in-out'
+      }
+    }
+  }
+}
+</script>
+<style>
+:root{
+  --navy:#3D4A66;
+  --navy-mid:#4A5878;
+  --lavender:#A78BFA;
+  --lavender-soft:#C4B5FD;
+  --lavender-mist:#EDE9FE;
+  --warm:#F7F5F2;
+  --warm-card:#FFFCFA;
+  --ink:#3F3A36;
+  --mute:#7A736C;
+  --glass:rgba(255,252,250,0.82);
+  --glass-border:rgba(167,139,250,0.22);
+  --conf-ok:#7C9A82;
+  --conf-mid:#8B95A8;
+  --conf-low:#C4A484;
+  --ease:all 0.4s ease-in-out;
+}
+*{transition: background-color .4s ease-in-out, border-color .4s ease-in-out, color .4s ease-in-out, box-shadow .4s ease-in-out, transform .4s ease-in-out, opacity .4s ease-in-out;}
+body{
+  font-family:'Inter','Poppins',system-ui,sans-serif;
+  background:
+    radial-gradient(1000px 480px at 8% -8%, rgba(237,233,254,.9), transparent 55%),
+    radial-gradient(800px 420px at 92% 0%, rgba(167,139,250,.12), transparent 50%),
+    var(--warm);
+  color:var(--ink);
+  min-height:100vh;
+}
+.oi-status{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:.68rem;font-weight:600;letter-spacing:.01em;
+  padding:4px 10px;border-radius:999px;border:1px solid transparent;
+}
+.oi-status-ok{background:rgba(124,154,130,.14);border-color:rgba(124,154,130,.28);color:#4F6B55}
+.oi-status-err{background:rgba(196,164,132,.18);border-color:rgba(196,164,132,.35);color:#8A6A4A}
+.oi-status-wait{background:var(--lavender-mist);border-color:rgba(167,139,250,.25);color:#6B5B95}
+.flow-node{
+  background:var(--warm-card);
+  border:1px solid rgba(167,139,250,.18);
+  border-radius:16px;
+  padding:14px 16px;
+  min-width:140px;
+  text-align:center;
+  box-shadow:0 6px 20px rgba(61,74,102,.05);
+  transition:var(--ease);
+}
+.flow-node:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(167,139,250,.14)}
+.flow-arrow{
+  color:var(--lavender);font-weight:600;font-size:1.1rem;
+  padding:0 6px;flex-shrink:0;
+}
+.stream-shell{
+  background:linear-gradient(165deg,#4A5878 0%,#3D4A66 55%,#5B4E7A 100%);
+  border:1px solid rgba(196,181,253,.2);
+  border-radius:20px;
+  box-shadow:0 18px 44px rgba(61,74,102,.14);
+}
+.stream-row{
+  border:1px solid rgba(255,255,255,.08);
+  background:rgba(255,255,255,.06);
+  border-radius:12px;
+  padding:10px 12px;
+  margin-bottom:8px;
+  animation:streamIn .4s ease-in-out;
+  transition:var(--ease);
+}
+@keyframes streamIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.stream-row.stream-k1{border-left:3px solid var(--lavender-soft)}
+.stream-row.stream-k2{border-left:3px solid #B8C0D0}
+.stream-row.stream-fb{border-left:3px solid var(--conf-low)}
+.stream-row-top{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:6px}
+.stream-time{font-size:.62rem;color:rgba(255,255,255,.45);font-weight:500}
+.stream-title{font-size:.7rem;font-weight:600;color:#F4F0FF}
+.stream-badge{
+  font-size:.6rem;font-weight:600;
+  padding:2px 8px;border-radius:999px;border:1px solid rgba(255,255,255,.12);
+  color:#E8E4F0;background:rgba(255,255,255,.07);
+}
+.stream-badge.conf{color:#EDE9FE;border-color:rgba(196,181,253,.35)}
+.stream-badge.mask{color:#F0E0D0;border-color:rgba(196,164,132,.4)}
+.stream-badge.mod{color:#fff}
+.stream-badge.sektor{color:#E8F0EA;border-color:rgba(124,154,130,.35)}
+.stream-badge.muted{color:rgba(255,255,255,.4)}
+.stream-query{
+  font-size:.74rem;font-weight:500;color:#FFFCFA;line-height:1.5;
+  background:rgba(255,255,255,.08);border-radius:10px;padding:8px 10px;
+  word-break:break-word;
+}
+.stream-in{margin-top:6px;font-size:.66rem;color:rgba(255,255,255,.5)}
+.stream-muted{color:rgba(255,255,255,.4);font-style:italic}
+.log-empty{color:rgba(255,255,255,.45);font-size:.78rem;padding:12px 4px}
+.qbtn{
+  width:100%;text-align:left;padding:10px 14px;border-radius:12px;
+  background:var(--warm-card);color:var(--ink);border:1px solid rgba(167,139,250,.16);
+  font:500 .8rem Inter,system-ui,sans-serif;cursor:pointer;transition:var(--ease);
+}
+.qbtn:hover{background:var(--lavender-mist);border-color:rgba(167,139,250,.35);transform:translateY(-1px)}
+
+/* ── Asistan Widget (Apple/Stripe Minimalist) ── */
+#chat-fab{
+  position:fixed;bottom:24px;right:24px;z-index:9000;
+  width:58px;height:58px;border-radius:20px;
+  background:linear-gradient(145deg,#5B6B8C 0%,#7C6BB5 100%);
+  color:#fff;font-size:1.35rem;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;
+  box-shadow:0 12px 32px rgba(124,107,181,.28);
+  transition:var(--ease);
+  user-select:none;border:1px solid rgba(255,255,255,.2);outline:none;
+}
+#chat-fab:hover{transform:scale(1.05);box-shadow:0 16px 36px rgba(124,107,181,.35)}
+#chat-fab.hidden{display:none}
+
+#chat-panel{
+  position:fixed;bottom:20px;right:20px;z-index:9001;
+  width:380px;
+  height:620px;
+  border-radius:20px;
+  background:#FFFFFF;
+  border:1px solid rgba(0, 0, 0, 0.08);
+  box-shadow:0 12px 40px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
+  display:flex;flex-direction:column;overflow:hidden;
+  transform:scale(0.94) translateY(24px);
+  transform-origin:bottom right;
+  opacity:0;pointer-events:none;
+  transition:var(--ease);
+}
+#chat-panel.open{
+  transform:scale(1) translateY(0);
+  opacity:1;pointer-events:all;
+}
+
+.wp-header{
+  background:#4A4668;
+  padding:16px 20px;
+  display:flex;align-items:center;justify-content:space-between;
+  flex-shrink:0;
+  color:#ffffff;
+}
+.header-brand {
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.status-dot {
+  width:8px;
+  height:8px;
+  background-color:#10B981;
+  border-radius:50%;
+  box-shadow:0 0 8px rgba(16,185,129,0.6);
+  flex-shrink:0;
+}
+.header-title {
+  font-size:15px;
+  font-weight:600;
+  letter-spacing:-0.2px;
+  color:#ffffff;
+  font-family:'Inter',sans-serif;
+}
+.header-actions {
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.apple-switch {
+  display: flex;
+  background: rgba(0, 0, 0, 0.22);
+  border-radius: 8px;
+  padding: 2px;
+  user-select: none;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.apple-switch-btn {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 8px;
+  color: rgba(255, 255, 255, 0.6);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+}
+.apple-switch-btn.active {
+  background: #FFFFFF;
+  color: #4A4668;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+.close-btn {
+  background:transparent;
+  border:none;
+  color:rgba(255, 255, 255, 0.7);
+  cursor:pointer;
+  font-size:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:2px;
+  transition:color 0.2s;
+  line-height:1;
+}
+.close-btn:hover {
+  color:#fff;
+}
+
+.wp-messages{
+  flex:1;overflow-y:auto;padding:20px;
+  display:flex;flex-direction:column;gap:12px;
+  scroll-behavior:smooth;
+  background:#FAFAFC;
+}
+.wp-messages::-webkit-scrollbar{width:4px}
+.wp-messages::-webkit-scrollbar-track{background:transparent}
+.wp-messages::-webkit-scrollbar-thumb{background:#E4E4E7;border-radius:2px}
+
+.wp-msg-bot{display:flex;flex-direction:column;align-items:flex-start;}
+.wp-msg-bot-body{max-width:82%;min-width:0}
+.wp-bubble-bot{
+  background:#FFFFFF;
+  border:1px solid rgba(0, 0, 0, 0.05);
+  box-shadow:0 2px 6px rgba(0, 0, 0, 0.02);
+  border-radius:14px;
+  border-bottom-left-radius:4px;
+  padding:12px 16px;
+  font-size:13.5px;
+  color:#1F2937;
+  line-height:1.45;
+  transition:var(--ease);
+}
+.wp-bubble-meta{
+  font-size:11px;color:var(--mute);margin-top:4px;padding-left:2px;
+  opacity:0.8;
+}
+
+.wp-router-meta{
+  margin-top:10px;padding-top:10px;
+  border-top:1px solid rgba(0, 0, 0, 0.05);
+}
+.wp-chip{
+  display:inline-flex;align-items:center;gap:4px;
+  height:20px;padding:0 8px;border-radius:999px;
+  font-size:10px;font-weight:600;
+  border:1px solid transparent;white-space:nowrap;
+}
+.wp-chip-sector{
+  background:rgba(74, 70, 104, 0.06);border-color:rgba(74, 70, 104, 0.12);color:#4A4668;
+}
+.wp-chip-mod{
+  background:rgba(0, 0, 0, 0.04);border-color:rgba(0, 0, 0, 0.08);color:#4B5563;
+}
+.wp-chip-mod.k1,.wp-chip-mod.k2{background:rgba(16, 185, 129, 0.08);border-color:rgba(16, 185, 129, 0.16);color:#059669}
+.wp-chip-mod.hafiza{background:rgba(79, 70, 229, 0.08);border-color:rgba(79, 70, 229, 0.16);color:#4F46E5}
+.wp-chip-mod.fb{background:rgba(217, 119, 6, 0.08);border-color:rgba(217, 119, 6, 0.16);color:#B45309}
+.wp-chip-neg{
+  background:rgba(220, 38, 38, 0.04);border-color:rgba(220, 38, 38, 0.1);color:#DC2626;
+}
+.wp-chip-neg svg{opacity:.8;flex-shrink:0}
+
+.wp-conf{margin-top:6px}
+.wp-conf-label{
+  display:flex;justify-content:space-between;align-items:baseline;
+  font-size:10px;color:#9CA3AF;margin-bottom:3px;font-weight:500;
+}
+.wp-conf-track{
+  height:2px;border-radius:999px;background:#F3F4F6;
+  overflow:visible;position:relative;
+}
+.wp-conf-fill{
+  height:2px;border-radius:999px;
+  transition:width .65s ease-in-out,background .4s ease-in-out;
+}
+.wp-conf-fill.band-fallback{background:#F59E0B}
+.wp-conf-fill.band-mid{background:#9CA3AF}
+.wp-conf-fill.band-singularity{
+  background:#10B981;
+}
+
+.wp-msg-user{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  width:100%;
+}
+.wp-bubble-user{
+  background:#4A4668;
+  color:#FFFFFF;
+  border-radius:14px;
+  border-bottom-right-radius:4px;
+  padding:12px 16px;
+  font-size:13.5px;
+  line-height:1.45;
+  max-width:82%;
+  box-shadow:0 4px 12px rgba(74, 70, 104, 0.15);
+}
+
+.wp-typing{display:flex;align-items:center;gap:4px;padding:10px 12px}
+.wp-typing span{
+  width:6px;height:6px;border-radius:50%;background:#4A4668;
+  animation:bounce .9s ease-in-out infinite;
+  opacity:0.6;
+}
+.wp-typing span:nth-child(2){animation-delay:.15s}
+.wp-typing span:nth-child(3){animation-delay:.3s}
+@keyframes bounce{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-5px)}}
+
+.widget-footer {
+  padding: 12px 16px 16px;
+  background: #FFFFFF;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  background: #F3F4F6;
+  border-radius: 12px;
+  padding: 4px 6px 4px 14px;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+}
+.input-wrapper:focus-within {
+  background: #FFFFFF;
+  border-color: #4A4668;
+  box-shadow: 0 0 0 3px rgba(74, 70, 104, 0.1);
+}
+.chat-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 13.5px;
+  color: #1F2937;
+  outline: none;
+  font-family:'Inter',sans-serif;
+}
+.chat-input::placeholder {
+  color: #9CA3AF;
+}
+.send-btn {
+  background: #4A4668;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+.send-btn:hover {
+  background: #3B3754;
+}
+.send-btn:active {
+  transform: scale(0.95);
+}
+.send-btn svg {
+  width: 14px;
+  height: 14px;
+  fill: #ffffff;
+}
+
+@media(max-width:480px){
+  #chat-panel{
+    width:100vw;height:100dvh;bottom:0;right:0;border-radius:0;
+    min-width:0;max-height:none;
+  }
+}
+</style>
+</head>
+<body class="antialiased">
+
+<header class="sticky top-0 z-50 border-b border-lavender-100/60 bg-[#FFFCFA]/80 backdrop-blur-xl">
+  <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
+    <div class="flex items-center gap-3">
+      <div class="flex h-9 w-9 items-center justify-center rounded-2xl bg-gradient-to-br from-[#5B6B8C] to-[#7C6BB5] text-[0.72rem] font-semibold text-white shadow-soft font-display">OI</div>
+      <div>
+        <div class="font-display text-sm font-semibold tracking-tight text-[#3D4A66]">OmniIntent</div>
+        <div class="text-[0.68rem] font-medium text-[#7A736C]">Sizin niyet asistanınız</div>
+      </div>
+    </div>
+    <nav class="hidden items-center gap-6 md:flex">
+      <a href="#telemetry" class="text-sm font-medium text-[#7A736C] hover:text-[#5B4E7A]">Özet</a>
+      <a href="#flow" class="text-sm font-medium text-[#7A736C] hover:text-[#5B4E7A]">Nasıl çalışır</a>
+      <a href="#stream" class="text-sm font-medium text-[#7A736C] hover:text-[#5B4E7A]">Canlı iz</a>
+      <span id="status-badge" class="oi-status oi-status-wait">Bağlanıyor…</span>
+      <button type="button" onclick="runLiveExam()" class="rounded-2xl bg-gradient-to-r from-[#5B6B8C] to-[#7C6BB5] px-4 py-2 text-sm font-semibold text-white shadow-soft transition duration-400 ease-in-out hover:brightness-105">
+        Sistemi Canlı Sınav Et
+      </button>
+    </nav>
+    <button type="button" onclick="runLiveExam()" class="rounded-2xl bg-gradient-to-r from-[#5B6B8C] to-[#7C6BB5] px-3 py-2 text-xs font-semibold text-white md:hidden">Sınav Et</button>
+  </div>
+</header>
+
+<section class="relative overflow-hidden border-b border-[#E8E2F4]/80">
+  <div class="absolute inset-0 bg-gradient-to-br from-[#5B6B8C] via-[#5B4E7A] to-[#7C6BB5]"></div>
+  <div class="absolute -right-24 -top-24 h-80 w-80 rounded-full bg-[#C4B5FD]/20 blur-3xl"></div>
+  <div class="absolute -left-16 bottom-0 h-64 w-64 rounded-full bg-white/10 blur-3xl"></div>
+  <div class="relative mx-auto max-w-6xl px-5 py-16 md:py-20">
+    <div class="mb-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[0.72rem] font-medium text-[#F4F0FF] backdrop-blur">
+      <span class="h-1.5 w-1.5 rounded-full bg-[#C4B5FD] animate-pulse"></span>
+      Status: Production-Ready
+    </div>
+    <h1 class="font-display max-w-3xl text-3xl font-semibold tracking-tight text-white md:text-[2.75rem] md:leading-[1.15]">
+      OmniIntent <span class="text-[#D8D2E8]">|</span> AI Core Intelligence Platform
+    </h1>
+    <p class="mt-4 max-w-xl text-base text-[#E8E4F0] md:text-lg font-normal leading-relaxed">
+      Sorularınızı dinleyen, niyetinizi sakinçe çözen kurumsal asistan — soğuk bir terminal değil, çalışma masanızdaki yardımcı.
+    </p>
+  </div>
+</section>
+
+<main class="mx-auto max-w-6xl px-5 py-8">
+
+  <section class="mb-10 grid gap-6 md:grid-cols-3" id="telemetry">
+    <div class="rounded-2xl border border-[#E8E2F4] bg-[#FFFCFA] p-5 shadow-soft">
+      <div class="mb-2 text-xs font-semibold uppercase tracking-wider text-[#8B95A8]">Toplam Korpus</div>
+      <div class="font-display text-3xl font-bold text-[#3D4A66]" id="stat-corpus">1,181</div>
+      <div class="mt-1 text-[0.7rem] text-[#7A736C]" id="stat-corpus-sub">9 ana sektör</div>
+    </div>
+    <div class="rounded-2xl border border-[#E8E2F4] bg-[#FFFCFA] p-5 shadow-soft">
+      <div class="mb-2 text-xs font-semibold uppercase tracking-wider text-[#8B95A8]">Hız (Ortalama)</div>
+      <div class="font-display text-3xl font-bold text-[#3D4A66]"><span id="stat-avgtime">0.0</span> <span class="text-sm font-semibold">ms</span></div>
+      <div class="mt-1 text-[0.7rem] text-[#7A736C]" id="stat-req-sub">hiç istek yok</div>
+    </div>
+    <div class="rounded-2xl border border-[#E8E2F4] bg-[#FFFCFA] p-5 shadow-soft">
+      <div class="mb-2 text-xs font-semibold uppercase tracking-wider text-[#8B95A8]">BGE-M3 Hibrit Vektör</div>
+      <div class="font-display text-3xl font-bold text-[#3D4A66]" id="stat-bge">Aktif</div>
+      <div class="mt-1 text-[0.7rem] text-[#7A736C]" id="stat-bge-sub">simulated rewriter</div>
+    </div>
+  </section>
+
+  <section class="mb-10" id="flow">
+    <h2 class="font-display mb-6 text-xl font-bold text-[#3D4A66]">Yönlendirme Karar Akışı (B2B Intent Pipeline)</h2>
+    <div class="flex flex-col items-center justify-between gap-3 overflow-x-auto pb-4 md:flex-row">
+      <div class="flow-node">
+        <div class="text-[0.62rem] font-bold text-[#8B95A8]">INPUT</div>
+        <div class="text-xs font-medium text-[#3D4A66]">Ham Sorgu</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node">
+        <div class="text-[0.62rem] font-bold text-[#8B95A8]">K1 FAST-PATH</div>
+        <div class="text-xs font-medium text-[#3D4A66]">Sosyal / Guardrail</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node">
+        <div class="text-[0.62rem] font-bold text-[#8B95A8]">K2 VECTOR SEARCH</div>
+        <div class="text-xs font-medium text-[#3D4A66]">BGE-M3 Hybrid</div>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-node">
+        <div class="text-[0.62rem] font-bold text-[#8B95A8]">ROUTING & FORM</div>
+        <div class="text-xs font-medium text-[#3D4A66]">Redirect URL</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-10" id="stream">
+    <div class="mb-3 flex items-center justify-between">
+      <h2 class="font-display text-xl font-bold text-[#3D4A66]">İşlem İzleri & Telemetri</h2>
+      <button type="button" onclick="clearLog()" class="rounded-2xl border border-[#E8E2F4] bg-[#FFFCFA] px-3 py-1.5 text-xs font-medium text-[#7A736C] transition duration-400 ease-in-out hover:bg-[#EDE9FE]">Temizle</button>
+    </div>
+    <div class="stream-shell p-4 md:p-5">
+      <div class="mb-3 flex items-center gap-2 text-xs font-medium text-[#D8D2E8]">
+        <span class="h-2 w-2 rounded-full bg-[#C4B5FD]" style="animation:softPulse 2.4s ease-in-out infinite;box-shadow:0 0 10px rgba(196,181,253,.7)"></span>
+        Düşünce akışı canlı
+      </div>
+      <div id="log-list" class="max-h-80 overflow-y-auto pr-1">
+        <div class="log-empty">Henüz iz yok. “Sistemi Canlı Sınav Et” ile başlayın.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-6 grid gap-4 md:grid-cols-2">
+    <div class="rounded-2xl border border-[#E8E2F4] bg-[#FFFCFA] p-5 shadow-soft">
+      <h3 class="font-display mb-1 text-sm font-semibold text-[#3D4A66]">Hızlı senaryolar</h3>
+      <p class="mb-3 text-xs text-[#7A736C]">Asistanı açar ve canlı soruyu çalıştırır.</p>
+      <div class="flex flex-col gap-2">
+        <button class="qbtn" id="btn-inspector-demo" data-q="Sağlık/hastane değil! Lojistik kargo rotalarımızı optimize etmemiz lazım." onclick="triggerQuickTest(this.dataset.q)">Sağlık değil → lojistik niyeti</button>
+        <button class="qbtn" data-q="Kargo rotalarımızı optimize etmemiz lazım" onclick="triggerQuickTest(this.dataset.q)">Kargo rotası optimize</button>
+        <button class="qbtn" data-q="Havalar nasıl?" onclick="triggerQuickTest(this.dataset.q)">Küçük sohbet (yönlendir)</button>
+        <button class="qbtn" data-q="hastane randevu yazılımı arıyoruz" onclick="triggerQuickTest(this.dataset.q)">Hastane randevu yazılımı</button>
+      </div>
+    </div>
+    <div class="rounded-2xl border border-[#E8E2F4] bg-[#FFFCFA] p-5 shadow-soft">
+      <h3 class="font-display mb-1 text-sm font-semibold text-[#3D4A66]">Son konuşma kaydı</h3>
+      <p class="mb-3 text-xs text-[#7A736C]">İstek / yanıt özeti</p>
+      <pre id="json-request" class="mb-2 max-h-24 overflow-auto rounded-xl bg-[#4A5878] p-3 text-[0.68rem] text-[#E8E4F0] font-sans">{}</pre>
+      <pre id="json-response" class="max-h-40 overflow-auto rounded-xl bg-[#4A5878] p-3 text-[0.68rem] text-[#E8E4F0] font-sans">{}</pre>
+    </div>
+  </section>
+
+</main>
+
+<footer class="border-t border-[#E8E2F4] bg-[#FFFCFA]/80 py-6 text-center text-xs text-[#7A736C]">
+  OmniIntent © 2026 · Sakin, şeffaf, insan odaklı asistan
+</footer>
+
+
+<!-- ═══════════════════════════════════════════
+     CHATBOT WIDGET
+════════════════════════════════════════════ -->
+
+<!-- FAB Butonu -->
+<button id="chat-fab" onclick="openWidget()" title="Asistanı aç">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+
+<!-- Chat Paneli -->
+<div id="chat-panel">
+
+  <!-- Header -->
+  <div class="wp-header">
+    <div class="header-brand">
+      <span class="status-dot"></span>
+      <span class="header-title" id="wp-title-text">Akıllı Yönlendirme</span>
+    </div>
+    <div class="header-actions">
+      <button class="close-btn mr-1" onclick="newSession()" title="Yeni Oturum / New Session" style="font-size: 15px; display: flex; align-items: center; justify-content: center; opacity: 0.85;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
+        </svg>
+      </button>
+      <div class="apple-switch">
+        <button class="apple-switch-btn" id="btn-lang-tr" onclick="setLanguage('tr')">TR</button>
+        <button class="apple-switch-btn" id="btn-lang-en" onclick="setLanguage('en')">EN</button>
+      </div>
+      <button class="close-btn" onclick="closeWidget()">&times;</button>
+    </div>
+  </div>
+
+  <!-- Technical/Dahili Session Kimliği Arayüzden Kaldırıldı (Zero Fluff) -->
+
+  <!-- Mesajlar -->
+  <div class="wp-messages" id="wp-messages"></div>
+
+  <!-- Input Footer -->
+  <div class="widget-footer">
+    <div class="input-wrapper">
+      <input type="text" id="wp-input" class="chat-input" placeholder="Bir hizmet veya sektör arayın..." autocomplete="off">
+      <button class="send-btn" id="wp-send" onclick="sendMessage()" title="Send">
+        <svg viewBox="0 0 24 24">
+          <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+</div><!-- /chat-panel -->
+
+<script>
+// ── Durum ────────────────────────────────────────────────────────────────────
+let widgetOpen  = false;
+let sessionId   = null;
+let requestCount= 0;
+let totalTimeMs = 0;
+let currentLang = 'tr'; // Varsayılan: 'tr'
+const logEl     = document.getElementById('log-list');
+const msgsEl    = document.getElementById('wp-messages');
+
+// Backend/DB bağımsız test modu
+const USE_MOCK = true;
+
+// Sektör Vurgu Renk Kodları (Kurumsal B2B)
+const SEKTOR_COLORS = {
+  egitim: '#2563EB',   // Mavi
+  bilisim: '#059669',  // Yeşil
+  turizm: '#D97706',   // Turuncu
+  saglik: '#0891B2',   // Camgöbeği
+  defense: '#475569',  // Gri
+  ood: '#475569',      // Gri
+  belirsiz: '#475569'
+};
+
+const UI_I18N = {
+  tr: {
+    headerTitle: "Akıllı Yönlendirme",
+    inputPlaceholder: "Bir hizmet veya sektör arayın...",
+    sendButton: "Gönder",
+    initialMessage: "Merhaba! Size nasıl yardımcı olabilirim? Talebinizi yazabilirsiniz."
+  },
+  en: {
+    headerTitle: "Intent Router",
+    inputPlaceholder: "Search for a service or sector...",
+    sendButton: "Send",
+    initialMessage: "Hello! How can I help you today? You can type your request."
+  }
+};
+
+// ── Dil Yönetimi ─────────────────────────────────────────────────────────────
+function setLanguage(lang) {
+  currentLang = UI_I18N[lang] ? lang : 'en';
+  const t = UI_I18N[currentLang];
+
+  // DOM Güncellemeleri
+  document.getElementById('wp-title-text').innerText = t.headerTitle;
+  document.getElementById('wp-input').placeholder = t.inputPlaceholder;
+  
+  // Apple-style Switch Buton Aktiflik Durumları
+  const trBtn = document.getElementById('btn-lang-tr');
+  const enBtn = document.getElementById('btn-lang-en');
+  if (trBtn && enBtn) {
+    if (currentLang === 'tr') {
+      trBtn.classList.add('active');
+      enBtn.classList.remove('active');
+    } else {
+      enBtn.classList.add('active');
+      trBtn.classList.remove('active');
+    }
+  }
+  
+  newSession();
+}
+
+function switchB2BLang() {
+  const nextLang = currentLang === 'tr' ? 'en' : 'tr';
+  setLanguage(nextLang);
+}
+
+// ── Session ID üret ──────────────────────────────────────────────────────────
+function genSession(){
+  return 'sess-' + Math.random().toString(36).slice(2,9).toUpperCase();
+}
+
+function newSession(){
+  sessionId = genSession();
+  clearMessages();
+  addBotWelcome();
+}
+
+// ── Widget aç/kapat ──────────────────────────────────────────────────────────
+function openWidget(){
+  widgetOpen = true;
+  document.getElementById('chat-panel').classList.add('open');
+  document.getElementById('chat-fab').classList.add('hidden');
+  document.getElementById('wp-input').focus();
+}
+
+function closeWidget(){
+  widgetOpen = false;
+  document.getElementById('chat-panel').classList.remove('open');
+  document.getElementById('chat-fab').classList.remove('hidden');
+}
+
+function clearMessages(){
+  msgsEl.innerHTML = '';
+}
+
+function addBotWelcome(){
+  addBotMsg(UI_I18N[currentLang].initialMessage, null);
+}
+
+function confidenceBand(skor){
+  if(skor < 0.75) return 'fallback';
+  if(skor >= 0.90) return 'singularity';
+  return 'mid';
+}
+
+function displayLatencyMs(data){
+  if(!data) return 0;
+  return Number(data.total_latency_ms ?? data.sure_ms ?? data.execution_time_ms ?? 0);
+}
+
+function titleCaseSektor(s){
+  if(!s) return '';
+  return s.replace(/_/g,' ').replace(/\b\w/g, c => c.toUpperCase());
+}
+
+const NEG_ICON = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+  <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/>
+  <path d="M8 8l8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+</svg>`;
+
+// ── Bot mesajı ekle ──────────────────────────────────────────────────────────
+function addBotMsg(html, data, timeMs){
+  const row = document.createElement('div');
+  row.className = 'wp-msg-bot';
+
+  let metaHtml = '';
+  if(data){
+    const skor = Number(data.skor ?? data.guven_skoru ?? data.confidence_score ?? 0);
+    const band = data.confidence_band || confidenceBand(skor);
+    const pct  = Math.max(0, Math.min(100, Math.round(skor * 100)));
+    const modRaw = (data.mod || 'K1').toLowerCase();
+    const modCls = (modRaw === 'k2' || modRaw === 'k1') ? 'k2'
+      : (modRaw === 'hafiza' ? 'hafiza' : (modRaw === 'rule' ? 'k1' : 'fb'));
+    const negs = Array.isArray(data.negated_sectors) ? data.negated_sectors : [];
+    const negChips = negs.map(n =>
+      `<span class="wp-chip wp-chip-neg">${NEG_ICON} Hariç: ${escHtml(titleCaseSektor(n))}</span>`
+    ).join('');
+
+    const isRule = data.layer === 'rule' || data.mod === 'RULE' || data.yontem === 'rule' || data.regex_matched;
+    const inspLabel = data.predicted_sector || data.sektor || 'ood';
+    
+    const vColor = SEKTOR_COLORS[inspLabel] || '#475569';
+    const sectorChip = isRule
+      ? `<span class="wp-chip wp-chip-sector" style="border-left: 3px solid ${vColor}">✦ ${escHtml(inspLabel)}</span>`
+      : `<span class="wp-chip wp-chip-sector" style="border-left: 3px solid ${vColor}">◆ ${escHtml(inspLabel)}</span>`;
+
+    metaHtml = `
+      <div class="wp-router-meta">
+        <div class="wp-meta-row">
+          ${sectorChip}
+          <span class="wp-chip wp-chip-mod ${modCls}">${escHtml(data.mod||'—')}</span>
+          ${negChips}
+        </div>
+        <div class="wp-conf">
+          <div class="wp-conf-label">
+            <span>güven</span>
+            <span>${skor.toFixed(2)}</span>
+          </div>
+          <div class="wp-conf-track">
+            <div class="wp-conf-fill band-${band}" style="width:${pct}%"></div>
+          </div>
+        </div>
+      </div>`;
+  }
+
+  row.innerHTML = `
+    <div class="wp-msg-bot-body">
+      <div class="wp-bubble-bot">${html}${metaHtml}</div>
+      ${timeMs != null ? `<div class="wp-bubble-meta">Asistan · ${Number(timeMs).toFixed(0)}ms</div>` : ''}
+    </div>`;
+  msgsEl.appendChild(row);
+  msgsEl.scrollTop = msgsEl.scrollHeight;
+}
+
+// ── Kullanıcı mesajı ──────────────────────────────────────────────────────────
+function addUserMsg(text){
+  const row = document.createElement('div');
+  row.className = 'wp-msg-user';
+  row.innerHTML = `<div class="wp-bubble-user">${escHtml(text)}</div>`;
+  msgsEl.appendChild(row);
+  msgsEl.scrollTop = msgsEl.scrollHeight;
+  return row;
+}
+
+// ── Yazıyor göstergesi ───────────────────────────────────────────────────────
+function showTyping(){
+  const el = document.createElement('div');
+  el.className = 'wp-msg-bot';
+  el.id = 'typing-indicator';
+  el.innerHTML = `
+    <div class="wp-msg-bot-body">
+      <div class="wp-bubble-bot wp-typing">
+        <span></span><span></span><span></span>
+      </div>
+    </div>`;
+  msgsEl.appendChild(el);
+  msgsEl.scrollTop = msgsEl.scrollHeight;
+}
+
+// ── Yardımcı fonksiyonlar ───────────────────────────────────────────────────
+function hideTyping(){
+  const el = document.getElementById('typing-indicator');
+  if(el) el.remove();
+}
+
+function triggerQuickTest(text){
+  openWidget();
+  document.getElementById('wp-input').value = text;
+  sendMessage();
+}
+
+// ── Mock Yanıt Üreteci ────────────────────────────────────────────────────────
+function getMockResponse(query, lang) {
+  const isEnglish = lang === 'en';
+  // Kelime sonlarındaki 2 veya daha fazla tekrar eden harfleri 1 harfe indirger
+  const sanitized = query.replace(/(\w)\1+(?=\s|$)/g, '$1');
+  const q_lower = sanitized.trim().toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()?]/g, '');
+  const query_words = q_lower.split(/\s+/);
+
+  // K1 Düzleştirilmiş Fast-Path Sözlüğü (Flat Key-Value Map)
+  const K1_LOOKUP = {
+    // ── Türkçe: Selamlama varyasyonları ─────────────────────────────────────
+    "sa": { intent: "OOD_GREETING", reply: "Merhaba! Size nasıl yardımcı olabilirim?" },
+    "sea": { intent: "OOD_GREETING", reply: "Merhaba! Size nasıl yardımcı olabilirim?" },
+    "as": { intent: "OOD_GREETING", reply: "Merhaba! Size nasıl yardımcı olabilirim?" },
+    "ase": { intent: "OOD_GREETING", reply: "Merhaba! Size nasıl yardımcı olabilirim?" },
+    "selamun aleykum": { intent: "OOD_GREETING", reply: "Merhaba! Size nasıl yardımcı olabilirim?" },
+    "selamün aleyküm": { intent: "OOD_GREETING", reply: "Merhaba! Size nasıl yardımcı olabilirim?" },
+    "aleykum selam": { intent: "OOD_GREETING", reply: "Merhaba! Size nasıl yardımcı olabilirim?" },
+    "aleyküm selam": { intent: "OOD_GREETING", reply: "Merhaba! Size nasıl yardımcı olabilirim?" },
+    "naber": { intent: "OOD_GREETING", reply: "Merhaba! Size nasıl yardımcı olabilirim?" },
+    "ne haber": { intent: "OOD_GREETING", reply: "Merhaba! Size nasıl yardımcı olabilirim?" },
+    "nber": { intent: "OOD_GREETING", reply: "Merhaba! Size nasıl yardımcı olabilirim?" },
+    "ne var ne yok": { intent: "OOD_GREETING", reply: "Merhaba! Size nasıl yardımcı olabilirim?" },
+    "nasılsın": { intent: "OOD_GREETING", reply: "Merhaba! Size nasıl yardımcı olabilirim?" },
+    "nasilsin": { intent: "OOD_GREETING", reply: "Merhaba! Size nasıl yardımcı olabilirim?" },
+    "nasiylsin": { intent: "OOD_GREETING", reply: "Merhaba! Size nasıl yardımcı olabilirim?" },
+    "nasıl gidiyor": { intent: "OOD_GREETING", reply: "Merhaba! Size nasıl yardımcı olabilirim?" },
+    "nasilsin gidiyor": { intent: "OOD_GREETING", reply: "Merhaba! Size nasıl yardımcı olabilirim?" },
+    "neler yapıyorsun": { intent: "OOD_GREETING", reply: "Merhaba! Size nasıl yardımcı olabilirim?" },
+    "merhaba": { intent: "OOD_GREETING", reply: "Merhaba! Size nasıl yardımcı olabilirim?" },
+    "merhabalar": { intent: "OOD_GREETING", reply: "Merhaba! Size nasıl yardımcı olabilirim?" },
+    "selam": { intent: "OOD_GREETING", reply: "Merhaba! Size nasıl yardımcı olabilirim?" },
+    "selamlar": { intent: "OOD_GREETING", reply: "Merhaba! Size nasıl yardımcı olabilirim?" },
+    "günaydın": { intent: "OOD_GREETING", reply: "Merhaba! Size nasıl yardımcı olabilirim?" },
+    "gunaydin": { intent: "OOD_GREETING", reply: "Merhaba! Size nasıl yardımcı olabilirim?" },
+    "iyi akşamlar": { intent: "OOD_GREETING", reply: "Merhaba! Size nasıl yardımcı olabilirim?" },
+    "iyi aksamlar": { intent: "OOD_GREETING", reply: "Merhaba! Size nasıl yardımcı olabilirim?" },
+    "iyi günler": { intent: "OOD_GREETING", reply: "Merhaba! Size nasıl yardımcı olabilirim?" },
+    "iyi gunler": { intent: "OOD_GREETING", reply: "Merhaba! Size nasıl yardımcı olabilirim?" },
+    "iyi geceler": { intent: "OOD_GREETING", reply: "Merhaba! Size nasıl yardımcı olabilirim?" },
+    "kolay gelsin": { intent: "OOD_GREETING", reply: "Merhaba! Size nasıl yardımcı olabilirim?" },
+
+    // ── İngilizce: Selamlama varyasyonları ──────────────────────────────────
+    "hello": { intent: "OOD_GREETING", reply: "Hello! How can I help you today?" },
+    "hi": { intent: "OOD_GREETING", reply: "Hello! How can I help you today?" },
+    "hey": { intent: "OOD_GREETING", reply: "Hello! How can I help you today?" },
+    "hi there": { intent: "OOD_GREETING", reply: "Hello! How can I help you today?" },
+    "hello there": { intent: "OOD_GREETING", reply: "Hello! How can I help you today?" },
+    "hey there": { intent: "OOD_GREETING", reply: "Hello! How can I help you today?" },
+    "morning": { intent: "OOD_GREETING", reply: "Hello! How can I help you today?" },
+    "good morning": { intent: "OOD_GREETING", reply: "Hello! How can I help you today?" },
+    "afternoon": { intent: "OOD_GREETING", reply: "Hello! How can I help you today?" },
+    "good afternoon": { intent: "OOD_GREETING", reply: "Hello! How can I help you today?" },
+    "evening": { intent: "OOD_GREETING", reply: "Hello! How can I help you today?" },
+    "good evening": { intent: "OOD_GREETING", reply: "Hello! How can I help you today?" },
+    "good night": { intent: "OOD_GREETING", reply: "Hello! How can I help you today?" },
+    "goodnight": { intent: "OOD_GREETING", reply: "Hello! How can I help you today?" },
+    "greetings": { intent: "OOD_GREETING", reply: "Hello! How can I help you today?" },
+    "howdy": { intent: "OOD_GREETING", reply: "Hello! How can I help you today?" },
+    "yo": { intent: "OOD_GREETING", reply: "Hello! How can I help you today?" },
+    "gm": { intent: "OOD_GREETING", reply: "Hello! How can I help you today?" },
+    "gn": { intent: "OOD_GREETING", reply: "Hello! How can I help you today?" },
+    "whats up": { intent: "OOD_GREETING", reply: "Hello! How can I help you today?" },
+    "whatsup": { intent: "OOD_GREETING", reply: "Hello! How can I help you today?" },
+    "sup": { intent: "OOD_GREETING", reply: "Hello! How can I help you today?" },
+    "wbu": { intent: "OOD_GREETING", reply: "Hello! How can I help you today?" },
+    "hbu": { intent: "OOD_GREETING", reply: "Hello! How can I help you today?" },
+    "how are you": { intent: "OOD_GREETING", reply: "Hello! How can I help you today?" },
+    "how is it going": { intent: "OOD_GREETING", reply: "Hello! How can I help you today?" },
+    "how are you doing": { intent: "OOD_GREETING", reply: "Hello! How can I help you today?" },
+    "hope you are well": { intent: "OOD_GREETING", reply: "Hello! How can I help you today?" },
+    "hope all is well": { intent: "OOD_GREETING", reply: "Hello! How can I help you today?" }
+  };
+
+  // 2. Kötüye Kullanım (Abuse) Kural Havuzu
+  const abuse_roots = [
+    "belani", "belanı", "bela", "fuck", "idiot", "aptal", "salak", "gerizekali", "gerizekalı", "şerefsiz", "serefsiz"
+  ];
+
+  // domain_keywords: kw sektör listeleriyle TAM senkronize — has_domain doğru çalışsın
+  const domain_keywords = [
+    // SAĞLIK
+    "hastane","hospital","sağlık","health","randevu","appointment","tıbbi","medical",
+    "doktor","doctor","hemşire","nurse","ameliyat","surgery","eczane","pharmacy",
+    "hbys","lis","hl7","poliklinik","klinik","hasta","patient",
+    "pacs","dicom","radyoloji","radiology","görüntüleme","imaging",
+    "mri","tomografi","tomography","ultrason","ultrasound","röntgen","x-ray",
+    "triyaj","triage","yoğun bakım","icu","laboratuvar","laboratory",
+    "epikriz","reçete","prescription",
+    // TURİZM
+    "otel","hotel","turizm","tourism","pms","rezervasyon","booking","gds",
+    "konaklama","accommodation","seyahat","travel","acenta","agency",
+    "doluluk","sezonsal","tatil","resort","check-in","check-out","channel manager",
+    // EĞLENCE
+    "eğlence","entertainment","oyun","gaming","bilet","ticketing",
+    "etkinlik","event","konser","concert","tiyatro","theatre","theater",
+    "sahne","stage","seyirci","audience","festival","sinema","cinema",
+    "biletleme","livestream","esport","e-spor",
+    // EĞİTİM
+    "eğitim","education","lms","okul","school","kurs","course","scorm",
+    "akademik","academic","müfredat","curriculum","öğrenci","student",
+    "sınıf","classroom","ölçme","değerlendirme","assessment","öğretmen","teacher",
+    "sınav","exam","ders","lesson","kampüs","campus","üniversite","university",
+    "kreş","yuva","anaokulu","kindergarten","devamsızlık","attendance","e-learning",
+    // BİLİŞİM (DevOps & Siber Güvenlik dahil)
+    "yazılım","software","api","bulut","cloud","sunucu","server",
+    "veritabanı","database","microservice","altyapı","infrastructure",
+    "entegrasyon","integration","kod","code","network","ağ",
+    "devops","ci/cd","pipeline","boru hattı","kubernetes","docker","container",
+    "konteyner","konteynır","pod yönetimi","orkestrasyon","orchestration",
+    "helm","terraform","ansible","sunucu altyapısı","bulut altyapı","cloud native",
+    "zero-trust","zero trust","siem","firewall","güvenlik duvarı",
+    "sızma testi","penetration","vulnerability","ssl","vpn",
+    "authentication","kimlik doğrulama","yetkilendirme","bilişim",
+    "dijital dönüşüm","dijital olgunluk","teşvik danışmanlığı","kosgeb desteği","kosgeb teşviği","kosgeb","ddx","ddx+","turquality","e-turquality","alientos","buyumevizyon","büyümevizyon","alintos","alientas","it altyapı","it altyapısı","akademisinde","akademisi","e öğrenme","lms","dashboard","bi tool","powerbi","business intelligence",
+    // EĞİTİM ek: sürücü kursu / mesleki
+    "sürücü kursu","ehliyet","driving school","driver training",
+    "mesleki eğitim","vocational","sertifika programı","certification program"
+  ];
+
+  // Gibberish / Noise tespiti (rastgele tuş basımı, anlamsız giriş)
+  const gibberish_re = /^[^a-zA-ZçğışöüÇĞİŞÖÜ]*$|(.)\1{4,}|^[a-z]{10,}$/.test(q_lower.replace(/\s/g,'')) &&
+    q_lower.length < 5 || /^[!@#$%^&*()_+\-=\[\]{};':\"\\|,.<>\/?0-9\s]+$/.test(q_lower) ||
+    (q_lower.length >= 6 && !/[aeiouaeıioöuüAEIİOÖUÜ]/i.test(q_lower.replace(/\s/g,'')));
+  if (gibberish_re && !has_domain) {
+    return {
+      reply: isEnglish
+        ? "This topic is currently outside our B2B service scope. I can assist you with requests in IT/Tech, Education, Entertainment, Health, or Tourism."
+        : "Bu konu şu anki B2B hizmet kapsamımız dışındadır. Bilişim, eğitim, eğlence, sağlık veya turizm alanlarındaki talepleriniz için yardımcı olabilirim.",
+      url: null,
+      session_id: 21,
+      predicted_sector: "ood",
+      confidence_score: 0.1,
+      mod: "FB",
+      regex_matched: false
+    };
+  }
+
+  // Teşekkür kelimeleri
+  const thanks_roots = [
+    "tesekkur", "teşekkür", "teşekkürler", "tesekkurler", "sagol", "sağol", "sağ ol", "sag ol", 
+    "müteşekkirim", "eyvallah", "thanks", "thank you", "thank u", "ty", "thx", "appreciate"
+  ];
+
+  const has_domain = query_words.some(w => domain_keywords.some(k => w.includes(k))) || domain_keywords.some(k => q_lower.includes(k));
+  const has_thanks = query_words.some(w => thanks_roots.includes(w)) || thanks_roots.some(t => q_lower.includes(t));
+  const has_abuse = query_words.some(w => abuse_roots.includes(w)) || abuse_roots.some(a => q_lower.includes(a));
+
+  // K1 Abuse (Kötüye Kullanım) Guardrail
+  if (has_abuse) {
+    return {
+      reply: isEnglish
+        ? "Please use professional and respectful language. How can I help you?"
+        : "Lütfen profesyonel ve saygılı bir dil kullanınız. Size nasıl yardımcı olabilirim?",
+      url: null,
+      session_id: 21,
+      predicted_sector: "ood",
+      confidence_score: 1.0,
+      mod: "K1",
+      regex_matched: true
+    };
+  }
+
+  // K1 Fast-Path Flat Dictionary Match (Niyet kelimesi içermiyorsa)
+  if (!has_domain && K1_LOOKUP[q_lower]) {
+    const match = K1_LOOKUP[q_lower];
+    return {
+      reply: match.reply,
+      url: null,
+      session_id: 21,
+      predicted_sector: "ood",
+      confidence_score: 1.0,
+      mod: "K1",
+      regex_matched: true
+    };
+  }
+
+  // K1 Thanks (Teşekkür) Guardrail
+  if (has_thanks && !has_domain) {
+    return {
+      reply: isEnglish
+        ? "You're welcome! Feel free to ask if you need help with anything else."
+        : "Rica ederim! Başka bir konuda yardıma ihtiyacınız olursa buradayım.",
+      url: null,
+      session_id: 21,
+      predicted_sector: "ood",
+      confidence_score: 1.0,
+      mod: "K1",
+      regex_matched: true
+    };
+  }
+
+  // 3. OOD (Kapsam Dışı / Chit-chat / Kısa Girdiler / Gerçek OOD) Durumları
+  const is_chitchat = q_lower.includes("nasılsın") || q_lower.includes("nasilsin") || q_lower.includes("how are you") || q_lower.includes("whats up") || q_lower.includes("naber") || q_lower.includes("ne haber");
+  if (q_lower.length < 3 || (is_chitchat && !has_domain) || (!has_domain && !has_thanks)) {
+    return {
+      reply: isEnglish 
+        ? "This topic is currently outside our B2B service scope. I can assist you with requests in IT/Tech, Education, Entertainment, Health, or Tourism."
+        : "Bu konu şu anki B2B hizmet kapsamımız dışındadır. Bilişim, eğitim, eğlence, sağlık veya turizm alanlarındaki talepleriniz için yardımcı olabilirim.",
+      url: null,
+      session_id: 21,
+      predicted_sector: "ood",
+      confidence_score: 0.45,
+      mod: "FB",
+      regex_matched: false
+    };
+  }
+
+  // ── KURAL A: Olumsuzlama tespiti ────────────────────────────────────────────
+  // TR: "Poliklinik hallettik, kantin için..." | EN: "We already bought hotel PMS, now school..."
+  const NEG_PATTERNS = /yapmıyoruz|yapmayacağız|istemiyoruz|almıyoruz|almayacağız|zaten aldık|aldık,|hallettik|tamamladık|çözduk|çözüldü|bitti,|bittik|var zaten|değil|yok,|hayır|olmayacak|gerekmiyor|already (bought|have|got|taken|purchased|handled|solved|sorted)|sorted out|dealt with|taken care of|took care of|we (already|have|don.t need)|not (looking|interested|relevant)|don.t need|no longer|we.ve (already|got|handled|sorted|dealt)/i;
+  const has_negation = NEG_PATTERNS.test(q_lower);
+
+  // Bir terimin cümledeki konumunda olumsuzlanıp olumsuzlanmadığını kontrol et
+  // Olumsuzlama TERİMDEN SONRA 50 karakter içinde veya ÖNCE 50 içinde geçiyorsa negatif say
+  function isNegated(term) {
+    const idx = q_lower.indexOf(term);
+    if (idx === -1) return false;
+    const before = q_lower.slice(Math.max(0, idx - 50), idx);
+    const after  = q_lower.slice(idx, Math.min(q_lower.length, idx + term.length + 50));
+    return NEG_PATTERNS.test(before) || NEG_PATTERNS.test(after);
+  }
+
+  // ── KURAL B: Yasaklı Sektör Blocklist ────────────────────────────────────────
+  // Olumsuzlanmayan bir yasaklı sektör terimi varsa → kesin OOD
+  // Olumsuzlanmışsa → geç, asıl talebi değerlendir
+  const OOD_BLOCKLIST = [
+    "bankacılık","banka","banking","borsa","hisse","finance",
+    "finansal","finansman","kredi","sigorta","insurance","yatırım","investment",
+    "defense","askeri","military","silah","weapon",
+    "tarım","agriculture","hayvancılık","energy","petrol","oil",
+    "inşaat","construction","gayrimenkul","real estate","emlak","tapu",
+    // ── Hukuk sektörü (yazılım/sistem eklense de OOD) ──
+    "avukat","lawyer","hukuk","legal","dava","mevzuat","mahkeme","court",
+    "noterlik","notary","icra","tahkim","arbitration",
+    // ── Yemekhane / Kantin (EN-13.1 fix — hastane bağlamında bile OOD) ──
+    "kantin","yemekhane","cafeteria","catering",
+    // ── Araç Kiralama ──
+    "araç kiralama","arac kiralama","filo kiralama","araba kiralama","car rental","vehicle rental","kiralama","filo","filosu",
+    // ── B2B Dışı Bireysel / Kiralık Konut ──
+    "kiralık","kiralik","ev","konut","tir"
+  ];
+
+  // Hangi blocklist terimleri cümlede geçiyor ve olumsuzlanmamış?
+  const active_ood_terms = OOD_BLOCKLIST.filter(term => {
+    if (!q_lower.includes(term)) return false;
+    if (term.length <= 3) {
+      const regex = new RegExp("\\b" + term + "\\b", "i");
+      if (!regex.test(q_lower)) return false;
+    }
+    return !isNegated(term);
+  });
+
+  // Fiziki mobilya vb. doğrudan engellenir
+  const hard_ood_physical = /\b(masa|sandalye|koltuk|mobilya)\b/i.test(q_lower);
+  if (hard_ood_physical) {
+    return {
+      reply: isEnglish
+        ? "This topic is currently outside our B2B service scope. I can assist you with requests in IT/Tech, Education, Entertainment, Health, or Tourism."
+        : "Bu konu şu anki B2B hizmet kapsamımız dışındadır. Bilişim, eğitim, eğlence, sağlık veya turizm alanlarındaki talepleriniz için yardımcı olabilirim.",
+      url: null, session_id: 21, predicted_sector: "ood",
+      confidence_score: 0.10, mod: "FB", regex_matched: false
+    };
+  }
+
+  const B2B_MODIFIERS = /\b(yazılım|yazilim|yazılımı|yazilimi|sistem|sistemi|otomasyon|otomasyonu|platform|platformu|saas|portal|portalı|altyapı|altyapısı|cloud|sunucu|ağ|network|e-öğrenme|e öğrenme|lms)\b/i;
+  const has_b2b_modifier = B2B_MODIFIERS.test(q_lower);
+
+  // ── KURAL C: False-Positive BİLİŞİM Engeli ───────────────────────────────────
+  // Yasaklı sektör bağlamında "yazılım/sistem/platform" geçse bile BİLİŞİM'e yönlendirilmez
+  // Örn: "Avukatlar için dava takip yazılımı" → OOD (hukuk bağlamı, yazılım önemsiz)
+  // EĞER B2B modifiyeri varsa OOD kısıtlamasını kaldırır (Stage 2 Override)
+  if (active_ood_terms.length > 0 && !has_b2b_modifier) {
+    return {
+      reply: isEnglish
+        ? "This topic is currently outside our B2B service scope. I can assist you with requests in IT/Tech, Education, Entertainment, Health, or Tourism."
+        : "Bu konu şu anki B2B hizmet kapsamımız dışındadır. Bilişim, eğitim, eğlence, sağlık veya turizm alanlarındaki talepleriniz için yardımcı olabilirim.",
+      url: null, session_id: 21, predicted_sector: "ood",
+      confidence_score: 0.10, mod: "FB", regex_matched: false
+    };
+  }
+
+  // Deterministic Brand/Service Fast-Path (Alientos/Büyümevizyon/DDX/Turquality/E-Turquality/kosgeb/info@buyumevizyon.com/dijital dönüşüm/saas vendor/custom crm)
+  if (/\b(alientos|alintos|alientas|buyumevizyon|büyümevizyon|ddx\+|ddx|turquality|e-turquality|dijital\s*dönüşüm|dijital\s*donusum|kosgeb|it\s+altyapı|it\s+altyapısı|saas\s+vendor|custom\s+crm|crm\s+platform)\b|info@buyumevizyon\.com/i.test(q_lower)) {
+    return {
+      reply: isEnglish
+        ? "Redirecting you to our IT & Digital Transformation department for Alientos / Büyümevizyon."
+        : "Alientos / Büyümevizyon IT ve Dijital Dönüşüm departmanına yönlendiriliyorsunuz.",
+      url: isEnglish ? "/en/it" : "/tr/bilisim",
+      session_id: 21,
+      predicted_sector: "bilisim",
+      confidence_score: 0.99,
+      mod: "K1",
+      regex_matched: true
+    };
+  }
+
+  // ── KURAL D: Genişletilmiş Sektör Anahtar Kelime Setleri ─────────────────────
+  const kw = {
+    saglik: [
+      // Genel
+      "hastane","hospital","sağlık","health","randevu","appointment","tıbbi","medical",
+      "doktor","doctor","hemşire","nurse","ameliyat","surgery","eczane","pharmacy",
+      // Klinik Sistemler
+      "hbys","lis","hl7","poliklinik","klinik","hasta","patient",
+      // Görüntüleme & Arşiv (TR-10.1 fix)
+      "pacs","dicom","radyoloji","radiology","görüntüleme","imaging","arşiv",
+      "mri","tomografi","tomography","ultrason","ultrasound","röntgen","x-ray",
+      // Klinik İş Akışı
+      "triyaj","triage","yoğun bakım","icu","laboratuvar","laboratory","lab ",
+      "kan tahlili","test sonucu","epikriz","reçete","prescription"
+    ],
+    turizm: [
+      "otel","hotel","turizm","tourism","pms","rezervasyon","booking","gds",
+      "konaklama","accommodation","seyahat","travel","acenta","agency",
+      "doluluk","sezonsal","transfer","tur ","tour ","tatil","resort",
+      "check-in","check-out","channel manager","ota ","airbnb","expedia"
+    ],
+    eglence: [
+      "eğlence","entertainment","oyun","gaming","bilet","ticketing","etkinlik",
+      "event","konser","concert","tiyatro","theatre","theater","sahne","stage",
+      "seyirci","audience","festival","müzik","music","sinema","cinema",
+      "biletleme","canlı yayın","livestream","dijital oyun","e-spor","esport",
+      "animasyon","animation","tema park","theme park"
+    ],
+    egitim: [
+      "eğitim","education","lms","okul","school","kurs","course","scorm",
+      "akademik","academic","müfredat","curriculum","öğrenci","student",
+      "sınıf","classroom","ölçme","değerlendirme","assessment","öğretmen","teacher",
+      "sınav","exam","ders","lesson","ödev","homework",
+      "kampüs","campus","üniversite","university",
+      // Kavramsal
+      "etkileşim","interaktif","dijital sınıf","e-öğrenme","e-learning",
+      // Kreş / Erken Çocukluk
+      "kreş","yuva","anaokulu","kindergarten","devamsızlık","devamsizlik",
+      "veli","parent portal","öğrenci takip","student tracking",
+      // Sürücü Kursu / Mesleki Eğitim (TR-12.1 / EN-12.1 fix)
+      "sürücü kursu","ehliyet","driving school","driver training",
+      "mesleki eğitim","vocational","sertifika programı","certification program",
+      "l&d", "kurumsal akademi", "akademi", "akademisi", "akademisinde", "öğrenme"
+    ],
+    bilisim: [
+      "yazılım","software","api","bulut","cloud","sunucu","server",
+      "veritabanı","database","microservice","altyapı","infrastructure",
+      "entegrasyon","integration","kod","code","uygulama geliştirme","ağ","network",
+      "veri merkezi","data center",
+      // DevOps & Cloud Native — Türkçe varyantlar (TR-12.2 fix)
+      "devops","ci/cd","pipeline","boru hattı","kubernetes","docker",
+      "container","konteyner","konteynır","pod ","pod yönetimi",
+      "orkestrasyon","orchestration","helm","terraform","ansible",
+      "sunucu altyapısı","bulut altyapı","cloud native",
+      // Siber Güvenlik
+      "zero-trust","zero trust","siem","soc ","firewall","güvenlik duvarı",
+      "sızma testi","penetration","vulnerability","açık tarama",
+      "ssl","vpn","iam ","kimlik doğrulama","authentication","yetkilendirme",
+      "dijital dönüşüm","dijital olgunluk","teşvik danışmanlığı","kosgeb desteği","kosgeb teşviği","kosgeb","ddx","ddx+","turquality","e-turquality","alientos","buyumevizyon","büyümevizyon","alintos","alientas","it altyapı","it altyapısı",
+      "platform", "otomasyon", "sistem"
+    ]
+  };
+
+  // ── KURAL E: Skor Hesaplama (Olumsuzlanan eşleşmeleri say) ───────────────────
+  function scoreSector(name) {
+    let score = 0;
+    for (const w of kw[name]) {
+      if (!q_lower.includes(w)) continue;
+      if (has_negation && isNegated(w)) continue; // olumsuzlanan eşleşmeyi atla
+      score++;
+    }
+    return score;
+  }
+
+  const scores = {
+    saglik:  scoreSector("saglik"),
+    turizm:  scoreSector("turizm"),
+    eglence: scoreSector("eglence"),
+    egitim:  scoreSector("egitim"),
+    bilisim: scoreSector("bilisim")
+  };
+
+  // ── KURAL F: Niyet Önceliği — en yüksek skoru alan sektör kazanır ────────────
+  // Çakışmada: saglik > eglence > egitim > turizm > bilisim
+  const PRIORITY = ["saglik","eglence","egitim","turizm","bilisim"];
+  let winner = null;
+  let maxScore = 0;
+
+  for (const s of PRIORITY) {
+    if (scores[s] > maxScore) { maxScore = scores[s]; winner = s; }
+  }
+
+  // B2B modifiyeri varsa ve hiçbir sektör eşleşmediyse bilisim'e yönlendir (Fallback)
+  if ((!winner || maxScore === 0) && has_b2b_modifier) {
+    winner = "bilisim";
+    maxScore = 1;
+  }
+
+  // Safe-Fail Strict Guardrail: explicit B2B/yazılım kelimesi yoksa ve maxScore < 2 ise bilisim olamaz (OOD fallback)
+  if (winner === "bilisim") {
+    const explicit_b2b_pattern = /\b(erp|api|yazılım|yazilim|entegrasyon|crm|cloud|saas|sistem|platform|otomasyon|dashboard|bi\s*tool|powerbi|business\s*intelligence|network|sunucu|server|lms)\b/i;
+    const has_explicit = explicit_b2b_pattern.test(q_lower);
+    if (!has_explicit && maxScore < 2) {
+      winner = null;
+      maxScore = 0;
+    }
+  }
+
+  // Hiçbir eşleşme yoksa → OOD
+  if (!winner || maxScore === 0) {
+    return {
+      reply: isEnglish
+        ? "This topic is currently outside our B2B service scope. I can assist you with requests in IT/Tech, Education, Entertainment, Health, or Tourism."
+        : "Bu konu şu anki B2B hizmet kapsamımız dışındadır. Bilişim, eğitim, eğlence, sağlık veya turizm alanlarındaki talepleriniz için yardımcı olabilirim.",
+      url: null, session_id: 21, predicted_sector: "ood",
+      confidence_score: 0.45, mod: "FB", regex_matched: false
+    };
+  }
+
+  const SECTOR_CONFIG = {
+    saglik:  { url_tr: "/tr/saglik",  url_en: "/en/health",        reply_tr: "Sağlık çözümlerimize yönlendiriliyorsunuz.",  reply_en: "Redirecting you to our health solutions." },
+    turizm:  { url_tr: "/tr/tourism", url_en: "/en/tourism",       reply_tr: "Turizm çözümlerimize yönlendiriliyorsunuz.", reply_en: "Redirecting you to our tourism solutions." },
+    eglence: { url_tr: "/tr/eglence", url_en: "/en/entertainment", reply_tr: "Eğlence çözümlerimize yönlendiriliyorsunuz.", reply_en: "Redirecting you to our entertainment solutions." },
+    egitim:  { url_tr: "/tr/egitim",  url_en: "/en/education",     reply_tr: "Eğitim çözümlerimize yönlendiriliyorsunuz.",  reply_en: "Redirecting you to our education solutions." },
+    bilisim: { url_tr: "/tr/bilisim", url_en: "/en/it",            reply_tr: "Bilişim çözümlerimize yönlendiriliyorsunuz.", reply_en: "Redirecting you to our IT solutions." }
+  };
+
+  const cfg = SECTOR_CONFIG[winner];
+  return {
+    reply: isEnglish ? cfg.reply_en : cfg.reply_tr,
+    url:   isEnglish ? cfg.url_en   : cfg.url_tr,
+    session_id: 21,
+    predicted_sector: winner,
+    confidence_score: Math.min(0.99, 0.75 + maxScore * 0.05),
+    mod: "K2",
+    regex_matched: false
+  };
+}
+
+// Bot Yanıtını Arayüze İşleme
+function handleBotResponse(data) {
+  let bubble = escHtml(data.reply);
+  if(data.url){
+    const openText = currentLang === 'tr' ? "Formu aç →" : "Open form →";
+    bubble += `<br><a href="${escHtml(data.url)}" target="_blank" rel="noopener" style="color:#7C6BB5;font-size:0.85em">${openText}</a>`;
+  }
+  addBotMsg(bubble, data, displayLatencyMs(data) || 300);
+
+  // Eğer URL varsa yönlendirme yap (1.2 saniye gecikmeyle)
+  if (data.url) {
+    setTimeout(() => {
+      console.log("Mock redirecting user to: ", data.url);
+    }, 1200);
+  }
+}
+
+// ── Mesaj gönder ─────────────────────────────────────────────────────────────
+async function sendMessage(){
+  const input = document.getElementById('wp-input');
+  const text  = input.value.trim();
+  if(!text) return;
+  input.value = '';
+
+  addUserMsg(text);
+  showTyping();
+
+  if (USE_MOCK) {
+    setTimeout(() => {
+      hideTyping();
+      const mockResponse = getMockResponse(text, currentLang);
+      handleBotResponse(mockResponse);
+    }, 300);
+    return;
+  }
+
+  // GERÇEK BACKEND İSTEĞİ (USE_MOCK = false olduğunda çalışır)
+  const reqPayload = {message: text, session: sessionId};
+  const t0 = performance.now();
+  try {
+    const res  = await fetch('/api/chat', {
+      method:  'POST',
+      headers: {'Content-Type':'application/json'},
+      body:    JSON.stringify(reqPayload),
+    });
+    const data = await res.json();
+    hideTyping();
+    handleBotResponse(data);
+
+    // Stat güncelle
+    const lat = displayLatencyMs(data);
+    requestCount++;
+    totalTimeMs += lat;
+    const sr=document.getElementById('stat-requests'); if(sr) sr.textContent = requestCount;
+    const sa=document.getElementById('stat-avgtime'); if(sa) sa.textContent = (totalTimeMs/requestCount).toFixed(1);
+
+  } catch(e){
+    hideTyping();
+    addBotMsg('Şu an bağlanamadım. Sunucu açık mı?', null, null);
+  }
+}
+
+// ── Log ──────────────────────────────────────────────────────────────────────
+function runLiveExam(){
+  openWidget();
+  const q = currentLang === 'tr' ? 'Hastane değiliz; siber güvenlik altyapısı lazım' : 'I need hotel booking platform';
+  document.getElementById('wp-input').value = q;
+  sendMessage();
+}
+
+function clearLog(){
+  logEl.innerHTML = '<div class="log-empty">Stream temizlendi. Canlı sınavı başlatın.</div>';
+}
+
+function escHtml(s){
+  return String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+document.getElementById('wp-input').addEventListener('keydown', e=>{
+  if(e.key === 'Enter' && !e.shiftKey){ e.preventDefault(); sendMessage(); }
+});
+
+// ── Sayfa yüklenince: varsayılan dili set et ──────────────────────────────────
+async function init(){
+  sessionId = genSession();
+  setLanguage('tr'); // Varsayılan: Türkçe
+}
+
+init();
+</script>
+</body>
+</html>

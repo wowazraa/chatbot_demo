@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "amac": "Chatbot sektör/mod tespiti — TR + EN çok dilli simülasyon",
+    "versiyon": "3.0",
+    "toplam_senaryo": 19,
+    "zorluk_dagilimi": {
+      "kolay": 5,
+      "orta": 7,
+      "zor": 4,
+      "tuzak": 4
+    },
+    "diller": [
+      "tr",
+      "en"
+    ]
+  },
+  "senaryolar": [
+    {
+      "id": "S01",
+      "baslik": "Doğrudan Sağlık Tespiti",
+      "zorluk": "kolay",
+      "aciklama": "Prefix olmadan net sektör tespiti yapılmalı",
+      "girdi": "hastane yönetim sistemi arıyoruz",
+      "beklenen_sektor": "sağlık",
+      "beklenen_mod": "K2",
+      "yasak_sektor": []
+    },
+    {
+      "id": "S02",
+      "baslik": "Prefix'li Sağlık Sorgusu",
+      "zorluk": "kolay",
+      "aciklama": "'Merhaba' prefix ile sektör tespiti etkilenmemeli",
+      "girdi": "Merhaba, hastane yönetim sistemi arıyoruz",
+      "beklenen_sektor": "sağlık",
+      "beklenen_mod": "K2",
+      "yasak_sektor": []
+    },
+    {
+      "id": "S03",
+      "baslik": "Suffix'li Turizm Sorgusu",
+      "zorluk": "kolay",
+      "aciklama": "'Teşekkürler' suffix sektör tespitini bozmamalı",
+      "girdi": "otel rezervasyon sistemimizi yenilemek istiyoruz, teşekkürler",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "yasak_sektor": []
+    },
+    {
+      "id": "S04",
+      "baslik": "Prefix + Suffix Kombo — Eğitim",
+      "zorluk": "orta",
+      "aciklama": "Hem prefix hem suffix olduğunda gövde doğru işlenmeli",
+      "girdi": "lütfen uzaktan eğitim platformu hakkında bilgi verir misiniz acil",
+      "beklenen_sektor": "eğitim",
+      "beklenen_mod": "K2",
+      "yasak_sektor": []
+    },
+    {
+      "id": "S05",
+      "baslik": "Kısaltma Normalizasyonu — Sağlık",
+      "zorluk": "orta",
+      "aciklama": "Kısaltmalar normalize edilip sektör bulunmalı",
+      "girdi": "sğlk hastane yazılımı lazım",
+      "beklenen_sektor": "sağlık",
+      "beklenen_mod": "K2",
+      "yasak_sektor": []
+    },
+    {
+      "id": "S06",
+      "baslik": "Argo / Kısa Cümle — Turizm",
+      "zorluk": "orta",
+      "aciklama": "Argo ifadeyle sektör tespiti",
+      "girdi": "odaların dolu mu boş mu tek bakışta görelim",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "yasak_sektor": []
+    },
+    {
+      "id": "S08",
+      "baslik": "Tuzak — Eğitim + Savunma Karışımı",
+      "zorluk": "zor",
+      "aciklama": "Askeri eğitim: eğitim mi yoksa savunma mı? Öncelik eğitim olmalı",
+      "girdi": "Askeri personele uzaktan prosedür eğitimi vereceğiz",
+      "beklenen_sektor": "eğitim",
+      "beklenen_mod": "K2",
+      "yasak_sektor": []
+    },
+    {
+      "id": "S09",
+      "baslik": "Yazım Hatalı + Prefix Kombo",
+      "zorluk": "zor",
+      "aciklama": "Yazım hataları regex ile düzeltilmeli, ardından sektör tespiti yapılmalı",
+      "girdi": "meraba, egtm lms kuracagiz bilgi verir misiniz",
+      "beklenen_sektor": "eğitim",
+      "beklenen_mod": "K2",
+      "yasak_sektor": []
+    },
+    {
+      "id": "S10",
+      "baslik": "Belirsiz — Fallback Modu",
+      "zorluk": "orta",
+      "aciklama": "Sektör sinyali yoksa FB moduna düşmeli",
+      "girdi": "fiyat teklifi almak istiyorum",
+      "beklenen_sektor": "belirsiz",
+      "beklenen_mod": "FB",
+      "yasak_sektor": []
+    },
+    {
+      "id": "S11",
+      "baslik": "Tamamen Alakasız — Fallback",
+      "zorluk": "tuzak",
+      "aciklama": "Gündelik konuşma chatbot'u yanıltmamalı",
+      "girdi": "bugün hava çok güzeldi",
+      "beklenen_sektor": "belirsiz",
+      "beklenen_mod": "FB",
+      "yasak_sektor": []
+    },
+    {
+      "id": "S12",
+      "baslik": "Determinizm Kontrolü",
+      "zorluk": "kolay",
+      "aciklama": "Aynı girdi iki kez sorulduğunda aynı sonuç gelmeli",
+      "girdi": "hastane randevu yazılımı",
+      "beklenen_sektor": "sağlık",
+      "beklenen_mod": "K2",
+      "determinizm": true,
+      "yasak_sektor": []
+    },
+    {
+      "id": "S13",
+      "baslik": "Turizm Kısaltma + Suffix",
+      "zorluk": "zor",
+      "aciklama": "Kısaltmalı girdi + suffix ile sektör kaymamalı",
+      "girdi": "trzm rzv sistemi yazar mısın",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "yasak_sektor": []
+    },
+    {
+      "id": "S14",
+      "baslik": "Tuzak — Sadece Sektör Kelimesi",
+      "zorluk": "tuzak",
+      "aciklama": "Tek kelime 'sağlık' yeterince güçlü sinyal sayılmalı mı?",
+      "girdi": "sağlık",
+      "beklenen_sektor": "sağlık",
+      "beklenen_mod": "K2",
+      "yasak_sektor": []
+    },
+    {
+      "id": "S15",
+      "baslik": "EN — Doğrudan Sağlık Tespiti",
+      "zorluk": "kolay",
+      "lang": "en",
+      "aciklama": "Saf İngilizce sektör tespiti doğru çalışmalı",
+      "girdi": "We need a hospital management system",
+      "beklenen_sektor": "sağlık",
+      "beklenen_mod": "K2",
+      "yasak_sektor": []
+    },
+    {
+      "id": "S16",
+      "baslik": "EN — Turizm Prefix'li",
+      "zorluk": "orta",
+      "lang": "en",
+      "aciklama": "Prefix eklendiğinde sektör kaymamalı",
+      "girdi": "Hello, we are looking for a hotel reservation system",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "yasak_sektor": []
+    },
+    {
+      "id": "S18",
+      "baslik": "EN — Eğitim Suffix'li",
+      "zorluk": "orta",
+      "lang": "en",
+      "aciklama": "Suffix eklenmiş İngilizce eğitim sorgusu",
+      "girdi": "We need a learning management system for our university, thank you",
+      "beklenen_sektor": "eğitim",
+      "beklenen_mod": "K2",
+      "yasak_sektor": []
+    },
+    {
+      "id": "S19",
+      "baslik": "EN — Fallback Tespiti",
+      "zorluk": "tuzak",
+      "lang": "en",
+      "aciklama": "İngilizce belirsiz sorgu FB moduna düşmeli",
+      "girdi": "I need a price quote",
+      "beklenen_sektor": "belirsiz",
+      "beklenen_mod": "FB",
+      "yasak_sektor": []
+    },
+    {
+      "id": "S20",
+      "baslik": "EN — Alakasız Sorgu Fallback",
+      "zorluk": "tuzak",
+      "lang": "en",
+      "aciklama": "Gündelik İngilizce konuşma FB'ye düşmeli",
+      "girdi": "How does your company work?",
+      "beklenen_sektor": "belirsiz",
+      "beklenen_mod": "FB",
+      "yasak_sektor": []
+    },
+    {
+      "id": "S26",
+      "baslik": "Bilişim Sektör Tespiti",
+      "zorluk": "kolay",
+      "aciklama": "Bulut altyapısı ve sunucu barındırma bilişim sektörüne gitmeli",
+      "girdi": "Kurumsal bulut altyapısı ve sunucu barındırma otomasyon yazılımı arıyoruz.",
+      "beklenen_sektor": "bilişim",
+      "beklenen_mod": "K2",
+      "yasak_sektor": []
+    }
+  ]
+}

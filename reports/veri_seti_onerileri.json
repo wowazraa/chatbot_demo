@@ -1,0 +1,254 @@
+[
+  {
+    "id": 1000,
+    "mesaj": "savunma sanayi projesi değil, eğitim otomasyonu ile ilgileniyoruz",
+    "lang": "tr",
+    "beklenen_sektor": "eğitim",
+    "beklenen_mod": "K2",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "A02"
+  },
+  {
+    "id": 1001,
+    "mesaj": "Eski turizm acente programımızı bırakıp hastane otomasyon sistemine geçmek istiyoruz",
+    "lang": "tr",
+    "beklenen_sektor": "sağlık",
+    "beklenen_mod": "K2",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "A05"
+  },
+  {
+    "id": 1002,
+    "mesaj": "Biz askeri birlik değiliz, sadece okul kayıt sistemi istiyoruz",
+    "lang": "tr",
+    "beklenen_sektor": "eğitim",
+    "beklenen_mod": "K2",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "A06"
+  },
+  {
+    "id": 1003,
+    "mesaj": "savunma radar projesi mi eğitim otomasyonu mu derseniz kesinlikle ilkini değil ikincisini seçeceğiz",
+    "lang": "tr",
+    "beklenen_sektor": "eğitim",
+    "beklenen_mod": "K2",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "A09"
+  },
+  {
+    "id": 1004,
+    "mesaj": "savunma sanayi alanında çalışmıyoruz, okul ders programı otomasyonuna ihtiyacımız var",
+    "lang": "tr",
+    "beklenen_sektor": "eğitim",
+    "beklenen_mod": "K2",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "A13"
+  },
+  {
+    "id": 1005,
+    "mesaj": "Hem sağlık hem de savunma alanında faaliyet gösteriyoruz, ikisi için de teklif verin",
+    "lang": "tr",
+    "beklenen_sektor": "sağlık",
+    "beklenen_mod": "K2",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "B01"
+  },
+  {
+    "id": 1006,
+    "mesaj": "Hastane ve radar komuta kontrol sistemlerini birleştiren entegre bir yazılım arıyoruz",
+    "lang": "tr",
+    "beklenen_sektor": "sağlık",
+    "beklenen_mod": "K2",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "B03"
+  },
+  {
+    "id": 1007,
+    "mesaj": "Askeri hastaneler için hem telemedicine hem de taktik telsiz sistemi kurulacak",
+    "lang": "tr",
+    "beklenen_sektor": "sağlık",
+    "beklenen_mod": "K2",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "B05"
+  },
+  {
+    "id": 1008,
+    "mesaj": "lms tabanlı eğitim modülü olan bir hastane yönetim sistemi",
+    "lang": "tr",
+    "beklenen_sektor": "sağlık",
+    "beklenen_mod": "K2",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "B06"
+  },
+  {
+    "id": 1009,
+    "mesaj": "egt kurumu icin uzaktan lms",
+    "lang": "tr",
+    "beklenen_sektor": "eğitim",
+    "beklenen_mod": "K2",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "C04"
+  },
+  {
+    "id": 1010,
+    "mesaj": "eğitm portali örenci işleri",
+    "lang": "tr",
+    "beklenen_sektor": "eğitim",
+    "beklenen_mod": "K2",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "C07"
+  },
+  {
+    "id": 1011,
+    "mesaj": "hastaneyonetimsistemiyazilimi",
+    "lang": "tr",
+    "beklenen_sektor": "sağlık",
+    "beklenen_mod": "K2",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "C08"
+  },
+  {
+    "id": 1012,
+    "mesaj": "bişey lazım bize sağlık için acil yardimci olun",
+    "lang": "tr",
+    "beklenen_sektor": "sağlık",
+    "beklenen_mod": "K2",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "C09"
+  },
+  {
+    "id": 1013,
+    "mesaj": "sağlık 🏥 lazım!!! çok acil",
+    "lang": "tr",
+    "beklenen_sektor": "sağlık",
+    "beklenen_mod": "K2",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "C10"
+  },
+  {
+    "id": 1014,
+    "mesaj": "Hastane için bir EHR sistemi arıyoruz",
+    "lang": "tr",
+    "beklenen_sektor": "sağlık",
+    "beklenen_mod": "K2",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "D03"
+  },
+  {
+    "id": 1015,
+    "mesaj": "university registration system yenilemek istiyoruz",
+    "lang": "tr",
+    "beklenen_sektor": "eğitim",
+    "beklenen_mod": "K2",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "D09"
+  },
+  {
+    "id": 1016,
+    "mesaj": "İyi çalışmalar dileriz. Grubumuz bünyesinde yer alan beş yıldızlı otel işletmelerimizin tüm rezervasyon kanallarını tek bir platform üzerinden yönetebileceğimiz bir yazılım arayışımız mevcuttur. Mevcut sistemimizin entegrasyonu ve fiyatlandırma şartları hakkında bilgi almak istiyoruz.",
+    "lang": "tr",
+    "beklenen_sektor": "turizm",
+    "beklenen_mod": "K2",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "E02"
+  },
+  {
+    "id": 1017,
+    "mesaj": "Kamu kurumlarına eğitim ve danışmanlık hizmeti sunan bir limited şirketiz. Personellerimizin online sertifika süreçlerini, e-öğrenme içeriklerini ve sınav aşamalarını yöneteceğimiz bir LMS platformu kurmak istiyoruz. Detayları görüşmek üzere toplantı talep ediyoruz.",
+    "lang": "tr",
+    "beklenen_sektor": "eğitim",
+    "beklenen_mod": "K2",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "E06"
+  },
+  {
+    "id": 1018,
+    "mesaj": "Yeni açılacak tatil köyümüz için online rezervasyon altyapısı, misafir check-in süreçleri ve oda durum kartlarını yöneteceğimiz bir otel yazılımı teklifi almak istiyoruz. Kurulum süresi ve entegrasyon desteği kritik önemdedir.",
+    "lang": "tr",
+    "beklenen_sektor": "turizm",
+    "beklenen_mod": "K2",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "E09"
+  },
+  {
+    "id": 1019,
+    "mesaj": "Sağlıklı bir iş ortaklığı kurmak istiyoruz.",
+    "lang": "tr",
+    "beklenen_sektor": "belirsiz",
+    "beklenen_mod": "FB",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "F01"
+  },
+  {
+    "id": 1020,
+    "mesaj": "Turistik bir bölgede ofisimiz var ama yazılım hizmeti arıyoruz.",
+    "lang": "tr",
+    "beklenen_sektor": "belirsiz",
+    "beklenen_mod": "FB",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "F02"
+  },
+  {
+    "id": 1021,
+    "mesaj": "Eğitimli personel arıyoruz, işe alım konusunda yardımcı olur musunuz?",
+    "lang": "tr",
+    "beklenen_sektor": "belirsiz",
+    "beklenen_mod": "FB",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "F03"
+  },
+  {
+    "id": 1022,
+    "mesaj": "Otel konforunda bir çalışma ortamı sunan yeni ofisimize bekleriz.",
+    "lang": "tr",
+    "beklenen_sektor": "belirsiz",
+    "beklenen_mod": "FB",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "F06"
+  },
+  {
+    "id": 1023,
+    "mesaj": "Bu ders bize büyük bir hayat eğitimi oldu gerçekten.",
+    "lang": "tr",
+    "beklenen_sektor": "belirsiz",
+    "beklenen_mod": "FB",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "F08"
+  },
+  {
+    "id": 1024,
+    "mesaj": "Bilişim gibi hızlı büyüyen bir sektörde olmak istiyoruz ama biz aslında bir çiftlik işletmesiyiz.",
+    "lang": "tr",
+    "beklenen_sektor": "belirsiz",
+    "beklenen_mod": "FB",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "F13"
+  },
+  {
+    "id": 1025,
+    "mesaj": "sağlık sağlık sağlık sağlık sağlık sağlık sağlık sağlık sağlık sağlık",
+    "lang": "tr",
+    "beklenen_sektor": "sağlık",
+    "beklenen_mod": "K2",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "H05"
+  },
+  {
+    "id": 1026,
+    "mesaj": "savunma değil eğitim değil sağlık hiç değil, otel yazın",
+    "lang": "tr",
+    "beklenen_sektor": "turizm",
+    "beklenen_mod": "K2",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "H09"
+  },
+  {
+    "id": 1027,
+    "mesaj": "merhaba merhaba merhaba selam lütfen",
+    "lang": "tr",
+    "beklenen_sektor": "belirsiz",
+    "beklenen_mod": "FB",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "H10"
+  }
+]

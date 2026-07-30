@@ -1,0 +1,91 @@
+{
+  "info": {
+    "name": "Chatbot Bilgi Merkezi — Chat API (v2.2)",
+    "description": "POST chat: ilk mesajda session_id=null, sonra aynı id ile devam.\nEnvironment'ta session_id tutma — Collection Variables kullan.\n\nuvicorn db_api.main:app --host 127.0.0.1 --port 8001\npython -m db_api.seed_cli",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://127.0.0.1:8001"
+    },
+    {
+      "key": "session_id",
+      "value": ""
+    },
+    {
+      "key": "session_id_json",
+      "value": "null"
+    }
+  ],
+  "item": [
+    {
+      "name": "Chatbot",
+      "item": [
+        {
+          "name": "1 GET health",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{base_url}}/api/health"
+          }
+        },
+        {
+          "name": "2 POST chat",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{base_url}}/api/chat",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"message\": \"Kardiyoloji randevusu almak istiyorum\",\n  \"session_id\": {{session_id_json}},\n  \"user_identifier\": \"postman-user\"\n}"
+            }
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  "let s = pm.collectionVariables.get('session_id');",
+                  "if (!s || s === '' || s === 'null') {",
+                  "  pm.collectionVariables.set('session_id_json', 'null');",
+                  "} else {",
+                  "  pm.collectionVariables.set('session_id_json', String(s));",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "if (pm.response.code === 200) {",
+                  "  const j = pm.response.json();",
+                  "  if (j.session_id != null) {",
+                  "    pm.collectionVariables.set('session_id', String(j.session_id));",
+                  "  }",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ]
+        },
+        {
+          "name": "3 GET messages",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{base_url}}/api/messages?session_id={{session_id}}&limit=50&offset=0"
+          }
+        }
+      ]
+    }
+  ]
+}

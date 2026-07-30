@@ -1,0 +1,58 @@
+[
+  {
+    "test_id": "ADV-01",
+    "target_flaw": "Yalancı Olumsuzluk / False Negation",
+    "input_query": "Yalnızca hastane değil, tıp merkezlerimiz için de hastane otomasyonu arıyoruz.",
+    "expected_sector": "saglik",
+    "why_it_breaks_the_rule": "İçinde 'değil' geçtiği için K1 devre dışı kalmalı ancak BGE-M3 (K2) 'tıp merkezi' ve 'hastane otomasyonu' semantik yakınlığından sağlık sektörünü başarıyla bulmalı."
+  },
+  {
+    "test_id": "ADV-02",
+    "target_flaw": "Venue vs Service Confusion",
+    "input_query": "Otelimiz için personel eğitim portalı ve online rezervasyon modülü arıyoruz.",
+    "expected_sector": "turizm",
+    "why_it_breaks_the_rule": "Hem eğitim hem turizm terimleri geçiyor, ancak 'rezervasyon modülü' ve 'otel' turizm dikeyini ana odak yapmalı."
+  },
+  {
+    "test_id": "ADV-03",
+    "target_flaw": "Double Negative",
+    "input_query": "Turizm acentesi değiliz ama otel dışı konaklama rezervasyon altyapısı da istemiyor değiliz.",
+    "expected_sector": "turizm",
+    "why_it_breaks_the_rule": "Çift olumsuzlama ile kural motorunu bypass edip semantik olarak turizm dikeyine yönlenmeli."
+  },
+  {
+    "test_id": "ADV-04",
+    "target_flaw": "False-Positive Negation EN",
+    "input_query": "We are not a clinic but we definitely need doctor appointment scheduling software.",
+    "expected_sector": "saglik",
+    "why_it_breaks_the_rule": "İngilizce olumsuzluk geçmesine rağmen 'doctor appointment scheduling' teriminin sağlık dikeyini tetiklemesi gerekir."
+  },
+  {
+    "test_id": "ADV-05",
+    "target_flaw": "Venue vs Service Confusion EN",
+    "input_query": "School registration portal with hotel booking integration for international students.",
+    "expected_sector": "egitim",
+    "why_it_breaks_the_rule": "Okul kaydı (school registration) ana hizmet olduğu için turizm yerine eğitim sektörüne yönlenmeli."
+  },
+  {
+    "test_id": "ADV-06",
+    "target_flaw": "Complex Negation with Mixed Domains",
+    "input_query": "Hastane değiliz, siber güvenlik altyapısı ve bulut sunucu kurulumu istiyoruz.",
+    "expected_sector": "bilisim",
+    "why_it_breaks_the_rule": "'Hastane' kelimesi geçmesine rağmen olumsuzlandığı için sağlık atlanmalı ve doğrudan bilişim sektörü seçilmeli."
+  },
+  {
+    "test_id": "ADV-07",
+    "target_flaw": "Service Word Dominance",
+    "input_query": "Concert ticket sales system with integrated school event management.",
+    "expected_sector": "eglence",
+    "why_it_breaks_the_rule": "'School' geçmesine rağmen ana eylem 'concert ticket sales' olduğu için eğlence sektörü baskın çıkmalı."
+  },
+  {
+    "test_id": "ADV-08",
+    "target_flaw": "Double Domain Traps",
+    "input_query": "Eğitim kurumu değiliz, otel çalışanları için SCORM uyumlu LMS platformu arıyoruz.",
+    "expected_sector": "egitim",
+    "why_it_breaks_the_rule": "'Eğitim kurumu değiliz' dese de 'SCORM uyumlu LMS platformu' hizmet odaklı olduğu için eğitim dikeyine gitmelidir."
+  }
+]

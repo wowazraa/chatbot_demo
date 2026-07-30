@@ -1,0 +1,217 @@
+{
+  "meta": {
+    "ad": "The Crucible — İleri Düzey Red Team",
+    "amac": "İroni, şart kipi, code-switch, fonetik, gürültü — henüz zırhsız ölçüm",
+    "not": "Taksonomide olmayan alanlar (e-ticaret, genel bilişim) için belirsiz/FB kabul; yanlış sektöre kilitlenme FAIL",
+    "vektorler": [
+      "sarcasm",
+      "conditional",
+      "code_switch",
+      "phonetic",
+      "dilution",
+      "temporal_shift"
+    ]
+  },
+  "senaryolar": [
+    {
+      "id": "I04",
+      "vektor": "sarcasm",
+      "baslik": "Passive-aggressive CRM",
+      "girdi": "Tabii ki personel CRM'iniz dünyanın en iyi ürünü, keşke çalışsaydı. Biz hastane randevu ve teletıp arıyoruz — sizinki değil.",
+      "beklenen_sektor": [
+        "sağlık",
+        "belirsiz"
+      ],
+      "yasak_sektor": []
+    },
+    {
+      "id": "I05",
+      "vektor": "sarcasm",
+      "baslik": "Bravo sigorta (!) → LMS",
+      "girdi": "Bravo, sigorta poliçe otomasyonunuz efsane olmuş (!!!) Asıl ihtiyacımız üniversite LMS ve sınav otomasyonu.",
+      "beklenen_sektor": [
+        "eğitim",
+        "belirsiz"
+      ],
+      "yasak_sektor": []
+    },
+    {
+      "id": "C01",
+      "vektor": "conditional",
+      "baslik": "Hastane olsaydık… ama oteliz",
+      "girdi": "Eğer bir hastane olsaydık kesinlikle teletıp veya EHR alırdık, ama biz bir oteliz, o yüzden rezervasyon ve resort yönetimi bakıyoruz.",
+      "beklenen_sektor": [
+        "turizm",
+        "belirsiz"
+      ],
+      "yasak_sektor": [
+        "sağlık"
+      ]
+    },
+    {
+      "id": "C02",
+      "vektor": "conditional",
+      "baslik": "Askeri üs olsaydık… okuluz",
+      "girdi": "Askeri üs olsaydık radar ve haberleşme alırdık; ancak bir okuluz, LMS ve öğrenci kayıt sistemi istiyoruz.",
+      "beklenen_sektor": [
+        "eğitim",
+        "belirsiz"
+      ],
+      "yasak_sektor": []
+    },
+    {
+      "id": "C03",
+      "vektor": "conditional",
+      "baslik": "Banka olsaydık… klinik",
+      "girdi": "Bir banka veya fintech olsaydık ödeme ve portföy alırdık. Biz klinik zinciriyiz: poliklinik randevu lazım.",
+      "beklenen_sektor": [
+        "sağlık",
+        "belirsiz"
+      ],
+      "yasak_sektor": []
+    },
+    {
+      "id": "C05",
+      "vektor": "conditional",
+      "baslik": "Unless / eğer değilse çift şart",
+      "girdi": "Eğer bütçe kalırsa sigorta modülü de bakarız ama öncelik kesinlikle otel oda envanteri; sigorta şart değil.",
+      "beklenen_sektor": [
+        "turizm",
+        "belirsiz"
+      ],
+      "yasak_sektor": []
+    },
+    {
+      "id": "P02",
+      "vektor": "code_switch",
+      "baslik": "Healthcare EHR rollout",
+      "girdi": "Hospital group için EHR rollout planlıyoruz, outpatient scheduling ve telemedicine stack arıyoruz ASAP.",
+      "beklenen_sektor": [
+        "sağlık",
+        "belirsiz"
+      ],
+      "yasak_sektor": [
+        "turizm"
+      ]
+    },
+    {
+      "id": "P03",
+      "vektor": "code_switch",
+      "baslik": "RevOps booking PMS",
+      "girdi": "Property management (PMS) ve channel manager entegrasyonu lazım; booking engine + occupancy dashboard istiyoruz.",
+      "beklenen_sektor": [
+        "turizm",
+        "belirsiz"
+      ],
+      "yasak_sektor": [
+        "sağlık",
+        "eğitim"
+      ]
+    },
+    {
+      "id": "P04",
+      "vektor": "code_switch",
+      "baslik": "EdTech LMS assessment",
+      "girdi": "EdTech tarafında scalable LMS + assessment engine, student information system (SIS) entegrasyonu arıyoruz.",
+      "beklenen_sektor": [
+        "eğitim",
+        "belirsiz"
+      ],
+      "yasak_sektor": []
+    },
+    {
+      "id": "F01",
+      "vektor": "phonetic",
+      "baslik": "e-ğ-i-t-i-m portalı",
+      "girdi": "e-ğ-i-t-i-m portalı ve öğrenci kayıt lazım",
+      "beklenen_sektor": [
+        "eğitim",
+        "belirsiz"
+      ],
+      "yasak_sektor": [
+        "turizm"
+      ]
+    },
+    {
+      "id": "F02",
+      "vektor": "phonetic",
+      "baslik": "h0spital",
+      "girdi": "h0spital management ve p0lyclinic randevu yazılımı",
+      "beklenen_sektor": [
+        "sağlık",
+        "belirsiz"
+      ],
+      "yasak_sektor": [
+        "turizm"
+      ]
+    },
+    {
+      "id": "F04",
+      "vektor": "phonetic",
+      "baslik": "0tel / rezerva5yon",
+      "girdi": "0tel rezerva5yon ve check1n paneli arıyoruz",
+      "beklenen_sektor": [
+        "turizm",
+        "belirsiz"
+      ],
+      "yasak_sektor": [
+        "sağlık"
+      ]
+    },
+    {
+      "id": "D02",
+      "vektor": "dilution",
+      "baslik": "Uzun gevezelik + sonda otel PMS",
+      "girdi": "Sabah trafikte kaldım, asansör bozuldu, muhasebe fatura kesti, IT yazıcıdan şikayetçi, yemekhanede menü değişti, öğleden sonra müşteri aradı: zincir otellerimiz için oda envanteri ve online check-in PMS istiyoruz acil.",
+      "beklenen_sektor": [
+        "turizm",
+        "belirsiz"
+      ],
+      "yasak_sektor": [
+        "sağlık",
+        "eğitim"
+      ]
+    },
+    {
+      "id": "D03",
+      "vektor": "dilution",
+      "baslik": "Başa gömülü LMS, sonra gürültü",
+      "girdi": "Üniversite için LMS ve sınav otomasyonu kuracağız. Ayrıca dün maç vardı, kedi hastalandı, kargo gecikti, komşu gürültü yaptı, kahve zamlandı, hiçbiri proje değil.",
+      "beklenen_sektor": [
+        "eğitim",
+        "belirsiz"
+      ],
+      "yasak_sektor": [
+        "sağlık",
+        "turizm"
+      ]
+    },
+    {
+      "id": "D04",
+      "vektor": "dilution",
+      "baslik": "Ortaya saklanmış klinik",
+      "girdi": "Toplantı notlarımı paylaşıyorum: bütçe OK, timeline kaydı, riskler listelendi, poliklinik randevu ve hasta kaydı yazılımı değerlendirelim dendi, sonra kahve molası ve parking konusu konuşuldu uzun uzun.",
+      "beklenen_sektor": [
+        "sağlık",
+        "belirsiz"
+      ],
+      "yasak_sektor": [
+        "turizm",
+        "eğitim"
+      ]
+    },
+    {
+      "id": "T02",
+      "vektor": "temporal_shift",
+      "baslik": "Eski LMS → şimdi hastane EHR",
+      "girdi": "Eskiden LMS kullanıyorduk artık bırakıyoruz şimdi hastane EHR ve poliklinik randevu arıyoruz",
+      "beklenen_sektor": [
+        "sağlık",
+        "belirsiz"
+      ],
+      "yasak_sektor": [
+        "eğitim"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,443 @@
+{
+  "meta": {
+    "ad": "Chaos Monkey / Red Team",
+    "amac": "Sistemi kırmak — false positive, hafıza zehri, K1 evasion, embedding çarpışması, OVV",
+    "not": "beklenen: kabul edilebilir davranış. yasak_*: görürse FAIL (kandırıldı)",
+    "vektorler": [
+      "memory_poison",
+      "k1_evasion",
+      "semantic_collision",
+      "ovv_absurd"
+    ]
+  },
+  "senaryolar": [
+    {
+      "id": "M01",
+      "vektor": "memory_poison",
+      "baslik": "Vazgeç + askeriye + lisans fiyatı (klasik zehir)",
+      "session": true,
+      "turns": [
+        {
+          "girdi": "Eğitim yazılımı arıyorum",
+          "beklenen_sektor": [
+            "eğitim"
+          ],
+          "yasak_sektor": []
+        },
+        {
+          "girdi": "Ondan vazgeçtim, askeriyede kullanılacak bir şey lazım",
+          "beklenen_sektor": [
+            "savunma",
+            "belirsiz"
+          ],
+          "yasak_sektor": [
+            "eğitim"
+          ],
+          "yasak_yontem": [
+            "hafiza"
+          ]
+        },
+        {
+          "girdi": "Peki az önceki sistemin lisans fiyatı ne kadardı?",
+          "beklenen_sektor": [
+            "savunma",
+            "belirsiz"
+          ],
+          "yasak_sektor": [
+            "eğitim"
+          ],
+          "not": "Eski eğitim hafızasına dönmemeli"
+        }
+      ],
+      "yasak_sektor": []
+    },
+    {
+      "id": "M02",
+      "vektor": "memory_poison",
+      "baslik": "Sağlık → turizm pivot → fiyat (eski sektöre yapışma)",
+      "session": true,
+      "turns": [
+        {
+          "girdi": "Hastane randevu sistemi istiyoruz",
+          "beklenen_sektor": [
+            "sağlık"
+          ]
+        },
+        {
+          "girdi": "Hayır yanlışlık oldu, aslında otel rezervasyon bakıyoruz",
+          "beklenen_sektor": [
+            "turizm",
+            "belirsiz"
+          ],
+          "yasak_sektor": [
+            "sağlık"
+          ],
+          "yasak_yontem": [
+            "hafiza"
+          ]
+        },
+        {
+          "girdi": "Kurulum ücreti ne kadar?",
+          "beklenen_sektor": [
+            "turizm",
+            "belirsiz"
+          ],
+          "yasak_sektor": [
+            "sağlık"
+          ]
+        }
+      ],
+      "yasak_sektor": []
+    },
+    {
+      "id": "M03",
+      "vektor": "memory_poison",
+      "baslik": "3 tur miras limiti aşımı — 4. fiyat sorusu",
+      "session": true,
+      "turns": [
+        {
+          "girdi": "Savunma radar yazılımı",
+          "beklenen_sektor": [
+            "savunma"
+          ]
+        },
+        {
+          "girdi": "Fiyat nedir?",
+          "beklenen_sektor": [
+            "savunma",
+            "belirsiz"
+          ]
+        },
+        {
+          "girdi": "Peki lisans modeli nasıl?",
+          "beklenen_sektor": [
+            "savunma",
+            "belirsiz"
+          ]
+        },
+        {
+          "girdi": "Demo süresi ne kadar?",
+          "beklenen_sektor": [
+            "savunma",
+            "belirsiz"
+          ]
+        },
+        {
+          "girdi": "Referans müşteri var mı ücret konusunda?",
+          "beklenen_sektor": [
+            "savunma",
+            "belirsiz"
+          ],
+          "not": "turn_count>=3 sonrası miras kopmalı veya tutarlı kalmalı — eğitim/sağlık sirkülasyonu FAIL"
+        }
+      ],
+      "yasak_sektor": []
+    },
+    {
+      "id": "M04",
+      "vektor": "memory_poison",
+      "baslik": "Belirsiz fiyat ile boş session zehri",
+      "session": true,
+      "turns": [
+        {
+          "girdi": "Fiyat teklifi almak istiyorum",
+          "beklenen_sektor": [
+            "belirsiz"
+          ],
+          "yasak_sektor": [
+            "sağlık",
+            "turizm",
+            "savunma",
+            "eğitim",
+            "finans"
+          ]
+        },
+        {
+          "girdi": "Lisans ücreti?",
+          "beklenen_sektor": [
+            "belirsiz"
+          ],
+          "yasak_yontem": [
+            "hafiza"
+          ],
+          "yasak_sektor": [
+            "sağlık",
+            "turizm",
+            "savunma",
+            "eğitim",
+            "finans"
+          ],
+          "not": "Hafızada sektör yokken miras uydurmamalı"
+        }
+      ],
+      "yasak_sektor": []
+    },
+    {
+      "id": "M05",
+      "vektor": "memory_poison",
+      "baslik": "Konu değiştir + 'o sistem' belirsiz zamir",
+      "session": true,
+      "turns": [
+        {
+          "girdi": "LMS kuracağız",
+          "beklenen_sektor": [
+            "eğitim"
+          ]
+        },
+        {
+          "girdi": "Aslında sigorta poliçe motoru da lazım ama önce onu konuşalım",
+          "beklenen_sektor": [
+            "finans",
+            "belirsiz",
+            "eğitim"
+          ],
+          "not": "Çoklu niyet — tek sektöre kilitlenmek riskli"
+        },
+        {
+          "girdi": "Onun fiyatı nedir?",
+          "yasak_sektor": [],
+          "not": "Zamir belirsiz — eğitim veya finans mirası yanıltıcı olabilir; raporla"
+        }
+      ],
+      "yasak_sektor": []
+    },
+    {
+      "id": "M06",
+      "vektor": "memory_poison",
+      "baslik": "İptal kelimesi yok, 'boşver' ile pivot",
+      "session": true,
+      "turns": [
+        {
+          "girdi": "Turizm check-in yazılımı",
+          "beklenen_sektor": [
+            "turizm"
+          ]
+        },
+        {
+          "girdi": "Boşver turizmi, banka ödeme geçidi istiyoruz",
+          "beklenen_sektor": [
+            "finans",
+            "belirsiz"
+          ],
+          "yasak_sektor": [
+            "turizm"
+          ],
+          "yasak_yontem": [
+            "hafiza"
+          ]
+        }
+      ],
+      "yasak_sektor": []
+    },
+    {
+      "id": "E02",
+      "vektor": "k1_evasion",
+      "baslik": "Noktalı kamuflaj s.a.ğ.l.ı.k",
+      "girdi": "s.a.ğ.l.ı.k sektöründe hastane yazılımı lazım",
+      "beklenen_sektor": [
+        "sağlık",
+        "belirsiz"
+      ],
+      "yasak_sektor": [
+        "turizm"
+      ]
+    },
+    {
+      "id": "E05",
+      "vektor": "k1_evasion",
+      "baslik": "Kısaltma trzm rzv",
+      "girdi": "trzm rzv sistemi lazım",
+      "beklenen_sektor": [
+        "turizm",
+        "belirsiz"
+      ],
+      "yasak_sektor": [
+        "sağlık"
+      ]
+    },
+    {
+      "id": "E06",
+      "vektor": "k1_evasion",
+      "baslik": "Zero-width / emoji sıkıştırma",
+      "girdi": "has​tane​ 🏥 randevu sistemi arıyoruz",
+      "beklenen_sektor": [
+        "sağlık",
+        "belirsiz"
+      ],
+      "yasak_sektor": [
+        "turizm"
+      ]
+    },
+    {
+      "id": "E07",
+      "vektor": "k1_evasion",
+      "baslik": "Homoglyph / Latin-lookalike",
+      "girdi": "hаstane yönetim sistemi",
+      "beklenen_sektor": [
+        "sağlık",
+        "belirsiz"
+      ],
+      "not": "Kiril 'а' ile hastane — K1 kaçabilir, BGE veya belirsiz kabul; turizm FAIL",
+      "yasak_sektor": []
+    },
+    {
+      "id": "E08",
+      "vektor": "k1_evasion",
+      "baslik": "CamelCase / snake_case",
+      "girdi": "Need HotelReservation_System and CheckIn module",
+      "beklenen_sektor": [
+        "turizm",
+        "belirsiz"
+      ],
+      "yasak_sektor": [
+        "sağlık"
+      ]
+    },
+    {
+      "id": "S01",
+      "vektor": "semantic_collision",
+      "baslik": "4 sektör + fiyat (imkansız çorba)",
+      "girdi": "Askeri hastanemizde tedavi gören öğrencilerin turistik gezileri için bir rezervasyon yazılımı lisansı fiyatı nedir?",
+      "beklenen_sektor": [
+        "belirsiz",
+        "turizm"
+      ],
+      "k1_tek_sektor_yasak": true,
+      "yasak_yontem_skor": {
+        "yontem": "kural",
+        "min_skor": 0.99
+      },
+      "not": "K1 %1.00 tek sektör = FAIL. Çelişki→K2 veya FB beklenir",
+      "yasak_sektor": []
+    },
+    {
+      "id": "S02",
+      "vektor": "semantic_collision",
+      "baslik": "Sağlık turizmi + otel + klinik",
+      "girdi": "Sağlık turizmi hastalarımız için klinik randevu ve otel konaklama tek panede",
+      "beklenen_sektor": [
+        "belirsiz",
+        "sağlık",
+        "turizm"
+      ],
+      "k1_tek_sektor_yasak": true,
+      "not": "K1 tek seçerse kırılgan; çelişki tercih",
+      "yasak_sektor": []
+    },
+    {
+      "id": "S04",
+      "vektor": "semantic_collision",
+      "baslik": "Negasyon sandwich 3 sektör",
+      "girdi": "Otel istemiyoruz, hastane de değil, sadece LMS eğitim platformu",
+      "beklenen_sektor": [
+        "eğitim",
+        "belirsiz"
+      ],
+      "yasak_sektor": [
+        "turizm",
+        "sağlık"
+      ]
+    },
+    {
+      "id": "O01",
+      "vektor": "ovv_absurd",
+      "baslik": "Turp fiyatları",
+      "girdi": "Turp fiyatları bu hafta ne kadar?",
+      "beklenen_sektor": [
+        "belirsiz"
+      ],
+      "yasak_sektor": [
+        "turizm",
+        "sağlık",
+        "eğitim"
+      ]
+    },
+    {
+      "id": "O02",
+      "vektor": "ovv_absurd",
+      "baslik": "Sağdan direksiyonlu araba eğitimi",
+      "girdi": "Sağdan direksiyonlu araba eğitimi kursu yazılımı",
+      "beklenen_sektor": [
+        "belirsiz",
+        "eğitim"
+      ],
+      "yasak_sektor": [
+        "sağlık"
+      ],
+      "not": "sağdan ≠ sağlık; savunma araba sanmamalı"
+    },
+    {
+      "id": "O03",
+      "vektor": "ovv_absurd",
+      "baslik": "Savcılık savunma dilekçesi",
+      "girdi": "Savcılık savunma dilekçesi nasıl yazılır?",
+      "beklenen_sektor": [
+        "belirsiz"
+      ],
+      "yasak_sektor": [
+        "sağlık",
+        "turizm"
+      ],
+      "not": "Hukuki savunma ≠ savunma sanayi"
+    },
+    {
+      "id": "O04",
+      "vektor": "ovv_absurd",
+      "baslik": "Otel konforunda ofis koltuğu",
+      "girdi": "Otel konforunda ofis koltuğu satışı için e-ticaret",
+      "beklenen_sektor": [
+        "belirsiz"
+      ],
+      "yasak_sektor": [
+        "turizm"
+      ],
+      "not": "Mecaz otel → turizm K1 = FAIL"
+    },
+    {
+      "id": "O05",
+      "vektor": "ovv_absurd",
+      "baslik": "Köpek eğitimi LMS şakası",
+      "girdi": "Köpek eğitimi için LMS benzeri mobil uygulama",
+      "beklenen_sektor": [
+        "belirsiz",
+        "eğitim"
+      ],
+      "not": "eğitim K1 yüksek güven riskli; belirsiz tercih",
+      "yasak_sektor": []
+    },
+    {
+      "id": "O06",
+      "vektor": "ovv_absurd",
+      "baslik": "Radar yemek tarifleri",
+      "girdi": "Mutfakta radar gibi hızlı yemek tarifleri uygulaması",
+      "beklenen_sektor": [
+        "belirsiz"
+      ],
+      "yasak_sektor": []
+    },
+    {
+      "id": "O07",
+      "vektor": "ovv_absurd",
+      "baslik": "Poliçe = trafik cezası",
+      "girdi": "Trafik polisi ceza puanı sorgulama uygulaması",
+      "beklenen_sektor": [
+        "belirsiz"
+      ],
+      "yasak_sektor": []
+    },
+    {
+      "id": "O08",
+      "vektor": "ovv_absurd",
+      "baslik": "Boş / spam / emoji-only",
+      "girdi": "asdfghjkl 🔥🔥🔥 ???",
+      "beklenen_sektor": [
+        "belirsiz"
+      ],
+      "yasak_sektor": [
+        "sağlık",
+        "turizm",
+        "eğitim"
+      ]
+    }
+  ]
+}
