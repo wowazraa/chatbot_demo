@@ -1,0 +1,7002 @@
+[
+  {
+    "id": 1,
+    "query": "kriptolu haberleşme entegrasyonu",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 2,
+    "query": "klinik yazılım",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "short_search"
+  },
+  {
+    "id": 3,
+    "query": "deniz mayını tespit yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 4,
+    "query": "öğrenci danışmanlık sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 5,
+    "query": "komuta kontrol sistmi C2",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 6,
+    "query": "özel ders fiyatları",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 7,
+    "query": "saha komuta kontrol uygulaması",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 8,
+    "query": "öğrenci beklenti analiz yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 9,
+    "query": "İHA filo yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 10,
+    "query": "otel rezervasyon iptal",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 11,
+    "query": "Rüzgar enerjisi takip sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 12,
+    "query": "kampüs yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 13,
+    "query": "kampüs güvenlik yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 14,
+    "query": "çevrimiçi sınav platformu",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 15,
+    "query": "akademik takvim planlama sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 16,
+    "query": "Muhasebe defteri kefi ve fatura yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 17,
+    "query": "ameliyathane yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 18,
+    "query": "otel check-in otomasyon yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 19,
+    "query": "interaktif akıllı tahta yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 20,
+    "query": "eğitim kurumu muhasebe yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 21,
+    "query": "LMS kurulum yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 22,
+    "query": "askeri envanter yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 23,
+    "query": "askeri haberleşme altyapısı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 24,
+    "query": "gece treni biletleri",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 25,
+    "query": "altın fiyatları gram",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 26,
+    "query": "askeri haberleşme altyapısı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 27,
+    "query": "kriptografik protokol entegrasyonu",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 28,
+    "query": "turizm şikayeti takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 29,
+    "query": "hedef tespit ve tanıma yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 30,
+    "query": "konaklama yönetim sistemi PMS",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 31,
+    "query": "kurumsal tatil planlama yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 32,
+    "query": "ilköğretim okul yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 33,
+    "query": "üniversite otomasyon sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 34,
+    "query": "göz muayenesi nerede yapılır",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 35,
+    "query": "klinik veri analiz sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 36,
+    "query": "füze güdüm sistemi yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 37,
+    "query": "Ürün katalog ve stok yönetim sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 38,
+    "query": "sağlık portalı yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 39,
+    "query": "sağlık portalı yazılmı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 40,
+    "query": "uydu haberleşme şifreleme yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 41,
+    "query": "turizm franchise yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 42,
+    "query": "öğrenci giriş çıkış takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 43,
+    "query": "lms kurulum",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "short_search"
+  },
+  {
+    "id": 44,
+    "query": "dijital öğrenci portföy sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 45,
+    "query": "kamp outdoor rezervasyon yazilimi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 46,
+    "query": "Yasal uyum ve raporlama sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 47,
+    "query": "eğitim ERP sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 48,
+    "query": "hava ikmal sistemi yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 49,
+    "query": "otel havuz fitness yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 50,
+    "query": "onkoloji vaka takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 51,
+    "query": "turizm acentası tur satış platformu",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 52,
+    "query": "öğrenci bilgi sistemi OBS",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 53,
+    "query": "Rüzgar enerjisi takip sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 54,
+    "query": "NATO uyumlu haberleşme sistmi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 55,
+    "query": "turizm franchise yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 56,
+    "query": "burs imkanları",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 57,
+    "query": "İK performans değerlendirme sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 58,
+    "query": "turizm analitik platformu",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 59,
+    "query": "otel rezervasyon yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 60,
+    "query": "uçak otel kombine satış platformu",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 61,
+    "query": "Cari hesap takip ve muhasebe sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 62,
+    "query": "ameliyathane yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 63,
+    "query": "mesleki eğitim kurumu yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 64,
+    "query": "en ucuz telefon fiyatları",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 65,
+    "query": "hastane yönetim sistemi entegrasyonu",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 66,
+    "query": "öğrenci kimlik kart sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 67,
+    "query": "kardiyoloji takip yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 68,
+    "query": "klinik test yönetım sistmi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 69,
+    "query": "Hazine ve risk yönetim yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 70,
+    "query": "Enerji üretim ve dağıtım sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 71,
+    "query": "İnşaat proje yönetim sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 72,
+    "query": "eczane nöbetçi bul",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 73,
+    "query": "insansız hava aracı kontrol yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 74,
+    "query": "Filo yönetim ve araç takip sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 75,
+    "query": "ortopedi klinik yönetimi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 76,
+    "query": "döviz kurları canlı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 77,
+    "query": "biyomedikal cihaz yönetimi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 78,
+    "query": "füze güdüm sistemi yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 79,
+    "query": "öğrenci geri bildirim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 80,
+    "query": "sınav değerlendirme sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 81,
+    "query": "iade ve değişim politikası",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 82,
+    "query": "AHBS entegrasyonu",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 83,
+    "query": "otel temizlik yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 84,
+    "query": "otel fiyat kanal manager yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 85,
+    "query": "Yapı denetim ve kalite sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 86,
+    "query": "Genel muhasebe ve maliyet hesaplama yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 87,
+    "query": "fizyoterapi klinik yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 88,
+    "query": "Satın alma ve tedarik otomasyonu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 89,
+    "query": "Yapı denetim ve kalite sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 90,
+    "query": "Müteahhitlik hesap ve hakediş yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 91,
+    "query": "radyoloji dijital görüntüleme sistemi PACS",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 92,
+    "query": "sinema seansları",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 93,
+    "query": "deniz gücü operasyon yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 94,
+    "query": "kampüs portal entegrasyonu",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 95,
+    "query": "kriptografik protokol entegrasyonu",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 96,
+    "query": "turizm şikayeti takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 97,
+    "query": "Yasal uyum ve raporlama sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 98,
+    "query": "eğitim analitik platformu",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 99,
+    "query": "saha komuta kontrol uygulaması",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 100,
+    "query": "Nakit akış yönetim yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 101,
+    "query": "İK analitik ve raporlama sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 102,
+    "query": "kamp outdoor rezervasyon yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 103,
+    "query": "butik otel yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 104,
+    "query": "acil servis telefon numarası",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 105,
+    "query": "sağlık sigortası entegrasyon yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 106,
+    "query": "sağlık turizmi yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 107,
+    "query": "yabancı dil kursu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 108,
+    "query": "sağlık otomasyon",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "short_search"
+  },
+  {
+    "id": 109,
+    "query": "otel enerji yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 110,
+    "query": "Finansal raporlama platformu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 111,
+    "query": "otel insan kaynakları yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 112,
+    "query": "klinik hasta takip yazılımı fiyatları",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 113,
+    "query": "kampüs yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 114,
+    "query": "ÖBYS entegrasyonu",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 115,
+    "query": "kurumsal sağlık bilgi sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 116,
+    "query": "muayene yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 117,
+    "query": "diş kliniği yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 118,
+    "query": "radar yazılım",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "short_search"
+  },
+  {
+    "id": 119,
+    "query": "savunma sanayi yerli yazılım",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 120,
+    "query": "otel fiyat kanal manager yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 121,
+    "query": "diş hekimi fiyatları",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 122,
+    "query": "seyahat sigortası entegrasyon yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 123,
+    "query": "İHA filo yönetım yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 124,
+    "query": "sterilizasyon takip yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 125,
+    "query": "online kurs tavsiyeleri",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 126,
+    "query": "Su ve atık su yönetim sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 127,
+    "query": "Lojistik rota optimizasyon yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 128,
+    "query": "otel güvenlik yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 129,
+    "query": "e-sınav güvenlik yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 130,
+    "query": "tiyatro oyunları programı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 131,
+    "query": "askeri proje yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 132,
+    "query": "sağlık sigortası entegrasyon yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 133,
+    "query": "Bina yönetim yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 134,
+    "query": "online kurs tavsiyeleri",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 135,
+    "query": "en iyi doktor tavsiyesi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 136,
+    "query": "Çevresel etki değerlendirme yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 137,
+    "query": "askeri yazılım",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "short_search"
+  },
+  {
+    "id": 138,
+    "query": "çevrimiçi seyahat acentası platformu",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 139,
+    "query": "tatil yerleri önerileri",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 140,
+    "query": "çift anadal yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 141,
+    "query": "yoğun bakım hasta takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 142,
+    "query": "Genel muhasebe ve maliyet hesaplama yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 143,
+    "query": "e-nabız entegrasyonlu sağlık yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 144,
+    "query": "kripto komuta telsiz sistemi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 145,
+    "query": "hastane yönetim sistemi entegrasyonu",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 146,
+    "query": "muharebe simülasyon platformu",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 147,
+    "query": "kampüs portal entegrasyonu",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 148,
+    "query": "termal otel SPA yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 149,
+    "query": "öğrenci beklenti analiz yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 150,
+    "query": "röntgen arşiv yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 151,
+    "query": "akademik kadro yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 152,
+    "query": "Fikri mülkiyet takip sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 153,
+    "query": "interaktif akıllı tahta yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 154,
+    "query": "tıbbi görüntü işleme yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 155,
+    "query": "hava trafik kontrol yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 156,
+    "query": "Personel maaş bordrosu ve özlük işleri otomasyonu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 157,
+    "query": "eczane yönetim otomasyon yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 158,
+    "query": "İK performans değerlendirme sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 159,
+    "query": "hastane sistem",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "short_search"
+  },
+  {
+    "id": 160,
+    "query": "uzaktan eğitim altyapısı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 161,
+    "query": "konaklama yönetim sistemi PMS",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 162,
+    "query": "askeri harita ve coğrafi bilgi sistemi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 163,
+    "query": "Boru hattı ve taşıma sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 164,
+    "query": "su faturası ödeme",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 165,
+    "query": "Bütçe planlama ve kontrol sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 166,
+    "query": "askeri lojistik takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 167,
+    "query": "termal otel SPA yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 168,
+    "query": "kamp outdoor rezervasyon yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 169,
+    "query": "öğrenci mentoring platformu",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 170,
+    "query": "öğrenci bilgi sistemi OBS",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 171,
+    "query": "Müvekkil ilişkileri yönetimi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 172,
+    "query": "ders programı planlama yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 173,
+    "query": "transfer ve ulaşım yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 174,
+    "query": "hastane randevu nasıl alınır",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 175,
+    "query": "Son kilometre teslimat optimizasyonu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 176,
+    "query": "Hukuk bürosu yönetim yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 177,
+    "query": "hasta faturalandırma sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 178,
+    "query": "borsa endeksleri",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 179,
+    "query": "siber savunma operasyon merkezi yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 180,
+    "query": "öğrenci burs yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 181,
+    "query": "çok fonksiyonlu radar yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 182,
+    "query": "tıbbi görüntü işleme yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 183,
+    "query": "tur rehberi takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 184,
+    "query": "klinik hasta takip yazılımı fiyatları",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 185,
+    "query": "otel temizlik yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 186,
+    "query": "psikiyatri klinik otomasyonu",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 187,
+    "query": "askeri harita ve coğrafi bilgi sistemi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 188,
+    "query": "tele-tıp altyapısı kurulumu",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 189,
+    "query": "Özlük dosyası dijitalleştirme hizmeti",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 190,
+    "query": "nöroloji klinik veri sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 191,
+    "query": "üniversite kütüphane otomasyonu",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 192,
+    "query": "Online satış platformu kurulumu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 193,
+    "query": "çevrimiçi seyahat acentası platformu",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 194,
+    "query": "tele-tıp altyapısı kurulumu",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 195,
+    "query": "Sözleşme yönetim ve arşiv yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 196,
+    "query": "Çalışan eğitim ve gelişim takip sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 197,
+    "query": "otel enerji yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 198,
+    "query": "deniz mayını tespit yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 199,
+    "query": "Bütçe planlama ve kontrol sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 200,
+    "query": "otel yazılım",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "short_search"
+  },
+  {
+    "id": 201,
+    "query": "radar yazılım",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "short_search"
+  },
+  {
+    "id": 202,
+    "query": "komuta kontrol",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "short_search"
+  },
+  {
+    "id": 203,
+    "query": "Banka entegrasyonlu ödeme sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 204,
+    "query": "klinik hasta takip yazılımı fiyatları",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 205,
+    "query": "HBYS kurulum ve danışmanlık hizmeti",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 206,
+    "query": "Depo stok ve lojistik yönetim yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 207,
+    "query": "Tedarik zinciri yönetim sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 208,
+    "query": "deniz mayını tespit yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 209,
+    "query": "çevrimiçi sınav platformu",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 210,
+    "query": "uzaktan sağlık asistanı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 211,
+    "query": "sağlık sigortası entegrasyon yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 212,
+    "query": "diyaliz merkezi yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 213,
+    "query": "kripto komuta telsiz sistemi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 214,
+    "query": "mayın tespit sistemi yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 215,
+    "query": "ASELSAN entegrasyon yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 216,
+    "query": "seyahat acentası B2B rezervasyon",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 217,
+    "query": "vize takip entegrasyon sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 218,
+    "query": "uçak otel kombine satış platformu",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 219,
+    "query": "tele-tıp altyapısı kurulumu",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 220,
+    "query": "üniversite otomasyon sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 221,
+    "query": "öğrenci etkinlik yönetim platformu",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 222,
+    "query": "okul yazılım",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "short_search"
+  },
+  {
+    "id": 223,
+    "query": "klinik karar destek sistmi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 224,
+    "query": "klinik karar destek sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 225,
+    "query": "otel güvenlik yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 226,
+    "query": "obs sistem",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "short_search"
+  },
+  {
+    "id": 227,
+    "query": "uzaktan sağlık asistanı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 228,
+    "query": "ders programı planlama yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 229,
+    "query": "Su ve atık su yönetim sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 230,
+    "query": "Soğuk zincir lojistik izleme",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 231,
+    "query": "askeri haberleşme altyapısı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 232,
+    "query": "sağlık sigortası karşılaştırma",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 233,
+    "query": "E-fatura ve e-defter entegrasyonu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 234,
+    "query": "otel insan kaynakları yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 235,
+    "query": "elektronik istihbarat yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 236,
+    "query": "üniversite kütüphane otomasyonu",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 237,
+    "query": "eczane nöbetçi bul",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 238,
+    "query": "mayın tespit sistemi yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 239,
+    "query": "savunma Ar-Ge yönetim platformu",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 240,
+    "query": "insansız hava aracı kontrol yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 241,
+    "query": "çift anadal yönetım yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 242,
+    "query": "resort misafir deneyim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 243,
+    "query": "hastane sistem",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "short_search"
+  },
+  {
+    "id": 244,
+    "query": "topçu ateş kontrol sistemi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 245,
+    "query": "tatil paketi satış platformu",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 246,
+    "query": "konaklama yönetim sistemi PMS",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 247,
+    "query": "sınav değerlendirme sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 248,
+    "query": "öğrenci harç yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 249,
+    "query": "gece treni biletleri",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 250,
+    "query": "askeri lojistik takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 251,
+    "query": "Maaş hesaplama ve SGK bildirge yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 252,
+    "query": "otel gelir yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 253,
+    "query": "hava trafik kontrol yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 254,
+    "query": "sertifika ve belge yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 255,
+    "query": "kampüs güvenlik yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 256,
+    "query": "üniversite taban puanları",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 257,
+    "query": "Tedarik zinciri yönetim sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 258,
+    "query": "kampüs yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 259,
+    "query": "patoloji laboratuvarı otomasyonu",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 260,
+    "query": "konser biletleri satış",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 261,
+    "query": "lise otomasyon sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 262,
+    "query": "mezuniyet belgesi nasıl alınır",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 263,
+    "query": "Son kilometre teslimat optimizasyonu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 264,
+    "query": "Soğuk zincir lojistik izleme",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 265,
+    "query": "radar veri analiz yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 266,
+    "query": "öğrenci bilgi sistemi OBS",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 267,
+    "query": "sertifika ve belge yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 268,
+    "query": "Bina yönetim yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 269,
+    "query": "Hukuki araştırma ve belge sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 270,
+    "query": "topçu ateş kontrol sistemi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 271,
+    "query": "İnsan kaynakları modülü entegrasyonu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 272,
+    "query": "LYS puan hesaplama",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 273,
+    "query": "turizm bakanlığı entegrasyon yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 274,
+    "query": "Depo stok ve lojistik yönetim yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 275,
+    "query": "lms kurulum",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "short_search"
+  },
+  {
+    "id": 276,
+    "query": "obs sistem",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "short_search"
+  },
+  {
+    "id": 277,
+    "query": "gözetleme kamera analitik yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 278,
+    "query": "sağlık sigortası karşılaştırma",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 279,
+    "query": "radar izleme ve takip yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 280,
+    "query": "özel ders fiyatları",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 281,
+    "query": "kampüs Wi-Fi yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 282,
+    "query": "hasta kayıt dijitalleştirme",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 283,
+    "query": "e-sınav güvenlik yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 284,
+    "query": "interaktif akıllı tahta yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 285,
+    "query": "özel hastane yorumları",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 286,
+    "query": "Müşteri ilişkileri yönetimi CRM e-ticaret",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 287,
+    "query": "mezuniyet takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 288,
+    "query": "askeri envanter yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 289,
+    "query": "otel check-in otomasyon yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 290,
+    "query": "hastane yönetim sistemi entegrasyonu",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 291,
+    "query": "Muhasebe defteri kefi ve fatura yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 292,
+    "query": "turizm acentası tur satış platformu",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 293,
+    "query": "takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "short_search"
+  },
+  {
+    "id": 294,
+    "query": "diş hekimi fiyatları",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 295,
+    "query": "Güneş enerjisi santral yonetımi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 296,
+    "query": "güvenli veri aktarım sistemi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 297,
+    "query": "NATO uyumlu haberleşme sistemi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 298,
+    "query": "Tapu ve kadastro entegrasyonu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 299,
+    "query": "savunma projesi yazılım geliştirme",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 300,
+    "query": "elektronik harp yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 301,
+    "query": "hematoloji laboratuvar yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 302,
+    "query": "gözetleme kamera analitik yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 303,
+    "query": "çevrimiçi sınav platformu",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 304,
+    "query": "kripto komuta telsiz sistemi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 305,
+    "query": "İnsan kaynakları modülü entegrasyonu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 306,
+    "query": "Son kilometre teslimat optimizasyonu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 307,
+    "query": "diyaliz merkezi yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 308,
+    "query": "E-fatura ve e-defter entegrasyonu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 309,
+    "query": "askeri proje yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 310,
+    "query": "dijital öğrenci portföy sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 311,
+    "query": "radar veri analiz yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 312,
+    "query": "PNR yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 313,
+    "query": "e-öğrenme platformu",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 314,
+    "query": "Hukuk bürosu yönetim yazılmi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 315,
+    "query": "LMS kurulum yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 316,
+    "query": "turizm acentası tur satış platformu",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 317,
+    "query": "turizm acentası tur satış platformu",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 318,
+    "query": "Personel izin ve tatil yönetim sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 319,
+    "query": "hastane sistem",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "short_search"
+  },
+  {
+    "id": 320,
+    "query": "HBYS kurulum ve danışmanlık hizmeti",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 321,
+    "query": "gece görüş sistemi entegrasyonu",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 322,
+    "query": "komuta kontrol sistemi C2",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 323,
+    "query": "kampüs güvenlik yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 324,
+    "query": "seyahat acentası B2B rezervasyon",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 325,
+    "query": "askeri envanter yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 326,
+    "query": "Müteahhitlik hesap ve hakediş yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 327,
+    "query": "savunma bütçe planlama sistemi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 328,
+    "query": "transfer ve ulaşım yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 329,
+    "query": "deniz gücü operasyon yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 330,
+    "query": "savunma Ar-Ge yönetim platformu",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 331,
+    "query": "E-ticaret sepet ve ödeme altyapısı entegrasyonu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 332,
+    "query": "Pazar yerleri entegrasyon yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 333,
+    "query": "Lojistik rota optimizasyon yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 334,
+    "query": "otel check-in otomasyon yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 335,
+    "query": "denizaltı sonar yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 336,
+    "query": "otel temizlik yonetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 337,
+    "query": "bölgesel sağlık ağı entegrasyonu",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 338,
+    "query": "tatil paketi satış platformu",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 339,
+    "query": "elektronik harp yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 340,
+    "query": "kimlik kartı başvuru",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 341,
+    "query": "yüksek lisans başvuru",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 342,
+    "query": "güvenli veri aktarım sistemi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 343,
+    "query": "komuta kontrol sistemi C2",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 344,
+    "query": "benzin litre fiyatı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 345,
+    "query": "Bina enerji yönetim sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 346,
+    "query": "Enerji ticaret ve borsa entegrasyonu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 347,
+    "query": "hava durumu 7 günlük",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 348,
+    "query": "savunma sanayi ERP sistemi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 349,
+    "query": "öğrenci sağlık merkezi yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 350,
+    "query": "Maden güvenliği ve denetim sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 351,
+    "query": "Kömür ve maden operasyon yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 352,
+    "query": "radar veri analiz yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 353,
+    "query": "Kira kontrat yönetim sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 354,
+    "query": "İnşaat malzeme stok sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 355,
+    "query": "otel biletleme motoru yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 356,
+    "query": "klinik yazılım",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "short_search"
+  },
+  {
+    "id": 357,
+    "query": "kurumsal tatil planlama yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 358,
+    "query": "beyaz eşya indirimleri",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 359,
+    "query": "kruvaziyer yolcu yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 360,
+    "query": "yurtdışı seyahat vize",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 361,
+    "query": "yurt başvuru şartları",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 362,
+    "query": "online ödeme entegrasyonu turizm",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 363,
+    "query": "savunma bütçe planlama sistemi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 364,
+    "query": "denizaltı sonar yazılmi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 365,
+    "query": "Hukuk bürosu muhasebe sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 366,
+    "query": "silahlı İHA yazılım entegrasyonu",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 367,
+    "query": "insansız deniz aracı kontrol yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 368,
+    "query": "AHBS entegrasyonu",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 369,
+    "query": "Şirket kuruluş ve değişiklik takibi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 370,
+    "query": "Cari hesap takip ve muhasebe sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 371,
+    "query": "optisyen yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 372,
+    "query": "yat marina yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 373,
+    "query": "hekim takvim yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 374,
+    "query": "otel gelir yönetım yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 375,
+    "query": "ortopedi klinik yönetimi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 376,
+    "query": "sağlık portalı yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 377,
+    "query": "uçak otel kombine satış platformu",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 378,
+    "query": "röntgen arşiv yonetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 379,
+    "query": "Maden sahası üretim takip sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 380,
+    "query": "komuta kontrol sistemi C2",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 381,
+    "query": "öğrenci etkinlik yönetim platformu",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 382,
+    "query": "Hukuk bürosu muhasebe sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 383,
+    "query": "çevrimiçi seyahat acentası platformu",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 384,
+    "query": "acente sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "short_search"
+  },
+  {
+    "id": 385,
+    "query": "e-sınav güvenlik yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 386,
+    "query": "Kurumsal iç iletişim platformu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 387,
+    "query": "öğrenci danışmanlık sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 388,
+    "query": "en iyi oteller yorumları",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 389,
+    "query": "otel insan kaynakları yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 390,
+    "query": "otel yazılım",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "short_search"
+  },
+  {
+    "id": 391,
+    "query": "sağlık hizmetleri kalite güvence",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 392,
+    "query": "Özlük dosyası dijitalleştirme hizmeti",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 393,
+    "query": "bölgesel sağlık ağı entegrasyon",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 394,
+    "query": "takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "short_search"
+  },
+  {
+    "id": 395,
+    "query": "Hukuki araştırma ve belge sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 396,
+    "query": "seyahat acentası B2B rezervasyon",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 397,
+    "query": "öğrenci burs yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 398,
+    "query": "Yenilenebilir enerji izleme platformu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 399,
+    "query": "Müşteri ilişkileri yönetimi CRM e-ticaret",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 400,
+    "query": "Müvekkil ilişkileri yönetimi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 401,
+    "query": "PNR yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 402,
+    "query": "Filo yönetim ve araç takip sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 403,
+    "query": "diş kliniği yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 404,
+    "query": "eczane yönetim otomasyon yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 405,
+    "query": "öğrenci kimlik kart sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 406,
+    "query": "hemşire iş akışı otomasyonu",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 407,
+    "query": "lms kurulum",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "short_search"
+  },
+  {
+    "id": 408,
+    "query": "Tapu ve kadastro entegrasyonu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 409,
+    "query": "Online satış platformu kurulumu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 410,
+    "query": "mezun takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 411,
+    "query": "yoga dersi programı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 412,
+    "query": "butik otel yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 413,
+    "query": "doktor performans takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 414,
+    "query": "tatil yerleri önerileri",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 415,
+    "query": "İnşaat proje yönetim sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 416,
+    "query": "kamp alanı önerileri",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 417,
+    "query": "çok fonksiyonlu radar yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 418,
+    "query": "askeri haberleşme altyapısı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 419,
+    "query": "ders programı planlama yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 420,
+    "query": "kriptografik protokol entegrasyonu",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 421,
+    "query": "Özlük dosyası dijitalleştirme hizmeti",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 422,
+    "query": "savunma sanayi ihale takip yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 423,
+    "query": "havayolu bilet satış yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 424,
+    "query": "hbys fiyat",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "short_search"
+  },
+  {
+    "id": 425,
+    "query": "sağlık hizmetleri kalite güvence",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 426,
+    "query": "Çalışan eğitim ve gelişim takip sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 427,
+    "query": " Vergi borcu sorgulama",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 428,
+    "query": "savunma sanayi ERP sistemi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 429,
+    "query": "oda servisi otomasyon sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 430,
+    "query": "Çevresel etki değerlendirme yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 431,
+    "query": "Lojistik rota optimizasyon yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 432,
+    "query": "Pazar yerleri entegrasyon yazılmi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 433,
+    "query": "siber güvenlik saldırı tespit sistemi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 434,
+    "query": "transkript diploma sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 435,
+    "query": "İHA kontrol",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "short_search"
+  },
+  {
+    "id": 436,
+    "query": "akademik değerlendirme yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 437,
+    "query": "otel biletleme motoru yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 438,
+    "query": "havayolu bilet satış yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 439,
+    "query": "tur operatörü CRM sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 440,
+    "query": "kruvaziyer yolcu yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 441,
+    "query": "siber savunma operasyon merkezi yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 442,
+    "query": "Güneş enerjisi santral yönetimi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 443,
+    "query": "bölgesel sağlık ağı entegrasyonu",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 444,
+    "query": "uzaktan sağlık asistanı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 445,
+    "query": "dijital sınıf yönetim yazılmı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 446,
+    "query": "ilköğretim okul yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 447,
+    "query": "deniz gücü operasyon yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 448,
+    "query": "öğrenci devam takip sistmi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 449,
+    "query": "Bina enerji yönetim sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 450,
+    "query": "hastane sistem",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "short_search"
+  },
+  {
+    "id": 451,
+    "query": "otl fiyat kanal manager yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 452,
+    "query": "kardiyoloji takip yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 453,
+    "query": "İcra ve iflas takip sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 454,
+    "query": "tur rehberi takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 455,
+    "query": "kredi kartı başvuru",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 456,
+    "query": "mobil sağlık uygulaması geliştirme",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 457,
+    "query": "tele-tıp altyapısı kurulumu",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 458,
+    "query": "doktor performans takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 459,
+    "query": "poliklinik randevu otomasyon sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 460,
+    "query": "klinik test yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 461,
+    "query": "Emlak portföy yönetim sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 462,
+    "query": "silahlı İHA yazılım entegrasyonu",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 463,
+    "query": "tur operatörü CRM sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 464,
+    "query": "sağlık analitik platformu",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 465,
+    "query": "hastane sistem",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "short_search"
+  },
+  {
+    "id": 466,
+    "query": "etkinlik organizasyon yazilimi turizm",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 467,
+    "query": "savunma sanayi ihale takip yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 468,
+    "query": "Maaş hesaplama ve SGK bildirge yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 469,
+    "query": "uydu haberleşme şifreleme yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 470,
+    "query": "Duruşma ve takvim yönetimi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 471,
+    "query": "obs sistem",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "short_search"
+  },
+  {
+    "id": 472,
+    "query": "yabancı dil kursu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 473,
+    "query": "ameliyathane yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 474,
+    "query": "obs sistem",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "short_search"
+  },
+  {
+    "id": 475,
+    "query": "insansız hava aracı kontrol yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 476,
+    "query": "klinik karar destek sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 477,
+    "query": "hava ikmal sistemi yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 478,
+    "query": "öğretmen performans değerlendirme sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 479,
+    "query": "resort misafir deneyim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 480,
+    "query": "agro turizm rezervasyon platformu",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 481,
+    "query": "butik otel yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 482,
+    "query": "öğrenci proje takip yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 483,
+    "query": "savunma tedarik zinciri yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 484,
+    "query": "NATO uyumlu haberleşme sistemi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 485,
+    "query": "misafir deneyim anketi platformu",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 486,
+    "query": "savunma sistem",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "short_search"
+  },
+  {
+    "id": 487,
+    "query": "oda servisi otomasyon sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 488,
+    "query": "hava durumu 7 günlük",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 489,
+    "query": "hekim takvim yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 490,
+    "query": "savunma sistem",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "short_search"
+  },
+  {
+    "id": 491,
+    "query": "Banka entegrasyonlu ödeme sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 492,
+    "query": "lms kurulum",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "short_search"
+  },
+  {
+    "id": 493,
+    "query": "yüzme kursu kayıt",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 494,
+    "query": "üniversite kütüphane otomasyonu",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 495,
+    "query": "fizyoterapi klinik yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 496,
+    "query": "otel biletleme motoru yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 497,
+    "query": "Kira kontrat yönetim sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 498,
+    "query": "AHBS entegrasyonu",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 499,
+    "query": "otel rezervasyon iptal",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 500,
+    "query": "savunma projesi yazılım geliştirme",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 501,
+    "query": "Mobil uygulama e-ticaret altyapısı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 502,
+    "query": "Finansal raporlama platformu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 503,
+    "query": "hastane sistem",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "short_search"
+  },
+  {
+    "id": 504,
+    "query": "yaz okulu kayıt sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 505,
+    "query": "klinik yazılım",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "short_search"
+  },
+  {
+    "id": 506,
+    "query": "kara kuvvetleri personel sistemi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 507,
+    "query": "Kömür ve maden operasyon yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 508,
+    "query": "Elektrik şebeke yönetim yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 509,
+    "query": "Finansal raporlama platformu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 510,
+    "query": "savunma Ar-Ge yönetim platformu",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 511,
+    "query": "gece görüş sistemi entegrasyonu",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 512,
+    "query": "otel rezervasyon yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 513,
+    "query": "döviz kurları canlı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 514,
+    "query": "acente sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "short_search"
+  },
+  {
+    "id": 515,
+    "query": "e-nabız entegrasyonlu sağlık yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 516,
+    "query": "yüksek lisans başvuru",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 517,
+    "query": "uzaktan eğitim altyapısı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 518,
+    "query": "Dijital imza ve e-imza entegrasyonu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 519,
+    "query": "TSK lojistik yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 520,
+    "query": "laboratuvar bilgi sistemi LIS kurulumu",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 521,
+    "query": "akademik kadro yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 522,
+    "query": "İnşaat proje yönetim sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 523,
+    "query": "Elektrik şebeke yönetim yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 524,
+    "query": "Dava ve icra takip otomasyonu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 525,
+    "query": "Yenilenebilir enerji izleme platformu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 526,
+    "query": "üniversite taban puanları",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 527,
+    "query": "all inclusive otel fiyatları",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 528,
+    "query": "benzin litre fiyatı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 529,
+    "query": "eğitim kurumu muhasebe yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 530,
+    "query": "Müşteri takip ve satış otomasyonu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 531,
+    "query": "TSK lojistik yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 532,
+    "query": "otel biletleme motoru yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 533,
+    "query": "turizm şikayeti takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 534,
+    "query": "öğrenci devam takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 535,
+    "query": "kış turizmi kayak merkezi yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 536,
+    "query": "hava savunma sistemi yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 537,
+    "query": "Akıllı bina otomasyonu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 538,
+    "query": "otel yazılım",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "short_search"
+  },
+  {
+    "id": 539,
+    "query": "kongre toplantı yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 540,
+    "query": "kamp alanı önerileri",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 541,
+    "query": "sağlık sigortası entegrasyon yazlımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 542,
+    "query": "Personel izin ve tatil yönetim sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 543,
+    "query": "savunma sanayi ihale takip yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 544,
+    "query": "Akıllı bina otomasyonu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 545,
+    "query": "radyoloji dijital görüntüleme sistemi PACS",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 546,
+    "query": "lise otomasyon sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 547,
+    "query": "transkript diploma sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 548,
+    "query": "kargo takip numarası",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 549,
+    "query": "otel enerji yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 550,
+    "query": "savunma sistem",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "short_search"
+  },
+  {
+    "id": 551,
+    "query": "mobil sağlık uygulaması geliştirme",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 552,
+    "query": "pilot eğitimi nasıl alınır",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 553,
+    "query": "öğrenci sağlık merkezi yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 554,
+    "query": "e-nabız entegrasyonlu sağlık yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 555,
+    "query": "öğretmen performans değerlendirme sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 556,
+    "query": "hastane yönetim sistemi entegrasyonu",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 557,
+    "query": "gece nöbeti planlama sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 558,
+    "query": "seyahat sigortası entegrasyon yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 559,
+    "query": "patoloji laboratuvarı otomasyonu",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 560,
+    "query": "sertifika ve belge yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 561,
+    "query": "tıbbi cihaz bakım takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 562,
+    "query": "Endüstriyel emisyon takip",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 563,
+    "query": "Avukatlık dosya takip sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 564,
+    "query": "doktor çalışma saatleri",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 565,
+    "query": "akademik takvim planlama sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 566,
+    "query": "kara radar entegrasyonu",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 567,
+    "query": "poliklinik randevu otomasyon sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 568,
+    "query": "Dijital imza ve e-imza entegrasyonu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 569,
+    "query": "öğrenci devam takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 570,
+    "query": "tur operatörü CRM sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 571,
+    "query": "İHA kontrol",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "short_search"
+  },
+  {
+    "id": 572,
+    "query": "dijital sınıf yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 573,
+    "query": "savunma sanayi yerli yazılım",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 574,
+    "query": "seyahat sigortası entegrasyon yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 575,
+    "query": "Banka entegrasyonlu ödeme sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 576,
+    "query": "kara radar entegrasyonu",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 577,
+    "query": "pasaport randevu alma",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 578,
+    "query": "İnşaat malzeme stok sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 579,
+    "query": "otel havuz fitness yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 580,
+    "query": "staj takip yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 581,
+    "query": "üniversite otomasyon",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "short_search"
+  },
+  {
+    "id": 582,
+    "query": "Fulfillment merkezi otomasyonu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 583,
+    "query": "hava trafik kontrol yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 584,
+    "query": "Avukatlık dosya takip sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 585,
+    "query": "pasaport randevu alma",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 586,
+    "query": "Maaş hesaplama ve SGK bildirge yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 587,
+    "query": "turizm ihracat platformu yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 588,
+    "query": "Bütçe planlama ve kontrol sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 589,
+    "query": "otel havuz fitness yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 590,
+    "query": "diyaliz merkezi yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 591,
+    "query": "termal otel SPA yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 592,
+    "query": "cafe önerileri",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 593,
+    "query": "Emlak portföy yönetim sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 594,
+    "query": "İş güvenliği takip yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 595,
+    "query": "otel güvenlik yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 596,
+    "query": "LMS kurulum yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 597,
+    "query": "Hazine ve risk yönetim yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 598,
+    "query": "öğrenci proje takip yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 599,
+    "query": "öğrenci burs yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 600,
+    "query": "staj takip yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 601,
+    "query": "İnsan kaynakları modülü entegrasyonu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 602,
+    "query": "optisyen yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 603,
+    "query": "yaz okulu kayıt sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 604,
+    "query": "askeri proje yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 605,
+    "query": "havayolu bilet satış yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 606,
+    "query": "elektrik kesintisi sorgulama",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 607,
+    "query": "Çalışan eğitim ve gelişim takip sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 608,
+    "query": "üniversite otomasyon",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "short_search"
+  },
+  {
+    "id": 609,
+    "query": "transkript diploma sistmi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 610,
+    "query": "biyomedikal cihaz yönetımi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 611,
+    "query": "kongre toplantı yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 612,
+    "query": "otel rezervasyon yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 613,
+    "query": "öğrenci kariyer merkezi yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 614,
+    "query": "akademik kadro yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 615,
+    "query": "akademik takvim planlama sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 616,
+    "query": "kurumsal sağlık bilgi sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 617,
+    "query": "hasta faturalandırma sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 618,
+    "query": "butik otel tavsiyeleri",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 619,
+    "query": "öğrenci sağlık merkezi yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 620,
+    "query": "meslek lisesi kontenjanları",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 621,
+    "query": "laboratuvar bilgi sistemi LIS kurulumu",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 622,
+    "query": "acil servis telefon numarası",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 623,
+    "query": "mezuniyet belgesi nasıl alınır",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 624,
+    "query": "sterilizasyon takip yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 625,
+    "query": "siber güvenlik saldırı tespit sistemi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 626,
+    "query": "etkinlik organizasyon yazılımı turizm",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 627,
+    "query": "savaş simülatörü yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 628,
+    "query": "öğrenci harç yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 629,
+    "query": "yurtdışı seyahat vize",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 630,
+    "query": "Genel muhasebe ve maliyet hesaplama yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 631,
+    "query": "röntgen arşiv yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 632,
+    "query": "kurumsal sağlık bilgi sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 633,
+    "query": "kripto komuta telsiz sistemi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 634,
+    "query": "Personel maaş bordrosu ve özlük işleri otomasyonu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 635,
+    "query": "acente sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "short_search"
+  },
+  {
+    "id": 636,
+    "query": "sağlık hizmetleri kalite güvence",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 637,
+    "query": "kimlik kartı başvuru",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 638,
+    "query": "savunma sanayi yerli yazılım",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 639,
+    "query": "turistik yerler haritası",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 640,
+    "query": "vize takip entegrasyon sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 641,
+    "query": "doktor performans takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 642,
+    "query": "Bina yönetim yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 643,
+    "query": "denizaltı sonar yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 644,
+    "query": "insansız deniz aracı kontrol yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 645,
+    "query": "misafir sadakat programı yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 646,
+    "query": "hava ikmal sistemi yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 647,
+    "query": "misafir deneyim anketi platformu",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 648,
+    "query": "Ürün katalog ve stok yönetim sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 649,
+    "query": "savunma tedarik zinciri yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 650,
+    "query": "konaklama yönetim sistemi PMS",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 651,
+    "query": "hematoloji laboratuvar yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 652,
+    "query": "saha komuta kontrol uygulaması",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 653,
+    "query": "askeri yazılım",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "short_search"
+  },
+  {
+    "id": 654,
+    "query": "e-nabız entegrasyonlu sağlık yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 655,
+    "query": "patoloji laboratuvarı otomasyonu",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 656,
+    "query": "turizm ihracat platformu yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 657,
+    "query": "Gayrimenkul satış ve kiralık platformu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 658,
+    "query": "gözetleme kamera analitik yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 659,
+    "query": "tıbbi kayıt dijitalleştirme",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 660,
+    "query": "Fulfillment merkezi otomasyonu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 661,
+    "query": "optisyen yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 662,
+    "query": "Çalışan giriş çıkış takip sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 663,
+    "query": "meslek lisesi kontenjanları",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 664,
+    "query": "hastane randevu nasıl alınır",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 665,
+    "query": "tıbbi cihaz bakım takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 666,
+    "query": "Pazar yerleri entegrasyon yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 667,
+    "query": "vize takip entegrasyon sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 668,
+    "query": "kongre toplantı yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 669,
+    "query": "akademik değerlendirme yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 670,
+    "query": "tur operatörü CRM sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 671,
+    "query": "mezuniyet takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 672,
+    "query": "mayın tespit sistemi yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 673,
+    "query": "sınav değerlendirme sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 674,
+    "query": "İK analitik ve raporlama sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 675,
+    "query": "siber savunma operasyon merkezi yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 676,
+    "query": "pms sistem",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "short_search"
+  },
+  {
+    "id": 677,
+    "query": "onkoloji vaka takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 678,
+    "query": "elektronik harp yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 679,
+    "query": "okul yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 680,
+    "query": "otel check-in otomasyon yazılmı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 681,
+    "query": "özel hastane yorumları",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 682,
+    "query": "eczane yönetim otomasyon yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 683,
+    "query": "uçak bileti fiyatları",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 684,
+    "query": "burs imkanları",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 685,
+    "query": "tahlil sonucu öğrenme",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 686,
+    "query": "Müşteri takip ve satış otomasyonu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 687,
+    "query": "öğrenci yurt yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 688,
+    "query": "yat marina yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 689,
+    "query": "turizm yazılım",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "short_search"
+  },
+  {
+    "id": 690,
+    "query": "öğrenci yurt yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 691,
+    "query": "öğrenci danışmanlık sistmi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 692,
+    "query": "dijital öğrenci portföy sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 693,
+    "query": "muayene yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 694,
+    "query": "misafir sadakat programı yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 695,
+    "query": "Mobil uygulama e-ticaret altyapısı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 696,
+    "query": "Petrol ve gaz arama yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 697,
+    "query": "klinik veri analiz sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 698,
+    "query": "e-öğrenme platformu",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 699,
+    "query": "muharebe simülasyon platformu",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 700,
+    "query": "tıbbi görüntü işleme yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 701,
+    "query": "tıbbi kayıt dijitalleştirme",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 702,
+    "query": "HBYS kurulum ve danışmanlık hizmeti",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 703,
+    "query": "hasta kayıt dijitalleştirme",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 704,
+    "query": "çift anadal yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 705,
+    "query": "agro turizm rezervasyon platformu",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 706,
+    "query": "Filo yönetim ve araç takip sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 707,
+    "query": "öğrenci geri bildirim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 708,
+    "query": "misafir sadakat programı yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 709,
+    "query": "biyomedikal cihaz yönetimi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 710,
+    "query": "sağlık turizmi yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 711,
+    "query": "insansız hava aracı kontrol yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 712,
+    "query": "Maden sahası üretim takip sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 713,
+    "query": "radar yazılım",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "short_search"
+  },
+  {
+    "id": 714,
+    "query": "turizm raporlama analitik yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 715,
+    "query": "Vergi danışmanlığı otomasyonu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 716,
+    "query": "hasta kayıt dijitalleştirme",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 717,
+    "query": "ilköğretim okul yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 718,
+    "query": "internet paketi karşılaştırma",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 719,
+    "query": "acente sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "short_search"
+  },
+  {
+    "id": 720,
+    "query": "sterilizasyon takip yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 721,
+    "query": "eğitim ERP sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 722,
+    "query": "Sözleşme yönetim ve arşiv yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 723,
+    "query": "Depo stok ve lojistik yönetim yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 724,
+    "query": "turizm analitik platformu",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 725,
+    "query": "askeri harita ve coğrafi bilgi sistemi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 726,
+    "query": "Kargo ve kurye takip sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 727,
+    "query": "acente sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "short_search"
+  },
+  {
+    "id": 728,
+    "query": "öğrenci kimlik kart sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 729,
+    "query": "kampüs portal entegrasyonu",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 730,
+    "query": "fizyoterapi klinik yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 731,
+    "query": "otel gelir yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 732,
+    "query": "kara radar entegrasyonu",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 733,
+    "query": "mobil sağlık uygulaması geliştirme",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 734,
+    "query": "e-öğrenme platformu",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 735,
+    "query": "Fikri mülkiyet takip sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 736,
+    "query": "Duruşma ve takvim yönetimi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 737,
+    "query": "restoran rezervasyon entegrasyon sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 738,
+    "query": "üniversite kütüphane otomasyonu",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 739,
+    "query": "LYS puan hesaplama",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 740,
+    "query": "otel yazılım",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "short_search"
+  },
+  {
+    "id": 741,
+    "query": "siber güvenlik saldırı tespit sistemi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 742,
+    "query": "poliklinik randevu otomasyon sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 743,
+    "query": "diş kliniği yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 744,
+    "query": "öğrenci yurt yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 745,
+    "query": "sağlık analitik platformu",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 746,
+    "query": "göz muayenesi nerede yapılır",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 747,
+    "query": "Arbitraj ve danışmanlık yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 748,
+    "query": "öğrenci mentoring platformu",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 749,
+    "query": "çok fonksiyonlu radar yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 750,
+    "query": "klinik yazılım",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "short_search"
+  },
+  {
+    "id": 751,
+    "query": "hava savunma sistemi yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 752,
+    "query": "obs sistem",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "short_search"
+  },
+  {
+    "id": 753,
+    "query": "Enerji ticaret ve borsa entegrasyonu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 754,
+    "query": "eğitim analitik platformu",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 755,
+    "query": "etkinlik organizasyon yazılımı turizm",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 756,
+    "query": "hekim takvim yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 757,
+    "query": "elektronik istihbarat yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 758,
+    "query": "Enerji üretim ve dağıtım sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 759,
+    "query": "öğrenci geri bildirim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 760,
+    "query": "radar yazılım",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "short_search"
+  },
+  {
+    "id": 761,
+    "query": "Online satış platformu kurulumu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 762,
+    "query": "mobil telefon operatörleri",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 763,
+    "query": "gece nöbeti planlama sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 764,
+    "query": "İş güvenliği takip yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 765,
+    "query": "dijital sınıf yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 766,
+    "query": "uçak bileti fiyatları",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 767,
+    "query": "hematoloji laboratuvar yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 768,
+    "query": "üniversite otomasyon sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 769,
+    "query": "topçu ateş kontrol sistemi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 770,
+    "query": "gece nöbeti planlama sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 771,
+    "query": "turizm ihracat platformu yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 772,
+    "query": "kurumsal tatil planlama yazlımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 773,
+    "query": "radyoloji dijital görüntüleme sistemi PACS",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 774,
+    "query": "golf sahası rezervsyon yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 775,
+    "query": "tıbbi kayıt dijitalleştirme",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 776,
+    "query": "pms sistem",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "short_search"
+  },
+  {
+    "id": 777,
+    "query": "tahlil sonucu öğrenme",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 778,
+    "query": "Gayrimenkul satış ve kiralık platformu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 779,
+    "query": "Boru hattı ve taşıma sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 780,
+    "query": "otel yazılım",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "short_search"
+  },
+  {
+    "id": 781,
+    "query": "Çalışan giriş çıkış takip sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 782,
+    "query": "online ödeme entegrasyonu turizm",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 783,
+    "query": "zırhlı araç kontrol yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 784,
+    "query": "villa kiralama yönetim platformu",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 785,
+    "query": "ASELSAN entegrasyon yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 786,
+    "query": "uzaktan eğitim altyapısı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 787,
+    "query": "turizm franchise yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 788,
+    "query": "TSK lojistik yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 789,
+    "query": "savaş simülatörü yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 790,
+    "query": "obs sistem",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "short_search"
+  },
+  {
+    "id": 791,
+    "query": "Vergi danışmanlığı otomasyonu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 792,
+    "query": "restoran rezervasyon entegrasyon sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 793,
+    "query": "poliklinik randevu otomasyon sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 794,
+    "query": "laptop önerileri 2024",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 795,
+    "query": "Çalışan giriş çıkış takip sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 796,
+    "query": "Petrol ve gaz arama yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 797,
+    "query": "yoğun bakım hasta takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 798,
+    "query": "siber güvenlik saldırı tespit sistemi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 799,
+    "query": "sınav değerlendirme sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 800,
+    "query": "turizm raporlama analitik yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 801,
+    "query": "hasta faturalandırma sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 802,
+    "query": "Ürün katalog ve stok yönetim sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 803,
+    "query": "Nakit akış yönetim yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 804,
+    "query": "silahlı İHA yazılım entegrasyonu",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 805,
+    "query": "müze dijital biletleme sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 806,
+    "query": "Maden güvenliği ve denetim sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 807,
+    "query": "banka kredi faiz oranları",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 808,
+    "query": "su faturası ödeme",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 809,
+    "query": "gece görüş sistemi entegrasyonu",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 810,
+    "query": "tıbbi cihaz bakım takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 811,
+    "query": "kampüs Wi-Fi yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 812,
+    "query": "öğrenci mentoring platformu",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 813,
+    "query": "uydu haberleşme şifreleme yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 814,
+    "query": "güvenli veri aktarım sistemi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 815,
+    "query": "turistik yerler haritası",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 816,
+    "query": "hedef tespit ve tanıma yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 817,
+    "query": "Kurumsal iç iletişim platformu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 818,
+    "query": "mesleki eğitim kurumu yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 819,
+    "query": "kültür turu dijital rehberlik yazılmı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 820,
+    "query": "Kurumsal iç iletişim platformu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 821,
+    "query": "en iyi oteller yorumları",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 822,
+    "query": "en iyi doktor tavsiyesi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 823,
+    "query": "LMS kurulum yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 824,
+    "query": "klinik test yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 825,
+    "query": "sağlık otomasyon",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "short_search"
+  },
+  {
+    "id": 826,
+    "query": "transfer ve ulaşım yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 827,
+    "query": "pms sistem",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "short_search"
+  },
+  {
+    "id": 828,
+    "query": "Soğuk zincir lojistik izleme",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 829,
+    "query": "akademik değerlendirme yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 830,
+    "query": "Site yönetim ve aidat takip",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 831,
+    "query": "ameliyathane yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 832,
+    "query": "rezervasyon",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "short_search"
+  },
+  {
+    "id": 833,
+    "query": "muharebe simülasyon platformu",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 834,
+    "query": "öğrenci kariyer merkezi yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 835,
+    "query": "savunma tedarik zinciri yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 836,
+    "query": "yat marina yönetim sistmi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 837,
+    "query": "öğrenci etkinlik yönetim platformu",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 838,
+    "query": "askeri lojistik takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 839,
+    "query": "radyoloji dijital görüntüleme sistemi PACS",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 840,
+    "query": "tur rehberi takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 841,
+    "query": "lms kurulum",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "short_search"
+  },
+  {
+    "id": 842,
+    "query": "savunma bütçe planlama sistemi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 843,
+    "query": "otel yazılım",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "short_search"
+  },
+  {
+    "id": 844,
+    "query": "resort misafir deneyim yazılmı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 845,
+    "query": "mezun takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 846,
+    "query": "turizm raporlama analitik yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 847,
+    "query": "onkoloji vaka takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 848,
+    "query": "hava savunma sistemi yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 849,
+    "query": "klinik yazılım",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "short_search"
+  },
+  {
+    "id": 850,
+    "query": "İHA filo yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 851,
+    "query": "altın fiyatları gram",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 852,
+    "query": "turizm yazılım",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "short_search"
+  },
+  {
+    "id": 853,
+    "query": "tatil paketi satış platformu",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 854,
+    "query": "mezuniyet takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 855,
+    "query": "golf sahası rezervasyon yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 856,
+    "query": "radar izleme ve takip yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 857,
+    "query": "yoğun bakım hasta takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 858,
+    "query": "mezun takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 859,
+    "query": "lise otomasyon sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 860,
+    "query": "okul yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 861,
+    "query": "radar izleme ve takip yazilimi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 862,
+    "query": "doktor performans takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 863,
+    "query": "Şantiye hakediş ve malzeme takip yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 864,
+    "query": "savunma sistem",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "short_search"
+  },
+  {
+    "id": 865,
+    "query": "klinik hasta takip yazılımı fiyatları",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 866,
+    "query": "psikiyatri klinik otomasyonu",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 867,
+    "query": "hedef tespit ve tanıma yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 868,
+    "query": "Muhasebe defteri kefi ve fatura yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 869,
+    "query": "hbys fiyat",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "short_search"
+  },
+  {
+    "id": 870,
+    "query": "e-öğrenme platformu",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 871,
+    "query": "all inclusive otel fiyatları",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 872,
+    "query": "E-ticaret sepet ve ödeme altyapısı entegrasyonu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 873,
+    "query": "turizm analitik platformu",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 874,
+    "query": "Endüstriyel emisyon takip",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 875,
+    "query": "laboratuvar bilgi sistemi LIS kurulumu",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 876,
+    "query": "kampüs Wi-Fi yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 877,
+    "query": "hemşire iş akışı otomasyonu",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 878,
+    "query": "borsa endeksleri",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 879,
+    "query": "kriptolu haberleşme entegrasyonu",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 880,
+    "query": "zırhlı araç kontrol yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 881,
+    "query": "Personel maaş bordrosu ve özlük işleri otomasyonu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 882,
+    "query": "kış turizmi kayak merkezi yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 883,
+    "query": "savunma projesi yazılım geliştirme",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 884,
+    "query": "sağlık analitik platformu",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 885,
+    "query": "PNR yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 886,
+    "query": "kardiyoloji takip yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 887,
+    "query": "kültür turu dijital rehberlik yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 888,
+    "query": "öğrenci beklenti analiz yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 889,
+    "query": "Atık yönetim ve geri dönüşüm sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 890,
+    "query": "Şantiye hakediş ve malzeme takip yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 891,
+    "query": "kruvaziyer yolcu yonetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 892,
+    "query": "ASELSAN entegrasyon yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 893,
+    "query": "eğitim kurumu muhasebe yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 894,
+    "query": "kış turizmi kayak merkezi yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 895,
+    "query": "Hazine ve risk yönetim yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 896,
+    "query": "otel yazılım",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "short_search"
+  },
+  {
+    "id": 897,
+    "query": "Gayrimenkul satış ve kiralık platformu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 898,
+    "query": "komuta kontrol",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "short_search"
+  },
+  {
+    "id": 899,
+    "query": "Cari hesap takip ve muhasebe sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 900,
+    "query": "nöroloji klinik veri sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 901,
+    "query": "turizm bakanlığı entegrasyon yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 902,
+    "query": "ÖBYS entegrasyonu",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 903,
+    "query": "İK analitik ve raporlama sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 904,
+    "query": "müze dijital biletleme sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 905,
+    "query": "komuta kontrol",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "short_search"
+  },
+  {
+    "id": 906,
+    "query": "insansız deniz aracı kontrol yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 907,
+    "query": "E-ticaret sepet ve ödeme altyapısı entegrasyonu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 908,
+    "query": "eğitim ERP sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 909,
+    "query": "psikiyatri klinik otomasyonu",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 910,
+    "query": "hbys fiyat",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "short_search"
+  },
+  {
+    "id": 911,
+    "query": "restoran rezervasyon entegrasyon sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 912,
+    "query": "Satın alma ve tedarik otomasyonu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 913,
+    "query": "yaz okulu kayıt sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 914,
+    "query": "LIS LIS kurulumu",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 915,
+    "query": "Emlak portföy yönetim sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 916,
+    "query": "tıbbi cihaz bakım takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 917,
+    "query": "okul yonetım yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 918,
+    "query": "müze dijital biletleme sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 919,
+    "query": "yurt başvuru şartları",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 920,
+    "query": "öğrenci bilgi sistemi OBS",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 921,
+    "query": "Personel izin ve tatil yönetim sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 922,
+    "query": "Şantiye hakediş ve malzeme takip yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 923,
+    "query": "yoğun bakım hasta takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 924,
+    "query": "restoran menü fiyatları",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 925,
+    "query": "radar yazılım",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "short_search"
+  },
+  {
+    "id": 926,
+    "query": "kültür turu dijital rehberlik yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 927,
+    "query": "üniversite otomasyon",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "short_search"
+  },
+  {
+    "id": 928,
+    "query": "nöroloji klinik veri sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 929,
+    "query": "ortopedi klinik yönetimi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 930,
+    "query": "öğrenci sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "short_search"
+  },
+  {
+    "id": 931,
+    "query": "mobil sağlık uygulaması geliştirme",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 932,
+    "query": "misafir deneyim anketi platformu",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 933,
+    "query": "butik otel tavsiyeleri",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 934,
+    "query": "Satın alma ve tedarik otomasyonu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 935,
+    "query": "tatil paketi satış platformu",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 936,
+    "query": "öğrenci giriş çıkış takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 937,
+    "query": "staj takip yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 938,
+    "query": "Dava ve icra takip otomasyonu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 939,
+    "query": "elektrik kesintisi sorgulama",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 940,
+    "query": "Mobil uygulama e-ticaret altyapısı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 941,
+    "query": "mesleki eğitim kurumu yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 942,
+    "query": "Şirket kuruluş ve değişiklik takibi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 943,
+    "query": "radar veri analiz yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 944,
+    "query": "muayene yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 945,
+    "query": "öğrenci kariyer merkezi yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 946,
+    "query": "Beyanname ve vergi otomasyon sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 947,
+    "query": "Nakit akış yönetim yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 948,
+    "query": "kara kuvvetleri personel sistemi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 949,
+    "query": " Vergi borcu sorgulama",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 950,
+    "query": "online ödeme entegrasyonu turizm",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 951,
+    "query": "zırhlı araç kontrol yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 952,
+    "query": "Beyanname ve vergi otomasyon sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 953,
+    "query": "savaş simülatörü yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 954,
+    "query": "Tedarik zinciri yönetim sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 955,
+    "query": "hava savunma sistemi yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 956,
+    "query": "spor salonu üyelik",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 957,
+    "query": "öğrenci harç yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 958,
+    "query": "öğrenci proje takip yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 959,
+    "query": "oda servisi otomasyon sistemi",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 960,
+    "query": "İK performans değerlendirme sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 961,
+    "query": "turizm bakanlığı entegrasyon yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 962,
+    "query": "savunma sistem",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "short_search"
+  },
+  {
+    "id": 963,
+    "query": "kampüs yönetim sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 964,
+    "query": "öğrenci giriş çıkış takip sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 965,
+    "query": "villa kiralama yönetim platformu",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 966,
+    "query": "ÖBYS entegrasyonu",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 967,
+    "query": "klinik karar destek sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 968,
+    "query": "Kargo ve kurye takip sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 969,
+    "query": "üniversite otomasyon sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 970,
+    "query": "otel rezervasyon yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 971,
+    "query": "golf sahası rezervasyon yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 972,
+    "query": "villa kiralama yönetim platformu",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 973,
+    "query": "Atık yönetim ve geri dönüşüm sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 974,
+    "query": "elektronik istihbarat yazılmı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 975,
+    "query": "Site yönetim ve aidat takip",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 976,
+    "query": "kara kuvvetleri personel sistmi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 977,
+    "query": "HBYS kurulum ve danışmanlık hizmeti",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 978,
+    "query": "Arbitraj ve danışmanlık yazılımı",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 979,
+    "query": "savunma sanayi ERP sistemi",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 980,
+    "query": "obs sistem",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "short_search"
+  },
+  {
+    "id": 981,
+    "query": "Kargo ve kurye takip sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 982,
+    "query": "fitness center fiyatları",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 983,
+    "query": "komuta kontrol",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "short_search"
+  },
+  {
+    "id": 984,
+    "query": "eğitim analitik platformu",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 985,
+    "query": "Beyanname ve vergi otomasyon sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 986,
+    "query": "Fulfillment merkezi otomasyonu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 987,
+    "query": "E-fatura ve e-defter entegrasyonu",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 988,
+    "query": "kriptolu haberleşme entegrasyonu",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "noisy_typo"
+  },
+  {
+    "id": 989,
+    "query": "klinik veri analiz sistemi",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 990,
+    "query": "Müşteri ilişkileri yönetimi CRM e-ticaret",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 991,
+    "query": "hemşire iş akışı otomasyonu",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 992,
+    "query": "doktor çalışma saatleri",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 993,
+    "query": "İcra ve iflas takip sistemi",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "adversarial_ood"
+  },
+  {
+    "id": 994,
+    "query": "obs sistem",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "short_search"
+  },
+  {
+    "id": 995,
+    "query": "sağlık turizmi yönetim yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 996,
+    "query": "online alışveriş siteleri",
+    "is_in_domain": false,
+    "actual_sector": "OOD",
+    "query_type": "b2c_noise"
+  },
+  {
+    "id": 997,
+    "query": "füze güdüm sistemi yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "defense",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 998,
+    "query": "öğretmen performans değerlendirme sistemi",
+    "is_in_domain": true,
+    "actual_sector": "education",
+    "query_type": "clean_b2b"
+  },
+  {
+    "id": 999,
+    "query": "eczane yönetim otomasyon yazılımı",
+    "is_in_domain": true,
+    "actual_sector": "health",
+    "query_type": "abbreviation"
+  },
+  {
+    "id": 1000,
+    "query": "agro turizm rezervasyon platformu",
+    "is_in_domain": true,
+    "actual_sector": "tourism",
+    "query_type": "clean_b2b"
+  }
+]

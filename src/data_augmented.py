@@ -2,15 +2,18 @@
 Profesyonel veri artirma — Regex + On Ek / Son Ek + ASCII ikizler.
 
 Amac:
-  Ham veri setindeki semantik bosluklari (saglik / turizm / savunma kokleri)
-  prefix x kok x suffix kombinasyonlariyla zenginlestirmek.
+  Ham veri setindeki semantik bosluklari (saglik / turizm / savunma / egitim /
+  bilisim / eglence kokleri) prefix x kok x suffix kombinasyonlariyla
+  zenginlestirmek.
   Her cumlenin hem Turkce karakterli hem ASCII (test-uyumlu) halini basmak.
 
 Akis:
   1) data/raw/chatbot_dataset.json oku (orijinal kayitlar korunur)
-  2) Hedef kok ifadeleri icin prefix/suffix kombinasyonlari uret
-  3) Her cumle icin ASCII ikiz (+ ugra san tipi yazim varyantlari) ekle
-  4) Ham JSON + processed (indeks) guncelle
+  2) OOD mislabeling duzelt: sektore ait geçerli kayitlari geri rota et
+  3) Hedef kok ifadeleri icin prefix/suffix kombinasyonlari uret
+  4) Her cumle icin ASCII ikiz (+ ugra san tipi yazim varyantlari) ekle
+  5) Sinif dengesizligi düzelt: asiri genislemis sektorlere downsample uygula
+  6) Ham JSON + processed (indeks) guncelle
 
 Calistirma:
     python src/data_augmented.py
@@ -19,6 +22,7 @@ Calistirma:
 from __future__ import annotations
 
 import json
+import random
 import re
 from itertools import product
 from pathlib import Path
@@ -52,9 +56,11 @@ SUFFIXES: tuple[str, ...] = (
 
 # ---------------------------------------------------------------------------
 # 2) Hedef kok ifadeler -> sektor
+#    ÖNEMLİ: Anahtar adlar raw dataset'teki "beklenen_sektor" değerleriyle
+#    birebir eşleşmelidir (ASCII, Türkçe karakter yok).
 # ---------------------------------------------------------------------------
 AUGMENTATION_TARGETS: dict[str, tuple[str, ...]] = {
-    "sağlık": (
+    "saglik": (
         "hekim takvimi",
         "muayene yönetim sistemi",
         "tele-tıp çözümleri",
@@ -77,52 +83,103 @@ AUGMENTATION_TARGETS: dict[str, tuple[str, ...]] = {
         "pnr",
         "bilet",
     ),
-
-    "eğitim": (
+    "egitim": (
         "öğrenci bilgi sistemi",
         "üniversite otomasyonu",
         "kampüs yönetim sistemi",
         "OBS",
         "LMS",
         "ÖBYS",
+        "okul kayıt yazılımı",
+        "eğitim portalı altyapısı",
+        "uzaktan eğitim platformu",
+        "sınıf yoklama otomasyonu",
     ),
-    "bilişim": (
-        "bulut sunucu mimarisi",
-        "veri merkezi altyapısı",
-        "siber güvenlik çözümleri",
-        "özel yazılım geliştirme",
+    "bilisim": (
         "ERP entegrasyonu",
-        "CRM otomasyonu",
-        "büyük veri analitiği",
-        "ağ altyapısı",
+        "API geliştirme platformu",
+        "ESB middleware orchestration",
+        "kurumsal yazılım çözümleri",
+        "bulut altyapısı kurulumu",
+        "sunucu barındırma hizmeti",
+        "ağ güvenliği izleme",
+        "veri merkezi otomasyonu",
+        "bilişim sistemleri danışmanlığı",
     ),
-    "eğlence": (
-        "etkinlik yönetim sistemi",
-        "biletleme otomasyonu",
-        "oyun sunucusu altyapısı",
-        "medya streaming çözümü",
-        "sinema gişe sistemi",
-        "konser bilet platformu",
-        "canlı yayın altyapısı",
-        "e-spor turnuva yazılımı",
+    "eglence": (
+        "OTT streaming platformu",
+        "oyun motoru entegrasyonu",
+        "dijital medya yayın hakları yönetimi",
+        "kurumsal etkinlik biletleme sistemi",
+        "içerik dağıtım ağı",
+        "video on demand altyapısı",
+        "sinema gişe otomasyonu",
+        "tema park geçiş sistemi",
+        "canlı yayın aktarım yazılımı",
     ),
 }
 
 # Chatbot ile aynı kurumsal kısaltma sözlüğü (veri üretimi için)
 KISALTMALAR: dict[str, str] = {
-    "obs": "eğitim",
-    "lms": "eğitim",
-    "öbys": "eğitim",
-    "hbys": "sağlık",
-    "enabiz": "sağlık",
-    "ahbs": "sağlık",
-    # tsk archived
-    # aselsan archived
-    # kkk archived
+    "obs": "egitim",
+    "lms": "egitim",
+    "öbys": "egitim",
+    "hbys": "saglik",
+    "enabiz": "saglik",
+    "ahbs": "saglik",
     "bilet": "turizm",
     "pnr": "turizm",
     "otel": "turizm",
 }
+
+# ---------------------------------------------------------------------------
+# 3) OOD Mislabeling Düzeltme Tablosu
+#    Anahtar: ham mesajın normalize/lower versiyonu
+#    Değer: doğru sektör etiketi
+#
+#    Bu tablo, raw dataset'teki yanlış "ood" etiketli kayıtları
+#    doğru sektörlerine yönlendirir. Kayıt ID yerine mesaj içeriğine
+#    dayalı eşleme yapılır; böylece veri seti güncellendikçe sağlamlığı
+#    korunur.
+# ---------------------------------------------------------------------------
+_OOD_RELABEL_PATTERNS: list[tuple[re.Pattern[str], str]] = [
+    # ── Sağlık ──────────────────────────────────────────────────────────────
+    (re.compile(r"\belectronik\s+re[çc]ete\b|elektronik\s+re[çc]ete", re.I), "saglik"),
+    (re.compile(r"\bmuayene\s+y[oö]netim\b", re.I),                          "saglik"),
+    (re.compile(r"\bdoktor\s+[çc]al[iı][şs]ma\s+takvimi\b", re.I),           "saglik"),
+    (re.compile(r"\bhasta\s+dosyas[iı]\s+y[oö]netimi\b", re.I),              "saglik"),
+    # ── Turizm ──────────────────────────────────────────────────────────────
+    (re.compile(r"\btatil\s+paketi\s+sat[iı][şs]\b", re.I),                  "turizm"),
+    (re.compile(r"\btatil\s+k[oö]y[uü]\b", re.I),                           "turizm"),
+    (re.compile(r"\bonline\s+rezervasyon\b", re.I),                           "turizm"),
+    (re.compile(r"\bcheck-?in\s+ve\s+oda\s+y[oö]netim\b", re.I),            "turizm"),
+    (re.compile(r"\bkonaklama\s+y[oö]netim\b", re.I),                        "turizm"),
+    # ── Eğitim ──────────────────────────────────────────────────────────────
+    (re.compile(r"\baskeri\s+personele\b.*\be[gğ]itim\b", re.I),             "egitim"),
+    (re.compile(r"\bpros[eé]d[uü]r\s+e[gğ]itimi\b", re.I),                  "egitim"),
+    # ── Bilişim ─────────────────────────────────────────────────────────────
+    (re.compile(r"\bthird.party\s+platform\s+integration\b", re.I),           "bilisim"),
+    (re.compile(r"\bESB\s+middleware\b", re.I),                               "bilisim"),
+    (re.compile(r"\bworkflow\s+orchestration\b", re.I),                       "bilisim"),
+]
+
+# ---------------------------------------------------------------------------
+# 4) Sınıf Dengeleme Ayarları
+#    Downsample eşiği: bir sektörün augmented kayıt sayısı bu değeri
+#    aşarsa, rastgele örnekleme ile bu sayıya indirilir.
+#    None = sınırlama yok
+# ---------------------------------------------------------------------------
+CLASS_BALANCE_CAP: dict[str, int | None] = {
+    "turizm":   947,
+    "saglik":   947,
+    "bilisim":  947,
+    "egitim":   947,
+    "eglence":  947,
+    "ood":      None,
+}
+
+# Downsample için sabit seed (tekrarlanabilirlik)
+_BALANCE_SEED = 42
 
 _WS = re.compile(r"\s+")
 _TR_TO_ASCII = str.maketrans("çğıöşüÇĞİÖŞÜ", "cgiosuCGIOSU")
@@ -135,7 +192,7 @@ _OUR_ZORLUKLAR = frozenset(
 
 
 def to_ascii(text: str) -> str:
-    """Turkce karakterleri ASCII karsiliklarina cevir (g, i, s, c, o, u)."""
+    """Türkçe karakterleri ASCII karşılıklarına çevir (ç→c, ğ→g, ı→i, ö→o, ş→s, ü→u)."""
     return (text or "").translate(_TR_TO_ASCII)
 
 
@@ -147,7 +204,7 @@ def _detect_lang(text: str) -> str:
     if re.search(r"[çğıöşüÇĞİÖŞÜ]", text):
         return "tr"
     if re.search(
-        r"\b(travel|agency|booking|check-?in|nato|software|system)\b",
+        r"\b(travel|agency|booking|check-?in|nato|software|system|military|secure|radar|cybersecurity)\b",
         text,
         re.I,
     ):
@@ -157,8 +214,8 @@ def _detect_lang(text: str) -> str:
 
 def ascii_typo_variants(text_ascii: str) -> list[str]:
     """
-    Test dinamikleriyle uyumlu ekstra ASCII yazim varyantlari.
-    Ornek: ugrasan -> ugra san (B2), tele-tip zaten to_ascii ile gelir.
+    Test dinamikleriyle uyumlu ekstra ASCII yazım varyantları.
+    Örnek: ugrasan → ugra san (B2), tele-tip zaten to_ascii ile gelir.
     """
     base = _normalize(text_ascii)
     out = [base]
@@ -166,16 +223,42 @@ def ascii_typo_variants(text_ascii: str) -> list[str]:
         spaced = base.replace("ugrasan", "ugra san")
         if spaced not in out:
             out.append(spaced)
-    # tele tip / teletip -> tele-tip
+    # tele tip / teletip → tele-tip
     alt = re.sub(r"\btele[\s]?tip\b", "tele-tip", base, flags=re.I)
     if alt not in out:
         out.append(alt)
     return out
 
 
+def relabel_ood_record(rec: dict[str, Any]) -> dict[str, Any]:
+    """
+    Tek bir kaydın "ood" etiketini mesaj içeriğine göre doğru sektörle
+    değiştirir. Gerçek OOD (selamlama, genel soru vb.) kayıtları değişmez.
+
+    UTF-8 güvenlidir: giriş/çıkış encoding'i değiştirilmez.
+    """
+    current = rec.get("beklened_sektor", rec.get("beklenen_sektor", ""))
+    if current != "ood":
+        return rec  # Zaten doğru etiketli
+
+    msg = rec.get("mesaj", "")
+    for pattern, correct_sector in _OOD_RELABEL_PATTERNS:
+        if pattern.search(msg):
+            corrected = dict(rec)
+            # Her iki anahtar varyantı da güncelle
+            if "beklened_sektor" in corrected:
+                corrected["beklened_sektor"] = correct_sector
+            if "beklenen_sektor" in corrected:
+                corrected["beklenen_sektor"] = correct_sector
+            corrected["ood_relabeled"] = True  # denetim izi
+            return corrected
+
+    return rec  # Gerçek OOD — değiştirme
+
+
 def load_raw(path: Path = RAW_PATH) -> dict[str, Any]:
     if not path.exists():
-        raise FileNotFoundError(f"Ham veri bulunamadi: {path}")
+        raise FileNotFoundError(f"Ham veri bulunamadı: {path}")
     with path.open(encoding="utf-8") as f:
         data = json.load(f)
     if not isinstance(data, dict) or "kayitlar" not in data:
@@ -244,7 +327,7 @@ def generate_root_variants(
     suffixes: tuple[str, ...] = SUFFIXES,
 ) -> list[dict[str, Any]]:
     """
-    Her kok icin TR cumleler + ASCII ikizler (+ ugra san tipi typo).
+    Her kök için TR cümleler + ASCII ikizler (+ ugra san tipi typo).
     """
     out: list[dict[str, Any]] = []
     next_id = start_id
@@ -311,6 +394,45 @@ def generate_root_variants(
     return out
 
 
+def _apply_class_balancing(
+    records: list[dict[str, Any]],
+    caps: dict[str, int | None] = CLASS_BALANCE_CAP,
+    seed: int = _BALANCE_SEED,
+) -> list[dict[str, Any]]:
+    """
+    Sektör bazında kayıt sayısını cap ile sınırlar (downsample).
+    Ham (non-augmented) kayıtlar korunur; yalnızca augmented kayıtlara
+    downsample uygulanır.
+    """
+    rng = random.Random(seed)
+
+    # Ham ve augmented kayıtları ayır
+    ham: list[dict[str, Any]] = []
+    augmented_by_sector: dict[str, list[dict[str, Any]]] = {}
+
+    for rec in records:
+        if rec.get("zorluk") in _OUR_ZORLUKLAR:
+            s = rec.get("beklenen_sektor", "belirsiz")
+            augmented_by_sector.setdefault(s, []).append(rec)
+        else:
+            ham.append(rec)
+
+    balanced_augmented: list[dict[str, Any]] = []
+    for sektor, recs_list in augmented_by_sector.items():
+        cap = caps.get(sektor)
+        if cap is not None and len(recs_list) > cap:
+            sampled = rng.sample(recs_list, cap)
+            print(
+                f"  [Dengeleme] '{sektor}': {len(recs_list)} → {len(sampled)} kayıt "
+                f"(cap={cap})"
+            )
+            balanced_augmented.extend(sampled)
+        else:
+            balanced_augmented.extend(recs_list)
+
+    return ham + balanced_augmented
+
+
 def _load_processed_base() -> list[dict[str, Any]]:
     if not PROCESSED_PATH.exists():
         return []
@@ -329,12 +451,33 @@ def augment_dataset(
     *,
     update_raw: bool = True,
     write_processed: bool = True,
+    apply_balancing: bool = True,
 ) -> dict[str, Any]:
     data = load_raw(raw_path)
     raw_records: list[dict[str, Any]] = list(data.get("kayitlar") or [])
 
+    # ── Adım 1: OOD mislabeling düzeltmesi ──────────────────────────────────
+    relabeled_count = 0
+    corrected_records: list[dict[str, Any]] = []
+    for rec in raw_records:
+        fixed = relabel_ood_record(rec)
+        if fixed.get("ood_relabeled"):
+            relabeled_count += 1
+        corrected_records.append(fixed)
+    raw_records = corrected_records
+
+    if relabeled_count:
+        print(f"[+] OOD düzeltmesi: {relabeled_count} kayıt doğru sektöre yönlendirildi")
+
     raw_base = [r for r in raw_records if not _is_our_augment(r)]
     processed_base = [r for r in _load_processed_base() if not _is_our_augment(r)]
+
+    # Processed base'deki OOD kayıtlarını da düzelt
+    corrected_processed: list[dict[str, Any]] = []
+    for rec in processed_base:
+        fixed = relabel_ood_record(rec)
+        corrected_processed.append(fixed)
+    processed_base = corrected_processed
 
     corpus_base = processed_base if len(processed_base) >= len(raw_base) else raw_base
     next_id = max(_max_numeric_id(corpus_base), _max_numeric_id(raw_base)) + 1
@@ -349,6 +492,7 @@ def augment_dataset(
         if msg:
             existing_msgs.add(_normalize(str(msg)).casefold())
 
+    # ── Adım 2: Augmentation ────────────────────────────────────────────────
     generated: list[dict[str, Any]] = []
     for sektor, roots in AUGMENTATION_TARGETS.items():
         for root in roots:
@@ -365,8 +509,24 @@ def augment_dataset(
     raw_merged = raw_base + generated
     processed_merged = list(corpus_base) + generated
 
+    # ── Adım 3: Sınıf Dengeleme ─────────────────────────────────────────────
+    if apply_balancing:
+        print("\n[+] Sınıf dengeleme uygulanıyor...")
+        processed_merged = _apply_class_balancing(processed_merged)
+        raw_merged = _apply_class_balancing(raw_merged)
+
     n_ascii = sum(1 for r in generated if r.get("ascii_twin"))
     n_tr = len(generated) - n_ascii
+
+    # ── Adım 4: Dağılım raporu ──────────────────────────────────────────────
+    import collections
+    dist = collections.Counter(
+        r.get("beklened_sektor", r.get("beklenen_sektor", "?"))
+        for r in processed_merged
+    )
+    print("\n[+] Son sektör dağılımı (processed):")
+    for k, v in sorted(dist.items(), key=lambda x: -x[1]):
+        print(f"    {k:<20} {v:>5}")
 
     meta = dict(data.get("meta") or {})
     meta.update(
@@ -384,6 +544,8 @@ def augment_dataset(
                 "yeni_ascii": n_ascii,
                 "ham_toplam": len(raw_merged),
                 "processed_toplam": len(processed_merged),
+                "ood_relabeled": relabeled_count,
+                "sinif_dengeleme": apply_balancing,
             },
         }
     )
@@ -399,6 +561,8 @@ def augment_dataset(
                 "prefix_suffix",
                 "hedef_kok_zenginlestirme",
                 "ascii_twin",
+                "ood_relabeling",
+                "sinif_dengeleme",
             ],
         },
         "kayitlar": processed_merged,
@@ -408,29 +572,29 @@ def augment_dataset(
         raw_path.parent.mkdir(parents=True, exist_ok=True)
         with raw_path.open("w", encoding="utf-8") as f:
             json.dump(raw_doc, f, ensure_ascii=False, indent=2)
-        print(f"[OK] Ham veri guncellendi: {raw_path} ({len(raw_merged)} kayit)")
+        print(f"\n[OK] Ham veri güncellendi: {raw_path} ({len(raw_merged)} kayıt)")
 
     if write_processed:
         PROCESSED_PATH.parent.mkdir(parents=True, exist_ok=True)
         with PROCESSED_PATH.open("w", encoding="utf-8") as f:
             json.dump(processed_doc, f, ensure_ascii=False, indent=2)
-        print(f"[OK] Processed yazildi: {PROCESSED_PATH} ({len(processed_merged)} kayit)")
+        print(f"[OK] Processed yazıldı: {PROCESSED_PATH} ({len(processed_merged)} kayıt)")
 
     print(
-        f"[i] Ozet: ham_taban={len(raw_base)} | corpus_taban={len(corpus_base)} "
+        f"\n[i] Özet: ham_taban={len(raw_base)} | corpus_taban={len(corpus_base)} "
         f"| yeni={len(generated)} (tr={n_tr}, ascii={n_ascii}) "
         f"| processed_toplam={len(processed_merged)}"
     )
     for sektor, roots in AUGMENTATION_TARGETS.items():
         n = sum(1 for r in generated if r["beklenen_sektor"] == sektor)
-        print(f"    - {sektor}: {n} yeni kayit ({len(roots)} kok)")
+        print(f"    - {sektor}: {n} yeni kayıt ({len(roots)} kök)")
 
     return processed_doc if write_processed else raw_doc
 
 
 def run() -> None:
     print("=" * 60)
-    print("  Veri Artirma - Prefix/Suffix + ASCII Ikizler")
+    print("  Veri Artirma - Prefix/Suffix + ASCII Ikizler + OOD Duzeltme")
     print("=" * 60)
     augment_dataset()
     print("=" * 60)

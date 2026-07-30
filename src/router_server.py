@@ -4,10 +4,8 @@ Baseline Architecture: BGE-M3 + Strict Regex Guardrails
 Threshold: 0.65 with Regex Fallback Strategy
 """
 import sys, os, logging, re, time
-import uuid
-from typing import Dict, Optional, Tuple, List
+from typing import Dict, Optional, Tuple
 from dataclasses import dataclass
-from datetime import datetime
 from fastapi import FastAPI, HTTPException, status
 from pydantic import BaseModel, Field
 import uvicorn
@@ -23,10 +21,6 @@ from src.k1_guardrails import (
     STRICT_SECTOR_REGEX,
     check_ood_reject,
 )
-from dotenv import load_dotenv
-import psycopg2
-
-load_dotenv()
 
 # ─────────────────────────────────────────────────────────────────────────────
 # 1. CONFIGURATION
@@ -66,155 +60,12 @@ class HealthResponse(BaseModel):
     threshold: float
     uptime_seconds: float
 
-# Session management models
-class SessionCreate(BaseModel):
-    user_id: Optional[str] = None
-    sector: Optional[str] = None
-    metadata: Optional[Dict] = None
-
-class SessionResponse(BaseModel):
-    session_id: str
-    user_id: Optional[str]
-    sector: Optional[str]
-    created_at: str
-    updated_at: str
-    metadata: Dict
-
-class MessageCreate(BaseModel):
-    session_id: str
-    role: str = Field(..., description="user, assistant, or system")
-    content: str
-    intent: Optional[str] = None
-    confidence: Optional[float] = None
-    metadata: Optional[Dict] = None
-
-class MessageResponse(BaseModel):
-    id: int
-    session_id: str
-    role: str
-    content: str
-    intent: Optional[str]
-    confidence: Optional[float]
-    created_at: str
-
-class ChatRequest(BaseModel):
-    session_id: Optional[str] = None
-    message: str = Field(..., min_length=1, max_length=500)
-    user_id: Optional[str] = None
-
-class ChatResponse(BaseModel):
-    session_id: str
-    user_message: str
-    bot_response: str
-    predicted_sector: Optional[str]
-    confidence: float
-    messages: List[MessageResponse]
-
 # ─────────────────────────────────────────────────────────────────────────────
 # 4. SECTOR MAPPING — src.k1_guardrails.SECTOR_MAP (import edildi)
 # ─────────────────────────────────────────────────────────────────────────────
 
 # ─────────────────────────────────────────────────────────────────────────────
-# 5. DATABASE HELPER FUNCTIONS
-# ─────────────────────────────────────────────────────────────────────────────
-def get_db_connection():
-    """Get PostgreSQL database connection."""
-    db_url = os.getenv('DATABASE_URL').replace('postgresql+psycopg2://', 'postgresql://')
-    return psycopg2.connect(db_url)
-
-def create_session(user_id: Optional[str] = None, sector: Optional[str] = None, metadata: Optional[Dict] = None) -> str:
-    """Create a new chat session and return session_id."""
-    conn = get_db_connection()
-    try:
-        cursor = conn.cursor()
-        session_id = str(uuid.uuid4())
-        metadata_json = json.dumps(metadata) if metadata else '{}'
-        
-        cursor.execute(
-            "INSERT INTO chat_sessions (id, user_id, sector, metadata) VALUES (%s, %s, %s, %s) RETURNING id",
-            (session_id, user_id, sector, metadata_json)
-        )
-        conn.commit()
-        return session_id
-    finally:
-        conn.close()
-
-def get_session(session_id: str) -> Optional[Dict]:
-    """Get session by ID."""
-    conn = get_db_connection()
-    try:
-        cursor = conn.cursor()
-        cursor.execute(
-            "SELECT id, user_id, sector, created_at, updated_at, metadata FROM chat_sessions WHERE id = %s",
-            (session_id,)
-        )
-        row = cursor.fetchone()
-        if row:
-            return {
-                "session_id": str(row[0]),
-                "user_id": row[1],
-                "sector": row[2],
-                "created_at": row[3].isoformat() if row[3] else None,
-                "updated_at": row[4].isoformat() if row[4] else None,
-                "metadata": row[5]
-            }
-        return None
-    finally:
-        conn.close()
-
-def add_message(session_id: str, role: str, content: str, intent: Optional[str] = None, confidence: Optional[float] = None, metadata: Optional[Dict] = None) -> int:
-    """Add a message to a session and return message ID."""
-    conn = get_db_connection()
-    try:
-        cursor = conn.cursor()
-        metadata_json = json.dumps(metadata) if metadata else '{}'
-        
-        cursor.execute(
-            "INSERT INTO chat_messages (session_id, role, content, intent, confidence, metadata) VALUES (%s, %s, %s, %s, %s, %s) RETURNING id",
-            (session_id, role, content, intent, confidence, metadata_json)
-        )
-        message_id = cursor.fetchone()[0]
-        
-        # Update session updated_at
-        cursor.execute(
-            "UPDATE chat_sessions SET updated_at = NOW() WHERE id = %s",
-            (session_id,)
-        )
-        
-        conn.commit()
-        return message_id
-    finally:
-        conn.close()
-
-def get_session_messages(session_id: str) -> List[Dict]:
-    """Get all messages for a session."""
-    conn = get_db_connection()
-    try:
-        cursor = conn.cursor()
-        cursor.execute(
-            "SELECT id, session_id, role, content, intent, confidence, created_at FROM chat_messages WHERE session_id = %s ORDER BY created_at ASC",
-            (session_id,)
-        )
-        rows = cursor.fetchall()
-        return [
-            {
-                "id": row[0],
-                "session_id": str(row[1]),
-                "role": row[2],
-                "content": row[3],
-                "intent": row[4],
-                "confidence": row[5],
-                "created_at": row[6].isoformat() if row[6] else None
-            }
-            for row in rows
-        ]
-    finally:
-        conn.close()
-
-import json
-
-# ─────────────────────────────────────────────────────────────────────────────
-# 6. ROUTER LOGIC
+# 5. ROUTER LOGIC
 # ─────────────────────────────────────────────────────────────────────────────
 class B2BIntentRouter:
     """Production B2B Intent Router with BGE-M3 + Regex Guardrails."""
@@ -413,116 +264,9 @@ async def root():
             "health": ["/health", "/api/health"],
             "route": ["/route", "/chat", "/api/chat"],
             "status": ["/status", "/api/status", "/messages", "/api/messages"],
-            "session": ["/api/sessions", "/api/sessions/{session_id}", "/api/sessions/{session_id}/messages"],
             "docs": "/docs"
         }
     }
-
-# ─────────────────────────────────────────────────────────────────────────────
-# 8. SESSION MANAGEMENT ENDPOINTS
-# ─────────────────────────────────────────────────────────────────────────────
-@app.post("/api/sessions", response_model=SessionResponse)
-async def create_chat_session(session_data: SessionCreate):
-    """Create a new chat session."""
-    try:
-        session_id = create_session(
-            user_id=session_data.user_id,
-            sector=session_data.sector,
-            metadata=session_data.metadata
-        )
-        session = get_session(session_id)
-        if not session:
-            raise HTTPException(status_code=500, detail="Failed to create session")
-        return SessionResponse(**session)
-    except Exception as e:
-        logger.error(f"Error creating session: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
-
-@app.get("/api/sessions/{session_id}", response_model=SessionResponse)
-async def get_chat_session(session_id: str):
-    """Get a chat session by ID."""
-    try:
-        session = get_session(session_id)
-        if not session:
-            raise HTTPException(status_code=404, detail="Session not found")
-        return SessionResponse(**session)
-    except HTTPException:
-        raise
-    except Exception as e:
-        logger.error(f"Error getting session: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
-
-@app.get("/api/sessions/{session_id}/messages", response_model=List[MessageResponse])
-async def get_session_messages_endpoint(session_id: str):
-    """Get all messages for a session."""
-    try:
-        session = get_session(session_id)
-        if not session:
-            raise HTTPException(status_code=404, detail="Session not found")
-        
-        messages = get_session_messages(session_id)
-        return [MessageResponse(**msg) for msg in messages]
-    except HTTPException:
-        raise
-    except Exception as e:
-        logger.error(f"Error getting session messages: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
-
-@app.post("/api/chat/session", response_model=ChatResponse)
-async def chat_with_session(chat_request: ChatRequest):
-    """Chat with session management."""
-    if router is None:
-        raise HTTPException(status_code=503, detail="Router not initialized")
-    
-    try:
-        # Get or create session
-        session_id = chat_request.session_id
-        if not session_id:
-            # Create new session
-            session_id = create_session(user_id=chat_request.user_id)
-        
-        # Route the user message
-        accepted, predicted_sector, score, regex_matched, reason = router.route(chat_request.message)
-        
-        # Generate bot response
-        if accepted:
-            bot_response = f"Talebiniz {predicted_sector} sektörüyle ilişkilendirildi. Size nasıl yardımcı olabilirim?"
-        else:
-            bot_response = "Sektör belirlenemedi. Lütfen daha spesifik bir talep belirtin."
-        
-        # Add user message to session
-        add_message(
-            session_id=session_id,
-            role="user",
-            content=chat_request.message,
-            intent=predicted_sector if accepted else None,
-            confidence=score
-        )
-        
-        # Add bot response to session
-        add_message(
-            session_id=session_id,
-            role="assistant",
-            content=bot_response,
-            intent=predicted_sector if accepted else None,
-            confidence=score
-        )
-        
-        # Get all messages for the session
-        messages = get_session_messages(session_id)
-        
-        return ChatResponse(
-            session_id=session_id,
-            user_message=chat_request.message,
-            bot_response=bot_response,
-            predicted_sector=predicted_sector if accepted else None,
-            confidence=score,
-            messages=[MessageResponse(**msg) for msg in messages]
-        )
-    
-    except Exception as e:
-        logger.error(f"Error in chat with session: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
 
 # ─────────────────────────────────────────────────────────────────────────────
 # 7. SERVER ENTRY POINT

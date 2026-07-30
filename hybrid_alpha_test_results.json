@@ -1,0 +1,119 @@
+{
+  "test_type": "hybrid_alpha_optimization",
+  "categories_tested": [
+    "H",
+    "I"
+  ],
+  "best_alpha": 0.8,
+  "best_total_success": 4,
+  "all_results": [
+    {
+      "alpha": 0.9,
+      "H": {
+        "total": 4,
+        "correct": 2
+      },
+      "I": {
+        "total": 4,
+        "correct": 1
+      },
+      "total": 3
+    },
+    {
+      "alpha": 0.8,
+      "H": {
+        "total": 4,
+        "correct": 3
+      },
+      "I": {
+        "total": 4,
+        "correct": 1
+      },
+      "total": 4
+    },
+    {
+      "alpha": 0.7,
+      "H": {
+        "total": 4,
+        "correct": 3
+      },
+      "I": {
+        "total": 4,
+        "correct": 1
+      },
+      "total": 4
+    },
+    {
+      "alpha": 0.6,
+      "H": {
+        "total": 4,
+        "correct": 3
+      },
+      "I": {
+        "total": 4,
+        "correct": 1
+      },
+      "total": 4
+    },
+    {
+      "alpha": 0.5,
+      "H": {
+        "total": 4,
+        "correct": 3
+      },
+      "I": {
+        "total": 4,
+        "correct": 1
+      },
+      "total": 4
+    },
+    {
+      "alpha": 0.4,
+      "H": {
+        "total": 4,
+        "correct": 3
+      },
+      "I": {
+        "total": 4,
+        "correct": 0
+      },
+      "total": 3
+    },
+    {
+      "alpha": 0.3,
+      "H": {
+        "total": 4,
+        "correct": 3
+      },
+      "I": {
+        "total": 4,
+        "correct": 0
+      },
+      "total": 3
+    },
+    {
+      "alpha": 0.2,
+      "H": {
+        "total": 4,
+        "correct": 3
+      },
+      "I": {
+        "total": 4,
+        "correct": 0
+      },
+      "total": 3
+    },
+    {
+      "alpha": 0.1,
+      "H": {
+        "total": 4,
+        "correct": 3
+      },
+      "I": {
+        "total": 4,
+        "correct": 0
+      },
+      "total": 3
+    }
+  ]
+}
