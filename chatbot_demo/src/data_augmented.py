@@ -77,18 +77,7 @@ AUGMENTATION_TARGETS: dict[str, tuple[str, ...]] = {
         "pnr",
         "bilet",
     ),
-    "savunma": (
-        "NATO standartlarında güvenli mesajlaşma",
-        "birlikler arası kriptolu haberleşme",
-        "siber savunma ağ çözümleri",
-        "askeri taktik siber güvenlik",
-        "komuta kontrol sistemi",
-        "radar veri analiz yazılımı",
-        "savunma sanayi yerli yazılım",
-        "TSK",
-        "ASELSAN",
-        "KKK",
-    ),
+
     "eğitim": (
         "öğrenci bilgi sistemi",
         "üniversite otomasyonu",
@@ -96,6 +85,26 @@ AUGMENTATION_TARGETS: dict[str, tuple[str, ...]] = {
         "OBS",
         "LMS",
         "ÖBYS",
+    ),
+    "bilişim": (
+        "bulut sunucu mimarisi",
+        "veri merkezi altyapısı",
+        "siber güvenlik çözümleri",
+        "özel yazılım geliştirme",
+        "ERP entegrasyonu",
+        "CRM otomasyonu",
+        "büyük veri analitiği",
+        "ağ altyapısı",
+    ),
+    "eğlence": (
+        "etkinlik yönetim sistemi",
+        "biletleme otomasyonu",
+        "oyun sunucusu altyapısı",
+        "medya streaming çözümü",
+        "sinema gişe sistemi",
+        "konser bilet platformu",
+        "canlı yayın altyapısı",
+        "e-spor turnuva yazılımı",
     ),
 }
 

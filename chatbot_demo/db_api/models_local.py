@@ -2,6 +2,7 @@
 
 from datetime import datetime
 
+from pgvector.sqlalchemy import Vector
 from sqlalchemy import (
     Boolean,
     CheckConstraint,
@@ -19,7 +20,6 @@ from sqlalchemy import (
     func,
     text,
 )
-from sqlalchemy.dialects.postgresql import ARRAY
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 
 EMBEDDING_DIM = 1024
@@ -200,7 +200,7 @@ class QaEmbedding(Base):
     intent_id: Mapped[int] = mapped_column(ForeignKey("intents.id", ondelete="RESTRICT"), nullable=False)
     is_augmented: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False, server_default=text("false"))
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), server_default=func.now())
-    embedding: Mapped[list[float]] = mapped_column(ARRAY(Float), nullable=False)
+    embedding: Mapped[list[float]] = mapped_column(Vector(EMBEDDING_DIM), nullable=False)
 
     intent: Mapped["Intent"] = relationship(back_populates="qa_embeddings")
 

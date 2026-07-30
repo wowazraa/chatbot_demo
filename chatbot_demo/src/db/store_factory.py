@@ -61,80 +61,45 @@ class QaEmbeddingDbStore:
                 "eglence": ["eglence_streaming"],
             }
 
-            if USE_PGVECTOR:
-                # pgvector direct cosine distance
-                lit = "[" + ",".join(str(float(x)) for x in query_embedding) + "]"
-                sql = """
-                    SELECT q.id, q.question, i.intent_code,
-                           (q.embedding <=> CAST(:emb AS vector)) AS distance
-                    FROM qa_embeddings q
-                    LEFT JOIN intents i ON q.intent_id = i.id
-                """
-                params = {"emb": lit, "k": int(top_k)}
-                if sector:
-                    if sector == "ood":
-                        sql += " WHERE q.intent_id IS NULL"
-                    else:
-                        allowed_intents = sector_to_intents.get(sector, [])
-                        if allowed_intents:
-                            sql += " WHERE i.intent_code IN :intents"
-                            params["intents"] = tuple(allowed_intents)
-                sql += " ORDER BY q.embedding <=> CAST(:emb AS vector) LIMIT :k"
+            # pgvector direct cosine distance
+            lit = "[" + ",".join(str(float(x)) for x in query_embedding) + "]"
+            sql = """
+                SELECT q.id, q.question, i.intent_code,
+                       (q.embedding <=> CAST(:emb AS vector)) AS distance
+                FROM qa_embeddings q
+                LEFT JOIN intents i ON q.intent_id = i.id
+            """
+            params = {"emb": lit, "k": int(top_k)}
+            if sector:
+                if sector == "ood":
+                    sql += " WHERE q.intent_id IS NULL"
+                else:
+                    allowed_intents = sector_to_intents.get(sector, [])
+                    if allowed_intents:
+                        sql += " WHERE i.intent_code IN :intents"
+                        params["intents"] = tuple(allowed_intents)
+            sql += " ORDER BY q.embedding <=> CAST(:emb AS vector) LIMIT :k"
 
-                rows = db.execute(text(sql), params).mappings().all()
+            rows = db.execute(text(sql), params).mappings().all()
 
-                results = []
-                for r in rows:
-                    icode = r["intent_code"]
-                    sec = intent_to_sector.get(icode, "ood") if icode else "ood"
-                    sub = map_sub_intent(sec, r["question"]) if sec != "ood" else "ood.none"
-                    score = float(1.0 - r["distance"])
-                    results.append(
-                        VectorCandidate(
-                            id=r["id"],
-                            source_id=str(r["id"]),
-                            sector=sec,
-                            sub_intent=sub,
-                            text_content=r["question"],
-                            distance=float(r["distance"]),
-                            score=score,
-                        )
+            results = []
+            for r in rows:
+                icode = r["intent_code"]
+                sec = intent_to_sector.get(icode, "ood") if icode else "ood"
+                sub = map_sub_intent(sec, r["question"]) if sec != "ood" else "ood.none"
+                score = float(1.0 - r["distance"])
+                results.append(
+                    VectorCandidate(
+                        id=r["id"],
+                        source_id=str(r["id"]),
+                        sector=sec,
+                        sub_intent=sub,
+                        text_content=r["question"],
+                        distance=float(r["distance"]),
+                        score=score,
                     )
-                return results
-            else:
-                # Python-based cosine fallback over database rows
-                q = db.query(QaEmbedding).outerjoin(Intent)
-                rows = q.all()
-
-                def _cosine_distance(a: Sequence[float], b: Sequence[float]) -> float:
-                    dot = sum(x * y for x, y in zip(a, b))
-                    na = math.sqrt(sum(x * x for x in a)) or 1e-12
-                    nb = math.sqrt(sum(x * x for x in b)) or 1e-12
-                    return 1.0 - (dot / (na * nb))
-
-                candidates = []
-                for r in rows:
-                    icode = r.intent.intent_code if r.intent else None
-                    sec = intent_to_sector.get(icode, "ood") if icode else "ood"
-
-                    if sector and sec != sector:
-                        continue
-
-                    dist = _cosine_distance(query_embedding, list(r.embedding))
-                    sub = map_sub_intent(sec, r.question) if sec != "ood" else "ood.none"
-                    candidates.append(
-                        VectorCandidate(
-                            id=r.id,
-                            source_id=str(r.id),
-                            sector=sec,
-                            sub_intent=sub,
-                            text_content=r.question,
-                            distance=dist,
-                            score=1.0 - dist,
-                        )
-                    )
-                candidates.sort(key=lambda c: c.distance)
-                return candidates[:top_k]
+                )
+            return results
 
         finally:
             db.close()

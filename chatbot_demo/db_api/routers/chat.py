@@ -131,4 +131,7 @@ def chat_turn(body: ChatTurnRequest, db: Session = Depends(get_db)):
         reply=reply,
         url=url,
         session_id=saved.session_id,
+        sector=sector,
+        layer_hit=resp.mod,
+        confidence=float(intent.get("confidence_score") or 0.0),
     )

@@ -678,9 +678,27 @@ class StresTestRunner:
 
     def save_results(self):
         out_path = ROOT / "reports" / "stres_testi_sonuclari.json"
-        out_path.parent.mkdir(parents=True, exist_ok=True)
-        with out_path.open("w", encoding="utf-8") as f:
-            json.dump(self.sonuclar, f, ensure_ascii=False, indent=2)
+        
+        serializable_results = []
+        for r in self.sonuclar:
+            c = r.copy()
+            if "yanit" in c and hasattr(c["yanit"], "__dict__"):
+                c["yanit"] = c["yanit"].__dict__
+            serializable_results.append(c)
+            
+        with open(out_path, "w", encoding="utf-8") as f:
+            json.dump(serializable_results, f, ensure_ascii=False, indent=2)
+
+        fail_path = ROOT / "reports" / "stres_testi_hatali.json"
+        serializable_fails = []
+        for f_item in self.failed_scenarios:
+            c = f_item.copy()
+            if "yanit" in c and hasattr(c["yanit"], "__dict__"):
+                c["yanit"] = c["yanit"].__dict__
+            serializable_fails.append(c)
+            
+        with open(fail_path, "w", encoding="utf-8") as f2:
+            json.dump(serializable_fails, f2, ensure_ascii=False, indent=2)
         print(f"\n[+] Stres testi sonuçları json olarak kaydedildi: {out_path}")
 
     def generate_report(self):
