@@ -212,8 +212,8 @@ class V2IntentPipeline:
 
     def _is_generic_followup(self, query: str) -> bool:
         generic_patterns = [
-            r"\b(fiyat|ücret|maliyet|teklif|referans|süre|kurulum)\b",
-            r"\b(hangi|nasıl|ne kadar|nedir|bilgi|liste|listeler)\b",
+            r"fiyat", r"ne kadar", r"kiminle", r"demo", r"kurulum süresi", 
+            r"referans", r"iletişim", r"mail", r"telefon", r"detay", r"başka neler",
             r"\b(price|cost|quote|pricing|how long|how much|information|list|references)\b"
         ]
         query_lower = query.lower()
@@ -275,7 +275,7 @@ class V2IntentPipeline:
         status = "SUCCESS"
         redirect_url = resolve_redirect_url(sector, sub, status)
         response_message = resolve_response_message(
-            sector, sub, status, redirect_url=redirect_url
+            sector, sub, status, redirect_url=redirect_url, lang="tr"
         )
         return V2PipelineResult(
             query=query,
@@ -303,7 +303,36 @@ class V2IntentPipeline:
         if not self.enable_ood_reject:
             return None
         t = time.perf_counter()
+        
+        # 0. Small talk (Selamlama) Check - OOD'den önce yakala! SADECE saf selamlama ise!
+        small_talk_patterns = [
+            r"^((merhaba|selam|selamlar|merhabalar|günaydın|iyi\s*günler|iyi\s*akşamlar|iyi\s*geceler|nasılsın|naber|hi|hello|hey|sa|as)[\s\.,!\?]*)+$",
+        ]
+        is_small_talk = any(re.search(p, query.strip().lower()) for p in small_talk_patterns)
+        
+        if is_small_talk:
+            return V2PipelineResult(
+                query=query,
+                retrieval=[],
+                sector="belirsiz",
+                sub_intent="small_talk",
+                confidence_score=1.0,
+                status="SUCCESS",
+                latency_ms=(time.perf_counter() - t0) * 1000,
+                response_message="Merhaba! Size nasıl yardımcı olabilirim?",
+                redirect_url="",
+                top_candidates=[],
+                layer="rule",
+                preprocessed_query=query,
+            )
+
+        # 1. B2C/Chit-chat reject
         is_ood = check_ood_reject(query)
+        
+        # 2. Generic Bare Words reject (Halüsinasyon engelleyici)
+        # (Bu bölümdeki karmaşık ve STRES/CEKIM regresyonuna yol açan filtre tamamen kaldırılarak,
+        # yerine k1_guardrails.py içindeki OOD_FAST_REJECT_REGEX listesine 'komuta kontrol' vs. eklenmiştir.)
+
         rule_ms = (time.perf_counter() - t) * 1000
         if not is_ood:
             return None
@@ -330,7 +359,7 @@ class V2IntentPipeline:
             preprocessed_query=query,
         )
 
-    def run(self, query: str, session_id: str | None = None) -> V2PipelineResult:
+    def run(self, query: str, session_id: str | None = None, force_lang: str | None = None) -> V2PipelineResult:
         from src.models.torch_runtime import configure_torch_threads
         from src.llm_rewriter import LLMRewriter
 
@@ -389,9 +418,12 @@ class V2IntentPipeline:
             )
 
         # Language Detection
-        tr_chars = len(re.findall(r"[çğıöşüÇĞİÖŞÜ]", query))
-        has_en_clutter = any(w in query.lower() for w in ["we need", "looking for", "hello", "hi", "hey", "can you help", "scheduling", "software"])
-        detected_language = "en" if (has_en_clutter or (not tr_chars and re.search(r"\b(we|need|looking|for|hi|hello|quote|hospital|software|hotel|reservation|scheduling)\b", query.lower()))) else "tr"
+        if force_lang:
+            detected_language = force_lang.lower()
+        else:
+            tr_chars = len(re.findall(r"[çğıöşüÇĞİÖŞÜ]", query))
+            has_en_clutter = any(w in query.lower() for w in ["we need", "looking for", "hello", "hi", "hey", "can you help", "scheduling", "software"])
+            detected_language = "en" if (has_en_clutter or (not tr_chars and re.search(r"\b(we|need|looking|for|hi|hello|quote|hospital|software|hotel|reservation|scheduling)\b", query.lower()))) else "tr"
 
         # ── STEP 2+3: Clause-Boundary Negation Removal + Hard OOD Blocklist ──
         # Legal/Real Estate/Finance/Defense/Energy/Food-Hospitality -> HER ZAMAN
@@ -438,8 +470,7 @@ class V2IntentPipeline:
             if sector not in negated_sectors_normalized:
                 # Session state güncelleme (K1 layer'ında)
                 self.set_aktif_sektor(session_id, sector)
-                # Debug
-                print(f"[DEBUG K1] matched_jargon={matched_jargon}, sector={sector}, session_id={session_id}, aktif_sektor={self.get_aktif_sektor(session_id)}")
+                # Debug (kaldırıldı)
                 return V2PipelineResult(
                 query=query,
                 retrieval=[],
@@ -554,81 +585,127 @@ class V2IntentPipeline:
 
         top_candidates = _build_top_candidates(hits)
 
-        # ── Karar Ağacı: evaluate Top-3 results ────
+        # ── K2 Top-K Karar Parametreleri ────
+        K2_TOP_K = 5
+        K2_MIN_SIM = 0.50
+        K2_VOTE_THRESHOLD = 0.65
+        K2_MARGIN = 0.05
+        K2_HIGH_CONFIDENCE = 0.80
+
+        # ── Karar Ağacı: evaluate Top-K results ────
         if not hits:
             sector, sub, conf, status = "ood", "ood.none", 0.0, "OOD"
             redirect_url = ""
             response_message = MSG_OOD_GATE
+            s1 = 0.0
         else:
-            # Map sectors for top 3 candidates (if they exist)
-            top_sectors = []
-            for h in hits[:3]:
-                sec = h.sector or ""
-                if "/" in sec:
-                    sec = sec.split("/")[0]
-                elif "." in sec:
-                    sec = sec.split(".")[0]
+            s1 = float(hits[0].score) if hits else 0.0
+            
+            # Map sectors for candidates
+            def clean_sector(sec_in):
+                sec = sec_in or ""
+                if "/" in sec: sec = sec.split("/")[0]
+                if "." in sec: sec = sec.split(".")[0]
                 sec = sec.strip().lower()
                 if sec not in ("saglik", "turizm", "egitim", "bilisim", "eglence", "ood"):
                     sec = map_sector(str(sec))
-                if "/" in sec:
-                    sec = sec.split("/")[0]
-                elif "." in sec:
-                    sec = sec.split(".")[0]
-                top_sectors.append(sec)
+                if "/" in sec: sec = sec.split("/")[0]
+                if "." in sec: sec = sec.split(".")[0]
+                return sec
 
-            best = hits[0]
-            s1 = float(best.score)
-            best_sector = top_sectors[0] if top_sectors else "ood"
-
-            # Safe-Fail Strict Guardrail: explicit B2B/yazılım kelimesi yoksa ve benzerlik < 0.85 ise bilisim olamaz.
-            if best_sector == "bilisim":
-                explicit_b2b_pattern = re.compile(
-                    r"\b(erp|api|yazılım|yazilim|entegrasyon|crm|cloud|saas|sistem|platform|otomasyon|dashboard|bi\s*tool|powerbi|business\s*intelligence|network|sunucu|server|lms)\b",
-                    re.IGNORECASE
-                )
-                has_explicit = bool(explicit_b2b_pattern.search(query))
-                if not has_explicit and s1 < 0.85:
-                    best_sector = "ood"
-                    top_sectors = ["ood"] + top_sectors[1:] if len(top_sectors) > 1 else ["ood"]
-
-            # Check unanimity (must have 3 candidates and all match the best sector)
-            is_unanimous = len(top_sectors) >= 3 and top_sectors[0] == top_sectors[1] == top_sectors[2]
-
-            if is_unanimous:
-                if best_sector != "ood" and s1 >= 0.68:
-                    sector = best_sector
-                    sub = best.sub_intent
-                    conf = max(s1, 0.85)
-                    status = "SUCCESS"
-                    redirect_url = resolve_redirect_url(sector, sub, status)
-                    response_message = resolve_response_message(
-                        sector, sub, status, redirect_url=redirect_url
-                    )
-                else:
-                    status = "OOD"
-                    sector, sub = "ood", "ood.none"
-                    conf = s1
-                    redirect_url = ""
-                    response_message = MSG_OOD_GATE
+            # Adım 1: Top-K adayları filtrele
+            valid_hits = [h for h in hits[:K2_TOP_K] if float(h.score) >= K2_MIN_SIM]
+            
+            if not valid_hits:
+                sector, sub, conf, status = "ood", "ood.none", float(hits[0].score) if hits else 0.0, "OOD"
+                redirect_url = ""
+                response_message = MSG_OOD_GATE
+                s1 = float(hits[0].score) if hits else 0.0
             else:
-                # Conflicting / split
-                req_threshold = 0.60 if best_sector in ("bilisim", "eglence", "egitim") else 0.65
-                if s1 >= 0.55 and best_sector != "ood":
-                    sector = best_sector
-                    sub = best.sub_intent
-                    conf = s1
-                    status = "SUCCESS"
-                    redirect_url = resolve_redirect_url(sector, sub, status)
-                    response_message = resolve_response_message(
-                        sector, sub, status, redirect_url=redirect_url
-                    )
+                best = valid_hits[0]
+                best_sector = clean_sector(best.sector)
+                
+                # Yol A — Yüksek güven kısayolu
+                if s1 >= K2_HIGH_CONFIDENCE and best_sector != "ood":
+                    # Safe-Fail Strict Guardrail: explicit B2B/yazılım kelimesi yoksa ve benzerlik < 0.85 ise bilisim olamaz.
+                    is_safe = True
+                    if best_sector == "bilisim":
+                        explicit_b2b_pattern = re.compile(
+                            r"\b(erp|api|yazılım|yazilim|entegrasyon|crm|cloud|saas|sistem|platform|otomasyon|dashboard|bi\s*tool|powerbi|business\s*intelligence|network|sunucu|server|lms)\b",
+                            re.IGNORECASE
+                        )
+                        has_explicit = bool(explicit_b2b_pattern.search(query))
+                        if not has_explicit and s1 < 0.85:
+                            is_safe = False
+                    
+                    if is_safe:
+                        sector = best_sector
+                        sub = best.sub_intent
+                        conf = s1
+                        status = "SUCCESS"
+                        redirect_url = resolve_redirect_url(sector, sub, status)
+                        response_message = resolve_response_message(sector, sub, status, redirect_url=redirect_url, lang=detected_language)
+                    else:
+                        sector, sub, conf, status = "ood", "ood.none", s1, "OOD"
+                        redirect_url = ""
+                        response_message = MSG_OOD_GATE
                 else:
-                    status = "OOD"
-                    sector, sub = "ood", "ood.none"
-                    conf = s1
-                    redirect_url = ""
-                    response_message = MSG_OOD_GATE
+                    # Yol B — Konsensüs ataması (Top-K Oylama)
+                    sector_scores = {}
+                    for h in valid_hits:
+                        sec = clean_sector(h.sector)
+                        if sec not in sector_scores:
+                            sector_scores[sec] = {"count": 0, "sum_sim": 0.0, "sub_intent": h.sub_intent}
+                        sector_scores[sec]["count"] += 1
+                        sector_scores[sec]["sum_sim"] += float(h.score)
+                    
+                    # Calculate avg_sim
+                    for sec in sector_scores:
+                        sector_scores[sec]["avg_sim"] = sector_scores[sec]["sum_sim"] / sector_scores[sec]["count"]
+                        
+                    # Sort by count (agreement) descending, then avg_sim descending
+                    sorted_sectors = sorted(
+                        sector_scores.keys(), 
+                        key=lambda x: (sector_scores[x]["count"], sector_scores[x]["avg_sim"]), 
+                        reverse=True
+                    )
+                    
+                    top_sec = sorted_sectors[0]
+                    top_stats = sector_scores[top_sec]
+                    
+                    margin = top_stats["avg_sim"]
+                    if len(sorted_sectors) > 1:
+                        second_sec = sorted_sectors[1]
+                        margin = top_stats["avg_sim"] - sector_scores[second_sec]["avg_sim"]
+                        
+                    if top_sec != "ood" and top_stats["count"] >= 2 and top_stats["avg_sim"] >= K2_VOTE_THRESHOLD and margin >= K2_MARGIN:
+                        # Safe-Fail Strict Guardrail for bilisim
+                        is_safe = True
+                        if top_sec == "bilisim":
+                            explicit_b2b_pattern = re.compile(
+                                r"\b(erp|api|yazılım|yazilim|entegrasyon|crm|cloud|saas|sistem|platform|otomasyon|dashboard|bi\s*tool|powerbi|business\s*intelligence|network|sunucu|server|lms)\b",
+                                re.IGNORECASE
+                            )
+                            has_explicit = bool(explicit_b2b_pattern.search(query))
+                            if not has_explicit and top_stats["avg_sim"] < 0.85:
+                                is_safe = False
+                        
+                        if is_safe:
+                            sector = top_sec
+                            sub = top_stats["sub_intent"]
+                            conf = top_stats["avg_sim"]
+                            status = "SUCCESS"
+                            redirect_url = resolve_redirect_url(sector, sub, status)
+                            response_message = resolve_response_message(sector, sub, status, redirect_url=redirect_url, lang=detected_language)
+                        else:
+                            sector, sub, conf, status = "ood", "ood.none", top_stats["avg_sim"], "OOD"
+                            redirect_url = ""
+                            response_message = MSG_OOD_GATE
+                    else:
+                        # Yol C — Hiçbiri sağlanmazsa
+                        sector, sub, conf, status = "ood", "ood.none", s1, "OOD"
+                        redirect_url = ""
+                        response_message = MSG_OOD_GATE
 
         # Özel kural: oteller kelimesi geçiyorsa turizm olarak kabul et (retrieval hatası düzeltmesi)
         # Sadece session context yoksa çalıştır (ilk tur sorguları için)
@@ -642,7 +719,7 @@ class V2IntentPipeline:
             status = "SUCCESS"
             redirect_url = resolve_redirect_url(sector, sub, status)
             response_message = resolve_response_message(
-                sector, sub, status, redirect_url=redirect_url
+                sector, sub, status, redirect_url=redirect_url, lang=detected_language
             )
             # Session state güncelleme (sonraki sorgular için)
             self.set_aktif_sektor(session_id, sector)
@@ -674,16 +751,15 @@ class V2IntentPipeline:
             status = "SUCCESS"
             redirect_url = resolve_redirect_url(sector, sub, status)
             response_message = resolve_response_message(
-                sector, sub, status, redirect_url=redirect_url
+                sector, sub, status, redirect_url=redirect_url, lang=detected_language
             )
         elif sector != "ood" and sector != "belirsiz":
             self.set_aktif_sektor(session_id, sector)
-            # Debug
-            print(f"[DEBUG ML] sector={sector}, session_id={session_id}, aktif_sektor={self.get_aktif_sektor(session_id)}")
+            # Debug (kaldırıldı)
         elif sector == "ood" and not aktif_sektor and session_id and hits and s1 >= 0.45:
             # İlk tur sorguları için düşük skorlu sektör kabul et (session context varsa)
             # Ancak sorgu sector kelimesi içeriyorsa (F kategorisi traps), kabul etme
-            trap_keywords = ["iş ortaklığı", "ofisimiz var", "personel arıyoruz", "beklemek istemediğimiz", "çalışma ortamı", "hayat eğitimi", "ofisler açmayı", "iş ortamı", "etkinlik organizasyonuna", "iletişimi güçlendirmek"]
+            trap_keywords = ["iş ortaklığı", "ofisimiz var", "personel arıyoruz", "beklemek istemediğimiz", "çalışma ortamı", "hayat eğitimi", "ofisler açmayı", "iş ortamı", "etkinlik organizasyonuna", "iletişimi güçlendirmek", "sağlıksız gıda", "eğitimsiz personel", "bilişim gibi hızlı büyüyen"]
             is_trap = any(keyword in query.lower() for keyword in trap_keywords)
             if not is_trap:
                 first_sector = hits[0].sector if hits else "ood"
@@ -694,13 +770,13 @@ class V2IntentPipeline:
                     status = "SUCCESS"
                     redirect_url = resolve_redirect_url(sector, sub, status)
                     response_message = resolve_response_message(
-                        sector, sub, status, redirect_url=redirect_url
+                        sector, sub, status, redirect_url=redirect_url, lang=detected_language
                     )
                     self.set_aktif_sektor(session_id, sector)
         elif sector == "ood" and not aktif_sektor and session_id and hits and s1 >= 0.40:
             # İlk tur sorguları için daha düşük threshold (session context varsa)
             # Ancak sorgu sector kelimesi içeriyorsa (F kategorisi traps), kabul etme
-            trap_keywords = ["iş ortaklığı", "ofisimiz var", "personel arıyoruz", "beklemek istemediğimiz", "çalışma ortamı", "hayat eğitimi", "ofisler açmayı", "iş ortamı", "etkinlik organizasyonuna", "iletişimi güçlendirmek"]
+            trap_keywords = ["iş ortaklığı", "ofisimiz var", "personel arıyoruz", "beklemek istemediğimiz", "çalışma ortamı", "hayat eğitimi", "ofisler açmayı", "iş ortamı", "etkinlik organizasyonuna", "iletişimi güçlendirmek", "sağlıksız gıda", "eğitimsiz personel", "bilişim gibi hızlı büyüyen"]
             is_trap = any(keyword in query.lower() for keyword in trap_keywords)
             if not is_trap:
                 first_sector = hits[0].sector if hits else "ood"
@@ -714,7 +790,7 @@ class V2IntentPipeline:
                     status = "SUCCESS"
                     redirect_url = resolve_redirect_url(sector, sub, status)
                     response_message = resolve_response_message(
-                        sector, sub, status, redirect_url=redirect_url
+                        sector, sub, status, redirect_url=redirect_url, lang=detected_language
                     )
                     self.set_aktif_sektor(session_id, sector)
 

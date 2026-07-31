@@ -2,8 +2,7 @@
 // Self-contained widget logic for Allintos
 
 (function() {
-    // Configuration
-    const API_URL = 'http://127.0.0.1:8080/api/chat'; // Change this for production
+    const API_URL = '/api/chat'; // Changed to relative path
     const SESSION_KEY = 'ag_chatbot_session_id';
 
     // Widget HTML Structure (injected dynamically so it's a single drop-in JS file)
@@ -16,13 +15,17 @@
                     <button class="ag-chat-close" id="ag-chat-close" title="Kapat">
                         <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                     </button>
-                    <h2 class="ag-chat-hero-title">Merhaba! 👋<br>Size nasıl yardımcı olabiliriz?</h2>
+                    <div class="ag-lang-toggle" id="ag-lang-toggle" style="position: absolute; right: 65px; top: 23px; background: rgba(255,255,255,0.2); border-radius: 12px; padding: 2px; display: flex; gap: 4px; cursor: pointer;">
+                        <span class="ag-lang-option active" data-lang="TR" style="padding: 4px 8px; font-size: 11px; font-weight: bold; border-radius: 10px; color: white;">TR</span>
+                        <span class="ag-lang-option" data-lang="EN" style="padding: 4px 8px; font-size: 11px; font-weight: bold; border-radius: 10px; color: white; opacity: 0.7;">EN</span>
+                    </div>
+                    <h2 class="ag-chat-hero-title" id="ag-chat-hero-title">Merhaba! 👋<br>Size nasıl yardımcı olabiliriz?</h2>
                 </div>
                 
                 <!-- Chat Messages Area -->
                 <div class="ag-chat-messages-container">
                     <div class="ag-chat-messages" id="ag-chat-messages">
-                        <div class="ag-message ag-message-bot">Allintos Bilgi Merkezi'ne hoş geldiniz. Lütfen sorunuzu yazın.</div>
+                        <div class="ag-message ag-message-bot" id="ag-welcome-msg">Allintos Bilgi Merkezi'ne hoş geldiniz. Lütfen sorunuzu yazın.</div>
                         
                         <div class="ag-typing-container" id="ag-typing-indicator">
                             <div class="ag-typing-bubble">
@@ -37,16 +40,14 @@
                         <input type="text" class="ag-chat-input" id="ag-chat-input" placeholder="Mesajınızı yazın..." autocomplete="off">
                         <button class="ag-chat-send" id="ag-chat-send" title="Gönder">
                             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
-                        </button>
                     </div>
-                    <div class="ag-watermark">Powered by <span>Allintos AI</span></div>
                 </div>
                 
             </div>
 
             <!-- Floating Toggle Button -->
             <button id="ag-chatbot-toggle" title="Sohbet">
-                <svg class="ag-icon-chat" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.029 2 11c0 2.85 1.48 5.391 3.793 7.027L5 22l4.086-2.043C10.015 20.26 10.985 20.4 12 20.4c5.523 0 10-4.029 10-9s-4.477-9-10-9z"/></svg>
+                <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.5px; line-height: 1; text-align: center;">Allintos</span>
             </button>
         </div>
     `;
@@ -69,12 +70,58 @@
         const messagesContainer = document.getElementById('ag-chat-messages');
         const typingIndicator = document.getElementById('ag-typing-indicator');
 
+        let currentLang = "TR";
+        
+        // Language Toggle logic
+        const langToggle = document.getElementById('ag-lang-toggle');
+        if (langToggle) {
+            langToggle.addEventListener('click', (e) => {
+                if (e.target.classList.contains('ag-lang-option')) {
+                    document.querySelectorAll('.ag-lang-option').forEach(el => {
+                        el.classList.remove('active');
+                        el.style.opacity = '0.7';
+                    });
+                    e.target.classList.add('active');
+                    e.target.style.opacity = '1';
+                    
+                    const newLang = e.target.getAttribute('data-lang');
+                    if (currentLang !== newLang) {
+                        currentLang = newLang;
+                        sessionStorage.removeItem(SESSION_KEY); // Reset session on language change
+                        
+                        // Ekrandaki eski mesajları temizle (karşılama mesajı hariç)
+                        const messages = document.querySelectorAll('.ag-message');
+                        messages.forEach(msg => {
+                            if (msg.id !== 'ag-welcome-msg') {
+                                msg.remove();
+                            }
+                        });
+                    }
+                    
+                    // Update static UI texts based on selection
+                    const heroTitle = document.getElementById('ag-chat-hero-title');
+                    const welcomeMsg = document.getElementById('ag-welcome-msg');
+                    const chatInputEl = document.getElementById('ag-chat-input');
+                    
+                    if (currentLang === 'EN') {
+                        if (heroTitle) heroTitle.innerHTML = 'Hello! 👋<br>How can we help you?';
+                        if (welcomeMsg) welcomeMsg.textContent = "Welcome to Allintos Knowledge Center. Please type your question.";
+                        if (chatInputEl) chatInputEl.placeholder = "Type your message...";
+                    } else {
+                        if (heroTitle) heroTitle.innerHTML = 'Merhaba! 👋<br>Size nasıl yardımcı olabiliriz?';
+                        if (welcomeMsg) welcomeMsg.textContent = "Allintos Bilgi Merkezi'ne hoş geldiniz. Lütfen sorunuzu yazın.";
+                        if (chatInputEl) chatInputEl.placeholder = "Mesajınızı yazın...";
+                    }
+                }
+            });
+        }
+
         // Toggle Chat
         function toggleChat() {
             chatWindow.classList.toggle('ag-open');
             toggleBtn.classList.toggle('ag-open');
             if (chatWindow.classList.contains('ag-open')) {
-                chatInput.focus();
+                setTimeout(() => { chatInput.focus(); }, 150);
                 scrollToBottom();
             }
         }
@@ -157,7 +204,8 @@
             // Prepare payload
             const payload = {
                 message: text,
-                session_id: getSessionId() || null
+                session_id: getSessionId() || null,
+                lang: currentLang
             };
 
             try {
@@ -184,7 +232,7 @@
                 typingIndicator.classList.remove('ag-active');
 
                 // Add bot message
-                addMessage(data.reply || "Bir hata oluştu.", false, data.url);
+                addMessage(data.response_message || "Bir hata oluştu.", false, data.redirect_url);
 
             } catch (error) {
                 console.error("Chatbot Error:", error);

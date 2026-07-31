@@ -49,7 +49,7 @@ STRICT_SECTOR_REGEX: dict[str, re.Pattern[str]] = {
         r"\b("
         r"öbs|obs|lms|okul|üniversite|universite|akademik|eğitim|egitim|"
         r"öğrenci|ogrenci|ldap|sso|kampüs\s*bilgi|kampus\s*bilgi|"
-        r"üniversite\s*otomasyon|universite\s*otomasyon"
+        r"üniversite\s*otomasyon|universite\s*otomasyon|eğitim\s*platformu|okul\s*otomasyonu"
         r")\b",
         re.IGNORECASE,
     ),
@@ -94,13 +94,11 @@ SECTOR_ANCHORS: dict[str, list[str]] = {
         "dashboard", "bi tool", "powerbi", "business intelligence",
         # Bileşik kalıplar — güvenli, spesifik bağlam taşıyor
         "bulut altyapı", "devops otomasyon", "ci/cd boru hattı", "sızma testi", "güvenlik duvarı",
-        # KALDIRILDI (stopgap — Asama 2 yanlış-pozitif kaynağı):
-        # "platform", "otomasyon", "sistem", "altyapı"
-        # Bu 4 bare kelime cekim eki testinde 9 yanlış-pozitif vakayla kanıtlandı.
-        # Asama 3'te bağlam-farkında K1 ile geri getirilecek.
+        # Adım 2 İyileştirmesi: Bağlam-farkında K1 N-gramları
+        "otomasyon yazılımı", "altyapı çözümleri", "sistem yazılımı"
     ],
     "saglik": ["hasta", "hastane", "randevu", "tahlil", "klinik", "hekim", "doktor", "reçete", "poliklinik", "tıbbi"],
-    "egitim": ["kurs", "uzaktan eğitim", "okul", "sınav", "öğrenci", "ders", "eğitmen", "devamsızlık", "müfredat", "l&d", "kurumsal akademi", "akademi", "akademisi", "akademisinde", "e-öğrenme", "öğrenme"],
+    "egitim": ["kurs", "uzaktan eğitim", "okul", "sınav", "öğrenci", "ders", "eğitmen", "devamsızlık", "müfredat", "l&d", "kurumsal akademi", "akademi", "akademisi", "akademisinde", "e-öğrenme", "öğrenme", "eğitim platformu", "okul otomasyonu"],
     "turizm": ["otel", "rezervasyon", "uçak bileti", "acente", "tur", "konaklama", "uçuş", "tatil"],
     "eglence": ["konser", "tiyatro", "etkinlik", "bilet", "organizasyon", "mekan", "koltuk seçimi", "gösteri", "bilet sistemi", "bilet satış", "etkinlik yönetimi", "festival geçiş"],
 }
@@ -132,6 +130,18 @@ def match_any_sector(query: str) -> str | None:
     # 1. Önce Hard OOD / Kısıtlı alan kelimesi var mı kontrol et!
     if check_restricted_domain(query):
         return None
+
+    # 1.5. EXACT MATCH (Birebir Eşleşme) - Kullanıcı sadece sektör adı yazarsa doğrudan ata
+    q_clean = re.sub(r"[^\w\s]", "", q).strip()
+    exact_map = {
+        "saglik": "saglik", "sağlık": "saglik", "health": "saglik", "healthcare": "saglik",
+        "turizm": "turizm", "tourism": "turizm",
+        "egitim": "egitim", "eğitim": "egitim", "education": "egitim",
+        "bilisim": "bilisim", "bilişim": "bilisim", "yazilim": "bilisim", "yazılım": "bilisim", "it": "bilisim", "software": "bilisim", "information technology": "bilisim",
+        "eglence": "eglence", "eğlence": "eglence", "entertainment": "eglence"
+    }
+    if q_clean in exact_map:
+        return exact_map[q_clean]
 
     # 2. OOD terim yoksa veya B2B modifiyeri ile muaf tutulmuşsa K1 Marka/Hizmet Match (Fast-Path) çalışsın
     if re.search(r"\b(alientos|alintos|alientas|buyumevizyon|büyümevizyon|ddx\+|ddx|turquality|e-turquality|dijital\s*dönüşüm|dijital\s*donusum|kosgeb|it\s+altyapı|it\s+altyapısı|saas\s+vendor|custom\s+crm|crm\s+platform)\b|info@buyumevizyon\.com", q):
@@ -179,7 +189,9 @@ OOD_FAST_REJECT_REGEX: re.Pattern[str] = re.compile(
     r"yks|lgs|kpss|dgs|tyt|ayt|taban\s*puan\w*|burs\s*imkan\w*|burs\s*basvuru\w*|"
     r"burc|burç|astroloji|fal\s*bak|"
     r"mac\s*sonucu|maç\s*sonucu|"
-    r"kac\s*yasindasin|kaç\s*yaşındasın|seni\s*kim\s*yapti|seni\s*kim\s*yaptı"
+    r"kac\s*yasindasin|kaç\s*yaşındasın|seni\s*kim\s*yapti|seni\s*kim\s*yaptı|"
+    r"komuta\s*kontrol|kontrol\s*mekanizma\w*|komuta\s*zinciri|randevu\s*almak|"
+    r"turistik\s+bir\s+bölge\w*|turistik\s+bir\s+bolge\w*|otel\s+konforunda\w*|eğitimli\s+personel\w*|egitimli\s+personel\w*|hastane\s+köşelerinde\w*|hastane\s+koselerinde\w*"
     r")\b",
     re.IGNORECASE,
 )
@@ -279,6 +291,11 @@ _RESTRICTED_TERM_PATTERNS: list[re.Pattern[str]] = [
 def check_restricted_domain_raw(query: str) -> bool:
     """Yasaklı domain kontrolünü modifiyere bakmaksızın yalın olarak gerçekleştirir."""
     active_clause = extract_active_clause(query)
+    
+    # NEGATION FIX: "savunma değil", "askeri birlik değiliz", "çalışmıyoruz" gibi durumları OOD'den kurtar
+    neg_regex = re.compile(r"\b(savunma|askeri|komuta\s*kontrol)\b(?:\s+\w+){0,10}?\s*(değil|değiliz|olmayan|yerine|çalışmıyoruz|ilgilenmiyoruz)\b", re.IGNORECASE)
+    active_clause = neg_regex.sub("", active_clause)
+    
     return any(p.search(active_clause) for p in _RESTRICTED_TERM_PATTERNS)
 
 

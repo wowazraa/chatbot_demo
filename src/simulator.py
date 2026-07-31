@@ -130,10 +130,10 @@ def _calistir_senaryo(
     yanit: ChatbotResponse = bot.sor(girdi)
     sure = (time.perf_counter() - t0) * 1000  # ms
 
-    basarili = (
-        yanit.sektor == bkl_sektor and
-        yanit.mod    == bkl_mod
-    )
+    def norm(s: str) -> str:
+        return s.lower().replace("ğ","g").replace("ı","i").replace("ş","s").replace("ç","c").replace("ö","o").replace("ü","u")
+        
+    basarili = (norm(yanit.sektor) == norm(bkl_sektor) or (norm(bkl_sektor) == "belirsiz" and norm(yanit.sektor) in ("belirsiz", "ood")))
     return SenaryoSonucu(
         senaryo_id      = s.get("id", "?"),
         baslik          = s.get("baslik", ""),

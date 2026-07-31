@@ -31,7 +31,7 @@ BOT = Chatbot()
 print(f"[server] Corpus: {BOT.corpus_boyutu()} kayıt hazır.", flush=True)
 print(f"[server] Rewriter: {getattr(BOT._rewriter, 'mode', '?')}", flush=True)
 
-HTML_FILE = Path(__file__).parent / "index.html"
+HTML_FILE = Path(__file__).parent / "widget_test.html"
 PORT      = 8082
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -43,6 +43,27 @@ class Handler(BaseHTTPRequestHandler):
             content = HTML_FILE.read_bytes()
             self.send_response(200)
             self.send_header("Content-Type",   "text/html; charset=utf-8")
+            self.send_header("Content-Length", len(content))
+            self.end_headers()
+            self.wfile.write(content)
+        elif self.path == "/widget_test.html":
+            content = (Path(__file__).parent / "widget_test.html").read_bytes()
+            self.send_response(200)
+            self.send_header("Content-Type",   "text/html; charset=utf-8")
+            self.send_header("Content-Length", len(content))
+            self.end_headers()
+            self.wfile.write(content)
+        elif self.path == "/chatbot_widget.css":
+            content = (Path(__file__).parent / "chatbot_widget.css").read_bytes()
+            self.send_response(200)
+            self.send_header("Content-Type",   "text/css; charset=utf-8")
+            self.send_header("Content-Length", len(content))
+            self.end_headers()
+            self.wfile.write(content)
+        elif self.path == "/chatbot_widget.js":
+            content = (Path(__file__).parent / "chatbot_widget.js").read_bytes()
+            self.send_response(200)
+            self.send_header("Content-Type",   "application/javascript; charset=utf-8")
             self.send_header("Content-Length", len(content))
             self.end_headers()
             self.wfile.write(content)
@@ -74,6 +95,7 @@ class Handler(BaseHTTPRequestHandler):
         body    = json.loads(self.rfile.read(length) or b"{}")
         message = body.get("message", "").strip()
         session = body.get("session", "").strip() or None
+        lang = body.get("lang", "").strip().lower() or None
 
         if not message:
             self._json({"error": "Boş mesaj"}, status=400)
@@ -81,7 +103,7 @@ class Handler(BaseHTTPRequestHandler):
 
         t0 = time.perf_counter()
         # Katman 1 — chitchat / gibberish / abuse (ML yok)
-        fast = match_fast_path(message)
+        fast = match_fast_path(message, lang=lang)
         if fast is not None:
             total_ms = (time.perf_counter() - t0) * 1000
             self._json(
@@ -96,7 +118,7 @@ class Handler(BaseHTTPRequestHandler):
             return
 
         t_exec = time.perf_counter()
-        resp = BOT.sor(message, session_id=session)
+        resp = BOT.sor(message, session_id=session, lang=lang)
         # serialize: tek-kanal Top-3 + SmartGate/CE (ikinci BGE yok)
         payload = serialize_response(resp)
             

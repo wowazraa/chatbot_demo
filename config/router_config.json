@@ -1,8 +1,8 @@
 {
-    "active_dataset": "legacy_augmented",
-    "corpus_path": "data/processed/chatbot_dataset_augmented.json",
+    "active_dataset": "raw_778_augmented",
+    "corpus_path": "data/raw/chatbot_dataset.json",
     "vector_index_path": "data/processed/embeddings.npz",
     "metadata_path": "data/processed/index_meta.json",
     "index_dir": "data/processed",
-    "notes": "Eski augmented indeks (8470)."
+    "notes": "Ana raw dosyasina bagli, 778 yeni kayit"
 }

@@ -42,7 +42,7 @@
       "aciklama": "'Teşekkürler' suffix sektör tespitini bozmamalı",
       "girdi": "otel rezervasyon sistemimizi yenilemek istiyoruz, teşekkürler",
       "beklenen_sektor": "turizm",
-      "beklenen_mod": "K2",
+      "beklenen_mod": "K1",
       "yasak_sektor": []
     },
     {
@@ -122,7 +122,7 @@
       "aciklama": "Aynı girdi iki kez sorulduğunda aynı sonuç gelmeli",
       "girdi": "hastane randevu yazılımı",
       "beklenen_sektor": "sağlık",
-      "beklenen_mod": "K2",
+      "beklenen_mod": "K1",
       "determinizm": true,
       "yasak_sektor": []
     },

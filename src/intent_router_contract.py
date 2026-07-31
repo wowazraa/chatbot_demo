@@ -253,10 +253,44 @@ def resolve_response_message(
     status: str,
     *,
     redirect_url: str | None = None,
+    lang: str = "tr",
 ) -> str:
     """Kullanıcıya gösterilecek hazır yanıt metni."""
     if status == "SUCCESS":
         cfg = SECTOR_RESPONSE.get(sector) or {}
+        
+        # Override for bilingual
+        if lang == "en":
+            en_msg = {
+                "saglik": "You are being redirected to the relevant page for healthcare and appointment services...",
+                "turizm": "You are being redirected to the relevant page for tourism and accommodation services...",
+                "egitim": "You are being redirected to the relevant page for education and student services...",
+                "bilisim": "You are being redirected to the relevant page for IT and software processes...",
+                "eglence": "You are being redirected to the relevant page for entertainment and event services...",
+                "ood": "This topic seems to be outside our current scope."
+            }.get(sector)
+            
+            if en_msg:
+                return en_msg
+                
+            tr_to_en = {
+                "Sağlık": "Healthcare",
+                "Turizm": "Tourism",
+                "Eğitim": "Education",
+                "Bilişim": "IT",
+                "Eğlence": "Entertainment"
+            }
+            en_sector = tr_to_en.get(_SECTOR_TR.get(sector, sector), sector)
+            url = redirect_url if redirect_url is not None else resolve_redirect_url(
+                sector, sub_intent, status
+            )
+            if url:
+                return (
+                    f"I have associated your request with the {en_sector} sector. "
+                    f"You may be redirected to {url} to continue."
+                )
+            return f"I have associated your request with the {en_sector} sector."
+        
         msg = cfg.get("response_message")
         if msg:
             return msg
@@ -270,8 +304,14 @@ def resolve_response_message(
                 f"Devam etmek için {url} sayfasına yönlendirilebilirsiniz."
             )
         return f"Talebinizi {tr} sektörüyle ilişkilendirdim."
+        
     if status == "UNCERTAIN":
+        if lang == "en":
+            return "I couldn't quite understand your request. Could you clarify your sector? (e.g., IT, Healthcare, Education, Tourism, Entertainment)"
         return _UNCERTAIN_MSG
+        
+    if lang == "en":
+        return "This topic seems to be outside our current scope."
     return (SECTOR_RESPONSE.get("ood") or {}).get(
         "response_message",
         "Bu konu şu anki kapsamımız dışında görünüyor.",
@@ -445,7 +485,7 @@ def apply_rerank_decision(
 
     if final >= threshold and sector_en in _RERANK_SECTORS:
         sektor_tr = _EN_TO_TR[sector_en]
-        msg = resolve_response_message(sector_en, sub, "SUCCESS")
+        msg = resolve_response_message(sector_en, sub, "SUCCESS", lang=getattr(resp, "lang", "tr"))
         return (
             ChatbotResponse(
                 girdi=resp.girdi,
@@ -496,7 +536,7 @@ def apply_rerank_decision(
             masked_sectors=list(resp.masked_sectors or []),
             inspector_label="Sektör Belirsiz",
             k1_hints=dict(resp.k1_hints or {}),
-            yanit_mesaji=_UNCERTAIN_MSG,
+            yanit_mesaji=resolve_response_message("ood", "ood.none", "UNCERTAIN", lang=getattr(resp, "lang", "tr")),
             top_candidates=list(ordered),
         ),
         ordered,
@@ -530,7 +570,7 @@ def to_intent_router_json(
 
     redirect_url = resolve_redirect_url(sector, sub, status)
     response_message = resolve_response_message(
-        sector, sub, status, redirect_url=redirect_url
+        sector, sub, status, redirect_url=redirect_url, lang=getattr(resp, "lang", "tr")
     )
 
     payload: dict[str, Any] = {

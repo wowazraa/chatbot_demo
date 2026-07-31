@@ -1,0 +1,2404 @@
+{
+  "kayitlar": [
+    {
+      "metin": "Gelen hastalarımızın kayıt işlemlerini beklemeden otomatik yapmasını sağlayacak bir yazılım düşünüyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Hasta taburcu ve faturalandırma süreçlerini beklemeden otomatik yapmasını sağlayacak bir altyapı arıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Klinik araştırmalar için toplanan hasta verilerini tek bir ekrandan düzenleyen güvenli bir portala ihtiyacımız var.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Muayene saatlerimizi ve personel vardiyalarımızı güvenli bir şekilde yönetecek güvenli bir portala ihtiyacımız var.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Doktorlarımızın nöbet çizelgelerini tek bir ekrandan düzenleyen bir altyapı arıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Klinik araştırmalar için toplanan hasta verilerini güvenli bir şekilde yönetecek güvenli bir portala ihtiyacımız var.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Kan merkezi bağış kayıtlarını güvenli bir şekilde yönetecek bulut tabanlı bir çözüm bakıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Laboratuvar sonuçlarının onay sürecini uzmanlara anında iletecek bir altyapı arıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Muayene saatlerimizi ve personel vardiyalarımızı uzmanlara anında iletecek bir yazılım düşünüyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Ameliyathane kullanım ve sterilizasyon döngülerini beklemeden otomatik yapmasını sağlayacak entegre bir platform talep ediyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Klinik araştırmalar için toplanan hasta verilerini beklemeden otomatik yapmasını sağlayacak bulut tabanlı bir çözüm bakıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Görüntüleme merkezimizdeki MR ve röntgen raporlarını anlık olarak izlememizi sağlayacak bir yazılım düşünüyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Acil servis triyaj durumlarını hızlandıracak ve optimize edecek bulut tabanlı bir çözüm bakıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Eczane stoklarını ve medikal sarf malzemelerini hızlandıracak ve optimize edecek bir yazılım düşünüyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Uzaktan teşhis ve teletıp görüşmeleri için altyapıyı beklemeden otomatik yapmasını sağlayacak bir altyapı arıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Ameliyathane kullanım ve sterilizasyon döngülerini hızlandıracak ve optimize edecek bulut tabanlı bir çözüm bakıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Görüntüleme merkezimizdeki MR ve röntgen raporlarını yüksek çözünürlüklü olarak aktaran bir sistem kurmak istiyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Uzaktan teşhis ve teletıp görüşmeleri için altyapıyı güvenli bir şekilde yönetecek bir altyapı arıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Ameliyathane kullanım ve sterilizasyon döngülerini güvenli bir şekilde yönetecek bir altyapı arıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Eczane stoklarını ve medikal sarf malzemelerini güvenli bir şekilde yönetecek bir altyapı arıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Eczane stoklarını ve medikal sarf malzemelerini hızlandıracak ve optimize edecek güvenli bir portala ihtiyacımız var.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Laboratuvar sonuçlarının onay sürecini uzmanlara anında iletecek güvenli bir portala ihtiyacımız var.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Tıbbi cihazların bakım takvimini tek bir ekrandan düzenleyen bulut tabanlı bir çözüm bakıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Doktorlarımızın nöbet çizelgelerini uzmanlara anında iletecek entegre bir platform talep ediyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Görüntüleme merkezimizdeki MR ve röntgen raporlarını güvenli bir şekilde yönetecek bir sistem kurmak istiyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Görüntüleme merkezimizdeki MR ve röntgen raporlarını beklemeden otomatik yapmasını sağlayacak bir altyapı arıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Uzaktan teşhis ve teletıp görüşmeleri için altyapıyı hatasız bir şekilde raporlayacak bir sistem kurmak istiyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Evde bakım hizmeti alan kişilerin durumlarını beklemeden otomatik yapmasını sağlayacak entegre bir platform talep ediyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Eczane stoklarını ve medikal sarf malzemelerini tek bir ekrandan düzenleyen bir yazılım düşünüyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Acil servis triyaj durumlarını hatasız bir şekilde raporlayacak bir sistem kurmak istiyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Eczane stoklarını ve medikal sarf malzemelerini beklemeden otomatik yapmasını sağlayacak bir yazılım düşünüyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Gelen hastalarımızın kayıt işlemlerini uzmanlara anında iletecek entegre bir platform talep ediyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Ameliyathane kullanım ve sterilizasyon döngülerini yüksek çözünürlüklü olarak aktaran bir sistem kurmak istiyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Ameliyathane kullanım ve sterilizasyon döngülerini beklemeden otomatik yapmasını sağlayacak bulut tabanlı bir çözüm bakıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Ameliyathane kullanım ve sterilizasyon döngülerini anlık olarak izlememizi sağlayacak bulut tabanlı bir çözüm bakıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Tıbbi cihazların bakım takvimini beklemeden otomatik yapmasını sağlayacak entegre bir platform talep ediyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Tıbbi cihazların bakım takvimini tek bir ekrandan düzenleyen bir sistem kurmak istiyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Uzaktan teşhis ve teletıp görüşmeleri için altyapıyı hızlandıracak ve optimize edecek güvenli bir portala ihtiyacımız var.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Doktorlarımızın nöbet çizelgelerini hızlandıracak ve optimize edecek bulut tabanlı bir çözüm bakıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Eczane stoklarını ve medikal sarf malzemelerini tek bir ekrandan düzenleyen bir sistem kurmak istiyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Eczane stoklarını ve medikal sarf malzemelerini hatasız bir şekilde raporlayacak bir altyapı arıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Eczane stoklarını ve medikal sarf malzemelerini yüksek çözünürlüklü olarak aktaran güvenli bir portala ihtiyacımız var.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Poliklinik randevu trafiklerini güvenli bir şekilde yönetecek entegre bir platform talep ediyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Laboratuvar sonuçlarının onay sürecini anlık olarak izlememizi sağlayacak güvenli bir portala ihtiyacımız var.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Eczane stoklarını ve medikal sarf malzemelerini beklemeden otomatik yapmasını sağlayacak entegre bir platform talep ediyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Doktorlarımızın nöbet çizelgelerini uzmanlara anında iletecek bulut tabanlı bir çözüm bakıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Tıbbi cihazların bakım takvimini hızlandıracak ve optimize edecek bulut tabanlı bir çözüm bakıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Eczane stoklarını ve medikal sarf malzemelerini tek bir ekrandan düzenleyen entegre bir platform talep ediyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Doktorlarımızın nöbet çizelgelerini hızlandıracak ve optimize edecek bir yazılım düşünüyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Muayene saatlerimizi ve personel vardiyalarımızı yüksek çözünürlüklü olarak aktaran entegre bir platform talep ediyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Doktorlarımızın nöbet çizelgelerini yüksek çözünürlüklü olarak aktaran bir altyapı arıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Klinik araştırmalar için toplanan hasta verilerini güvenli bir şekilde yönetecek entegre bir platform talep ediyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Gelen hastalarımızın kayıt işlemlerini güvenli bir şekilde yönetecek bir sistem kurmak istiyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Ameliyathane kullanım ve sterilizasyon döngülerini uzmanlara anında iletecek bir yazılım düşünüyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Kan merkezi bağış kayıtlarını tek bir ekrandan düzenleyen bir sistem kurmak istiyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Poliklinik randevu trafiklerini uzmanlara anında iletecek entegre bir platform talep ediyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Muayene saatlerimizi ve personel vardiyalarımızı beklemeden otomatik yapmasını sağlayacak bir yazılım düşünüyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Uzaktan teşhis ve teletıp görüşmeleri için altyapıyı güvenli bir şekilde yönetecek entegre bir platform talep ediyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Muayene saatlerimizi ve personel vardiyalarımızı hızlandıracak ve optimize edecek güvenli bir portala ihtiyacımız var.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Gelen hastalarımızın kayıt işlemlerini hatasız bir şekilde raporlayacak bir altyapı arıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Hasta taburcu ve faturalandırma süreçlerini beklemeden otomatik yapmasını sağlayacak bir sistem kurmak istiyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Evde bakım hizmeti alan kişilerin durumlarını anlık olarak izlememizi sağlayacak bir yazılım düşünüyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Evde bakım hizmeti alan kişilerin durumlarını beklemeden otomatik yapmasını sağlayacak bulut tabanlı bir çözüm bakıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Laboratuvar sonuçlarının onay sürecini hızlandıracak ve optimize edecek güvenli bir portala ihtiyacımız var.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Görüntüleme merkezimizdeki MR ve röntgen raporlarını güvenli bir şekilde yönetecek bir altyapı arıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Acil servis triyaj durumlarını uzmanlara anında iletecek bulut tabanlı bir çözüm bakıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Evde bakım hizmeti alan kişilerin durumlarını tek bir ekrandan düzenleyen bir sistem kurmak istiyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Klinik araştırmalar için toplanan hasta verilerini tek bir ekrandan düzenleyen bir yazılım düşünüyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Klinik araştırmalar için toplanan hasta verilerini anlık olarak izlememizi sağlayacak bir yazılım düşünüyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Evde bakım hizmeti alan kişilerin durumlarını yüksek çözünürlüklü olarak aktaran bir sistem kurmak istiyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Eczane stoklarını ve medikal sarf malzemelerini uzmanlara anında iletecek bulut tabanlı bir çözüm bakıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Gelen hastalarımızın kayıt işlemlerini tek bir ekrandan düzenleyen entegre bir platform talep ediyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Tıbbi cihazların bakım takvimini güvenli bir şekilde yönetecek güvenli bir portala ihtiyacımız var.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Ameliyathane kullanım ve sterilizasyon döngülerini hızlandıracak ve optimize edecek bir sistem kurmak istiyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Tıbbi cihazların bakım takvimini hatasız bir şekilde raporlayacak güvenli bir portala ihtiyacımız var.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Muayene saatlerimizi ve personel vardiyalarımızı uzmanlara anında iletecek güvenli bir portala ihtiyacımız var.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Uzaktan teşhis ve teletıp görüşmeleri için altyapıyı yüksek çözünürlüklü olarak aktaran bir yazılım düşünüyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Laboratuvar sonuçlarının onay sürecini tek bir ekrandan düzenleyen bulut tabanlı bir çözüm bakıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Klinik araştırmalar için toplanan hasta verilerini beklemeden otomatik yapmasını sağlayacak bir sistem kurmak istiyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Laboratuvar sonuçlarının onay sürecini anlık olarak izlememizi sağlayacak bir sistem kurmak istiyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Doktorlarımızın nöbet çizelgelerini beklemeden otomatik yapmasını sağlayacak güvenli bir portala ihtiyacımız var.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Gelen hastalarımızın kayıt işlemlerini beklemeden otomatik yapmasını sağlayacak bulut tabanlı bir çözüm bakıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Doktorlarımızın nöbet çizelgelerini anlık olarak izlememizi sağlayacak entegre bir platform talep ediyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Hasta taburcu ve faturalandırma süreçlerini hızlandıracak ve optimize edecek bir sistem kurmak istiyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Görüntüleme merkezimizdeki MR ve röntgen raporlarını beklemeden otomatik yapmasını sağlayacak entegre bir platform talep ediyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Hasta taburcu ve faturalandırma süreçlerini uzmanlara anında iletecek güvenli bir portala ihtiyacımız var.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Ameliyathane kullanım ve sterilizasyon döngülerini hatasız bir şekilde raporlayacak bulut tabanlı bir çözüm bakıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Poliklinik randevu trafiklerini hatasız bir şekilde raporlayacak bir yazılım düşünüyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Laboratuvar sonuçlarının onay sürecini anlık olarak izlememizi sağlayacak bir altyapı arıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Görüntüleme merkezimizdeki MR ve röntgen raporlarını uzmanlara anında iletecek entegre bir platform talep ediyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Evde bakım hizmeti alan kişilerin durumlarını tek bir ekrandan düzenleyen bulut tabanlı bir çözüm bakıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Doktorlarımızın nöbet çizelgelerini hatasız bir şekilde raporlayacak bir sistem kurmak istiyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Doktorlarımızın nöbet çizelgelerini tek bir ekrandan düzenleyen bir yazılım düşünüyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Tıbbi cihazların bakım takvimini hatasız bir şekilde raporlayacak entegre bir platform talep ediyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Eczane stoklarını ve medikal sarf malzemelerini anlık olarak izlememizi sağlayacak bir yazılım düşünüyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Klinik araştırmalar için toplanan hasta verilerini anlık olarak izlememizi sağlayacak bir altyapı arıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Klinik araştırmalar için toplanan hasta verilerini beklemeden otomatik yapmasını sağlayacak bir yazılım düşünüyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Ameliyathane kullanım ve sterilizasyon döngülerini tek bir ekrandan düzenleyen bulut tabanlı bir çözüm bakıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Kan merkezi bağış kayıtlarını yüksek çözünürlüklü olarak aktaran bir altyapı arıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Evde bakım hizmeti alan kişilerin durumlarını hızlandıracak ve optimize edecek bulut tabanlı bir çözüm bakıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Gelen hastalarımızın kayıt işlemlerini hatasız bir şekilde raporlayacak güvenli bir portala ihtiyacımız var.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Tıbbi cihazların bakım takvimini hızlandıracak ve optimize edecek güvenli bir portala ihtiyacımız var.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Hasta taburcu ve faturalandırma süreçlerini anlık olarak izlememizi sağlayacak bir altyapı arıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Poliklinik randevu trafiklerini hatasız bir şekilde raporlayacak güvenli bir portala ihtiyacımız var.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Tıbbi cihazların bakım takvimini anlık olarak izlememizi sağlayacak bir altyapı arıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Ameliyathane kullanım ve sterilizasyon döngülerini hızlandıracak ve optimize edecek bir altyapı arıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Evde bakım hizmeti alan kişilerin durumlarını uzmanlara anında iletecek bulut tabanlı bir çözüm bakıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Uzaktan teşhis ve teletıp görüşmeleri için altyapıyı beklemeden otomatik yapmasını sağlayacak bulut tabanlı bir çözüm bakıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Ameliyathane kullanım ve sterilizasyon döngülerini anlık olarak izlememizi sağlayacak bir sistem kurmak istiyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Kan merkezi bağış kayıtlarını uzmanlara anında iletecek bir sistem kurmak istiyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Gelen hastalarımızın kayıt işlemlerini güvenli bir şekilde yönetecek güvenli bir portala ihtiyacımız var.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Muayene saatlerimizi ve personel vardiyalarımızı anlık olarak izlememizi sağlayacak güvenli bir portala ihtiyacımız var.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Evde bakım hizmeti alan kişilerin durumlarını hatasız bir şekilde raporlayacak bulut tabanlı bir çözüm bakıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Gelen hastalarımızın kayıt işlemlerini anlık olarak izlememizi sağlayacak entegre bir platform talep ediyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Gelen hastalarımızın kayıt işlemlerini hızlandıracak ve optimize edecek entegre bir platform talep ediyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Poliklinik randevu trafiklerini hızlandıracak ve optimize edecek güvenli bir portala ihtiyacımız var.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Görüntüleme merkezimizdeki MR ve röntgen raporlarını hatasız bir şekilde raporlayacak güvenli bir portala ihtiyacımız var.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Laboratuvar sonuçlarının onay sürecini yüksek çözünürlüklü olarak aktaran bir altyapı arıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Tıbbi cihazların bakım takvimini tek bir ekrandan düzenleyen bir yazılım düşünüyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Görüntüleme merkezimizdeki MR ve röntgen raporlarını hızlandıracak ve optimize edecek bulut tabanlı bir çözüm bakıyoruz.",
+      "beklenen_sektor": "saglik"
+    },
+    {
+      "metin": "Sınıf yoklamalarını ve dönem içi değerlendirme notlarını velilerle ve yöneticilerle paylaşmamızı sağlayacak bir performans yönetim modülü arıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Uzaktan eğitim platformumuzdaki etkileşim metriklerini velilerle ve yöneticilerle paylaşmamızı sağlayacak bir portal kurmak istiyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Yüksek lisans başvurularının değerlendirmesini interaktif bir şekilde takip edebileceğimiz bir sistem bakıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Yeni işe başlayan personelimizin oryantasyon sürecini kolayca organize etmemize olanak tanıyacak bir sistem bakıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "LMS üzerindeki eğitim materyallerini interaktif bir şekilde takip edebileceğimiz bir portal kurmak istiyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Yüksek lisans başvurularının değerlendirmesini kolayca organize etmemize olanak tanıyacak bir sistem bakıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Canlı dersleri kaydedip geriye dönük izlenmesini sağlayan süreçleri güvenle barındıracak ve yayınlayacak kapsamlı bir yazılım entegrasyonu planlıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Sertifikasyon programlarımızın online ödemelerini kolayca organize etmemize olanak tanıyacak bir uygulama geliştirmek istiyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Canlı dersleri kaydedip geriye dönük izlenmesini sağlayan süreçleri ölçeklenebilir bir biçimde yönetecek bir portal kurmak istiyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Yeni işe başlayan personelimizin oryantasyon sürecini ölçeklenebilir bir biçimde yönetecek bir performans yönetim modülü arıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Yabancı dil kursumuzdaki seviye tespit sınavlarını velilerle ve yöneticilerle paylaşmamızı sağlayacak dijital bir altyapı arayışındayız.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Canlı dersleri kaydedip geriye dönük izlenmesini sağlayan süreçleri interaktif bir şekilde takip edebileceğimiz kapsamlı bir yazılım entegrasyonu planlıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Yüksek lisans başvurularının değerlendirmesini velilerle ve yöneticilerle paylaşmamızı sağlayacak bir uygulama geliştirmek istiyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Kurumsal akademimiz için asenkron öğrenme modüllerini anlık geri bildirim vererek hızlandıracak bir performans yönetim modülü arıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Okulumuzun müfredat planlamasını güvenle barındıracak ve yayınlayacak bir uygulama geliştirmek istiyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Anaokulu öğrencilerimizin günlük gelişim raporlarını güvenle barındıracak ve yayınlayacak bir performans yönetim modülü arıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Çalışanlarımızın mesleki gelişim sertifikalarını velilerle ve yöneticilerle paylaşmamızı sağlayacak bir portal kurmak istiyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Yabancı dil kursumuzdaki seviye tespit sınavlarını güvenle barındıracak ve yayınlayacak bir uygulama geliştirmek istiyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Kurumsal akademimiz için asenkron öğrenme modüllerini detaylı olarak listeleyen ve analiz eden geniş çaplı bir çözüm ihtiyacımız var.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Çalışanlarımızın mesleki gelişim sertifikalarını kolayca organize etmemize olanak tanıyacak bir portal kurmak istiyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Yabancı dil kursumuzdaki seviye tespit sınavlarını kolayca organize etmemize olanak tanıyacak bir portal kurmak istiyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Anaokulu öğrencilerimizin günlük gelişim raporlarını kolayca organize etmemize olanak tanıyacak bir portal kurmak istiyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Anaokulu öğrencilerimizin günlük gelişim raporlarını güvenle barındıracak ve yayınlayacak bir sistem bakıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Canlı dersleri kaydedip geriye dönük izlenmesini sağlayan süreçleri ölçeklenebilir bir biçimde yönetecek bir sistem bakıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Öğretmenlerimizin performans değerlendirmelerini interaktif bir şekilde takip edebileceğimiz bir uygulama geliştirmek istiyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "LMS üzerindeki eğitim materyallerini ölçeklenebilir bir biçimde yönetecek dijital bir altyapı arayışındayız.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Kurumsal akademimiz için asenkron öğrenme modüllerini kolayca organize etmemize olanak tanıyacak geniş çaplı bir çözüm ihtiyacımız var.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Öğretmenlerimizin performans değerlendirmelerini ölçeklenebilir bir biçimde yönetecek kapsamlı bir yazılım entegrasyonu planlıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Kurumsal akademimiz için asenkron öğrenme modüllerini velilerle ve yöneticilerle paylaşmamızı sağlayacak bir portal kurmak istiyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Kurumsal akademimiz için asenkron öğrenme modüllerini ölçeklenebilir bir biçimde yönetecek kapsamlı bir yazılım entegrasyonu planlıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Çalışanlarımızın mesleki gelişim sertifikalarını merkezi olarak kontrol edecek geniş çaplı bir çözüm ihtiyacımız var.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Özel ders öğretmenlerinin çalışma takvimlerini velilerle ve yöneticilerle paylaşmamızı sağlayacak dijital bir altyapı arayışındayız.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Anaokulu öğrencilerimizin günlük gelişim raporlarını interaktif bir şekilde takip edebileceğimiz bir performans yönetim modülü arıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Okulumuzun müfredat planlamasını merkezi olarak kontrol edecek geniş çaplı bir çözüm ihtiyacımız var.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Çalışanlarımızın mesleki gelişim sertifikalarını interaktif bir şekilde takip edebileceğimiz kapsamlı bir yazılım entegrasyonu planlıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Anaokulu öğrencilerimizin günlük gelişim raporlarını velilerle ve yöneticilerle paylaşmamızı sağlayacak bir performans yönetim modülü arıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Sınıf yoklamalarını ve dönem içi değerlendirme notlarını ölçeklenebilir bir biçimde yönetecek dijital bir altyapı arayışındayız.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Yabancı dil kursumuzdaki seviye tespit sınavlarını detaylı olarak listeleyen ve analiz eden geniş çaplı bir çözüm ihtiyacımız var.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Yabancı dil kursumuzdaki seviye tespit sınavlarını velilerle ve yöneticilerle paylaşmamızı sağlayacak bir uygulama geliştirmek istiyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Yabancı dil kursumuzdaki seviye tespit sınavlarını anlık geri bildirim vererek hızlandıracak bir uygulama geliştirmek istiyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Öğretmenlerimizin performans değerlendirmelerini velilerle ve yöneticilerle paylaşmamızı sağlayacak dijital bir altyapı arayışındayız.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Öğretmenlerimizin performans değerlendirmelerini interaktif bir şekilde takip edebileceğimiz geniş çaplı bir çözüm ihtiyacımız var.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Çalışanlarımızın mesleki gelişim sertifikalarını güvenle barındıracak ve yayınlayacak bir sistem bakıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "LMS üzerindeki eğitim materyallerini güvenle barındıracak ve yayınlayacak bir uygulama geliştirmek istiyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Okulumuzun müfredat planlamasını velilerle ve yöneticilerle paylaşmamızı sağlayacak kapsamlı bir yazılım entegrasyonu planlıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Anaokulu öğrencilerimizin günlük gelişim raporlarını interaktif bir şekilde takip edebileceğimiz geniş çaplı bir çözüm ihtiyacımız var.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Anaokulu öğrencilerimizin günlük gelişim raporlarını merkezi olarak kontrol edecek bir portal kurmak istiyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Anaokulu öğrencilerimizin günlük gelişim raporlarını detaylı olarak listeleyen ve analiz eden bir sistem bakıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Üniversite öğrencilerimizin staj başvurularını kolayca organize etmemize olanak tanıyacak dijital bir altyapı arayışındayız.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Canlı dersleri kaydedip geriye dönük izlenmesini sağlayan süreçleri anlık geri bildirim vererek hızlandıracak bir sistem bakıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Sınıf yoklamalarını ve dönem içi değerlendirme notlarını interaktif bir şekilde takip edebileceğimiz kapsamlı bir yazılım entegrasyonu planlıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Kurumsal akademimiz için asenkron öğrenme modüllerini interaktif bir şekilde takip edebileceğimiz kapsamlı bir yazılım entegrasyonu planlıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Anaokulu öğrencilerimizin günlük gelişim raporlarını velilerle ve yöneticilerle paylaşmamızı sağlayacak dijital bir altyapı arayışındayız.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "LMS üzerindeki eğitim materyallerini ölçeklenebilir bir biçimde yönetecek bir uygulama geliştirmek istiyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Öğretmenlerimizin performans değerlendirmelerini güvenle barındıracak ve yayınlayacak bir uygulama geliştirmek istiyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Anaokulu öğrencilerimizin günlük gelişim raporlarını interaktif bir şekilde takip edebileceğimiz dijital bir altyapı arayışındayız.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "LMS üzerindeki eğitim materyallerini merkezi olarak kontrol edecek kapsamlı bir yazılım entegrasyonu planlıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "LMS üzerindeki eğitim materyallerini güvenle barındıracak ve yayınlayacak bir performans yönetim modülü arıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Yeni işe başlayan personelimizin oryantasyon sürecini detaylı olarak listeleyen ve analiz eden dijital bir altyapı arayışındayız.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Okulumuzun müfredat planlamasını anlık geri bildirim vererek hızlandıracak kapsamlı bir yazılım entegrasyonu planlıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "LMS üzerindeki eğitim materyallerini detaylı olarak listeleyen ve analiz eden bir portal kurmak istiyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Yüksek lisans başvurularının değerlendirmesini kolayca organize etmemize olanak tanıyacak dijital bir altyapı arayışındayız.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Sınıf yoklamalarını ve dönem içi değerlendirme notlarını kolayca organize etmemize olanak tanıyacak geniş çaplı bir çözüm ihtiyacımız var.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Yabancı dil kursumuzdaki seviye tespit sınavlarını ölçeklenebilir bir biçimde yönetecek bir performans yönetim modülü arıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Sertifikasyon programlarımızın online ödemelerini interaktif bir şekilde takip edebileceğimiz geniş çaplı bir çözüm ihtiyacımız var.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Üniversite öğrencilerimizin staj başvurularını ölçeklenebilir bir biçimde yönetecek dijital bir altyapı arayışındayız.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Canlı dersleri kaydedip geriye dönük izlenmesini sağlayan süreçleri kolayca organize etmemize olanak tanıyacak kapsamlı bir yazılım entegrasyonu planlıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Yeni işe başlayan personelimizin oryantasyon sürecini velilerle ve yöneticilerle paylaşmamızı sağlayacak bir performans yönetim modülü arıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Çalışanlarımızın mesleki gelişim sertifikalarını kolayca organize etmemize olanak tanıyacak dijital bir altyapı arayışındayız.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Öğretmenlerimizin performans değerlendirmelerini detaylı olarak listeleyen ve analiz eden kapsamlı bir yazılım entegrasyonu planlıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Yeni işe başlayan personelimizin oryantasyon sürecini güvenle barındıracak ve yayınlayacak bir sistem bakıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Sınıf yoklamalarını ve dönem içi değerlendirme notlarını merkezi olarak kontrol edecek bir portal kurmak istiyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Uzaktan eğitim platformumuzdaki etkileşim metriklerini velilerle ve yöneticilerle paylaşmamızı sağlayacak geniş çaplı bir çözüm ihtiyacımız var.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Özel ders öğretmenlerinin çalışma takvimlerini anlık geri bildirim vererek hızlandıracak bir performans yönetim modülü arıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Özel ders öğretmenlerinin çalışma takvimlerini velilerle ve yöneticilerle paylaşmamızı sağlayacak bir uygulama geliştirmek istiyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Canlı dersleri kaydedip geriye dönük izlenmesini sağlayan süreçleri güvenle barındıracak ve yayınlayacak bir sistem bakıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Kurumsal akademimiz için asenkron öğrenme modüllerini kolayca organize etmemize olanak tanıyacak bir portal kurmak istiyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Okulumuzun müfredat planlamasını ölçeklenebilir bir biçimde yönetecek bir uygulama geliştirmek istiyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Özel ders öğretmenlerinin çalışma takvimlerini interaktif bir şekilde takip edebileceğimiz geniş çaplı bir çözüm ihtiyacımız var.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Yüksek lisans başvurularının değerlendirmesini interaktif bir şekilde takip edebileceğimiz bir performans yönetim modülü arıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Yüksek lisans başvurularının değerlendirmesini anlık geri bildirim vererek hızlandıracak bir performans yönetim modülü arıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Özel ders öğretmenlerinin çalışma takvimlerini detaylı olarak listeleyen ve analiz eden geniş çaplı bir çözüm ihtiyacımız var.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Anaokulu öğrencilerimizin günlük gelişim raporlarını ölçeklenebilir bir biçimde yönetecek bir uygulama geliştirmek istiyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Sınıf yoklamalarını ve dönem içi değerlendirme notlarını interaktif bir şekilde takip edebileceğimiz dijital bir altyapı arayışındayız.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Öğretmenlerimizin performans değerlendirmelerini kolayca organize etmemize olanak tanıyacak bir sistem bakıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Yabancı dil kursumuzdaki seviye tespit sınavlarını güvenle barındıracak ve yayınlayacak geniş çaplı bir çözüm ihtiyacımız var.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Öğretmenlerimizin performans değerlendirmelerini merkezi olarak kontrol edecek bir sistem bakıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Yeni işe başlayan personelimizin oryantasyon sürecini ölçeklenebilir bir biçimde yönetecek bir sistem bakıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Çalışanlarımızın mesleki gelişim sertifikalarını detaylı olarak listeleyen ve analiz eden bir performans yönetim modülü arıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Yüksek lisans başvurularının değerlendirmesini kolayca organize etmemize olanak tanıyacak kapsamlı bir yazılım entegrasyonu planlıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Canlı dersleri kaydedip geriye dönük izlenmesini sağlayan süreçleri interaktif bir şekilde takip edebileceğimiz bir uygulama geliştirmek istiyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Yüksek lisans başvurularının değerlendirmesini velilerle ve yöneticilerle paylaşmamızı sağlayacak geniş çaplı bir çözüm ihtiyacımız var.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Canlı dersleri kaydedip geriye dönük izlenmesini sağlayan süreçleri anlık geri bildirim vererek hızlandıracak geniş çaplı bir çözüm ihtiyacımız var.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "LMS üzerindeki eğitim materyallerini velilerle ve yöneticilerle paylaşmamızı sağlayacak bir sistem bakıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Sınıf yoklamalarını ve dönem içi değerlendirme notlarını velilerle ve yöneticilerle paylaşmamızı sağlayacak bir uygulama geliştirmek istiyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Çalışanlarımızın mesleki gelişim sertifikalarını merkezi olarak kontrol edecek kapsamlı bir yazılım entegrasyonu planlıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "LMS üzerindeki eğitim materyallerini anlık geri bildirim vererek hızlandıracak dijital bir altyapı arayışındayız.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Uzaktan eğitim platformumuzdaki etkileşim metriklerini güvenle barındıracak ve yayınlayacak geniş çaplı bir çözüm ihtiyacımız var.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Kurumsal akademimiz için asenkron öğrenme modüllerini velilerle ve yöneticilerle paylaşmamızı sağlayacak dijital bir altyapı arayışındayız.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Uzaktan eğitim platformumuzdaki etkileşim metriklerini ölçeklenebilir bir biçimde yönetecek bir sistem bakıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Yeni işe başlayan personelimizin oryantasyon sürecini güvenle barındıracak ve yayınlayacak kapsamlı bir yazılım entegrasyonu planlıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Yabancı dil kursumuzdaki seviye tespit sınavlarını merkezi olarak kontrol edecek bir uygulama geliştirmek istiyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Özel ders öğretmenlerinin çalışma takvimlerini detaylı olarak listeleyen ve analiz eden kapsamlı bir yazılım entegrasyonu planlıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Üniversite öğrencilerimizin staj başvurularını merkezi olarak kontrol edecek bir performans yönetim modülü arıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Yeni işe başlayan personelimizin oryantasyon sürecini interaktif bir şekilde takip edebileceğimiz kapsamlı bir yazılım entegrasyonu planlıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Canlı dersleri kaydedip geriye dönük izlenmesini sağlayan süreçleri anlık geri bildirim vererek hızlandıracak bir portal kurmak istiyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Kurumsal akademimiz için asenkron öğrenme modüllerini ölçeklenebilir bir biçimde yönetecek dijital bir altyapı arayışındayız.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Özel ders öğretmenlerinin çalışma takvimlerini interaktif bir şekilde takip edebileceğimiz bir uygulama geliştirmek istiyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "LMS üzerindeki eğitim materyallerini merkezi olarak kontrol edecek geniş çaplı bir çözüm ihtiyacımız var.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "LMS üzerindeki eğitim materyallerini interaktif bir şekilde takip edebileceğimiz bir performans yönetim modülü arıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Öğretmenlerimizin performans değerlendirmelerini merkezi olarak kontrol edecek dijital bir altyapı arayışındayız.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Anaokulu öğrencilerimizin günlük gelişim raporlarını anlık geri bildirim vererek hızlandıracak bir performans yönetim modülü arıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Yüksek lisans başvurularının değerlendirmesini anlık geri bildirim vererek hızlandıracak bir portal kurmak istiyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Yüksek lisans başvurularının değerlendirmesini velilerle ve yöneticilerle paylaşmamızı sağlayacak bir performans yönetim modülü arıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Yabancı dil kursumuzdaki seviye tespit sınavlarını interaktif bir şekilde takip edebileceğimiz bir uygulama geliştirmek istiyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Sertifikasyon programlarımızın online ödemelerini detaylı olarak listeleyen ve analiz eden bir portal kurmak istiyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Özel ders öğretmenlerinin çalışma takvimlerini güvenle barındıracak ve yayınlayacak bir uygulama geliştirmek istiyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Sınıf yoklamalarını ve dönem içi değerlendirme notlarını merkezi olarak kontrol edecek bir sistem bakıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Öğretmenlerimizin performans değerlendirmelerini güvenle barındıracak ve yayınlayacak bir sistem bakıyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Uzaktan eğitim platformumuzdaki etkileşim metriklerini anlık geri bildirim vererek hızlandıracak bir portal kurmak istiyoruz.",
+      "beklenen_sektor": "egitim"
+    },
+    {
+      "metin": "Acentelerin boş kontenjanlarımızı görerek yapacağı satışları anında sisteme düşürecek B2B bir kanal yöneticisine ihtiyacımız var.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Vize işlemleri için gereken belgelerin takibini anında sisteme düşürecek bir altyapı kurmak istiyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Kongre turizmi için gelen kafilelerin giriş çıkışlarını eş zamanlı görmek ve raporlamak için bir yazılım arayışındayız.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Tesisimizdeki odaların doluluk oranlarını tek ekrandan yönetmemizi sağlayacak bir yazılım arayışındayız.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Otelimizdeki temizlik görevlilerinin oda durumlarını eş zamanlı görmek ve raporlamak için bir altyapı kurmak istiyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Kongre turizmi için gelen kafilelerin giriş çıkışlarını tek ekrandan yönetmemizi sağlayacak bir yazılım arayışındayız.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Misafirlerimizin check-in işlemlerini cep telefonlarından dijital olarak tamamlatacak modern bir misafir yönetim portali istiyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Müşteri şikayet ve memnuniyet anketlerini tek ekrandan yönetmemizi sağlayacak entegre bir otomasyon arıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Misafirlerimizin check-in işlemlerini odalarına doğrudan yansıtacak bir altyapı kurmak istiyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Tesisimizdeki odaların doluluk oranlarını odalarına doğrudan yansıtacak B2B bir kanal yöneticisine ihtiyacımız var.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Butik otelimizin kanal yönetim (channel manager) süreçlerini anında sisteme düşürecek bulut tabanlı bir sistem bakıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Misafirlerimizin check-in işlemlerini eş zamanlı görmek ve raporlamak için modern bir misafir yönetim portali istiyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Kongre turizmi için gelen kafilelerin giriş çıkışlarını anında sisteme düşürecek entegre bir otomasyon arıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Tatil köyümüzde konaklayan misafirlerin harcamalarını hatasız bir şekilde entegre edecek B2B bir kanal yöneticisine ihtiyacımız var.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Yurtdışı paket tur operasyonlarını cep telefonlarından dijital olarak tamamlatacak entegre bir otomasyon arıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Spa ve restoran rezervasyonlarını cep telefonlarından dijital olarak tamamlatacak B2B bir kanal yöneticisine ihtiyacımız var.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Farklı ülkelerden gelen turların kapasite yönetimini anında sisteme düşürecek bir altyapı kurmak istiyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Butik otelimizin kanal yönetim (channel manager) süreçlerini cep telefonlarından dijital olarak tamamlatacak entegre bir otomasyon arıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Tatil köyümüzde konaklayan misafirlerin harcamalarını otomatikleştirecek ve optimize edecek dijital bir çözüm planlıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Farklı ülkelerden gelen turların kapasite yönetimini tek ekrandan yönetmemizi sağlayacak bir altyapı kurmak istiyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Butik otelimizin kanal yönetim (channel manager) süreçlerini tek ekrandan yönetmemizi sağlayacak bir altyapı kurmak istiyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Spa ve restoran rezervasyonlarını tek ekrandan yönetmemizi sağlayacak bir altyapı kurmak istiyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Spa ve restoran rezervasyonlarını cep telefonlarından dijital olarak tamamlatacak bir yazılım arayışındayız.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Misafirlerimizin check-in işlemlerini odalarına doğrudan yansıtacak bir yazılım arayışındayız.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Rehberlerimizin tur programlarını ve harcırahlarını eş zamanlı görmek ve raporlamak için entegre bir otomasyon arıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Otelimizdeki temizlik görevlilerinin oda durumlarını odalarına doğrudan yansıtacak bulut tabanlı bir sistem bakıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Tatil köyümüzde konaklayan misafirlerin harcamalarını tek ekrandan yönetmemizi sağlayacak dijital bir çözüm planlıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Rehberlerimizin tur programlarını ve harcırahlarını odalarına doğrudan yansıtacak modern bir misafir yönetim portali istiyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Tatil köyümüzde konaklayan misafirlerin harcamalarını anında sisteme düşürecek bir altyapı kurmak istiyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Tatil köyümüzde konaklayan misafirlerin harcamalarını odalarına doğrudan yansıtacak modern bir misafir yönetim portali istiyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Farklı ülkelerden gelen turların kapasite yönetimini dinamik olarak fiyatlandıracak dijital bir çözüm planlıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Havaalanı VIP transfer araçlarımızın lokasyonlarını anında sisteme düşürecek bulut tabanlı bir sistem bakıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Spa ve restoran rezervasyonlarını eş zamanlı görmek ve raporlamak için B2B bir kanal yöneticisine ihtiyacımız var.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Yurtdışı paket tur operasyonlarını dinamik olarak fiyatlandıracak dijital bir çözüm planlıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Farklı ülkelerden gelen turların kapasite yönetimini eş zamanlı görmek ve raporlamak için modern bir misafir yönetim portali istiyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Spa ve restoran rezervasyonlarını anında sisteme düşürecek B2B bir kanal yöneticisine ihtiyacımız var.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Acentelerin boş kontenjanlarımızı görerek yapacağı satışları odalarına doğrudan yansıtacak bulut tabanlı bir sistem bakıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Butik otelimizin kanal yönetim (channel manager) süreçlerini otomatikleştirecek ve optimize edecek dijital bir çözüm planlıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Butik otelimizin kanal yönetim (channel manager) süreçlerini anında sisteme düşürecek entegre bir otomasyon arıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Butik otelimizin kanal yönetim (channel manager) süreçlerini hatasız bir şekilde entegre edecek entegre bir otomasyon arıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Rehberlerimizin tur programlarını ve harcırahlarını anında sisteme düşürecek bulut tabanlı bir sistem bakıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Rehberlerimizin tur programlarını ve harcırahlarını eş zamanlı görmek ve raporlamak için dijital bir çözüm planlıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Farklı ülkelerden gelen turların kapasite yönetimini cep telefonlarından dijital olarak tamamlatacak bir yazılım arayışındayız.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Otelimizdeki temizlik görevlilerinin oda durumlarını cep telefonlarından dijital olarak tamamlatacak entegre bir otomasyon arıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Yurtdışı paket tur operasyonlarını anında sisteme düşürecek modern bir misafir yönetim portali istiyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Spa ve restoran rezervasyonlarını eş zamanlı görmek ve raporlamak için dijital bir çözüm planlıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Spa ve restoran rezervasyonlarını dinamik olarak fiyatlandıracak bir altyapı kurmak istiyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Spa ve restoran rezervasyonlarını otomatikleştirecek ve optimize edecek bir yazılım arayışındayız.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Uçak bileti ve transfer organizasyonlarımızı tek ekrandan yönetmemizi sağlayacak bulut tabanlı bir sistem bakıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Misafirlerimizin check-in işlemlerini hatasız bir şekilde entegre edecek bir yazılım arayışındayız.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Acentelerin boş kontenjanlarımızı görerek yapacağı satışları eş zamanlı görmek ve raporlamak için modern bir misafir yönetim portali istiyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Tatil köyümüzde konaklayan misafirlerin harcamalarını eş zamanlı görmek ve raporlamak için modern bir misafir yönetim portali istiyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Spa ve restoran rezervasyonlarını anında sisteme düşürecek bulut tabanlı bir sistem bakıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Otelimizdeki temizlik görevlilerinin oda durumlarını odalarına doğrudan yansıtacak entegre bir otomasyon arıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Rehberlerimizin tur programlarını ve harcırahlarını cep telefonlarından dijital olarak tamamlatacak entegre bir otomasyon arıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Spa ve restoran rezervasyonlarını eş zamanlı görmek ve raporlamak için bulut tabanlı bir sistem bakıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Otelimizdeki temizlik görevlilerinin oda durumlarını dinamik olarak fiyatlandıracak modern bir misafir yönetim portali istiyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Otelimizdeki temizlik görevlilerinin oda durumlarını cep telefonlarından dijital olarak tamamlatacak B2B bir kanal yöneticisine ihtiyacımız var.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Tesisimizdeki odaların doluluk oranlarını otomatikleştirecek ve optimize edecek bulut tabanlı bir sistem bakıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Yurtdışı paket tur operasyonlarını hatasız bir şekilde entegre edecek modern bir misafir yönetim portali istiyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Otelimizdeki temizlik görevlilerinin oda durumlarını otomatikleştirecek ve optimize edecek bir altyapı kurmak istiyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Kongre turizmi için gelen kafilelerin giriş çıkışlarını tek ekrandan yönetmemizi sağlayacak bulut tabanlı bir sistem bakıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Acentelerin boş kontenjanlarımızı görerek yapacağı satışları tek ekrandan yönetmemizi sağlayacak dijital bir çözüm planlıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Butik otelimizin kanal yönetim (channel manager) süreçlerini odalarına doğrudan yansıtacak B2B bir kanal yöneticisine ihtiyacımız var.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Müşteri şikayet ve memnuniyet anketlerini eş zamanlı görmek ve raporlamak için dijital bir çözüm planlıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Uçak bileti ve transfer organizasyonlarımızı odalarına doğrudan yansıtacak bulut tabanlı bir sistem bakıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Misafirlerimizin check-in işlemlerini tek ekrandan yönetmemizi sağlayacak modern bir misafir yönetim portali istiyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Tesisimizdeki odaların doluluk oranlarını anında sisteme düşürecek B2B bir kanal yöneticisine ihtiyacımız var.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Farklı ülkelerden gelen turların kapasite yönetimini tek ekrandan yönetmemizi sağlayacak bulut tabanlı bir sistem bakıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Rehberlerimizin tur programlarını ve harcırahlarını otomatikleştirecek ve optimize edecek modern bir misafir yönetim portali istiyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Tesisimizdeki odaların doluluk oranlarını cep telefonlarından dijital olarak tamamlatacak bir yazılım arayışındayız.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Acentelerin boş kontenjanlarımızı görerek yapacağı satışları dinamik olarak fiyatlandıracak bir altyapı kurmak istiyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Vize işlemleri için gereken belgelerin takibini anında sisteme düşürecek dijital bir çözüm planlıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Havaalanı VIP transfer araçlarımızın lokasyonlarını hatasız bir şekilde entegre edecek B2B bir kanal yöneticisine ihtiyacımız var.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Havaalanı VIP transfer araçlarımızın lokasyonlarını anında sisteme düşürecek entegre bir otomasyon arıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Misafirlerimizin check-in işlemlerini cep telefonlarından dijital olarak tamamlatacak bir yazılım arayışındayız.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Tatil köyümüzde konaklayan misafirlerin harcamalarını tek ekrandan yönetmemizi sağlayacak bir altyapı kurmak istiyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Yurtdışı paket tur operasyonlarını odalarına doğrudan yansıtacak entegre bir otomasyon arıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Havaalanı VIP transfer araçlarımızın lokasyonlarını eş zamanlı görmek ve raporlamak için dijital bir çözüm planlıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Kongre turizmi için gelen kafilelerin giriş çıkışlarını eş zamanlı görmek ve raporlamak için B2B bir kanal yöneticisine ihtiyacımız var.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Kongre turizmi için gelen kafilelerin giriş çıkışlarını hatasız bir şekilde entegre edecek B2B bir kanal yöneticisine ihtiyacımız var.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Havaalanı VIP transfer araçlarımızın lokasyonlarını otomatikleştirecek ve optimize edecek dijital bir çözüm planlıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Spa ve restoran rezervasyonlarını odalarına doğrudan yansıtacak entegre bir otomasyon arıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Acentelerin boş kontenjanlarımızı görerek yapacağı satışları eş zamanlı görmek ve raporlamak için bulut tabanlı bir sistem bakıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Rehberlerimizin tur programlarını ve harcırahlarını tek ekrandan yönetmemizi sağlayacak bir yazılım arayışındayız.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Butik otelimizin kanal yönetim (channel manager) süreçlerini cep telefonlarından dijital olarak tamamlatacak dijital bir çözüm planlıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Rehberlerimizin tur programlarını ve harcırahlarını dinamik olarak fiyatlandıracak bir yazılım arayışındayız.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Tesisimizdeki odaların doluluk oranlarını odalarına doğrudan yansıtacak bir yazılım arayışındayız.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Farklı ülkelerden gelen turların kapasite yönetimini otomatikleştirecek ve optimize edecek B2B bir kanal yöneticisine ihtiyacımız var.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Kongre turizmi için gelen kafilelerin giriş çıkışlarını tek ekrandan yönetmemizi sağlayacak modern bir misafir yönetim portali istiyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Misafirlerimizin check-in işlemlerini eş zamanlı görmek ve raporlamak için entegre bir otomasyon arıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Kongre turizmi için gelen kafilelerin giriş çıkışlarını anında sisteme düşürecek dijital bir çözüm planlıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Misafirlerimizin check-in işlemlerini hatasız bir şekilde entegre edecek dijital bir çözüm planlıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Otelimizdeki temizlik görevlilerinin oda durumlarını anında sisteme düşürecek bir yazılım arayışındayız.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Acentelerin boş kontenjanlarımızı görerek yapacağı satışları anında sisteme düşürecek entegre bir otomasyon arıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Farklı ülkelerden gelen turların kapasite yönetimini dinamik olarak fiyatlandıracak modern bir misafir yönetim portali istiyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Otelimizdeki temizlik görevlilerinin oda durumlarını hatasız bir şekilde entegre edecek bulut tabanlı bir sistem bakıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Vize işlemleri için gereken belgelerin takibini cep telefonlarından dijital olarak tamamlatacak dijital bir çözüm planlıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Tatil köyümüzde konaklayan misafirlerin harcamalarını anında sisteme düşürecek bulut tabanlı bir sistem bakıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Vize işlemleri için gereken belgelerin takibini odalarına doğrudan yansıtacak bir yazılım arayışındayız.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Tesisimizdeki odaların doluluk oranlarını cep telefonlarından dijital olarak tamamlatacak modern bir misafir yönetim portali istiyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Butik otelimizin kanal yönetim (channel manager) süreçlerini dinamik olarak fiyatlandıracak entegre bir otomasyon arıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Havaalanı VIP transfer araçlarımızın lokasyonlarını otomatikleştirecek ve optimize edecek modern bir misafir yönetim portali istiyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Uçak bileti ve transfer organizasyonlarımızı dinamik olarak fiyatlandıracak B2B bir kanal yöneticisine ihtiyacımız var.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Tesisimizdeki odaların doluluk oranlarını eş zamanlı görmek ve raporlamak için modern bir misafir yönetim portali istiyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Misafirlerimizin check-in işlemlerini hatasız bir şekilde entegre edecek bir altyapı kurmak istiyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Tatil köyümüzde konaklayan misafirlerin harcamalarını odalarına doğrudan yansıtacak bulut tabanlı bir sistem bakıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Havaalanı VIP transfer araçlarımızın lokasyonlarını eş zamanlı görmek ve raporlamak için entegre bir otomasyon arıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Otelimizdeki temizlik görevlilerinin oda durumlarını dinamik olarak fiyatlandıracak dijital bir çözüm planlıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Otelimizdeki temizlik görevlilerinin oda durumlarını eş zamanlı görmek ve raporlamak için B2B bir kanal yöneticisine ihtiyacımız var.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Rehberlerimizin tur programlarını ve harcırahlarını dinamik olarak fiyatlandıracak bulut tabanlı bir sistem bakıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Spa ve restoran rezervasyonlarını hatasız bir şekilde entegre edecek B2B bir kanal yöneticisine ihtiyacımız var.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Kongre turizmi için gelen kafilelerin giriş çıkışlarını hatasız bir şekilde entegre edecek bir altyapı kurmak istiyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Kongre turizmi için gelen kafilelerin giriş çıkışlarını anında sisteme düşürecek B2B bir kanal yöneticisine ihtiyacımız var.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Butik otelimizin kanal yönetim (channel manager) süreçlerini eş zamanlı görmek ve raporlamak için entegre bir otomasyon arıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Müşteri şikayet ve memnuniyet anketlerini otomatikleştirecek ve optimize edecek bir altyapı kurmak istiyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Havaalanı VIP transfer araçlarımızın lokasyonlarını cep telefonlarından dijital olarak tamamlatacak entegre bir otomasyon arıyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Acentelerin boş kontenjanlarımızı görerek yapacağı satışları dinamik olarak fiyatlandıracak bir yazılım arayışındayız.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Rehberlerimizin tur programlarını ve harcırahlarını cep telefonlarından dijital olarak tamamlatacak bir yazılım arayışındayız.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Vize işlemleri için gereken belgelerin takibini hatasız bir şekilde entegre edecek bir altyapı kurmak istiyoruz.",
+      "beklenen_sektor": "turizm"
+    },
+    {
+      "metin": "Veri merkezimizdeki donanım sıcaklık ve performans durumunu tek bir dashboard üzerinden anlık olarak izleyecek bir entegrasyon arayışındayız.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Kurumsal ağ trafiğimizin analizini ortak bir API Gateway üzerinden birleştirecek bir hizmet almayı planlıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Mobil uygulamamızın push bildirim servislerini bize rehberlik edecek ve kolaylaştıracak bir hizmet almayı planlıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "KVKK uyumlu veri maskeleme işlemlerini kesintisiz çalışmasını garanti edecek bir entegrasyon arayışındayız.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Makine öğrenmesi modellerimizin eğitim altyapısını ortak bir API Gateway üzerinden birleştirecek bir DevOps danışmanlığı arıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "B2B API entegrasyonlarımızın loglarını ve hatalarını ortak bir API Gateway üzerinden birleştirecek bir izleme yazılımı istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Veri merkezimizdeki donanım sıcaklık ve performans durumunu güvenli bir şekilde otomatize edecek bir izleme yazılımı istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Mobil uygulamamızın push bildirim servislerini hızlıca uygulayacak ve raporlayacak bir DevOps danışmanlığı arıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Mevcut monolitik mimarimizi mikroservis yapısına geçirirken güvenli bir şekilde otomatize edecek kapsamlı bir güvenlik sistemi bakıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Çalışanlarımızın şifre yönetim ve 2FA onay süreçlerini kesintisiz çalışmasını garanti edecek bir entegrasyon arayışındayız.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Sistemlerimizin açıklarını bulmak için yapılacak sızma testini güvenli bir şekilde otomatize edecek bir altyapı çözümü kurmak istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Şirket içi uygulamalarımızın veri tabanı yedeklemesini bize rehberlik edecek ve kolaylaştıracak bir altyapı çözümü kurmak istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Veri merkezimizdeki donanım sıcaklık ve performans durumunu güvenli bir şekilde otomatize edecek bir altyapı çözümü kurmak istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Veri merkezimizdeki donanım sıcaklık ve performans durumunu kesintisiz çalışmasını garanti edecek SaaS tabanlı bir portal ihtiyacımız var.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Mobil uygulamamızın push bildirim servislerini ortak bir API Gateway üzerinden birleştirecek bir DevOps danışmanlığı arıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "KVKK uyumlu veri maskeleme işlemlerini kesintisiz çalışmasını garanti edecek bir altyapı çözümü kurmak istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "B2B API entegrasyonlarımızın loglarını ve hatalarını hızlıca uygulayacak ve raporlayacak bir izleme yazılımı istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Dijital dönüşüm ve IT modernizasyonu süreçlerimizi tek bir dashboard üzerinden anlık olarak izleyecek bir altyapı çözümü kurmak istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Sunucularımızın bellek ve işlemci yük durumunu merkezi olarak monitör etmemizi sağlayacak kapsamlı bir güvenlik sistemi bakıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "KVKK uyumlu veri maskeleme işlemlerini merkezi olarak monitör etmemizi sağlayacak bir hizmet almayı planlıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Dijital dönüşüm ve IT modernizasyonu süreçlerimizi kesintisiz çalışmasını garanti edecek SaaS tabanlı bir portal ihtiyacımız var.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "B2B API entegrasyonlarımızın loglarını ve hatalarını tek bir dashboard üzerinden anlık olarak izleyecek SaaS tabanlı bir portal ihtiyacımız var.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Web sitemizin yük dengesini (load balancing) bulut ortamına otomatik taşıyacak bir DevOps danışmanlığı arıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Mevcut monolitik mimarimizi mikroservis yapısına geçirirken kesintisiz çalışmasını garanti edecek kapsamlı bir güvenlik sistemi bakıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Mevcut monolitik mimarimizi mikroservis yapısına geçirirken tek bir dashboard üzerinden anlık olarak izleyecek bir entegrasyon arayışındayız.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Mobil uygulamamızın push bildirim servislerini güvenli bir şekilde otomatize edecek SaaS tabanlı bir portal ihtiyacımız var.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Sunucularımızın bellek ve işlemci yük durumunu güvenli bir şekilde otomatize edecek bir izleme yazılımı istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Çalışanlarımızın şifre yönetim ve 2FA onay süreçlerini tek bir dashboard üzerinden anlık olarak izleyecek kapsamlı bir güvenlik sistemi bakıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Farklı departmanların kullandığı yazılımları bize rehberlik edecek ve kolaylaştıracak bir izleme yazılımı istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Kurumsal ağ trafiğimizin analizini kesintisiz çalışmasını garanti edecek bir altyapı çözümü kurmak istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Mobil uygulamamızın push bildirim servislerini güvenli bir şekilde otomatize edecek bir hizmet almayı planlıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Bulut sunucularımız arasındaki veri göçü (migration) operasyonlarını ortak bir API Gateway üzerinden birleştirecek SaaS tabanlı bir portal ihtiyacımız var.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "B2B API entegrasyonlarımızın loglarını ve hatalarını güvenli bir şekilde otomatize edecek bir hizmet almayı planlıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Farklı departmanların kullandığı yazılımları hızlıca uygulayacak ve raporlayacak bir hizmet almayı planlıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Farklı departmanların kullandığı yazılımları tek bir dashboard üzerinden anlık olarak izleyecek SaaS tabanlı bir portal ihtiyacımız var.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Şirket içi uygulamalarımızın veri tabanı yedeklemesini merkezi olarak monitör etmemizi sağlayacak kapsamlı bir güvenlik sistemi bakıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Veri merkezimizdeki donanım sıcaklık ve performans durumunu bize rehberlik edecek ve kolaylaştıracak SaaS tabanlı bir portal ihtiyacımız var.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Dijital dönüşüm ve IT modernizasyonu süreçlerimizi bize rehberlik edecek ve kolaylaştıracak bir entegrasyon arayışındayız.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Makine öğrenmesi modellerimizin eğitim altyapısını bize rehberlik edecek ve kolaylaştıracak bir altyapı çözümü kurmak istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Web sitemizin yük dengesini (load balancing) hızlıca uygulayacak ve raporlayacak SaaS tabanlı bir portal ihtiyacımız var.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Mevcut monolitik mimarimizi mikroservis yapısına geçirirken bize rehberlik edecek ve kolaylaştıracak bir hizmet almayı planlıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Mevcut monolitik mimarimizi mikroservis yapısına geçirirken bize rehberlik edecek ve kolaylaştıracak bir altyapı çözümü kurmak istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Farklı departmanların kullandığı yazılımları ortak bir API Gateway üzerinden birleştirecek bir altyapı çözümü kurmak istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Bulut sunucularımız arasındaki veri göçü (migration) operasyonlarını hızlıca uygulayacak ve raporlayacak bir izleme yazılımı istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "KVKK uyumlu veri maskeleme işlemlerini hızlıca uygulayacak ve raporlayacak bir altyapı çözümü kurmak istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Makine öğrenmesi modellerimizin eğitim altyapısını tek bir dashboard üzerinden anlık olarak izleyecek bir entegrasyon arayışındayız.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Sistemlerimizin açıklarını bulmak için yapılacak sızma testini bulut ortamına otomatik taşıyacak bir altyapı çözümü kurmak istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "KVKK uyumlu veri maskeleme işlemlerini ortak bir API Gateway üzerinden birleştirecek SaaS tabanlı bir portal ihtiyacımız var.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Sunucularımızın bellek ve işlemci yük durumunu bize rehberlik edecek ve kolaylaştıracak SaaS tabanlı bir portal ihtiyacımız var.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Makine öğrenmesi modellerimizin eğitim altyapısını güvenli bir şekilde otomatize edecek kapsamlı bir güvenlik sistemi bakıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Mobil uygulamamızın push bildirim servislerini hızlıca uygulayacak ve raporlayacak bir izleme yazılımı istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Çalışanlarımızın şifre yönetim ve 2FA onay süreçlerini bize rehberlik edecek ve kolaylaştıracak bir DevOps danışmanlığı arıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Mevcut monolitik mimarimizi mikroservis yapısına geçirirken tek bir dashboard üzerinden anlık olarak izleyecek bir DevOps danışmanlığı arıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Dijital dönüşüm ve IT modernizasyonu süreçlerimizi bize rehberlik edecek ve kolaylaştıracak bir izleme yazılımı istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Sistemlerimizin açıklarını bulmak için yapılacak sızma testini bize rehberlik edecek ve kolaylaştıracak bir altyapı çözümü kurmak istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Sunucularımızın bellek ve işlemci yük durumunu kesintisiz çalışmasını garanti edecek bir entegrasyon arayışındayız.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Çalışanlarımızın şifre yönetim ve 2FA onay süreçlerini hızlıca uygulayacak ve raporlayacak bir hizmet almayı planlıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "B2B API entegrasyonlarımızın loglarını ve hatalarını bize rehberlik edecek ve kolaylaştıracak bir hizmet almayı planlıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Web sitemizin yük dengesini (load balancing) bize rehberlik edecek ve kolaylaştıracak bir izleme yazılımı istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Mobil uygulamamızın push bildirim servislerini bize rehberlik edecek ve kolaylaştıracak kapsamlı bir güvenlik sistemi bakıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Mevcut monolitik mimarimizi mikroservis yapısına geçirirken hızlıca uygulayacak ve raporlayacak bir hizmet almayı planlıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Sunucularımızın bellek ve işlemci yük durumunu tek bir dashboard üzerinden anlık olarak izleyecek bir izleme yazılımı istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Web sitemizin yük dengesini (load balancing) hızlıca uygulayacak ve raporlayacak bir hizmet almayı planlıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Bulut sunucularımız arasındaki veri göçü (migration) operasyonlarını hızlıca uygulayacak ve raporlayacak bir entegrasyon arayışındayız.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Mobil uygulamamızın push bildirim servislerini tek bir dashboard üzerinden anlık olarak izleyecek kapsamlı bir güvenlik sistemi bakıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Veri merkezimizdeki donanım sıcaklık ve performans durumunu kesintisiz çalışmasını garanti edecek bir altyapı çözümü kurmak istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Mobil uygulamamızın push bildirim servislerini bulut ortamına otomatik taşıyacak kapsamlı bir güvenlik sistemi bakıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Farklı departmanların kullandığı yazılımları bize rehberlik edecek ve kolaylaştıracak bir entegrasyon arayışındayız.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Dijital dönüşüm ve IT modernizasyonu süreçlerimizi ortak bir API Gateway üzerinden birleştirecek bir entegrasyon arayışındayız.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "B2B API entegrasyonlarımızın loglarını ve hatalarını tek bir dashboard üzerinden anlık olarak izleyecek bir hizmet almayı planlıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Sunucularımızın bellek ve işlemci yük durumunu tek bir dashboard üzerinden anlık olarak izleyecek bir entegrasyon arayışındayız.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Bulut sunucularımız arasındaki veri göçü (migration) operasyonlarını ortak bir API Gateway üzerinden birleştirecek kapsamlı bir güvenlik sistemi bakıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Farklı departmanların kullandığı yazılımları hızlıca uygulayacak ve raporlayacak SaaS tabanlı bir portal ihtiyacımız var.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Makine öğrenmesi modellerimizin eğitim altyapısını ortak bir API Gateway üzerinden birleştirecek bir hizmet almayı planlıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "B2B API entegrasyonlarımızın loglarını ve hatalarını ortak bir API Gateway üzerinden birleştirecek bir hizmet almayı planlıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Makine öğrenmesi modellerimizin eğitim altyapısını ortak bir API Gateway üzerinden birleştirecek kapsamlı bir güvenlik sistemi bakıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Makine öğrenmesi modellerimizin eğitim altyapısını ortak bir API Gateway üzerinden birleştirecek bir altyapı çözümü kurmak istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "B2B API entegrasyonlarımızın loglarını ve hatalarını güvenli bir şekilde otomatize edecek bir altyapı çözümü kurmak istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Sistemlerimizin açıklarını bulmak için yapılacak sızma testini merkezi olarak monitör etmemizi sağlayacak bir DevOps danışmanlığı arıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Farklı departmanların kullandığı yazılımları bize rehberlik edecek ve kolaylaştıracak bir hizmet almayı planlıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Bulut sunucularımız arasındaki veri göçü (migration) operasyonlarını ortak bir API Gateway üzerinden birleştirecek bir izleme yazılımı istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Sistemlerimizin açıklarını bulmak için yapılacak sızma testini güvenli bir şekilde otomatize edecek bir DevOps danışmanlığı arıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Şirket içi uygulamalarımızın veri tabanı yedeklemesini güvenli bir şekilde otomatize edecek bir izleme yazılımı istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Web sitemizin yük dengesini (load balancing) hızlıca uygulayacak ve raporlayacak bir DevOps danışmanlığı arıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Farklı departmanların kullandığı yazılımları ortak bir API Gateway üzerinden birleştirecek bir hizmet almayı planlıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Web sitemizin yük dengesini (load balancing) bize rehberlik edecek ve kolaylaştıracak bir hizmet almayı planlıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Farklı departmanların kullandığı yazılımları merkezi olarak monitör etmemizi sağlayacak bir DevOps danışmanlığı arıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Sistemlerimizin açıklarını bulmak için yapılacak sızma testini hızlıca uygulayacak ve raporlayacak kapsamlı bir güvenlik sistemi bakıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Dijital dönüşüm ve IT modernizasyonu süreçlerimizi bize rehberlik edecek ve kolaylaştıracak bir hizmet almayı planlıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Kurumsal ağ trafiğimizin analizini ortak bir API Gateway üzerinden birleştirecek SaaS tabanlı bir portal ihtiyacımız var.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Şirket içi uygulamalarımızın veri tabanı yedeklemesini merkezi olarak monitör etmemizi sağlayacak SaaS tabanlı bir portal ihtiyacımız var.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Mobil uygulamamızın push bildirim servislerini güvenli bir şekilde otomatize edecek bir DevOps danışmanlığı arıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Dijital dönüşüm ve IT modernizasyonu süreçlerimizi kesintisiz çalışmasını garanti edecek bir izleme yazılımı istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Makine öğrenmesi modellerimizin eğitim altyapısını hızlıca uygulayacak ve raporlayacak SaaS tabanlı bir portal ihtiyacımız var.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Şirket içi uygulamalarımızın veri tabanı yedeklemesini merkezi olarak monitör etmemizi sağlayacak bir izleme yazılımı istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "B2B API entegrasyonlarımızın loglarını ve hatalarını kesintisiz çalışmasını garanti edecek bir altyapı çözümü kurmak istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Veri merkezimizdeki donanım sıcaklık ve performans durumunu kesintisiz çalışmasını garanti edecek bir hizmet almayı planlıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "B2B API entegrasyonlarımızın loglarını ve hatalarını kesintisiz çalışmasını garanti edecek SaaS tabanlı bir portal ihtiyacımız var.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Makine öğrenmesi modellerimizin eğitim altyapısını tek bir dashboard üzerinden anlık olarak izleyecek SaaS tabanlı bir portal ihtiyacımız var.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Çalışanlarımızın şifre yönetim ve 2FA onay süreçlerini ortak bir API Gateway üzerinden birleştirecek bir altyapı çözümü kurmak istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "B2B API entegrasyonlarımızın loglarını ve hatalarını bulut ortamına otomatik taşıyacak bir izleme yazılımı istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Bulut sunucularımız arasındaki veri göçü (migration) operasyonlarını bize rehberlik edecek ve kolaylaştıracak kapsamlı bir güvenlik sistemi bakıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Bulut sunucularımız arasındaki veri göçü (migration) operasyonlarını merkezi olarak monitör etmemizi sağlayacak bir hizmet almayı planlıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Mobil uygulamamızın push bildirim servislerini tek bir dashboard üzerinden anlık olarak izleyecek bir altyapı çözümü kurmak istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Veri merkezimizdeki donanım sıcaklık ve performans durumunu hızlıca uygulayacak ve raporlayacak kapsamlı bir güvenlik sistemi bakıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Mevcut monolitik mimarimizi mikroservis yapısına geçirirken kesintisiz çalışmasını garanti edecek bir entegrasyon arayışındayız.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Mevcut monolitik mimarimizi mikroservis yapısına geçirirken bize rehberlik edecek ve kolaylaştıracak SaaS tabanlı bir portal ihtiyacımız var.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Mobil uygulamamızın push bildirim servislerini bulut ortamına otomatik taşıyacak bir altyapı çözümü kurmak istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Sunucularımızın bellek ve işlemci yük durumunu bulut ortamına otomatik taşıyacak SaaS tabanlı bir portal ihtiyacımız var.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Kurumsal ağ trafiğimizin analizini bulut ortamına otomatik taşıyacak bir hizmet almayı planlıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Sunucularımızın bellek ve işlemci yük durumunu bulut ortamına otomatik taşıyacak bir altyapı çözümü kurmak istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Farklı departmanların kullandığı yazılımları bulut ortamına otomatik taşıyacak bir DevOps danışmanlığı arıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Makine öğrenmesi modellerimizin eğitim altyapısını kesintisiz çalışmasını garanti edecek bir izleme yazılımı istiyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "KVKK uyumlu veri maskeleme işlemlerini bize rehberlik edecek ve kolaylaştıracak bir hizmet almayı planlıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Veri merkezimizdeki donanım sıcaklık ve performans durumunu tek bir dashboard üzerinden anlık olarak izleyecek bir DevOps danışmanlığı arıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Veri merkezimizdeki donanım sıcaklık ve performans durumunu güvenli bir şekilde otomatize edecek kapsamlı bir güvenlik sistemi bakıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Sunucularımızın bellek ve işlemci yük durumunu ortak bir API Gateway üzerinden birleştirecek bir hizmet almayı planlıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Web sitemizin yük dengesini (load balancing) tek bir dashboard üzerinden anlık olarak izleyecek bir entegrasyon arayışındayız.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Farklı departmanların kullandığı yazılımları bulut ortamına otomatik taşıyacak bir entegrasyon arayışındayız.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Veri merkezimizdeki donanım sıcaklık ve performans durumunu bulut ortamına otomatik taşıyacak kapsamlı bir güvenlik sistemi bakıyoruz.",
+      "beklenen_sektor": "bilisim"
+    },
+    {
+      "metin": "Gösteri merkezimizdeki ışık ve ses sistemlerinin senkronizasyonunu QR kod okutarak hızlıca yönetecek güvenli bir altyapı planlıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Etkinlik organizasyonumuzdaki görevli personelin akreditasyonunu koordine edecek ve aksaklıkları giderecek bir rezervasyon ekranı tasarlamak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Konser alanındaki yiyecek içecek standlarının ödemelerini anket ve soru-cevap ile sağlayacak bir rezervasyon ekranı tasarlamak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Dizi film setlerindeki kostüm ve ekipman envanterini koordine edecek ve aksaklıkları giderecek bir yayın aracı ihtiyacımız var.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "E-spor turnuvası canlı maç yayınlarının gecikmesini koordine edecek ve aksaklıkları giderecek bir mobil sistem arıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Gösteri merkezimizdeki ışık ve ses sistemlerinin senkronizasyonunu tek bir mobil uygulamadan entegre edecek bir mobil sistem arıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Konser alanındaki yiyecek içecek standlarının ödemelerini görsel bir ekran üzerinden ayarlayabileceğimiz bir yayın aracı ihtiyacımız var.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Canlı yayın etkinliklerimizde izleyicilerle etkileşimi tek bir mobil uygulamadan entegre edecek dijital bir operasyon platformu kurmak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Tiyatro salonumuzdaki VIP locaların ön satışını tek bir mobil uygulamadan entegre edecek bir planlama yazılımı bakıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Büyük stadyum konserleri için bilet doğrulamalarını anket ve soru-cevap ile sağlayacak bir planlama yazılımı bakıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Gösteri merkezimizdeki ışık ve ses sistemlerinin senkronizasyonunu tek bir mobil uygulamadan entegre edecek bir planlama yazılımı bakıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Gösteri merkezimizdeki ışık ve ses sistemlerinin senkronizasyonunu saniye saniye takip edecek bütünleşik bir çözüm arayışındayız.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Konser alanındaki yiyecek içecek standlarının ödemelerini koordine edecek ve aksaklıkları giderecek bir yayın aracı ihtiyacımız var.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "E-spor turnuvası canlı maç yayınlarının gecikmesini görsel bir ekran üzerinden ayarlayabileceğimiz bir mobil sistem arıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Sanatçılarımızın sahne programlarını ve kulis isteklerini QR kod okutarak hızlıca yönetecek bir planlama yazılımı bakıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Yaklaşan açık hava festivalimiz için katılımcı girişlerini dinamik fiyatlandırma ile optimize edecek dijital bir operasyon platformu kurmak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Sanatçılarımızın sahne programlarını ve kulis isteklerini saniye saniye takip edecek bütünleşik bir çözüm arayışındayız.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "E-spor turnuvası canlı maç yayınlarının gecikmesini QR kod okutarak hızlıca yönetecek bütünleşik bir çözüm arayışındayız.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Tema parkımızdaki dijital bileklik okumalarını kapasite aşımını engelleyerek yapacak bir yayın aracı ihtiyacımız var.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Canlı yayın etkinliklerimizde izleyicilerle etkileşimi saniye saniye takip edecek dijital bir operasyon platformu kurmak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Canlı yayın etkinliklerimizde izleyicilerle etkileşimi QR kod okutarak hızlıca yönetecek güvenli bir altyapı planlıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Konser alanındaki yiyecek içecek standlarının ödemelerini tek bir mobil uygulamadan entegre edecek bütünleşik bir çözüm arayışındayız.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Yaklaşan açık hava festivalimiz için katılımcı girişlerini tek bir mobil uygulamadan entegre edecek bir mobil sistem arıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Medya prodüksiyon ekibimizin çekim takvimini anket ve soru-cevap ile sağlayacak bir mobil sistem arıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Etkinlik organizasyonumuzdaki görevli personelin akreditasyonunu saniye saniye takip edecek bir planlama yazılımı bakıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Konser alanındaki yiyecek içecek standlarının ödemelerini tek bir mobil uygulamadan entegre edecek bir rezervasyon ekranı tasarlamak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Sanat galerimizdeki sergi biletleme operasyonlarını koordine edecek ve aksaklıkları giderecek bütünleşik bir çözüm arayışındayız.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "E-spor turnuvası canlı maç yayınlarının gecikmesini tek bir mobil uygulamadan entegre edecek bir rezervasyon ekranı tasarlamak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Medya prodüksiyon ekibimizin çekim takvimini görsel bir ekran üzerinden ayarlayabileceğimiz bir rezervasyon ekranı tasarlamak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Medya prodüksiyon ekibimizin çekim takvimini QR kod okutarak hızlıca yönetecek bütünleşik bir çözüm arayışındayız.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Büyük stadyum konserleri için bilet doğrulamalarını dinamik fiyatlandırma ile optimize edecek dijital bir operasyon platformu kurmak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Gösteri merkezimizdeki ışık ve ses sistemlerinin senkronizasyonunu anket ve soru-cevap ile sağlayacak bütünleşik bir çözüm arayışındayız.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Sanatçılarımızın sahne programlarını ve kulis isteklerini anket ve soru-cevap ile sağlayacak güvenli bir altyapı planlıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Dizi film setlerindeki kostüm ve ekipman envanterini anket ve soru-cevap ile sağlayacak bir planlama yazılımı bakıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Tema parkımızdaki dijital bileklik okumalarını görsel bir ekran üzerinden ayarlayabileceğimiz bütünleşik bir çözüm arayışındayız.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Canlı yayın etkinliklerimizde izleyicilerle etkileşimi anket ve soru-cevap ile sağlayacak bir rezervasyon ekranı tasarlamak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Canlı yayın etkinliklerimizde izleyicilerle etkileşimi anket ve soru-cevap ile sağlayacak bir planlama yazılımı bakıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Medya prodüksiyon ekibimizin çekim takvimini koordine edecek ve aksaklıkları giderecek bir planlama yazılımı bakıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Sanat galerimizdeki sergi biletleme operasyonlarını görsel bir ekran üzerinden ayarlayabileceğimiz bir mobil sistem arıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Dizi film setlerindeki kostüm ve ekipman envanterini QR kod okutarak hızlıca yönetecek güvenli bir altyapı planlıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Tiyatro salonumuzdaki VIP locaların ön satışını kapasite aşımını engelleyerek yapacak bir planlama yazılımı bakıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Yaklaşan açık hava festivalimiz için katılımcı girişlerini anket ve soru-cevap ile sağlayacak bütünleşik bir çözüm arayışındayız.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Dizi film setlerindeki kostüm ve ekipman envanterini tek bir mobil uygulamadan entegre edecek dijital bir operasyon platformu kurmak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Konser alanındaki yiyecek içecek standlarının ödemelerini görsel bir ekran üzerinden ayarlayabileceğimiz bir mobil sistem arıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Canlı yayın etkinliklerimizde izleyicilerle etkileşimi QR kod okutarak hızlıca yönetecek bir yayın aracı ihtiyacımız var.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Sanatçılarımızın sahne programlarını ve kulis isteklerini anket ve soru-cevap ile sağlayacak bir mobil sistem arıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Tiyatro salonumuzdaki VIP locaların ön satışını anket ve soru-cevap ile sağlayacak bir planlama yazılımı bakıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Yaklaşan açık hava festivalimiz için katılımcı girişlerini saniye saniye takip edecek güvenli bir altyapı planlıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "E-spor turnuvası canlı maç yayınlarının gecikmesini anket ve soru-cevap ile sağlayacak bir rezervasyon ekranı tasarlamak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Tema parkımızdaki dijital bileklik okumalarını anket ve soru-cevap ile sağlayacak bir mobil sistem arıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Konser alanındaki yiyecek içecek standlarının ödemelerini anket ve soru-cevap ile sağlayacak dijital bir operasyon platformu kurmak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Canlı yayın etkinliklerimizde izleyicilerle etkileşimi görsel bir ekran üzerinden ayarlayabileceğimiz bir rezervasyon ekranı tasarlamak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Yaklaşan açık hava festivalimiz için katılımcı girişlerini QR kod okutarak hızlıca yönetecek bir mobil sistem arıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Tema parkımızdaki dijital bileklik okumalarını görsel bir ekran üzerinden ayarlayabileceğimiz bir rezervasyon ekranı tasarlamak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Sanat galerimizdeki sergi biletleme operasyonlarını görsel bir ekran üzerinden ayarlayabileceğimiz güvenli bir altyapı planlıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Konser alanındaki yiyecek içecek standlarının ödemelerini QR kod okutarak hızlıca yönetecek dijital bir operasyon platformu kurmak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Gösteri merkezimizdeki ışık ve ses sistemlerinin senkronizasyonunu saniye saniye takip edecek bir planlama yazılımı bakıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Konser alanındaki yiyecek içecek standlarının ödemelerini kapasite aşımını engelleyerek yapacak dijital bir operasyon platformu kurmak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Medya prodüksiyon ekibimizin çekim takvimini anket ve soru-cevap ile sağlayacak güvenli bir altyapı planlıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Sanatçılarımızın sahne programlarını ve kulis isteklerini koordine edecek ve aksaklıkları giderecek güvenli bir altyapı planlıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "E-spor turnuvası canlı maç yayınlarının gecikmesini QR kod okutarak hızlıca yönetecek bir rezervasyon ekranı tasarlamak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Yaklaşan açık hava festivalimiz için katılımcı girişlerini QR kod okutarak hızlıca yönetecek güvenli bir altyapı planlıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Sanat galerimizdeki sergi biletleme operasyonlarını koordine edecek ve aksaklıkları giderecek dijital bir operasyon platformu kurmak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Medya prodüksiyon ekibimizin çekim takvimini görsel bir ekran üzerinden ayarlayabileceğimiz bütünleşik bir çözüm arayışındayız.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Dizi film setlerindeki kostüm ve ekipman envanterini koordine edecek ve aksaklıkları giderecek bir rezervasyon ekranı tasarlamak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "E-spor turnuvası canlı maç yayınlarının gecikmesini koordine edecek ve aksaklıkları giderecek bir rezervasyon ekranı tasarlamak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Dizi film setlerindeki kostüm ve ekipman envanterini koordine edecek ve aksaklıkları giderecek dijital bir operasyon platformu kurmak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Dizi film setlerindeki kostüm ve ekipman envanterini koordine edecek ve aksaklıkları giderecek bir planlama yazılımı bakıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "E-spor turnuvası canlı maç yayınlarının gecikmesini tek bir mobil uygulamadan entegre edecek bir planlama yazılımı bakıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Tiyatro salonumuzdaki VIP locaların ön satışını dinamik fiyatlandırma ile optimize edecek bir yayın aracı ihtiyacımız var.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Medya prodüksiyon ekibimizin çekim takvimini anket ve soru-cevap ile sağlayacak bir rezervasyon ekranı tasarlamak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Sanat galerimizdeki sergi biletleme operasyonlarını koordine edecek ve aksaklıkları giderecek bir mobil sistem arıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Tiyatro salonumuzdaki VIP locaların ön satışını tek bir mobil uygulamadan entegre edecek bir yayın aracı ihtiyacımız var.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Büyük stadyum konserleri için bilet doğrulamalarını tek bir mobil uygulamadan entegre edecek bir mobil sistem arıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Tema parkımızdaki dijital bileklik okumalarını görsel bir ekran üzerinden ayarlayabileceğimiz bir yayın aracı ihtiyacımız var.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Medya prodüksiyon ekibimizin çekim takvimini koordine edecek ve aksaklıkları giderecek bir rezervasyon ekranı tasarlamak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Tema parkımızdaki dijital bileklik okumalarını anket ve soru-cevap ile sağlayacak bir rezervasyon ekranı tasarlamak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Medya prodüksiyon ekibimizin çekim takvimini dinamik fiyatlandırma ile optimize edecek bir yayın aracı ihtiyacımız var.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Tiyatro salonumuzdaki VIP locaların ön satışını görsel bir ekran üzerinden ayarlayabileceğimiz dijital bir operasyon platformu kurmak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Sanatçılarımızın sahne programlarını ve kulis isteklerini anket ve soru-cevap ile sağlayacak bir rezervasyon ekranı tasarlamak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Etkinlik organizasyonumuzdaki görevli personelin akreditasyonunu koordine edecek ve aksaklıkları giderecek bütünleşik bir çözüm arayışındayız.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Büyük stadyum konserleri için bilet doğrulamalarını dinamik fiyatlandırma ile optimize edecek bütünleşik bir çözüm arayışındayız.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Konser alanındaki yiyecek içecek standlarının ödemelerini tek bir mobil uygulamadan entegre edecek bir yayın aracı ihtiyacımız var.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Sanatçılarımızın sahne programlarını ve kulis isteklerini saniye saniye takip edecek bir mobil sistem arıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Dizi film setlerindeki kostüm ve ekipman envanterini görsel bir ekran üzerinden ayarlayabileceğimiz bütünleşik bir çözüm arayışındayız.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Büyük stadyum konserleri için bilet doğrulamalarını dinamik fiyatlandırma ile optimize edecek bir mobil sistem arıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "E-spor turnuvası canlı maç yayınlarının gecikmesini saniye saniye takip edecek bir planlama yazılımı bakıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Gösteri merkezimizdeki ışık ve ses sistemlerinin senkronizasyonunu saniye saniye takip edecek bir rezervasyon ekranı tasarlamak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "E-spor turnuvası canlı maç yayınlarının gecikmesini saniye saniye takip edecek bütünleşik bir çözüm arayışındayız.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Dizi film setlerindeki kostüm ve ekipman envanterini QR kod okutarak hızlıca yönetecek bütünleşik bir çözüm arayışındayız.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "E-spor turnuvası canlı maç yayınlarının gecikmesini kapasite aşımını engelleyerek yapacak bir mobil sistem arıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Sanat galerimizdeki sergi biletleme operasyonlarını anket ve soru-cevap ile sağlayacak dijital bir operasyon platformu kurmak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Sanat galerimizdeki sergi biletleme operasyonlarını dinamik fiyatlandırma ile optimize edecek bir rezervasyon ekranı tasarlamak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Konser alanındaki yiyecek içecek standlarının ödemelerini QR kod okutarak hızlıca yönetecek bir planlama yazılımı bakıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Gösteri merkezimizdeki ışık ve ses sistemlerinin senkronizasyonunu görsel bir ekran üzerinden ayarlayabileceğimiz dijital bir operasyon platformu kurmak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Canlı yayın etkinliklerimizde izleyicilerle etkileşimi saniye saniye takip edecek güvenli bir altyapı planlıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Canlı yayın etkinliklerimizde izleyicilerle etkileşimi anket ve soru-cevap ile sağlayacak bütünleşik bir çözüm arayışındayız.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Konser alanındaki yiyecek içecek standlarının ödemelerini kapasite aşımını engelleyerek yapacak bir planlama yazılımı bakıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Yaklaşan açık hava festivalimiz için katılımcı girişlerini kapasite aşımını engelleyerek yapacak bütünleşik bir çözüm arayışındayız.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Etkinlik organizasyonumuzdaki görevli personelin akreditasyonunu kapasite aşımını engelleyerek yapacak bir rezervasyon ekranı tasarlamak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Yaklaşan açık hava festivalimiz için katılımcı girişlerini kapasite aşımını engelleyerek yapacak bir planlama yazılımı bakıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Medya prodüksiyon ekibimizin çekim takvimini kapasite aşımını engelleyerek yapacak bir yayın aracı ihtiyacımız var.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Dizi film setlerindeki kostüm ve ekipman envanterini saniye saniye takip edecek bir mobil sistem arıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Gösteri merkezimizdeki ışık ve ses sistemlerinin senkronizasyonunu QR kod okutarak hızlıca yönetecek bir yayın aracı ihtiyacımız var.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Gösteri merkezimizdeki ışık ve ses sistemlerinin senkronizasyonunu tek bir mobil uygulamadan entegre edecek dijital bir operasyon platformu kurmak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Yaklaşan açık hava festivalimiz için katılımcı girişlerini koordine edecek ve aksaklıkları giderecek bir rezervasyon ekranı tasarlamak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Tema parkımızdaki dijital bileklik okumalarını QR kod okutarak hızlıca yönetecek güvenli bir altyapı planlıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Medya prodüksiyon ekibimizin çekim takvimini kapasite aşımını engelleyerek yapacak güvenli bir altyapı planlıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Gösteri merkezimizdeki ışık ve ses sistemlerinin senkronizasyonunu kapasite aşımını engelleyerek yapacak dijital bir operasyon platformu kurmak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Büyük stadyum konserleri için bilet doğrulamalarını anket ve soru-cevap ile sağlayacak dijital bir operasyon platformu kurmak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Sanatçılarımızın sahne programlarını ve kulis isteklerini görsel bir ekran üzerinden ayarlayabileceğimiz bütünleşik bir çözüm arayışındayız.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Canlı yayın etkinliklerimizde izleyicilerle etkileşimi görsel bir ekran üzerinden ayarlayabileceğimiz bir planlama yazılımı bakıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Yaklaşan açık hava festivalimiz için katılımcı girişlerini QR kod okutarak hızlıca yönetecek bütünleşik bir çözüm arayışındayız.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Medya prodüksiyon ekibimizin çekim takvimini kapasite aşımını engelleyerek yapacak dijital bir operasyon platformu kurmak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Tiyatro salonumuzdaki VIP locaların ön satışını QR kod okutarak hızlıca yönetecek bütünleşik bir çözüm arayışındayız.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Medya prodüksiyon ekibimizin çekim takvimini tek bir mobil uygulamadan entegre edecek bir planlama yazılımı bakıyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Sanatçılarımızın sahne programlarını ve kulis isteklerini QR kod okutarak hızlıca yönetecek bir yayın aracı ihtiyacımız var.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Tema parkımızdaki dijital bileklik okumalarını dinamik fiyatlandırma ile optimize edecek bir rezervasyon ekranı tasarlamak istiyoruz.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Yaklaşan açık hava festivalimiz için katılımcı girişlerini tek bir mobil uygulamadan entegre edecek bütünleşik bir çözüm arayışındayız.",
+      "beklenen_sektor": "eglence"
+    },
+    {
+      "metin": "Sanatçılarımızın sahne programlarını ve kulis isteklerini kapasite aşımını engelleyerek yapacak bir planlama yazılımı bakıyoruz.",
+      "beklenen_sektor": "eglence"
+    }
+  ]
+}

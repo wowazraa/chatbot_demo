@@ -4446,5 +4446,197 @@
         "final_score": 0.4685
       }
     ]
+  },
+  {
+    "ts": "2026-07-31T07:43:29.760210+00:00",
+    "query": "bilişim",
+    "mod": "FB",
+    "skor": 0.5114,
+    "top_candidates": [
+      {
+        "text": "Farklı departmanların kullandığı yazılımları bize rehberlik edecek ve kolaylaştıracak bir izleme yazılımı istiyoruz.",
+        "sector": "bilisim",
+        "sub_intent": "bilisim.software",
+        "initial_score": 0.5114,
+        "reranker_score": 0.5114,
+        "final_score": 0.5114
+      },
+      {
+        "text": "turizm alanında faaliyet gösteren firmamız için dijital çözüm",
+        "sector": "turizm",
+        "sub_intent": "turizm.otel",
+        "initial_score": 0.51,
+        "reranker_score": 0.51,
+        "final_score": 0.51
+      },
+      {
+        "text": "fiyat teklifi",
+        "sector": "ood",
+        "sub_intent": "ood.none",
+        "initial_score": 0.5095,
+        "reranker_score": 0.5095,
+        "final_score": 0.5095
+      }
+    ]
+  },
+  {
+    "ts": "2026-07-31T08:20:57.108278+00:00",
+    "query": "<script>",
+    "mod": "FB",
+    "skor": 0.5267,
+    "top_candidates": [
+      {
+        "text": "fiyat teklifi",
+        "sector": "ood",
+        "sub_intent": "ood.none",
+        "initial_score": 0.5267,
+        "reranker_score": 0.5267,
+        "final_score": 0.5267
+      },
+      {
+        "text": "Spa ve restoran rezervasyonlarını tek ekrandan yönetmemizi sağlayacak bir altyapı kurmak istiyoruz.",
+        "sector": "turizm",
+        "sub_intent": "turizm.reservation",
+        "initial_score": 0.5106,
+        "reranker_score": 0.5106,
+        "final_score": 0.5106
+      },
+      {
+        "text": "i need a price quote for your software",
+        "sector": "ood",
+        "sub_intent": "ood.none",
+        "initial_score": 0.51,
+        "reranker_score": 0.51,
+        "final_score": 0.51
+      }
+    ]
+  },
+  {
+    "ts": "2026-07-31T08:30:32.294700+00:00",
+    "query": "it",
+    "mod": "FB",
+    "skor": 0.5419,
+    "top_candidates": [
+      {
+        "text": "we need an artificial intelligence integration for our platform",
+        "sector": "bilisim",
+        "sub_intent": "bilisim.entegrasyon",
+        "initial_score": 0.5419,
+        "reranker_score": 0.5419,
+        "final_score": 0.5419
+      },
+      {
+        "text": "we need a laboratory information management system",
+        "sector": "saglik",
+        "sub_intent": "saglik.randevu",
+        "initial_score": 0.5328,
+        "reranker_score": 0.5328,
+        "final_score": 0.5328
+      },
+      {
+        "text": "need identity and access management software to control user permissions",
+        "sector": "bilisim",
+        "sub_intent": "bilisim.entegrasyon",
+        "initial_score": 0.5113,
+        "reranker_score": 0.5113,
+        "final_score": 0.5113
+      }
+    ]
+  },
+  {
+    "ts": "2026-07-31T08:30:39.774261+00:00",
+    "query": "health",
+    "mod": "FB",
+    "skor": 0.6028,
+    "top_candidates": [
+      {
+        "text": "looking for an electronic health records platform",
+        "sector": "saglik",
+        "sub_intent": "saglik.randevu",
+        "initial_score": 0.6028,
+        "reranker_score": 0.6028,
+        "final_score": 0.6028
+      },
+      {
+        "text": "we need a hospital management system",
+        "sector": "saglik",
+        "sub_intent": "saglik.randevu",
+        "initial_score": 0.5735,
+        "reranker_score": 0.5735,
+        "final_score": 0.5735
+      },
+      {
+        "text": "looking for a healthcare data interoperability platform",
+        "sector": "saglik",
+        "sub_intent": "saglik.randevu",
+        "initial_score": 0.5551,
+        "reranker_score": 0.5551,
+        "final_score": 0.5551
+      }
+    ]
+  },
+  {
+    "ts": "2026-07-31T08:32:48.914820+00:00",
+    "query": "education",
+    "mod": "FB",
+    "skor": 0.6496,
+    "top_candidates": [
+      {
+        "text": "uzaktan eğitim platformu",
+        "sector": "egitim",
+        "sub_intent": "egitim.kayit",
+        "initial_score": 0.6496,
+        "reranker_score": 0.6496,
+        "final_score": 0.6496
+      },
+      {
+        "text": "we need a learning management system for our university",
+        "sector": "egitim",
+        "sub_intent": "egitim.kayit",
+        "initial_score": 0.6234,
+        "reranker_score": 0.6234,
+        "final_score": 0.6234
+      },
+      {
+        "text": "need an educational analytics and student performance dashboard",
+        "sector": "egitim",
+        "sub_intent": "egitim.kayit",
+        "initial_score": 0.612,
+        "reranker_score": 0.612,
+        "final_score": 0.612
+      }
+    ]
+  },
+  {
+    "ts": "2026-07-31T08:35:26.530982+00:00",
+    "query": "sd",
+    "mod": "FB",
+    "skor": 0.4665,
+    "top_candidates": [
+      {
+        "text": "demo görmek",
+        "sector": "ood",
+        "sub_intent": "ood.none",
+        "initial_score": 0.4665,
+        "reranker_score": 0.4665,
+        "final_score": 0.4665
+      },
+      {
+        "text": "digital library management software needed",
+        "sector": "egitim",
+        "sub_intent": "egitim.kayit",
+        "initial_score": 0.4613,
+        "reranker_score": 0.4613,
+        "final_score": 0.4613
+      },
+      {
+        "text": "gdpr uyumlu veri yönetimi platformu kurmak istiyoruz",
+        "sector": "bilisim",
+        "sub_intent": "bilisim.entegrasyon",
+        "initial_score": 0.432,
+        "reranker_score": 0.432,
+        "final_score": 0.432
+      }
+    ]
   }
 ]

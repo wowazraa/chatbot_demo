@@ -49,6 +49,29 @@ MSG_OOD_GATE = (
     "Size Bilişim, Eğitim, Eğlence, Sağlık veya Turizm alanlarında hizmet verebilirim."
 )
 
+EN_MSG_GREETING = (
+    "Hello! How can I help you today? "
+    "I can assist you in the fields of IT, Education, Entertainment, Healthcare, and Tourism."
+)
+EN_MSG_IDENTITY = (
+    "I am your routing assistant! I'm doing well, thanks. "
+    "In which sector would you like me to help you?"
+)
+EN_MSG_THANKS = (
+    "You're welcome! I'm here if you need help with anything else."
+)
+EN_MSG_GIBBERISH = (
+    "I couldn't understand your input. Please ask a question related to IT, Education, Entertainment, Healthcare, or Tourism."
+)
+EN_MSG_ABUSE = (
+    "Please use a professional and respectful tone. "
+    "How can I help you?"
+)
+EN_MSG_OOD_GATE = (
+    "I cannot help you directly with this topic. "
+    "I can assist you in the fields of IT, Education, Entertainment, Healthcare, and Tourism."
+)
+
 
 @dataclass(frozen=True)
 class FastPathHit:
@@ -284,19 +307,22 @@ def _has_abuse(folded: str) -> bool:
     return False
 
 
-def match_fast_path(query: str) -> FastPathHit | None:
+def match_fast_path(query: str, lang: str = "tr") -> FastPathHit | None:
     """
     Katman 1. Eşleşme yoksa None → ML katmanına geç.
     Saf sosyal yığın → chitchat; sosyal + talep artığı → None.
     """
     raw = (query or "").strip()
     folded = _fold(raw)
+    
+    is_en = (lang or "").lower() == "en"
+
     if not folded:
         return FastPathHit(
             category="gibberish",
             sub_intent="ood.gibberish",
             status="OOD",
-            response_message=MSG_GIBBERISH,
+            response_message=EN_MSG_GIBBERISH if is_en else MSG_GIBBERISH,
             confidence_score=1.0,
         )
 
@@ -306,7 +332,7 @@ def match_fast_path(query: str) -> FastPathHit | None:
             category="abuse",
             sub_intent="ood.abuse",
             status="OOD",
-            response_message=MSG_ABUSE,
+            response_message=EN_MSG_ABUSE if is_en else MSG_ABUSE,
             confidence_score=1.0,
         )
 
@@ -319,7 +345,7 @@ def match_fast_path(query: str) -> FastPathHit | None:
             category="greeting",
             sub_intent="chitchat.greeting",
             status="SUCCESS",
-            response_message=MSG_GREETING,
+            response_message=EN_MSG_GREETING if is_en else MSG_GREETING,
             confidence_score=1.0,
         )
     if pure and cat == "thanks":
@@ -327,7 +353,7 @@ def match_fast_path(query: str) -> FastPathHit | None:
             category="thanks",
             sub_intent="chitchat.thanks",
             status="SUCCESS",
-            response_message=MSG_THANKS,
+            response_message=EN_MSG_THANKS if is_en else MSG_THANKS,
             confidence_score=1.0,
         )
     if pure and cat == "identity":
@@ -335,7 +361,7 @@ def match_fast_path(query: str) -> FastPathHit | None:
             category="identity",
             sub_intent="chitchat.identity",
             status="SUCCESS",
-            response_message=MSG_IDENTITY,
+            response_message=EN_MSG_IDENTITY if is_en else MSG_IDENTITY,
             confidence_score=1.0,
         )
 
@@ -345,7 +371,7 @@ def match_fast_path(query: str) -> FastPathHit | None:
             category="gibberish",
             sub_intent="ood.gibberish",
             status="OOD",
-            response_message=MSG_GIBBERISH,
+            response_message=EN_MSG_GIBBERISH if is_en else MSG_GIBBERISH,
             confidence_score=1.0,
         )
 

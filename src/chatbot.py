@@ -642,6 +642,7 @@ class Chatbot:
         self,
         kullanici_girdisi: str,
         session_id: str | None = None,
+        lang: str | None = None,
     ) -> ChatbotResponse:
         from src.v2_pipeline import V2IntentPipeline
 
@@ -649,14 +650,16 @@ class Chatbot:
         if not hasattr(self, '_v2_pipeline'):
             self._v2_pipeline = V2IntentPipeline()
         
-        res = self._v2_pipeline.run(kullanici_girdisi, session_id=session_id)
+        res = self._v2_pipeline.run(kullanici_girdisi, session_id=session_id, force_lang=lang)
 
         sektor = res.sector
         if sektor == "ood":
             sektor = "belirsiz"
 
         yontem = "bge-m3"
-        if res.layer == "rule":
+        if res.sub_intent == "small_talk":
+            yontem = "small_talk"
+        elif res.layer == "rule":
             yontem = "kisaltma"
         elif res.layer == "memory":
             yontem = "hafiza"
@@ -670,17 +673,25 @@ class Chatbot:
             mod = "K2"
         
         # Session fallback durumunda mod'u HAFIZA olarak ayarla
-        # Sadece gerçek session fallback durumunda (aktif_sektor var ve query generic follow-up)
         aktif_sektor = self._v2_pipeline.get_aktif_sektor(session_id) if hasattr(self, '_v2_pipeline') else None
-        if aktif_sektor and aktif_sektor == sektor and res.confidence_score >= 0.90:
+        
+        # Sadece session context var ise jenerik cümle kontrolü yap
+        if aktif_sektor:
             # Generic follow-up kontrolü
-            generic_patterns = [
-                r"\b(fiyat|ücret|maliyet|teklif|referans|süre|kurulum)\b",
-                r"\b(hangi|nasıl|ne kadar|nedir|bilgi|liste|listeler|kiminle|kimlerle)\b",
-                r"\b(price|cost|quote|pricing|how long|how much|information|list|references|who|contact)\b"
-            ]
-            is_generic = any(re.search(pattern, kullanici_girdisi.lower()) for pattern in generic_patterns)
-            if is_generic:
+            is_generic = False
+            if hasattr(self, '_v2_pipeline') and hasattr(self._v2_pipeline, '_is_generic_followup'):
+                is_generic = self._v2_pipeline._is_generic_followup(kullanici_girdisi)
+            else:
+                generic_patterns = [
+                    r"\b(fiyat|ücret|maliyet|teklif|referans|süre|kurulum|neler|başka)\b",
+                    r"\b(hangi|nasıl|ne kadar|nedir|bilgi|liste|listeler|kiminle|kimlerle)\b",
+                    r"\b(price|cost|quote|pricing|how long|how much|information|list|references|who|contact)\b"
+                ]
+                is_generic = any(re.search(pattern, kullanici_girdisi.lower()) for pattern in generic_patterns)
+            
+            # Eğer jenerik bir takipse ve K1 veya RULE katmanından OOD gibi kesin bir red almamışsa
+            if is_generic and res.layer not in ("rule", "k1_regex"):
+                sektor = aktif_sektor
                 yontem = "hafiza"
                 mod = "HAFIZA"
 
@@ -695,7 +706,7 @@ class Chatbot:
             mod=mod,
             skor=res.confidence_score,
             yontem=yontem,
-            lang="tr",
+            lang=lang or "tr",
             eslesen_mesaj="",
             eslesen_id=None,
             aciklama=f"Pipeline run layer={res.layer}",

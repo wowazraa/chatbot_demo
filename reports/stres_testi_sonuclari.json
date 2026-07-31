@@ -7,9 +7,9 @@
     "tespit_edilen_sektor": "turizm",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.908964,
+    "skor": 0.801005,
     "katman": "bge-m3",
-    "sure_ms": 100.35,
+    "sure_ms": 554.32,
     "basarili": true
   },
   {
@@ -17,26 +17,26 @@
     "kategori": "A",
     "girdi_metni": "savunma sanayi projesi değil, eğitim otomasyonu ile ilgileniyoruz",
     "beklenen_sektor": "eğitim",
-    "tespit_edilen_sektor": "belirsiz",
+    "tespit_edilen_sektor": "egitim",
     "beklenen_mod": "K2",
-    "tespit_edilen_mod": "FB",
-    "skor": 0.15,
-    "katman": "kisaltma",
-    "sure_ms": 1.74,
-    "basarili": false
+    "tespit_edilen_mod": "K2",
+    "skor": 0.6662743333333333,
+    "katman": "bge-m3",
+    "sure_ms": 104.45,
+    "basarili": true
   },
   {
     "id": "A03",
     "kategori": "A",
     "girdi_metni": "hastane randevu modülünü boşverin, oda rezervasyon ekranı kuracağız",
     "beklenen_sektor": "turizm",
-    "tespit_edilen_sektor": "turizm",
+    "tespit_edilen_sektor": "saglik",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.677494,
+    "skor": 0.637617,
     "katman": "bge-m3",
-    "sure_ms": 101.63,
-    "basarili": true
+    "sure_ms": 106.05,
+    "basarili": false
   },
   {
     "id": "A05",
@@ -46,9 +46,9 @@
     "tespit_edilen_sektor": "turizm",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.85,
+    "skor": 0.687481,
     "katman": "bge-m3",
-    "sure_ms": 122.01,
+    "sure_ms": 143.19,
     "basarili": false
   },
   {
@@ -56,13 +56,13 @@
     "kategori": "A",
     "girdi_metni": "Biz askeri birlik değiliz, sadece okul kayıt sistemi istiyoruz",
     "beklenen_sektor": "eğitim",
-    "tespit_edilen_sektor": "belirsiz",
+    "tespit_edilen_sektor": "egitim",
     "beklenen_mod": "K2",
-    "tespit_edilen_mod": "FB",
-    "skor": 0.15,
-    "katman": "kisaltma",
-    "sure_ms": 0.31,
-    "basarili": false
+    "tespit_edilen_mod": "K2",
+    "skor": 0.6509986666666667,
+    "katman": "bge-m3",
+    "sure_ms": 110.7,
+    "basarili": true
   },
   {
     "id": "A07",
@@ -72,9 +72,9 @@
     "tespit_edilen_sektor": "saglik",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.85,
+    "skor": 0.831641,
     "katman": "bge-m3",
-    "sure_ms": 98.06,
+    "sure_ms": 104.36,
     "basarili": true
   },
   {
@@ -82,12 +82,12 @@
     "kategori": "A",
     "girdi_metni": "savunma radar projesi mi eğitim otomasyonu mu derseniz kesinlikle ilkini değil ikincisini seçeceğiz",
     "beklenen_sektor": "eğitim",
-    "tespit_edilen_sektor": "belirsiz",
+    "tespit_edilen_sektor": "bilisim",
     "beklenen_mod": "K2",
-    "tespit_edilen_mod": "FB",
-    "skor": 0.15,
-    "katman": "kisaltma",
-    "sure_ms": 0.57,
+    "tespit_edilen_mod": "K2",
+    "skor": 0.560014,
+    "katman": "bge-m3",
+    "sure_ms": 173.65,
     "basarili": false
   },
   {
@@ -98,9 +98,9 @@
     "tespit_edilen_sektor": "saglik",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.85,
+    "skor": 0.624819,
     "katman": "bge-m3",
-    "sure_ms": 104.98,
+    "sure_ms": 101.52,
     "basarili": true
   },
   {
@@ -108,13 +108,13 @@
     "kategori": "A",
     "girdi_metni": "savunma sanayi alanında çalışmıyoruz, okul ders programı otomasyonuna ihtiyacımız var",
     "beklenen_sektor": "eğitim",
-    "tespit_edilen_sektor": "belirsiz",
+    "tespit_edilen_sektor": "egitim",
     "beklenen_mod": "K2",
-    "tespit_edilen_mod": "FB",
-    "skor": 0.15,
-    "katman": "kisaltma",
-    "sure_ms": 0.15,
-    "basarili": false
+    "tespit_edilen_mod": "K2",
+    "skor": 0.6503399999999999,
+    "katman": "bge-m3",
+    "sure_ms": 130.12,
+    "basarili": true
   },
   {
     "id": "B01",
@@ -130,43 +130,17 @@
     "basarili": false
   },
   {
-    "id": "B02",
-    "kategori": "B",
-    "girdi_metni": "Şirketimiz hem otel işletiyor hem de özel okulu var, turizm ve eğitim yazılımı istiyoruz",
-    "beklenen_sektor": "tartışmalı",
-    "tespit_edilen_sektor": "turizm",
-    "beklenen_mod": "K2",
-    "tespit_edilen_mod": "K2",
-    "skor": 0.95,
-    "katman": "bge-m3",
-    "sure_ms": 128.59,
-    "basarili": true
-  },
-  {
     "id": "B03",
     "kategori": "B",
     "girdi_metni": "Hastane ve radar komuta kontrol sistemlerini birleştiren entegre bir yazılım arıyoruz",
     "beklenen_sektor": "sağlık",
-    "tespit_edilen_sektor": "saglik",
+    "tespit_edilen_sektor": "belirsiz",
     "beklenen_mod": "K2",
-    "tespit_edilen_mod": "K2",
-    "skor": 0.85,
-    "katman": "bge-m3",
-    "sure_ms": 124.12,
-    "basarili": true
-  },
-  {
-    "id": "B04",
-    "kategori": "B",
-    "girdi_metni": "Önce otel otomasyonunu tamamlayıp ardından personel eğitim platformunu entegre edeceğiz",
-    "beklenen_sektor": "tartışmalı",
-    "tespit_edilen_sektor": "turizm",
-    "beklenen_mod": "K2",
-    "tespit_edilen_mod": "K2",
-    "skor": 0.95,
-    "katman": "bge-m3",
-    "sure_ms": 126.65,
-    "basarili": true
+    "tespit_edilen_mod": "FB",
+    "skor": 0.0,
+    "katman": "kisaltma",
+    "sure_ms": 0.37,
+    "basarili": false
   },
   {
     "id": "B05",
@@ -178,7 +152,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.15,
     "katman": "kisaltma",
-    "sure_ms": 0.15,
+    "sure_ms": 0.13,
     "basarili": false
   },
   {
@@ -191,7 +165,7 @@
     "tespit_edilen_mod": "K1",
     "skor": 0.99,
     "katman": "kisaltma",
-    "sure_ms": 0.15,
+    "sure_ms": 0.14,
     "basarili": false
   },
   {
@@ -204,46 +178,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.632761,
     "katman": "bge-m3",
-    "sure_ms": 111.76,
-    "basarili": true
-  },
-  {
-    "id": "B08",
-    "kategori": "B",
-    "girdi_metni": "Sağlık ve turizm sektörlerini tek platformda buluşturan medikal turizm portalı kuracağız",
-    "beklenen_sektor": "tartışmalı",
-    "tespit_edilen_sektor": "saglik",
-    "beklenen_mod": "K2",
-    "tespit_edilen_mod": "K2",
-    "skor": 0.705402,
-    "katman": "bge-m3",
-    "sure_ms": 125.95,
-    "basarili": true
-  },
-  {
-    "id": "B09",
-    "kategori": "B",
-    "girdi_metni": "Askeri eğitim akademisi için hem şifreli komuta kontrol sistemi hem sınav otomasyonu arıyoruz",
-    "beklenen_sektor": "tartışmalı",
-    "tespit_edilen_sektor": "belirsiz",
-    "beklenen_mod": "K2",
-    "tespit_edilen_mod": "FB",
-    "skor": 0.15,
-    "katman": "kisaltma",
-    "sure_ms": 0.17,
-    "basarili": true
-  },
-  {
-    "id": "B10",
-    "kategori": "B",
-    "girdi_metni": "Eczane stok takip ile okul ders kayıt otomasyonunu aynı veri tabanında buluşturmak mümkün mi",
-    "beklenen_sektor": "tartışmalı",
-    "tespit_edilen_sektor": "egitim",
-    "beklenen_mod": "K2",
-    "tespit_edilen_mod": "K2",
-    "skor": 0.657085,
-    "katman": "bge-m3",
-    "sure_ms": 140.19,
+    "sure_ms": 117.6,
     "basarili": true
   },
   {
@@ -256,7 +191,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.646196,
     "katman": "bge-m3",
-    "sure_ms": 105.4,
+    "sure_ms": 116.43,
     "basarili": true
   },
   {
@@ -264,13 +199,13 @@
     "kategori": "C",
     "girdi_metni": "trzm sekt icn rzv programı",
     "beklenen_sektor": "turizm",
-    "tespit_edilen_sektor": "saglik",
+    "tespit_edilen_sektor": "turizm",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.497418,
+    "skor": 0.765255,
     "katman": "bge-m3",
-    "sure_ms": 110.25,
-    "basarili": false
+    "sure_ms": 114.38,
+    "basarili": true
   },
   {
     "id": "C04",
@@ -283,7 +218,7 @@
     "skor": 0.99,
     "katman": "kisaltma",
     "sure_ms": 0.1,
-    "basarili": false
+    "basarili": true
   },
   {
     "id": "C05",
@@ -293,9 +228,9 @@
     "tespit_edilen_sektor": "saglik",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.85,
+    "skor": 0.673074,
     "katman": "bge-m3",
-    "sure_ms": 107.73,
+    "sure_ms": 115.13,
     "basarili": true
   },
   {
@@ -308,7 +243,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.95,
     "katman": "bge-m3",
-    "sure_ms": 105.67,
+    "sure_ms": 411.97,
     "basarili": true
   },
   {
@@ -321,7 +256,7 @@
     "tespit_edilen_mod": "K1",
     "skor": 0.99,
     "katman": "kisaltma",
-    "sure_ms": 0.32,
+    "sure_ms": 0.59,
     "basarili": false
   },
   {
@@ -334,8 +269,8 @@
     "tespit_edilen_mod": "K1",
     "skor": 0.99,
     "katman": "kisaltma",
-    "sure_ms": 0.27,
-    "basarili": false
+    "sure_ms": 0.53,
+    "basarili": true
   },
   {
     "id": "C09",
@@ -345,9 +280,9 @@
     "tespit_edilen_sektor": "saglik",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.85,
+    "skor": 0.541224,
     "katman": "bge-m3",
-    "sure_ms": 111.37,
+    "sure_ms": 691.1,
     "basarili": true
   },
   {
@@ -358,9 +293,9 @@
     "tespit_edilen_sektor": "saglik",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.85,
+    "skor": 0.585862,
     "katman": "bge-m3",
-    "sure_ms": 95.27,
+    "sure_ms": 496.55,
     "basarili": true
   },
   {
@@ -371,9 +306,9 @@
     "tespit_edilen_sektor": "saglik",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.85,
+    "skor": 0.7626163333333333,
     "katman": "bge-m3",
-    "sure_ms": 104.7,
+    "sure_ms": 580.07,
     "basarili": true
   },
   {
@@ -386,8 +321,8 @@
     "tespit_edilen_mod": "K1",
     "skor": 0.99,
     "katman": "kisaltma",
-    "sure_ms": 0.71,
-    "basarili": false
+    "sure_ms": 0.53,
+    "basarili": true
   },
   {
     "id": "D04",
@@ -397,9 +332,9 @@
     "tespit_edilen_sektor": "turizm",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.85,
+    "skor": 0.802127,
     "katman": "bge-m3",
-    "sure_ms": 103.33,
+    "sure_ms": 585.43,
     "basarili": true
   },
   {
@@ -412,7 +347,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.95,
     "katman": "bge-m3",
-    "sure_ms": 103.96,
+    "sure_ms": 598.01,
     "basarili": true
   },
   {
@@ -425,7 +360,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.66965,
     "katman": "bge-m3",
-    "sure_ms": 106.88,
+    "sure_ms": 596.77,
     "basarili": true
   },
   {
@@ -438,7 +373,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.736764,
     "katman": "bge-m3",
-    "sure_ms": 97.79,
+    "sure_ms": 484.63,
     "basarili": false
   },
   {
@@ -451,7 +386,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.871548,
     "katman": "bge-m3",
-    "sure_ms": 108.97,
+    "sure_ms": 658.47,
     "basarili": true
   },
   {
@@ -462,9 +397,9 @@
     "tespit_edilen_sektor": "saglik",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.85,
+    "skor": 0.7071426666666666,
     "katman": "bge-m3",
-    "sure_ms": 257.56,
+    "sure_ms": 843.48,
     "basarili": true
   },
   {
@@ -477,8 +412,8 @@
     "tespit_edilen_mod": "HAFIZA",
     "skor": 0.95,
     "katman": "hafiza",
-    "sure_ms": 234.94,
-    "basarili": false
+    "sure_ms": 323.29,
+    "basarili": true
   },
   {
     "id": "E04",
@@ -487,23 +422,10 @@
     "beklenen_sektor": "eğitim",
     "tespit_edilen_sektor": "egitim",
     "beklenen_mod": "K2",
-    "tespit_edilen_mod": "K2",
-    "skor": 0.85,
-    "katman": "bge-m3",
-    "sure_ms": 259.8,
-    "basarili": true
-  },
-  {
-    "id": "E05",
-    "kategori": "E",
-    "girdi_metni": "Firmamız sağlık turizmi alanında yeni bir yatırım yapmakta olup, yabancı hastaların ülkemizdeki hastane ve otel konaklama rezervasyonlarını entegre bir biçimde takip edecekleri bir portal aramaktadır. Bu yönde bir çözümünüz bulunmakta mıdır?",
-    "beklenen_sektor": "tartışmalı",
-    "tespit_edilen_sektor": "turizm",
-    "beklenen_mod": "K2",
-    "tespit_edilen_mod": "K2",
-    "skor": 0.95,
-    "katman": "bge-m3",
-    "sure_ms": 189.28,
+    "tespit_edilen_mod": "HAFIZA",
+    "skor": 0.705312,
+    "katman": "hafiza",
+    "sure_ms": 327.12,
     "basarili": true
   },
   {
@@ -516,8 +438,8 @@
     "tespit_edilen_mod": "K1",
     "skor": 0.99,
     "katman": "kisaltma",
-    "sure_ms": 0.25,
-    "basarili": false
+    "sure_ms": 0.16,
+    "basarili": true
   },
   {
     "id": "E08",
@@ -527,9 +449,9 @@
     "tespit_edilen_sektor": "saglik",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.85,
+    "skor": 0.7303936666666667,
     "katman": "bge-m3",
-    "sure_ms": 192.73,
+    "sure_ms": 190.92,
     "basarili": true
   },
   {
@@ -542,47 +464,47 @@
     "tespit_edilen_mod": "HAFIZA",
     "skor": 0.95,
     "katman": "hafiza",
-    "sure_ms": 202.27,
-    "basarili": false
+    "sure_ms": 209.58,
+    "basarili": true
   },
   {
     "id": "F01",
     "kategori": "F",
     "girdi_metni": "Sağlıklı bir iş ortaklığı kurmak istiyoruz.",
     "beklenen_sektor": "belirsiz",
-    "tespit_edilen_sektor": "saglik",
+    "tespit_edilen_sektor": "belirsiz",
     "beklenen_mod": "FB",
-    "tespit_edilen_mod": "K2",
-    "skor": 0.581899,
+    "tespit_edilen_mod": "FB",
+    "skor": 0.569344,
     "katman": "bge-m3",
-    "sure_ms": 102.29,
-    "basarili": false
+    "sure_ms": 129.34,
+    "basarili": true
   },
   {
     "id": "F02",
     "kategori": "F",
     "girdi_metni": "Turistik bir bölgede ofisimiz var ama yazılım hizmeti arıyoruz.",
     "beklenen_sektor": "belirsiz",
-    "tespit_edilen_sektor": "turizm",
+    "tespit_edilen_sektor": "belirsiz",
     "beklenen_mod": "FB",
-    "tespit_edilen_mod": "K2",
-    "skor": 0.893491,
-    "katman": "bge-m3",
-    "sure_ms": 112.61,
-    "basarili": false
+    "tespit_edilen_mod": "FB",
+    "skor": 0.0,
+    "katman": "kisaltma",
+    "sure_ms": 0.33,
+    "basarili": true
   },
   {
     "id": "F03",
     "kategori": "F",
     "girdi_metni": "Eğitimli personel arıyoruz, işe alım konusunda yardımcı olur musunuz?",
     "beklenen_sektor": "belirsiz",
-    "tespit_edilen_sektor": "egitim",
+    "tespit_edilen_sektor": "belirsiz",
     "beklenen_mod": "FB",
-    "tespit_edilen_mod": "K2",
-    "skor": 0.85,
-    "katman": "bge-m3",
-    "sure_ms": 112.32,
-    "basarili": false
+    "tespit_edilen_mod": "FB",
+    "skor": 0.0,
+    "katman": "kisaltma",
+    "sure_ms": 0.29,
+    "basarili": true
   },
   {
     "id": "F04",
@@ -594,7 +516,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.15,
     "katman": "kisaltma",
-    "sure_ms": 0.13,
+    "sure_ms": 0.11,
     "basarili": true
   },
   {
@@ -605,9 +527,9 @@
     "tespit_edilen_sektor": "belirsiz",
     "beklenen_mod": "FB",
     "tespit_edilen_mod": "FB",
-    "skor": 0.625496,
-    "katman": "bge-m3",
-    "sure_ms": 119.35,
+    "skor": 0.0,
+    "katman": "kisaltma",
+    "sure_ms": 0.3,
     "basarili": true
   },
   {
@@ -615,13 +537,13 @@
     "kategori": "F",
     "girdi_metni": "Otel konforunda bir çalışma ortamı sunan yeni ofisimize bekleriz.",
     "beklenen_sektor": "belirsiz",
-    "tespit_edilen_sektor": "turizm",
+    "tespit_edilen_sektor": "belirsiz",
     "beklenen_mod": "FB",
-    "tespit_edilen_mod": "K2",
-    "skor": 0.95,
-    "katman": "bge-m3",
-    "sure_ms": 113.98,
-    "basarili": false
+    "tespit_edilen_mod": "FB",
+    "skor": 0.0,
+    "katman": "kisaltma",
+    "sure_ms": 0.28,
+    "basarili": true
   },
   {
     "id": "F07",
@@ -633,7 +555,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.15,
     "katman": "kisaltma",
-    "sure_ms": 0.14,
+    "sure_ms": 0.12,
     "basarili": true
   },
   {
@@ -644,9 +566,9 @@
     "tespit_edilen_sektor": "belirsiz",
     "beklenen_mod": "FB",
     "tespit_edilen_mod": "FB",
-    "skor": 0.565642,
+    "skor": 0.569424,
     "katman": "bge-m3",
-    "sure_ms": 107.34,
+    "sure_ms": 139.03,
     "basarili": true
   },
   {
@@ -654,39 +576,39 @@
     "kategori": "F",
     "girdi_metni": "Sağlığınızı korumak için günde en az iki litre su içmelisiniz.",
     "beklenen_sektor": "belirsiz",
-    "tespit_edilen_sektor": "eglence",
+    "tespit_edilen_sektor": "belirsiz",
     "beklenen_mod": "FB",
-    "tespit_edilen_mod": "K2",
-    "skor": 0.471064,
+    "tespit_edilen_mod": "FB",
+    "skor": 0.470401,
     "katman": "bge-m3",
-    "sure_ms": 116.5,
-    "basarili": false
+    "sure_ms": 237.79,
+    "basarili": true
   },
   {
     "id": "F10",
     "kategori": "F",
     "girdi_metni": "Turizm cenneti olan ülkemizde yeni ofisler açmayı hedefliyoruz.",
     "beklenen_sektor": "belirsiz",
-    "tespit_edilen_sektor": "turizm",
+    "tespit_edilen_sektor": "belirsiz",
     "beklenen_mod": "FB",
-    "tespit_edilen_mod": "K2",
-    "skor": 0.85,
+    "tespit_edilen_mod": "FB",
+    "skor": 0.613035,
     "katman": "bge-m3",
-    "sure_ms": 118.53,
-    "basarili": false
+    "sure_ms": 724.63,
+    "basarili": true
   },
   {
     "id": "F11",
     "kategori": "F",
     "girdi_metni": "Çalışanlarımız için çok eğlenceli bir iş ortamı sunuyoruz.",
     "beklenen_sektor": "belirsiz",
-    "tespit_edilen_sektor": "saglik",
+    "tespit_edilen_sektor": "belirsiz",
     "beklenen_mod": "FB",
-    "tespit_edilen_mod": "K2",
-    "skor": 0.632554,
+    "tespit_edilen_mod": "FB",
+    "skor": 0.637789,
     "katman": "bge-m3",
-    "sure_ms": 111.43,
-    "basarili": false
+    "sure_ms": 675.91,
+    "basarili": true
   },
   {
     "id": "F12",
@@ -696,9 +618,9 @@
     "tespit_edilen_sektor": "belirsiz",
     "beklenen_mod": "FB",
     "tespit_edilen_mod": "FB",
-    "skor": 0.599768,
+    "skor": 0.600889,
     "katman": "bge-m3",
-    "sure_ms": 114.61,
+    "sure_ms": 705.13,
     "basarili": true
   },
   {
@@ -706,13 +628,13 @@
     "kategori": "F",
     "girdi_metni": "Bilişim gibi hızlı büyüyen bir sektörde olmak istiyoruz ama biz aslında bir çiftlik işletmesiyiz.",
     "beklenen_sektor": "belirsiz",
-    "tespit_edilen_sektor": "bilisim",
+    "tespit_edilen_sektor": "belirsiz",
     "beklenen_mod": "FB",
-    "tespit_edilen_mod": "K2",
-    "skor": 0.592931,
+    "tespit_edilen_mod": "FB",
+    "skor": 0.53537,
     "katman": "bge-m3",
-    "sure_ms": 128.62,
-    "basarili": false
+    "sure_ms": 393.92,
+    "basarili": true
   },
   {
     "id": "F14",
@@ -722,9 +644,9 @@
     "tespit_edilen_sektor": "belirsiz",
     "beklenen_mod": "FB",
     "tespit_edilen_mod": "FB",
-    "skor": 0.665532,
+    "skor": 0.652343,
     "katman": "bge-m3",
-    "sure_ms": 138.02,
+    "sure_ms": 139.79,
     "basarili": true
   },
   {
@@ -732,26 +654,26 @@
     "kategori": "G",
     "girdi_metni": "Fiyat teklifi almak istiyorum",
     "beklenen_sektor": "belirsiz",
-    "tespit_edilen_sektor": "turizm",
+    "tespit_edilen_sektor": "belirsiz",
     "beklenen_mod": "FB",
-    "tespit_edilen_mod": "K2",
-    "skor": 0.672569,
+    "tespit_edilen_mod": "FB",
+    "skor": 1.0,
     "katman": "bge-m3",
-    "sure_ms": 97.12,
-    "basarili": false
+    "sure_ms": 123.93,
+    "basarili": true
   },
   {
     "id": "G02",
     "kategori": "G",
     "girdi_metni": "Ne kadar sürer?",
     "beklenen_sektor": "belirsiz",
-    "tespit_edilen_sektor": "saglik",
+    "tespit_edilen_sektor": "belirsiz",
     "beklenen_mod": "FB",
-    "tespit_edilen_mod": "K2",
-    "skor": 0.528846,
+    "tespit_edilen_mod": "FB",
+    "skor": 0.544615,
     "katman": "bge-m3",
-    "sure_ms": 97.18,
-    "basarili": false
+    "sure_ms": 173.85,
+    "basarili": true
   },
   {
     "id": "G03",
@@ -760,10 +682,10 @@
     "beklenen_sektor": "belirsiz",
     "tespit_edilen_sektor": "saglik",
     "beklenen_mod": "FB",
-    "tespit_edilen_mod": "K2",
+    "tespit_edilen_mod": "HAFIZA",
     "skor": 0.640012,
-    "katman": "bge-m3",
-    "sure_ms": 103.28,
+    "katman": "hafiza",
+    "sure_ms": 113.26,
     "basarili": false
   },
   {
@@ -771,64 +693,64 @@
     "kategori": "G",
     "girdi_metni": "Fiyatlandırma nasıl?",
     "beklenen_sektor": "belirsiz",
-    "tespit_edilen_sektor": "eglence",
+    "tespit_edilen_sektor": "belirsiz",
     "beklenen_mod": "FB",
-    "tespit_edilen_mod": "K2",
-    "skor": 0.539465,
+    "tespit_edilen_mod": "FB",
+    "skor": 0.718813,
     "katman": "bge-m3",
-    "sure_ms": 94.12,
-    "basarili": false
+    "sure_ms": 98.67,
+    "basarili": true
   },
   {
     "id": "G05",
     "kategori": "G",
     "girdi_metni": "Referanslarınız var mı?",
     "beklenen_sektor": "belirsiz",
-    "tespit_edilen_sektor": "bilisim",
+    "tespit_edilen_sektor": "belirsiz",
     "beklenen_mod": "FB",
-    "tespit_edilen_mod": "K2",
-    "skor": 0.595047,
+    "tespit_edilen_mod": "FB",
+    "skor": 0.563212,
     "katman": "bge-m3",
-    "sure_ms": 93.41,
-    "basarili": false
+    "sure_ms": 96.94,
+    "basarili": true
   },
   {
     "id": "G06",
     "kategori": "G",
     "girdi_metni": "Demo yapabilir miyiz?",
     "beklenen_sektor": "belirsiz",
-    "tespit_edilen_sektor": "turizm",
+    "tespit_edilen_sektor": "belirsiz",
     "beklenen_mod": "FB",
-    "tespit_edilen_mod": "K2",
-    "skor": 0.584559,
+    "tespit_edilen_mod": "FB",
+    "skor": 0.845367,
     "katman": "bge-m3",
-    "sure_ms": 96.16,
-    "basarili": false
+    "sure_ms": 104.71,
+    "basarili": true
   },
   {
     "id": "G07",
     "kategori": "G",
     "girdi_metni": "Çözümlerinizin kurulum süresi ortalama kaç gündür?",
     "beklenen_sektor": "belirsiz",
-    "tespit_edilen_sektor": "bilisim",
+    "tespit_edilen_sektor": "belirsiz",
     "beklenen_mod": "FB",
-    "tespit_edilen_mod": "K2",
-    "skor": 0.612388,
+    "tespit_edilen_mod": "FB",
+    "skor": 0.559586,
     "katman": "bge-m3",
-    "sure_ms": 104.9,
-    "basarili": false
+    "sure_ms": 110.53,
+    "basarili": true
   },
   {
     "id": "G08",
     "kategori": "G",
     "girdi_metni": "Teknik destek hizmetleriniz 7/24 aktif mi?",
     "beklenen_sektor": "belirsiz",
-    "tespit_edilen_sektor": "bilisim",
+    "tespit_edilen_sektor": "saglik",
     "beklenen_mod": "FB",
     "tespit_edilen_mod": "K2",
-    "skor": 0.54865,
+    "skor": 0.504713,
     "katman": "bge-m3",
-    "sure_ms": 105.02,
+    "sure_ms": 123.88,
     "basarili": false
   },
   {
@@ -836,26 +758,26 @@
     "kategori": "G",
     "girdi_metni": "Ofisiniz nerede bulunuyor?",
     "beklenen_sektor": "belirsiz",
-    "tespit_edilen_sektor": "turizm",
+    "tespit_edilen_sektor": "belirsiz",
     "beklenen_mod": "FB",
-    "tespit_edilen_mod": "K2",
-    "skor": 0.54676,
+    "tespit_edilen_mod": "FB",
+    "skor": 0.627874,
     "katman": "bge-m3",
-    "sure_ms": 97.37,
-    "basarili": false
+    "sure_ms": 102.0,
+    "basarili": true
   },
   {
     "id": "G10",
     "kategori": "G",
     "girdi_metni": "Mail adresinizi alabilir miyim?",
     "beklenen_sektor": "belirsiz",
-    "tespit_edilen_sektor": "egitim",
+    "tespit_edilen_sektor": "belirsiz",
     "beklenen_mod": "FB",
-    "tespit_edilen_mod": "K2",
-    "skor": 0.580028,
+    "tespit_edilen_mod": "FB",
+    "skor": 0.637694,
     "katman": "bge-m3",
-    "sure_ms": 103.01,
-    "basarili": false
+    "sure_ms": 111.42,
+    "basarili": true
   },
   {
     "id": "H01",
@@ -865,9 +787,9 @@
     "tespit_edilen_sektor": "turizm",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.85,
+    "skor": 0.654639,
     "katman": "bge-m3",
-    "sure_ms": 97.22,
+    "sure_ms": 105.1,
     "basarili": true
   },
   {
@@ -880,7 +802,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 1.0,
     "katman": "kisaltma",
-    "sure_ms": 0.12,
+    "sure_ms": 0.11,
     "basarili": true
   },
   {
@@ -914,13 +836,13 @@
     "kategori": "H",
     "girdi_metni": "sağlık sağlık sağlık sağlık sağlık sağlık sağlık sağlık sağlık sağlık",
     "beklenen_sektor": "sağlık",
-    "tespit_edilen_sektor": "saglik",
+    "tespit_edilen_sektor": "belirsiz",
     "beklenen_mod": "K2",
-    "tespit_edilen_mod": "K2",
-    "skor": 0.567787,
+    "tespit_edilen_mod": "FB",
+    "skor": 0.527327,
     "katman": "bge-m3",
-    "sure_ms": 107.89,
-    "basarili": true
+    "sure_ms": 117.16,
+    "basarili": false
   },
   {
     "id": "H06",
@@ -932,7 +854,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 1.0,
     "katman": "kisaltma",
-    "sure_ms": 0.12,
+    "sure_ms": 0.13,
     "basarili": true
   },
   {
@@ -956,9 +878,9 @@
     "tespit_edilen_sektor": "turizm",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.614306,
+    "skor": 0.606365,
     "katman": "bge-m3",
-    "sure_ms": 99.97,
+    "sure_ms": 128.99,
     "basarili": true
   },
   {
@@ -966,13 +888,13 @@
     "kategori": "H",
     "girdi_metni": "savunma değil eğitim değil sağlık hiç değil, otel yazın",
     "beklenen_sektor": "turizm",
-    "tespit_edilen_sektor": "belirsiz",
+    "tespit_edilen_sektor": "turizm",
     "beklenen_mod": "K2",
-    "tespit_edilen_mod": "FB",
-    "skor": 0.15,
-    "katman": "kisaltma",
-    "sure_ms": 0.36,
-    "basarili": false
+    "tespit_edilen_mod": "K2",
+    "skor": 0.95,
+    "katman": "bge-m3",
+    "sure_ms": 118.43,
+    "basarili": true
   },
   {
     "id": "H10",
@@ -984,8 +906,8 @@
     "tespit_edilen_mod": "K1",
     "skor": 1.0,
     "katman": "kisaltma",
-    "sure_ms": 0.16,
-    "basarili": false
+    "sure_ms": 0.2,
+    "basarili": true
   },
   {
     "id": "H16",
@@ -995,9 +917,9 @@
     "tespit_edilen_sektor": "bilisim",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.85,
+    "skor": 0.658523,
     "katman": "bge-m3",
-    "sure_ms": 102.54,
+    "sure_ms": 117.29,
     "basarili": true
   },
   {
@@ -1008,9 +930,9 @@
     "tespit_edilen_sektor": "saglik",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.678727,
+    "skor": 0.6738996666666667,
     "katman": "bge-m3",
-    "sure_ms": 94.5,
+    "sure_ms": 99.93,
     "basarili": true
   },
   {
@@ -1023,7 +945,7 @@
     "tespit_edilen_mod": "HAFIZA",
     "skor": 0.95,
     "katman": "hafiza",
-    "sure_ms": 97.35,
+    "sure_ms": 106.13,
     "basarili": true
   },
   {
@@ -1036,7 +958,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.95,
     "katman": "bge-m3",
-    "sure_ms": 108.93,
+    "sure_ms": 110.83,
     "basarili": true
   },
   {
@@ -1049,7 +971,7 @@
     "tespit_edilen_mod": "HAFIZA",
     "skor": 0.95,
     "katman": "hafiza",
-    "sure_ms": 102.57,
+    "sure_ms": 104.01,
     "basarili": true
   },
   {
@@ -1062,7 +984,7 @@
     "tespit_edilen_mod": "HAFIZA",
     "skor": 0.95,
     "katman": "hafiza",
-    "sure_ms": 99.8,
+    "sure_ms": 104.87,
     "basarili": true
   },
   {
@@ -1073,9 +995,9 @@
     "tespit_edilen_sektor": "egitim",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.85,
+    "skor": 0.6909593333333333,
     "katman": "bge-m3",
-    "sure_ms": 98.99,
+    "sure_ms": 128.09,
     "basarili": true
   },
   {
@@ -1085,10 +1007,10 @@
     "beklenen_sektor": "eğitim",
     "tespit_edilen_sektor": "egitim",
     "beklenen_mod": "HAFIZA",
-    "tespit_edilen_mod": "HAFIZA",
+    "tespit_edilen_mod": "K1",
     "skor": 0.99,
-    "katman": "hafiza",
-    "sure_ms": 0.16,
+    "katman": "kisaltma",
+    "sure_ms": 0.13,
     "basarili": true
   }
 ]
