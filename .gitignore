@@ -19,3 +19,15 @@ db_api/postman_collection.json
 db_api/postman_environment.json
 db_api/generate_postman.py
 db_api/POSTMAN.md
+
+# Diger gereksizler / Debug ve Raporlama
+scratch/
+reports/
+cleanup.py
+verify_fixes.py
+
+# Ölü Kod / Tekrar Eden Dosyalar (Silinecekler)
+src/router_server.py
+src/frontend.py
+run_router_8001.py
+app.py

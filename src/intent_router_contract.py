@@ -28,7 +28,21 @@ from __future__ import annotations
 
 from typing import Any
 
-from src.chatbot import MIN_BGE, ChatbotResponse, to_ascii, _normalize
+from src.chitchat_rules import to_ascii, _normalize
+from dataclasses import dataclass
+
+@dataclass
+class ChatbotResponse:
+    """Chatbot'un eski UI sözleşmesi - sadece test scriptleri için korundu."""
+    sektor: str
+    mod: str
+    yontem: str
+    skor: float
+    girdi: str = ""
+    normalize_girdi: str = ""
+    lang: str = "tr"
+
+MIN_BGE = 0.71
 
 # TR sektör → spec sector
 SECTOR_MAP: dict[str, str] = {

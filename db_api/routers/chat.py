@@ -42,11 +42,11 @@ _SECTOR_TR: dict[str, str] = {
 
 @lru_cache(maxsize=1)
 def _get_bot():
-    from src.chatbot import Chatbot
+    from src.v2_pipeline import V2IntentPipeline
     from src.embedder import reset_embedder
 
     reset_embedder()
-    return Chatbot(force_simulated_rewriter=True)
+    return V2IntentPipeline()
 
 
 def _lookup_url(db: Session, sector: str, st: str) -> str | None:
@@ -103,15 +103,17 @@ def chat_turn(body: ChatTurnRequest, db: Session = Depends(get_db)):
             sid_key = f"api-{body.session_id}"
         else:
             sid_key = f"api-{body.user_identifier}"
-        resp = bot.sor(msg, session_id=sid_key)
+        resp = bot.run(msg, session_id=sid_key)
     except Exception as exc:  # noqa: BLE001
         raise HTTPException(503, f"router unavailable: {exc}") from exc
 
     latency_ms = int(round((time.perf_counter() - t0) * 1000))
-    router_json = resp.to_intent_router(latency_ms=latency_ms)
-    intent = router_json["intent"]
-    st = router_json["status"]
-    sector = intent["sector"]
+    layer = resp.layer
+    st = resp.status
+    sector = resp.sector
+    sub_intent = resp.sub_intent
+    confidence = float(resp.confidence_score)
+
     url = _lookup_url(db, sector, st)
     reply = _build_reply(st, sector, url)
 
@@ -124,9 +126,9 @@ def chat_turn(body: ChatTurnRequest, db: Session = Depends(get_db)):
             session_id=body.session_id,
             user_message=msg,
             bot_message=reply,
-            intent=intent.get("sub_intent"),
-            layer_hit=resp.mod,
-            confidence=float(intent.get("confidence_score") or 0),
+            intent=sub_intent,
+            layer_hit=layer,
+            confidence=confidence,
             response_ms=latency_ms,
             source="api",
         ),

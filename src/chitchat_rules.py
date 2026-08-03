@@ -20,7 +20,15 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass
 
-from src.chatbot import to_ascii, _normalize
+_TR_TO_ASCII = str.maketrans("çğıöşüÇĞİÖŞÜ", "cgiosucgiosu")
+_WS = re.compile(r"\s+")
+
+def _normalize(text: str) -> str:
+    t = (text or "").strip().lower()
+    return _WS.sub(" ", t)
+
+def to_ascii(text: str) -> str:
+    return (text or "").translate(_TR_TO_ASCII)
 
 # ---------------------------------------------------------------------------
 # Yanıt metinleri (redirect_url her zaman "")
