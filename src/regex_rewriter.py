@@ -1,5 +1,5 @@
 """
-LLM Query Rewriter
+Regex Query Rewriter
 ==================
 Sınıflandırma YAPMAZ. Kaotik kullanıcı metnini "saf arama sorgusuna" çevirir.
 
@@ -67,54 +67,6 @@ Temiz arama sorgusu:"""
 # ---------------------------------------------------------------------------
 # API backend
 # ---------------------------------------------------------------------------
-class OpenAICompatibleRewriter:
-    """OpenAI-uyumlu Chat Completions API (opsiyonel)."""
-
-    def __init__(
-        self,
-        api_key: str,
-        base_url: str = "https://api.openai.com/v1",
-        model: str = "gpt-4o-mini",
-    ) -> None:
-        self.api_key = api_key
-        self.base_url = base_url.rstrip("/")
-        self.model = model
-
-    def rewrite(self, text: str) -> RewriteResult:
-        import json
-        import urllib.error
-        import urllib.request
-
-        payload = {
-            "model": self.model,
-            "temperature": 0,
-            "messages": [
-                {"role": "system", "content": REWRITE_SYSTEM},
-                {"role": "user", "content": REWRITE_USER_TMPL.format(text=text)},
-            ],
-        }
-        req = urllib.request.Request(
-            f"{self.base_url}/chat/completions",
-            data=json.dumps(payload).encode("utf-8"),
-            headers={
-                "Authorization": f"Bearer {self.api_key}",
-                "Content-Type": "application/json",
-            },
-            method="POST",
-        )
-        try:
-            with urllib.request.urlopen(req, timeout=30) as resp:
-                data = json.loads(resp.read().decode("utf-8"))
-            clean = data["choices"][0]["message"]["content"].strip().strip('"')
-            clean = re.sub(r"\s+", " ", clean)
-            if not clean:
-                raise ValueError("empty rewrite")
-            return RewriteResult(text, clean, "api", "OpenAI-compatible rewrite")
-        except (urllib.error.URLError, KeyError, ValueError, TimeoutError) as exc:
-            # API düşerse simülasyona düş
-            sim = SimulatedLLMBackend().rewrite(text)
-            sim.note = f"API hata → simulated ({exc})"
-            return sim
 
 
 # ---------------------------------------------------------------------------
@@ -384,7 +336,7 @@ def _normalize_surface_noise(text: str) -> str:
     return t
 
 
-class SimulatedLLMBackend:
+class RegexRewriter:
     """
     Çevrimiçi LLM yokken aynı sözleşmeyi yerine getirir.
     Bağlaç ezberi yok: tüm clause'lar skorlanır, kazanan sıkıştırılır.
@@ -477,28 +429,3 @@ class SimulatedLLMBackend:
         )
 
 
-# ---------------------------------------------------------------------------
-# Facade
-# ---------------------------------------------------------------------------
-class LLMRewriter:
-    """
-    Kullanım:
-        rw = LLMRewriter()                 # otomatik backend
-        rw = LLMRewriter(force_simulated=True)
-        result = rw.rewrite(kullanici_metni)
-    """
-
-    def __init__(self, force_simulated: bool = False) -> None:
-        self._backend: RewriterBackend
-        api_key = os.getenv("LLM_REWRITER_API_KEY") or os.getenv("OPENAI_API_KEY")
-        if force_simulated or not api_key:
-            self._backend = SimulatedLLMBackend()
-            self.mode = "simulated"
-        else:
-            base = os.getenv("LLM_REWRITER_BASE_URL", "https://api.openai.com/v1")
-            model = os.getenv("LLM_REWRITER_MODEL", "gpt-4o-mini")
-            self._backend = OpenAICompatibleRewriter(api_key, base, model)
-            self.mode = "api"
-
-    def rewrite(self, text: str) -> RewriteResult:
-        return self._backend.rewrite(text)

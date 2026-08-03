@@ -361,7 +361,7 @@ class V2IntentPipeline:
 
     def run(self, query: str, session_id: str | None = None, force_lang: str | None = None) -> V2PipelineResult:
         from src.models.torch_runtime import configure_torch_threads
-        from src.llm_rewriter import LLMRewriter
+        from src.regex_rewriter import RegexRewriter
 
         t0 = time.perf_counter()
         aktif_sektor = self.get_aktif_sektor(session_id)
@@ -370,7 +370,7 @@ class V2IntentPipeline:
         has_negation = any(w in query.lower() for w in negation_keywords)
         
         if has_negation:
-            rewriter = LLMRewriter(force_simulated=True)
+            rewriter = RegexRewriter()
             rewritten = rewriter.rewrite(query)
             rewritten_query = rewritten.clean_query
             negated_sectors_normalized = [map_sector(s) for s in rewritten.negated_sectors]

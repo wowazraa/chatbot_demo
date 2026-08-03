@@ -10041,19 +10041,6 @@
       "ascii_twin": true
     },
     {
-      "id": 400289,
-      "mesaj": "hekim takvimi çözümüne ihtiyacımız var",
-      "lang": "tr",
-      "beklenen_sektor": "saglik",
-      "beklenen_mod": "K2",
-      "zorluk": "augmented_prefix_suffix",
-      "kaynak_kok": "hekim takvimi",
-      "varyant": "suffix",
-      "prefix": "",
-      "suffix": "çözümüne ihtiyacımız var",
-      "ascii_twin": false
-    },
-    {
       "id": 400369,
       "mesaj": "yeni bir hekim takvimi sistemi lazım",
       "lang": "tr",
@@ -10951,19 +10938,6 @@
       "ascii_twin": true
     },
     {
-      "id": 400283,
-      "mesaj": "hızlıca hekim takvimi",
-      "lang": "tr",
-      "beklenen_sektor": "saglik",
-      "beklenen_mod": "K2",
-      "zorluk": "augmented_prefix_suffix",
-      "kaynak_kok": "hekim takvimi",
-      "varyant": "prefix",
-      "prefix": "hızlıca",
-      "suffix": "",
-      "ascii_twin": false
-    },
-    {
       "id": 401303,
       "mesaj": "hizlica AHBS yazilimi gerekiyor",
       "lang": "tr",
@@ -11234,19 +11208,6 @@
       "varyant": "prefix_suffix",
       "prefix": "acil olarak",
       "suffix": "yazılımı gerekiyor",
-      "ascii_twin": false
-    },
-    {
-      "id": 400282,
-      "mesaj": "bize hekim takvimi",
-      "lang": "tr",
-      "beklenen_sektor": "saglik",
-      "beklenen_mod": "K2",
-      "zorluk": "augmented_prefix_suffix",
-      "kaynak_kok": "hekim takvimi",
-      "varyant": "prefix",
-      "prefix": "bize",
-      "suffix": "",
       "ascii_twin": false
     },
     {
@@ -13574,19 +13535,6 @@
       "varyant": "duz",
       "prefix": "",
       "suffix": "",
-      "ascii_twin": false
-    },
-    {
-      "id": 400286,
-      "mesaj": "hekim takvimi entegrasyonu istiyoruz",
-      "lang": "tr",
-      "beklenen_sektor": "saglik",
-      "beklenen_mod": "K2",
-      "zorluk": "augmented_prefix_suffix",
-      "kaynak_kok": "hekim takvimi",
-      "varyant": "suffix",
-      "prefix": "",
-      "suffix": "entegrasyonu istiyoruz",
       "ascii_twin": false
     },
     {

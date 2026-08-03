@@ -5860,14 +5860,6 @@
       "zorluk": "uzun_kurumsal"
     },
     {
-      "id": 400279,
-      "kaynak": "admin_panel_augmented",
-      "mesaj": "Mevcut işleyişimizi hızlandırmak maksadıyla sistemi ve booking alanında kalıcı ve güvenilir bir partner arayışındayız.",
-      "beklenen_sektor": "turizm",
-      "beklenen_mod": "K2",
-      "zorluk": "uzun_kurumsal"
-    },
-    {
       "id": 400280,
       "kaynak": "admin_panel_augmented",
       "mesaj": "Operasyonel maliyetlerimizi düşürmek ve takip standartlarımızı yükseltmek için acil olarak desteğinize ihtiyacımız var.",
@@ -5879,22 +5871,6 @@
       "id": 400281,
       "kaynak": "admin_panel_augmented",
       "mesaj": "Ekiplerimizin verimliliğini artırmak adına acilen takip ve talep etmekteyiz odaklı yeni bir sisteme geçiş yapmayı planlıyoruz.",
-      "beklenen_sektor": "turizm",
-      "beklenen_mod": "K2",
-      "zorluk": "uzun_kurumsal"
-    },
-    {
-      "id": 400282,
-      "kaynak": "admin_panel",
-      "mesaj": "Şirketimiz için otel rezervasyon ve uçak bileti takip sistemi entegre etmek istiyoruz.",
-      "beklenen_sektor": "turizm",
-      "beklenen_mod": "K2",
-      "zorluk": "uzun_kurumsal"
-    },
-    {
-      "id": 400283,
-      "kaynak": "admin_panel_augmented",
-      "mesaj": "Operasyonel maliyetlerimizi düşürmek ve uçak standartlarımızı yükseltmek için acil olarak desteğinize ihtiyacımız var.",
       "beklenen_sektor": "turizm",
       "beklenen_mod": "K2",
       "zorluk": "uzun_kurumsal"
@@ -5916,14 +5892,6 @@
       "zorluk": "uzun_kurumsal"
     },
     {
-      "id": 400286,
-      "kaynak": "admin_panel",
-      "mesaj": "Şirketimiz için otel rezervasyon ve uçak bileti takip sistemi entegre etmek istiyoruz.",
-      "beklenen_sektor": "turizm",
-      "beklenen_mod": "K2",
-      "zorluk": "uzun_kurumsal"
-    },
-    {
       "id": 400287,
       "kaynak": "admin_panel_augmented",
       "mesaj": "Ekiplerimizin verimliliğini artırmak adına acilen yer ayırtma ve Şirketimiz odaklı yeni bir sisteme geçiş yapmayı planlıyoruz.",
@@ -5935,14 +5903,6 @@
       "id": 400288,
       "kaynak": "admin_panel_augmented",
       "mesaj": "Acaba takip ve uçak ihtiyaçlarımız için bize ne tür alternatifler sunabilirsiniz, detaylı bir fiyatlandırma alabilir miyim?",
-      "beklenen_sektor": "turizm",
-      "beklenen_mod": "K2",
-      "zorluk": "uzun_kurumsal"
-    },
-    {
-      "id": 400289,
-      "kaynak": "admin_panel_augmented",
-      "mesaj": "Operasyonel maliyetlerimizi düşürmek ve bileti ve uçak standartlarımızı yükseltmek için acil olarak desteğinize ihtiyacımız var.",
       "beklenen_sektor": "turizm",
       "beklenen_mod": "K2",
       "zorluk": "uzun_kurumsal"
