@@ -25,7 +25,8 @@ from fastapi.exception_handlers import (
 )
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, HTMLResponse
+from fastapi.staticfiles import StaticFiles
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
 from db_api.routers import admin_qa, chat, conversations, health
@@ -73,11 +74,10 @@ app.include_router(admin_qa.router, prefix=API)
 
 @app.get("/", tags=["health"])
 def root():
-    return {
-        "service": "chatbot-chat-api",
-        "version": "2.2.0",
-        "post": "POST /api/chat  {message, session_id?}",
-        "get": "GET /api/messages?session_id=",
-        "health": "GET /api/health",
-        "seed": "python -m db_api.seed_cli",
-    }
+    index_path = _ROOT / "demo" / "widget_test.html"
+    if index_path.exists():
+        return HTMLResponse(content=index_path.read_text(encoding="utf-8"))
+    return {"error": "widget_test.html not found"}
+
+app.mount("/demo", StaticFiles(directory=str(_ROOT / "demo")), name="demo")
+

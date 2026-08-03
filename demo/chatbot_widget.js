@@ -18,7 +18,7 @@
     // CSS'i otomatik enjekte et (Host site css linki vermek zorunda kalmasın)
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = backendUrl + '/chatbot_widget.css';
+    link.href = backendUrl + '/demo/chatbot_widget.css';
     document.head.appendChild(link);
 
     // Widget HTML Structure (injected dynamically so it's a single drop-in JS file)
@@ -257,7 +257,7 @@
                 typingIndicator.classList.remove('ag-active');
 
                 // Add bot message
-                addMessage(data.response_message || "Bir hata oluştu.", false, data.redirect_url);
+                addMessage(data.reply || "Bir hata oluştu.", false, data.url);
 
             } catch (error) {
                 console.error("Chatbot Error:", error);

@@ -9,7 +9,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.801005,
     "katman": "bge-m3",
-    "sure_ms": 123.54,
+    "sure_ms": 118.74,
     "basarili": true
   },
   {
@@ -22,7 +22,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.6662743333333333,
     "katman": "bge-m3",
-    "sure_ms": 120.99,
+    "sure_ms": 106.85,
     "basarili": true
   },
   {
@@ -35,7 +35,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.637617,
     "katman": "bge-m3",
-    "sure_ms": 112.18,
+    "sure_ms": 119.78,
     "basarili": false
   },
   {
@@ -48,7 +48,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.687481,
     "katman": "bge-m3",
-    "sure_ms": 156.91,
+    "sure_ms": 136.15,
     "basarili": false
   },
   {
@@ -61,7 +61,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.6509986666666667,
     "katman": "bge-m3",
-    "sure_ms": 119.17,
+    "sure_ms": 107.92,
     "basarili": true
   },
   {
@@ -74,7 +74,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.831641,
     "katman": "bge-m3",
-    "sure_ms": 122.52,
+    "sure_ms": 107.42,
     "basarili": true
   },
   {
@@ -87,7 +87,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.560014,
     "katman": "bge-m3",
-    "sure_ms": 128.34,
+    "sure_ms": 126.39,
     "basarili": false
   },
   {
@@ -100,7 +100,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.624819,
     "katman": "bge-m3",
-    "sure_ms": 117.64,
+    "sure_ms": 108.69,
     "basarili": true
   },
   {
@@ -113,7 +113,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.6786723333333334,
     "katman": "bge-m3",
-    "sure_ms": 141.17,
+    "sure_ms": 133.73,
     "basarili": true
   },
   {
@@ -126,7 +126,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.15,
     "katman": "kisaltma",
-    "sure_ms": 0.21,
+    "sure_ms": 0.17,
     "basarili": false
   },
   {
@@ -139,7 +139,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.0,
     "katman": "kisaltma",
-    "sure_ms": 0.45,
+    "sure_ms": 0.38,
     "basarili": false
   },
   {
@@ -152,7 +152,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.15,
     "katman": "kisaltma",
-    "sure_ms": 0.15,
+    "sure_ms": 0.13,
     "basarili": false
   },
   {
@@ -165,7 +165,7 @@
     "tespit_edilen_mod": "K1",
     "skor": 0.99,
     "katman": "kisaltma",
-    "sure_ms": 0.16,
+    "sure_ms": 0.13,
     "basarili": false
   },
   {
@@ -178,7 +178,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.632761,
     "katman": "bge-m3",
-    "sure_ms": 138.58,
+    "sure_ms": 123.17,
     "basarili": true
   },
   {
@@ -191,7 +191,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.646196,
     "katman": "bge-m3",
-    "sure_ms": 127.68,
+    "sure_ms": 127.1,
     "basarili": true
   },
   {
@@ -204,7 +204,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.765255,
     "katman": "bge-m3",
-    "sure_ms": 123.94,
+    "sure_ms": 140.94,
     "basarili": true
   },
   {
@@ -217,7 +217,7 @@
     "tespit_edilen_mod": "K1",
     "skor": 0.99,
     "katman": "kisaltma",
-    "sure_ms": 0.12,
+    "sure_ms": 0.1,
     "basarili": true
   },
   {
@@ -230,7 +230,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.673074,
     "katman": "bge-m3",
-    "sure_ms": 121.1,
+    "sure_ms": 124.77,
     "basarili": true
   },
   {
@@ -243,7 +243,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.95,
     "katman": "bge-m3",
-    "sure_ms": 152.89,
+    "sure_ms": 130.21,
     "basarili": true
   },
   {
@@ -256,7 +256,7 @@
     "tespit_edilen_mod": "K1",
     "skor": 0.99,
     "katman": "kisaltma",
-    "sure_ms": 0.42,
+    "sure_ms": 0.38,
     "basarili": false
   },
   {
@@ -269,7 +269,7 @@
     "tespit_edilen_mod": "K1",
     "skor": 0.99,
     "katman": "kisaltma",
-    "sure_ms": 0.36,
+    "sure_ms": 0.33,
     "basarili": true
   },
   {
@@ -282,7 +282,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.569599,
     "katman": "bge-m3",
-    "sure_ms": 131.97,
+    "sure_ms": 129.99,
     "basarili": false
   },
   {
@@ -295,7 +295,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.585862,
     "katman": "bge-m3",
-    "sure_ms": 110.07,
+    "sure_ms": 107.99,
     "basarili": true
   },
   {
@@ -308,7 +308,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.7626163333333333,
     "katman": "bge-m3",
-    "sure_ms": 114.28,
+    "sure_ms": 108.78,
     "basarili": true
   },
   {
@@ -321,7 +321,7 @@
     "tespit_edilen_mod": "K1",
     "skor": 0.99,
     "katman": "kisaltma",
-    "sure_ms": 0.58,
+    "sure_ms": 0.49,
     "basarili": true
   },
   {
@@ -334,7 +334,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.802127,
     "katman": "bge-m3",
-    "sure_ms": 130.15,
+    "sure_ms": 111.88,
     "basarili": true
   },
   {
@@ -347,7 +347,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.95,
     "katman": "bge-m3",
-    "sure_ms": 120.06,
+    "sure_ms": 110.68,
     "basarili": true
   },
   {
@@ -360,7 +360,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.66965,
     "katman": "bge-m3",
-    "sure_ms": 128.6,
+    "sure_ms": 116.58,
     "basarili": true
   },
   {
@@ -373,7 +373,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.736764,
     "katman": "bge-m3",
-    "sure_ms": 114.87,
+    "sure_ms": 106.27,
     "basarili": false
   },
   {
@@ -386,7 +386,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.871547,
     "katman": "bge-m3",
-    "sure_ms": 122.04,
+    "sure_ms": 115.32,
     "basarili": true
   },
   {
@@ -399,7 +399,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.7071426666666666,
     "katman": "bge-m3",
-    "sure_ms": 290.45,
+    "sure_ms": 258.51,
     "basarili": true
   },
   {
@@ -412,7 +412,7 @@
     "tespit_edilen_mod": "HAFIZA",
     "skor": 0.95,
     "katman": "hafiza",
-    "sure_ms": 257.11,
+    "sure_ms": 233.24,
     "basarili": true
   },
   {
@@ -425,7 +425,7 @@
     "tespit_edilen_mod": "HAFIZA",
     "skor": 0.705312,
     "katman": "hafiza",
-    "sure_ms": 280.72,
+    "sure_ms": 266.62,
     "basarili": true
   },
   {
@@ -438,7 +438,7 @@
     "tespit_edilen_mod": "K1",
     "skor": 0.99,
     "katman": "kisaltma",
-    "sure_ms": 0.18,
+    "sure_ms": 0.15,
     "basarili": true
   },
   {
@@ -451,7 +451,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.7303936666666667,
     "katman": "bge-m3",
-    "sure_ms": 210.19,
+    "sure_ms": 191.33,
     "basarili": true
   },
   {
@@ -464,7 +464,7 @@
     "tespit_edilen_mod": "HAFIZA",
     "skor": 0.95,
     "katman": "hafiza",
-    "sure_ms": 223.16,
+    "sure_ms": 202.57,
     "basarili": true
   },
   {
@@ -477,7 +477,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.585577,
     "katman": "bge-m3",
-    "sure_ms": 115.39,
+    "sure_ms": 109.44,
     "basarili": true
   },
   {
@@ -490,7 +490,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.0,
     "katman": "kisaltma",
-    "sure_ms": 0.39,
+    "sure_ms": 0.38,
     "basarili": true
   },
   {
@@ -503,7 +503,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.0,
     "katman": "kisaltma",
-    "sure_ms": 0.35,
+    "sure_ms": 0.3,
     "basarili": true
   },
   {
@@ -516,7 +516,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.15,
     "katman": "kisaltma",
-    "sure_ms": 0.13,
+    "sure_ms": 0.11,
     "basarili": true
   },
   {
@@ -529,7 +529,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.0,
     "katman": "kisaltma",
-    "sure_ms": 0.37,
+    "sure_ms": 0.33,
     "basarili": true
   },
   {
@@ -542,7 +542,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.0,
     "katman": "kisaltma",
-    "sure_ms": 0.35,
+    "sure_ms": 0.3,
     "basarili": true
   },
   {
@@ -555,7 +555,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.15,
     "katman": "kisaltma",
-    "sure_ms": 0.15,
+    "sure_ms": 0.14,
     "basarili": true
   },
   {
@@ -568,7 +568,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.5605703333333333,
     "katman": "bge-m3",
-    "sure_ms": 141.55,
+    "sure_ms": 117.58,
     "basarili": true
   },
   {
@@ -581,7 +581,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.470401,
     "katman": "bge-m3",
-    "sure_ms": 168.26,
+    "sure_ms": 133.0,
     "basarili": true
   },
   {
@@ -594,7 +594,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.6095236666666667,
     "katman": "bge-m3",
-    "sure_ms": 139.75,
+    "sure_ms": 133.69,
     "basarili": true
   },
   {
@@ -607,7 +607,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.6249906666666667,
     "katman": "bge-m3",
-    "sure_ms": 152.3,
+    "sure_ms": 122.52,
     "basarili": true
   },
   {
@@ -620,7 +620,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.600889,
     "katman": "bge-m3",
-    "sure_ms": 132.31,
+    "sure_ms": 140.37,
     "basarili": true
   },
   {
@@ -633,7 +633,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.5359,
     "katman": "bge-m3",
-    "sure_ms": 144.36,
+    "sure_ms": 135.45,
     "basarili": true
   },
   {
@@ -646,7 +646,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.6472463333333333,
     "katman": "bge-m3",
-    "sure_ms": 156.28,
+    "sure_ms": 142.02,
     "basarili": true
   },
   {
@@ -659,7 +659,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 1.0,
     "katman": "bge-m3",
-    "sure_ms": 108.74,
+    "sure_ms": 109.94,
     "basarili": true
   },
   {
@@ -672,7 +672,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.544615,
     "katman": "bge-m3",
-    "sure_ms": 108.38,
+    "sure_ms": 116.11,
     "basarili": true
   },
   {
@@ -685,7 +685,7 @@
     "tespit_edilen_mod": "HAFIZA",
     "skor": 0.640012,
     "katman": "hafiza",
-    "sure_ms": 116.7,
+    "sure_ms": 110.15,
     "basarili": false
   },
   {
@@ -698,7 +698,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.718813,
     "katman": "bge-m3",
-    "sure_ms": 109.37,
+    "sure_ms": 107.02,
     "basarili": true
   },
   {
@@ -711,7 +711,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.563212,
     "katman": "bge-m3",
-    "sure_ms": 123.98,
+    "sure_ms": 102.61,
     "basarili": true
   },
   {
@@ -724,7 +724,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.845367,
     "katman": "bge-m3",
-    "sure_ms": 120.67,
+    "sure_ms": 104.58,
     "basarili": true
   },
   {
@@ -737,7 +737,7 @@
     "tespit_edilen_mod": "HAFIZA",
     "skor": 0.580021,
     "katman": "hafiza",
-    "sure_ms": 121.97,
+    "sure_ms": 118.97,
     "basarili": false
   },
   {
@@ -750,7 +750,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.574088,
     "katman": "bge-m3",
-    "sure_ms": 117.42,
+    "sure_ms": 117.26,
     "basarili": false
   },
   {
@@ -763,7 +763,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.627874,
     "katman": "bge-m3",
-    "sure_ms": 122.02,
+    "sure_ms": 105.85,
     "basarili": true
   },
   {
@@ -776,7 +776,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.637694,
     "katman": "bge-m3",
-    "sure_ms": 116.39,
+    "sure_ms": 107.12,
     "basarili": true
   },
   {
@@ -789,7 +789,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.654639,
     "katman": "bge-m3",
-    "sure_ms": 113.71,
+    "sure_ms": 102.27,
     "basarili": true
   },
   {
@@ -802,7 +802,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 1.0,
     "katman": "kisaltma",
-    "sure_ms": 0.13,
+    "sure_ms": 0.11,
     "basarili": true
   },
   {
@@ -815,7 +815,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 1.0,
     "katman": "kisaltma",
-    "sure_ms": 0.07,
+    "sure_ms": 0.06,
     "basarili": true
   },
   {
@@ -828,7 +828,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 1.0,
     "katman": "kisaltma",
-    "sure_ms": 0.07,
+    "sure_ms": 0.06,
     "basarili": true
   },
   {
@@ -841,7 +841,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.527327,
     "katman": "bge-m3",
-    "sure_ms": 123.35,
+    "sure_ms": 110.81,
     "basarili": false
   },
   {
@@ -854,7 +854,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 1.0,
     "katman": "kisaltma",
-    "sure_ms": 0.16,
+    "sure_ms": 0.13,
     "basarili": true
   },
   {
@@ -867,7 +867,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 1.0,
     "katman": "kisaltma",
-    "sure_ms": 0.08,
+    "sure_ms": 0.07,
     "basarili": true
   },
   {
@@ -880,7 +880,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.606366,
     "katman": "bge-m3",
-    "sure_ms": 108.46,
+    "sure_ms": 99.27,
     "basarili": true
   },
   {
@@ -893,7 +893,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.95,
     "katman": "bge-m3",
-    "sure_ms": 107.7,
+    "sure_ms": 99.12,
     "basarili": true
   },
   {
@@ -906,7 +906,7 @@
     "tespit_edilen_mod": "K1",
     "skor": 1.0,
     "katman": "kisaltma",
-    "sure_ms": 0.22,
+    "sure_ms": 0.21,
     "basarili": true
   },
   {
@@ -919,7 +919,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.658523,
     "katman": "bge-m3",
-    "sure_ms": 122.01,
+    "sure_ms": 109.93,
     "basarili": true
   },
   {
@@ -932,7 +932,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.678671,
     "katman": "bge-m3",
-    "sure_ms": 133.59,
+    "sure_ms": 102.22,
     "basarili": true
   },
   {
@@ -945,7 +945,7 @@
     "tespit_edilen_mod": "HAFIZA",
     "skor": 0.95,
     "katman": "hafiza",
-    "sure_ms": 117.91,
+    "sure_ms": 103.34,
     "basarili": true
   },
   {
@@ -958,7 +958,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.95,
     "katman": "bge-m3",
-    "sure_ms": 121.4,
+    "sure_ms": 106.89,
     "basarili": true
   },
   {
@@ -971,7 +971,7 @@
     "tespit_edilen_mod": "HAFIZA",
     "skor": 0.95,
     "katman": "hafiza",
-    "sure_ms": 116.54,
+    "sure_ms": 102.15,
     "basarili": true
   },
   {
@@ -984,7 +984,7 @@
     "tespit_edilen_mod": "HAFIZA",
     "skor": 0.95,
     "katman": "hafiza",
-    "sure_ms": 116.4,
+    "sure_ms": 106.15,
     "basarili": true
   },
   {
@@ -997,7 +997,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.6909593333333333,
     "katman": "bge-m3",
-    "sure_ms": 114.66,
+    "sure_ms": 106.46,
     "basarili": true
   },
   {
@@ -1010,7 +1010,7 @@
     "tespit_edilen_mod": "K1",
     "skor": 0.99,
     "katman": "kisaltma",
-    "sure_ms": 0.16,
+    "sure_ms": 0.18,
     "basarili": true
   }
 ]

@@ -270,4 +270,4 @@
 2. Stres negasyon (A) için hedefli corpus örnekleri — eşik düşürmeden.
 
 ---
-*Üretilme: 2026-07-31 20:08:03 — otomatik final doğrulama.*
+*Üretilme: 2026-08-03 10:07:48 — otomatik final doğrulama.*

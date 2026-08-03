@@ -12,3 +12,10 @@ data/processed/chatbot_dataset_augmented.json
 # Test dosyalari git'e dahil edilmeyecek (Hocanin istegi uzerine)
 tests/
 _final_dogrulama.py
+src/simulator.py
+
+# Postman dosyalari
+db_api/postman_collection.json
+db_api/postman_environment.json
+db_api/generate_postman.py
+db_api/POSTMAN.md
