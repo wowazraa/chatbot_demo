@@ -6,8 +6,8 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.append(str(ROOT))
 
 from sqlalchemy import text
-from src.db.connection import get_engine
-from src.db.npz_store import NpzDenseStore
+from app.db.connection import get_engine
+from app.db.npz_store import NpzDenseStore
 
 def seed_db(truncate: bool = False):
     engine = get_engine()

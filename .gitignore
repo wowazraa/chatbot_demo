@@ -1,33 +1,66 @@
+# ── Python / ortam ──────────────────────────────────────────
 __pycache__/
 *.py[cod]
 *$py.class
-tests/_reranker_onnx_cache/
-logs/
-.env
+*.egg-info/
+.eggs/
+dist/
+build/
 .venv/
+venv/
+.env
+
+# Test / lint / coverage cache
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.log
+
+# ── Çalışma zamanında kullanılmayan geliştirme dosyaları ───
+tests/
+_final_dogrulama.py
+scratch/
+reports/
+logs/
+
+# Eski / yedek klasörler (refactor sonrası)
+demo/
+
+# ── Üretilmiş veri & indeks (scripts/build_index ile oluşur) ─
 data/processed/embeddings.npz
 data/processed/index_meta.json
 data/processed/chatbot_dataset_augmented.json
 
-# Test dosyalari git'e dahil edilmeyecek (Hocanin istegi uzerine)
-tests/
-_final_dogrulama.py
-src/simulator.py
+# ── Model / ONNX önbellek ───────────────────────────────────
+**/_reranker_onnx_cache/
+.huggingface/
+huggingface/
+.cache/
 
-# Postman dosyalari
+# ── Postman / API dokümantasyon araçları ────────────────────
 db_api/postman_collection.json
 db_api/postman_environment.json
 db_api/generate_postman.py
 db_api/POSTMAN.md
 
-# Diger gereksizler / Debug ve Raporlama
-scratch/
-reports/
+# ── Tek seferlik debug / doğrulama scriptleri ───────────────
 cleanup.py
 verify_fixes.py
 
-# Ölü Kod / Tekrar Eden Dosyalar (Silinecekler)
+# ── Statik test sayfaları (runtime: widget_test.html yeterli) ─
+static/index.html
+static/empty_test.html
+
+# ── Ölü kod (varsa) ─────────────────────────────────────────
 src/router_server.py
 src/frontend.py
 run_router_8001.py
 app.py
+
+# ── OS / IDE ────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

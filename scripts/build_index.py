@@ -28,7 +28,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from src.embedder import BGEEmbedder
+from app.services.embedder import BGEEmbedder
 
 # ---------------------------------------------------------------------------
 # Sabitler
@@ -105,7 +105,7 @@ def load_records(use_raw: bool = False) -> list[dict]:
     if not path.exists():
         print(f"[!] Dosya bulunamadı: {path}")
         if not use_raw:
-            print("    Önce çalıştırın: python src/data_augmented.py")
+            print("    Önce çalıştırın: python -m scripts.data_augmented")
         sys.exit(1)
 
     with path.open(encoding="utf-8") as f:

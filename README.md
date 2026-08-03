@@ -21,8 +21,52 @@ Tüm mimari refactor adımları sonrasında sistemin performansı kayıpsız kor
 - **SELAMLAŞMA (26 Senaryo):** 24/26 (%92.3)
 - **K1 REGEX/HAFIZA (16 Senaryo):** 16/16 (%100)
 
-## 3. Çalıştırma Rehberi (Tekil FastAPI Sunucusu)
-Önceki mimaride yer alan dağınık sunucular (`demo/server.py` ve `router_server.py`) tamamen temizlenmiş, her şey tekil, güvenilir ve modern bir **FastAPI** sunucusu (`db_api/main.py`) altında birleştirilmiştir. 
+## 3. Proje Yapısı
+
+```
+chatbot_demo/
+├── main.py                 # Uygulama giriş noktası
+├── app/
+│   ├── api/
+│   │   ├── chat.py         # POST /api/chat
+│   │   ├── health.py
+│   │   ├── conversations.py
+│   │   └── admin_qa.py
+│   ├── core/
+│   │   ├── config.py       # .env + router_config.json
+│   │   ├── intent_contract.py
+│   │   ├── k1_guardrails.py
+│   │   └── chitchat_rules.py
+│   ├── db/
+│   │   ├── database.py     # SQLAlchemy engine + ORM
+│   │   ├── vector_store.py # pgvector arama
+│   │   └── ...
+│   ├── models/
+│   │   └── tables.py       # ORM tabloları
+│   ├── services/
+│   │   ├── keyword_service.py    # K1 / chitchat eşleşmesi
+│   │   ├── similarity_service.py # BGE-M3 + vektör arama
+│   │   ├── fallback_service.py   # OOD / belirsiz yanıtlar
+│   │   ├── session_service.py    # Oturum hafızası + DB persist
+│   │   └── pipeline_service.py   # V2IntentPipeline orkestratörü
+│   └── schemas.py
+├── static/                 # Widget (chatbot_widget.js/css)
+├── scripts/                # build_index, seed_pgvector, seed_cli, data_augmented, setup_local_db
+├── data/                   # Ham + işlenmiş corpus
+├── tests/
+└── config/router_config.json
+```
+
+Katman ayrımı:
+- **API** → HTTP uçları (`app/api/`)
+- **Services** → iş mantığı (K1/K2, fallback, session)
+- **DB** → PostgreSQL + pgvector
+- **static/** → frontend widget
+- **scripts/** → veri hazırlama
+
+> `db_api/` ve `src/` yalnızca geriye dönük import shim'leri içerir (eski komutlar çalışmaya devam eder).
+
+## 4. Çalıştırma Rehberi
 
 ### Sıfır Kurulum (İlk Çalıştırma)
 Eğer projeyi yeni clone'ladıysanız, `embeddings.npz` indeksi repoda olmadığı için oluşturmanız şarttır:
@@ -32,12 +76,13 @@ python scripts/build_index.py
 ```
 
 ### API Sunucusunu Başlatmak
-Widget (HTML arayüz) ve tüm dış bağlantılar doğrudan bu sunucu (Port 8001) üzerinden haberleşir:
 ```powershell
-uvicorn db_api.main:app --host 127.0.0.1 --port 8001
+uvicorn main:app --host 127.0.0.1 --port 8082
 ```
-- **Demo Widget (UI):** Sunucu açıkken `demo/widget_test.html` dosyasını doğrudan tarayıcınızda (çift tıklayarak veya Live Server eklentisiyle) açıp sohbeti test edebilirsiniz. Frontend kodları `localhost:8001/api/chat` ucuna bağlanacaktır.
-- **Swagger:** `http://127.0.0.1:8001/docs` üzerinden manuel endpoint testi yapabilirsiniz.
+(Eski komut `uvicorn db_api.main:app` hâlâ çalışır.)
+
+- **Demo Widget:** `http://127.0.0.1:8082/` veya `static/widget_test.html`
+- **Swagger:** `http://127.0.0.1:8082/docs`
 
 ### Regresyon Testlerini Çalıştırmak
 Test senaryolarını doğrulamak için:
@@ -46,7 +91,7 @@ python _final_dogrulama.py
 python tests/run_cekim_eki_orijinal.py
 ```
 
-## 4. Admin API ve Veritabanı Entegrasyonu (Beklemede)
+## 5. Admin API ve Veritabanı Entegrasyonu (Beklemede)
 **Endpoint:** `POST /api/admin/add_qa`
 
 Bu uç, chatbot zekasına dokunmadan dinamik olarak yeni soru/cevap (`query`, `sector`, `augment`) eklenmesi amacıyla tasarlanmıştır. Bu mimarinin lokal indeks (JSON/NPZ) güncellemelerini de kapsaması amaçlanmaktadır; ancak **henüz uçtan uca test edilmemiştir**.

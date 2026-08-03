@@ -1,6 +1,6 @@
 {
   "meta": {
-    "kaynak": "Chatbot Bilgi Merkezi - ham + prefix/suffix + ASCII artirma",
+    "kaynak": "verified_augmented.json taban alt-kumesi",
     "format": "id, mesaj, lang (tr|en), beklenen_sektor, beklenen_mod, zorluk",
     "diller": [
       "tr",
@@ -98,11 +98,21 @@
       "yeni_kayit": 5103,
       "yeni_tr": 2631,
       "yeni_ascii": 2472,
-      "ham_toplam": 5663,
-      "processed_toplam": 5663,
+      "ham_toplam": 928,
+      "processed_toplam": 5659,
       "ood_relabeled": 5,
-      "sinif_dengeleme": true
-    }
+      "sinif_dengeleme": true,
+      "kaynak_notu": "verified_augmented.json taban alt-kumesi (928 kayit)"
+    },
+    "ham_dosya": "chatbot_dataset.json",
+    "kayit_sayisi": 5663,
+    "yontemler": [
+      "prefix_suffix",
+      "hedef_kok_zenginlestirme",
+      "ascii_twin",
+      "ood_relabeling",
+      "sinif_dengeleme"
+    ]
   },
   "kayitlar": [
     {
@@ -5818,94 +5828,6 @@
       "zorluk": "uzun_kurumsal",
       "normalize_mesaj": "our esports team needs a merchandise e-commerce platform with global shipping integrations.",
       "ham_mesaj": "Our esports team needs a merchandise e-commerce platform with global shipping integrations."
-    },
-    {
-      "id": 400274,
-      "kaynak": "admin_panel",
-      "metin": "Hastane sistemimiz için randevu ve reçete otomasyon yazılımı entegre etmek istiyoruz.",
-      "beklenen_sektor": "saglik",
-      "beklenen_mod": "K2",
-      "zorluk": "uzun_kurumsal"
-    },
-    {
-      "id": 400275,
-      "kaynak": "admin_panel_augmented",
-      "metin": "Mevcut işleyişimizi hızlandırmak maksadıyla klinik ve entegre alanında kalıcı ve güvenilir bir partner arayışındayız.",
-      "beklenen_sektor": "saglik",
-      "beklenen_mod": "K2",
-      "zorluk": "uzun_kurumsal"
-    },
-    {
-      "id": 400276,
-      "kaynak": "admin_panel_augmented",
-      "metin": "Acaba randevu ve klinik ihtiyaçlarımız için bize ne tür alternatifler sunabilirsiniz, detaylı bir fiyatlandırma alabilir miyim?",
-      "beklenen_sektor": "saglik",
-      "beklenen_mod": "K2",
-      "zorluk": "uzun_kurumsal"
-    },
-    {
-      "id": 400277,
-      "kaynak": "admin_panel_augmented",
-      "metin": "Ekiplerimizin verimliliğini artırmak adına acilen randevu ve planlıyoruz odaklı yeni bir sisteme geçiş yapmayı planlıyoruz.",
-      "beklenen_sektor": "saglik",
-      "beklenen_mod": "K2",
-      "zorluk": "uzun_kurumsal"
-    },
-    {
-      "id": 400278,
-      "kaynak": "admin_panel",
-      "mesaj": "Şirketimiz için otel rezervasyon ve uçak bileti takip sistemi entegre etmek istiyoruz.",
-      "beklenen_sektor": "turizm",
-      "beklenen_mod": "K2",
-      "zorluk": "uzun_kurumsal"
-    },
-    {
-      "id": 400280,
-      "kaynak": "admin_panel_augmented",
-      "mesaj": "Operasyonel maliyetlerimizi düşürmek ve takip standartlarımızı yükseltmek için acil olarak desteğinize ihtiyacımız var.",
-      "beklenen_sektor": "turizm",
-      "beklenen_mod": "K2",
-      "zorluk": "uzun_kurumsal"
-    },
-    {
-      "id": 400281,
-      "kaynak": "admin_panel_augmented",
-      "mesaj": "Ekiplerimizin verimliliğini artırmak adına acilen takip ve talep etmekteyiz odaklı yeni bir sisteme geçiş yapmayı planlıyoruz.",
-      "beklenen_sektor": "turizm",
-      "beklenen_mod": "K2",
-      "zorluk": "uzun_kurumsal"
-    },
-    {
-      "id": 400284,
-      "kaynak": "admin_panel_augmented",
-      "mesaj": "Ekiplerimizin verimliliğini artırmak adına acilen Şirketimiz ve booking odaklı yeni bir sisteme geçiş yapmayı planlıyoruz.",
-      "beklenen_sektor": "turizm",
-      "beklenen_mod": "K2",
-      "zorluk": "uzun_kurumsal"
-    },
-    {
-      "id": 400285,
-      "kaynak": "admin_panel_augmented",
-      "mesaj": "Kurumumuzun dijital dönüşüm süreçlerinde bileti konularında profesyonel bir yaklaşım aramaktayız, süreç nasıl ilerliyor?",
-      "beklenen_sektor": "turizm",
-      "beklenen_mod": "K2",
-      "zorluk": "uzun_kurumsal"
-    },
-    {
-      "id": 400287,
-      "kaynak": "admin_panel_augmented",
-      "mesaj": "Ekiplerimizin verimliliğini artırmak adına acilen yer ayırtma ve Şirketimiz odaklı yeni bir sisteme geçiş yapmayı planlıyoruz.",
-      "beklenen_sektor": "turizm",
-      "beklenen_mod": "K2",
-      "zorluk": "uzun_kurumsal"
-    },
-    {
-      "id": 400288,
-      "kaynak": "admin_panel_augmented",
-      "mesaj": "Acaba takip ve uçak ihtiyaçlarımız için bize ne tür alternatifler sunabilirsiniz, detaylı bir fiyatlandırma alabilir miyim?",
-      "beklenen_sektor": "turizm",
-      "beklenen_mod": "K2",
-      "zorluk": "uzun_kurumsal"
     }
   ]
 }

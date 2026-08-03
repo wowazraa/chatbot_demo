@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Widget Host Lang Test</title>
+    <style>
+        body { font-family: Inter, sans-serif; padding: 24px; background: #f8fafc; }
+        .controls { display: flex; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+        button { padding: 10px 16px; border-radius: 10px; border: none; background: #1b2436; color: #fff; cursor: pointer; }
+        code { background: #e2e8f0; padding: 2px 6px; border-radius: 6px; }
+        #status { margin-top: 12px; color: #475569; }
+    </style>
+</head>
+<body>
+    <h1>Site dili simülasyonu</h1>
+    <p>Allintos gibi: <code>&lt;html lang="..."&gt;</code> değişince widget güncellenmeli.</p>
+    <div class="controls">
+        <button type="button" id="set-tr">Site dili → TR</button>
+        <button type="button" id="set-en">Site dili → EN</button>
+        <button type="button" id="open-widget">Widget aç / sync</button>
+    </div>
+    <p id="status">html lang: <strong id="lang-display">tr</strong></p>
+
+    <script src="/demo/chatbot_widget.js?v=langsync2"></script>
+    <script>
+        const display = document.getElementById('lang-display');
+        function setSiteLang(lang) {
+            document.documentElement.lang = lang;
+            display.textContent = lang;
+        }
+        document.getElementById('set-tr').addEventListener('click', () => setSiteLang('tr'));
+        document.getElementById('set-en').addEventListener('click', () => setSiteLang('en'));
+        document.getElementById('open-widget').addEventListener('click', () => {
+            document.getElementById('ag-chatbot-toggle')?.click();
+        });
+    </script>
+</body>
+</html>
