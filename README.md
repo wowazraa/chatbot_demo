@@ -1,211 +1,54 @@
-# OmniIntent / Allintos — Çalıştırma Rehberi
+# OmniIntent / Allintos — B2B Niyet Yönlendirme (Intent Routing) Altyapısı
 
-Bu dosya **demo arayüzü** ve **API endpoint**lerini nasıl ayağa kaldıracağını, nasıl test edeceğini anlatır.  
-(Teknik mimari detayı ve teslim özeti için: `TESLIM_OZET.md`)
+Bu doküman, Chatbot B2B Niyet Yönlendirme altyapısının **güncel mimarisini**, kurulum adımlarını ve doğrulanmış skorlarını tek bir kaynakta özetler.
 
----
+## 1. Mimari Özeti (V2IntentPipeline)
+Sistem, kullanıcının girdiği metni **5 temel B2B sektörel kategoriye** (sağlık, eğitim, bilişim, turizm, eğlence) veya "belirsiz" (fallback) statüsüne atamak için modern bir çok katmanlı yapı kullanır. Önceki mimaride bulunan `chatbot.py` kavram kargaşası tamamen temizlenmiş ve tüm karar mekanizması `V2IntentPipeline` çatısı altında toplanmıştır. (Savunma sektörü güvenlik gereği bilinçli olarak reddedilir).
 
-## İki ayrı sunucu var — karıştırma
+- **Aşama 1 (Hafıza / Session State):** Kullanıcının önceki turda belirlenmiş geçerli bir `aktif_sektor`'ü varsa ve yeni girdi küçük bir takip sorusuysa (örn: "Fiyat alabilir miyim?"), sistem BGE-M3'ü pas geçerek doğrudan `HAFIZA` modunda önceki sektörü döndürür.
+- **Aşama 2 (K1 Guardrails & Kural Motoru):** Hızlı reddetme (chit-chat, hava durumu vb.) ve **yasaklı kelime (savunma sanayi vs.)** kontrolleri Regex ile yapılır. Kesin sektör kısaltmaları tespit edilirse anında ilgili sektöre yönlendirilir.
+- **Aşama 3 (K2 Vektör Veritabanı - BGE-M3):** K1'den geçen metinler BAAI/bge-m3 modeliyle vektörel (1024 boyutlu) embedding'e dönüştürülür. Yerel `embeddings.npz` indeksi üzerinden kosinüs benzerliği aranır.
+- **Aşama 4 (Konsensüs & Fallback):** Top-K sonuçlarının skorları toplanarak en olası sektör seçilir. Skor `0.65` eşiğinin altındaysa sistem "belirsiz" (Fallback - FB) moduna düşer.
+- **Aşama 5 (Session Memory Fallback & Trap Koruması):** OOD veya "belirsiz" sınırında kalan girdiler için, eğer `session_id` içerisinde daha önce doğrulanmış bir `aktif_sektor` varsa, sistem o bağlamı kullanarak OOD kararını sektöre zorlar. Aşırı genelleme hatalarını önlemek için `trap_keywords` kara listesiyle korunmaktadır.
+- **Aşama 6 (Aktif Öğrenme Günlüğü / Active Learning):** Nihai olarak "belirsiz" (FB) kararı verilen sorgular `src/unresolved_logger.py` mekanizması tarafından otomatik olarak loglanır (`logs/unresolved_queries.json`).
 
-| Ne | Ne işe yarar | Adres | Komut |
-|----|--------------|-------|--------|
-| **Demo (UI)** | Mentörün tarayıcıdan denediği chatbot ekranı | http://127.0.0.1:8082 | `python demo/server.py` |
-| **Chat API** | Postman / curl / Swagger ile endpoint testi | http://127.0.0.1:8001 | `uvicorn db_api.main:app --host 127.0.0.1 --port 8001` |
+## 2. Güncel Skor Tablosu (North Star Metriği)
+Tüm mimari refactor adımları sonrasında sistemin performansı kayıpsız korunmuştur. Yalnızca hedeflenen sektörün doğru bulunup bulunmadığına bakan son başarı skoru: **148 / 165 (%89.7)**
 
-- Demo **veritabanı olmadan** çalışabilir (NPZ + BGE).
-- Chat API **yerel Postgres** ister (`.env` → `localhost:5432/chatbot_db`).
+- **TEMEL (19 Senaryo):** 18/19 (%94.7)
+- **STRES (78 Senaryo):** 64/78 (%82.0)
+- **ÇEKİM EKİ (26 Senaryo):** 26/26 (%100)
+- **SELAMLAŞMA (26 Senaryo):** 24/26 (%92.3)
+- **K1 REGEX/HAFIZA (16 Senaryo):** 16/16 (%100)
 
----
+## 3. Çalıştırma Rehberi (Tekil FastAPI Sunucusu)
+Önceki mimaride yer alan dağınık sunucular (`demo/server.py` ve `router_server.py`) tamamen temizlenmiş, her şey tekil, güvenilir ve modern bir **FastAPI** sunucusu (`db_api/main.py`) altında birleştirilmiştir. 
 
-## 0) Her seferinde önce buraya gir
-
+### Sıfır Kurulum (İlk Çalıştırma)
+Eğer projeyi yeni clone'ladıysanız, `embeddings.npz` indeksi repoda olmadığı için oluşturmanız şarttır:
 ```powershell
-cd C:\Users\AZRA\OneDrive\Desktop\Chatbot_Bilgi_Merkezi_Projesi\chatbot_demo
-```
-
-### Git'ten Sıfır Kurulum Yapıldıysa (İlk Çalıştırma)
-Eğer projeyi yeni clone'ladıysanız, `embeddings.npz` dosyası repoda bulunmadığı için ilk çalıştırmadan önce **indeksi sıfırdan oluşturmanız** ŞARTTIR:
-```powershell
-# Paketleri kurun
 pip install -r requirements.txt
-
-# Veri setini vektörleştirip NPZ indeksini oluşturun
 python scripts/build_index.py
 ```
-*(Not: Bu işlem BGE-M3 modelini indirip veri setindeki tüm soruları vektörleştirecektir.)*
 
----
-
-## 1) Demo sunucusunu çalıştır / yeniden başlat
-
-### İlk kez veya yeniden başlatma
-
+### API Sunucusunu Başlatmak
+Widget (HTML arayüz) ve tüm dış bağlantılar doğrudan bu sunucu (Port 8001) üzerinden haberleşir:
 ```powershell
-cd C:\Users\AZRA\OneDrive\Desktop\Chatbot_Bilgi_Merkezi_Projesi\chatbot_demo
-python demo/server.py
-```
-
-Tarayıcı: **http://127.0.0.1:8082**
-
-### Port 8082 meşgulse (eski sunucu hâlâ açık)
-
-```powershell
-Get-NetTCPConnection -LocalPort 8082 -ErrorAction SilentlyContinue |
-  ForEach-Object { Stop-Process -Id $_.OwningProcess -Force }
-python demo/server.py
-```
-
-### Durdurmak
-
-Terminalde `Ctrl + C`
-
-### Demo ne sunar?
-
-| Yol | Açıklama |
-|-----|----------|
-| `GET /` | Chat arayüzü (HTML) |
-| `GET /api/status` | Corpus boyutu, BGE durumu, eşik vb. |
-| `POST /api/chat` | Mesaj at → sektör / skor / Top-3 inspector |
-
-Örnek (PowerShell):
-
-```powershell
-curl http://127.0.0.1:8082/api/status
-curl -X POST http://127.0.0.1:8082/api/chat -H "Content-Type: application/json" -d "{\"message\":\"Hastane randevusu\",\"session\":\"\"}"
-```
-
----
-
-## 2) Chat API (endpoint’ler) — Postman / Swagger
-
-### Postgres hazır olsun
-
-`.env` içinde (varsayılan):
-
-```text
-DATABASE_URL=postgresql+psycopg2://postgres:postgres@localhost:5432/chatbot_db
-```
-
-Şifren farklıysa burayı kendi bilgine göre düzelt.
-
-İlk kurulum (DB + tablolar):
-
-```powershell
-cd C:\Users\AZRA\OneDrive\Desktop\Chatbot_Bilgi_Merkezi_Projesi\chatbot_demo
-python -m db_api.setup_local_db
-python -m db_api.seed_cli
-```
-
-### API’yi başlat
-
-```powershell
-cd C:\Users\AZRA\OneDrive\Desktop\Chatbot_Bilgi_Merkezi_Projesi\chatbot_demo
 uvicorn db_api.main:app --host 127.0.0.1 --port 8001
 ```
+- **Demo Widget (UI):** Sunucu açıkken `demo/widget_test.html` dosyasını doğrudan tarayıcınızda (çift tıklayarak veya Live Server eklentisiyle) açıp sohbeti test edebilirsiniz. Frontend kodları `localhost:8001/api/chat` ucuna bağlanacaktır.
+- **Swagger:** `http://127.0.0.1:8001/docs` üzerinden manuel endpoint testi yapabilirsiniz.
 
-- Swagger (kolay test): **http://127.0.0.1:8001/docs**
-- Port meşgulse:
-
+### Regresyon Testlerini Çalıştırmak
+Test senaryolarını doğrulamak için:
 ```powershell
-Get-NetTCPConnection -LocalPort 8001 -ErrorAction SilentlyContinue |
-  ForEach-Object { Stop-Process -Id $_.OwningProcess -Force }
+python _final_dogrulama.py
+python tests/run_cekim_eki_orijinal.py
 ```
 
-### Endpoint listesi
+## 4. Admin API ve Veritabanı Entegrasyonu (Beklemede)
+**Endpoint:** `POST /api/admin/add_qa`
 
-| Method | Yol | Ne yapar |
-|--------|-----|----------|
-| `GET` | `/api/health` | API ayakta mı? |
-| `POST` | `/api/chat` | Mesaj → `reply`, `url`, `session_id` |
-| `GET` | `/api/messages?session_id=...` | O oturumun mesaj geçmişi |
+Bu uç, chatbot zekasına dokunmadan dinamik olarak yeni soru/cevap (`query`, `sector`, `augment`) eklenmesi amacıyla tasarlanmıştır. Bu mimarinin lokal indeks (JSON/NPZ) güncellemelerini de kapsaması amaçlanmaktadır; ancak **henüz uçtan uca test edilmemiştir**.
 
-### curl ile hızlı test
-
-```powershell
-# 1) Sağlık kontrolü
-curl http://127.0.0.1:8001/api/health
-
-# 2) Chat (ilk mesaj — session_id null)
-curl -X POST http://127.0.0.1:8001/api/chat `
-  -H "Content-Type: application/json" `
-  -d "{\"message\":\"Hastane randevusu almak istiyorum\",\"session_id\":null}"
-
-# 3) Geçmiş (cevaptaki session_id ile)
-curl "http://127.0.0.1:8001/api/messages?session_id=BURAYA_SESSION_ID"
-```
-
-### Postman
-
-1. `db_api/postman_collection.json` import et  
-2. `db_api/postman_environment.json` import et (`base_url` = `http://127.0.0.1:8001`)  
-3. Sıra: **health → chat → messages**  
-4. Detay: `db_api/POSTMAN.md`
-
----
-
-## 3) Hangisini ne zaman kullan?
-
-| Amaç | Kullan |
-|------|--------|
-| Mentör demosu, Top-3, sektör denemesi | **Demo 8082** |
-| API / Postman / Swagger, reply+url | **API 8001** |
-| Sadece motor (UI yok) | `python -c` ile `Chatbot().sor(...)` (geliştirici) |
-
-İkisi aynı anda açık olabilir (farklı portlar).
-
----
-
-## 4) Sık görülen hatalar
-
-| Hata | Anlamı | Ne yap |
-|------|--------|--------|
-| `ERR_EMPTY_RESPONSE` / port kullanımda | Eski sunucu kapanmamış | Yukarıdaki `Stop-Process` komutu |
-| `database unavailable` / connection refused | Postgres kapalı veya yanlış port | Yerel Postgres 5432 açık mı bak; `.env` kontrol et |
-| İlk mesaj çok yavaş | Model soğuk açılış | 1–2 sorgu sonra hızlanır (normal) |
-| `ModuleNotFoundError` | Yanlış klasör | Mutlaka `chatbot_demo` içinde çalıştır |
-
----
-
-## 5) Manuel demo test (kısa hatırlatma)
-
-Tarayıcıda http://127.0.0.1:8082 açıp örnekler:
-
-- Net: `Hastane randevusu`, `Müze kart fiyatı`, `Askeri lise sınav`
-- Sohbet: `Merhaba`, `Teşekkür ederim`
-- Konu dışı (belirsiz olmalı): `Bugün hava güzel`, `Pizza sipariş`
-
----
-
-## 6) Testler (opsiyonel)
-
-```powershell
-cd C:\Users\AZRA\OneDrive\Desktop\Chatbot_Bilgi_Merkezi_Projesi\chatbot_demo
-python -m pytest tests/test_faz5_generalization.py tests/test_rerank_gate_demo.py -q
-```
-
----
-
-## Özet — kopyala-yapıştır
-
-**Demo yeniden başlat:**
-
-```powershell
-cd C:\Users\AZRA\OneDrive\Desktop\Chatbot_Bilgi_Merkezi_Projesi\chatbot_demo
-Get-NetTCPConnection -LocalPort 8082 -ErrorAction SilentlyContinue | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force }
-python demo/server.py
-```
-
-**API yeniden başlat:**
-
-```powershell
-cd C:\Users\AZRA\OneDrive\Desktop\Chatbot_Bilgi_Merkezi_Projesi\chatbot_demo
-Get-NetTCPConnection -LocalPort 8001 -ErrorAction SilentlyContinue | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force }
-uvicorn db_api.main:app --host 127.0.0.1 --port 8001
-```
-
----
-
-## 7) Model Hakkında (BGE-M3)
-
-Projede kullanılan **BAAI/bge-m3** modeli, Hugging Face Hub üzerinden standart ön eğitimli (pretrained) bir model olarak ilk çalıştırmada otomatik olarak indirilir ve lokal Hugging Face önbelleğinde (`~/.cache/huggingface` altında) saklanır. Model ağırlık dosyaları git repo'suna dahil edilmemiş olup `.gitignore` ile dışarıda bırakılmıştır.
-
+**Mevcut Durum:** Allintos ana PostgreSQL veritabanına (`qa_embeddings` tablosuna) bağlanacak olan asıl DB entegrasyonu (INSERT işlemi), veritabanında açılacak olan **5 intent ID'sinin Sinem'den beklenmesi** sebebiyle henüz kodlanmamıştır. İlgili `intent_id`'ler teslim alındığında `background_sync_allintos/admin_qa.py` kodu yazılacak ve tüm admin entegrasyonu (hem veritabanı hem lokal indeks güncellemeleri) baştan sona test edilecektir.
