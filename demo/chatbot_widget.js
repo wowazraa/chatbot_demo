@@ -2,8 +2,24 @@
 // Self-contained widget logic for Allintos
 
 (function() {
-    const API_URL = '/api/chat'; // Changed to relative path
+    // Hedef URL'yi script'in çağrıldığı kaynaktan (src) otomatik olarak alıyoruz.
+    // Böylece hardcoded localhost sorununu çözüyoruz (10.20.40.153 üzerinden çekilince API de ona gider)
+    let backendUrl = 'http://127.0.0.1:8082';
+    if (document.currentScript && document.currentScript.src) {
+        try {
+            backendUrl = new URL(document.currentScript.src).origin;
+        } catch (e) {
+            console.error("URL parse hatası", e);
+        }
+    }
+    const API_URL = backendUrl + '/api/chat';
     const SESSION_KEY = 'ag_chatbot_session_id';
+
+    // CSS'i otomatik enjekte et (Host site css linki vermek zorunda kalmasın)
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = backendUrl + '/chatbot_widget.css';
+    document.head.appendChild(link);
 
     // Widget HTML Structure (injected dynamically so it's a single drop-in JS file)
     const widgetHTML = `
@@ -123,6 +139,15 @@
             if (chatWindow.classList.contains('ag-open')) {
                 setTimeout(() => { chatInput.focus(); }, 150);
                 scrollToBottom();
+            } else {
+                // Kapatıldığında Session'ı ve geçmiş mesajları sıfırla
+                sessionStorage.removeItem(SESSION_KEY);
+                const messages = document.querySelectorAll('.ag-message');
+                messages.forEach(msg => {
+                    if (msg.id !== 'ag-welcome-msg') {
+                        msg.remove();
+                    }
+                });
             }
         }
 

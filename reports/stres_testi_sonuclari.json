@@ -9,7 +9,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.801005,
     "katman": "bge-m3",
-    "sure_ms": 554.32,
+    "sure_ms": 123.54,
     "basarili": true
   },
   {
@@ -22,7 +22,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.6662743333333333,
     "katman": "bge-m3",
-    "sure_ms": 104.45,
+    "sure_ms": 120.99,
     "basarili": true
   },
   {
@@ -35,7 +35,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.637617,
     "katman": "bge-m3",
-    "sure_ms": 106.05,
+    "sure_ms": 112.18,
     "basarili": false
   },
   {
@@ -48,7 +48,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.687481,
     "katman": "bge-m3",
-    "sure_ms": 143.19,
+    "sure_ms": 156.91,
     "basarili": false
   },
   {
@@ -61,7 +61,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.6509986666666667,
     "katman": "bge-m3",
-    "sure_ms": 110.7,
+    "sure_ms": 119.17,
     "basarili": true
   },
   {
@@ -74,7 +74,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.831641,
     "katman": "bge-m3",
-    "sure_ms": 104.36,
+    "sure_ms": 122.52,
     "basarili": true
   },
   {
@@ -87,7 +87,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.560014,
     "katman": "bge-m3",
-    "sure_ms": 173.65,
+    "sure_ms": 128.34,
     "basarili": false
   },
   {
@@ -100,7 +100,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.624819,
     "katman": "bge-m3",
-    "sure_ms": 101.52,
+    "sure_ms": 117.64,
     "basarili": true
   },
   {
@@ -111,9 +111,9 @@
     "tespit_edilen_sektor": "egitim",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.6503399999999999,
+    "skor": 0.6786723333333334,
     "katman": "bge-m3",
-    "sure_ms": 130.12,
+    "sure_ms": 141.17,
     "basarili": true
   },
   {
@@ -126,7 +126,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.15,
     "katman": "kisaltma",
-    "sure_ms": 0.17,
+    "sure_ms": 0.21,
     "basarili": false
   },
   {
@@ -139,7 +139,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.0,
     "katman": "kisaltma",
-    "sure_ms": 0.37,
+    "sure_ms": 0.45,
     "basarili": false
   },
   {
@@ -152,7 +152,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.15,
     "katman": "kisaltma",
-    "sure_ms": 0.13,
+    "sure_ms": 0.15,
     "basarili": false
   },
   {
@@ -165,7 +165,7 @@
     "tespit_edilen_mod": "K1",
     "skor": 0.99,
     "katman": "kisaltma",
-    "sure_ms": 0.14,
+    "sure_ms": 0.16,
     "basarili": false
   },
   {
@@ -178,7 +178,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.632761,
     "katman": "bge-m3",
-    "sure_ms": 117.6,
+    "sure_ms": 138.58,
     "basarili": true
   },
   {
@@ -191,7 +191,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.646196,
     "katman": "bge-m3",
-    "sure_ms": 116.43,
+    "sure_ms": 127.68,
     "basarili": true
   },
   {
@@ -204,7 +204,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.765255,
     "katman": "bge-m3",
-    "sure_ms": 114.38,
+    "sure_ms": 123.94,
     "basarili": true
   },
   {
@@ -217,7 +217,7 @@
     "tespit_edilen_mod": "K1",
     "skor": 0.99,
     "katman": "kisaltma",
-    "sure_ms": 0.1,
+    "sure_ms": 0.12,
     "basarili": true
   },
   {
@@ -230,7 +230,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.673074,
     "katman": "bge-m3",
-    "sure_ms": 115.13,
+    "sure_ms": 121.1,
     "basarili": true
   },
   {
@@ -243,7 +243,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.95,
     "katman": "bge-m3",
-    "sure_ms": 411.97,
+    "sure_ms": 152.89,
     "basarili": true
   },
   {
@@ -256,7 +256,7 @@
     "tespit_edilen_mod": "K1",
     "skor": 0.99,
     "katman": "kisaltma",
-    "sure_ms": 0.59,
+    "sure_ms": 0.42,
     "basarili": false
   },
   {
@@ -269,7 +269,7 @@
     "tespit_edilen_mod": "K1",
     "skor": 0.99,
     "katman": "kisaltma",
-    "sure_ms": 0.53,
+    "sure_ms": 0.36,
     "basarili": true
   },
   {
@@ -277,13 +277,13 @@
     "kategori": "C",
     "girdi_metni": "bişey lazım bize sağlık için acil yardimci olun",
     "beklenen_sektor": "sağlık",
-    "tespit_edilen_sektor": "saglik",
+    "tespit_edilen_sektor": "turizm",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.541224,
+    "skor": 0.569599,
     "katman": "bge-m3",
-    "sure_ms": 691.1,
-    "basarili": true
+    "sure_ms": 131.97,
+    "basarili": false
   },
   {
     "id": "C10",
@@ -295,7 +295,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.585862,
     "katman": "bge-m3",
-    "sure_ms": 496.55,
+    "sure_ms": 110.07,
     "basarili": true
   },
   {
@@ -308,7 +308,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.7626163333333333,
     "katman": "bge-m3",
-    "sure_ms": 580.07,
+    "sure_ms": 114.28,
     "basarili": true
   },
   {
@@ -321,7 +321,7 @@
     "tespit_edilen_mod": "K1",
     "skor": 0.99,
     "katman": "kisaltma",
-    "sure_ms": 0.53,
+    "sure_ms": 0.58,
     "basarili": true
   },
   {
@@ -334,7 +334,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.802127,
     "katman": "bge-m3",
-    "sure_ms": 585.43,
+    "sure_ms": 130.15,
     "basarili": true
   },
   {
@@ -347,7 +347,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.95,
     "katman": "bge-m3",
-    "sure_ms": 598.01,
+    "sure_ms": 120.06,
     "basarili": true
   },
   {
@@ -360,7 +360,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.66965,
     "katman": "bge-m3",
-    "sure_ms": 596.77,
+    "sure_ms": 128.6,
     "basarili": true
   },
   {
@@ -373,7 +373,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.736764,
     "katman": "bge-m3",
-    "sure_ms": 484.63,
+    "sure_ms": 114.87,
     "basarili": false
   },
   {
@@ -384,9 +384,9 @@
     "tespit_edilen_sektor": "saglik",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.871548,
+    "skor": 0.871547,
     "katman": "bge-m3",
-    "sure_ms": 658.47,
+    "sure_ms": 122.04,
     "basarili": true
   },
   {
@@ -399,7 +399,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.7071426666666666,
     "katman": "bge-m3",
-    "sure_ms": 843.48,
+    "sure_ms": 290.45,
     "basarili": true
   },
   {
@@ -412,7 +412,7 @@
     "tespit_edilen_mod": "HAFIZA",
     "skor": 0.95,
     "katman": "hafiza",
-    "sure_ms": 323.29,
+    "sure_ms": 257.11,
     "basarili": true
   },
   {
@@ -425,7 +425,7 @@
     "tespit_edilen_mod": "HAFIZA",
     "skor": 0.705312,
     "katman": "hafiza",
-    "sure_ms": 327.12,
+    "sure_ms": 280.72,
     "basarili": true
   },
   {
@@ -438,7 +438,7 @@
     "tespit_edilen_mod": "K1",
     "skor": 0.99,
     "katman": "kisaltma",
-    "sure_ms": 0.16,
+    "sure_ms": 0.18,
     "basarili": true
   },
   {
@@ -451,7 +451,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.7303936666666667,
     "katman": "bge-m3",
-    "sure_ms": 190.92,
+    "sure_ms": 210.19,
     "basarili": true
   },
   {
@@ -464,7 +464,7 @@
     "tespit_edilen_mod": "HAFIZA",
     "skor": 0.95,
     "katman": "hafiza",
-    "sure_ms": 209.58,
+    "sure_ms": 223.16,
     "basarili": true
   },
   {
@@ -475,9 +475,9 @@
     "tespit_edilen_sektor": "belirsiz",
     "beklenen_mod": "FB",
     "tespit_edilen_mod": "FB",
-    "skor": 0.569344,
+    "skor": 0.585577,
     "katman": "bge-m3",
-    "sure_ms": 129.34,
+    "sure_ms": 115.39,
     "basarili": true
   },
   {
@@ -490,7 +490,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.0,
     "katman": "kisaltma",
-    "sure_ms": 0.33,
+    "sure_ms": 0.39,
     "basarili": true
   },
   {
@@ -503,7 +503,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.0,
     "katman": "kisaltma",
-    "sure_ms": 0.29,
+    "sure_ms": 0.35,
     "basarili": true
   },
   {
@@ -516,7 +516,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.15,
     "katman": "kisaltma",
-    "sure_ms": 0.11,
+    "sure_ms": 0.13,
     "basarili": true
   },
   {
@@ -529,7 +529,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.0,
     "katman": "kisaltma",
-    "sure_ms": 0.3,
+    "sure_ms": 0.37,
     "basarili": true
   },
   {
@@ -542,7 +542,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.0,
     "katman": "kisaltma",
-    "sure_ms": 0.28,
+    "sure_ms": 0.35,
     "basarili": true
   },
   {
@@ -555,7 +555,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.15,
     "katman": "kisaltma",
-    "sure_ms": 0.12,
+    "sure_ms": 0.15,
     "basarili": true
   },
   {
@@ -566,9 +566,9 @@
     "tespit_edilen_sektor": "belirsiz",
     "beklenen_mod": "FB",
     "tespit_edilen_mod": "FB",
-    "skor": 0.569424,
+    "skor": 0.5605703333333333,
     "katman": "bge-m3",
-    "sure_ms": 139.03,
+    "sure_ms": 141.55,
     "basarili": true
   },
   {
@@ -581,7 +581,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.470401,
     "katman": "bge-m3",
-    "sure_ms": 237.79,
+    "sure_ms": 168.26,
     "basarili": true
   },
   {
@@ -592,9 +592,9 @@
     "tespit_edilen_sektor": "belirsiz",
     "beklenen_mod": "FB",
     "tespit_edilen_mod": "FB",
-    "skor": 0.613035,
+    "skor": 0.6095236666666667,
     "katman": "bge-m3",
-    "sure_ms": 724.63,
+    "sure_ms": 139.75,
     "basarili": true
   },
   {
@@ -605,9 +605,9 @@
     "tespit_edilen_sektor": "belirsiz",
     "beklenen_mod": "FB",
     "tespit_edilen_mod": "FB",
-    "skor": 0.637789,
+    "skor": 0.6249906666666667,
     "katman": "bge-m3",
-    "sure_ms": 675.91,
+    "sure_ms": 152.3,
     "basarili": true
   },
   {
@@ -620,7 +620,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.600889,
     "katman": "bge-m3",
-    "sure_ms": 705.13,
+    "sure_ms": 132.31,
     "basarili": true
   },
   {
@@ -631,9 +631,9 @@
     "tespit_edilen_sektor": "belirsiz",
     "beklenen_mod": "FB",
     "tespit_edilen_mod": "FB",
-    "skor": 0.53537,
+    "skor": 0.5359,
     "katman": "bge-m3",
-    "sure_ms": 393.92,
+    "sure_ms": 144.36,
     "basarili": true
   },
   {
@@ -644,9 +644,9 @@
     "tespit_edilen_sektor": "belirsiz",
     "beklenen_mod": "FB",
     "tespit_edilen_mod": "FB",
-    "skor": 0.652343,
+    "skor": 0.6472463333333333,
     "katman": "bge-m3",
-    "sure_ms": 139.79,
+    "sure_ms": 156.28,
     "basarili": true
   },
   {
@@ -659,7 +659,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 1.0,
     "katman": "bge-m3",
-    "sure_ms": 123.93,
+    "sure_ms": 108.74,
     "basarili": true
   },
   {
@@ -672,7 +672,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.544615,
     "katman": "bge-m3",
-    "sure_ms": 173.85,
+    "sure_ms": 108.38,
     "basarili": true
   },
   {
@@ -685,7 +685,7 @@
     "tespit_edilen_mod": "HAFIZA",
     "skor": 0.640012,
     "katman": "hafiza",
-    "sure_ms": 113.26,
+    "sure_ms": 116.7,
     "basarili": false
   },
   {
@@ -698,7 +698,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.718813,
     "katman": "bge-m3",
-    "sure_ms": 98.67,
+    "sure_ms": 109.37,
     "basarili": true
   },
   {
@@ -711,7 +711,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.563212,
     "katman": "bge-m3",
-    "sure_ms": 96.94,
+    "sure_ms": 123.98,
     "basarili": true
   },
   {
@@ -724,7 +724,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.845367,
     "katman": "bge-m3",
-    "sure_ms": 104.71,
+    "sure_ms": 120.67,
     "basarili": true
   },
   {
@@ -732,25 +732,25 @@
     "kategori": "G",
     "girdi_metni": "Çözümlerinizin kurulum süresi ortalama kaç gündür?",
     "beklenen_sektor": "belirsiz",
-    "tespit_edilen_sektor": "belirsiz",
+    "tespit_edilen_sektor": "saglik",
     "beklenen_mod": "FB",
-    "tespit_edilen_mod": "FB",
-    "skor": 0.559586,
-    "katman": "bge-m3",
-    "sure_ms": 110.53,
-    "basarili": true
+    "tespit_edilen_mod": "HAFIZA",
+    "skor": 0.580021,
+    "katman": "hafiza",
+    "sure_ms": 121.97,
+    "basarili": false
   },
   {
     "id": "G08",
     "kategori": "G",
     "girdi_metni": "Teknik destek hizmetleriniz 7/24 aktif mi?",
     "beklenen_sektor": "belirsiz",
-    "tespit_edilen_sektor": "saglik",
+    "tespit_edilen_sektor": "bilisim",
     "beklenen_mod": "FB",
     "tespit_edilen_mod": "K2",
-    "skor": 0.504713,
+    "skor": 0.574088,
     "katman": "bge-m3",
-    "sure_ms": 123.88,
+    "sure_ms": 117.42,
     "basarili": false
   },
   {
@@ -763,7 +763,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.627874,
     "katman": "bge-m3",
-    "sure_ms": 102.0,
+    "sure_ms": 122.02,
     "basarili": true
   },
   {
@@ -776,7 +776,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.637694,
     "katman": "bge-m3",
-    "sure_ms": 111.42,
+    "sure_ms": 116.39,
     "basarili": true
   },
   {
@@ -789,7 +789,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.654639,
     "katman": "bge-m3",
-    "sure_ms": 105.1,
+    "sure_ms": 113.71,
     "basarili": true
   },
   {
@@ -802,7 +802,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 1.0,
     "katman": "kisaltma",
-    "sure_ms": 0.11,
+    "sure_ms": 0.13,
     "basarili": true
   },
   {
@@ -815,7 +815,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 1.0,
     "katman": "kisaltma",
-    "sure_ms": 0.06,
+    "sure_ms": 0.07,
     "basarili": true
   },
   {
@@ -828,7 +828,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 1.0,
     "katman": "kisaltma",
-    "sure_ms": 0.06,
+    "sure_ms": 0.07,
     "basarili": true
   },
   {
@@ -841,7 +841,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 0.527327,
     "katman": "bge-m3",
-    "sure_ms": 117.16,
+    "sure_ms": 123.35,
     "basarili": false
   },
   {
@@ -854,7 +854,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 1.0,
     "katman": "kisaltma",
-    "sure_ms": 0.13,
+    "sure_ms": 0.16,
     "basarili": true
   },
   {
@@ -867,7 +867,7 @@
     "tespit_edilen_mod": "FB",
     "skor": 1.0,
     "katman": "kisaltma",
-    "sure_ms": 0.07,
+    "sure_ms": 0.08,
     "basarili": true
   },
   {
@@ -878,9 +878,9 @@
     "tespit_edilen_sektor": "turizm",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.606365,
+    "skor": 0.606366,
     "katman": "bge-m3",
-    "sure_ms": 128.99,
+    "sure_ms": 108.46,
     "basarili": true
   },
   {
@@ -893,7 +893,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.95,
     "katman": "bge-m3",
-    "sure_ms": 118.43,
+    "sure_ms": 107.7,
     "basarili": true
   },
   {
@@ -906,7 +906,7 @@
     "tespit_edilen_mod": "K1",
     "skor": 1.0,
     "katman": "kisaltma",
-    "sure_ms": 0.2,
+    "sure_ms": 0.22,
     "basarili": true
   },
   {
@@ -919,7 +919,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.658523,
     "katman": "bge-m3",
-    "sure_ms": 117.29,
+    "sure_ms": 122.01,
     "basarili": true
   },
   {
@@ -930,9 +930,9 @@
     "tespit_edilen_sektor": "saglik",
     "beklenen_mod": "K2",
     "tespit_edilen_mod": "K2",
-    "skor": 0.6738996666666667,
+    "skor": 0.678671,
     "katman": "bge-m3",
-    "sure_ms": 99.93,
+    "sure_ms": 133.59,
     "basarili": true
   },
   {
@@ -945,7 +945,7 @@
     "tespit_edilen_mod": "HAFIZA",
     "skor": 0.95,
     "katman": "hafiza",
-    "sure_ms": 106.13,
+    "sure_ms": 117.91,
     "basarili": true
   },
   {
@@ -958,7 +958,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.95,
     "katman": "bge-m3",
-    "sure_ms": 110.83,
+    "sure_ms": 121.4,
     "basarili": true
   },
   {
@@ -971,7 +971,7 @@
     "tespit_edilen_mod": "HAFIZA",
     "skor": 0.95,
     "katman": "hafiza",
-    "sure_ms": 104.01,
+    "sure_ms": 116.54,
     "basarili": true
   },
   {
@@ -984,7 +984,7 @@
     "tespit_edilen_mod": "HAFIZA",
     "skor": 0.95,
     "katman": "hafiza",
-    "sure_ms": 104.87,
+    "sure_ms": 116.4,
     "basarili": true
   },
   {
@@ -997,7 +997,7 @@
     "tespit_edilen_mod": "K2",
     "skor": 0.6909593333333333,
     "katman": "bge-m3",
-    "sure_ms": 128.09,
+    "sure_ms": 114.66,
     "basarili": true
   },
   {
@@ -1010,7 +1010,7 @@
     "tespit_edilen_mod": "K1",
     "skor": 0.99,
     "katman": "kisaltma",
-    "sure_ms": 0.13,
+    "sure_ms": 0.16,
     "basarili": true
   }
 ]

@@ -93,13 +93,13 @@
           "canlı yayın aktarım yazılımı"
         ]
       },
-      "ham_taban": 178,
-      "corpus_taban": 178,
+      "ham_taban": 928,
+      "corpus_taban": 928,
       "yeni_kayit": 5103,
       "yeni_tr": 2631,
       "yeni_ascii": 2472,
-      "ham_toplam": 4913,
-      "processed_toplam": 4913,
+      "ham_toplam": 5663,
+      "processed_toplam": 5663,
       "ood_relabeled": 5,
       "sinif_dengeleme": true
     }
@@ -4318,6 +4318,1634 @@
     {
       "beklenen_sektor": "eglence",
       "mesaj": "Sanatçılarımızın sahne programlarını ve kulis isteklerini kapasite aşımını engelleyerek yapacak bir planlama yazılımı bakıyoruz."
+    },
+    {
+      "id": 400124,
+      "mesaj": "We are migrating our legacy monolith to a microservices architecture on AWS.",
+      "lang": "en",
+      "beklenen_sektor": "bilisim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we are migrating our legacy monolith to a microservices architecture on aws.",
+      "ham_mesaj": "We are migrating our legacy monolith to a microservices architecture on AWS."
+    },
+    {
+      "id": 400125,
+      "mesaj": "Our startup needs a dedicated DevOps engineer to set up CI/CD pipelines.",
+      "lang": "en",
+      "beklenen_sektor": "bilisim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "our startup needs a dedicated devops engineer to set up ci/cd pipelines.",
+      "ham_mesaj": "Our startup needs a dedicated DevOps engineer to set up CI/CD pipelines."
+    },
+    {
+      "id": 400126,
+      "mesaj": "Do you provide penetration testing and compliance auditing for fintech applications?",
+      "lang": "en",
+      "beklenen_sektor": "bilisim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "do you provide penetration testing and compliance auditing for fintech applications?",
+      "ham_mesaj": "Do you provide penetration testing and compliance auditing for fintech applications?"
+    },
+    {
+      "id": 400127,
+      "mesaj": "We're looking for an outsourced software development team to build our SaaS MVP.",
+      "lang": "en",
+      "beklenen_sektor": "bilisim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we're looking for an outsourced software development team to build our saas mvp.",
+      "ham_mesaj": "We're looking for an outsourced software development team to build our SaaS MVP."
+    },
+    {
+      "id": 400128,
+      "mesaj": "Can you design a scalable API gateway for our distributed enterprise systems?",
+      "lang": "en",
+      "beklenen_sektor": "bilisim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "can you design a scalable api gateway for our distributed enterprise systems?",
+      "ham_mesaj": "Can you design a scalable API gateway for our distributed enterprise systems?"
+    },
+    {
+      "id": 400129,
+      "mesaj": "We require 24/7 managed IT services and cloud infrastructure support.",
+      "lang": "en",
+      "beklenen_sektor": "bilisim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we require 24/7 managed it services and cloud infrastructure support.",
+      "ham_mesaj": "We require 24/7 managed IT services and cloud infrastructure support."
+    },
+    {
+      "id": 400130,
+      "mesaj": "Looking for expertise in Kubernetes orchestration and containerization.",
+      "lang": "en",
+      "beklenen_sektor": "bilisim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "looking for expertise in kubernetes orchestration and containerization.",
+      "ham_mesaj": "Looking for expertise in Kubernetes orchestration and containerization."
+    },
+    {
+      "id": 400131,
+      "mesaj": "We need a custom data warehouse solution with real-time analytics dashboards.",
+      "lang": "en",
+      "beklenen_sektor": "bilisim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we need a custom data warehouse solution with real-time analytics dashboards.",
+      "ham_mesaj": "We need a custom data warehouse solution with real-time analytics dashboards."
+    },
+    {
+      "id": 400132,
+      "mesaj": "Do you offer disaster recovery planning and automated backup solutions?",
+      "lang": "en",
+      "beklenen_sektor": "bilisim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "do you offer disaster recovery planning and automated backup solutions?",
+      "ham_mesaj": "Do you offer disaster recovery planning and automated backup solutions?"
+    },
+    {
+      "id": 400133,
+      "mesaj": "We are seeking consultants to help us implement Zero Trust security protocols.",
+      "lang": "en",
+      "beklenen_sektor": "bilisim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we are seeking consultants to help us implement zero trust security protocols.",
+      "ham_mesaj": "We are seeking consultants to help us implement Zero Trust security protocols."
+    },
+    {
+      "id": 400134,
+      "mesaj": "Can you help us refactor our old PHP codebase to a modern React and Node.js stack?",
+      "lang": "en",
+      "beklenen_sektor": "bilisim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "can you help us refactor our old php codebase to a modern react and node.js stack?",
+      "ham_mesaj": "Can you help us refactor our old PHP codebase to a modern React and Node.js stack?"
+    },
+    {
+      "id": 400135,
+      "mesaj": "Our company needs an identity and access management (IAM) solution for thousands of employees.",
+      "lang": "en",
+      "beklenen_sektor": "bilisim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "our company needs an identity and access management (iam) solution for thousands of employees.",
+      "ham_mesaj": "Our company needs an identity and access management (IAM) solution for thousands of employees."
+    },
+    {
+      "id": 400136,
+      "mesaj": "We are looking for a machine learning expert to build a predictive analytics model.",
+      "lang": "en",
+      "beklenen_sektor": "bilisim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we are looking for a machine learning expert to build a predictive analytics model.",
+      "ham_mesaj": "We are looking for a machine learning expert to build a predictive analytics model."
+    },
+    {
+      "id": 400137,
+      "mesaj": "Do you provide load testing and performance optimization for high-traffic websites?",
+      "lang": "en",
+      "beklenen_sektor": "bilisim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "do you provide load testing and performance optimization for high-traffic websites?",
+      "ham_mesaj": "Do you provide load testing and performance optimization for high-traffic websites?"
+    },
+    {
+      "id": 400138,
+      "mesaj": "We need a robust logging and monitoring stack using ELK or Prometheus.",
+      "lang": "en",
+      "beklenen_sektor": "bilisim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we need a robust logging and monitoring stack using elk or prometheus.",
+      "ham_mesaj": "We need a robust logging and monitoring stack using ELK or Prometheus."
+    },
+    {
+      "id": 400139,
+      "mesaj": "Looking for a blockchain development team to build a smart contract platform.",
+      "lang": "en",
+      "beklenen_sektor": "bilisim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "looking for a blockchain development team to build a smart contract platform.",
+      "ham_mesaj": "Looking for a blockchain development team to build a smart contract platform."
+    },
+    {
+      "id": 400140,
+      "mesaj": "Can you design an IoT architecture for our network of smart sensors?",
+      "lang": "en",
+      "beklenen_sektor": "bilisim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "can you design an iot architecture for our network of smart sensors?",
+      "ham_mesaj": "Can you design an IoT architecture for our network of smart sensors?"
+    },
+    {
+      "id": 400141,
+      "mesaj": "We require a cross-platform mobile app built with Flutter or React Native.",
+      "lang": "en",
+      "beklenen_sektor": "bilisim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we require a cross-platform mobile app built with flutter or react native.",
+      "ham_mesaj": "We require a cross-platform mobile app built with Flutter or React Native."
+    },
+    {
+      "id": 400142,
+      "mesaj": "Our e-commerce platform needs a headless CMS integration.",
+      "lang": "en",
+      "beklenen_sektor": "bilisim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "our e-commerce platform needs a headless cms integration.",
+      "ham_mesaj": "Our e-commerce platform needs a headless CMS integration."
+    },
+    {
+      "id": 400143,
+      "mesaj": "Do you offer database migration services from Oracle to PostgreSQL?",
+      "lang": "en",
+      "beklenen_sektor": "bilisim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "do you offer database migration services from oracle to postgresql?",
+      "ham_mesaj": "Do you offer database migration services from Oracle to PostgreSQL?"
+    },
+    {
+      "id": 400144,
+      "mesaj": "We need an automated vulnerability scanning tool integrated into our GitHub pipeline.",
+      "lang": "en",
+      "beklenen_sektor": "bilisim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we need an automated vulnerability scanning tool integrated into our github pipeline.",
+      "ham_mesaj": "We need an automated vulnerability scanning tool integrated into our GitHub pipeline."
+    },
+    {
+      "id": 400145,
+      "mesaj": "Looking for an expert in Natural Language Processing to build a custom LLM application.",
+      "lang": "en",
+      "beklenen_sektor": "bilisim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "looking for an expert in natural language processing to build a custom llm application.",
+      "ham_mesaj": "Looking for an expert in Natural Language Processing to build a custom LLM application."
+    },
+    {
+      "id": 400146,
+      "mesaj": "Can you help us achieve SOC2 compliance for our cloud infrastructure?",
+      "lang": "en",
+      "beklenen_sektor": "bilisim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "can you help us achieve soc2 compliance for our cloud infrastructure?",
+      "ham_mesaj": "Can you help us achieve SOC2 compliance for our cloud infrastructure?"
+    },
+    {
+      "id": 400147,
+      "mesaj": "We want to build an internal developer portal to streamline onboarding.",
+      "lang": "en",
+      "beklenen_sektor": "bilisim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we want to build an internal developer portal to streamline onboarding.",
+      "ham_mesaj": "We want to build an internal developer portal to streamline onboarding."
+    },
+    {
+      "id": 400148,
+      "mesaj": "Our network requires SD-WAN implementation and branch office connectivity.",
+      "lang": "en",
+      "beklenen_sektor": "bilisim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "our network requires sd-wan implementation and branch office connectivity.",
+      "ham_mesaj": "Our network requires SD-WAN implementation and branch office connectivity."
+    },
+    {
+      "id": 400149,
+      "mesaj": "Do you provide UI/UX design services for enterprise software?",
+      "lang": "en",
+      "beklenen_sektor": "bilisim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "do you provide ui/ux design services for enterprise software?",
+      "ham_mesaj": "Do you provide UI/UX design services for enterprise software?"
+    },
+    {
+      "id": 400150,
+      "mesaj": "We need a robust messaging queue architecture using Kafka or RabbitMQ.",
+      "lang": "en",
+      "beklenen_sektor": "bilisim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we need a robust messaging queue architecture using kafka or rabbitmq.",
+      "ham_mesaj": "We need a robust messaging queue architecture using Kafka or RabbitMQ."
+    },
+    {
+      "id": 400151,
+      "mesaj": "Looking for a team to maintain and update our legacy COBOL systems.",
+      "lang": "en",
+      "beklenen_sektor": "bilisim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "looking for a team to maintain and update our legacy cobol systems.",
+      "ham_mesaj": "Looking for a team to maintain and update our legacy COBOL systems."
+    },
+    {
+      "id": 400152,
+      "mesaj": "Can you develop a desktop application for Windows and macOS using Electron?",
+      "lang": "en",
+      "beklenen_sektor": "bilisim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "can you develop a desktop application for windows and macos using electron?",
+      "ham_mesaj": "Can you develop a desktop application for Windows and macOS using Electron?"
+    },
+    {
+      "id": 400153,
+      "mesaj": "We need expertise in serverless architecture and AWS Lambda functions.",
+      "lang": "en",
+      "beklenen_sektor": "bilisim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we need expertise in serverless architecture and aws lambda functions.",
+      "ham_mesaj": "We need expertise in serverless architecture and AWS Lambda functions."
+    },
+    {
+      "id": 400154,
+      "mesaj": "Our hotel chain needs a centralized Property Management System to handle multiple locations.",
+      "lang": "en",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "our hotel chain needs a centralized property management system to handle multiple locations.",
+      "ham_mesaj": "Our hotel chain needs a centralized Property Management System to handle multiple locations."
+    },
+    {
+      "id": 400155,
+      "mesaj": "We are looking for a channel manager to sync our availability across booking sites like Booking.com.",
+      "lang": "en",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we are looking for a channel manager to sync our availability across booking sites like booking.com.",
+      "ham_mesaj": "We are looking for a channel manager to sync our availability across booking sites like Booking.com."
+    },
+    {
+      "id": 400156,
+      "mesaj": "Can your team develop a custom booking engine for our boutique resort's website?",
+      "lang": "en",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "can your team develop a custom booking engine for our boutique resort's website?",
+      "ham_mesaj": "Can your team develop a custom booking engine for our boutique resort's website?"
+    },
+    {
+      "id": 400157,
+      "mesaj": "We require an API integration for real-time flight tracking and dynamic pricing.",
+      "lang": "en",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we require an api integration for real-time flight tracking and dynamic pricing.",
+      "ham_mesaj": "We require an API integration for real-time flight tracking and dynamic pricing."
+    },
+    {
+      "id": 400158,
+      "mesaj": "Our tour operating company needs a CRM to manage guest itineraries and excursions.",
+      "lang": "en",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "our tour operating company needs a crm to manage guest itineraries and excursions.",
+      "ham_mesaj": "Our tour operating company needs a CRM to manage guest itineraries and excursions."
+    },
+    {
+      "id": 400159,
+      "mesaj": "Do you provide mobile key integration and contactless check-in software for hotels?",
+      "lang": "en",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "do you provide mobile key integration and contactless check-in software for hotels?",
+      "ham_mesaj": "Do you provide mobile key integration and contactless check-in software for hotels?"
+    },
+    {
+      "id": 400160,
+      "mesaj": "We're searching for a revenue management tool that uses AI to adjust room rates dynamically.",
+      "lang": "en",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we're searching for a revenue management tool that uses ai to adjust room rates dynamically.",
+      "ham_mesaj": "We're searching for a revenue management tool that uses AI to adjust room rates dynamically."
+    },
+    {
+      "id": 400161,
+      "mesaj": "We need a comprehensive housekeeping and maintenance dispatch system.",
+      "lang": "en",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we need a comprehensive housekeeping and maintenance dispatch system.",
+      "ham_mesaj": "We need a comprehensive housekeeping and maintenance dispatch system."
+    },
+    {
+      "id": 400162,
+      "mesaj": "Looking for a B2B travel portal development for our wholesale travel agency.",
+      "lang": "en",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "looking for a b2b travel portal development for our wholesale travel agency.",
+      "ham_mesaj": "Looking for a B2B travel portal development for our wholesale travel agency."
+    },
+    {
+      "id": 400163,
+      "mesaj": "Can you build a loyalty program and guest feedback application for our hospitality brand?",
+      "lang": "en",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "can you build a loyalty program and guest feedback application for our hospitality brand?",
+      "ham_mesaj": "Can you build a loyalty program and guest feedback application for our hospitality brand?"
+    },
+    {
+      "id": 400164,
+      "mesaj": "Our airline requires a robust baggage tracking and logistics system.",
+      "lang": "en",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "our airline requires a robust baggage tracking and logistics system.",
+      "ham_mesaj": "Our airline requires a robust baggage tracking and logistics system."
+    },
+    {
+      "id": 400165,
+      "mesaj": "We want to develop a travel itinerary planner with AI recommendations.",
+      "lang": "en",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we want to develop a travel itinerary planner with ai recommendations.",
+      "ham_mesaj": "We want to develop a travel itinerary planner with AI recommendations."
+    },
+    {
+      "id": 400166,
+      "mesaj": "Do you offer POS (Point of Sale) integrations for hotel restaurants and spas?",
+      "lang": "en",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "do you offer pos (point of sale) integrations for hotel restaurants and spas?",
+      "ham_mesaj": "Do you offer POS (Point of Sale) integrations for hotel restaurants and spas?"
+    },
+    {
+      "id": 400167,
+      "mesaj": "We need a scalable infrastructure for a massive cruise booking platform.",
+      "lang": "en",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we need a scalable infrastructure for a massive cruise booking platform.",
+      "ham_mesaj": "We need a scalable infrastructure for a massive cruise booking platform."
+    },
+    {
+      "id": 400168,
+      "mesaj": "Looking for a VR (Virtual Reality) application for virtual hotel tours.",
+      "lang": "en",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "looking for a vr (virtual reality) application for virtual hotel tours.",
+      "ham_mesaj": "Looking for a VR (Virtual Reality) application for virtual hotel tours."
+    },
+    {
+      "id": 400169,
+      "mesaj": "Can you create an automated chatbot for handling basic guest queries at the front desk?",
+      "lang": "en",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "can you create an automated chatbot for handling basic guest queries at the front desk?",
+      "ham_mesaj": "Can you create an automated chatbot for handling basic guest queries at the front desk?"
+    },
+    {
+      "id": 400170,
+      "mesaj": "Our car rental business needs a fleet management and reservation platform.",
+      "lang": "en",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "our car rental business needs a fleet management and reservation platform.",
+      "ham_mesaj": "Our car rental business needs a fleet management and reservation platform."
+    },
+    {
+      "id": 400171,
+      "mesaj": "We are seeking a solution to manage commissions for our network of travel agents.",
+      "lang": "en",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we are seeking a solution to manage commissions for our network of travel agents.",
+      "ham_mesaj": "We are seeking a solution to manage commissions for our network of travel agents."
+    },
+    {
+      "id": 400172,
+      "mesaj": "Need a dynamic currency conversion and payment gateway integration for our global booking site.",
+      "lang": "en",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "need a dynamic currency conversion and payment gateway integration for our global booking site.",
+      "ham_mesaj": "Need a dynamic currency conversion and payment gateway integration for our global booking site."
+    },
+    {
+      "id": 400173,
+      "mesaj": "We want to build a peer-to-peer experiential travel marketplace.",
+      "lang": "en",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we want to build a peer-to-peer experiential travel marketplace.",
+      "ham_mesaj": "We want to build a peer-to-peer experiential travel marketplace."
+    },
+    {
+      "id": 400174,
+      "mesaj": "Can you develop a mobile app for museum audio guides and interactive maps?",
+      "lang": "en",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "can you develop a mobile app for museum audio guides and interactive maps?",
+      "ham_mesaj": "Can you develop a mobile app for museum audio guides and interactive maps?"
+    },
+    {
+      "id": 400175,
+      "mesaj": "Our theme park requires a digital ticketing and crowd management system.",
+      "lang": "en",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "our theme park requires a digital ticketing and crowd management system.",
+      "ham_mesaj": "Our theme park requires a digital ticketing and crowd management system."
+    },
+    {
+      "id": 400176,
+      "mesaj": "We need an integration with Amadeus or Sabre GDS systems.",
+      "lang": "en",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we need an integration with amadeus or sabre gds systems.",
+      "ham_mesaj": "We need an integration with Amadeus or Sabre GDS systems."
+    },
+    {
+      "id": 400177,
+      "mesaj": "Do you provide data analytics to track seasonal travel trends and occupancy rates?",
+      "lang": "en",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "do you provide data analytics to track seasonal travel trends and occupancy rates?",
+      "ham_mesaj": "Do you provide data analytics to track seasonal travel trends and occupancy rates?"
+    },
+    {
+      "id": 400178,
+      "mesaj": "We're looking for an event management platform for our MICE (Meetings, Incentives, Conferences) division.",
+      "lang": "en",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we're looking for an event management platform for our mice (meetings, incentives, conferences) division.",
+      "ham_mesaj": "We're looking for an event management platform for our MICE (Meetings, Incentives, Conferences) division."
+    },
+    {
+      "id": 400179,
+      "mesaj": "Our ski resort needs a real-time lift pass and weather tracking application.",
+      "lang": "en",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "our ski resort needs a real-time lift pass and weather tracking application.",
+      "ham_mesaj": "Our ski resort needs a real-time lift pass and weather tracking application."
+    },
+    {
+      "id": 400180,
+      "mesaj": "Can you build a custom CRM for luxury travel concierges?",
+      "lang": "en",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "can you build a custom crm for luxury travel concierges?",
+      "ham_mesaj": "Can you build a custom CRM for luxury travel concierges?"
+    },
+    {
+      "id": 400181,
+      "mesaj": "We need a sustainability tracking software for eco-friendly tourism operators.",
+      "lang": "en",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we need a sustainability tracking software for eco-friendly tourism operators.",
+      "ham_mesaj": "We need a sustainability tracking software for eco-friendly tourism operators."
+    },
+    {
+      "id": 400182,
+      "mesaj": "Looking for a blockchain solution to issue secure travel certificates.",
+      "lang": "en",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "looking for a blockchain solution to issue secure travel certificates.",
+      "ham_mesaj": "Looking for a blockchain solution to issue secure travel certificates."
+    },
+    {
+      "id": 400183,
+      "mesaj": "Do you offer Wi-Fi portal development with captive portal monetization for hotels?",
+      "lang": "en",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "do you offer wi-fi portal development with captive portal monetization for hotels?",
+      "ham_mesaj": "Do you offer Wi-Fi portal development with captive portal monetization for hotels?"
+    },
+    {
+      "id": 400184,
+      "mesaj": "Our university is seeking a robust Learning Management System to host online courses.",
+      "lang": "en",
+      "beklenen_sektor": "egitim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "our university is seeking a robust learning management system to host online courses.",
+      "ham_mesaj": "Our university is seeking a robust Learning Management System to host online courses."
+    },
+    {
+      "id": 400185,
+      "mesaj": "We need a Student Information System that handles enrollment, grading, and transcripts.",
+      "lang": "en",
+      "beklenen_sektor": "egitim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we need a student information system that handles enrollment, grading, and transcripts.",
+      "ham_mesaj": "We need a Student Information System that handles enrollment, grading, and transcripts."
+    },
+    {
+      "id": 400186,
+      "mesaj": "Can you develop a secure online proctoring tool for remote examinations?",
+      "lang": "en",
+      "beklenen_sektor": "egitim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "can you develop a secure online proctoring tool for remote examinations?",
+      "ham_mesaj": "Can you develop a secure online proctoring tool for remote examinations?"
+    },
+    {
+      "id": 400187,
+      "mesaj": "We are a corporate training company looking for a custom e-learning platform.",
+      "lang": "en",
+      "beklenen_sektor": "egitim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we are a corporate training company looking for a custom e-learning platform.",
+      "ham_mesaj": "We are a corporate training company looking for a custom e-learning platform."
+    },
+    {
+      "id": 400188,
+      "mesaj": "Do you offer virtual classroom software with interactive whiteboards and breakout rooms?",
+      "lang": "en",
+      "beklenen_sektor": "egitim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "do you offer virtual classroom software with interactive whiteboards and breakout rooms?",
+      "ham_mesaj": "Do you offer virtual classroom software with interactive whiteboards and breakout rooms?"
+    },
+    {
+      "id": 400189,
+      "mesaj": "Our school district requires a parent-teacher communication portal.",
+      "lang": "en",
+      "beklenen_sektor": "egitim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "our school district requires a parent-teacher communication portal.",
+      "ham_mesaj": "Our school district requires a parent-teacher communication portal."
+    },
+    {
+      "id": 400190,
+      "mesaj": "We need an alumni networking and fundraising management platform.",
+      "lang": "en",
+      "beklenen_sektor": "egitim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we need an alumni networking and fundraising management platform.",
+      "ham_mesaj": "We need an alumni networking and fundraising management platform."
+    },
+    {
+      "id": 400191,
+      "mesaj": "Looking for an API to integrate plagiarism detection into our assignment submission workflow.",
+      "lang": "en",
+      "beklenen_sektor": "egitim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "looking for an api to integrate plagiarism detection into our assignment submission workflow.",
+      "ham_mesaj": "Looking for an API to integrate plagiarism detection into our assignment submission workflow."
+    },
+    {
+      "id": 400192,
+      "mesaj": "We want to digitize our campus library with a modern cataloging and checkout system.",
+      "lang": "en",
+      "beklenen_sektor": "egitim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we want to digitize our campus library with a modern cataloging and checkout system.",
+      "ham_mesaj": "We want to digitize our campus library with a modern cataloging and checkout system."
+    },
+    {
+      "id": 400193,
+      "mesaj": "Can you build a gamified learning app for early childhood education?",
+      "lang": "en",
+      "beklenen_sektor": "egitim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "can you build a gamified learning app for early childhood education?",
+      "ham_mesaj": "Can you build a gamified learning app for early childhood education?"
+    },
+    {
+      "id": 400194,
+      "mesaj": "Our coding bootcamp needs an integrated cloud IDE for student assignments.",
+      "lang": "en",
+      "beklenen_sektor": "egitim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "our coding bootcamp needs an integrated cloud ide for student assignments.",
+      "ham_mesaj": "Our coding bootcamp needs an integrated cloud IDE for student assignments."
+    },
+    {
+      "id": 400195,
+      "mesaj": "We are looking for a special education software that tracks individualized education programs (IEPs).",
+      "lang": "en",
+      "beklenen_sektor": "egitim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we are looking for a special education software that tracks individualized education programs (ieps).",
+      "ham_mesaj": "We are looking for a special education software that tracks individualized education programs (IEPs)."
+    },
+    {
+      "id": 400196,
+      "mesaj": "Do you provide video streaming infrastructure for massive open online courses (MOOCs)?",
+      "lang": "en",
+      "beklenen_sektor": "egitim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "do you provide video streaming infrastructure for massive open online courses (moocs)?",
+      "ham_mesaj": "Do you provide video streaming infrastructure for massive open online courses (MOOCs)?"
+    },
+    {
+      "id": 400197,
+      "mesaj": "We need a scalable platform for peer-to-peer tutoring and mentoring.",
+      "lang": "en",
+      "beklenen_sektor": "egitim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we need a scalable platform for peer-to-peer tutoring and mentoring.",
+      "ham_mesaj": "We need a scalable platform for peer-to-peer tutoring and mentoring."
+    },
+    {
+      "id": 400198,
+      "mesaj": "Looking for a data analytics dashboard to track student engagement and retention rates.",
+      "lang": "en",
+      "beklenen_sektor": "egitim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "looking for a data analytics dashboard to track student engagement and retention rates.",
+      "ham_mesaj": "Looking for a data analytics dashboard to track student engagement and retention rates."
+    },
+    {
+      "id": 400199,
+      "mesaj": "Can you develop an AR app for interactive anatomy lessons in medical school?",
+      "lang": "en",
+      "beklenen_sektor": "egitim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "can you develop an ar app for interactive anatomy lessons in medical school?",
+      "ham_mesaj": "Can you develop an AR app for interactive anatomy lessons in medical school?"
+    },
+    {
+      "id": 400200,
+      "mesaj": "We require a language learning application with speech recognition capabilities.",
+      "lang": "en",
+      "beklenen_sektor": "egitim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we require a language learning application with speech recognition capabilities.",
+      "ham_mesaj": "We require a language learning application with speech recognition capabilities."
+    },
+    {
+      "id": 400201,
+      "mesaj": "Our institution needs a mobile-first app for viewing course schedules and campus maps.",
+      "lang": "en",
+      "beklenen_sektor": "egitim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "our institution needs a mobile-first app for viewing course schedules and campus maps.",
+      "ham_mesaj": "Our institution needs a mobile-first app for viewing course schedules and campus maps."
+    },
+    {
+      "id": 400202,
+      "mesaj": "We want to implement a single sign-on (SSO) solution across all our educational software.",
+      "lang": "en",
+      "beklenen_sektor": "egitim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we want to implement a single sign-on (sso) solution across all our educational software.",
+      "ham_mesaj": "We want to implement a single sign-on (SSO) solution across all our educational software."
+    },
+    {
+      "id": 400203,
+      "mesaj": "Do you build digital credentialing systems using blockchain for verifiable certificates?",
+      "lang": "en",
+      "beklenen_sektor": "egitim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "do you build digital credentialing systems using blockchain for verifiable certificates?",
+      "ham_mesaj": "Do you build digital credentialing systems using blockchain for verifiable certificates?"
+    },
+    {
+      "id": 400204,
+      "mesaj": "We need a school bus routing and tracking system with real-time parent notifications.",
+      "lang": "en",
+      "beklenen_sektor": "egitim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we need a school bus routing and tracking system with real-time parent notifications.",
+      "ham_mesaj": "We need a school bus routing and tracking system with real-time parent notifications."
+    },
+    {
+      "id": 400205,
+      "mesaj": "Looking for a platform to manage student housing and dorm room assignments.",
+      "lang": "en",
+      "beklenen_sektor": "egitim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "looking for a platform to manage student housing and dorm room assignments.",
+      "ham_mesaj": "Looking for a platform to manage student housing and dorm room assignments."
+    },
+    {
+      "id": 400206,
+      "mesaj": "Can you create a custom CRM for university admissions and lead tracking?",
+      "lang": "en",
+      "beklenen_sektor": "egitim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "can you create a custom crm for university admissions and lead tracking?",
+      "ham_mesaj": "Can you create a custom CRM for university admissions and lead tracking?"
+    },
+    {
+      "id": 400207,
+      "mesaj": "We need an AI essay grader to assist our teaching assistants.",
+      "lang": "en",
+      "beklenen_sektor": "egitim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we need an ai essay grader to assist our teaching assistants.",
+      "ham_mesaj": "We need an AI essay grader to assist our teaching assistants."
+    },
+    {
+      "id": 400208,
+      "mesaj": "Our vocational school requires simulation software for technical training.",
+      "lang": "en",
+      "beklenen_sektor": "egitim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "our vocational school requires simulation software for technical training.",
+      "ham_mesaj": "Our vocational school requires simulation software for technical training."
+    },
+    {
+      "id": 400209,
+      "mesaj": "Do you offer accessibility audits for educational websites (WCAG compliance)?",
+      "lang": "en",
+      "beklenen_sektor": "egitim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "do you offer accessibility audits for educational websites (wcag compliance)?",
+      "ham_mesaj": "Do you offer accessibility audits for educational websites (WCAG compliance)?"
+    },
+    {
+      "id": 400210,
+      "mesaj": "We want to build a marketplace for buying and selling used textbooks.",
+      "lang": "en",
+      "beklenen_sektor": "egitim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we want to build a marketplace for buying and selling used textbooks.",
+      "ham_mesaj": "We want to build a marketplace for buying and selling used textbooks."
+    },
+    {
+      "id": 400211,
+      "mesaj": "Need a system to manage grant applications and academic research funding.",
+      "lang": "en",
+      "beklenen_sektor": "egitim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "need a system to manage grant applications and academic research funding.",
+      "ham_mesaj": "Need a system to manage grant applications and academic research funding."
+    },
+    {
+      "id": 400212,
+      "mesaj": "Can you develop a music education app with real-time pitch detection?",
+      "lang": "en",
+      "beklenen_sektor": "egitim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "can you develop a music education app with real-time pitch detection?",
+      "ham_mesaj": "Can you develop a music education app with real-time pitch detection?"
+    },
+    {
+      "id": 400213,
+      "mesaj": "We're looking for an automated attendance tracking system using RFID or biometrics.",
+      "lang": "en",
+      "beklenen_sektor": "egitim",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we're looking for an automated attendance tracking system using rfid or biometrics.",
+      "ham_mesaj": "We're looking for an automated attendance tracking system using RFID or biometrics."
+    },
+    {
+      "id": 400214,
+      "mesaj": "We are a medical facility looking for an integrated Electronic Health Record solution.",
+      "lang": "en",
+      "beklenen_sektor": "saglik",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we are a medical facility looking for an integrated electronic health record solution.",
+      "ham_mesaj": "We are a medical facility looking for an integrated Electronic Health Record solution."
+    },
+    {
+      "id": 400215,
+      "mesaj": "I need a patient portal where patients can view their lab results and book appointments.",
+      "lang": "en",
+      "beklenen_sektor": "saglik",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "i need a patient portal where patients can view their lab results and book appointments.",
+      "ham_mesaj": "I need a patient portal where patients can view their lab results and book appointments."
+    },
+    {
+      "id": 400216,
+      "mesaj": "Do you offer telemedicine infrastructure with secure video conferencing?",
+      "lang": "en",
+      "beklenen_sektor": "saglik",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "do you offer telemedicine infrastructure with secure video conferencing?",
+      "ham_mesaj": "Do you offer telemedicine infrastructure with secure video conferencing?"
+    },
+    {
+      "id": 400217,
+      "mesaj": "Our clinic requires an automated billing and insurance claim management system.",
+      "lang": "en",
+      "beklenen_sektor": "saglik",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "our clinic requires an automated billing and insurance claim management system.",
+      "ham_mesaj": "Our clinic requires an automated billing and insurance claim management system."
+    },
+    {
+      "id": 400218,
+      "mesaj": "We're searching for a PACS (Picture Archiving and Communication System) for our radiology department.",
+      "lang": "en",
+      "beklenen_sektor": "saglik",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we're searching for a pacs (picture archiving and communication system) for our radiology department.",
+      "ham_mesaj": "We're searching for a PACS (Picture Archiving and Communication System) for our radiology department."
+    },
+    {
+      "id": 400219,
+      "mesaj": "Is there a custom software solution for tracking medical inventory and pharmaceutical supplies?",
+      "lang": "en",
+      "beklenen_sektor": "saglik",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "is there a custom software solution for tracking medical inventory and pharmaceutical supplies?",
+      "ham_mesaj": "Is there a custom software solution for tracking medical inventory and pharmaceutical supplies?"
+    },
+    {
+      "id": 400220,
+      "mesaj": "Looking for an API to integrate wearable health monitors with our diagnostic platform.",
+      "lang": "en",
+      "beklenen_sektor": "saglik",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "looking for an api to integrate wearable health monitors with our diagnostic platform.",
+      "ham_mesaj": "Looking for an API to integrate wearable health monitors with our diagnostic platform."
+    },
+    {
+      "id": 400221,
+      "mesaj": "We need a HIPAA-compliant data storage solution for sensitive patient records.",
+      "lang": "en",
+      "beklenen_sektor": "saglik",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we need a hipaa-compliant data storage solution for sensitive patient records.",
+      "ham_mesaj": "We need a HIPAA-compliant data storage solution for sensitive patient records."
+    },
+    {
+      "id": 400222,
+      "mesaj": "Can you build a specialized CRM for managing outpatient care and follow-ups?",
+      "lang": "en",
+      "beklenen_sektor": "saglik",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "can you build a specialized crm for managing outpatient care and follow-ups?",
+      "ham_mesaj": "Can you build a specialized CRM for managing outpatient care and follow-ups?"
+    },
+    {
+      "id": 400223,
+      "mesaj": "We are a dental practice needing a unified scheduling and charting application.",
+      "lang": "en",
+      "beklenen_sektor": "saglik",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we are a dental practice needing a unified scheduling and charting application.",
+      "ham_mesaj": "We are a dental practice needing a unified scheduling and charting application."
+    },
+    {
+      "id": 400224,
+      "mesaj": "Our hospital wants to implement an AI-driven triage and symptom checker bot.",
+      "lang": "en",
+      "beklenen_sektor": "saglik",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "our hospital wants to implement an ai-driven triage and symptom checker bot.",
+      "ham_mesaj": "Our hospital wants to implement an AI-driven triage and symptom checker bot."
+    },
+    {
+      "id": 400225,
+      "mesaj": "Do you provide cybersecurity assessments specifically for healthcare networks?",
+      "lang": "en",
+      "beklenen_sektor": "saglik",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "do you provide cybersecurity assessments specifically for healthcare networks?",
+      "ham_mesaj": "Do you provide cybersecurity assessments specifically for healthcare networks?"
+    },
+    {
+      "id": 400226,
+      "mesaj": "We need a blood bank management system with real-time tracking.",
+      "lang": "en",
+      "beklenen_sektor": "saglik",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we need a blood bank management system with real-time tracking.",
+      "ham_mesaj": "We need a blood bank management system with real-time tracking."
+    },
+    {
+      "id": 400227,
+      "mesaj": "Looking for a mobile app development team to build a mental health and wellness tracker.",
+      "lang": "en",
+      "beklenen_sektor": "saglik",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "looking for a mobile app development team to build a mental health and wellness tracker.",
+      "ham_mesaj": "Looking for a mobile app development team to build a mental health and wellness tracker."
+    },
+    {
+      "id": 400228,
+      "mesaj": "Can you integrate our laboratory information system with external state health registries?",
+      "lang": "en",
+      "beklenen_sektor": "saglik",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "can you integrate our laboratory information system with external state health registries?",
+      "ham_mesaj": "Can you integrate our laboratory information system with external state health registries?"
+    },
+    {
+      "id": 400229,
+      "mesaj": "We need software to manage clinical trial data and patient consent forms.",
+      "lang": "en",
+      "beklenen_sektor": "saglik",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we need software to manage clinical trial data and patient consent forms.",
+      "ham_mesaj": "We need software to manage clinical trial data and patient consent forms."
+    },
+    {
+      "id": 400230,
+      "mesaj": "Our rehabilitation center requires a custom physical therapy tracking platform.",
+      "lang": "en",
+      "beklenen_sektor": "saglik",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "our rehabilitation center requires a custom physical therapy tracking platform.",
+      "ham_mesaj": "Our rehabilitation center requires a custom physical therapy tracking platform."
+    },
+    {
+      "id": 400231,
+      "mesaj": "Do you build IoT solutions for remote patient monitoring devices?",
+      "lang": "en",
+      "beklenen_sektor": "saglik",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "do you build iot solutions for remote patient monitoring devices?",
+      "ham_mesaj": "Do you build IoT solutions for remote patient monitoring devices?"
+    },
+    {
+      "id": 400232,
+      "mesaj": "We're looking for a robust appointment reminder system via SMS and email.",
+      "lang": "en",
+      "beklenen_sektor": "saglik",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we're looking for a robust appointment reminder system via sms and email.",
+      "ham_mesaj": "We're looking for a robust appointment reminder system via SMS and email."
+    },
+    {
+      "id": 400233,
+      "mesaj": "Need a bespoke pharmacy management system including prescription tracking.",
+      "lang": "en",
+      "beklenen_sektor": "saglik",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "need a bespoke pharmacy management system including prescription tracking.",
+      "ham_mesaj": "Need a bespoke pharmacy management system including prescription tracking."
+    },
+    {
+      "id": 400234,
+      "mesaj": "We are seeking a cloud migration strategy for our legacy hospital management system.",
+      "lang": "en",
+      "beklenen_sektor": "saglik",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we are seeking a cloud migration strategy for our legacy hospital management system.",
+      "ham_mesaj": "We are seeking a cloud migration strategy for our legacy hospital management system."
+    },
+    {
+      "id": 400235,
+      "mesaj": "Can you develop an AI tool for analyzing pathology slides?",
+      "lang": "en",
+      "beklenen_sektor": "saglik",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "can you develop an ai tool for analyzing pathology slides?",
+      "ham_mesaj": "Can you develop an AI tool for analyzing pathology slides?"
+    },
+    {
+      "id": 400236,
+      "mesaj": "Our telemedicine startup needs a scalable backend architecture.",
+      "lang": "en",
+      "beklenen_sektor": "saglik",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "our telemedicine startup needs a scalable backend architecture.",
+      "ham_mesaj": "Our telemedicine startup needs a scalable backend architecture."
+    },
+    {
+      "id": 400237,
+      "mesaj": "We require an emergency response dispatch system with GPS integration.",
+      "lang": "en",
+      "beklenen_sektor": "saglik",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we require an emergency response dispatch system with gps integration.",
+      "ham_mesaj": "We require an emergency response dispatch system with GPS integration."
+    },
+    {
+      "id": 400238,
+      "mesaj": "Looking for a medical imaging software with 3D reconstruction capabilities.",
+      "lang": "en",
+      "beklenen_sektor": "saglik",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "looking for a medical imaging software with 3d reconstruction capabilities.",
+      "ham_mesaj": "Looking for a medical imaging software with 3D reconstruction capabilities."
+    },
+    {
+      "id": 400239,
+      "mesaj": "We need a secure physician-to-physician communication platform.",
+      "lang": "en",
+      "beklenen_sektor": "saglik",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we need a secure physician-to-physician communication platform.",
+      "ham_mesaj": "We need a secure physician-to-physician communication platform."
+    },
+    {
+      "id": 400240,
+      "mesaj": "Do you offer software for managing medical equipment maintenance schedules?",
+      "lang": "en",
+      "beklenen_sektor": "saglik",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "do you offer software for managing medical equipment maintenance schedules?",
+      "ham_mesaj": "Do you offer software for managing medical equipment maintenance schedules?"
+    },
+    {
+      "id": 400241,
+      "mesaj": "Our home healthcare agency needs a mobile app for nurses to log visits.",
+      "lang": "en",
+      "beklenen_sektor": "saglik",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "our home healthcare agency needs a mobile app for nurses to log visits.",
+      "ham_mesaj": "Our home healthcare agency needs a mobile app for nurses to log visits."
+    },
+    {
+      "id": 400242,
+      "mesaj": "We want to build a marketplace for booking independent medical specialists.",
+      "lang": "en",
+      "beklenen_sektor": "saglik",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we want to build a marketplace for booking independent medical specialists.",
+      "ham_mesaj": "We want to build a marketplace for booking independent medical specialists."
+    },
+    {
+      "id": 400243,
+      "mesaj": "Can you implement biometric authentication for accessing medical records?",
+      "lang": "en",
+      "beklenen_sektor": "saglik",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "can you implement biometric authentication for accessing medical records?",
+      "ham_mesaj": "Can you implement biometric authentication for accessing medical records?"
+    },
+    {
+      "id": 400244,
+      "mesaj": "Our media company needs a high-throughput Content Delivery Network for global video streaming.",
+      "lang": "en",
+      "beklenen_sektor": "eglence",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "our media company needs a high-throughput content delivery network for global video streaming.",
+      "ham_mesaj": "Our media company needs a high-throughput Content Delivery Network for global video streaming."
+    },
+    {
+      "id": 400245,
+      "mesaj": "We are looking for a DRM (Digital Rights Management) solution to protect our original content.",
+      "lang": "en",
+      "beklenen_sektor": "eglence",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we are looking for a drm (digital rights management) solution to protect our original content.",
+      "ham_mesaj": "We are looking for a DRM (Digital Rights Management) solution to protect our original content."
+    },
+    {
+      "id": 400246,
+      "mesaj": "Can you develop a low-latency multiplayer backend for our mobile game?",
+      "lang": "en",
+      "beklenen_sektor": "eglence",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "can you develop a low-latency multiplayer backend for our mobile game?",
+      "ham_mesaj": "Can you develop a low-latency multiplayer backend for our mobile game?"
+    },
+    {
+      "id": 400247,
+      "mesaj": "We need a massive scale event ticketing platform capable of handling flash sales.",
+      "lang": "en",
+      "beklenen_sektor": "eglence",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we need a massive scale event ticketing platform capable of handling flash sales.",
+      "ham_mesaj": "We need a massive scale event ticketing platform capable of handling flash sales."
+    },
+    {
+      "id": 400248,
+      "mesaj": "Our agency requires a Media Asset Management system to organize terabytes of raw video files.",
+      "lang": "en",
+      "beklenen_sektor": "eglence",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "our agency requires a media asset management system to organize terabytes of raw video files.",
+      "ham_mesaj": "Our agency requires a Media Asset Management system to organize terabytes of raw video files."
+    },
+    {
+      "id": 400249,
+      "mesaj": "Looking for an interactive live streaming architecture with real-time chat and tipping.",
+      "lang": "en",
+      "beklenen_sektor": "eglence",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "looking for an interactive live streaming architecture with real-time chat and tipping.",
+      "ham_mesaj": "Looking for an interactive live streaming architecture with real-time chat and tipping."
+    },
+    {
+      "id": 400250,
+      "mesaj": "We want to build a music distribution platform for independent artists.",
+      "lang": "en",
+      "beklenen_sektor": "eglence",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we want to build a music distribution platform for independent artists.",
+      "ham_mesaj": "We want to build a music distribution platform for independent artists."
+    },
+    {
+      "id": 400251,
+      "mesaj": "Do you offer machine learning solutions for personalized content recommendation engines?",
+      "lang": "en",
+      "beklenen_sektor": "eglence",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "do you offer machine learning solutions for personalized content recommendation engines?",
+      "ham_mesaj": "Do you offer machine learning solutions for personalized content recommendation engines?"
+    },
+    {
+      "id": 400252,
+      "mesaj": "We need a custom mobile app for our music festival with interactive maps and scheduling.",
+      "lang": "en",
+      "beklenen_sektor": "eglence",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we need a custom mobile app for our music festival with interactive maps and scheduling.",
+      "ham_mesaj": "We need a custom mobile app for our music festival with interactive maps and scheduling."
+    },
+    {
+      "id": 400253,
+      "mesaj": "Can you integrate AR (Augmented Reality) filters into our social media campaign app?",
+      "lang": "en",
+      "beklenen_sektor": "eglence",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "can you integrate ar (augmented reality) filters into our social media campaign app?",
+      "ham_mesaj": "Can you integrate AR (Augmented Reality) filters into our social media campaign app?"
+    },
+    {
+      "id": 400254,
+      "mesaj": "Our animation studio needs a cloud-based rendering pipeline.",
+      "lang": "en",
+      "beklenen_sektor": "eglence",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "our animation studio needs a cloud-based rendering pipeline.",
+      "ham_mesaj": "Our animation studio needs a cloud-based rendering pipeline."
+    },
+    {
+      "id": 400255,
+      "mesaj": "We are looking for a podcast hosting and syndication platform.",
+      "lang": "en",
+      "beklenen_sektor": "eglence",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we are looking for a podcast hosting and syndication platform.",
+      "ham_mesaj": "We are looking for a podcast hosting and syndication platform."
+    },
+    {
+      "id": 400256,
+      "mesaj": "Do you provide scalable leaderboard and matchmaking servers for esports tournaments?",
+      "lang": "en",
+      "beklenen_sektor": "eglence",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "do you provide scalable leaderboard and matchmaking servers for esports tournaments?",
+      "ham_mesaj": "Do you provide scalable leaderboard and matchmaking servers for esports tournaments?"
+    },
+    {
+      "id": 400257,
+      "mesaj": "We need an influencer marketing CRM to track campaign ROI.",
+      "lang": "en",
+      "beklenen_sektor": "eglence",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we need an influencer marketing crm to track campaign roi.",
+      "ham_mesaj": "We need an influencer marketing CRM to track campaign ROI."
+    },
+    {
+      "id": 400258,
+      "mesaj": "Looking for a platform to host and monetize interactive webinars and virtual events.",
+      "lang": "en",
+      "beklenen_sektor": "eglence",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "looking for a platform to host and monetize interactive webinars and virtual events.",
+      "ham_mesaj": "Looking for a platform to host and monetize interactive webinars and virtual events."
+    },
+    {
+      "id": 400259,
+      "mesaj": "Can you build a fantasy sports application with real-time data feeds?",
+      "lang": "en",
+      "beklenen_sektor": "eglence",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "can you build a fantasy sports application with real-time data feeds?",
+      "ham_mesaj": "Can you build a fantasy sports application with real-time data feeds?"
+    },
+    {
+      "id": 400260,
+      "mesaj": "Our publishing house wants to develop an interactive eBook reading application.",
+      "lang": "en",
+      "beklenen_sektor": "eglence",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "our publishing house wants to develop an interactive ebook reading application.",
+      "ham_mesaj": "Our publishing house wants to develop an interactive eBook reading application."
+    },
+    {
+      "id": 400261,
+      "mesaj": "We need an automated subtitle generation and translation tool for video content.",
+      "lang": "en",
+      "beklenen_sektor": "eglence",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we need an automated subtitle generation and translation tool for video content.",
+      "ham_mesaj": "We need an automated subtitle generation and translation tool for video content."
+    },
+    {
+      "id": 400262,
+      "mesaj": "Do you offer anti-cheat software development for competitive gaming?",
+      "lang": "en",
+      "beklenen_sektor": "eglence",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "do you offer anti-cheat software development for competitive gaming?",
+      "ham_mesaj": "Do you offer anti-cheat software development for competitive gaming?"
+    },
+    {
+      "id": 400263,
+      "mesaj": "We are seeking a blockchain solution for issuing NFT tickets to exclusive events.",
+      "lang": "en",
+      "beklenen_sektor": "eglence",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we are seeking a blockchain solution for issuing nft tickets to exclusive events.",
+      "ham_mesaj": "We are seeking a blockchain solution for issuing NFT tickets to exclusive events."
+    },
+    {
+      "id": 400264,
+      "mesaj": "Looking for a video editing API to integrate into our user-generated content app.",
+      "lang": "en",
+      "beklenen_sektor": "eglence",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "looking for a video editing api to integrate into our user-generated content app.",
+      "ham_mesaj": "Looking for a video editing API to integrate into our user-generated content app."
+    },
+    {
+      "id": 400265,
+      "mesaj": "Can you develop a voice-controlled interactive storytelling game?",
+      "lang": "en",
+      "beklenen_sektor": "eglence",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "can you develop a voice-controlled interactive storytelling game?",
+      "ham_mesaj": "Can you develop a voice-controlled interactive storytelling game?"
+    },
+    {
+      "id": 400266,
+      "mesaj": "We need a robust content moderation system using AI for our community forum.",
+      "lang": "en",
+      "beklenen_sektor": "eglence",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we need a robust content moderation system using ai for our community forum.",
+      "ham_mesaj": "We need a robust content moderation system using AI for our community forum."
+    },
+    {
+      "id": 400267,
+      "mesaj": "Our theater company requires a dynamic seating chart and reservation system.",
+      "lang": "en",
+      "beklenen_sektor": "eglence",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "our theater company requires a dynamic seating chart and reservation system.",
+      "ham_mesaj": "Our theater company requires a dynamic seating chart and reservation system."
+    },
+    {
+      "id": 400268,
+      "mesaj": "Do you provide analytics to track viewer retention and engagement during live broadcasts?",
+      "lang": "en",
+      "beklenen_sektor": "eglence",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "do you provide analytics to track viewer retention and engagement during live broadcasts?",
+      "ham_mesaj": "Do you provide analytics to track viewer retention and engagement during live broadcasts?"
+    },
+    {
+      "id": 400269,
+      "mesaj": "We want to build a short-form video platform similar to TikTok.",
+      "lang": "en",
+      "beklenen_sektor": "eglence",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we want to build a short-form video platform similar to tiktok.",
+      "ham_mesaj": "We want to build a short-form video platform similar to TikTok."
+    },
+    {
+      "id": 400270,
+      "mesaj": "Need a digital signage management software for our cinema network.",
+      "lang": "en",
+      "beklenen_sektor": "eglence",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "need a digital signage management software for our cinema network.",
+      "ham_mesaj": "Need a digital signage management software for our cinema network."
+    },
+    {
+      "id": 400271,
+      "mesaj": "Can you create a cross-platform companion app for our tabletop board game?",
+      "lang": "en",
+      "beklenen_sektor": "eglence",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "can you create a cross-platform companion app for our tabletop board game?",
+      "ham_mesaj": "Can you create a cross-platform companion app for our tabletop board game?"
+    },
+    {
+      "id": 400272,
+      "mesaj": "We're looking for an audio streaming architecture with high-fidelity lossless support.",
+      "lang": "en",
+      "beklenen_sektor": "eglence",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "we're looking for an audio streaming architecture with high-fidelity lossless support.",
+      "ham_mesaj": "We're looking for an audio streaming architecture with high-fidelity lossless support."
+    },
+    {
+      "id": 400273,
+      "mesaj": "Our esports team needs a merchandise e-commerce platform with global shipping integrations.",
+      "lang": "en",
+      "beklenen_sektor": "eglence",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal",
+      "normalize_mesaj": "our esports team needs a merchandise e-commerce platform with global shipping integrations.",
+      "ham_mesaj": "Our esports team needs a merchandise e-commerce platform with global shipping integrations."
+    },
+    {
+      "id": 400274,
+      "kaynak": "admin_panel",
+      "metin": "Hastane sistemimiz için randevu ve reçete otomasyon yazılımı entegre etmek istiyoruz.",
+      "beklenen_sektor": "saglik",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal"
+    },
+    {
+      "id": 400275,
+      "kaynak": "admin_panel_augmented",
+      "metin": "Mevcut işleyişimizi hızlandırmak maksadıyla klinik ve entegre alanında kalıcı ve güvenilir bir partner arayışındayız.",
+      "beklenen_sektor": "saglik",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal"
+    },
+    {
+      "id": 400276,
+      "kaynak": "admin_panel_augmented",
+      "metin": "Acaba randevu ve klinik ihtiyaçlarımız için bize ne tür alternatifler sunabilirsiniz, detaylı bir fiyatlandırma alabilir miyim?",
+      "beklenen_sektor": "saglik",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal"
+    },
+    {
+      "id": 400277,
+      "kaynak": "admin_panel_augmented",
+      "metin": "Ekiplerimizin verimliliğini artırmak adına acilen randevu ve planlıyoruz odaklı yeni bir sisteme geçiş yapmayı planlıyoruz.",
+      "beklenen_sektor": "saglik",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal"
+    },
+    {
+      "id": 400278,
+      "kaynak": "admin_panel",
+      "mesaj": "Şirketimiz için otel rezervasyon ve uçak bileti takip sistemi entegre etmek istiyoruz.",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal"
+    },
+    {
+      "id": 400279,
+      "kaynak": "admin_panel_augmented",
+      "mesaj": "Mevcut işleyişimizi hızlandırmak maksadıyla sistemi ve booking alanında kalıcı ve güvenilir bir partner arayışındayız.",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal"
+    },
+    {
+      "id": 400280,
+      "kaynak": "admin_panel_augmented",
+      "mesaj": "Operasyonel maliyetlerimizi düşürmek ve takip standartlarımızı yükseltmek için acil olarak desteğinize ihtiyacımız var.",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal"
+    },
+    {
+      "id": 400281,
+      "kaynak": "admin_panel_augmented",
+      "mesaj": "Ekiplerimizin verimliliğini artırmak adına acilen takip ve talep etmekteyiz odaklı yeni bir sisteme geçiş yapmayı planlıyoruz.",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal"
+    },
+    {
+      "id": 400282,
+      "kaynak": "admin_panel",
+      "mesaj": "Şirketimiz için otel rezervasyon ve uçak bileti takip sistemi entegre etmek istiyoruz.",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal"
+    },
+    {
+      "id": 400283,
+      "kaynak": "admin_panel_augmented",
+      "mesaj": "Operasyonel maliyetlerimizi düşürmek ve uçak standartlarımızı yükseltmek için acil olarak desteğinize ihtiyacımız var.",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal"
+    },
+    {
+      "id": 400284,
+      "kaynak": "admin_panel_augmented",
+      "mesaj": "Ekiplerimizin verimliliğini artırmak adına acilen Şirketimiz ve booking odaklı yeni bir sisteme geçiş yapmayı planlıyoruz.",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal"
+    },
+    {
+      "id": 400285,
+      "kaynak": "admin_panel_augmented",
+      "mesaj": "Kurumumuzun dijital dönüşüm süreçlerinde bileti konularında profesyonel bir yaklaşım aramaktayız, süreç nasıl ilerliyor?",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal"
+    },
+    {
+      "id": 400286,
+      "kaynak": "admin_panel",
+      "mesaj": "Şirketimiz için otel rezervasyon ve uçak bileti takip sistemi entegre etmek istiyoruz.",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal"
+    },
+    {
+      "id": 400287,
+      "kaynak": "admin_panel_augmented",
+      "mesaj": "Ekiplerimizin verimliliğini artırmak adına acilen yer ayırtma ve Şirketimiz odaklı yeni bir sisteme geçiş yapmayı planlıyoruz.",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal"
+    },
+    {
+      "id": 400288,
+      "kaynak": "admin_panel_augmented",
+      "mesaj": "Acaba takip ve uçak ihtiyaçlarımız için bize ne tür alternatifler sunabilirsiniz, detaylı bir fiyatlandırma alabilir miyim?",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal"
+    },
+    {
+      "id": 400289,
+      "kaynak": "admin_panel_augmented",
+      "mesaj": "Operasyonel maliyetlerimizi düşürmek ve bileti ve uçak standartlarımızı yükseltmek için acil olarak desteğinize ihtiyacımız var.",
+      "beklenen_sektor": "turizm",
+      "beklenen_mod": "K2",
+      "zorluk": "uzun_kurumsal"
     }
   ]
 }

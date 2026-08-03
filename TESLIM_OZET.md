@@ -13,20 +13,22 @@ Sistem, kullanıcının girdiği metni **5 temel B2B sektörel kategoriye** (sa�
 - **Aşama 6 (Aktif Öğrenme Günlüğü / Active Learning):** Tüm kurtarma adımlarına (Aşama 5 dahil) rağmen sistem nihai olarak "belirsiz" (FB) kararı verdiyse, bu zor/anlaşılamayan sorgu `src/unresolved_logger.py` mekanizması tarafından otomatik olarak loglanır (`logs/unresolved_queries.json`). Bu JSONL logları, içerdiği aday (top-candidate) skorlarıyla birlikte BGE-M3 veri setinin zenginleştirilmesi ve ileride "zero-shot" hatalarının giderilmesi için kalıcı bir geri bildirim döngüsü (feedback loop) oluşturur.
 
 ## 2. Final Doğrulanmış Skor (North Star Metriği)
-Yalnızca hedeflenen sektörün doğru bulunup bulunmadığına bakan (yöntem/mod kısıtlamalarından arındırılmış) son başarı skoru: **147 / 165 (%89.1)**
+Yalnızca hedeflenen sektörün doğru bulunup bulunmadığına bakan (yöntem/mod kısıtlamalarından arındırılmış) son başarı skoru: **148 / 165 (%89.7)**
 
 **Kategori Kırılımları:**
-- **TEMEL (19 Senaryo):** 17/19 (%89.5)
-- **STRES (78 Senaryo):** 66/78 (%84.6)
+- **TEMEL (19 Senaryo):** 18/19 (%94.7)
+- **STRES (78 Senaryo):** 64/78 (%82.0)
 - **CEKIM (26 Senaryo):** 26/26 (%100)
 - **SELAM (26 Senaryo):** 24/26 (%92.3)
-- **K1REG (Hafıza) (16 Senaryo):** 14/16 (%87.5)
+- **K1REG (Hafıza) (16 Senaryo):** 16/16 (%100)
 
 ## 3. Bilinen Sınırlamalar ve Açık Kalan Sorunlar (Teknik Borçlar)
+- **BGE-M3 Marjinal Dalgalanmaları (A03, A05 vs.):** Yeni veritabanı entegrasyonu hazırlıkları sırasında yapılan testlerde, vektör ortalamalarındaki 0.01 puanlık küsurat değişimleri nedeniyle eşikte (0.65) olan bazı stres senaryoları (Örn: A03 `0.64` ile) ucu ucuna "belirsiz" (Fallback) statüsüne düşmüştür (Bu yüzden skor 66'dan 64'e inmiştir). Bu tamamen matematiksel tolerans sınırıdır, algoritma bozulması değildir.
 - **K2 Semantik Kayması (A09):** İçinde "radar" ve "otomasyon" gibi kelimeler geçen ancak aslen eğitim sektörünü hedefleyen (ör. "savunma radar projesi değil, eğitim otomasyonu") girdiler, BGE-M3 modeli tarafından vektörel ortalama nedeniyle yüksek skorla "bilişim" sektörüne atanabilmektedir. Bunun çözümü vektör veri tabanına sentetik örnekler eklemektir.
 - **Minör Hafıza ve Selamlaşma Hataları:** SL-C2 ve SL-D1b gibi bazı kompleks bağlam geçişlerinde veya kısa selamlaşmalarda beklenen "belirsiz" yerine rastgele bir sektöre (ör. bilişim) kaymalar yaşanmaktadır.
 - **Veritabanı Tablo Ayrımı:** Geliştirme ortamında (testlerde) embedding indeksleri üzerinden simülasyon yapılmaktadır. Canlı `/api/chat` endpoint'inde `qa_embeddings` ile `vector_index` PostgreSQL tablolarının ayrı ayrı kullanılması ve uçtan uca doğrulanması henüz canlı sistem üzerinde stres testine tabi tutulmamıştır.
-- **Widget Entegrasyonu:** `demo/` klasöründeki frontend widget'ı (JS/CSS) bağımsız olarak (`localhost:8080`) çalışmakta olup, bilinçli bir tercih olarak Allintos ana yapısına gömülmemiştir.
+- **Widget Entegrasyonu:** `demo/` klasöründeki frontend widget'ı (JS/CSS) bağımsız olarak (`localhost:8082`) çalışmakta olup, bilinçli bir tercih olarak Allintos ana yapısına gömülmemiştir. Sadece `<script src="...">` ile dış sitelere entegre olabilir.
+  - **Kısıt (IP Adresi):** `10.20.40.153` gibi `10.x.x.x` bloğundaki IP adresleri özel yerel ağ (LAN/VPN) adresleridir. Bu widget yalnızca aynı ağda (ofis/VPN) bulunan cihazlardan erişilebilir durumdadır, dış internete (public) açık değildir. Canlı kullanıma alınırken Public bir IP veya Domain kullanılması gerekir.
 
 ## 4. Nasıl Çalıştırılır
 Nihai testleri ve doğrulama raporlarını çalıştırmak için proje kök dizininde (`chatbot_demo`) aşağıdaki komutları kullanabilirsiniz:
@@ -41,3 +43,27 @@ python tests/run_cekim_eki_orijinal.py
 # Demo Widget Sunucusunu Başlatma
 python demo/server.py
 ```
+
+---
+
+## 5. Admin API (Veri Yönetimi ve Zenginleştirme)
+
+Projenin yönetici paneliyle entegre çalışması için izole bir veri giriş ucu eklenmiştir. Mevcut chatbot zekasına dokunmadan dinamik olarak yeni soru/cevap eklenebilmesini sağlar.
+
+**Endpoint:** `POST /api/admin/add_qa`
+**Header:** `Authorization: Bearer <ADMIN_API_TOKEN>` (token `.env` dosyasından okunur)
+
+```json
+{
+  "query": "Yapay zeka sanal sunucu ve siber güvenlik hizmeti arıyoruz.",
+  "sector": "bilisim",
+  "augment": true
+}
+```
+
+- `augment: false` olduğunda, veri doğrudan veri setine (`chatbot_dataset.json`) işlenir.
+- `augment: true` olduğunda, yerel *Kural Tabanlı Varyasyon Motoru* devreye girer. Cümledeki anahtar kelimeleri eşanlamlılarıyla değiştirip farklı şablonlara (örn. soru cümlesi, talep cümlesi) yerleştirerek **3 farklı yapısal varyasyon** üretir.
+- Her üretilen cümlenin orijinal cümleyle **Jaccard kelime örtüşme oranı %50'den küçük** olmak zorundadır (basit ezberlemenin önüne geçilir).
+- İşlem tamamlandıktan hemen sonra API yanıt döner; bu sırada FastAPI `BackgroundTasks` devreye girer. Gerçek kod davranışı (admin_qa.py) şu şekildedir:
+  1. **Mevcut (Varsayılan) Durum:** Sistem arka planda yeni veriyi `chatbot_dataset.json` dosyasına yazar ve yerel Numpy indeksini (`embeddings.npz`) BGE-M3 ile sıfırdan oluşturarak chatbot'un saniyeler içinde yeni bilgiyi öğrenmesini sağlar. *(Not: Varsa yerel geliştirici ortamındaki test amaçlı Postgres veritabanı da güncellenir, ancak bu zorunlu değildir).*
+  2. **Allintos Ana Veritabanı Entegrasyonu (Gelecek Aşama):** Altyapı (`background_sync_allintos` fonksiyonu) hazırdır ancak `.env` dosyasındaki `ALLINTOS_DB_ENABLED=false` flag'i ile bilerek KAPALI tutulmaktadır. İleride bu flag `true` yapıldığında, JSON ve npz güncellemesine *ek olarak*, yeni veriler anında Allintos'un gerçek PostgreSQL veritabanındaki (izole edilmiş `chatbot_demo_qa_embeddings` tablosuna) yazılacaktır.

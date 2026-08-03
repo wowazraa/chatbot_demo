@@ -1,7 +1,7 @@
 # OmniIntent / Allintos — Çalıştırma Rehberi
 
 Bu dosya **demo arayüzü** ve **API endpoint**lerini nasıl ayağa kaldıracağını, nasıl test edeceğini anlatır.  
-(Teknik mimari detayı için: `docs/ARCHITECTURE_SPEC.md`)
+(Teknik mimari detayı ve teslim özeti için: `TESLIM_OZET.md`)
 
 ---
 
@@ -9,7 +9,7 @@ Bu dosya **demo arayüzü** ve **API endpoint**lerini nasıl ayağa kaldıracağ
 
 | Ne | Ne işe yarar | Adres | Komut |
 |----|--------------|-------|--------|
-| **Demo (UI)** | Mentörün tarayıcıdan denediği chatbot ekranı | http://127.0.0.1:8080 | `python demo/server.py` |
+| **Demo (UI)** | Mentörün tarayıcıdan denediği chatbot ekranı | http://127.0.0.1:8082 | `python demo/server.py` |
 | **Chat API** | Postman / curl / Swagger ile endpoint testi | http://127.0.0.1:8001 | `uvicorn db_api.main:app --host 127.0.0.1 --port 8001` |
 
 - Demo **veritabanı olmadan** çalışabilir (NPZ + BGE).
@@ -23,6 +23,17 @@ Bu dosya **demo arayüzü** ve **API endpoint**lerini nasıl ayağa kaldıracağ
 cd C:\Users\AZRA\OneDrive\Desktop\Chatbot_Bilgi_Merkezi_Projesi\chatbot_demo
 ```
 
+### Git'ten Sıfır Kurulum Yapıldıysa (İlk Çalıştırma)
+Eğer projeyi yeni clone'ladıysanız, `embeddings.npz` dosyası repoda bulunmadığı için ilk çalıştırmadan önce **indeksi sıfırdan oluşturmanız** ŞARTTIR:
+```powershell
+# Paketleri kurun
+pip install -r requirements.txt
+
+# Veri setini vektörleştirip NPZ indeksini oluşturun
+python scripts/build_index.py
+```
+*(Not: Bu işlem BGE-M3 modelini indirip veri setindeki tüm soruları vektörleştirecektir.)*
+
 ---
 
 ## 1) Demo sunucusunu çalıştır / yeniden başlat
@@ -34,12 +45,12 @@ cd C:\Users\AZRA\OneDrive\Desktop\Chatbot_Bilgi_Merkezi_Projesi\chatbot_demo
 python demo/server.py
 ```
 
-Tarayıcı: **http://127.0.0.1:8080**
+Tarayıcı: **http://127.0.0.1:8082**
 
-### Port 8080 meşgulse (eski sunucu hâlâ açık)
+### Port 8082 meşgulse (eski sunucu hâlâ açık)
 
 ```powershell
-Get-NetTCPConnection -LocalPort 8080 -ErrorAction SilentlyContinue |
+Get-NetTCPConnection -LocalPort 8082 -ErrorAction SilentlyContinue |
   ForEach-Object { Stop-Process -Id $_.OwningProcess -Force }
 python demo/server.py
 ```
@@ -59,8 +70,8 @@ Terminalde `Ctrl + C`
 Örnek (PowerShell):
 
 ```powershell
-curl http://127.0.0.1:8080/api/status
-curl -X POST http://127.0.0.1:8080/api/chat -H "Content-Type: application/json" -d "{\"message\":\"Hastane randevusu\",\"session\":\"\"}"
+curl http://127.0.0.1:8082/api/status
+curl -X POST http://127.0.0.1:8082/api/chat -H "Content-Type: application/json" -d "{\"message\":\"Hastane randevusu\",\"session\":\"\"}"
 ```
 
 ---
@@ -136,7 +147,7 @@ curl "http://127.0.0.1:8001/api/messages?session_id=BURAYA_SESSION_ID"
 
 | Amaç | Kullan |
 |------|--------|
-| Mentör demosu, Top-3, sektör denemesi | **Demo 8080** |
+| Mentör demosu, Top-3, sektör denemesi | **Demo 8082** |
 | API / Postman / Swagger, reply+url | **API 8001** |
 | Sadece motor (UI yok) | `python -c` ile `Chatbot().sor(...)` (geliştirici) |
 
@@ -157,7 +168,7 @@ curl "http://127.0.0.1:8001/api/messages?session_id=BURAYA_SESSION_ID"
 
 ## 5) Manuel demo test (kısa hatırlatma)
 
-Tarayıcıda http://127.0.0.1:8080 açıp örnekler:
+Tarayıcıda http://127.0.0.1:8082 açıp örnekler:
 
 - Net: `Hastane randevusu`, `Müze kart fiyatı`, `Askeri lise sınav`
 - Sohbet: `Merhaba`, `Teşekkür ederim`
@@ -180,7 +191,7 @@ python -m pytest tests/test_faz5_generalization.py tests/test_rerank_gate_demo.p
 
 ```powershell
 cd C:\Users\AZRA\OneDrive\Desktop\Chatbot_Bilgi_Merkezi_Projesi\chatbot_demo
-Get-NetTCPConnection -LocalPort 8080 -ErrorAction SilentlyContinue | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force }
+Get-NetTCPConnection -LocalPort 8082 -ErrorAction SilentlyContinue | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force }
 python demo/server.py
 ```
 

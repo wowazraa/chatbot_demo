@@ -81,8 +81,8 @@ class V2PipelineResult:
             "saglik": "healthcare",
             "turizm": "hospitality",
             "egitim": "education",
-            "bilisim": "hr",
-            "eglence": "general",
+            "bilisim": "it",
+            "eglence": "entertainment",
             "ood": "general"
         }
         slug_tr = {
@@ -423,7 +423,7 @@ class V2IntentPipeline:
         else:
             tr_chars = len(re.findall(r"[çğıöşüÇĞİÖŞÜ]", query))
             has_en_clutter = any(w in query.lower() for w in ["we need", "looking for", "hello", "hi", "hey", "can you help", "scheduling", "software"])
-            detected_language = "en" if (has_en_clutter or (not tr_chars and re.search(r"\b(we|need|looking|for|hi|hello|quote|hospital|software|hotel|reservation|scheduling)\b", query.lower()))) else "tr"
+            detected_language = "en" if (has_en_clutter or (not tr_chars and re.search(r"\b(we|need|looking|for|hi|hello|quote|hospital|software|hotel|reservation|scheduling|our|tournament|esports|streaming|backend|chat|with|low-latency)\b", query.lower()))) else "tr"
 
         # ── STEP 2+3: Clause-Boundary Negation Removal + Hard OOD Blocklist ──
         # Legal/Real Estate/Finance/Defense/Energy/Food-Hospitality -> HER ZAMAN
@@ -530,6 +530,7 @@ class V2IntentPipeline:
             if k1 is not None:
                 k1.detected_language = detected_language
                 k1.processed_intent = processed_intent
+                self.set_aktif_sektor(session_id, k1.sector)
                 return k1
 
         # ── Katman 1.6: OOD Fast-Reject guardrail (B2C/chit-chat) ────────────
@@ -678,17 +679,26 @@ class V2IntentPipeline:
                         second_sec = sorted_sectors[1]
                         margin = top_stats["avg_sim"] - sector_scores[second_sec]["avg_sim"]
                         
-                    if top_sec != "ood" and top_stats["count"] >= 2 and top_stats["avg_sim"] >= K2_VOTE_THRESHOLD and margin >= K2_MARGIN:
-                        # Safe-Fail Strict Guardrail for bilisim
-                        is_safe = True
-                        if top_sec == "bilisim":
-                            explicit_b2b_pattern = re.compile(
-                                r"\b(erp|api|yazılım|yazilim|entegrasyon|crm|cloud|saas|sistem|platform|otomasyon|dashboard|bi\s*tool|powerbi|business\s*intelligence|network|sunucu|server|lms)\b",
-                                re.IGNORECASE
-                            )
-                            has_explicit = bool(explicit_b2b_pattern.search(query))
-                            if not has_explicit and top_stats["avg_sim"] < 0.85:
-                                is_safe = False
+                    if top_sec != "ood" and top_stats["count"] >= 2 and margin >= K2_MARGIN:
+                        # Dinamik eşik: Eğlence sektörü için İngilizce kelime geçiyorsa esnet.
+                        effective_threshold = K2_VOTE_THRESHOLD
+                        if top_sec == "eglence":
+                            eglence_en_pattern = re.compile(r"\b(esports|streaming|gaming|game|video|chat|tournament|broadcast)\b", re.IGNORECASE)
+                            if eglence_en_pattern.search(query):
+                                effective_threshold = 0.60
+
+                        is_safe = False
+                        if top_stats["avg_sim"] >= effective_threshold:
+                            is_safe = True
+                            # Safe-Fail Strict Guardrail for bilisim
+                            if top_sec == "bilisim":
+                                explicit_b2b_pattern = re.compile(
+                                    r"\b(erp|api|yazılım|yazilim|entegrasyon|crm|cloud|saas|sistem|platform|otomasyon|dashboard|bi\s*tool|powerbi|business\s*intelligence|network|sunucu|server|lms|aws|microservices|backend|devops|cybersecurity)\b",
+                                    re.IGNORECASE
+                                )
+                                has_explicit = bool(explicit_b2b_pattern.search(query))
+                                if not has_explicit and top_stats["avg_sim"] < 0.85:
+                                    is_safe = False
                         
                         if is_safe:
                             sector = top_sec

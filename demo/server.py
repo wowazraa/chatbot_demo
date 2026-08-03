@@ -1,7 +1,7 @@
 """
 Chatbot Widget Demo Server — Saf Python, ek bağımlılık yok.
 Çalıştır:  python demo/server.py
-Tarayıcı:  http://localhost:8080
+Tarayıcı:  http://localhost:8082
 """
 from __future__ import annotations
 

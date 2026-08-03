@@ -34,7 +34,7 @@ from src.embedder import BGEEmbedder
 # Sabitler
 # ---------------------------------------------------------------------------
 RAW_FILE       = ROOT / "data" / "raw"       / "chatbot_dataset.json"
-PROCESSED_FILE = ROOT / "data" / "processed" / "chatbot_dataset_clean.json"
+PROCESSED_FILE = ROOT / "data" / "processed" / "chatbot_dataset_augmented.json"
 INDEX_DIR      = ROOT / "data" / "processed"
 
 # ---------------------------------------------------------------------------

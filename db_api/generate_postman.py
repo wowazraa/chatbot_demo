@@ -75,25 +75,35 @@ collection = {
         {"key": "session_id_json", "value": "null"},
     ],
     "item": [
+        req("1 GET health", "GET", "/api/health"),
+        req(
+            "2 POST chat",
+            "POST",
+            "/api/chat",
+            CHAT_BODY,
+            tests=SAVE_SESSION,
+            prereq=PREREQ_SESSION,
+        ),
+        req(
+            "3 GET messages",
+            "GET",
+            "/api/messages?session_id={{session_id}}&limit=50&offset=0",
+        ),
         {
-            "name": "Chatbot",
-            "item": [
-                req("1 GET health", "GET", "/api/health"),
-                req(
-                    "2 POST chat",
-                    "POST",
-                    "/api/chat",
-                    CHAT_BODY,
-                    tests=SAVE_SESSION,
-                    prereq=PREREQ_SESSION,
-                ),
-                req(
-                    "3 GET messages",
-                    "GET",
-                    "/api/messages?session_id={{session_id}}&limit=50&offset=0",
-                ),
-            ],
-        },
+            "name": "4 POST admin/add_qa",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {"key": "Content-Type", "value": "application/json"},
+                    {"key": "Authorization", "value": "Bearer super-secret"}
+                ],
+                "url": f"{BASE}/api/admin/add_qa",
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"query\": \"Hastane sistemimiz için randevu ve reçete otomasyon yazılımı entegre etmek istiyoruz.\",\n  \"sector\": \"saglik\",\n  \"augment\": true\n}"
+                }
+            }
+        }
     ],
 }
 

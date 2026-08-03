@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+*$py.class
+tests/_reranker_onnx_cache/
+logs/
+.env
+.venv/
+data/processed/embeddings.npz
+data/processed/index_meta.json
+data/processed/chatbot_dataset_augmented.json
+
+# Test dosyalari git'e dahil edilmeyecek (Hocanin istegi uzerine)
+tests/
+_final_dogrulama.py

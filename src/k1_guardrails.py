@@ -133,15 +133,20 @@ def match_any_sector(query: str) -> str | None:
 
     # 1.5. EXACT MATCH (Birebir Eşleşme) - Kullanıcı sadece sektör adı yazarsa doğrudan ata
     q_clean = re.sub(r"[^\w\s]", "", q).strip()
+    
+    # Sektör belirten ek kelimeleri cümlenin sonundan temizle
+    suffix_pattern = r"(?:\s+(?:sektörü|sektoru|sektöründe|sektörüyle|sektoruyla|alanı|alani|sector|industry|hizmeti|hizmetleri))?(?:\s+(?:hakkında\s*bilgi|hakkinda\s*bilgi|bilgi\s*almak|bilgi\s*istiyorum|ile\s*ilgileniyorum|ile\s*ilgileniyoruz|ilgileniyorum|ilgileniyoruz|arıyoruz|ariyoruz|istiyoruz|istiyorum))?$"
+    q_stripped = re.sub(suffix_pattern, "", q_clean, flags=re.IGNORECASE).strip()
+
     exact_map = {
         "saglik": "saglik", "sağlık": "saglik", "health": "saglik", "healthcare": "saglik",
         "turizm": "turizm", "tourism": "turizm",
         "egitim": "egitim", "eğitim": "egitim", "education": "egitim",
-        "bilisim": "bilisim", "bilişim": "bilisim", "yazilim": "bilisim", "yazılım": "bilisim", "it": "bilisim", "software": "bilisim", "information technology": "bilisim",
+        "bilisim": "bilisim", "bilişim": "bilisim", "yazilim": "bilisim", "yazılım": "bilisim", "it": "bilisim", "software": "bilisim", "information technology": "bilisim", "technology": "bilisim",
         "eglence": "eglence", "eğlence": "eglence", "entertainment": "eglence"
     }
-    if q_clean in exact_map:
-        return exact_map[q_clean]
+    if q_stripped in exact_map:
+        return exact_map[q_stripped]
 
     # 2. OOD terim yoksa veya B2B modifiyeri ile muaf tutulmuşsa K1 Marka/Hizmet Match (Fast-Path) çalışsın
     if re.search(r"\b(alientos|alintos|alientas|buyumevizyon|büyümevizyon|ddx\+|ddx|turquality|e-turquality|dijital\s*dönüşüm|dijital\s*donusum|kosgeb|it\s+altyapı|it\s+altyapısı|saas\s+vendor|custom\s+crm|crm\s+platform)\b|info@buyumevizyon\.com", q):

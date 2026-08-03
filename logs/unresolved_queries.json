@@ -4638,5 +4638,421 @@
         "final_score": 0.432
       }
     ]
+  },
+  {
+    "ts": "2026-07-31T10:28:08.024905+00:00",
+    "query": "sağlık sektörüyle ilgileniyorum",
+    "mod": "FB",
+    "skor": 0.6367,
+    "top_candidates": [
+      {
+        "text": "hastane yönetim sistemi arıyoruz",
+        "sector": "saglik",
+        "sub_intent": "saglik.randevu",
+        "initial_score": 0.6367,
+        "reranker_score": 0.6367,
+        "final_score": 0.6367
+      },
+      {
+        "text": "looking for an electronic health records platform",
+        "sector": "saglik",
+        "sub_intent": "saglik.randevu",
+        "initial_score": 0.6218,
+        "reranker_score": 0.6218,
+        "final_score": 0.6218
+      },
+      {
+        "text": "we are seeking a patient management and ehr system for our hospital network",
+        "sector": "saglik",
+        "sub_intent": "saglik.randevu",
+        "initial_score": 0.6147,
+        "reranker_score": 0.6147,
+        "final_score": 0.6147
+      }
+    ]
+  },
+  {
+    "ts": "2026-07-31T10:28:55.127545+00:00",
+    "query": "sağlık sektörü,",
+    "mod": "FB",
+    "skor": 0.5738,
+    "top_candidates": [
+      {
+        "text": "hastane yönetim sistemi arıyoruz",
+        "sector": "saglik",
+        "sub_intent": "saglik.randevu",
+        "initial_score": 0.5738,
+        "reranker_score": 0.5738,
+        "final_score": 0.5738
+      },
+      {
+        "text": "we need a hospital management system",
+        "sector": "saglik",
+        "sub_intent": "saglik.randevu",
+        "initial_score": 0.5644,
+        "reranker_score": 0.5644,
+        "final_score": 0.5644
+      },
+      {
+        "text": "we are seeking a patient management and ehr system for our hospital network",
+        "sector": "saglik",
+        "sub_intent": "saglik.randevu",
+        "initial_score": 0.5636,
+        "reranker_score": 0.5636,
+        "final_score": 0.5636
+      }
+    ]
+  },
+  {
+    "ts": "2026-07-31T10:30:31.012279+00:00",
+    "query": "sağlık sektörü",
+    "mod": "FB",
+    "skor": 0.5738,
+    "top_candidates": [
+      {
+        "text": "hastane yönetim sistemi arıyoruz",
+        "sector": "saglik",
+        "sub_intent": "saglik.randevu",
+        "initial_score": 0.5738,
+        "reranker_score": 0.5738,
+        "final_score": 0.5738
+      },
+      {
+        "text": "we need a hospital management system",
+        "sector": "saglik",
+        "sub_intent": "saglik.randevu",
+        "initial_score": 0.5644,
+        "reranker_score": 0.5644,
+        "final_score": 0.5644
+      },
+      {
+        "text": "we are seeking a patient management and ehr system for our hospital network",
+        "sector": "saglik",
+        "sub_intent": "saglik.randevu",
+        "initial_score": 0.5636,
+        "reranker_score": 0.5636,
+        "final_score": 0.5636
+      }
+    ]
+  },
+  {
+    "ts": "2026-07-31T11:24:01.820777+00:00",
+    "query": "sağlık sektörü",
+    "mod": "FB",
+    "skor": 0.5738,
+    "top_candidates": [
+      {
+        "text": "hastane yönetim sistemi arıyoruz",
+        "sector": "ood",
+        "sub_intent": "K1",
+        "initial_score": 0.5738,
+        "reranker_score": 0.5738,
+        "final_score": 0.5738
+      },
+      {
+        "text": "we need a hospital management system",
+        "sector": "ood",
+        "sub_intent": "K1",
+        "initial_score": 0.5644,
+        "reranker_score": 0.5644,
+        "final_score": 0.5644
+      },
+      {
+        "text": "we are seeking a patient management and ehr system for our hospital network",
+        "sector": "ood",
+        "sub_intent": "K1",
+        "initial_score": 0.5636,
+        "reranker_score": 0.5636,
+        "final_score": 0.5636
+      }
+    ]
+  },
+  {
+    "ts": "2026-07-31T13:41:34.392233+00:00",
+    "query": "sağlık sektörüyle ilgileniyorum",
+    "mod": "FB",
+    "skor": 0.6367,
+    "top_candidates": [
+      {
+        "text": "hastane yönetim sistemi arıyoruz",
+        "sector": "saglik",
+        "sub_intent": "health_appointment",
+        "initial_score": 0.6367,
+        "reranker_score": 0.6367,
+        "final_score": 0.6367
+      },
+      {
+        "text": "We are a medical facility looking for an integrated Electronic Health Record solution.",
+        "sector": "saglik",
+        "sub_intent": "health_appointment",
+        "initial_score": 0.6344,
+        "reranker_score": 0.6344,
+        "final_score": 0.6344
+      },
+      {
+        "text": "looking for an electronic health records platform",
+        "sector": "saglik",
+        "sub_intent": "health_appointment",
+        "initial_score": 0.6218,
+        "reranker_score": 0.6218,
+        "final_score": 0.6218
+      }
+    ]
+  },
+  {
+    "ts": "2026-07-31T13:41:48.316604+00:00",
+    "query": "sağlık sektörü hakkında bilgi alabilir miyim",
+    "mod": "FB",
+    "skor": 0.6275,
+    "top_candidates": [
+      {
+        "text": "hastane yönetim sistemi arıyoruz",
+        "sector": "saglik",
+        "sub_intent": "health_appointment",
+        "initial_score": 0.6275,
+        "reranker_score": 0.6275,
+        "final_score": 0.6275
+      },
+      {
+        "text": "we need a hospital management system",
+        "sector": "saglik",
+        "sub_intent": "health_appointment",
+        "initial_score": 0.6117,
+        "reranker_score": 0.6117,
+        "final_score": 0.6117
+      },
+      {
+        "text": "we are seeking a patient management and ehr system for our hospital network",
+        "sector": "saglik",
+        "sub_intent": "health_appointment",
+        "initial_score": 0.5998,
+        "reranker_score": 0.5998,
+        "final_score": 0.5998
+      }
+    ]
+  },
+  {
+    "ts": "2026-07-31T13:42:10.962895+00:00",
+    "query": "sağlık sektörüyle ilgileniyorum",
+    "mod": "FB",
+    "skor": 0.6367,
+    "top_candidates": [
+      {
+        "text": "hastane yönetim sistemi arıyoruz",
+        "sector": "saglik",
+        "sub_intent": "health_appointment",
+        "initial_score": 0.6367,
+        "reranker_score": 0.6367,
+        "final_score": 0.6367
+      },
+      {
+        "text": "We are a medical facility looking for an integrated Electronic Health Record solution.",
+        "sector": "saglik",
+        "sub_intent": "health_appointment",
+        "initial_score": 0.6344,
+        "reranker_score": 0.6344,
+        "final_score": 0.6344
+      },
+      {
+        "text": "looking for an electronic health records platform",
+        "sector": "saglik",
+        "sub_intent": "health_appointment",
+        "initial_score": 0.6218,
+        "reranker_score": 0.6218,
+        "final_score": 0.6218
+      }
+    ]
+  },
+  {
+    "ts": "2026-07-31T13:42:24.655756+00:00",
+    "query": "sağlık sektörüyle ilgili bilgi almak istiyorum",
+    "mod": "FB",
+    "skor": 0.5927,
+    "top_candidates": [
+      {
+        "text": "hastane yönetim sistemi arıyoruz",
+        "sector": "saglik",
+        "sub_intent": "health_appointment",
+        "initial_score": 0.5927,
+        "reranker_score": 0.5927,
+        "final_score": 0.5927
+      },
+      {
+        "text": "looking for an electronic health records platform",
+        "sector": "saglik",
+        "sub_intent": "health_appointment",
+        "initial_score": 0.5922,
+        "reranker_score": 0.5922,
+        "final_score": 0.5922
+      },
+      {
+        "text": "We are a medical facility looking for an integrated Electronic Health Record solution.",
+        "sector": "saglik",
+        "sub_intent": "health_appointment",
+        "initial_score": 0.5843,
+        "reranker_score": 0.5843,
+        "final_score": 0.5843
+      }
+    ]
+  },
+  {
+    "ts": "2026-07-31T13:43:37.394335+00:00",
+    "query": "teknoloji",
+    "mod": "FB",
+    "skor": 0.5714,
+    "top_candidates": [
+      {
+        "text": "fiyat teklifi",
+        "sector": "ood",
+        "sub_intent": "ood",
+        "initial_score": 0.5714,
+        "reranker_score": 0.5714,
+        "final_score": 0.5714
+      },
+      {
+        "text": "uzaktan eğitim platformu",
+        "sector": "egitim",
+        "sub_intent": "education_enrollment",
+        "initial_score": 0.5591,
+        "reranker_score": 0.5591,
+        "final_score": 0.5591
+      },
+      {
+        "text": "we need an artificial intelligence integration for our platform",
+        "sector": "bilisim",
+        "sub_intent": "bilisim_integration",
+        "initial_score": 0.5576,
+        "reranker_score": 0.5576,
+        "final_score": 0.5576
+      }
+    ]
+  },
+  {
+    "ts": "2026-07-31T13:44:01.587492+00:00",
+    "query": "<script>alert(1)</script>",
+    "mod": "FB",
+    "skor": 0.5455,
+    "top_candidates": [
+      {
+        "text": "veri sızıntısı önleme yazılımı ihtiyacımız var",
+        "sector": "bilisim",
+        "sub_intent": "bilisim_integration",
+        "initial_score": 0.5455,
+        "reranker_score": 0.5455,
+        "final_score": 0.5455
+      },
+      {
+        "text": "fiyat teklifi",
+        "sector": "ood",
+        "sub_intent": "ood",
+        "initial_score": 0.5318,
+        "reranker_score": 0.5318,
+        "final_score": 0.5318
+      },
+      {
+        "text": "we want a parent-teacher communication and notification platform",
+        "sector": "egitim",
+        "sub_intent": "education_enrollment",
+        "initial_score": 0.5315,
+        "reranker_score": 0.5315,
+        "final_score": 0.5315
+      }
+    ]
+  },
+  {
+    "ts": "2026-07-31T13:44:23.426781+00:00",
+    "query": "savunma sanayii için radar sistemi arıyoruz",
+    "mod": "FB",
+    "skor": 0.6479,
+    "top_candidates": [
+      {
+        "text": "doktor randevu sistemi arıyoruz",
+        "sector": "saglik",
+        "sub_intent": "saglik.randevu",
+        "initial_score": 0.6479,
+        "reranker_score": 0.6479,
+        "final_score": 0.6479
+      },
+      {
+        "text": "siber saldırılara dayanıklı izole ağda çalışabilen askeri iletişim sistemi arıyoruz",
+        "sector": "bilisim",
+        "sub_intent": "bilisim.security",
+        "initial_score": 0.622,
+        "reranker_score": 0.622,
+        "final_score": 0.622
+      },
+      {
+        "text": "savunma sanayi için yerli yazılım çözümü",
+        "sector": "bilisim",
+        "sub_intent": "bilisim.software",
+        "initial_score": 0.613,
+        "reranker_score": 0.613,
+        "final_score": 0.613
+      }
+    ]
+  },
+  {
+    "ts": "2026-07-31T13:45:17.136626+00:00",
+    "query": "başka neler sunuyorsunuz?",
+    "mod": "FB",
+    "skor": 0.6185,
+    "top_candidates": [
+      {
+        "text": "fiyat teklifi",
+        "sector": "ood",
+        "sub_intent": "ood",
+        "initial_score": 0.6185,
+        "reranker_score": 0.6185,
+        "final_score": 0.6185
+      },
+      {
+        "text": "Acaba takip ve uçak ihtiyaçlarımız için bize ne tür alternatifler sunabilirsiniz, detaylı bir fiyatlandırma alabilir miyim?",
+        "sector": "turizm",
+        "sub_intent": "tourism_hotel",
+        "initial_score": 0.6112,
+        "reranker_score": 0.6112,
+        "final_score": 0.6112
+      },
+      {
+        "text": "what are your pricing options",
+        "sector": "ood",
+        "sub_intent": "ood",
+        "initial_score": 0.607,
+        "reranker_score": 0.607,
+        "final_score": 0.607
+      }
+    ]
+  },
+  {
+    "ts": "2026-07-31T13:45:53.383890+00:00",
+    "query": "sizinle iş ortaklığı yapmak istiyoruz",
+    "mod": "FB",
+    "skor": 0.6503,
+    "top_candidates": [
+      {
+        "text": "i need a price quote for your software",
+        "sector": "ood",
+        "sub_intent": "ood",
+        "initial_score": 0.6503,
+        "reranker_score": 0.6503,
+        "final_score": 0.6503
+      },
+      {
+        "text": "fiyat teklifi",
+        "sector": "ood",
+        "sub_intent": "ood",
+        "initial_score": 0.6497,
+        "reranker_score": 0.6497,
+        "final_score": 0.6497
+      },
+      {
+        "text": "şirketimiz için chatbot ve AI asistanı geliştirmek",
+        "sector": "bilisim",
+        "sub_intent": "bilisim_integration",
+        "initial_score": 0.6101,
+        "reranker_score": 0.6101,
+        "final_score": 0.6101
+      }
+    ]
   }
 ]

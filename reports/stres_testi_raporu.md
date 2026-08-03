@@ -2,7 +2,7 @@
 
 **Tarih:** 2026-07-16  
 **Değerlendiren:** Antigravity Adversarial Agent  
-**Genel Başarı Oranı:** %84.62 (66/78 Başarılı)
+**Genel Başarı Oranı:** %82.05 (64/78 Başarılı)
 
 ## Kategori Bazlı Başarı Tablosu
 
@@ -10,11 +10,11 @@
 |---|---|---|---|
 | A | Negasyon ve Olumsuzlama | 6/9 | %66.7 (ORTA) |
 | B | Çoklu/Çakışan Niyet (Multi-Intent) | 1/5 | %20.0 (KRİTİK) |
-| C | Kısaltma, Yazım Hatası, Argo | 8/9 | %88.9 (BAŞARILI) |
+| C | Kısaltma, Yazım Hatası, Argo | 7/9 | %77.8 (ORTA) |
 | D | Dil Karışımı (Code-Switching) | 6/7 | %85.7 (BAŞARILI) |
 | E | Uzun, Gerçekçi Kurumsal Cümleler | 6/6 | %100.0 (BAŞARILI) |
 | F | Belirsiz / Sektörsüz Traps (False-Positives) | 14/14 | %100.0 (BAŞARILI) |
-| G | Fiyat / Genel Soru / Kapsam Dışı | 8/10 | %80.0 (BAŞARILI) |
+| G | Fiyat / Genel Soru / Kapsam Dışı | 7/10 | %70.0 (ORTA) |
 | H | Adversarial / Kandırma / Spam | 10/11 | %90.9 (BAŞARILI) |
 | I | Bağlam/Session Hafızası (Multi-turn) | 7/7 | %100.0 (BAŞARILI) |
 
@@ -32,7 +32,7 @@ Bu kategoride temel zayıflıkların nedeni şunlardır:
 
 - **Negasyon Kaçırma:** BGE-M3 dense modelinin cümlenin genel anlamsal yapısını çözmesi istenirken, cümlede ilk geçen sektörü (örn: 'sağlık istemiyoruz') baskın ağırlıklı eşleştirdiği görülmüştür. Cosine eşiğinin altındaki kırılımlar veya kural tabanlı regex'lerin kelime bazlı tetiklenmesi negasyonu bypass etmiştir.
 
-### Kategori G — Fiyat / Genel Soru / Kapsam Dışı (Başarı: %80.0)
+### Kategori G — Fiyat / Genel Soru / Kapsam Dışı (Başarı: %70.0)
 
 Bu kategoride temel zayıflıkların nedeni şunlardır:
 
@@ -50,9 +50,11 @@ Bu kategoride temel zayıflıkların nedeni şunlardır:
 | B05 | Askeri hastaneler için hem telemedicine ... | `sağlık` | `belirsiz` | `kisaltma` | Çoklu niyet durumunda tekil sektöre zorlama yapıldı. |
 | B06 | lms tabanlı eğitim modülü olan bir hasta... | `sağlık` | `egitim` | `kisaltma` | Çoklu niyet durumunda tekil sektöre zorlama yapıldı. |
 | C07 | eğitm portali örenci işleri | `eğitim` | `bilisim` | `kisaltma` | Semantik benzerlik skoru eşik değerin altında kaldı. |
+| C09 | bişey lazım bize sağlık için acil yardim... | `sağlık` | `turizm` | `bge-m3` | Semantik benzerlik skoru eşik değerin altında kaldı. |
 | D09 | university registration system yenilemek... | `eğitim` | `turizm` | `bge-m3` | Semantik benzerlik skoru eşik değerin altında kaldı. |
 | G03 | Kiminle görüşebilirim? | `belirsiz` | `saglik` | `hafiza` | Semantik benzerlik skoru eşik değerin altında kaldı. |
-| G08 | Teknik destek hizmetleriniz 7/24 aktif m... | `belirsiz` | `saglik` | `bge-m3` | Semantik benzerlik skoru eşik değerin altında kaldı. |
+| G07 | Çözümlerinizin kurulum süresi ortalama k... | `belirsiz` | `saglik` | `hafiza` | Semantik benzerlik skoru eşik değerin altında kaldı. |
+| G08 | Teknik destek hizmetleriniz 7/24 aktif m... | `belirsiz` | `bilisim` | `bge-m3` | Semantik benzerlik skoru eşik değerin altında kaldı. |
 | H05 | sağlık sağlık sağlık sağlık sağlık sağlı... | `sağlık` | `belirsiz` | `bge-m3` | Kandırma/Spam girdiye karşı güvenlik filtresi yok. |
 
 ## Production Hazırlık Değerlendirmesi & Karar

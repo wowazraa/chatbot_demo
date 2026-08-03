@@ -16,10 +16,10 @@
 | Test Seti | Senaryo (skorlu) | Başarılı | Oran | Önceki Tur | Değişim |
 |---|---:|---:|---:|---|---|
 | Temel (test_scenarios) | 19 | 18 | 95% | 20/20 | -5 pp |
-| Stres (A–I) | 78 | 66 | 85% | 72/89 | +4 pp |
+| Stres (A–I) | 78 | 64 | 82% | 72/89 | +1 pp |
 | Çekim Eki | 26 | 26 | 100% | 10/32 | +69 pp |
 | Selamlaşma / Small Talk | 26 | 24 | 92% | (yeni) | yeni set |
-| K1 Hard-Match Regresyon | 16 | 14 | 88% | 16/17 | -7 pp |
+| K1 Hard-Match Regresyon | 16 | 16 | 100% | 16/17 | +6 pp |
 
 ### Stres kategori kırılımı (bu tur)
 
@@ -27,11 +27,11 @@
 |-----|-----------------|------|
 | A | 6/9 | 67% |
 | B | 1/5 | 20% |
-| C | 8/9 | 89% |
+| C | 7/9 | 78% |
 | D | 6/7 | 86% |
 | E | 6/6 | 100% |
 | F | 14/14 | 100% |
-| G | 8/10 | 80% |
+| G | 7/10 | 70% |
 | H | 10/11 | 91% |
 | I | 7/7 | 100% |
 
@@ -96,7 +96,7 @@
 | A07 | lms kurulumundan vazgeçtik, telemedicine altyapısı talep ediyoruz | K2/sağlık | saglik/K2 | bge-m3 | 0.83 | E |
 | A09 | savunma radar projesi mi eğitim otomasyonu mu derseniz kesinlikle ilki | K2/eğitim | bilisim/K2 | bge-m3 | 0.56 | H |
 | A12 | Eğitim kurumu değiliz, hastaneler için teletıp altyapısı arıyoruz. | K2/sağlık | saglik/K2 | bge-m3 | 0.62 | E |
-| A13 | savunma sanayi alanında çalışmıyoruz, okul ders programı otomasyonuna  | K2/eğitim | egitim/K2 | bge-m3 | 0.65 | E |
+| A13 | savunma sanayi alanında çalışmıyoruz, okul ders programı otomasyonuna  | K2/eğitim | egitim/K2 | bge-m3 | 0.68 | E |
 | B01 | Hem sağlık hem de savunma alanında faaliyet gösteriyoruz, ikisi için d | K2/sağlık | belirsiz/FB | kisaltma | 0.15 | H |
 | B03 | Hastane ve radar komuta kontrol sistemlerini birleştiren entegre bir y | K2/sağlık | belirsiz/FB | kisaltma | 0.00 | H |
 | B05 | Askeri hastaneler için hem telemedicine hem de taktik telsiz sistemi k | K2/sağlık | belirsiz/FB | kisaltma | 0.15 | H |
@@ -109,7 +109,7 @@
 | C06 | tuuurizm otelcilik checkin ekrani | K2/turizm | turizm/K2 | bge-m3 | 0.95 | E |
 | C07 | eğitm portali örenci işleri | K2/eğitim | bilisim/K1 | kisaltma | 0.99 | H |
 | C08 | hastaneyonetimsistemiyazilimi | K2/sağlık | saglik/K1 | kisaltma | 0.99 | E |
-| C09 | bişey lazım bize sağlık için acil yardimci olun | K2/sağlık | saglik/K2 | bge-m3 | 0.54 | E |
+| C09 | bişey lazım bize sağlık için acil yardimci olun | K2/sağlık | turizm/K2 | bge-m3 | 0.57 | H |
 | C10 | sağlık 🏥 lazım!!! çok acil | K2/sağlık | saglik/K2 | bge-m3 | 0.59 | E |
 | D02 | We need a hastane appointment system for our clinic | K2/sağlık | saglik/K2 | bge-m3 | 0.76 | E |
 | D03 | Hastane için bir EHR sistemi arıyoruz | K2/sağlık | saglik/K1 | kisaltma | 0.99 | E |
@@ -124,17 +124,17 @@
 | E06 | Kamu kurumlarına eğitim ve danışmanlık hizmeti sunan bir limited şirke | K2/eğitim | egitim/K1 | kisaltma | 0.99 | E |
 | E08 | Klinik zincirimizin operasyonel verimliliğini artırmak amacıyla, hekim | K2/sağlık | saglik/K2 | bge-m3 | 0.73 | E |
 | E09 | Yeni açılacak tatil köyümüz için online rezervasyon altyapısı, misafir | K2/turizm | turizm/HAFIZA | hafiza | 0.95 | E |
-| F01 | Sağlıklı bir iş ortaklığı kurmak istiyoruz. | FB/belirsiz | belirsiz/FB | bge-m3 | 0.57 | E |
+| F01 | Sağlıklı bir iş ortaklığı kurmak istiyoruz. | FB/belirsiz | belirsiz/FB | bge-m3 | 0.59 | E |
 | F02 | Turistik bir bölgede ofisimiz var ama yazılım hizmeti arıyoruz. | FB/belirsiz | belirsiz/FB | kisaltma | 0.00 | E |
 | F03 | Eğitimli personel arıyoruz, işe alım konusunda yardımcı olur musunuz? | FB/belirsiz | belirsiz/FB | kisaltma | 0.00 | E |
 | F04 | Savunma mekanizmaları güçlü bir yazılım mimarisi tasarlamalıyız. | FB/belirsiz | belirsiz/FB | kisaltma | 0.15 | E |
 | F05 | Hastane köşelerinde beklemek istemediğimiz için evde bakım hizmetlerin | FB/belirsiz | belirsiz/FB | kisaltma | 0.00 | E |
 | F06 | Otel konforunda bir çalışma ortamı sunan yeni ofisimize bekleriz. | FB/belirsiz | belirsiz/FB | kisaltma | 0.00 | E |
 | F07 | Askeri disiplinle çalışan bir ekibimiz var, projeyi zamanında bitirece | FB/belirsiz | belirsiz/FB | kisaltma | 0.15 | E |
-| F08 | Bu ders bize büyük bir hayat eğitimi oldu gerçekten. | FB/belirsiz | belirsiz/FB | bge-m3 | 0.57 | E |
+| F08 | Bu ders bize büyük bir hayat eğitimi oldu gerçekten. | FB/belirsiz | belirsiz/FB | bge-m3 | 0.56 | E |
 | F09 | Sağlığınızı korumak için günde en az iki litre su içmelisiniz. | FB/belirsiz | belirsiz/FB | bge-m3 | 0.47 | E |
 | F10 | Turizm cenneti olan ülkemizde yeni ofisler açmayı hedefliyoruz. | FB/belirsiz | belirsiz/FB | bge-m3 | 0.61 | E |
-| F11 | Çalışanlarımız için çok eğlenceli bir iş ortamı sunuyoruz. | FB/belirsiz | belirsiz/FB | bge-m3 | 0.64 | E |
+| F11 | Çalışanlarımız için çok eğlenceli bir iş ortamı sunuyoruz. | FB/belirsiz | belirsiz/FB | bge-m3 | 0.62 | E |
 | F12 | Etkinlik organizasyonuna katılmak bizim için çok eğlenceli bir deneyim | FB/belirsiz | belirsiz/FB | bge-m3 | 0.60 | E |
 | F13 | Bilişim gibi hızlı büyüyen bir sektörde olmak istiyoruz ama biz aslınd | FB/belirsiz | belirsiz/FB | bge-m3 | 0.54 | E |
 | F14 | Şirket içi iletişimi güçlendirmek için siber güvenlik lisansı aldık, ş | FB/belirsiz | belirsiz/FB | bge-m3 | 0.65 | E |
@@ -144,8 +144,8 @@
 | G04 | Fiyatlandırma nasıl? | FB/belirsiz | belirsiz/FB | bge-m3 | 0.72 | E |
 | G05 | Referanslarınız var mı? | FB/belirsiz | belirsiz/FB | bge-m3 | 0.56 | E |
 | G06 | Demo yapabilir miyiz? | FB/belirsiz | belirsiz/FB | bge-m3 | 0.84 | E |
-| G07 | Çözümlerinizin kurulum süresi ortalama kaç gündür? | FB/belirsiz | belirsiz/FB | bge-m3 | 0.56 | E |
-| G08 | Teknik destek hizmetleriniz 7/24 aktif mi? | FB/belirsiz | saglik/K2 | bge-m3 | 0.51 | H |
+| G07 | Çözümlerinizin kurulum süresi ortalama kaç gündür? | FB/belirsiz | saglik/HAFIZA | hafiza | 0.58 | H |
+| G08 | Teknik destek hizmetleriniz 7/24 aktif mi? | FB/belirsiz | bilisim/K2 | bge-m3 | 0.57 | H |
 | G09 | Ofisiniz nerede bulunuyor? | FB/belirsiz | belirsiz/FB | bge-m3 | 0.63 | E |
 | G10 | Mail adresinizi alabilir miyim? | FB/belirsiz | belirsiz/FB | bge-m3 | 0.64 | E |
 | H01 | Aslında sağlık değil ama sağlık yazıyorum, siz turizm anlayın. | K2/turizm | turizm/K2 | bge-m3 | 0.66 | E |
@@ -159,7 +159,7 @@
 | H09 | savunma değil eğitim değil sağlık hiç değil, otel yazın | K2/turizm | turizm/K2 | bge-m3 | 0.95 | E |
 | H10 | merhaba merhaba merhaba selam lütfen | FB/belirsiz | belirsiz/K1 | kisaltma | 1.00 | E |
 | H16 | Siber saldırılara karşı savunma sanayi değil, kurumsal SaaS bulut alty | K2/bilişim | bilisim/K2 | bge-m3 | 0.66 | E |
-| I01 | Sağlık sektöründeyiz. | K2/sağlık | saglik/K2 | bge-m3 | 0.67 | E |
+| I01 | Sağlık sektöründeyiz. | K2/sağlık | saglik/K2 | bge-m3 | 0.68 | E |
 | I02 | Peki fiyatlandırma nasıl? | HAFIZA/sağlık | saglik/HAFIZA | hafiza | 0.95 | E |
 | I03 | Oteller için ne gibi çözümleriniz var? | K2/turizm | turizm/K2 | bge-m3 | 0.95 | E |
 | I04 | Referanslarınızı listeler misiniz? | HAFIZA/turizm | turizm/HAFIZA | hafiza | 0.95 | E |
@@ -171,10 +171,10 @@
 
 | ID | Girdi | Beklenen | Sonuç | Yöntem | Güven | OK |
 |----|-------|----------|-------|--------|------|-----|
-| CE-A1 | Sağlık sektöründe faaliyet gösteriyoruz. | sağlık | saglik/K2 | bge-m3 | 0.61 | E |
+| CE-A1 | Sağlık sektöründe faaliyet gösteriyoruz. | sağlık | saglik/K2 | bge-m3 | 0.65 | E |
 | CE-A2 | Sağlığımız için bir sistem arıyoruz. | sağlık | saglik/K2 | bge-m3 | 0.76 | E |
 | CE-A3 | Sağlıkla ilgili bir yazılım istiyoruz. | sağlık | saglik/K2 | bge-m3 | 0.72 | E |
-| CE-A4 | Sağlıklara yönelik çözümünüz var mı? | sağlık | saglik/K2 | bge-m3 | 0.56 | E |
+| CE-A4 | Sağlıklara yönelik çözümünüz var mı? | sağlık | saglik/K2 | bge-m3 | 0.57 | E |
 | CE-A5 | Hastanelerimiz için bir platform lazım. | sağlık | saglik/K1 | kisaltma | 0.99 | E |
 | CE-A6 | Hastanede kullanılacak bir sistem geliştiriyoruz. | sağlık | saglik/K1 | kisaltma | 0.99 | E |
 | CE-A7 | Hastaneden hastaneye veri paylaşımı yapmak istiyoruz. | sağlık | saglik/K1 | kisaltma | 0.99 | E |
@@ -190,7 +190,7 @@
 | CE-D3 | Okulumuz için kayıt sistemi lazım. | eğitim | egitim/K2 | bge-m3 | 0.70 | E |
 | CE-D4 | Okullarımızdaki öğrencileri takip edecek bir sistem arıyoruz. | eğitim | egitim/K2 | bge-m3 | 0.78 | E |
 | CE-D5 | Öğrencilerimize yönelik bir uygulama geliştiriyoruz. | eğitim | egitim/K2 | bge-m3 | 0.75 | E |
-| CE-D6 | Üniversitemizden mezun öğrenciler için bir portal lazım. | eğitim | egitim/K2 | bge-m3 | 0.68 | E |
+| CE-D6 | Üniversitemizden mezun öğrenciler için bir portal lazım. | eğitim | egitim/K2 | bge-m3 | 0.69 | E |
 | CE-E1 | Hastanelerle sözleşme yapmak istiyoruz. | sağlık|belirsiz | saglik/K1 | kisaltma | 0.99 | ~ |
 | CE-E2 | Otelleştirmek istediğimiz bir binamız var. | turizm|belirsiz | turizm/K2 | bge-m3 | 0.95 | ~ |
 | CE-E3 | Askerileştirilmiş bir güvenlik protokolü istiyoruz. | belirsiz|savunma | belirsiz/FB | kisaltma | 0.15 | ~ |
@@ -225,13 +225,13 @@
 | SL-C3 | Selam, bilgi almak istiyorum. | Belirsiz (not Genel) | belirsiz/FB | bge-m3 | 0.64 | E |
 | SL-C4 | Merhaba, sizinle görüşmek istiyorum. | Belirsiz (not Genel) | belirsiz/FB | bge-m3 | 0.61 | E |
 | SL-D1a | Merhaba, hastane randevu… | sağlık | saglik/K1 | kisaltma | 0.99 | E |
-| SL-D1b | Fiyat teklifi… (aynı session) | sağlık/HAFIZA | belirsiz/FB | bge-m3 | 0.89 | H |
+| SL-D1b | Fiyat teklifi… (aynı session) | sağlık/HAFIZA | saglik/HAFIZA | hafiza | 0.95 | H |
 | SL-E1 | Görüşürüz | Genel Sohbet veya nötr | belirsiz/K1 | kisaltma | 1.00 | E |
 | SL-E2 | İyi çalışmalar | Genel Sohbet veya nötr | belirsiz/K1 | kisaltma | 1.00 | E |
 | SL-E3 | Kolay gelsin | Genel Sohbet veya nötr | belirsiz/K1 | kisaltma | 1.00 | E |
 | SL-F1 | mrb hastane randevu sistemi lazım | sağlık | saglik/K1 | kisaltma | 0.99 | E |
 | SL-F2 | slm otel rezervasyon yazılımı | turizm | turizm/K1 | kisaltma | 0.99 | E |
-| SL-F3 | gunaydin egitim platformu arıyoruz | eğitim | egitim/K2 | bge-m3 | 0.70 | E |
+| SL-F3 | gunaydin egitim platformu arıyoruz | eğitim | egitim/K2 | bge-m3 | 0.71 | E |
 
 ### K1 Hard-Match Regresyon
 
@@ -248,11 +248,11 @@
 | K1-A9 | Randevu almak için nereye başvurmalıyım? | belirsiz | belirsiz/FB | kisaltma | 0.00 | E |
 | K1-A10 | Kontrol mekanizmalarımızı gözden geçirmek istiyoruz. | belirsiz | belirsiz/FB | kisaltma | 0.00 | E |
 | K1-B1 | eğitim→fiyat | eğitim/HAFIZA | egitim/HAFIZA | hafiza | 0.95 | E |
-| K1-B2 | sağlık→süre | sağlık/HAFIZA | bilisim/HAFIZA | hafiza | 0.54 | H |
+| K1-B2 | sağlık→süre | sağlık/HAFIZA | saglik/HAFIZA | hafiza | 0.95 | E |
 | K1-B3 | eğitim→savunma | belirsiz | belirsiz/FB | kisaltma | 0.15 | E |
-| K1-B4 | sağlık→turizm | turizm | turizm/K2 | bge-m3 | 0.95 | E |
+| K1-B4 | sağlık→turizm | turizm | turizm/K2 | bge-m3 | 0.77 | E |
 | K1-B5 | turizm→eğitim borderline | borderline | egitim/K2 | bge-m3 | 0.71 | ~ |
-| K1-B6 | sağlık→başka neler | sağlık/HAFIZA | belirsiz/FB | bge-m3 | 0.60 | H |
+| K1-B6 | sağlık→başka neler | sağlık/HAFIZA | saglik/HAFIZA | hafiza | 0.95 | E |
 | K1-B7 | eğitim→teşekkür | eğitim/HAFIZA veya nötr | belirsiz/FB | bge-m3 | 0.58 | E |
 
 ## 6. Sonuç ve Teslim Önerisi
@@ -270,4 +270,4 @@
 2. Stres negasyon (A) için hedefli corpus örnekleri — eşik düşürmeden.
 
 ---
-*Üretilme: 2026-07-31 11:25:20 — otomatik final doğrulama.*
+*Üretilme: 2026-07-31 20:08:03 — otomatik final doğrulama.*

@@ -73,6 +73,15 @@
   },
   {
     "id": 1008,
+    "mesaj": "bişey lazım bize sağlık için acil yardimci olun",
+    "lang": "tr",
+    "beklenen_sektor": "sağlık",
+    "beklenen_mod": "K2",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "C09"
+  },
+  {
+    "id": 1009,
     "mesaj": "university registration system yenilemek istiyoruz",
     "lang": "tr",
     "beklenen_sektor": "eğitim",
@@ -81,7 +90,7 @@
     "referans_id": "D09"
   },
   {
-    "id": 1009,
+    "id": 1010,
     "mesaj": "Kiminle görüşebilirim?",
     "lang": "tr",
     "beklenen_sektor": "belirsiz",
@@ -90,7 +99,16 @@
     "referans_id": "G03"
   },
   {
-    "id": 1010,
+    "id": 1011,
+    "mesaj": "Çözümlerinizin kurulum süresi ortalama kaç gündür?",
+    "lang": "tr",
+    "beklenen_sektor": "belirsiz",
+    "beklenen_mod": "FB",
+    "zorluk": "stres_testi_fail",
+    "referans_id": "G07"
+  },
+  {
+    "id": 1012,
     "mesaj": "Teknik destek hizmetleriniz 7/24 aktif mi?",
     "lang": "tr",
     "beklenen_sektor": "belirsiz",
@@ -99,7 +117,7 @@
     "referans_id": "G08"
   },
   {
-    "id": 1011,
+    "id": 1013,
     "mesaj": "sağlık sağlık sağlık sağlık sağlık sağlık sağlık sağlık sağlık sağlık",
     "lang": "tr",
     "beklenen_sektor": "sağlık",
