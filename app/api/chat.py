@@ -11,8 +11,8 @@ from sqlalchemy.orm import Session
 
 from app.db.database import Intent, get_db
 from app.schemas import ChatLogRequest, ChatTurnRequest, ChatTurnResponse
-from app.services.fallback_service import build_chat_reply
-from app.services.session_service import persist_chat_turn
+from app.services.fallback_service import build_chat_reply, normalize_reply_lang
+from app.services.session_service import ensure_chat_session, persist_chat_turn
 
 router = APIRouter(tags=["chat"])
 
@@ -54,16 +54,25 @@ def chat_turn(body: ChatTurnRequest, db: Session = Depends(get_db)):
     if not msg:
         raise HTTPException(400, "message or query is required")
 
+    session_name = body.external_session_id or "chat-api"
+    db_session_id = ensure_chat_session(
+        db,
+        session_id=body.session_id,
+        user_identifier=body.user_identifier,
+        session_name=session_name,
+    )
+    if body.external_session_id:
+        pipeline_session_id = f"ext-{body.external_session_id}"
+    else:
+        pipeline_session_id = f"api-{db_session_id}"
+
+    reply_lang = normalize_reply_lang(body.lang)
+    force_lang = reply_lang if body.lang else None
+
     t0 = time.perf_counter()
     try:
         bot = _get_bot()
-        if body.external_session_id:
-            sid_key = f"ext-{body.external_session_id}"
-        elif body.session_id:
-            sid_key = f"api-{body.session_id}"
-        else:
-            sid_key = f"api-{body.user_identifier}"
-        resp = bot.run(msg, session_id=sid_key)
+        resp = bot.run(msg, session_id=pipeline_session_id, force_lang=force_lang)
     except Exception as exc:  # noqa: BLE001
         raise HTTPException(503, f"router unavailable: {exc}") from exc
 
@@ -74,18 +83,21 @@ def chat_turn(body: ChatTurnRequest, db: Session = Depends(get_db)):
     sub_intent = resp.sub_intent
     confidence = float(resp.confidence_score)
 
+    if not body.lang:
+        reply_lang = normalize_reply_lang(resp.detected_language)
+
     url = _lookup_url(db, sector, st)
     if sector == "ood" and layer == "rule" and resp.response_message:
         reply = resp.response_message
     else:
-        reply = build_chat_reply(st, sector, url)
+        reply = build_chat_reply(st, sector, url, lang=reply_lang)
 
     saved = persist_chat_turn(
         db,
         ChatLogRequest(
             user_identifier=body.user_identifier,
-            session_name=body.external_session_id or "chat-api",
-            session_id=body.session_id,
+            session_name=session_name,
+            session_id=db_session_id,
             user_message=msg,
             bot_message=reply,
             intent=sub_intent,

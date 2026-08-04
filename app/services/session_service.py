@@ -9,6 +9,30 @@ from app.db.database import AnalyticsEvent, ChatSession, Conversation, Message
 from app.schemas import ChatLogRequest, ChatLogResponse
 
 
+def ensure_chat_session(
+    db: Session,
+    *,
+    session_id: int | None,
+    user_identifier: str,
+    session_name: str,
+) -> int:
+    """DB session satırını getir veya oluştur (flush; commit persist_chat_turn'de)."""
+    if session_id is not None:
+        session = db.get(ChatSession, session_id)
+        if not session:
+            raise HTTPException(400, "session_id not found")
+        return session.id
+
+    session = ChatSession(
+        session_name=session_name or f"chat-{user_identifier}",
+        user_identifier=user_identifier,
+        status="active",
+    )
+    db.add(session)
+    db.flush()
+    return session.id
+
+
 class SessionService:
     """Pipeline bellek içi sektör hafızası (Redis yerine process-local)."""
 
@@ -44,18 +68,14 @@ class SessionService:
 
 def persist_chat_turn(db: Session, body: ChatLogRequest) -> ChatLogResponse:
     """Tek tur: session → conversation → user/bot message → analytics."""
-    if body.session_id is not None:
-        session = db.get(ChatSession, body.session_id)
-        if not session:
-            raise HTTPException(400, "session_id not found")
-    else:
-        session = ChatSession(
-            session_name=body.session_name or f"chat-{body.user_identifier}",
-            user_identifier=body.user_identifier,
-            status="active",
-        )
-        db.add(session)
-        db.flush()
+    resolved_session_id = ensure_chat_session(
+        db,
+        session_id=body.session_id,
+        user_identifier=body.user_identifier,
+        session_name=body.session_name or f"chat-{body.user_identifier}",
+    )
+    session = db.get(ChatSession, resolved_session_id)
+    assert session is not None
 
     if body.conversation_id is not None:
         conv = db.get(Conversation, body.conversation_id)
@@ -108,4 +128,4 @@ def persist_chat_turn(db: Session, body: ChatLogRequest) -> ChatLogResponse:
     )
 
 
-__all__ = ["SessionService", "persist_chat_turn"]
+__all__ = ["SessionService", "ensure_chat_session", "persist_chat_turn"]

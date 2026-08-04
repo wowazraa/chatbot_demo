@@ -29,77 +29,13 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from app.services.embedder import BGEEmbedder
+from app.core.intent_mapping import resolve_intent
 
-# ---------------------------------------------------------------------------
-# Sabitler
-# ---------------------------------------------------------------------------
-RAW_FILE       = ROOT / "data" / "raw"       / "chatbot_dataset.json"
+RAW_FILE = ROOT / "data" / "raw" / "chatbot_dataset.json"
 PROCESSED_FILE = ROOT / "data" / "processed" / "chatbot_dataset_augmented.json"
-INDEX_DIR      = ROOT / "data" / "processed"
-
-# ---------------------------------------------------------------------------
-# Intent Kodu Eşleme Tablosu
-# JSON'daki ham Türkçe sektör etiketini → DB-uyumlu intent koduna dönüştürür.
-# Bu eşleme olmadan downstream migration script'i [null] üretir.
-# ---------------------------------------------------------------------------
-SEKTOR_TO_INTENT: dict[str, str] = {
-    # Birincil etiketler (ham JSON → DB intent kodu)
-    "turizm":   "tourism_hotel",
-    "saglik":   "health_appointment",
-    "egitim":   "education_enrollment",
-    "bilisim":  "bilisim_integration",
-    "eglence":  "eglence_streaming",
-    # OOD ve belirsiz durumlar — DB tarafında özel işlenir
-    "ood":      "ood",
-    "belirsiz": "ood",
-}
-
-# Varyant destek eşlemesi: Türkçe karakterli versiyonlar (data_augmented.py
-# AUGMENTATION_TARGETS anahtarlarından üretilenler için güvenlik ağı)
-_SEKTOR_NORMALIZE: dict[str, str] = {
-    # Türkçe karakterli -> ASCII normalleştirilmiş
-    "sağlık":  "saglik",
-    "eğitim":  "egitim",
-    "turizm":  "turizm",   # zaten ASCII
-    "bilişim": "bilisim",
-    "eğlence": "eglence",
-    "ood":     "ood",
-    "belirsiz":"belirsiz",
-}
+INDEX_DIR = ROOT / "data" / "processed"
 
 
-def resolve_intent(raw_sektor: str | None) -> str:
-    """
-    Ham sektör etiketini DB-uyumlu intent koduna dönüştürür.
-
-    Adımlar:
-      1) Türkçe karakterli versiyonu ASCII'ye normalize et
-      2) Eşleme tablosunda ara
-      3) Eşleme bulunamazsa 'ood' döndür ve uyarı bas
-
-    UTF-8 güvenli: giriş string'i aynen kullanılır,
-    encoding dönüşümü yoktur.
-    """
-    if not raw_sektor:
-        return "ood"
-
-    normalized = _SEKTOR_NORMALIZE.get(raw_sektor.strip(), raw_sektor.strip())
-    intent = SEKTOR_TO_INTENT.get(normalized)
-
-    if intent is None:
-        print(
-            f"  [UYARI] Bilinmeyen sektör etiketi: '{raw_sektor}' → 'ood' atandı. "
-            f"SEKTOR_TO_INTENT tablosunu güncelleyin.",
-            file=sys.stderr,
-        )
-        return "ood"
-
-    return intent
-
-
-# ---------------------------------------------------------------------------
-# Veri yükleme
-# ---------------------------------------------------------------------------
 def load_records(use_raw: bool = False) -> list[dict]:
     path = RAW_FILE if use_raw else PROCESSED_FILE
     if not path.exists():

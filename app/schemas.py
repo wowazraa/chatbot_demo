@@ -303,6 +303,7 @@ class ChatTurnRequest(BaseModel):
     session_id: int | None = None
     user_identifier: str = Field("web-user", max_length=255)
     external_session_id: str | None = Field(None, max_length=255)
+    lang: str | None = Field(None, max_length=8)
 
     @property
     def clean_message(self) -> str:

@@ -294,21 +294,31 @@ class BGEEmbedder:
 
     def encode_dense(self, texts: list[str]) -> np.ndarray:
         """Metinleri dense BGE vektörüne çevir (N, D), L2-normalize."""
+        dense, _ = self.encode_dense_and_sparse(texts)
+        return dense
+
+    def encode_dense_and_sparse(
+        self, texts: list[str]
+    ) -> tuple[np.ndarray, list[dict[str, float]]]:
+        """Dense (N,D) L2-normalize + sparse lexical weights — tek model geçişi."""
         if not texts:
-            return np.zeros((0, 0), dtype=np.float32)
+            return np.zeros((0, 0), dtype=np.float32), []
+
         model = _get_model()
         out = _encode_under_inference(
             model,
             texts,
             batch_size=min(BATCH_SIZE, max(1, len(texts))),
             return_dense=True,
-            return_sparse=False,
+            return_sparse=True,
             return_colbert_vecs=False,
         )
         vecs = out["dense_vecs"].astype(np.float32)
         norms = np.linalg.norm(vecs, axis=1, keepdims=True)
         norms = np.maximum(norms, 1e-12)
-        return vecs / norms
+        dense = vecs / norms
+        sparse = [{k: float(v) for k, v in d.items()} for d in out["lexical_weights"]]
+        return dense, sparse
 
     @staticmethod
     def cosine_sim(a: np.ndarray, b: np.ndarray) -> float:

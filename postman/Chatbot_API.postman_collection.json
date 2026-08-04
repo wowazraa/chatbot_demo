@@ -1,0 +1,77 @@
+{
+  "info": {
+    "_postman_id": "c4a8f1e2-9b3d-4a7e-8f6c-chatbot-api-v3",
+    "name": "ALLINTOS - Chatbot Router v1",
+    "description": "Varsayilan: http://127.0.0.1:8001",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://127.0.0.1:8001"
+    },
+    {
+      "key": "admin_token",
+      "value": "super-secret"
+    }
+  ],
+  "item": [
+    {
+      "name": "health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://127.0.0.1:8001/api/health"
+      }
+    },
+    {
+      "name": "chat",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"message\": \"LMS entegrasyonu ve uzaktan eğitim altyapısı arıyoruz\",\n  \"external_session_id\": \"1042\",\n  \"user_identifier\": \"web-user\",\n  \"lang\": \"tr\"\n}"
+        },
+        "url": "http://127.0.0.1:8001/api/chat"
+      }
+    },
+    {
+      "name": "status",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://127.0.0.1:8001/api/status"
+      }
+    },
+    {
+      "name": "admin add_qa",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{admin_token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"query\": \"Otel rezervasyon sistemi entegrasyonu istiyoruz\",\n  \"answer\": \"Turizm ekibimiz sizinle iletisime gececek.\",\n  \"sector\": \"turizm\",\n  \"augment\": false\n}"
+        },
+        "url": "http://127.0.0.1:8001/api/admin/add_qa"
+      }
+    }
+  ]
+}

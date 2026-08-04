@@ -32,6 +32,10 @@ demo/
 data/processed/embeddings.npz
 data/processed/index_meta.json
 data/processed/chatbot_dataset_augmented.json
+data/processed/*.tmp.npz
+
+# Yerel pg_dump çıktısı (~70 MB; diskte kalır, repoya girmez)
+db/vector_index_dump.sql
 
 # ── Model / ONNX önbellek ───────────────────────────────────
 **/_reranker_onnx_cache/
