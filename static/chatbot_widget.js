@@ -9,6 +9,8 @@
             linkRelatedPage: 'İlgili Sayfa →',
             inputPlaceholder: 'Mesajınızı yazın...',
             closeButtonTitle: 'Kapat',
+            refreshButtonTitle: 'Yeni sohbet',
+            refreshButtonAriaLabel: 'Oturumu yenile ve yeni sohbet başlat',
             sendButtonTitle: 'Gönder',
             toggleButtonTitle: 'Sohbet',
             toggleBrand: 'Allintos',
@@ -27,6 +29,8 @@
             linkRelatedPage: 'Related Page →',
             inputPlaceholder: 'Type your message...',
             closeButtonTitle: 'Close',
+            refreshButtonTitle: 'New chat',
+            refreshButtonAriaLabel: 'Refresh session and start a new chat',
             sendButtonTitle: 'Send',
             toggleButtonTitle: 'Open chat',
             toggleBrand: 'Allintos',
@@ -129,6 +133,12 @@
             <div id="ag-chatbot-window">
 
                 <div class="ag-chat-hero">
+                    <button class="ag-chat-refresh" id="ag-chat-refresh"
+                        type="button"
+                        title="${text.refreshButtonTitle}"
+                        aria-label="${text.refreshButtonAriaLabel}">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.64-6.36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="21 3 21 9 15 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
                     <button class="ag-chat-close" id="ag-chat-close"
                         title="${text.closeButtonTitle}"
                         aria-label="${text.closeButtonAriaLabel}">
@@ -179,6 +189,7 @@
         const welcomeMsg = document.getElementById('ag-welcome-msg');
         const chatInputEl = document.getElementById('ag-chat-input');
         const closeBtn = document.getElementById('ag-chat-close');
+        const refreshBtn = document.getElementById('ag-chat-refresh');
         const sendBtn = document.getElementById('ag-chat-send');
         const toggleBtn = document.getElementById('ag-chatbot-toggle');
         const typingIndicator = document.getElementById('ag-typing-indicator');
@@ -189,6 +200,10 @@
         if (closeBtn) {
             closeBtn.title = t.closeButtonTitle;
             closeBtn.setAttribute('aria-label', t.closeButtonAriaLabel);
+        }
+        if (refreshBtn) {
+            refreshBtn.title = t.refreshButtonTitle;
+            refreshBtn.setAttribute('aria-label', t.refreshButtonAriaLabel);
         }
         if (sendBtn) {
             sendBtn.title = t.sendButtonTitle;
@@ -214,6 +229,7 @@
 
         const toggleBtn = document.getElementById('ag-chatbot-toggle');
         const closeBtn = document.getElementById('ag-chat-close');
+        const refreshBtn = document.getElementById('ag-chat-refresh');
         const chatWindow = document.getElementById('ag-chatbot-window');
         const chatInput = document.getElementById('ag-chat-input');
         const sendBtn = document.getElementById('ag-chat-send');
@@ -240,6 +256,21 @@
                     msg.remove();
                 }
             });
+        }
+
+        function resetSession() {
+            typingIndicator.classList.remove('ag-active');
+            chatInput.disabled = false;
+            sendBtn.disabled = false;
+            chatInput.value = '';
+            clearAll();
+            const welcomeMsg = document.getElementById('ag-welcome-msg');
+            const t = translations[currentLang] || translations.tr;
+            if (welcomeMsg) {
+                welcomeMsg.textContent = t.welcomeMessage;
+            }
+            scrollToBottom();
+            chatInput.focus();
         }
 
         function clearAll() {
@@ -329,6 +360,7 @@
 
         toggleBtn.addEventListener('click', toggleChat);
         closeBtn.addEventListener('click', toggleChat);
+        refreshBtn.addEventListener('click', resetSession);
 
         sendBtn.addEventListener('click', handleSend);
         chatInput.addEventListener('keypress', (e) => {

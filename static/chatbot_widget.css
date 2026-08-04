@@ -132,6 +132,34 @@
     stroke-linejoin: round;
 }
 
+.ag-chat-refresh {
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    right: 60px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: background 0.2s, transform 0.2s;
+    backdrop-filter: blur(4px);
+}
+.ag-chat-refresh:hover {
+    background: rgba(255, 255, 255, 0.22);
+    transform: scale(1.1) rotate(-30deg);
+}
+.ag-chat-refresh svg {
+    width: 18px;
+    height: 18px;
+}
+
 .ag-chat-hero-title {
     font-family: 'Montserrat', system-ui, sans-serif;
     font-size: 28px;
@@ -410,6 +438,11 @@
     .ag-chat-close {
         top: 16px;
         right: 16px;
+    }
+
+    .ag-chat-refresh {
+        top: 16px;
+        right: 56px;
     }
 }
 
