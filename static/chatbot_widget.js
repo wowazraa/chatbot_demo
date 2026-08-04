@@ -4,7 +4,7 @@
 (function() {
     const translations = {
         tr: {
-            heroTitle: 'Merhaba! 👋<br>Size nasıl yardımcı olabiliriz?',
+            heroTitle: 'Merhaba!<br>Size nasıl yardımcı olabiliriz?',
             welcomeMessage: "Allintos Bilgi Merkezi'ne hoş geldiniz. Lütfen sorunuzu yazın.",
             linkRelatedPage: 'İlgili Sayfa →',
             inputPlaceholder: 'Mesajınızı yazın...',
@@ -21,7 +21,7 @@
                 'Üzgünüm, şu anda sunucuya bağlanılamıyor. Lütfen daha sonra tekrar deneyin.',
         },
         en: {
-            heroTitle: 'Hello! 👋<br>How can we help you?',
+            heroTitle: 'Hello!<br>How can we help you?',
             welcomeMessage:
                 'Welcome to Allintos Knowledge Center. Please type your question.',
             linkRelatedPage: 'Related Page →',
@@ -39,6 +39,10 @@
                 'Sorry, we cannot connect to the server right now. Please try again later.',
         },
     };
+
+    const INACTIVITY_MS = 20 * 60 * 1000;
+    const SESSION_KEY = 'ag_chatbot_session_id';
+    const STATE_KEY = 'ag_chatbot_state';
 
     function getWidgetScriptElement() {
         return document.querySelector('script[src*="chatbot_widget.js"]');
@@ -63,6 +67,45 @@
         return scriptLang || htmlLang || 'tr';
     }
 
+    function readStateJson() {
+        try {
+            const raw = sessionStorage.getItem(STATE_KEY);
+            return raw ? JSON.parse(raw) : null;
+        } catch (e) {
+            console.warn('[Chatbot] state parse error', e);
+            return null;
+        }
+    }
+
+    function isStateExpired(state) {
+        if (!state || typeof state.lastActivityAt !== 'number') {
+            return false;
+        }
+        return Date.now() - state.lastActivityAt > INACTIVITY_MS;
+    }
+
+    function loadState() {
+        const state = readStateJson();
+        if (!state) {
+            return null;
+        }
+        if (isStateExpired(state)) {
+            sessionStorage.removeItem(STATE_KEY);
+            sessionStorage.removeItem(SESSION_KEY);
+            return null;
+        }
+        return state;
+    }
+
+    function saveState(state) {
+        sessionStorage.setItem(STATE_KEY, JSON.stringify(state));
+    }
+
+    function clearStorage() {
+        sessionStorage.removeItem(SESSION_KEY);
+        sessionStorage.removeItem(STATE_KEY);
+    }
+
     let backendUrl = 'http://127.0.0.1:8082';
     const scriptEl = getWidgetScriptElement();
     if (scriptEl && scriptEl.src) {
@@ -73,7 +116,6 @@
         }
     }
     const API_URL = backendUrl + '/api/chat';
-    const SESSION_KEY = 'ag_chatbot_session_id';
 
     const link = document.createElement('link');
     link.rel = 'stylesheet';
@@ -178,12 +220,69 @@
         const messagesContainer = document.getElementById('ag-chat-messages');
         const typingIndicator = document.getElementById('ag-typing-indicator');
 
-        function clearConversation() {
-            sessionStorage.removeItem(SESSION_KEY);
+        let chatState = {
+            lastActivityAt: Date.now(),
+            lang: currentLang,
+            messages: [],
+        };
+
+        function freshState() {
+            return {
+                lastActivityAt: Date.now(),
+                lang: currentLang,
+                messages: [],
+            };
+        }
+
+        function clearDomMessages() {
             document.querySelectorAll('.ag-message').forEach(msg => {
                 if (msg.id !== 'ag-welcome-msg') {
                     msg.remove();
                 }
+            });
+        }
+
+        function clearAll() {
+            clearStorage();
+            chatState = freshState();
+            clearDomMessages();
+        }
+
+        function touchActivity() {
+            chatState.lastActivityAt = Date.now();
+            chatState.lang = currentLang;
+            saveState(chatState);
+        }
+
+        function checkInactivity() {
+            const raw = readStateJson();
+            if (raw && isStateExpired(raw)) {
+                clearAll();
+                return true;
+            }
+            return false;
+        }
+
+        function restoreFromStorage() {
+            const stored = loadState();
+            if (!stored) {
+                chatState = freshState();
+                return;
+            }
+            if (stored.lang && stored.lang !== currentLang) {
+                clearAll();
+                return;
+            }
+            chatState = {
+                lastActivityAt: stored.lastActivityAt || Date.now(),
+                lang: stored.lang || currentLang,
+                messages: Array.isArray(stored.messages) ? stored.messages : [],
+            };
+            chatState.messages.forEach(m => {
+                addMessage(m.text, m.role === 'user', m.url || null, {
+                    skipPersist: true,
+                    ts: m.ts || null,
+                });
             });
         }
 
@@ -193,7 +292,7 @@
 
             currentLang = nextLang;
             applyTranslations(currentLang);
-            clearConversation();
+            clearAll();
         }
 
         function watchHostLanguageChanges() {
@@ -225,8 +324,6 @@
             if (chatWindow.classList.contains('ag-open')) {
                 setTimeout(() => { chatInput.focus(); }, 150);
                 scrollToBottom();
-            } else {
-                clearConversation();
             }
         }
 
@@ -253,7 +350,7 @@
 
         function setSessionId(id) {
             if (id) {
-                sessionStorage.setItem(SESSION_KEY, id);
+                sessionStorage.setItem(SESSION_KEY, String(id));
             }
         }
 
@@ -262,7 +359,8 @@
             return now.getHours().toString().padStart(2, '0') + ':' + now.getMinutes().toString().padStart(2, '0');
         }
 
-        function addMessage(messageText, isUser = false, url = null) {
+        function addMessage(messageText, isUser = false, url = null, options = {}) {
+            const { skipPersist = false, ts = null } = options;
             const t = translations[currentLang] || translations.tr;
             const msgDiv = document.createElement('div');
             msgDiv.className = `ag-message ${isUser ? 'ag-message-user' : 'ag-message-bot'}`;
@@ -283,19 +381,33 @@
 
             const timeDiv = document.createElement('div');
             timeDiv.className = 'ag-timestamp';
-            timeDiv.textContent = getCurrentTime();
+            const displayTs = ts || getCurrentTime();
+            timeDiv.textContent = displayTs;
             msgDiv.appendChild(timeDiv);
 
             messagesContainer.insertBefore(msgDiv, typingIndicator);
             scrollToBottom();
+
+            if (!skipPersist) {
+                chatState.messages.push({
+                    role: isUser ? 'user' : 'bot',
+                    text: messageText,
+                    url: url || null,
+                    ts: displayTs,
+                });
+                touchActivity();
+            }
         }
 
         async function handleSend() {
             syncLanguageFromHost();
+            checkInactivity();
+
             const t = translations[currentLang] || translations.tr;
             const messageText = chatInput.value.trim();
             if (!messageText) return;
 
+            touchActivity();
             addMessage(messageText, true);
             chatInput.value = '';
             chatInput.disabled = true;
@@ -304,9 +416,10 @@
             typingIndicator.classList.add('ag-active');
             scrollToBottom();
 
+            const sessionRaw = getSessionId();
             const payload = {
                 message: messageText,
-                session_id: getSessionId() || null,
+                session_id: sessionRaw ? parseInt(sessionRaw, 10) : null,
                 lang: currentLang,
             };
 
@@ -341,6 +454,8 @@
                 chatInput.focus();
             }
         }
+
+        restoreFromStorage();
     }
 
     if (document.readyState === 'loading') {
