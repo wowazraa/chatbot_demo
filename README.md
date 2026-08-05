@@ -58,7 +58,7 @@ chatbot_demo/
 │   │   └── embedder.py           # BGE-M3 encode
 │   └── schemas.py
 ├── static/                 # Widget (chatbot_widget.js/css)
-├── scripts/                # build_index, seed_pgvector, setup_local_db, …
+├── scripts/                # build_index, seed, seed_pgvector, setup_local_db, …
 ├── data/                   # Ham + işlenmiş corpus
 ├── tests/
 └── config/router_config.json
@@ -79,8 +79,9 @@ Katman ayrımı:
 Eğer projeyi yeni clone'ladıysanız, `embeddings.npz` indeksi repoda olmadığı için oluşturmanız şarttır:
 ```powershell
 pip install -r requirements.txt
-cp .env.example .env   # DATABASE_URL ve token'ları düzenleyin
+cp .env.example .env   # DATABASE_URL, ALLINTOS_SITE_URL ve token'ları düzenleyin
 python -m scripts.setup_local_db   # opsiyonel: yerel chatbot_db
+python scripts/seed.py             # intents tablosu + form URL'leri (ALLINTOS_SITE_URL)
 python scripts/build_index.py
 python scripts/seed_pgvector.py --truncate   # Postgres vector_index
 ```
@@ -138,6 +139,27 @@ python scripts/build_index.py
 python scripts/seed_pgvector.py --truncate
 ```
 
+`ALLINTOS_SITE_URL` değiştiyse ayrıca:
+```powershell
+python scripts/seed.py
+```
+
+### Allintos site yönlendirme (dijital olgunluk)
+
+Sektör tespiti **SUCCESS** olduğunda kullanıcı, Allintos sitesindeki dijital olgunluk formuna yönlendirilir. URL metin içine gömülmez; API yanıtında ayrı **`url`** alanı olarak döner.
+
+| Katman | Dosya | Rol |
+|--------|-------|-----|
+| Ortam | `.env` → `ALLINTOS_SITE_URL` | Allintos site kök URL (örn. `http://10.20.40.154:5000`) |
+| URL üretimi | `app/core/config.py` → `sector_digital_maturity_url()` | `{base}/dijital-olgunluk?sector_key={health\|tourism\|…}` |
+| Contract | `app/core/intent_contract.py` → `SECTOR_REDIRECT` | Pipeline `redirect_url` (debug/contract çıktısı) |
+| DB | `intents.url` | `POST /api/chat` bu tablodan okur (`_lookup_url`) |
+| Seed | `scripts/seed.py` → `intent_form_urls()` | Intent kayıtlarına güncel form URL'lerini yazar |
+
+Örnek URL: `http://10.20.40.154:5000/dijital-olgunluk?sector_key=health`
+
+**Önemli:** `scripts/seed.py` çalıştırılmadan `intents.url` boş kalır → widget'ta **"İlgili Sayfa →"** linki görünmez. Ortam değişkeni değiştikten sonra seed'i yeniden çalıştırın.
+
 ### Allintos DB entegrasyonu
 
 Allintos ana veritabanına (`qa_embeddings`) yazma **`index_sync._sync_allintos()`** üzerinden yapılır:
@@ -181,13 +203,21 @@ Widget i18n yalnızca buton/placeholder gibi **UI metinlerini** değiştirir. Bo
 | İstek şeması | `app/schemas.py` → `ChatTurnRequest.lang` | Opsiyonel; widget her istekte gönderir |
 | Pipeline | `app/api/chat.py` → `force_lang` | Sektör tespiti sırasında dil ipucu |
 | HTTP yanıt | `app/services/fallback_service.py` → `build_chat_reply(..., lang=)` | SUCCESS / UNCERTAIN / OOD şablonları TR ve EN |
+| Form linki | `app/api/chat.py` → `_lookup_url()` + `ChatTurnResponse.url` | SUCCESS + sektör → `intents.url` (metinden ayrı) |
 
-Örnek (İngilizce bot cevabı):
+Örnek (İngilizce bot cevabı + ayrı link):
 ```json
 POST /api/chat
 { "message": "we need a hotel booking system", "session_id": null, "lang": "en" }
-→ "I've matched your request to the tourism sector. You can proceed here: …"
+
+→ {
+  "reply": "I've matched your request to the tourism sector.",
+  "url": "http://10.20.40.154:5000/dijital-olgunluk?sector_key=tourism",
+  "session_id": 42
+}
 ```
+
+Widget, `reply` metnini balon içinde gösterir; `url` doluysa altına **"İlgili Sayfa →"** (`ag-link`) butonu ekler.
 
 Takip sorusu + hafıza + İngilizce birlikte: Turn 1'de sektör belirlenir, Turn 2'de aynı `session_id` ve `lang: "en"` ile `"can I get a price estimate?"` → sektör korunur, cevap İngilizce gelir.
 
@@ -203,6 +233,8 @@ Takip sorusu + hafıza + İngilizce birlikte: Turn 1'de sektör belirlenir, Turn
 - **20 dakika inaktivite:** `INACTIVITY_MS = 20 * 60 * 1000` — süre aşılırsa oturum ve geçmiş temizlenir.
 - **Sayfa geçişi:** Aynı sekme/origin içinde sayfa yenilense veya başka sayfaya gidilse geçmiş korunur (`restoreFromStorage`).
 - **API akışı:** Turn 1 `session_id: null` → yanıttaki id saklanır; sonraki turlarda aynı id gönderilir (sid_key fix ile pipeline hafızası da tutarlı kalır).
+- **Yenileme butonu:** Başlıktaki `ag-chat-refresh` tıklanınca `resetSession()` çalışır — `sessionStorage` temizlenir, yeni oturum başlar (TR: "Yeni sohbet", EN: "New chat").
+- **Toggle markası:** Kapalı durumda mavi pill üzerinde **ALLINTOS** metni (`ag-toggle-brand`).
 
 Test sayfaları: `static/widget_persist_test_a.html`, `widget_persist_test_b.html`, `widget_persist_test_en.html`
 
@@ -218,5 +250,18 @@ Test sayfaları: `static/widget_persist_test_a.html`, `widget_persist_test_b.htm
 | `ADMIN_API_TOKEN` | `POST /api/admin/add_qa` Bearer token |
 | `ALLINTOS_DB_ENABLED` | `true` / `false` — Allintos `qa_embeddings` sync |
 | `ALLINTOS_DB_URL` | Allintos DB (**`allintos`**) bağlantı URL'si |
+| `ALLINTOS_SITE_URL` | Allintos site kök URL — sektör form yönlendirmeleri (`/dijital-olgunluk?sector_key=…`); `seed.py` ve contract ile hizalı |
 
 Gerçek şifre ve token'ları repoya commit etmeyin; yalnızca `.env.example` placeholder değerleri kullanın.
+
+## 8. Veri seti referansı (baseline)
+
+Doğrulanmış regresyon koşusu ile uyumlu corpus boyutları:
+
+| Dosya | Kayıt sayısı |
+|---|---|
+| `data/raw/chatbot_dataset.json` | 928 |
+| `data/processed/chatbot_dataset_augmented.json` | 5659 |
+| `embeddings.npz` / pgvector `vector_index` | augmented ile hizalı |
+
+Toplu corpus değişikliğinden sonra tam rebuild (`build_index.py` + `seed_pgvector.py --truncate`) gerekir. Yedek snapshot: `backups/146_baseline_*` (gitignore — yerel).
