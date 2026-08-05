@@ -29,6 +29,7 @@ from __future__ import annotations
 from typing import Any
 
 from app.core.chitchat_rules import to_ascii, _normalize
+from app.core.config import sector_digital_maturity_url
 from dataclasses import dataclass
 
 @dataclass
@@ -143,15 +144,12 @@ _SUB_RULES: dict[str, list[tuple[str, str]]] = {
     ],
 }
 
-# ---------------------------------------------------------------------------
-# Sektör → redirect_url + response_message (config)
-# ---------------------------------------------------------------------------
 SECTOR_REDIRECT: dict[str, str] = {
-    "saglik": "/saglik",
-    "turizm": "/turizm",
-    "egitim": "/egitim",
-    "bilisim": "/bilisim",
-    "eglence": "/eglence",
+    "saglik": sector_digital_maturity_url("saglik"),
+    "turizm": sector_digital_maturity_url("turizm"),
+    "egitim": sector_digital_maturity_url("egitim"),
+    "bilisim": sector_digital_maturity_url("bilisim"),
+    "eglence": sector_digital_maturity_url("eglence"),
     "ood": "",
 }
 
@@ -165,35 +163,35 @@ _SECTOR_TR: dict[str, str] = {
 
 SECTOR_RESPONSE: dict[str, dict[str, str]] = {
     "saglik": {
-        "redirect_url": "/saglik",
+        "redirect_url": sector_digital_maturity_url("saglik"),
         "response_message": (
             "Sağlık hizmetleri ve randevu işlemleriniz için "
             "ilgili sayfaya yönlendiriliyorsunuz..."
         ),
     },
     "turizm": {
-        "redirect_url": "/turizm",
+        "redirect_url": sector_digital_maturity_url("turizm"),
         "response_message": (
             "Turizm ve konaklama işlemleriniz için "
             "ilgili sayfaya yönlendiriliyorsunuz..."
         ),
     },
     "egitim": {
-        "redirect_url": "/egitim",
+        "redirect_url": sector_digital_maturity_url("egitim"),
         "response_message": (
             "Eğitim ve öğrenci işlemleriniz için "
             "ilgili sayfaya yönlendiriliyorsunuz..."
         ),
     },
     "bilisim": {
-        "redirect_url": "/bilisim",
+        "redirect_url": sector_digital_maturity_url("bilisim"),
         "response_message": (
             "Bilişim ve yazılım süreçleriniz için "
             "ilgili sayfaya yönlendiriliyorsunuz..."
         ),
     },
     "eglence": {
-        "redirect_url": "/eglence",
+        "redirect_url": sector_digital_maturity_url("eglence"),
         "response_message": (
             "Eğlence ve medya hizmetleriniz için "
             "ilgili sayfaya yönlendiriliyorsunuz..."
@@ -295,28 +293,12 @@ def resolve_response_message(
                 "Eğlence": "Entertainment"
             }
             en_sector = tr_to_en.get(_SECTOR_TR.get(sector, sector), sector)
-            url = redirect_url if redirect_url is not None else resolve_redirect_url(
-                sector, sub_intent, status
-            )
-            if url:
-                return (
-                    f"I have associated your request with the {en_sector} sector. "
-                    f"You may be redirected to {url} to continue."
-                )
             return f"I have associated your request with the {en_sector} sector."
         
         msg = cfg.get("response_message")
         if msg:
             return msg
         tr = _SECTOR_TR.get(sector, sector)
-        url = redirect_url if redirect_url is not None else resolve_redirect_url(
-            sector, sub_intent, status
-        )
-        if url:
-            return (
-                f"Talebinizi {tr} sektörüyle ilişkilendirdim. "
-                f"Devam etmek için {url} sayfasına yönlendirilebilirsiniz."
-            )
         return f"Talebinizi {tr} sektörüyle ilişkilendirdim."
         
     if status == "UNCERTAIN":

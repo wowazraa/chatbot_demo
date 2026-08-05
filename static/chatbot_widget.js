@@ -13,7 +13,7 @@
             refreshButtonAriaLabel: 'Oturumu yenile ve yeni sohbet başlat',
             sendButtonTitle: 'Gönder',
             toggleButtonTitle: 'Sohbet',
-            toggleBrand: 'Allintos',
+            toggleBrand: 'ALLINTOS',
             closeButtonAriaLabel: 'Sohbet penceresini kapat',
             sendButtonAriaLabel: 'Mesajı gönder',
             toggleButtonAriaLabel: 'Sohbet penceresini aç',
@@ -33,7 +33,7 @@
             refreshButtonAriaLabel: 'Refresh session and start a new chat',
             sendButtonTitle: 'Send',
             toggleButtonTitle: 'Open chat',
-            toggleBrand: 'Allintos',
+            toggleBrand: 'ALLINTOS',
             closeButtonAriaLabel: 'Close chat window',
             sendButtonAriaLabel: 'Send message',
             toggleButtonAriaLabel: 'Open chat window',
@@ -177,7 +177,7 @@
             <button id="ag-chatbot-toggle"
                 title="${text.toggleButtonTitle}"
                 aria-label="${text.toggleButtonAriaLabel}">
-                <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.5px; line-height: 1; text-align: center;">${text.toggleBrand}</span>
+                <span class="ag-toggle-brand" id="ag-toggle-brand">${text.toggleBrand}</span>
             </button>
         </div>
     `;
@@ -213,6 +213,8 @@
             toggleBtn.title = t.toggleButtonTitle;
             toggleBtn.setAttribute('aria-label', t.toggleButtonAriaLabel);
         }
+        const toggleBrand = document.getElementById('ag-toggle-brand');
+        if (toggleBrand) toggleBrand.textContent = t.toggleBrand;
         if (typingIndicator) {
             typingIndicator.setAttribute('aria-label', t.typingIndicatorAriaLabel);
         }
@@ -391,15 +393,27 @@
             return now.getHours().toString().padStart(2, '0') + ':' + now.getMinutes().toString().padStart(2, '0');
         }
 
+        function cleanBotReplyText(text) {
+            if (!text) return text;
+            return text
+                .replace(/https?:\/\/\S+/gi, '')
+                .replace(/\s*İlgili forma buradan ulaşabilirsiniz\s*:?\s*$/i, '')
+                .replace(/\s*(buradan ulaşabilirsiniz|devam etmek için|you can proceed here|you may be redirected to)\s*:?\s*$/i, '')
+                .replace(/\s{2,}/g, ' ')
+                .replace(/\s+([.,;:])\s*/g, '$1 ')
+                .trim();
+        }
+
         function addMessage(messageText, isUser = false, url = null, options = {}) {
             const { skipPersist = false, ts = null } = options;
             const t = translations[currentLang] || translations.tr;
+            const displayText = isUser ? messageText : cleanBotReplyText(messageText);
             const msgDiv = document.createElement('div');
             msgDiv.className = `ag-message ${isUser ? 'ag-message-user' : 'ag-message-bot'}`;
 
             const textDiv = document.createElement('div');
             textDiv.className = 'ag-message-content';
-            textDiv.textContent = messageText;
+            textDiv.textContent = displayText;
             msgDiv.appendChild(textDiv);
 
             if (!isUser && url) {
@@ -407,6 +421,7 @@
                 linkEl.className = 'ag-link';
                 linkEl.href = url;
                 linkEl.target = '_blank';
+                linkEl.rel = 'noopener noreferrer';
                 linkEl.textContent = t.linkRelatedPage;
                 msgDiv.appendChild(linkEl);
             }
@@ -423,7 +438,7 @@
             if (!skipPersist) {
                 chatState.messages.push({
                     role: isUser ? 'user' : 'bot',
-                    text: messageText,
+                    text: displayText,
                     url: url || null,
                     ts: displayTs,
                 });

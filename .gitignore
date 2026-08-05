@@ -24,9 +24,16 @@ _final_dogrulama.py
 scratch/
 reports/
 logs/
+backups/
 
 # Eski / yedek klasörler (refactor sonrası)
 demo/
+
+# Merge/revert arşivleri (diskte kalır, repoya girmez)
+data/external/
+data/raw/*.pre_merge_*.json
+data/raw/chatbot_dataset.*.json
+!data/raw/chatbot_dataset.json
 
 # ── Üretilmiş veri & indeks (scripts/build_index ile oluşur) ─
 data/processed/embeddings.npz
@@ -56,6 +63,7 @@ verify_fixes.py
 # ── Statik test sayfaları (runtime: widget_test.html yeterli) ─
 static/index.html
 static/empty_test.html
+static/widget_toggle_contrast_test.html
 
 # ── Ölü kod (varsa) ─────────────────────────────────────────
 src/router_server.py

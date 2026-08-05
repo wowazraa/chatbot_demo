@@ -12,6 +12,7 @@ import bcrypt
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
+from app.core.config import intent_form_urls
 from app.db.database import EMBEDDING_DIM, AdminUser, Blog, ChatSession, Company, Intent, QaEmbedding, Sector, get_db
 from app.schemas import SeedResponse
 
@@ -93,14 +94,14 @@ def _run_seed(db: Session) -> SeedResponse:
         sector_map[key] = _upsert_sector(db, key, tr, en)
         n_sec += 1
 
+    form_urls = intent_form_urls()
     intents = [
-        # Beş sektör + OOD — build_index.py SEKTOR_TO_INTENT ile tam eşleşme
-        ("health_appointment",    "https://example.com/forms/health",         "Sağlık randevu formu"),
-        ("tourism_hotel",         "https://example.com/forms/tourism",        "Turizm konaklama formu"),
-        ("education_enrollment",  "https://example.com/forms/education",      "Eğitim kayıt formu"),
-        ("bilisim_integration",   "https://example.com/forms/bilisim",        "Bilişim entegrasyon formu"),
-        ("eglence_streaming",     "https://example.com/forms/eglence",        "Eğlence yayın platform formu"),
-        ("sector_form_request",   "https://example.com/forms/sector",         "Genel sektör formu"),
+        ("health_appointment",    form_urls["health_appointment"],    "Sağlık randevu formu"),
+        ("tourism_hotel",         form_urls["tourism_hotel"],         "Turizm konaklama formu"),
+        ("education_enrollment",  form_urls["education_enrollment"],  "Eğitim kayıt formu"),
+        ("bilisim_integration",   form_urls["bilisim_integration"],   "Bilişim entegrasyon formu"),
+        ("eglence_streaming",     form_urls["eglence_streaming"],     "Eğlence yayın platform formu"),
+        ("sector_form_request",   form_urls["sector_form_request"],   "Genel sektör formu"),
     ]
     n_int = 0
     intent_map: dict[str, Intent] = {}

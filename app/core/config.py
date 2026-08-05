@@ -94,3 +94,39 @@ def active_paths() -> dict[str, Any]:
         "index_dir": _resolve(cfg.get("index_dir", "data/processed")),
         "active_dataset": cfg.get("active_dataset", "unknown"),
     }
+
+
+# Allintos dijital olgunluk formu — pipeline slug → sector_key query param
+_SECTOR_DIGITAL_MATURITY_KEYS: dict[str, str] = {
+    "saglik": "health",
+    "egitim": "education",
+    "eglence": "entertainment",
+    "turizm": "tourism",
+    "bilisim": "information_technology",
+}
+
+
+def get_allintos_site_url() -> str:
+    load_dotenv()
+    return (os.getenv("ALLINTOS_SITE_URL") or "http://10.20.40.154:5000").rstrip("/")
+
+
+def sector_digital_maturity_url(sector: str) -> str:
+    """Sektör slug → Allintos dijital olgunluk sayfası URL'si."""
+    sector_key = _SECTOR_DIGITAL_MATURITY_KEYS.get((sector or "").strip().lower())
+    if not sector_key:
+        return ""
+    base = get_allintos_site_url()
+    return f"{base}/dijital-olgunluk?sector_key={sector_key}"
+
+
+def intent_form_urls() -> dict[str, str]:
+    """Intent code → form URL (seed / intents tablosu ile hizalı)."""
+    return {
+        "health_appointment": sector_digital_maturity_url("saglik"),
+        "tourism_hotel": sector_digital_maturity_url("turizm"),
+        "education_enrollment": sector_digital_maturity_url("egitim"),
+        "bilisim_integration": sector_digital_maturity_url("bilisim"),
+        "eglence_streaming": sector_digital_maturity_url("eglence"),
+        "sector_form_request": f"{get_allintos_site_url()}/dijital-olgunluk",
+    }
