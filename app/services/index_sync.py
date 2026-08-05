@@ -20,6 +20,7 @@ from app.core.intent_mapping import (
     normalize_pg_sector,
     source_id_for_record,
 )
+from app.core.record_types import infer_kayit_tipi_legacy, is_kurumsal_bilgi
 from app.db.vector_store import VectorIndexStore
 from app.services.embedder import BGEEmbedder, reset_embedder
 
@@ -172,6 +173,8 @@ def _sync_allintos(
     cur = conn.cursor()
     try:
         for i, rec in enumerate(records):
+            if is_kurumsal_bilgi(rec):
+                continue
             mesaj = rec["mesaj"]
             cevap = rec.get("cevap")
             if not cevap or not str(cevap).strip():
@@ -249,10 +252,11 @@ def _upsert_pgvector(
     for i, rec in enumerate(records):
         m = new_meta[i]
         raw_sec = str(m.get("beklenen_sektor") or "ood")
+        kayit_tipi = m.get("kayit_tipi") or infer_kayit_tipi_legacy(rec)
         rows.append(
             {
                 "source_id": source_id_for_record(rec),
-                "sector": normalize_pg_sector(raw_sec),
+                "sector": normalize_pg_sector(raw_sec, kayit_tipi=kayit_tipi),
                 "sub_intent": m.get("intent_code", "none"),
                 "text_content": new_texts[i],
                 "embedding": new_dense[i],

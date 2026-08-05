@@ -40,6 +40,13 @@ from app.core.k1_guardrails import (
     extract_active_clause,
     match_any_sector,
 )
+from app.core.record_types import KAYIT_TIPI_KURUMSAL, PG_SECTOR_INFO, infer_kayit_tipi_legacy
+from app.services.k0_corporate_info import (
+    try_k0_corporate_info,
+    _has_strong_service_signal,
+    sanitize_corporate_cevap,
+    pick_kurumsal_hit_for_lang,
+)
 
 
 def _trace_decision(msg: str) -> None:
@@ -63,6 +70,15 @@ def clean_pure_intent(text: str) -> str:
     for pattern in INTENT_STRIPPERS:
         cleaned = re.sub(pattern, "", cleaned, flags=re.IGNORECASE)
     return " ".join(cleaned.split())
+
+
+def _is_kurumsal_candidate(h: VectorCandidate) -> bool:
+    meta = h.record_meta or {}
+    kt = meta.get("kayit_tipi") or infer_kayit_tipi_legacy(meta)
+    if kt == KAYIT_TIPI_KURUMSAL:
+        return True
+    sec = (h.sector or "").strip().lower()
+    return sec in (PG_SECTOR_INFO, "info")
 
 
 @dataclass
@@ -195,6 +211,35 @@ class V2IntentPipeline:
         if self.store is None:
             self.store = self._similarity.store
         return self.store
+
+    def _fetch_kurumsal_hits_hybrid(self, ml_query: str, *, k: int = 50) -> list[VectorCandidate]:
+        """Kurumsal K2 fallback — yalnızca kayit_tipi=kurumsal_bilgi (hybrid NPZ arama)."""
+        from app.services.embedder import get_embedder
+
+        emb = get_embedder()
+        if not emb.is_ready():
+            return []
+        hits_raw = emb.find_top_k_hybrid(ml_query, k=k, alpha=0.65)
+        out: list[VectorCandidate] = []
+        for h in hits_raw:
+            meta = dict(h.metadata or {})
+            kayit_tipi = meta.get("kayit_tipi") or infer_kayit_tipi_legacy(meta)
+            if kayit_tipi != KAYIT_TIPI_KURUMSAL:
+                continue
+            score = float(h.score)
+            out.append(
+                VectorCandidate(
+                    id=int(h.idx),
+                    source_id=str(meta.get("id") or meta.get("source_id") or h.idx),
+                    sector="ood",
+                    sub_intent="corporate_info.general",
+                    text_content=h.text,
+                    distance=round(max(0.0, 1.0 - score), 6),
+                    score=round(score, 6),
+                    record_meta=meta,
+                )
+            )
+        return out
 
     def _get_session_state(self, session_id: str | None) -> dict[str, str | None] | None:
         return self._session.get_state(session_id)
@@ -509,6 +554,26 @@ class V2IntentPipeline:
             ml_query = query
         processed_intent = ml_query
 
+        # ── Katman 0: Kurumsal bilgi (chitchat/gibberish ÖNCE — kısa terimler korunur) ──
+        k0 = try_k0_corporate_info(query, reply_lang=detected_language)
+        if k0:
+            total_ms = (time.perf_counter() - t0) * 1000
+            return V2PipelineResult(
+                query=query,
+                retrieval=[],
+                sector="ood",
+                sub_intent="corporate_info.general",
+                confidence_score=1.0,
+                status="INFO",
+                layer="rule",
+                latency_ms=total_ms,
+                detected_language=detected_language,
+                processed_intent=processed_intent,
+                response_message=k0["cevap"],
+                redirect_url="",
+                preprocessed_query=query,
+            )
+
         # ── Katman 1: Rule-based fast-path (chitchat/gibberish/abuse) ────────
         fast = self._fast_path_result(query, t0)
         if fast is not None:
@@ -548,18 +613,23 @@ class V2IntentPipeline:
 
         t = time.perf_counter()
         store = self._ensure_store()
+        kurumsal_hits: list[VectorCandidate] = []
+        retrieve_k = max(50, self.top_k * 10)
 
         if hasattr(store, "backend") and store.backend == "npz":
             from app.services.embedder import get_embedder
-            from app.db.vector_store import VectorCandidate
 
             emb = get_embedder()
             hits_raw = emb.find_top_k_hybrid(ml_query, k=self.top_k, alpha=0.65)
-            stages["retrieve_ms"] = 0.0
+            stages["retrieve_ms"] = (time.perf_counter() - t) * 1000
 
             hits = []
             for h in hits_raw:
-                sektor_tr = (h.metadata or {}).get("beklenen_sektor") or ""
+                meta = dict(h.metadata or {})
+                kayit_tipi = meta.get("kayit_tipi") or infer_kayit_tipi_legacy(meta)
+                if kayit_tipi == KAYIT_TIPI_KURUMSAL:
+                    continue
+                sektor_tr = meta.get("beklenen_sektor") or ""
                 sec = map_sector(str(sektor_tr))
                 if sec in negated_sectors_normalized:
                     continue
@@ -568,18 +638,21 @@ class V2IntentPipeline:
                 hits.append(
                     VectorCandidate(
                         id=int(h.idx),
-                        source_id=str((h.metadata or {}).get("id") or h.idx),
+                        source_id=str(meta.get("id") or meta.get("source_id") or h.idx),
                         sector=sec,
                         sub_intent=sub,
                         text_content=h.text,
                         distance=round(max(0.0, 1.0 - score), 6),
                         score=round(score, 6),
+                        record_meta=meta,
                     )
                 )
         else:
-            # Fallback to standard store.search for test mocks
-            hits = store.search(qvec, top_k=self.top_k)[: self.top_k]
-            hits = [h for h in hits if h.sector not in negated_sectors_normalized]
+            hits_all = store.search(qvec, top_k=retrieve_k)
+            hits = [
+                h for h in hits_all
+                if h.sector not in negated_sectors_normalized and not _is_kurumsal_candidate(h)
+            ][: self.top_k]
             stages["retrieve_ms"] = (time.perf_counter() - t) * 1000
 
         top_candidates = _build_top_candidates(hits)
@@ -606,7 +679,7 @@ class V2IntentPipeline:
                 if "/" in sec: sec = sec.split("/")[0]
                 if "." in sec: sec = sec.split(".")[0]
                 sec = sec.strip().lower()
-                if sec not in ("saglik", "turizm", "egitim", "bilisim", "eglence", "ood"):
+                if sec not in ("saglik", "turizm", "egitim", "bilisim", "eglence", "ood", PG_SECTOR_INFO, "info"):
                     sec = map_sector(str(sec))
                 if "/" in sec: sec = sec.split("/")[0]
                 if "." in sec: sec = sec.split(".")[0]
@@ -756,7 +829,24 @@ class V2IntentPipeline:
                 preprocessed_query=ml_query,
             )
 
-        # Session Memory Fallback (Aşama 5)
+        # Kurumsal K2 fallback — hybrid yalnızca bu dar yolda (K2-01 vb.)
+        if status == "OOD" and not _has_strong_service_signal(query):
+            if not kurumsal_hits:
+                kurumsal_hits = self._fetch_kurumsal_hits_hybrid(ml_query)
+            kh = pick_kurumsal_hit_for_lang(kurumsal_hits, detected_language)
+            if kh is not None:
+                kh_score = float(kh.score)
+                if kh_score >= DECISION_THRESHOLD:
+                    meta = kh.record_meta or {}
+                    cevap = (meta.get("cevap") or "").strip()
+                    if not cevap and kh.text_content:
+                        cevap = meta.get("cevap") or ""
+                    if cevap:
+                        sector, sub, conf, status = "ood", "corporate_info.general", kh_score, "INFO"
+                        response_message = sanitize_corporate_cevap(cevap)
+                        redirect_url = ""
+                        _trace_decision(f"K2_Kurumsal score={kh_score:.4f}")
+
         if sector == "ood" and aktif_sektor and self._is_generic_followup(query):
             sector = aktif_sektor
             sub = f"{aktif_sektor}.general"
@@ -767,7 +857,7 @@ class V2IntentPipeline:
             response_message = resolve_response_message(
                 sector, sub, status, redirect_url=redirect_url, lang=detected_language
             )
-        elif sector != "ood" and sector != "belirsiz":
+        elif sector != "ood" and sector != "belirsiz" and status != "INFO":
             self.set_aktif_sektor(session_id, sector)
             # Debug (kaldırıldı)
         elif sector == "ood" and not aktif_sektor and session_id and hits and s1 >= 0.45:
@@ -777,7 +867,7 @@ class V2IntentPipeline:
             is_trap = any(keyword in query.lower() for keyword in trap_keywords)
             if not is_trap:
                 first_sector = hits[0].sector if hits else "ood"
-                if first_sector != "ood":
+                if first_sector != "ood" and first_sector not in (PG_SECTOR_INFO, "info"):
                     sector = first_sector
                     sub = f"{first_sector}.general"
                     conf = s1
@@ -798,7 +888,7 @@ class V2IntentPipeline:
                 # Özel kural: oteller kelimesi geçiyorsa turizm olarak kabul et
                 if "oteller" in query.lower() or "otel" in query.lower():
                     first_sector = "turizm"
-                if first_sector != "ood":
+                if first_sector != "ood" and first_sector not in (PG_SECTOR_INFO, "info"):
                     sector = first_sector
                     sub = f"{first_sector}.general"
                     conf = s1

@@ -66,8 +66,7 @@ STRICT_SECTOR_REGEX: dict[str, re.Pattern[str]] = {
         # Spesifik/kesin teknik terimler — sektörler arası çakışma riski yok
         r"api|sdk|saas|bulut|cloud|entegrasyon|crm|erp|"
         r"siber\s*güvenlik|siber\s*guvenlik|veritabanı|veritabani|kodlama|sunucu|server|"
-        r"network|ağ\s*yönetimi|ag\s*yonetimi|alientos|alintos|alientas|buyumevizyon|büyümevizyon|ddx|ddx\+|"
-        r"turquality|e-turquality|dijital\s*dönüşüm|dijital\s*donusum|kosgeb|kosgeb\s*desteği|kosgeb\s*teşviği|it\s*altyapı|it\s*altyapısı|"
+        r"network|ağ\s*yönetimi|ag\s*yonetimi|"
         r"dashboard|bi\s*tool|powerbi|business\s*intelligence|"
         r"bulut\s*altyapı|bulut\s*altyapisi|devops\s*otomasyon|ci\/cd\s*boru|sızma\s*testi|güvenlik\s*duvarı"
         # KALDIRILDI (stopgap): 'yazilim', 'otomasyon' — cross-sector, 9 yanlış-pozitif kaynağı
@@ -87,10 +86,9 @@ STRICT_SECTOR_REGEX: dict[str, re.Pattern[str]] = {
 
 SECTOR_ANCHORS: dict[str, list[str]] = {
     "bilisim": [
-        # Spesifik/Teknik terimler — güvenli, bağlam gerektirmiyor
+        # Spesifik/Teknik terimler — kurumsal/marka terimleri K0/K2 kurumsal_bilgi yolunda
         "api", "saas", "bulut", "sunucu", "veri tabanı", "siber güvenlik", "yazılım", "kod", "lisanslama", "entegrasyon",
-        "dijital dönüşüm", "dijital olgunluk", "teşvik danışmanlığı", "kosgeb desteği", "ddx", "ddx+", "turquality",
-        "e-turquality", "alientos", "buyumevizyon", "kosgeb", "kosgeb teşviği", "alintos", "alientas", "it altyapı", "it altyapısı",
+        "it altyapı", "it altyapısı",
         "dashboard", "bi tool", "powerbi", "business intelligence",
         # Bileşik kalıplar — güvenli, spesifik bağlam taşıyor
         "bulut altyapı", "devops otomasyon", "ci/cd boru hattı", "sızma testi", "güvenlik duvarı",
@@ -122,7 +120,7 @@ def check_regex_match(query: str, sector: str) -> bool:
 def match_any_sector(query: str) -> str | None:
     """
     Aynı sektör kümesinden EN AZ 2 kelime geçiyorsa ve çakışma yoksa doğrudan o sektörü döner.
-    Ayrıca Alientos/Büyümevizyon/DDX/Turquality marka ve hizmetleri için tek-kelime deterministic match sağlar.
+    Kurumsal/marka terimleri (DDX, Turquality, Kosgeb vb.) K0/K2 kurumsal_bilgi yoluna bırakılır.
     Aksi takdirde None döner (K2/V2 pipeline'ına devreder).
     """
     q = (query or "").lower()
@@ -148,8 +146,12 @@ def match_any_sector(query: str) -> str | None:
     if q_stripped in exact_map:
         return exact_map[q_stripped]
 
-    # 2. OOD terim yoksa veya B2B modifiyeri ile muaf tutulmuşsa K1 Marka/Hizmet Match (Fast-Path) çalışsın
-    if re.search(r"\b(alientos|alintos|alientas|buyumevizyon|büyümevizyon|ddx\+|ddx|turquality|e-turquality|dijital\s*dönüşüm|dijital\s*donusum|kosgeb|it\s+altyapı|it\s+altyapısı|saas\s+vendor|custom\s+crm|crm\s+platform)\b|info@buyumevizyon\.com", q):
+    # Hizmet niyeti — tek-kelime IT/SaaS satıcı kalıpları (kurumsal marka terimleri hariç)
+    if re.search(
+        r"\b(saas\s+vendor|custom\s+crm|crm\s+platform|it\s+altyapı|it\s+altyapısı)\b",
+        q,
+        re.IGNORECASE,
+    ):
         return "bilisim"
 
     sector_hits = {}

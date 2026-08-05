@@ -40,6 +40,8 @@ data/processed/embeddings.npz
 data/processed/index_meta.json
 data/processed/chatbot_dataset_augmented.json
 data/processed/*.tmp.npz
+data/processed/*.pre_kurumsal_merge_*.json
+data/processed/*.pre_merge_*.json
 
 # Yerel pg_dump çıktısı (~70 MB; diskte kalır, repoya girmez)
 db/vector_index_dump.sql
