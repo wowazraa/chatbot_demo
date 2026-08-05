@@ -4,6 +4,13 @@ from __future__ import annotations
 
 import sys
 
+from app.core.record_types import (
+    KAYIT_TIPI_KURUMSAL,
+    PG_SECTOR_INFO,
+    infer_kayit_tipi_legacy,
+    is_kurumsal_bilgi,
+)
+
 SEKTOR_TO_INTENT: dict[str, str] = {
     "turizm": "tourism_hotel",
     "saglik": "health_appointment",
@@ -37,7 +44,7 @@ _PG_SECTOR_MAP: dict[str, str] = {
     "hospitality": "turizm",
 }
 
-_VALID_PG_SECTORS = frozenset({"saglik", "turizm", "egitim", "bilisim", "eglence", "ood"})
+_VALID_PG_SECTORS = frozenset({"saglik", "turizm", "egitim", "bilisim", "eglence", "ood", PG_SECTOR_INFO})
 
 ALLINTOS_INTENT_ID_MAP: dict[str, int] = {
     "turizm": 1,
@@ -67,8 +74,17 @@ def resolve_intent(raw_sektor: str | None) -> str:
     return intent
 
 
-def normalize_pg_sector(raw_sektor: str | None) -> str:
+def resolve_intent_from_record(rec: dict) -> str:
+    """Kayıt tipine göre intent kodu — kurumsal bilgi ayrı kod."""
+    if is_kurumsal_bilgi(rec):
+        return "corporate_info"
+    return resolve_intent(rec.get("beklenen_sektor"))
+
+
+def normalize_pg_sector(raw_sektor: str | None, *, kayit_tipi: str | None = None) -> str:
     """vector_index.sector kolonu için ASCII slug."""
+    if kayit_tipi == KAYIT_TIPI_KURUMSAL or (kayit_tipi and is_kurumsal_bilgi({"kayit_tipi": kayit_tipi})):
+        return PG_SECTOR_INFO
     raw = str(raw_sektor or "ood").lower().strip()
     sector = _PG_SECTOR_MAP.get(raw, raw)
     if sector not in _VALID_PG_SECTORS:
@@ -97,20 +113,24 @@ def build_index_meta_entry(rec: dict) -> tuple[str, dict]:
     if not msg:
         raise ValueError(f"Kayıtta mesaj alanı yok: {rec}")
 
-    raw_sektor = rec.get(
-        "beklenen_sektor",
-        rec.get("beklened_sektor", "belirsiz"),
-    )
-    intent_code = resolve_intent(raw_sektor)
+    kayit_tipi = rec.get("kayit_tipi") or infer_kayit_tipi_legacy(rec)
+    raw_sektor = rec.get("beklenen_sektor", rec.get("beklened_sektor", "belirsiz"))
+    if is_kurumsal_bilgi({"kayit_tipi": kayit_tipi}):
+        raw_sektor = ""
+    intent_code = resolve_intent_from_record({**rec, "kayit_tipi": kayit_tipi})
 
     meta = {
         "id": rec.get("id"),
         "source_id": rec.get("source_id"),
-        "beklenen_sektor": raw_sektor,
+        "beklenen_sektor": raw_sektor or "",
         "intent_code": intent_code,
         "beklenen_mod": rec.get("beklenen_mod", rec.get("beklened_mod", "K1")),
         "lang": rec.get("lang", "tr"),
         "zorluk": rec.get("zorluk", ""),
         "varyant": rec.get("varyant", "duz"),
+        "kayit_tipi": kayit_tipi,
+        "konu_etiketi": rec.get("konu_etiketi") or "",
+        "cevap": rec.get("cevap") or "",
+        "kaynak_url": rec.get("kaynak_url") or "",
     }
     return msg, meta

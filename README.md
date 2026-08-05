@@ -5,24 +5,29 @@ Bu doküman, Chatbot B2B Niyet Yönlendirme altyapısının **güncel mimarisini
 ## 1. Mimari Özeti (V2IntentPipeline)
 Sistem, kullanıcının girdiği metni **5 temel B2B sektörel kategoriye** (sağlık, eğitim, bilişim, turizm, eğlence) veya "belirsiz" (fallback) statüsüne atamak için modern bir çok katmanlı yapı kullanır. Önceki mimaride bulunan `chatbot.py` kavram kargaşası tamamen temizlenmiş ve tüm karar mekanizması `V2IntentPipeline` çatısı altında toplanmıştır. (Savunma sektörü güvenlik gereği bilinçli olarak reddedilir).
 
+- **Aşama 0 (K0 — Kurumsal Bilgi Fast-Path):** `kayit_tipi=kurumsal_bilgi` kayıtları için tanım/terim sorguları (örn. `ddx`, `turquality nedir`) chitchat ve K1'den **önce** yakalanır → `status=INFO`, sektör formu yok, `url=null`. Hizmet niyeti (`…hizmeti almak istiyoruz`) K0'ı bypass eder.
 - **Aşama 1 (Hafıza / Session State):** Kullanıcının önceki turda belirlenmiş geçerli bir `aktif_sektor`'ü varsa ve yeni girdi küçük bir takip sorusuysa (örn: "Fiyat alabilir miyim?" / "can I get a price estimate?"), sistem BGE-M3'ü pas geçerek doğrudan `HAFIZA` / SessionMem modunda önceki sektörü döndürür.
   - **API sid_key tutarlılığı (fix):** `POST /api/chat` pipeline'dan **önce** `ensure_chat_session()` ile DB oturumu oluşturur veya getirir. Pipeline anahtarı her turda tutarlıdır: `api-{db_session_id}` (widget yolu). Eski davranışta Turn 1 `api-web-user`, Turn 2 `api-{id}` kullanılıyordu → `aktif_sektor` kayboluyordu; takip soruları OOD'a düşüyordu. Örnek: `hastane randevu sistemi arıyoruz` → `fiyat alabilir miyim?` artık sağlık sektörünü korur.
 - **Aşama 2 (K1 Guardrails & Kural Motoru):** Hızlı reddetme (chit-chat, hava durumu vb.) ve **yasaklı kelime (savunma sanayi vs.)** kontrolleri Regex ile yapılır. Kesin sektör kısaltmaları tespit edilirse anında ilgili sektöre yönlendirilir.
-- **Aşama 3 (K2 Vektör Veritabanı - BGE-M3):** K1'den geçen metinler BAAI/bge-m3 modeliyle vektörel (1024 boyutlu) embedding'e dönüştürülür. Yerel `embeddings.npz` indeksi üzerinden kosinüs benzerliği aranır.
+- **Aşama 3 (K2 Vektör Veritabanı - BGE-M3):** K1'den geçen metinler BAAI/bge-m3 ile embed edilir. **Genel 5-sektör araması:** Postgres **pgvector** ANN (`retrieve_k=50`, kurumsal kayıtlar filtrelenir). **Kurumsal K2 fallback** (OOD + hizmet sinyali yok): yalnızca bu dar yolda NPZ **hybrid** (dense+sparse) ile `kurumsal_bilgi` adayları aranır. NPZ backend (DB yok) ortamında genel arama da hybrid kullanılır.
 - **Aşama 4 (Konsensüs & Fallback):** Top-K sonuçlarının skorları toplanarak en olası sektör seçilir. Skor `0.65` eşiğinin altındaysa sistem "belirsiz" (Fallback - FB) moduna düşer.
 - **Aşama 5 (Session Memory Fallback & Trap Koruması):** OOD veya "belirsiz" sınırında kalan girdiler için, eğer `session_id` içerisinde daha önce doğrulanmış bir `aktif_sektor` varsa, sistem o bağlamı kullanarak OOD kararını sektöre zorlar. Aşırı genelleme hatalarını önlemek için `trap_keywords` kara listesiyle korunmaktadır.
 - **Aşama 6 (Aktif Öğrenme Günlüğü / Active Learning):** Nihai olarak "belirsiz" (FB) kararı verilen sorgular `app/services/unresolved_logger.py` mekanizması tarafından otomatik olarak loglanır (`logs/unresolved_queries.json`).
 
 ## 2. Güncel Skor Tablosu (North Star Metriği)
-Son regresyon koşusu (`_final_dogrulama.py`): **146 / 165 (~88.5%)**
+Son regresyon koşusu (`_final_dogrulama.py`): **142 / 165 (~86.1%)**
 
-> Referans skor; dataset veya model küçük varyasyonlarıyla **~145–148** aralığında değişebilir.
+| Set | Skor | Not |
+|-----|------|-----|
+| TEMEL | 17/19 | |
+| STRES | 62/78 | |
+| ÇEKİM EKİ | 25/26 | |
+| SELAMLAŞMA | 22/26 | |
+| K1 REGEX/HAFIZA | 16/16 | |
+| **KURUMSAL test seti** (`scratch/kurumsal_test_set.py`) | **31/31** | K0 + K2-02 + NEG koruma |
+| **Sağlamlık taraması** (30 gerçekçi hizmet cümlesi) | **20/30** (session yok), **25/30** (session var) | pgvector-primary ile OLD seviyesine döndü |
 
-- **TEMEL (19 Senaryo):** 18/19
-- **STRES (78 Senaryo):** 64/78
-- **ÇEKİM EKİ (26 Senaryo):** 25/26
-- **SELAMLAŞMA (26 Senaryo):** 23/26
-- **K1 REGEX/HAFIZA (16 Senaryo):** 16/16
+> **Not:** Global NPZ hybrid (dense+sparse) tüm retrieval'da kullanıldığında `_final_dogrulama` **151/165** çıkabilir; ancak gerçekçi hizmet cümlelerinde sektör eşleştirmesi **9/30**'a düşer (regresyon). Mevcut mimari pgvector-primary + kurumsal-only hybrid ile bu trade-off bilinçli seçilmiştir.
 
 ## 3. Proje Yapısı
 
@@ -53,6 +58,7 @@ chatbot_demo/
 │   │   ├── fallback_service.py   # OOD / belirsiz yanıtlar
 │   │   ├── session_service.py    # Oturum hafızası + DB persist
 │   │   ├── pipeline_service.py   # V2IntentPipeline orkestratörü
+│   │   ├── k0_corporate_info.py  # K0 kurumsal bilgi fast-path
 │   │   ├── index_sync.py         # Incremental NPZ + pgvector (+ Allintos)
 │   │   ├── dataset_ids.py        # max_id: raw + augmented + pg
 │   │   └── embedder.py           # BGE-M3 encode
@@ -87,15 +93,23 @@ python scripts/seed_pgvector.py --truncate   # Postgres vector_index
 ```
 
 ### API Sunucusunu Başlatmak
-```powershell
-uvicorn main:app --host 127.0.0.1 --port 8082
-```
-(Eski komut `uvicorn db_api.main:app` hâlâ çalışır.)
 
-Arkadaşının sitesinde widget göstermek için aynı makineden ağ erişimi:
+**Tek doğru demo adresi (yerel):**
 ```powershell
+cd chatbot_demo
 uvicorn main:app --host 0.0.0.0 --port 8082
 ```
+→ Tarayıcı: **`http://127.0.0.1:8082/`**
+
+Allintos web sitesine LAN embed (widget script origin = API origin):
+```powershell
+uvicorn main:app --host 0.0.0.0 --port 8001
+```
+→ Site script'i: `http://SUNUCU_IP:8001/demo/chatbot_widget.js`
+
+> **Port karmaşasından kaçının:** 8083/8084/8085 gibi geçici test portlarını kullanmayın. Yerel demo = **8082**; canlı site embed = **8001** (aynı kod, farklı port).
+
+(Eski komut `uvicorn db_api.main:app` hâlâ çalışır.)
 
 - **Demo Widget:** `http://127.0.0.1:8082/` veya `static/widget_test.html`
 - **Widget i18n test:** `widget_test_tr.html`, `widget_test_en.html`, `widget_test_lang_switch.html`
@@ -105,8 +119,19 @@ uvicorn main:app --host 0.0.0.0 --port 8082
 ### Regresyon Testlerini Çalıştırmak
 ```powershell
 python _final_dogrulama.py
+python scratch/kurumsal_test_set.py      # K0 + kurumsal K2 (31 vaka)
+python scratch/sector_robustness_sweep.py  # 30 gerçekçi hizmet cümlesi
 python tests/run_cekim_eki_orijinal.py
 ```
+
+### Kurumsal corpus (326 kayıt)
+```powershell
+python scripts/prepare_kurumsal_326.py
+python scripts/merge_kurumsal_326.py
+python scripts/build_index.py
+python scripts/seed_pgvector.py --truncate
+```
+Merge sonrası `embeddings.npz` / pgvector yeniden üretilir (gitignore — yerel).
 
 ## 5. Admin API ve İndeks Senkronizasyonu
 
@@ -260,8 +285,8 @@ Doğrulanmış regresyon koşusu ile uyumlu corpus boyutları:
 
 | Dosya | Kayıt sayısı |
 |---|---|
-| `data/raw/chatbot_dataset.json` | 928 |
-| `data/processed/chatbot_dataset_augmented.json` | 5659 |
-| `embeddings.npz` / pgvector `vector_index` | augmented ile hizalı |
+| `data/raw/chatbot_dataset.json` | ~1254 (928 + 326 kurumsal) |
+| `data/processed/chatbot_dataset_augmented.json` | ~5985 (5659 + 326 kurumsal; yerel rebuild) |
+| `embeddings.npz` / pgvector `vector_index` | augmented ile hizalı (gitignore — yerel) |
 
 Toplu corpus değişikliğinden sonra tam rebuild (`build_index.py` + `seed_pgvector.py --truncate`) gerekir. Yedek snapshot: `backups/146_baseline_*` (gitignore — yerel).

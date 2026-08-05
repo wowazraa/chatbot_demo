@@ -25,6 +25,7 @@ class VectorCandidate:
     text_content: str
     distance: float  # cosine distance (0 = özdeş)
     score: float  # 1 - distance (yaklaşık benzerlik)
+    record_meta: dict[str, Any] | None = None
 
     def as_dict(self) -> dict[str, Any]:
         return {
@@ -86,6 +87,7 @@ class VectorIndexStore:
                 sector,
                 sub_intent,
                 text_content,
+                meta,
                 (embedding <=> CAST(:emb AS vector)) AS distance
             FROM {TABLE_NAME}
             {where}
@@ -101,6 +103,17 @@ class VectorIndexStore:
         out: list[VectorCandidate] = []
         for r in rows:
             dist = float(r["distance"])
+            raw_meta = r.get("meta")
+            if isinstance(raw_meta, str):
+                import json as _json
+                try:
+                    record_meta = _json.loads(raw_meta)
+                except _json.JSONDecodeError:
+                    record_meta = {}
+            elif isinstance(raw_meta, dict):
+                record_meta = raw_meta
+            else:
+                record_meta = {}
             out.append(
                 VectorCandidate(
                     id=int(r["id"]),
@@ -110,6 +123,7 @@ class VectorIndexStore:
                     text_content=str(r["text_content"]),
                     distance=round(dist, 6),
                     score=round(max(0.0, 1.0 - dist), 6),
+                    record_meta=record_meta,
                 )
             )
         return out

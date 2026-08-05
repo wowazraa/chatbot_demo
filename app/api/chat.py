@@ -45,7 +45,8 @@ def _lookup_url(db: Session, sector: str, st: str) -> str | None:
 
 
 def sanitize_input(query: str) -> str:
-    return re.sub(r"(\w)\1+(?=\s|$)", r"\1", query.strip())
+    # Yalnızca 3+ ardışık tekrarı düzelt (kvkk, ddx gibi geçerli kısa terimleri bozma)
+    return re.sub(r"(\w)\1{2,}(?=\s|$)", r"\1", query.strip())
 
 
 @router.post("/chat", response_model=ChatTurnResponse, status_code=status.HTTP_200_OK)
@@ -87,7 +88,10 @@ def chat_turn(body: ChatTurnRequest, db: Session = Depends(get_db)):
         reply_lang = normalize_reply_lang(resp.detected_language)
 
     url = _lookup_url(db, sector, st)
-    if sector == "ood" and layer == "rule" and resp.response_message:
+    if st == "INFO" and resp.response_message:
+        reply = resp.response_message
+        url = None  # Kurumsal/BILGI — yalnızca metin, link yok
+    elif sector == "ood" and layer == "rule" and resp.response_message:
         reply = resp.response_message
     else:
         reply = build_chat_reply(st, sector, url, lang=reply_lang)
