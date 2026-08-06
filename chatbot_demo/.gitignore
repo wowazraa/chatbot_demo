@@ -1,0 +1,93 @@
+# ── Python / ortam ──────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+.env
+
+# Test / lint / coverage cache
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.log
+
+# ── Yerel çalışma alanı (diskte kalır, repoya girmez) ───────
+tests/
+scratch/
+reports/*
+!reports/.gitkeep
+logs/
+backups/
+/db/
+_final_dogrulama.py
+
+# ── Eski / arşiv klasörleri ─────────────────────────────────
+archive/
+demo/
+docs/
+
+# ── Postman / API koleksiyonları ────────────────────────────
+postman/
+B2B_Intent_Router*.json
+db_api/postman_*
+db_api/generate_postman.py
+db_api/POSTMAN.md
+
+# db_api: yalnızca geriye dönük shim'ler repoda (main.py, seed_cli.py)
+db_api/*
+!db_api/main.py
+!db_api/seed_cli.py
+
+# src/ kaldırıldı — tüm kod app/ altında
+
+# Tek seferlik migration (Allintos'a aktarım tamamlandı; diskte kalabilir)
+scripts/prepare_kurumsal_326.py
+scripts/merge_kurumsal_326.py
+scripts/prepare_kurumsal_to_knowledge_docs.py
+scripts/import_kurumsal_knowledge.py
+scripts/backfill_allintos_qa_embeddings.py
+
+# ── Veri: ham corpus repoda; üretilmiş / harici dosyalar değil ─
+data/external/
+data/raw/*.pre_merge_*.json
+data/raw/chatbot_dataset.*.json
+data/raw/chatbot_dataset_archived_sektorler.json
+!data/raw/chatbot_dataset.json
+
+data/processed/
+
+# ── Model / ONNX önbellek ───────────────────────────────────
+**/_reranker_onnx_cache/
+.huggingface/
+huggingface/
+.cache/
+
+# ── Widget: demo için yalnızca 3 dosya repoda ───────────────
+static/*
+!static/chatbot_widget.js
+!static/chatbot_widget.css
+!static/widget_test.html
+
+# ── Ölü / tek seferlik giriş dosyaları ──────────────────────
+app.py
+models_local.py
+scratch.py
+test_chat.py
+test_cors.py
+cleanup.py
+verify_fixes.py
+run_router_8001.py
+HANDOVER*.md
+
+# ── OS / IDE ────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

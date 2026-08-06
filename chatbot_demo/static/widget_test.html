@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allintos Chatbot Demo</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+            background: linear-gradient(135deg, #eef2ff 0%, #f8fafc 45%, #ecfdf5 100%);
+            color: #1b2436;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+        .demo-card {
+            max-width: 520px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.92);
+            border: 1px solid rgba(27, 36, 54, 0.08);
+            border-radius: 20px;
+            padding: 32px 28px;
+            box-shadow: 0 16px 40px rgba(27, 36, 54, 0.08);
+            text-align: center;
+        }
+        .demo-card h1 {
+            margin: 0 0 12px;
+            font-size: 1.5rem;
+        }
+        .demo-card p {
+            margin: 0 0 10px;
+            line-height: 1.55;
+            color: #475569;
+        }
+        .hint {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 10px 14px;
+            border-radius: 999px;
+            background: #1b2436;
+            color: #fff;
+            font-size: 0.92rem;
+        }
+        .status {
+            margin-top: 14px;
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+    </style>
+    <link rel="stylesheet" href="/demo/chatbot_widget.css?v=20260803">
+</head>
+<body>
+    <div class="demo-card">
+        <h1>Allintos Chatbot Demo</h1>
+        <p>Bu sayfa widget test ortamıdır. Sohbet penceresini açmak için sol alttaki <strong>Allintos</strong> butonuna tıklayın.</p>
+        <p>API: <code>/api/chat</code></p>
+        <div class="hint">Sol alt köşe → Allintos</div>
+        <div class="status" id="demo-status">Widget yükleniyor…</div>
+    </div>
+
+    <script src="/demo/chatbot_widget.js?v=20260803"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var el = document.getElementById('demo-status');
+            var ok = !!document.getElementById('ag-chatbot-toggle');
+            if (el) {
+                el.textContent = ok
+                    ? 'Widget yüklendi. Butona tıklayarak test edebilirsiniz.'
+                    : 'Widget yüklenemedi. Sayfayı Ctrl+F5 ile yenileyin.';
+            }
+        });
+    </script>
+</body>
+</html>

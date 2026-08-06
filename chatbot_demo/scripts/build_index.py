@@ -28,25 +28,20 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from src.embedder import BGEEmbedder
+from app.services.embedder import BGEEmbedder
+from app.core.intent_mapping import resolve_intent
 
-# ---------------------------------------------------------------------------
-# Sabitler
-# ---------------------------------------------------------------------------
-RAW_FILE       = ROOT / "data" / "raw"       / "chatbot_dataset.json"
+RAW_FILE = ROOT / "data" / "raw" / "chatbot_dataset.json"
 PROCESSED_FILE = ROOT / "data" / "processed" / "chatbot_dataset_augmented.json"
-INDEX_DIR      = ROOT / "data" / "processed"
+INDEX_DIR = ROOT / "data" / "processed"
 
 
-# ---------------------------------------------------------------------------
-# Veri yükleme
-# ---------------------------------------------------------------------------
 def load_records(use_raw: bool = False) -> list[dict]:
     path = RAW_FILE if use_raw else PROCESSED_FILE
     if not path.exists():
         print(f"[!] Dosya bulunamadı: {path}")
         if not use_raw:
-            print("    Önce çalıştırın: python src/data_augmented.py")
+            print("    Önce çalıştırın: python -m scripts.data_augmented")
         sys.exit(1)
 
     with path.open(encoding="utf-8") as f:
@@ -73,6 +68,10 @@ def build(use_raw: bool = False, batch_size: int = 64) -> None:
 
     msg_fields = ("mesaj", "message", "text", "input")
 
+    # Intent kodu istatistiği (tanılama için)
+    intent_counter: dict[str, int] = {}
+    unknown_sektors: set[str] = set()
+
     for rec in records:
         msg = ""
         for f in msg_fields:
@@ -82,11 +81,31 @@ def build(use_raw: bool = False, batch_size: int = 64) -> None:
         if not msg:
             continue
 
+        # Ham sektör etiketini al — her iki olası typo'yu da destekle
+        raw_sektor = rec.get(
+            "beklenen_sektor",
+            rec.get("beklened_sektor", "belirsiz"),  # typo koruması
+        )
+
+        # ----------------------------------------------------------------
+        # KRİTİK: Ham Türkçe etiket → DB-uyumlu intent kodu dönüşümü
+        # Bu adım olmadan downstream migration null üretir.
+        # ----------------------------------------------------------------
+        intent_code = resolve_intent(raw_sektor)
+
+        if intent_code == "ood" and raw_sektor not in ("ood", "belirsiz", None, ""):
+            unknown_sektors.add(raw_sektor)
+
+        intent_counter[intent_code] = intent_counter.get(intent_code, 0) + 1
+
         texts.append(msg)
         meta.append({
             "id":              rec.get("id"),
             "source_id":       rec.get("source_id"),
-            "beklenen_sektor": rec.get("beklenen_sektor", rec.get("beklened_sektor", "belirsiz")),
+            # Orijinal ham etiket (hata ayıklama için saklanır)
+            "beklenen_sektor": raw_sektor,
+            # DB-uyumlu intent kodu — downstream migration bu alanı kullanır
+            "intent_code":     intent_code,
             "beklenen_mod":    rec.get("beklenen_mod",    rec.get("beklened_mod",    "K1")),
             "lang":            rec.get("lang", "tr"),
             "zorluk":          rec.get("zorluk", ""),
@@ -94,6 +113,14 @@ def build(use_raw: bool = False, batch_size: int = 64) -> None:
         })
 
     print(f"[+] Embed edilecek: {len(texts)} metin")
+    print()
+
+    # Intent dağılımı özeti
+    print("--- Intent Kodu Dağılımı ---")
+    for code, count in sorted(intent_counter.items(), key=lambda x: -x[1]):
+        print(f"  {code:<30} {count:>5}")
+    if unknown_sektors:
+        print(f"\n  [UYARI] Eşlenemeyen sektörler: {sorted(unknown_sektors)}")
     print()
 
     embedder = BGEEmbedder()
@@ -122,7 +149,7 @@ def build(use_raw: bool = False, batch_size: int = 64) -> None:
             r = res[0]
             print(
                 f"  '{q[:45]}'\n"
-                f"    -> [{r.metadata['beklenen_sektor']:8}] {r.score:.4f} | {r.text[:55]}"
+                f"    -> [{r.metadata['intent_code']:<25}] {r.score:.4f} | {r.text[:50]}"
             )
     print("\n[+] Index build tamamlandı!")
     print("=" * 60)

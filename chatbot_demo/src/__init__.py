@@ -1,1 +1,0 @@
-"""Demo / simülasyon paket kökü."""

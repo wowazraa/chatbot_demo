@@ -12,23 +12,45 @@ Thumbs.db
 .idea/
 .vscode/
 
-# Generated test outputs (keep folder via .gitkeep)
+# Yerel referans kopyalar (Allintos ana repo / staj dosyaları — repoda değil)
+allintos-main (1)/
+Allintos/
+
+# Rapor PDF'leri (markdown özetler repoda kalabilir)
+01_Raporlar/**/*.pdf
+
+# Chatbot demo — üretilmiş çıktılar
 chatbot_demo/reports/*
 !chatbot_demo/reports/.gitkeep
+chatbot_demo/data/processed/
+chatbot_demo/data/external/
+chatbot_demo/scratch/
+chatbot_demo/tests/
+chatbot_demo/logs/
+chatbot_demo/backups/
+chatbot_demo/db/
+chatbot_demo/_final_dogrulama.py
 
-# Large local index artifacts (rebuild with scripts/build_index.py)
+# Büyük yerel indeks
 chatbot_demo/data/processed/embeddings.npz
 
-# Model cache and local checkpoints
+# Model cache
 **/_reranker_onnx_cache/
 .huggingface/
 huggingface/
 **/__pycache__/
 
-# Archive and zip files
+# Arşiv
 *.zip
 *.stale
-*.txt
 *.json.stale
 
-
+# Yerel geçici çalışma dosyaları
+_allintos_push/
+_dbg_143.txt
+allintos-pr-work/
+chatbot_demo_baseline/
+files/
+install_pgvector.bat
+migrate_vector.sql
+script.py

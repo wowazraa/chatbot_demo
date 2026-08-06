@@ -1,34 +1,33 @@
 # Chatbot Bilgi Merkezi Projesi
 
+Staj / araştırma dokümantasyonu ve **aktif chatbot servisi** tek repoda toplanmıştır. Geliştirme ve demo için tek kaynak:
+
+**[`chatbot_demo/`](chatbot_demo/)** — FastAPI intent router + embed widget
+
+## Klasörler
+
 ```
 Chatbot_Bilgi_Merkezi_Projesi/
-├── 01_Raporlar/              # Staj / araştırma raporları
-├── 02_Toplanti_Notlari/      # Toplantı notları
-├── archive/                  # Eski kod ve geçmiş test çıktıları
-│   ├── 03_Kaynak_Kod/        # Legacy prototipler
-│   └── test_ciktilari/       # Arşivlenmiş raporlar
-└── chatbot_demo/             # Aktif uygulama (tek kaynak)
-    ├── app.py                # Streamlit girişi
-    ├── demo/                 # Web demo (server.py + index.html)
-    ├── src/                  # Motor (chatbot, embedder, rewriter…)
-    ├── data/                 # raw + processed dataset / index
-    ├── scripts/              # build_index vb.
-    ├── tests/                # Test scriptleri
-    │   └── fixtures/         # Senaryo JSON girdileri
-    └── reports/              # Test çıktıları (gitignore)
+├── requirements.txt        ← Tüm proje Python bağımlılıkları (tek dosya)
+├── chatbot_demo/           ← Aktif uygulama (README burada)
+├── 01_Raporlar/            ← Staj raporları
+├── 02_Toplanti_Notlari/    ← Toplantı notları
+├── archive/                ← Eski prototipler (arşiv)
+├── docs/                   ← Proje geneli notlar
+└── veritabani_kurgusu_test_seneryolari/   ← DB test senaryoları
 ```
 
-Aktif testler: `chaos_monkey`, `the_crucible`, `run_stres_test`, `test_k1_celiski`  
-Eski tek-seferlik scriptler: `archive/obsolete_tests/`
+Yerel referans kopyalar (`allintos-main (1)/`, `Allintos/`) repoya dahil değildir (`.gitignore`).
 
 ## Çalıştırma
 
-```bash
-cd chatbot_demo
+```powershell
 pip install -r requirements.txt
-python demo/server.py          # http://localhost:8080
-# veya
-streamlit run app.py
+cd chatbot_demo
+copy .env.example .env
+uvicorn main:app --host 0.0.0.0 --port 8082
 ```
 
-Detaylar: [`chatbot_demo/README.md`](chatbot_demo/README.md)
+Bağımlılıklar: proje kökündeki **`requirements.txt`** (chatbot + Allintos backend + DB testleri).
+
+Detaylı mimari, Allintos entegrasyonu ve test komutları: **[chatbot_demo/README.md](chatbot_demo/README.md)**
